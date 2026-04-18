@@ -27,8 +27,6 @@ LAF ADD_KIT_EX
 	// Shaman = 21
     kit_class     = 6
 	
-	visible = 0
-	
     mixed         = RESOLVE_STR_REF(~Martyr~)
 	
     lower         = RESOLVE_STR_REF(~martyr~)
