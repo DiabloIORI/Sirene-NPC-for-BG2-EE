@@ -5,7 +5,7 @@ CHAIN IF WEIGHT #-1
 ~Well, well... so you came after all. I wondered if you had the courage, Sirene of Ilmater.~
 DO ~SetGlobal("C0SireneTsamon","GLOBAL",1)~
 == C0SIRE2J ~I have come as you bid me, Talonite. Now I will have answers from you.~
-== C0TSAMON ~Do you now? And what if those answers are not what you wished, then? If I were to list each of your crimes committed, the deaths that were the price of your existence?~
+== C0TSAMON ~Will you now? And what if those answers are not what you wished, then? If I were to list each of your crimes committed, the deaths that were the price of your existence?~
 == C0SIRE2J ~Who... who are you?~
 == C0TSAMON ~My name is T'samon De'bryll Thornhaven... but I presume that name means nothing to you.~
 == C0SIRE2J ~T'samon...? You speak as if you know of me, yet neither your name nor your face is familiar. What have I done to earn your hatred?~
@@ -13,7 +13,7 @@ DO ~SetGlobal("C0SireneTsamon","GLOBAL",1)~
 == C0SIRE2J ~You-?! You are...~
 == C0TSAMON ~Aye. I am T'samon, son of Lena of the noble house De'Bryll. Our mother.~
 == C0SIRE2J ~If what you say is the truth, then why have you called me here? Even if we are siblings, I am a servant of Ilmater, and you of Talona. We are enemies by our faiths alone.~
-== C0TSAMON ~Perhaps. But know that I sought you my own purposes, not my patron's. You were a fool to come, but I thank you for it... for my vengeance is soon to come to fruition.~
+== C0TSAMON ~Perhaps. But know that I sought you for my own purposes, not my patron's. You were a fool to come, but I thank you for it... for my vengeance is soon to come to fruition.~
 == C0SIRE2J ~'Your vengeance'...? Of what do you speak?~
 == C0TSAMON ~You do not know? What of your companion, then? Does <PRO_HESHE> know the extent of your sins? Well, <CHARNAME>, child of Bhaal? Speak for yourself.~
 END
