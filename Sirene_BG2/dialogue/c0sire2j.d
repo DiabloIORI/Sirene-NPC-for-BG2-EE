@@ -5,8 +5,8 @@ IF ~!InPartySlot(LastTalkedToBy,0) Name("C0Sirene",LastTalkedToBy)~ EXTERN TRGYP
 END
 
 CHAIN TRGYP02 g1
-~Your future is... strangely unclear to me, child. I sense that you lack direction and purpose, but I advise you follow the path you have chosen, and do not let your doubts tell you otherwise.~
-== C0SIRE2J ~I... I will remember your words, my lady. Thank you.~
+~你的未来……对我来说奇怪地不清晰，孩子。我感觉到你缺乏方向与目标，可我劝你走你已选定的路，别让你的疑虑告诉你相反的话。~
+== C0SIRE2J ~我……我会记住您的话，女士。谢谢您。~
 EXIT
 
 // Salvanas
@@ -14,17 +14,17 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~!InPartySlot(LastTalkedToBy,0)
 Name("C0Sirene",LastTalkedToBy)~ THEN SALVANAS C0SireneSalvanas
-~What fair visage lies beneath yon white cowl, I wonder?~
-== C0SIRE2J ~Are you speaking to me, sir?~
-== SALVANAS ~None other, sweet Ilmatari. Ah, I suffer, truly I do.~
-== C0SIRE2J ~Do you suffer, truly? But I see no sign of such.~
-== SALVANAS ~Aye, most beautiful lady, though 'tis not my flesh, but my heart and soul that are set aflame by your presence! Only a gaze upon your form would relieve this ache within my heart.~
-== C0SIRE2J ~I am... unsure of what you speak.~
-== SALVANAS ~Come closer, my dear. I would love to take a closer look at your lovely face, your flaming hair, your...~
-= ~...your beautiful, er, eyes. And your... are those horns? Oh, my.~
-== C0SIRE2J ~...yes. Yes, they are. You were saying?~
-== SALVANAS ~Um... pardon me. I-I think I've had one too many to drink... er, yes, that's right! (Please don't kill me...)~
-== C0SIRE2J ~*sigh*~
+~那顶白兜帽之下藏着怎样一副容颜，我倒想知道？~
+== C0SIRE2J ~您是在跟我说话吗，先生？~
+== SALVANAS ~不是别人，甜美的伊尔梅特信徒。啊，我受苦，真的受苦。~
+== C0SIRE2J ~您真的受苦？可我看不出这样的迹象。~
+== SALVANAS ~是的，最美貌的女士，不过被你的存在点燃的不是我的肉体，而是我的心与灵魂！只需一望你的身影，我心中的痛便可缓解。~
+== C0SIRE2J ~我……不确定您在说什么。~
+== SALVANAS ~靠近些，亲爱的。我很想细看你美丽的脸、你火焰般的头发、你的……~
+= ~……你那美丽的，呃，眼睛。还有你的……那是角吗？哦，天。~
+== C0SIRE2J ~……是的。是的，它们确实是。您刚才在说什么？~
+== SALVANAS ~呃……恕我失礼。我——我想我喝得太多了……呃，对，就是这样！（求你别杀我……）~
+== C0SIRE2J ~*叹气*~
 EXIT
 
 // Book Merchant
@@ -34,36 +34,36 @@ CHAIN IF WEIGHT #-1
 See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneBook","GLOBAL",0)~ THEN IMNBOOK1 C0SireneBook
-~Sorry, ain't got much in the way of tomes today. Been real slow here, so's I shipped most of my stock to Athkatla. Ain't talked to anyone in weeks, actually.~
+~抱歉，今天书没多少。这儿生意一直很淡，所以我把大部分存货都运去阿斯卡特拉了。说实话，好几周没跟人说过话了。~
 DO ~SetGlobal("C0SireneBook","GLOBAL",1)~
-== C0SIRE2J ~Excuse me, sir, but I was wondering if you had something... simpler?~
-== IMNBOOK1 ~I know a discerning eye when I see one. As a matter of fact, I do have a handful of books for those who prefer some light reading. What takes your fancy, good lady? History, mystery, drama?~
-== C0SIRE2J ~Nay, sir. Do you have any of... *blush* ...romance?~
-== IMNBOOK1 ~Ah, not to worry, milady. You are not the first to ask, especially not in such a fashion. (wink)~
-== IMNBOOK1 ~Here, this one may suit your interest. It is a tale of... ah, but I shall not spoil it. You should read it yourself at your leisure. It is a fine piece of work, do not doubt.~
-== C0SIRE2J ~Thank you. How much?~
-== IMNBOOK1 ~Normally, that particular edition would cost quite a large amount, but you appear to have good taste, and considering how bad business is right now, I think a mere 5 gold will do.~
-== C0SIRE2J ~I... I will not ask you to spend your gold for my sake, <CHARNAME>.~
+== C0SIRE2J ~打扰一下，先生，我想问您有没有……更简单些的？~
+== IMNBOOK1 ~我一眼就看出你有眼光。其实，对那些偏爱轻松读物的人，我确实有几本。您喜欢什么，好女士？历史、悬疑、戏剧？~
+== C0SIRE2J ~不，先生。您有没有……*脸红*……言情？~
+== IMNBOOK1 ~啊，不必担心，夫人。你不是第一个这么问的，尤其不是第一个这样问的。（眨眼）~
+== IMNBOOK1 ~给，这本也许合你的兴趣。这是一个……啊，可我不该剧透。你该在闲暇时自己读。这是部好作品，不必怀疑。~
+== C0SIRE2J ~谢谢。多少钱？~
+== IMNBOOK1 ~平常那一版要价不低，可你看来品位不错，又念着如今生意这么差，我想五金币就够了。~
+== C0SIRE2J ~我……我不会要你为我花你的金币，<CHARNAME>。~
 END
-+ ~PartyGoldGT(4)~ + ~What are you talking about? My gold is your gold. Here you go, merchant.~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
-+ ~PartyGoldGT(4) Global("C0SireneRomanceActive","GLOBAL",1)~ + ~Do you think I'd deny you anything? Here's the gold.~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
-+ ~PartyGoldGT(4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~Do you think I'd deny you anything, my love? Here's the gold.~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
-++ ~We've got more important things to spend our gold on.~ EXTERN C0SIRE2J C0SireneBook2
-++ ~I'm not buying you a stupid book, Sirene. Let's get going.~ EXTERN C0SIRE2J C0SireneBook2
++ ~PartyGoldGT(4)~ + ~你说什么？我的金币就是你的金币。给你，商人。~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
++ ~PartyGoldGT(4) Global("C0SireneRomanceActive","GLOBAL",1)~ + ~你觉得我会不给你吗？金币在这儿。~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
++ ~PartyGoldGT(4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~你觉得我会不给你吗，我的爱？金币在这儿。~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
+++ ~我们有更要紧的地方要花金币。~ EXTERN C0SIRE2J C0SireneBook2
+++ ~我不会给你买这种傻书的，塞琳。我们走吧。~ EXTERN C0SIRE2J C0SireneBook2
 
 CHAIN C0SIRE2J C0SireneBook1
-~You are too kind to me, <CHARNAME>. Thank you.~
-== IMNBOOK1 ~A pleasure doing business with you, <PRO_SIRMAAM>. Have a pleasant day.~
+~你对我太好了，<CHARNAME>。谢谢你。~
+== IMNBOOK1 ~跟你做生意很愉快，<PRO_SIRMAAM>。祝你今天愉快。~
 EXIT
 
 CHAIN C0SIRE2J C0SireneBook2
-~Yes, you are right. Forgive me, sir. I fear that I must decline.~
-== IMNBOOK1 ~'Tis a shame indeed. The gold is of no consequence, but there is nothing that saddens me more than a devoted reader misses such an opportunity. Ah, Deneir forgive me! Take it, milady.~
+~是的，你说得对。原谅我，先生。我怕只能推辞了。~
+== IMNBOOK1 ~真是可惜。金币倒不打紧，可再没有比一个爱读书的人错过这样的机会更让我难过的了。啊，德尼尔原谅我！拿去吧，夫人。~
 DO ~GiveItemCreate("c0sbook","C0Sirene",0,0,0)~
-== C0SIRE2J ~B-but, I cannot take this! I have not paid...~
-== IMNBOOK1 ~Please, think nothing of it. Every moment I spend watching these fine novels go unsold drives me closer to the brink of insanity. You'd be doing me a favor taking it off my hands.~
-== C0SIRE2J ~I... I see. In that case, thank you, kind sir. I will treasure it greatly.~
-== IMNBOOK1 ~A pleasure, milady. Have a wonderful day.~
+== C0SIRE2J ~可——可是，我不能收！我还没付……~
+== IMNBOOK1 ~请别放在心上。我看着这些好小说卖不出去，每一刻都把我逼近疯狂的边缘。你把它从我手里拿走，反倒是帮了我。~
+== C0SIRE2J ~我……我明白了。既然如此，谢谢您，好心的先生。我会好好珍藏它。~
+== IMNBOOK1 ~很荣幸，夫人。祝你过得愉快。~
 EXIT
 
 // Madam Nin
@@ -76,137 +76,137 @@ See("C0Sirene")
 OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
 Global("C0SireneRomanceActive","GLOBAL",2)~ THEN MADAM C0SireneMadam
-~Greetings, my <LADYLORD>. I am Madame Nin, and I am here to ensure you are pleasantly accompanied. Are you interested in companionship, my <LADYLORD>?~
-== C0SIRE2J ~No, <PRO_HESHE> is not interested in such base and corrupt services. Begone from <PRO_HISHER> sight, fleshmonger, lest you live to regret it!~
+~向您致意，我的<LADYLORD>。我是宁夫人，我来确保您有愉快的陪伴。您对陪伴有兴趣吗，我的<LADYLORD>？~
+== C0SIRE2J ~不，<PRO_HESHE>对这种低贱败坏的服务没有兴趣。从<PRO_HISHER>眼前滚开，卖肉的，免得你活着后悔！~
 EXTERN MADAM 17
 
 // Bathing Scene
 
 CHAIN IF WEIGHT #-1
 ~Global("C0SireneBathe","GLOBAL",1)~ THEN PLAYER1 bathe.0
-~(It has been a long and exhausting day, and the dirt and smell from today's excursions cling to you. Conveniently, the party has set up camp reasonably close to a stream. You consider heading away for a quick bathe before turning in for the night.)~ [C0BLANK]
+~（这一天又长又累，今日在外沾的尘土与气味还黏在你身上。恰好队伍扎营的地方离一条溪流不远。你想在就寝前去洗个澡。）~ [C0BLANK]
 DO ~SetGlobal("C0SireneBathe","GLOBAL",2)~
 END
-++ ~(Take a bath)~ DO ~FadeFromColor([30.0],0)~ EXTERN PLAYER1 bathe.2
-++ ~(Go to bed)~ EXTERN PLAYER1 bathe.1a
+++ ~（去洗澡）~ DO ~FadeFromColor([30.0],0)~ EXTERN PLAYER1 bathe.2
+++ ~（去睡觉）~ EXTERN PLAYER1 bathe.1a
 
 CHAIN PLAYER1 bathe.1a
-~(You decide that you cannot be bothered to go and bathe in a cold stream, and would rather wait until you have the luxury of a proper bathing house. You return to the comfort of your bedroll, and drift off into sleep.)~
+~（你决定懒得去冷溪里洗澡，宁愿等有了像样的澡堂再说。你回到舒适的铺盖上，渐渐睡去。）~
 DO ~RestParty()~ EXIT
 
 CHAIN PLAYER1 bathe.1b
-~(Deciding not to bother whoever has laid claim on this stream, you turn away and head back towards your camp. You return to the comfort of your bedroll, and drift off into sleep.)~
+~（你决定不去打扰那个已经占了这条溪的人，转身回营地。你回到舒适的铺盖上，渐渐睡去。）~
 DO ~RestParty()~ EXIT
 
 CHAIN PLAYER1 bathe.2
-~(You decide that a bath would be a welcome relief, and head out alone towards the stream for a nice, relaxing bathe, hoping that the water isn't too cold.)~
-= ~(As you approach the stream, you test the waters before deciding it is good enough. You begin to remove your clothing, but a nearby presence causes you to halt and reactively reach for your weapon.)~
-= ~(You cannot see any movement in the surroundings, however, before turning your attention back to the stream. You realize that there is somebody already within the water, and has yet to notice you.)~
+~（你觉得洗个澡会是件舒坦事，就独自往溪边去，想好好放松一下，只希望水别太凉。）~
+= ~（走近溪边，你先试了试水，觉得还过得去。你开始脱衣，可附近有什么存在让你停手，反射性地去摸武器。）~
+= ~（可你在把注意力转回溪流之前，看不见周围有任何动静。你发现水里已经有人，而那人还没注意到你。）~
 END
-++ ~Hello?~ EXTERN C0SIRE2J bathe.4
-++ ~(Approach as quietly as you can)~ EXTERN PLAYER1 bathe.3
-++ ~(Gather your things and leave quickly)~ EXTERN PLAYER1 bathe.1b
+++ ~喂？~ EXTERN C0SIRE2J bathe.4
+++ ~（尽量悄声靠近）~ EXTERN PLAYER1 bathe.3
+++ ~（收拾东西赶快离开）~ EXTERN PLAYER1 bathe.1b
 
 CHAIN PLAYER1 bathe.3
-~(You slowly move towards the mysterious person, careful not to make any sudden moves or noise that would alert them. As you get closer, you realize that the bathing figure, silhouetted in the moonlight, is distinctly feminine.)~
-= ~(When you are close enough, you recognize that it is Sirene. Without her armor, her form is surprisingly lithe and petite, and her muscles are lean. However, her back is covered with marks and scars, many grotesque and painful-looking. She suddenly becomes aware of your presence and turns in shock.)~
+~（你慢慢向那神秘的人移动，小心不做突然的动作，也不发出会惊动对方的声响。走近些后，你看出那沐浴的身影在月光下轮廓分明是女性。）~
+= ~（等你够近时，你认出那是塞琳。没有盔甲，她的身形意外地轻盈娇小，肌肉精瘦。可她的背上布满痕迹与伤疤，许多丑陋而看着就痛。她忽然察觉到你的存在，惊得转过身。）~
 EXTERN C0SIRE2J bathe.4
 
 APPEND C0SIRE2J
 
 IF ~~ bathe.4
-SAY ~*gasp* Ah! <CHARNAME>! F-forgive me, I did not notice that you were here to bathe as well. I- I will be finished shortly, if you would be patient for a moment...~
-= ~(She blushes as she attempts to cover herself with her arms while reaching for her belongings.)~
-= ~<CHARNAME>, would you... mind looking away a moment?~
-++ ~Oh, right.~ + bathe.6
-++ ~Yes, I'm... I'm sorry. I'm not looking. Go ahead.~ + bathe.6
-+ ~Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~What's wrong? It's nothing that I haven't seen before.~ + bathe.7a
-+ ~!Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~What's wrong? It's nothing I won't see sooner or later.~ + bathe.7a
-+ ~Gender(Player1,FEMALE)~ + ~Why are you so worried? We're both women. There's no need to be embarrassed.~ + bathe.7b
-++ ~Sorry, Sirene. I'll leave you to it.~ + bathe.5
+SAY ~（抽气）啊！<CHARNAME>！请——原谅我，我没注意到你也来洗澡。我——我马上就好，若你肯稍等片刻……~
+= ~（她红着脸，一边想用双臂遮住自己，一边去够自己的衣物。）~
+= ~<CHARNAME>，你……介意转过去一会儿吗？~
+++ ~哦，对。~ + bathe.6
+++ ~是，我……对不起。我没看。你继续。~ + bathe.6
++ ~Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~怎么了？又不是我没见过的东西。~ + bathe.7a
++ ~!Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~怎么了？反正我迟早会看见。~ + bathe.7a
++ ~Gender(Player1,FEMALE)~ + ~你担心什么？我们都是女人。不必难为情。~ + bathe.7b
+++ ~对不起，塞琳。我让你自己来吧。~ + bathe.5
 END
 
 IF ~~ bathe.5
-SAY ~Aye... I shall see you in the morn. Good night, <CHARNAME>.~
+SAY ~是的……明早见。晚安，<CHARNAME>。~
 IF ~~ DO ~RestParty()~ EXIT
 END
 
 IF ~~ bathe.6
-SAY ~(You hear light splashing as Sirene leaves the water and covers herself.) Alright... you may turn around again, <CHARNAME>.~
-= ~(When you turn, you see that Sirene has covered herself with a plain bathing robe, and her wet hair is glistening in the moonlight. Her eyes, normally a shade between gold and lime green, glows faintly with an orange tint thanks to her infravision.)~
-= ~F-forgive me, <CHARNAME>. I did not expect anyone else to come and bathe tonight, and... I, um... I suppose I should ask how much you saw, before...~
-++ ~I didn't see much, just your back. I swear.~ + bathe.8
-++ ~You have a fine body, Sirene. Why are you so bashful about it?~ + bathe.9
-++ ~More than I would've liked. Those scars and bruises look nasty.~ + bathe.10
-++ ~You know, I'm really not in the mood for conversation. See you tomorrow.~ + bathe.5
+SAY ~（你听见轻轻的溅水声，塞琳离开水面，遮住了自己。）好了……你可以转回来了，<CHARNAME>。~
+= ~（你转过身，看见塞琳已用一件素色浴袍遮住自己，湿发在月光下闪光。她的眼睛平日介于金色与黄绿之间，此刻因她的夜视泛着淡淡的橙色微光。）~
+= ~请——原谅我，<CHARNAME>。我没料到今晚还有别人来洗澡，而且……我，嗯……我想我该问问你之前看到了多少，在……~
+++ ~我没看到多少，只是你的背。我发誓。~ + bathe.8
+++ ~你的身材很好，塞琳。你为什么要这么害羞？~ + bathe.9
+++ ~比我愿意看到的更多。那些疤和瘀伤看着挺糟。~ + bathe.10
+++ ~你知道，我现在真没心情聊天。明天见。~ + bathe.5
 END
 
 IF ~~ bathe.7a
-SAY ~*sigh* <CHARNAME>, please do not jest. 'Tis discomforting for you to stare at me... please, turn for a moment.~
+SAY ~*叹气*<CHARNAME>，请别开玩笑。你这样盯着我让我不自在……求你，转过去一会儿。~
 IF ~~ + bathe.6
 END
 
 IF ~~ bathe.7b
-SAY ~That is not why I... I will explain in a moment, <CHARNAME>.~
+SAY ~不是因为那个我才……我稍后解释，<CHARNAME>。~
 IF ~~ + bathe.6
 END
 
 IF ~~ bathe.8
-SAY ~Ah... is that all, truly? I suppose I should be relieved, but...~
+SAY ~啊……真的就这些？我想我该松口气，可是……~
 IF ~~ + bathe.10
 END
 
 IF ~~ bathe.9
-SAY ~N-no, 'tis not my body that is the issue, but...~
+SAY ~不——不，问题不在我的身体，而是……~
 IF ~~ + bathe.10
 END
 
 IF ~~ bathe.10
-SAY ~I... I was simply afraid that you saw my... my scars. They are far from pleasant, and... I would have never wished for you to see them.~
-++ ~They aren't that bad. I've got my share of scars myself, see?~ + bathe.11
-++ ~I admit, they're not pretty. But they don't ruin your appearance.~ + bathe.12
-++ ~Why are you so concerned with hiding them?~ + bathe.13
-++ ~This is getting a little awkward. I think I'll turn in for the night.~ + bathe.5
+SAY ~我……我只是怕你看见了……我的疤。它们远不好看，而且……我绝不愿让你看见它们。~
+++ ~没那么糟。我自己也有一身疤，看见没？~ + bathe.11
+++ ~我承认它们不好看。可它们没毁掉你的样子。~ + bathe.12
+++ ~你为什么这么在意把它们藏起来？~ + bathe.13
+++ ~这有点尴尬了。我想我该去睡了。~ + bathe.5
 END
 
 IF ~~ bathe.11
-SAY ~Aye, but...~
+SAY ~是的，可是……~
 IF ~~ + bathe.13
 END
 
 IF ~~ bathe.12
-SAY ~*sigh* That makes my attempts at hiding them sound vain, <CHARNAME>.~
+SAY ~*叹气*那你这么一说，我那些遮掩倒显得虚荣了，<CHARNAME>。~
 IF ~~ + bathe.13
 END
 
 IF ~~ bathe.13
-SAY ~I... I know not how to properly explain. I do not wish to sound as though my scars bring me shame... no, 'tis quite the opposite. I have pride in the battles in which I earned them. But...~
-= ~Since you and I have... spoken, I have found myself more concerned with my outer appearance when in your presence. I suppose I did not want these old wounds to... affect your opinion of me.~
-++ ~Do you really think I'm that shallow? Come on, Sirene. You should know I'm not like that.~ + bathe.14
-++ ~Don't worry, Sirene. I know what your scars mean to you, and I think no less of you having seen them.~ + bathe.14
-++ ~Well, that explains the grooming in the early mornings. And the scented oils.~ + bathe.15
-++ ~Look, Sirene, I'm flattered you think of me, but I just want us to remain friends, nothing more.~ + bathe.16
-++ ~I'd rather not talk about this. Good night, Sirene.~ + bathe.5
+SAY ~我……我不知道该怎么好好解释。我不愿让自己听起来像是在为这些疤羞耻……不，恰恰相反。我以赢得它们的那些战斗为傲。可是……~
+= ~自从你和我……谈过之后，我发觉自己在你面前更在意自己的外貌了。我想我是不愿这些旧伤……影响你对我的看法。~
+++ ~你真觉得我那么肤浅？别这样，塞琳。你该知道我不是那种人。~ + bathe.14
+++ ~别担心，塞琳。我知道你的疤对你意味着什么，见过它们之后我也不会看轻你。~ + bathe.14
+++ ~哦，这就解释了清晨的梳洗。还有那些香油。~ + bathe.15
+++ ~听着，塞琳，你想着我让我很受宠若惊，可我只想我们继续做朋友，仅此而已。~ + bathe.16
+++ ~我不想谈这个。晚安，塞琳。~ + bathe.5
 END
 
 IF ~~ bathe.14
-SAY ~(She smiles reluctantly) It is comforting to hear you say that, <CHARNAME>. Though I am still slightly embarrassed that you caught me here, I admit...~
+SAY ~（她不情愿地笑了）听你这么说让我安心，<CHARNAME>。虽然你在这里撞见我仍让我有点难为情，可我承认……~
 IF ~~ + bathe.17
 END
 
 IF ~~ bathe.15
-SAY ~*blush* <CHARNAME>! Please, do not tease me so. Those were all meant for...~
+SAY ~*脸红*<CHARNAME>！求你，别这样逗我。那些都是为了……~
 IF ~~ + bathe.17
 END
 
 IF ~~ bathe.16
-SAY ~...aye. I understand. Let us move past this, then.~
-= ~'Tis late. I should return to the camp and rest. Good night, <CHARNAME>.~
+SAY ~……是的。我明白。那我们就让这事过去吧。~
+= ~夜深了。我该回营地休息了。晚安，<CHARNAME>。~
 IF ~~ DO ~SetGlobal("C0SireneBathe","GLOBAL",2) SetGlobal("C0SireneRomanceActive","GLOBAL",3) RestParty()~ EXIT
 END
 
 IF ~~ bathe.17
-SAY ~(Even in the darkness, you are certain her face is flushed) I-It is getting late, <CHARNAME>. I should return to the camp. Good night...~
+SAY ~（即使在黑暗里，你也确信她脸红了）时——时候不早了，<CHARNAME>。我该回营地了。晚安……~
 IF ~~ DO ~RestParty()~ EXIT
 END
 END
@@ -218,20 +218,20 @@ EXTEND_BOTTOM WSMITH01 13
 END
   
 APPEND WSMITH01
-  IF ~~ THEN BEGIN CROMWELL1 SAY ~Hmm, what have ye got here, aye? Cold iron? Smells like smoke an' ashes...~
+  IF ~~ THEN BEGIN CROMWELL1 SAY ~嗯，你这儿有什么，嗯？冷铁？闻着像烟和灰……~
     IF ~PartyHasItem("C0SW2H")
         !PartyHasItem("MISC6M")~ THEN GOTO CROMWELL2
     IF ~PartyHasItem("C0SW2H")
         PartyHasItem("MISC6M")~ THEN GOTO CROMWELL3
   END
   
-  IF ~~ THEN BEGIN CROMWELL2 SAY ~Aye, ye've got a devil o' a blade 'ere. Seen better days, it has. But if ye had a demon's heart, I could give it more of a bite.~
+  IF ~~ THEN BEGIN CROMWELL2 SAY ~是啊，你这把剑真够邪的。看得出用过些日子了。可你若有一颗魔物的心，我能让它更咬人些。~
     IF ~~ THEN GOTO CROMWELLNO
   END
   
-  IF ~~ THEN BEGIN CROMWELL3 SAY ~Aye, ye've got a devil o' a blade 'ere. Seen better days, it has. An' by Moradin's forge, ye've got a demon's fresh heart, too! If ye've got 5000 gold, I can use demon's blood to give yon blade some extra bite.~
-    IF ~PartyGoldLT(5000)~ THEN REPLY ~I don't have enough gold.~ GOTO CROMWELLNO
-    IF ~PartyGoldGT(4999)~ THEN REPLY ~That sounds good. Do it.~ DO ~SetGlobal("C0BrimstoneUpgrade","ar0334",1)
+  IF ~~ THEN BEGIN CROMWELL3 SAY ~是啊，你这把剑真够邪的。看得出用过些日子了。而且以摩拉丁的熔炉起誓，你还有一颗新鲜的魔物心！你若有一万五千金币，我能用魔物的血让这把剑更咬人些。~
+    IF ~PartyGoldLT(5000)~ THEN REPLY ~我没有那么多金币。~ GOTO CROMWELLNO
+    IF ~PartyGoldGT(4999)~ THEN REPLY ~听起来不错。就做吧。~ DO ~SetGlobal("C0BrimstoneUpgrade","ar0334",1)
                                                  SetGlobal("ForgeStuff","GLOBAL",1)
                                                  TakePartyGold(5000)
                                                  TakePartyItemNum("C0SW2H",1)
@@ -239,14 +239,14 @@ APPEND WSMITH01
                                                  TakePartyItemNum("MISC6M",1)
                                                  DestroyItem("MISC6M")
                                                  DestroyGold(5000)~ GOTO 56
-    IF ~~ THEN REPLY ~Not at this time. What else?~ GOTO CROMWELLNO
+    IF ~~ THEN REPLY ~现在不行。还有别的吗？~ GOTO CROMWELLNO
   END
 
-  IF WEIGHT #-1 ~GlobalGT("C0BrimstoneCraft","ar0334",0)~ THEN BEGIN CROMWELL4 SAY ~Well, there ye go, me friend. Use it well. And if ye comes across anything else of interest, ye knows where to bring it, aye?~
+  IF WEIGHT #-1 ~GlobalGT("C0BrimstoneCraft","ar0334",0)~ THEN BEGIN CROMWELL4 SAY ~好啦，给你，我的朋友。好好用。你若再碰上什么有趣的东西，你知道该往哪儿送，嗯？~
     IF ~~ THEN DO ~SetGlobal("C0BrimstoneCraft","ar0334",0)~ EXIT
   END
 
-  IF ~~ THEN BEGIN CROMWELLNO SAY ~Movin' on, then...~
+  IF ~~ THEN BEGIN CROMWELLNO SAY ~那就继续走吧……~
    COPY_TRANS WSMITH01 13
   END
 END
@@ -254,79 +254,79 @@ END
 // Yoshimo's betrayal
 
 I_C_T YOSHJ 113 C0SireneYOSHJ113
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Yoshimo... no, it cannot be. You have *damned* yourself. What could drive you to do this?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~吉野……不，不可能。你*诅咒*了你自己。是什么逼你这么做？~
 END
 
 I_C_T YOSHIMOX 5 C0SireneYOSHIMOX5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I see... so this is the suffering that binds your soul. In spite of all that has happened, Yoshimo, I am truly sorry that it must come to this.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我明白了……原来这就是束缚你灵魂的苦难。尽管发生了这一切，吉野，我仍真心遗憾事情非得走到这一步。~
 END
 
 // Yoshimo's heart
 
 INTERJECT SLILMAT 0 C0SireneSLILMAT0
-== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~Brother... I must ask a favor of you. I have here the heart of a lost friend. Before his death, he... asked lord Ilmater for judgment.~
+== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~兄弟……我必须求你一件事。我这里有一颗逝去朋友的心。他死前……向伊尔梅特大人求了审判。~
 EXTERN SLILMAT 10
 
 I_C_T SLILMAT 10 C0SireneSLILMAT10
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~...<CHARNAME>?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~……<CHARNAME>？~
 END
 
 INTERJECT WILMAT 0 C0SireneWILMAT0
-== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~Sister... I must ask a favor of you. I have here the heart of a lost friend. Before his death, he... asked lord Ilmater for judgment.~
+== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~姐妹……我必须求你一件事。我这里有一颗逝去朋友的心。他死前……向伊尔梅特大人求了审判。~
 EXTERN WILMAT 4
 
 I_C_T WILMAT 4 C0SireneWILMAT4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~...<CHARNAME>?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~……<CHARNAME>？~
 END
 
 // Spellhold - non-romanced
 
 INTERJECT Player1 3 C0SireneSpellholdDizzy0
 == C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SireneRomanceActive","GLOBAL",2)~ THEN
-~Are you all right, my friend? Your face clearly shows discomfort.~
+~你还好吗，我的朋友？你的脸色明显显出不适。~
 END
-++ ~There's nothing wrong with me.~ EXTERN C0SIRE2J pl1.1
-++ ~I'm fine. Just... a bit dizzy.~ EXTERN C0SIRE2J pl1.2
-++ ~Something's not right. I think Irenicus did something to me.~ EXTERN C0SIRE2J pl1.3
+++ ~我没什么事。~ EXTERN C0SIRE2J pl1.1
+++ ~我没事。只是……有点晕。~ EXTERN C0SIRE2J pl1.2
+++ ~有什么不对劲。我想艾瑞尼卡斯对我做了什么。~ EXTERN C0SIRE2J pl1.3
 
 CHAIN C0SIRE2J pl1.1
-~Forgive me for saying so, <CHARNAME>, but I doubt that. If there is anything I can do to help, then tell me.~
+~请原谅我这么说，<CHARNAME>，可我怀疑。若有什么我能帮上忙的，就告诉我。~
 EXIT
 
 CHAIN C0SIRE2J pl1.2
-~Is that so? Perhaps we should stop and rest a while, then. This is not a safe place, and we need you in good condition to lead us.~
+~是吗？那我们也许该停下来歇一会儿。这地方不安全，而我们需要你状态良好来领着我们。~
 EXIT
 
 CHAIN C0SIRE2J pl1.3
-~What did he do? I fear the worst, <CHARNAME>. If this happens again, tell me.~
+~他做了什么？我怕是最坏的情形，<CHARNAME>。若再发生，告诉我。~
 EXIT
 
 // Spellhold - romanced
 
 INTERJECT Player1 3 C0SireneSpellholdDizzy1
 == C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SireneRomanceActive","GLOBAL",2)~ THEN
-~<CHARNAME>? A-are you unwell? Please, talk to me.~
+~<CHARNAME>？你——你不舒服吗？求你，跟我说话。~
 END
-++ ~I'm all right... really.~ EXTERN C0SIRE2J pl1.4
-++ ~Something's wrong with me, Sirene, but I don't know what.~ EXTERN C0SIRE2J pl1.5
-++ ~Let me hold you, Sirene. I need your support.~ EXTERN C0SIRE2J pl1.6
+++ ~我没事……真的。~ EXTERN C0SIRE2J pl1.4
+++ ~我身上有什么不对，塞琳，可我不知道是什么。~ EXTERN C0SIRE2J pl1.5
+++ ~让我抱着你，塞琳。我需要你的支撑。~ EXTERN C0SIRE2J pl1.6
 
 CHAIN C0SIRE2J pl1.4
-~<CHARNAME>... please, do not lie to me. It does not make me feel better.~
+~<CHARNAME>……求你，别对我说谎。那不会让我好受。~
 EXIT
 
 CHAIN C0SIRE2J pl1.5
-~You are frightening me, <CHARNAME>. Perhaps it is this place... let us find a way out of here, quickly.~
+~你在吓我，<CHARNAME>。也许是这地方……我们快找个出去的路吧。~
 EXIT
 
 CHAIN C0SIRE2J pl1.6
-~(She nods and embraces you closely) You do not even need to ask, <CHARNAME>. I will be here for you, always.~
+~（她点头，紧紧抱住你）你连问都不必，<CHARNAME>。我会一直在你身边，永远。~
 EXIT
 
 // Slayer reaction
 
 I_C_T PLAYER1 5 C0SireneFirstSlayerChange1 
-== C0SIRE2J IF ~InParty("C0Sirene") See("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~By Ilmater, that... that *thing* was evil incarnate, <CHARNAME>. 'Twas like nothing I have ever seen before... was it your taint manifested?~
+== C0SIRE2J IF ~InParty("C0Sirene") See("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，那……那*东西*是邪恶的化身，<CHARNAME>。那跟我见过的任何东西都不一样……是你的污秽显形了吗？~
 END
 
 // Non-romance, tree of life LG
@@ -336,15 +336,15 @@ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOT
 END
 
 CHAIN PLAYER1 pl2
-~Sirene, paladin of Ilmater, who has endured many trials at your side. She has proven her loyalty and righteousness to you time and time again, but you wonder if she truly is aware of what is to come.~
+~塞琳，伊尔梅特的圣武士，曾在你身边历经诸多试炼。她一次又一次向你证明了她的忠诚与正直，可你不确定她是否真知道前头等着什么。~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~Sirene, this is between me and Irenicus. Your part in this is done.~ EXTERN C0SIRE2J pl2.1
-++ ~There are many others who need you, Sirene. Don't throw away your life for me.~ EXTERN C0SIRE2J pl2.1
-++ ~It's time to finish things. Are you prepared?~ EXTERN C0SIRE2J pl2.1
+++ ~塞琳，这是我和艾瑞尼卡斯之间的事。你在这其中的部分已经结束了。~ EXTERN C0SIRE2J pl2.1
+++ ~还有许多别人需要你，塞琳。别为我抛掉你的命。~ EXTERN C0SIRE2J pl2.1
+++ ~该了结一切了。你准备好了吗？~ EXTERN C0SIRE2J pl2.1
 
 CHAIN C0SIRE2J pl2.1
-~I would never turn away from in your greatest hour of need, <CHARNAME>, especially not when you need me the most. Whether I live or die, t'would be worth it to see you restored. My life is yours to forfeit, my friend.~
+~在你最需要帮助的至暗时刻，我绝不会从你身边走开，<CHARNAME>，尤其不会在你最需要我时。无论我是生是死，能见你复原就值得。我的命随你取用，我的朋友。~
 END
 COPY_TRANS PLAYER1 33 
 
@@ -355,12 +355,12 @@ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOT
 END
 
 CHAIN PLAYER1 pl4
-~Sirene, former paladin of Ilmater, who has endured many trials at your side. By your guidance, she has sought her own path to follow with full control of her fate. But is she truly prepared to risk everything for your sake?~
+~塞琳，伊尔梅特的前圣武士，曾在你身边历经诸多试炼。在你的引导下，她寻到了自己的路，全然掌握自己的命运。可她真准备好为你冒一切风险吗？~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~Sirene, this is between me and Irenicus. Your part in this is done.~ EXTERN C0SIRE2J pl2.1
-++ ~There are many others who need you, Sirene. Don't throw away your life for me.~ EXTERN C0SIRE2J pl2.1
-++ ~It's time to finish things. Are you prepared?~ EXTERN C0SIRE2J pl2.1
+++ ~塞琳，这是我和艾瑞尼卡斯之间的事。你在这其中的部分已经结束了。~ EXTERN C0SIRE2J pl2.1
+++ ~还有许多别人需要你，塞琳。别为我抛掉你的命。~ EXTERN C0SIRE2J pl2.1
+++ ~该了结一切了。你准备好了吗？~ EXTERN C0SIRE2J pl2.1
 
 // Romance, tree of life LG
 
@@ -370,16 +370,16 @@ EXTERN PLAYER1 pl3
 END
 
 CHAIN PLAYER1 pl3
-~Sirene, paladin of Ilmater, to whom you became her closest friend and eventual lover. She looks upon you, warmth in her eyes.~
+~塞琳，伊尔梅特的圣武士，你成了她最亲密的朋友，最终成为她的爱人。她望着你，眼里满是温暖。~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~Sirene, I-~ EXTERN C0SIRE2J pl3.1
+++ ~塞琳，我——~ EXTERN C0SIRE2J pl3.1
 
 CHAIN C0SIRE2J pl3.1
-~(smile) No, <CHARNAME>. This time, allow me to do the talking.~
-= ~There are no words that I can say that would explain my feelings to you, but I feel the need to speak nonetheless.~
-= ~In the time we've been together, I have seen many things. I have suffered, lost and gained more than I have in the rest of my life, but the time since I met you has mattered more to me than all the years I have lived without a cause. Thank you.~
-= ~I love you. You have become more important to me than the gods, the world... and even my life. To part with you now, and the thought that I may never see you again, would be a fate worse than anything I may risk by standing at your side. I will follow you, no matter the consequence.~
+~（微笑）不，<CHARNAME>。这一回，让我来说。~
+= ~没有言语能向你解释我的感受，可我觉得仍必须说。~
+= ~我们在一起的这些时候，我见过许多。我受过的苦、失去与得到的，多过我余生其余的年月，可自从遇见你以来的这些时光，比我无目的地活过的所有年岁都更重要。谢谢你。~
+= ~我爱你。你对我已比众神、比世界……甚至比我自己的性命更重要。如今与你分离，以及想到我可能再也见不到你，会是比站在你身边所冒的任何风险都更糟的命运。我会跟着你，无论后果如何。~
 END
 COPY_TRANS PLAYER1 33
 
@@ -391,79 +391,79 @@ EXTERN PLAYER1 pl5
 END
 
 CHAIN PLAYER1 pl5
-~Sirene, former paladin of Ilmater, to whom you became her closest friend and eventual lover. She looks upon you, warmth in her eyes.~
+~塞琳，伊尔梅特的前圣武士，你成了她最亲密的朋友，最终成为她的爱人。她望着你，眼里满是温暖。~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~Sirene, I-~ EXTERN C0SIRE2J pl3.1
+++ ~塞琳，我——~ EXTERN C0SIRE2J pl3.1
 
 // Tree of Life, Irenicus is dead.
 
 I_C_T PLAYER1 16 C0SireneIrenicusIsDead1
-== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Is this the end? It feels no different to me, but what of you, <CHARNAME>?~
+== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这就是终点吗？对我来说感觉没什么不同，可你呢，<CHARNAME>？~
 END
 
 // Hell
 
 I_C_T PLAYER1 25 C0SireneEnteringHell1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~I... I thought I had seen the House of the Triad for a moment. 'Twas like a dream I never dared to imagine... but I heard your scream, so I turned away. Eternal rest seemed so close, yet... I stand at your side, <CHARNAME>, even in death.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~我……我以为有一刻看见了三位神殿。那像是我从不敢想象的梦……可我听见了你的喊声，于是我转过身来。永恒的安息似乎那么近，可是……我站在你身边，<CHARNAME>，即使身死亦然。~
 END
 
 I_C_T PLAYER1 25 C0SireneEnteringHell2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~So, death was not the end for either of us... I thought perhaps this was the fate that awaited me, but... if I am to continue at your side even in this hell, then so be it.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~那么，死亡对我们俩都不是终点……我本以为这也许就是等着我的命运，可是……若我要在这地狱里也继续陪着你，那就如此吧。~
 END
 
 // Irenicus in hell
 
 I_C_T HELLJON 7 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~In Ilmater's name, you will pay for your sins, Irenicus. There will be no more mercy for you, from us or the gods!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 8 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~In Ilmater's name, you will pay for your sins, Irenicus. There will be no more mercy for you, from us or the gods!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 9 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~In Ilmater's name, you will pay for your sins, Irenicus. There will be no more mercy for you, from us or the gods!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 10 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~In Ilmater's name, you will pay for your sins, Irenicus. There will be no more mercy for you, from us or the gods!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 7 C0SireneThirdBattleWithIrenicus2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~A thousand deaths are not enough penance for the sins you have committed, Irenicus. May your death be swift, for your final judgment will not!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~你犯下的罪，死一千次也不足以赎清，艾瑞尼卡斯。愿你的死来得快，因为你最终的审判不会快！~
 END
 
 I_C_T HELLJON 8 C0SireneThirdBattleWithIrenicus2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~A thousand deaths are not enough penance for the sins you have committed, Irenicus. May your death be swift, for your final judgment will not!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~你犯下的罪，死一千次也不足以赎清，艾瑞尼卡斯。愿你的死来得快，因为你最终的审判不会快！~
 END
 
 I_C_T HELLJON 9 C0SireneThirdBattleWithIrenicus2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~A thousand deaths are not enough penance for the sins you have committed, Irenicus. May your death be swift, for your final judgment will not!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~你犯下的罪，死一千次也不足以赎清，艾瑞尼卡斯。愿你的死来得快，因为你最终的审判不会快！~
 END
 
 I_C_T HELLJON 10 C0SireneThirdBattleWithIrenicus2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~A thousand deaths are not enough penance for the sins you have committed, Irenicus. May your death be swift, for your final judgment will not!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~你犯下的罪，死一千次也不足以赎清，艾瑞尼卡斯。愿你的死来得快，因为你最终的审判不会快！~
 END
 
 // ROMANCE CONTENT: the second slayer change
 
 INTERJECT Player1 7 C0SireneSecondSlayerChange0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) OR(2) Global("C0SireneRomanceActive","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~<CHARNAME>... did you sleep at all? You look horribly pale...~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) OR(2) Global("C0SireneRomanceActive","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~<CHARNAME>……你究竟睡过没有？你脸色苍白得可怕……~
 END
-++ ~Get away from me, I'm turning!~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
-++ ~It's coming again, Sirene! Run while you can!~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
-++ ~I feel... strange...~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
+++ ~离我远点，我要转变了！~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
+++ ~它又来了，塞琳！能跑就跑！~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
+++ ~我觉得……不对劲……~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
 
 CHAIN C0SIRE2J C0SireneSecondSlayerChange1
-~What are you saying, <CHARNAME>? I cannot hear you... no, by the gods, NO!~
+~你在说什么，<CHARNAME>？我听不见你……不，神明在上，不！~
 DO ~SetGlobal("C0SireneSecondSlayerChange","GLOBAL",1)
 ActionOverride(Player1,ReallyForceSpell(Myself,SLAYER_CHANGE))~
 EXIT
 
 INTERJECT Player1 10 C0SireneSlayerSurvived1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) OR(2) Global("C0SireneRomanceActive","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2) Global("C0SireneSecondSlayerChange","GLOBAL",1)~ THEN ~You... <CHARNAME>, are you...~
-= ~This... this must end. We must restore you, or else... I dare not imagine it.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) OR(2) Global("C0SireneRomanceActive","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2) Global("C0SireneSecondSlayerChange","GLOBAL",1)~ THEN ~你……<CHARNAME>，你……~
+= ~这……这必须结束。我们必须让你复原，否则……我不敢想象。~
 END
 IF ~~ EXIT
 
@@ -478,32 +478,32 @@ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOT
 END
 
 CHAIN BODHIAMB C0SireneKidnap
-~You follow in the hopes of retrieving something dear to you. I say that the longer you keep this up, the more you will lose.~
-== BODHIAMB ~Ah, paladins are always the most satisfying to corrupt. So self-righteous and arrogant... and this one has the most intriguing background. The fiendish blood within her will appreciate what I shall do, I think.~
-== C0SIRE2J ~I know what you intend, monster, but Ilmater will protect my soul. You will not have me.~
-== BODHIAMB ~Your pitiful god cannot protect you, Sirene. Surely you feel the call of the darkness welcoming you...~
-== C0SIRE2J ~No! I put my life in my lord's hands! <CHARNAME>, strike me down!~
+~你追随至此，是希望取回对你珍贵的东西。我说，你越是这样下去，失去的只会越多。~
+== BODHIAMB ~啊，腐化圣武士总是最令人满意。如此自以为是、如此傲慢……而这一个的背景最是有趣。她体内的魔性之血会欣赏我将要做的事，我想。~
+== C0SIRE2J ~我知道你打算做什么，怪物，可伊尔梅特会护住我的灵魂。你得不到我。~
+== BODHIAMB ~你那可怜的神护不了你，塞琳。你必定感觉到了黑暗在召唤、在欢迎你……~
+== C0SIRE2J ~不！我把性命交在我主手中！<CHARNAME>，杀了我！~
 END
-++ ~(Do as she says)~ EXTERN C0SIRE2J C0SireneKidnap1
-++ ~I... I can't!~ EXTERN BODHIAMB C0SireneKidnap2
-++ ~(Do nothing)~ EXTERN BODHIAMB C0SireneKidnap2
+++ ~（照她说的做）~ EXTERN C0SIRE2J C0SireneKidnap1
+++ ~我……我下不了手！~ EXTERN BODHIAMB C0SireneKidnap2
+++ ~（什么都不做）~ EXTERN BODHIAMB C0SireneKidnap2
 
 CHAIN C0SIRE2J C0SireneKidnap1
-~Thank you...~
+~谢谢你……~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0bodhi")~ EXIT
 
 CHAIN BODHIAMB C0SireneKidnap2
-~Can you truly do it, <CHARNAME>, hmm? Cut down the one closest to you? I doubt it. Now be a good girl and come with me...~
-== C0SIRE2J ~I will not harm <CHARNAME>, even if I must fall. I choose death in Ilmater's name!~
+~你真下得了手吗，<CHARNAME>，嗯？砍倒最亲近你的人？我怀疑。现在乖一点，跟我来……~
+== C0SIRE2J ~我不会伤害<CHARNAME>，即使我必须倒下。我以伊尔梅特之名选择死亡！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0bodhi2")~ EXIT
 
 CHAIN IF WEIGHT #-1
 ~Global("C0SireneVampire","GLOBAL",3)~ THEN BODHIAMB C0SireneKidnap3
-~Do you truly think this makes a difference, foolish <CHARNAME>? I will have her regardless. Her cold body will do. Follow me further and you will lose more than you can imagine... beginning now!~
+~你真以为这有什么用吗，愚蠢的<CHARNAME>？我无论如何都要得到她。她那具冷掉的尸体也行。再跟着我往前走，你会失去超乎想象的东西……就从现在开始！~
 END
 IF ~~ DO ~DialogueInterrupt(FALSE)
 CreateCreatureObject("VAMPIM01",Myself,0,0,0)
@@ -523,21 +523,21 @@ IF ~Global("C0SireneVampire","GLOBAL",3)~ + 23
 END
 
 EXTEND_BOTTOM C6BODHI 23
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~You have taken too much already! Return Imoen's soul, and Sirene's corpse!~ EXTERN C6BODHI C0SireneAb
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~And you have delivered on that promise. Return Sirene's body and perhaps I will be merciful.~ EXTERN C6BODHI C0SireneAb
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~I would have hunted you for your theft of Sirene alone. I will not lose my last hope of saving her from you.~ EXTERN C6BODHI C0SireneAb
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~You place too much confidence in sentiment. The theft of Sirene's body will not save you.~ EXTERN C6BODHI C0SireneAbConf
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~你已经夺走太多了！把爱蒙的灵魂还回来，还有塞琳的遗体！~ EXTERN C6BODHI C0SireneAb
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~而你已经兑现了那个承诺。把塞琳的遗体还回来，也许我会仁慈些。~ EXTERN C6BODHI C0SireneAb
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~单为你偷走塞琳，我就会追你到天涯。我不会失去从你手中救她的最后希望。~ EXTERN C6BODHI C0SireneAb
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~你太相信感情了。偷走塞琳的遗体救不了你。~ EXTERN C6BODHI C0SireneAbConf
 END
 
 CHAIN C6BODHI C0SireneAbConf
-~An interesting ploy, though I am sure her fate will still serve as an example, whether you wish her back or not.~
+~有趣的手段，不过我确信她的命运仍会成为一个警戒，无论你希不希望她回来。~
 END
 IF ~~ EXTERN C6BODHI C0SireneAb
 
 CHAIN C6BODHI C0SireneAb
-~Your pet fiendling is dead, <CHARNAME>. Quite impressive, truly. Perhaps her wretched god is with her after all, for I was unable to even touch her after laying her corpse into these tombs, much less turn her into one of us.~
-= ~But that is of no consequence. I have taken from you what you treasure the most, <CHARNAME>, as was my intention. Fear not, however. You will join your beloved Sirene in the grave.~
-= ~No... that is not the fate that awaits you, is it, hmm? Oh, how delightful this is... I shall take more pleasure in watching your life fade, knowing your soul is bound for oblivion, never to see the one you love again!~
+~你的小魔裔宠物死了，<CHARNAME>。真了不起，真的。也许她那可怜的神毕竟与她同在，因为我把她的遗体放进这些墓室之后，竟连碰都碰不得她，更别说把她变成我们的一员。~
+= ~可那无关紧要。我已从你手中夺走了你最珍视的东西，<CHARNAME>，正如我所愿。不过别怕。你会跟你心爱的塞琳一同入土。~
+= ~不……那不是等着你的命运，对吧，嗯？哦，这多令人愉快……知道你的灵魂注定归于虚无、再也见不到你所爱之人，我会更享受看着你的生命消逝！~
 END
 IF ~~ EXTERN C6BODHI 22
 
@@ -546,7 +546,7 @@ IF ~~ EXTERN C6BODHI 22
 CHAIN IF WEIGHT #-1
 ~Global("C0SireneVampire","GLOBAL",3)
 Global("C0SireneBody","AR0809",2)~ THEN PLAYER1 body
-~(Sirene's body is cold and lifeless in your arms. For all of Bodhi's taunts, she did not lie to you - Sirene is dead.)~ [C0BLANK]
+~（塞琳的遗体在你怀里冰冷无生气。尽管波迪百般嘲讽，她并没有骗你——塞琳死了。）~ [C0BLANK]
 DO ~SetGlobal("C0SireneBody","AR0809",3)
 SetGlobal("C0SireneVampire","GLOBAL",4)~
 END
@@ -562,49 +562,49 @@ IF ~!InParty("Imoen2") !InParty("Aerie") !InParty("Jaheira") !InParty("Mazzy") !
 EXIT
 
 CHAIN IMOEN2J body.1
-~I- I'm so sorry, little <PRO_BROTHERSISTER>. I can't believe she's gone... but maybe it's not for good. There must be some way we can bring her back.~
+~我——我很抱歉，小<PRO_BROTHERSISTER>。我不敢相信她就这么走了……可也许不是永别。总该有办法把她带回来。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN AERIEJ body.2
-~No! S-she can't be... she can't be dead! *sob* I... I'm so sorry, <CHARNAME>. My magic c-can't help when she's... she's died this way. M-maybe the priests of Ilmater can help us.~
+~不！她——她不可能是……她不可能死了！*啜泣*我……我很抱歉，<CHARNAME>。她是这样……这样死去的，我的魔法帮不上忙。也——也许伊尔梅特的祭司能帮我们。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN JAHEIRAJ body.3
-~This... must be hard on you, <CHARNAME>. Though it goes against my teachings, I cannot bear to see you suffer like this. They may still be hope... perhaps we can seek aid from the Ilmatari church.~
+~这……对你一定很难，<CHARNAME>。虽然这违背我的教导，可我实在不忍看你这样痛苦。也许还有希望……也许我们能向伊尔梅特教会求助。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN MAZZYJ body.4
-~By Arvoreen's mercy... she did not deserve such an ignoble death. I know what it is like, <CHARNAME>, for I felt the same way when Patrick fell. Perhaps we should bring her to the priests of Ilmater.~
+~以阿沃林的慈悲……她不该落得这样不光彩的死。我知道那是什么滋味，<CHARNAME>，帕特里克倒下时我便如此。也许我们该把她带给伊尔梅特的祭司。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN KELDORJ body.5
-~I have seen many comrades fall in my lifetime, but she was too young to deserve this. You two deserved a long and full life together. Regardless, do not despair, my friend, for the priests of Ilmater in this city may still be able to save her.~
+~我这一生见过许多同伴倒下，可她太年轻，不该如此。你们俩本该一起过漫长充实的一生。无论如何，别绝望，我的朋友，这城里的伊尔梅特祭司也许还能救她。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN ANOMENJ body.6
-~This... was not what she deserved. I would draw upon Helm's power to bring her back, but I fear no magic could reverse such a sacrificial death. I am truly sorry, <CHARNAME>. We should bring her body to her fellow clergymen.~
+~这……不是她应得的。我愿借海姆之力把她带回，可我怕没有魔法能逆转这样牺牲性的死亡。我真心遗憾，<CHARNAME>。我们该把她的遗体带给她同教的教士。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN VICONIJ body.7
-~So, the elg'caress's foolishness became the death of her, as I expected. Do not look at me, <CHARNAME>, I have no power to restore her in that condition. She has fellows in this wretched city, does she not? Beg them for aid if you must.~ 
+~那么，这卓尔娘们的愚蠢终究要了她的命，正如我所料。别看我，<CHARNAME>，她那种状态下我没有力量复原她。她在这座破城里不是有同伙吗？必要的话去求他们。~ 
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN CERNDJ body.8
-~Death is a necessary part of the natural cycle, but perhaps in this case, there can be an exception. Regardless, I fear Sirene's ritual has prevented her from returning by normal means. Perhaps the local Ilmatari priests can assist us.~
+~死亡是自然循环必要的一环，可也许这一回能有例外。无论如何，我怕塞琳的仪式已经使她无法以寻常方式回来。也许当地的伊尔梅特祭司能帮我们。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
@@ -612,36 +612,36 @@ EXIT
 // Vampirism - priest of Ilmater
 
 EXTEND_BOTTOM SLILMAT 0 #2
-+ ~PartyHasItem("c0sbody")~ + ~Brother, I beg your assistance. My beloved, a fellow member of your faith, died to protect me. Is there anything you can do to return her to life?~ EXTERN SLILMAT C0SireneSLILMAT1
++ ~PartyHasItem("c0sbody")~ + ~兄弟，我求你相助。我的心爱之人，与你同信的一位，为保护我而死。你可有什么办法让她复生？~ EXTERN SLILMAT C0SireneSLILMAT1
 END
 
 CHAIN SLILMAT C0SireneSLILMAT1
-~Why... this is Sister Sirene of Ilmater's holy warriors! What has become of her?~
+~怎么……这是伊尔梅特圣战者中的塞琳姐妹！她怎么了？~
 END
-++ ~A powerful vampire attempted to turn her, but she did... something to stop it.~ EXTERN SLILMAT C0SireneSLILMAT2
+++ ~一个强大的吸血鬼想转变她，可她做了……什么来阻止。~ EXTERN SLILMAT C0SireneSLILMAT2
 
 CHAIN SLILMAT C0SireneSLILMAT2
-~Please, allow me to see her.~
-= ~By Ilmater, this is...~
-= ~I see... this is much, much worse than I expected. I am truly sorry to say this, but... I fear she is gone for good.~
-= ~Were it a simple matter of calling her spirit back from the Fugue Plane, I would gladly do everything within my power. But... if she has sacrificed her life to protect herself from the fate of undeath... then I fear my prayers will not be able to reach her.~
-= ~There is nothing I can do. I am truly sorry.~
+~请让我看看她。~
+= ~以伊尔梅特之名，这是……~
+= ~我明白了……这比我预想的要糟得多。我很遗憾这么说，可是……我怕她已彻底去了。~
+= ~若只是把她的灵魂从亡者之境召回来，我会乐于竭尽所能。可是……若她以性命为牺牲，使自己免于不死者的命运……那我怕我的祈祷触不到她。~
+= ~我无能为力。我真心遗憾。~
 END
-++ ~What, exactly, did she do to protect herself?~ EXTERN SLILMAT C0SireneSLILMAT3
-++ ~I can't have that. Please, we must try something.~ EXTERN SLILMAT C0SireneSLILMAT4
-++ ~That's not good enough. You restore her now, or else.~ EXTERN SLILMAT C0SireneSLILMAT4
+++ ~她到底做了什么来保护自己？~ EXTERN SLILMAT C0SireneSLILMAT3
+++ ~这不行。求你，我们总得试试。~ EXTERN SLILMAT C0SireneSLILMAT4
+++ ~这还不够。你现在就把她复原，否则……~ EXTERN SLILMAT C0SireneSLILMAT4
 
 CHAIN SLILMAT C0SireneSLILMAT3
-~I cannot say for certain... but it seems as though she used her life as a sacrifice to bless her body, protecting it from corruption. It seems she was successful, but...~
-= ~It seems that as a consequence, she has prevented herself from being resurrected. Such is the price of making such a sacrifice... you must have mattered much to her, <PRO_BROTHERSISTER>.~
+~我说不准……但看来她以自己的性命为牺牲，祝福了她的身体，使它免于腐化。看来她成功了，可是……~
+= ~看来结果是，她也使自己无法被复活。这就是这样牺牲的代价……你对她的意义一定非常重大，<PRO_BROTHERSISTER>。~
 END
-++ ~I must have her back. Is there really nothing you can do?~ EXTERN SLILMAT C0SireneSLILMAT4
-++ ~That's not good enough. You restore her now, or else.~ EXTERN SLILMAT C0SireneSLILMAT4
+++ ~我必须把她要回来。你真的什么都做不了？~ EXTERN SLILMAT C0SireneSLILMAT4
+++ ~这还不够。你现在就把她复原，否则……~ EXTERN SLILMAT C0SireneSLILMAT4
 
 CHAIN SLILMAT C0SireneSLILMAT4
-~Perhaps...~
-= ~There may yet be hope... but the only one who can save her is Ilmater himself. If her faith is true, then perhaps he will grant her life anew...~
-= ~I will prepare the rites to petition lord Ilmater. Her soul is likely on the road towards judgment as we speak, so we have no time to waste. This will require a whole day at the very least, so please make yourself at home, my <PRO_LADYLORD>.~
+~也许……~
+= ~也许还有希望……可唯一能救她的是伊尔梅特本人。若她的信仰真诚，也许他会再赐她生命……~
+= ~我会准备向伊尔梅特大人祈愿的仪式。她的灵魂此刻多半已在通往审判的路上，所以我们不能浪费时间。这至少需要一整天，所以请当在自己家里，我的<PRO_LADYLORD>。~
 DO ~TakePartyItemNum("C0SBODY",1)
 DestroyItem("C0SBODY")
 ClearAllActions()
@@ -649,36 +649,36 @@ StartCutsceneMode()
 StartCutscene("C0ILM01")~ EXIT
 
 EXTEND_BOTTOM WILMAT 0 #2
-+ ~PartyHasItem("c0sbody")~ + ~Sister, I beg your assistance. My beloved, a fellow member of your faith, died to protect me. Is there anything you can do to return her to life?~ EXTERN WILMAT C0SireneWILMAT1
++ ~PartyHasItem("c0sbody")~ + ~姐妹，我求你相助。我的心爱之人，与你同信的一位，为保护我而死。你可有什么办法让她复生？~ EXTERN WILMAT C0SireneWILMAT1
 END
 
 CHAIN WILMAT C0SireneWILMAT1
-~Why... this is Sister Sirene of Ilmater's holy warriors! What has become of her?~
+~怎么……这是伊尔梅特圣战者中的塞琳姐妹！她怎么了？~
 END
-++ ~A powerful vampire attempted to turn her, but she did... something to stop it.~ EXTERN WILMAT C0SireneWILMAT2
+++ ~一个强大的吸血鬼想转变她，可她做了……什么来阻止。~ EXTERN WILMAT C0SireneWILMAT2
 
 CHAIN WILMAT C0SireneWILMAT2
-~Please, allow me to see her.~
-= ~By Ilmater, this is...~
-= ~I see... this is much, much worse than I expected. I am truly sorry to say this, but... I fear she is gone for good.~
-= ~Were it a simple matter of calling her spirit back from the Fugue Plane, I would gladly do everything within my power. But... if she has sacrificed her life to protect herself from the fate of undeath... then I fear my prayers will not be able to reach her.~
-= ~There is nothing I can do. I am truly sorry.~
+~请让我看看她。~
+= ~以伊尔梅特之名，这是……~
+= ~我明白了……这比我预想的要糟得多。我很遗憾这么说，可是……我怕她已彻底去了。~
+= ~若只是把她的灵魂从亡者之境召回来，我会乐于竭尽所能。可是……若她以性命为牺牲，使自己免于不死者的命运……那我怕我的祈祷触不到她。~
+= ~我无能为力。我真心遗憾。~
 END
-++ ~What, exactly, did she do to protect herself?~ EXTERN WILMAT C0SireneWILMAT3
-++ ~I can't have that. Please, we must try something.~ EXTERN WILMAT C0SireneWILMAT4
-++ ~That's not good enough. You restore her now, or else.~ EXTERN WILMAT C0SireneWILMAT4
+++ ~她到底做了什么来保护自己？~ EXTERN WILMAT C0SireneWILMAT3
+++ ~这不行。求你，我们总得试试。~ EXTERN WILMAT C0SireneWILMAT4
+++ ~这还不够。你现在就把她复原，否则……~ EXTERN WILMAT C0SireneWILMAT4
 
 CHAIN WILMAT C0SireneWILMAT3
-~I cannot say for certain... but it seems as though she used her life as a sacrifice to bless her body, protecting it from corruption. It seems she was successful, but...~
-= ~It seems that as a consequence, she has prevented herself from being resurrected. Such is the price of making such a sacrifice... you must have mattered much to her, <PRO_BROTHERSISTER>.~
+~我说不准……但看来她以自己的性命为牺牲，祝福了她的身体，使它免于腐化。看来她成功了，可是……~
+= ~看来结果是，她也使自己无法被复活。这就是这样牺牲的代价……你对她的意义一定非常重大，<PRO_BROTHERSISTER>。~
 END
-++ ~I must have her back. Is there really nothing you can do?~ EXTERN WILMAT C0SireneWILMAT4
-++ ~That's not good enough. You restore her now, or else.~ EXTERN WILMAT C0SireneWILMAT4
+++ ~我必须把她要回来。你真的什么都做不了？~ EXTERN WILMAT C0SireneWILMAT4
+++ ~这还不够。你现在就把她复原，否则……~ EXTERN WILMAT C0SireneWILMAT4
 
 CHAIN WILMAT C0SireneWILMAT4
-~Perhaps...~
-= ~There may yet be hope... but the only one who can save her is Ilmater himself. If her faith is true, then perhaps he will grant her life anew...~
-= ~I will prepare the rites to petition lord Ilmater. Her soul is likely on the road towards judgment as we speak, so we have no time to waste. This will require a whole day at the very least, so please make yourself at home, my <PRO_LADYLORD>.~
+~也许……~
+= ~也许还有希望……可唯一能救她的是伊尔梅特本人。若她的信仰真诚，也许他会再赐她生命……~
+= ~我会准备向伊尔梅特大人祈愿的仪式。她的灵魂此刻多半已在通往审判的路上，所以我们不能浪费时间。这至少需要一整天，所以请当在自己家里，我的<PRO_LADYLORD>。~
 DO ~TakePartyItemNum("C0SBODY",1)
 DestroyItem("C0SBODY")
 ClearAllActions()
@@ -688,282 +688,282 @@ StartCutscene("C0ILM02")~ EXIT
 // Post-Resurrection
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneVampire","GLOBAL",5) Global("C0SirenePostResurrection","GLOBAL",0)~ THEN SLILMAT postres
-~I must congratulate you for being granted the chance to return to this world after your arduous trial, sister. You must surely have the favor of our lord to be granted such a gift.~
+~我得恭喜你，姐妹，经过那样艰难的试炼还能获准回到这世界。你必定蒙我们主的恩宠，才得到这样的礼物。~
 DO ~SetGlobal("C0SirenePostResurrection","GLOBAL",1)~ EXTERN SLILMAT 0
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneVampire","GLOBAL",5) Global("C0SirenePostResurrection","GLOBAL",0)~ THEN WILMAT postres2
-~I must congratulate you for being granted the chance to return to this world after your arduous trial, sister. You must surely have the favor of our lord to be granted such a gift.~
+~我得恭喜你，姐妹，经过那样艰难的试炼还能获准回到这世界。你必定蒙我们主的恩宠，才得到这样的礼物。~
 DO ~SetGlobal("C0SirenePostResurrection","GLOBAL",1)~ EXTERN WILMAT 0
 
 // Waukeen's Promenade
 
 I_C_T AERIE 26 C0SireneAERIE26
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~This is no ogre, <CHARNAME>. No evil creature, at the very least.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~这不是食人魔，<CHARNAME>。至少不是邪恶的生物。~
 END
 
 I_C_T QUAYLE 1 C0SireneQUAYLE1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~(smile) Is this the same Quayle that you and I remember, <CHARNAME>?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（微笑）这还是你我都记得的那个奎尔吗，<CHARNAME>？~
 END
 
 // Faldorn
 
 I_C_T CEFALDOR 0 C0SireneCEFALDOR0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~Faldorn?! Have you truly gone mad, druid? Even as I remember you, you had not sunk to such depths! Do you even recognize us?~
-== CEFALDOR ~Your inhuman stench is familiar to me, though from where I do not care to remember. Silence, now!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~法尔多恩？！你真是疯了吗，德鲁伊？就算我记得的你，也没堕到这般地步！你还认得我们吗？~
+== CEFALDOR ~你那非人的臭气我熟悉，虽不记得从哪儿闻过。闭嘴吧！~
 END
 
 // Bodhi
 
 I_C_T BODHI 1 C0SireneBODHI1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Be wary, <CHARNAME>. This woman wears an aura of evil like a cloak. I would disbelieve anything she says to us.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~小心，<CHARNAME>。这女人把邪恶的气息像斗篷一样披在身上。她对我们的任何话，我都不会信。~
 END
 
 I_C_T BODHI 6 C0SireneBODHI6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I will not do this, <CHARNAME>, and I advise you not to trust a word this... this thing says.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不会这么做，<CHARNAME>，我也劝你别信这……这东西说的一个字。~
 END
 
 I_C_T BODHI 18 C0SireneBODHI18
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I will have nothing to do with this creature, <CHARNAME>! Forgive me, but despite our friendship, this is where we part. Farewell.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不会与这生物有任何牵扯，<CHARNAME>！原谅我，尽管我们有交情，我们就在这里分道吧。再会。~
 DO ~SetGlobal("C0SireneJoined","GLOBAL",0)
 LeaveParty()
 EscapeArea()~
 END
 
 I_C_T BODHI2 6 C0SireneBODHI26
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Do not believe these lies, <CHARNAME> Even the Shadow Thieves are but flesh and blood, but she is a being of pure evil, and our enemy. She cannot be trusted.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~别信这些谎话，<CHARNAME>。连影贼都只是血肉之躯，可她却是纯粹的邪恶存在，是我们的敌人。不能信她。~
 END
 
 I_C_T C6BODHI 0 C0SireneC6BODHI0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Your evil ends here, Bodhi, I swear in Ilmater's name.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你的邪恶到此为止，波迪，我以伊尔梅特之名起誓。~
 END
 
 // Docks District
 
 I_C_T2 DCLERIC 1 C0SireneDCLERIC1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~In the name of Ilmater, your madness ends this day!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，你的疯狂今日终结！~
 END
 
 I_C_T2 DCLERIC 2 C0SireneDCLERIC2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~In the name of Ilmater, your madness ends this day!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，你的疯狂今日终结！~
 END
 
 I_C_T2 DCLERIC 3 C0SireneDCLERIC3
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~In the name of Ilmater, your madness ends this day!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，你的疯狂今日终结！~
 END
 
 I_C_T2 DCLERIC 4 C0SireneDCLERIC4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Twas a mistake allowing him to walk away, <CHARNAME>. Cyric's madmen are as cruel as they are mad, and will only sow discord so long as they are allowed to live.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~让他就这么走掉是个错误，<CHARNAME>。西瑞克的疯徒既残忍又疯狂，只要让他们活着，就只会播撒纷乱。~
 END
 
 I_C_T2 MAEVAR 25 C0SireneMAEVAR25
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~Edwin... not a name I had hoped to hear again.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~艾德温……不是我指望再听见的名字。~
 END
 
 I_C_T2 MAEVAR 31 C0SireneMAEVAR31
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~We have already been forced into one murder, <CHARNAME>. I do not wish to be a part of another.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们已经被迫参与过一次谋杀了，<CHARNAME>。我不想再当另一桩的一部分。~
 END
 
 I_C_T EDWIN 1 C0SireneEDWIN1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~I had hoped never to meet you again since we parted, Red Wizard, though I should not be surprised that you work amongst such villains.~
-== EDWIN ~I see you still keep your fiendling around, <CHARNAME>. This is the exact kind of company I speak of. No matter.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~自我们分别后，我本希望再不见你，红袍法师，虽然你混迹于这等恶徒之间我也不该意外。~
+== EDWIN ~看来你还把你这小魔裔带在身边，<CHARNAME>。这正是我说的那种同伴。无所谓了。~
 END
 
 I_C_T RENAL 30 C0SireneRENAL30
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~*sigh* Once again, to work with thieves... let us be done with this distasteful mission as quickly as possible.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（叹气）又要跟贼打交道……让我们尽快了结这桩令人厌恶的任务。~
 END
 
 I_C_T RENAL 30 C0SireneRENAL30
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~*sigh* Working with thieves... I do not like this. Let us be done with this distasteful mission as quickly as possible.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（叹气）跟贼合作……我不喜欢这样。让我们尽快了结这桩令人厌恶的任务。~
 END
 
 I_C_T ARAN 0 C0SireneARAN0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~The Shadowmaster himself... he is not as I expected, though perhaps appearances deceive.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~影主本人……他跟我预想的不同，不过也许外表会骗人。~
 END
 
 I_C_T ARAN 51 C0SireneARAN51
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Our task is a matter of life and death, and you think that these trinkets will satisfy? Do not mock us, thief.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们的任务事关生死，你觉得这些破烂就能打发？别戏弄我们，贼。~
 END
 
 I_C_T LYROS 11 C0SireneLYROS11
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~I had hoped we'd seen the last of this mad necromancer when we parted ways with him.~
-== LYROS ~And I had hoped you'd seen the inside of a coffin, paladin. I suppose we should both be disappointed, hmm?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我本希望与他分开后就再不见这疯狂的死灵法师。~
+== LYROS ~而我本希望你已躺进棺材里，圣武士。看来我们俩都该失望了，嗯？~
 END
 
 I_C_T2 RENFELD 6 C0SireneRENFELD6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I know we have important matters, <CHARNAME>, but we should bring him to aid imminently. His condition will get worse with every moment spent untreated.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我知道我们有要紧事，<CHARNAME>，可我们该尽快带他去求医。每耽搁一刻，他的状况就会更糟。~
 END
 
 I_C_T2 RENFELD 8 C0SireneRENFELD8
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You cannot be so cruel, <CHARNAME>! He is suffering greatly and will die a painful death if we do not help him.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你不能这么残忍，<CHARNAME>！他痛苦极重，我们若不帮他，他会死得很惨。~
 END
 
 I_C_T JAHEIRAJ 34 C0SireneJAHEIRAJ34
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Gods, Jaheira, you are becoming more pale as you speak. What did he do to you? How do you feel?~
-== JAHEIRAJ ~I... I am alright, for the moment. But the bastard...~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~神明啊，贾希拉，你说话时脸色越来越白。他对你做了什么？你感觉如何？~
+== JAHEIRAJ ~我……目前还好。可那混蛋……~
 END
 
 I_C_T2 DLOST 0 C0SireneDLOST0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh, poor child... is there anything we can do, <CHARNAME>?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~哦，可怜的孩子……我们能做点什么吗，<CHARNAME>？~
 END
 
 I_C_T2 DLOST 3 C0SireneDLOST3
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~That was cruel, <CHARNAME>. The girl was in desperate need of help, not your callousness.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~那太残忍了，<CHARNAME>。那女孩急需帮助，而不是你的冷漠。~
 END
 
 // Slums District
 
 I_C_T2 LEHTIN 10 C0SireneLEHTIN10
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~A foul man... his tone is as treacherous as that of a snake. I fear nothing good lies behind those doors.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一个卑劣的人……他的语调像蛇一样奸诈。我怕那些门后没有好事。~
 END
 
 I_C_T HENDAK 1 C0SireneHendak1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I should not be surprised that this den indulges in slavery. We must put an end to it, <CHARNAME>.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这巢穴竟以奴役为业，我不该意外。我们必须终结它，<CHARNAME>。~
 END
 
 I_C_T HENDAK 40 C0SireneHendak40
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Perhaps 'tis for the best, though I fear 'twould only draw further attention from the slavers. You should be wary, Hendak.~
-== HENDAK ~You speak the truth, my friend, though I know well the risks, and I do not fear them.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~也许这样最好，虽然我怕这只会引来奴隶贩子更多注意。你该小心，亨达克。~
+== HENDAK ~你说的是实话，我的朋友，虽然我很清楚风险，我并不怕它们。~
 END
 
 I_C_T SLAVERM 0 C0SireneSLAVERM0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~What is this? The local law would knowingly turn a blind eye to this devilry?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这是什么？当地律法竟会明知而对此等魔鬼行径视而不见？~
 END
 
 I_C_T HENDAK 31 C0SireneHendak31
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~As will we, whereever we find them. You have our promise of that.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们也会终结它们，无论在哪儿找到。这一点我们向你保证。~
 END
 
 I_C_T LISSA 4 C0SireneLISSA4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~How disgusting... children are the gods' gift to be cherished. Such abuse is only worthy of punishment.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~多么可憎……孩子是众神的恩赐，该被珍爱。这样的虐待只配惩罚。~
 END
 
 INTERJECT GIRL1 0 C0SireneGIRL1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~No, child, do not fear. You are free now. Go to Ilmater's temple. You will be safe there, I promise.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~不，孩子，别怕。你自由了。去伊尔梅特神殿。你在那里会安全，我保证。~
 EXTERN GIRL1 1
 
 INTERJECT HAEGAN 0 C0SireneHAEGAN0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Your slaving days are at an end, monster.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你的奴隶贩子日子到头了，怪物。~
 EXTERN HAEGAN 2
 
 I_C_T GIRL2 0 C0SireneGIRL20
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~The fiends... leaving this poor child with those beasts. 'Tis a miracle that we managed to save her, at least.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~那些恶棍……竟把这可怜的孩子留给那些畜生。至少我们把她救下来了，真是奇迹。~
 END
 
 INTERJECT GIRL2 4 C0SireneGIRL2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Wait! Here, child... these are all the coins I have. I am sorry 'tis not much... but for food and shelter, it should suffice... keep it hidden, and stay safe.~
-== GIRL2 ~I- I understand, miss. Th-thank you for your kindness!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~等等！来，孩子……这是我所有的钱币。很抱歉不多……可用来买吃的和栖身之处，应该够了……藏好，保重。~
+== GIRL2 ~我——我明白，小姐。谢——谢谢您的善心！~
 DO ~SetGlobal("FreeSlaves","GLOBAL",1)
 AddexperienceParty(3500)
 ReputationInc(1)
 EscapeArea()~ EXIT
 
 INTERJECT LLYNIS 7 C0SireneLLYNIS7
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~No, you will not escape your punishment so easily, murderer. Face justice!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~不，你不会这么容易逃过惩罚，杀人犯。面对正义吧！~
 DO ~Attack("llynis")~
 EXTERN LLYNIS 10
 
 // Graveyard
 
 I_C_T WELLYN 0 C0SireneWELLYN0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Tis a restless spirit... but I sense no malice from him, only sorrow. Do not harm him, <CHARNAME>.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这是个不安的亡魂……可我感觉不到他的恶意，只有悲伤。别伤害他，<CHARNAME>。~
 END
 
 I_C_T WELLYN 3 C0SireneWELLYN3
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Unthinkable... only a fiend could possibly murder and innocent child. We must help this one.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~难以想象……只有恶魔才可能谋杀一个无辜的孩子。我们必须帮这一个。~
 END
 
 I_C_T TIRDIR 2 C0SireneTIRDIR2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Buried alive... a fate worse than death itself. Who could have done such a thing?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~被活埋……比死更糟的命运。谁能做出这种事？~
 END
 
 I_C_T SETHLE 6 C0SireneSETHLE6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Do not lie to us, you scoundrel! We know of the man you helped bury alive!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~别对我们说谎，你这恶棍！我们知道你帮忙活埋的那个人的事！~
 END
 
 I_C_T2 BHCRYPT 0 C0SireneBHCRYPT0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Return to your grave, foul unliving beast!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~回到你的坟墓去，肮脏的不死畜生！~
 END
 
 // Bridge District
 
 I_C_T TANNER 8 C0SireneTanner8
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~We have no intention of leaving, not until we make you pay for what you have done.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们不打算离开，除非让你为你做过的事付出代价。~
 END
 
 I_C_T INSPECT 13 C0SireneINSPECT13
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~By Ilmater, such an act could not have been done by any sane mind...~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，这样的行径绝非任何清醒心智所能做出……~
 END
 
 I_C_T RAELIS 44 C0SireneRAELIS37
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You... you are of another plane, are you not? Something in my blood can sense it.~
-== RAELIS ~And I sense the touch of Baator upon you, child. Most curious... though I fear we have more pressing matters on our hands.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你……你来自别的位面，对吧？我血里的什么东西能感觉到。~
+== RAELIS ~而我感觉到巴托的触碰在你身上，孩子。真是古怪……不过我怕我们手头有更紧急的事。~
 END
 
 I_C_T2 PTHRAL01 1 C0SirenePTHRAL01
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~How terrible... forced against their wills to fight to the death. We have no option but to give them a merciful end.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~太可怕了……被迫违背意愿生死相斗。我们别无选择，只能给他们一个仁慈的结束。~
 END
 
 I_C_T2 KAYPAL01 3 C0SireneKAYPAL013
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You have strayed far from your path, and now you must face the consequences, sir Anarg. May the gods have mercy on your soul.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你已远离了你的道路，如今必须面对后果，阿纳格爵士。愿众神怜悯你的灵魂。~
 END
 
 I_C_T KAYPAL02 6 C0SireneKAYPAL026
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~This man... Reynald de Chatillon. He is still a man of honor, <CHARNAME>. I hope we will not need to slay him like the rest.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这个人……雷纳德·德·沙蒂永。他仍是位有荣誉的人，<CHARNAME>。我希望我们不必像其余那些一样杀他。~
 END
 
 I_C_T2 NEB 5 C0SireneNEB5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>, 'tis the child-killer from Baldur's Gate! You shall face Ilmater's justice, monster!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，这是博德之门那个杀孩子的人！你将面对伊尔梅特的正义，怪物！~
 END
 
 I_C_T2 ANOMENJ 129 C0SireneANOMENJ129
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~No! Anomen, you cannot do this!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~不！阿诺门，你不能这么做！~
 END
 
 I_C_T YUSUF 2 C0SireneYUSUF2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Why, Anomen? You have stained your hands with the blood of an innocent! How could you do such a thing?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~为什么，阿诺门？你让一个无辜者的血沾上了手！你怎么能做这种事？~
 END
 
 I_C_T HLSKULL 4 C0SireneHLSKULL4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~A cruel fate it may be, <CHARNAME>, yet... something about this one's presence makes me wary. Perhaps 'tis not entirely undeserved.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~也许是残酷的命运，<CHARNAME>，可……这人的存在让我有些戒备。也许并不全然不该。~
 END
 
 // Temple District
 
 I_C_T DORN 18 C0SireneDORN18
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You cannot truly consider associating with this blackguard, <CHARNAME>.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你不能真考虑与这恶棍为伍，<CHARNAME>。~
 END
 
 INTERJECT DORN 16 C0SireneDORN16
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Vile fiend... that you can say such things without a hint of regret...~
-== DORN ~Silence, fool. My words are for your leader, not you.~
-== C0SIRE2J ~My words will not be enough this day. Draw, you thrall of evil. I will end you for the sake of those who fell by your hand.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~卑劣的恶魔……你竟能毫无一丝悔意地说出这种话……~
+== DORN ~闭嘴，蠢货。我的话是对你的首领说的，不是你。~
+== C0SIRE2J ~今日我的话还不够。拔剑吧，邪恶的奴仆。为了那些倒在你手里的人，我要终结你。~
 END
-++ ~I agree with Sirene. Your evil ways are at an end, Dorn.~ EXTERN DORN 8
-++ ~Put your weapon away, Sirene. Dorn could make a valuable ally.~ EXTERN C0SIRE2J SireneDORN1
+++ ~我同意塞琳。你的邪恶之路到头了，多恩。~ EXTERN DORN 8
+++ ~把武器收起来，塞琳。多恩可以成为可贵的盟友。~ EXTERN C0SIRE2J SireneDORN1
 
 INTERJECT DORN 23 C0SireneDORN23
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Vile fiend... that you can say such things without a hint of regret...~
-== DORN ~Silence, fool. My words are for your leader, not you.~
-== C0SIRE2J ~My words will not be enough this day. Draw, you thrall of evil. I will end you for the sake of those who fell by your hand.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~卑劣的恶魔……你竟能毫无一丝悔意地说出这种话……~
+== DORN ~闭嘴，蠢货。我的话是对你的首领说的，不是你。~
+== C0SIRE2J ~今日我的话还不够。拔剑吧，邪恶的奴仆。为了那些倒在你手里的人，我要终结你。~
 END
-++ ~I agree with Sirene. Your evil ways are at an end, Dorn.~ EXTERN DORN 8
-++ ~Put your weapon away, Sirene. Dorn could make a valuable ally.~ EXTERN C0SIRE2J SireneDORN1
+++ ~我同意塞琳。你的邪恶之路到头了，多恩。~ EXTERN DORN 8
+++ ~把武器收起来，塞琳。多恩可以成为可贵的盟友。~ EXTERN C0SIRE2J SireneDORN1
 
 CHAIN C0SIRE2J SireneDORN1
-~<CHARNAME>, if you align yourself with this fiend, then I will have no choice but to stand against you as well, for I have no intention of backing down. One of us must fall here.~
+~<CHARNAME>，你若与这恶魔结盟，那我就别无选择，只能也与你对立，因为我无意退让。我们中必须有一个倒在这里。~
 END
-++ ~Fine, we'll do it your way. Dorn, prepare to die.~ EXTERN DORN 8
-++ ~I'm sorry it had to come to this, Sirene.~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
+++ ~好，就按你的方式来。多恩，准备受死。~ EXTERN DORN 8
+++ ~很抱歉事情走到这一步，塞琳。~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
 SetGlobalTimer("OHD_CRASH_WEDDING","GLOBAL",TWO_DAYS)
 ReputationInc(-1)
 ActionOverride("DORN",JoinParty()) SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy()~ EXIT
-++ ~You asked for it, Sirene. Better say your prayers.~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
+++ ~这是你自找的，塞琳。最好先祷个告。~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
 SetGlobalTimer("OHD_CRASH_WEDDING","GLOBAL",TWO_DAYS)
 ReputationInc(-1)
 ActionOverride("DORN",JoinParty()) SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy()~ EXIT
 
 I_C_T GARRICK 2 C0SireneGARRICK2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~Do you not remember us, Garrick? 'Tis a shame... though he seems quite different. Whatever happened to him, I wonder?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~你不记得我们了吗，加里克？真可惜……不过他看起来变了很多。我纳闷他到底出了什么事？~
 END
 
 CHAIN IF WEIGHT #-1
@@ -972,9 +972,9 @@ See("C0Sirene")
 !StateCheck("C0Sirene",STATE_SLEEPING)
 RandomNum(2,1)
 Global("C0Sirene","LOCALS",0)~ THEN TIRLANA C0SireneIrlana
-~Ho there! I recognize the brand of Ilmater on your armor, fellow knight. You are welcome among the knights of the Radiant Heart. But what cause do you have to hide your visage so carefully?~
+~喂，那儿！我认出你盔甲上伊尔梅特的烙印，同道的骑士。光辉之心的骑士们欢迎你。可你为何要把面容遮得这么仔细？~
 DO ~SetGlobal("C0Sirene","LOCALS",1)~
-== C0SIRE2J ~I... I fear I have a rather hideous scar that gives me great shame to reveal, especially in the face of one as radiant as you, my lady. Excuse me...~
+== C0SIRE2J ~我……我怕我有一道相当难看的疤，露出来让我非常羞愧，尤其是在您这样光彩照人的人面前，我的女士。恕我失礼……~
 EXIT
 
 CHAIN IF WEIGHT #-1
@@ -983,116 +983,116 @@ See("C0Sirene")
 !StateCheck("C0Sirene",STATE_SLEEPING)
 RandomNum(2,1)
 Global("C0Sirene","LOCALS",0)~ THEN TCADRIL C0SireneIrlana
-~Greetings, my lady. We seldom see knights of the Crying God in our halls, but you are certainly welcome among us regardless.~
+~向您致意，我的女士。我们这厅堂里难得见到哭泣之神的骑士，可无论如何您在我们中间当然受欢迎。~
 DO ~SetGlobal("C0Sirene","LOCALS",1)~
-== C0SIRE2J ~Oh... thank you, sir.~
+== C0SIRE2J ~哦……谢谢你，先生。~
 EXIT
 
 // Unseeing Eye
 
 I_C_T2 CSGAAL 7 C0SireneCSGAAL7
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~This is utter blasphemy, <CHARNAME>! How could anyone believe such things?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这是彻底的亵渎，<CHARNAME>！怎么会有人相信这种事？~
 END
 
 I_C_T HPRELATE 11 C0SireneHPRELATE11
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Long have I wished to see these halls with my own eyes, <CHARNAME>. 'Tis as glorious, nay, more than I expected. I would not have dared to tread here without your company.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我早就想亲眼看看这些厅堂，<CHARNAME>。它如我想的一样辉煌，不，更胜我想。没有你作伴，我不敢踏进这里。~
 END
 
 I_C_T2 HURGISF 4 C0SireneHURGISF4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Remember, <CHARNAME>. Though those of evil intent may try to hide behind a guise, we have the power to see the truth in their hearts. Now is the time to use that power.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~记住，<CHARNAME>。怀着邪恶意图的人也许想藏在伪装之后，可我们有力量看见他们心中的真相。现在正是运用这力量的时候。~
 END
 
 I_C_T2 HURGISR 4 C0SireneHURGISR4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Remember, <CHARNAME>. Though those of evil intent may try to hide behind a guise, we have the power to see the truth in their hearts. Now is the time to use that power.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~记住，<CHARNAME>。怀着邪恶意图的人也许想藏在伪装之后，可我们有力量看见他们心中的真相。现在正是运用这力量的时候。~
 END
 
 I_C_T PLMETR01 22 C0SirenePLMETR0122
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~He has revealed his true colors... I hope that you understand the correct choice here, <CHARNAME>.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~他已露出了真面目……我希望你明白这里正确的选择，<CHARNAME>。~
 END
 
 I_C_T KAYL2 10 C0SireneKAYL210
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Tis a tragedy when one of our own chooses to abuse their position, though I fear that banishment only encourages them to stray further from the right.~
-== KAYL2 ~You are not of the Order, milady, so it may seem difficult to understand. We do our best to keep our members on the right path, but sometimes they go too far.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们自己人选择滥用职位时，那是场悲剧，虽然我怕流放只会促使他们更远离正道。~
+== KAYL2 ~您不是骑士团的人，夫人，所以也许难以理解。我们尽力让成员走在正道上，可有时他们会走得太远。~
 END
 
 I_C_T KAYL2 14 C0SireneKAYL214
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I know not how far these men have fallen, <CHARNAME>, but 'tis still a discomforting thought to have to slay fellow paladins.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不知道这些人堕落到什么地步，<CHARNAME>，可要杀同道的圣武士，仍是让人不安的念头。~
 END
 
 I_C_T GAAL 6 C0SireneGAAL6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~This is *foul*, <CHARNAME>. 'Tis crueller than even the churches of Loviatar and Talona.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这真是*可憎*，<CHARNAME>。这比洛薇塔塔和塔罗娜的教会还要残忍。~
 END
 
 I_C_T2 GAAL 23 C0SireneGAAL23
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You will do naught but die, madman, and may your insanity end with your tormented life!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你只会死，疯子，愿你的疯狂随你痛苦的生命一同终结！~
 END
 
 I_C_T THESHAL 5 C0SireneTHESHAL5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~He is losing control, <CHARNAME>. I do not savor the thought, but we must defend ourselves soon, I fear.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~他正在失控，<CHARNAME>。我不愿这么想，可我怕我们很快必须自卫。~
 END
 
 I_C_T RIFTM01 0 C0SireneRIFTM010
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Strange... men, but not men, and neither are they undead. Are they guardians?~
-== RIFTM01 ~Call us what you wish. It does not matter.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~奇怪……是人，又不是人，也不是不死者。他们是守护者吗？~
+== RIFTM01 ~随你怎么称呼我们。那无关紧要。~
 END
 
 I_C_T RIFTM01 14 C0SireneRIFTM0114
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Older than Ilmater himself... I cannot imagine how long these guardians have suffered for.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~比伊尔梅特本人还古老……我无法想象这些守护者受了多久的苦。~
 END
 
 I_C_T RIFTM01 21 C0SireneRIFTM0121
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Fear not, guardian. We have taken the device, 'tis true, but we mean no evil.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~别怕，守护者。我们确实拿走了那装置，可我们无意作恶。~
 END
 
 // Government District
 
 I_C_T TOLGER 75 C0SireneTOLGER75
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I do not trust this mage, <CHARNAME>. He may act civil, but he cannot hide his malevolent intent.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不信这个法师，<CHARNAME>。他也许举止有礼，可他藏不住他的恶意。~
 END
 
 INTERJECT TOLGER 80 C0SireneTOLGER80
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
-~You are the only fool, wizard, if you think we will listen to your lies any longer. This man is guiltless, as you well know, and if you intend on taking him, prepare to put your life on the line.~
+~你才是唯一的蠢货，法师，如果你以为我们还会听你的谎话。这人无罪，你也很清楚，你若打算带走他，就准备豁上你的命。~
 EXTERN TOLGER 81
 
 I_C_T2 VICG1 4 C0SireneVICG12
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~Viconia, here? I do not have fond memories of her, but to be burned alive out of mere prejudice... I would not stand by and allow this to happen, <CHARNAME>.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~维康尼亚，在这里？我对她没有好回忆，可只因偏见就把人活活烧死……我不会袖手旁观让这事发生，<CHARNAME>。~
 END
 
 I_C_T2 VICG1 4 C0SireneVICG12a
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~'Tis too cruel of a fate even for a drow, <CHARNAME>. We cannot allow this to happen.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~即使对一个卓尔来说这也太残酷了，<CHARNAME>。我们不能让这事发生。~
 END
 
 I_C_T VICONI 2 C0SireneVICONI2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I have no love for worshippers of Shar, but after seeing what almost came to pass... if you wish for her to join us, <CHARNAME>, I would not object.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我对莎尔的信徒没有好感，可看到几乎发生的事之后……你若希望她加入我们，<CHARNAME>，我不反对。~
 END
 
 I_C_T VICONI 11 C0SireneVICONI11
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~*sigh* I feel disgusted just watching, <CHARNAME>. Was this a fair end to her life, I wonder? I hope to never encounter the same fate. Let... let us be away from here, please.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（叹气）光是看着就让我恶心，<CHARNAME>。这算她一生的公道结局吗？我希望永不遭遇同样的命运。我们……我们离开这里吧，求你。~
 END
 
 I_C_T ANOMENJ 150 C0SireneANOMENJ150
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I know you must feel great turmoil, Anomen, truly. Your sister's death was unjust, but thoughtless revenge is not the solution.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我知道你一定心绪翻涌，阿诺门，真的。你姐妹的死不公，可莽撞的复仇不是解决之道。~
 END
 
 I_C_T MARIA 5 C0SireneMARIA5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~Gods, how terrible... I feel that we should leave them be in a matter this severe, but I fear for sir Keldorn...~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~神明啊，太可怕了……我觉得这样严重的事我们该让他们自己处理，可我为凯尔登爵士担心……~
 END
 
 I_C_T KELDORJ 23 C0SireneKELDORJ23
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~There must be another way, sir. You cannot simply condemn your family to such a cruel fate! I know 'tis not your true desire.~
-== KELDORJ ~You do not understand the graveness of this, child! This is no longer a matter of emotions- this is justice. My honor demands that I follow the rightful path, no matter how I may feel.~
-== C0SIRE2J ~Sir Keldorn, you cannot mean such a thing...~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~一定还有别的办法，爵士。你不能就这样把家人判成这样残酷的命运！我知道那不是你真正的愿望。~
+== KELDORJ ~你不明白这事有多严重，孩子！这不再是情感的问题——这是正义。我的荣誉要求我走正道，无论我感觉如何。~
+== C0SIRE2J ~凯尔登爵士，你不能是这意思……~
 END
 
 // Umar Hills
 
 I_C_T VALYGAR 43 C0SireneVALYGAR43
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I believe him, <CHARNAME>. He is a ranger, and would not have slighted the wizards without reason.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我信他，<CHARNAME>。他是游侠，不会无缘无故得罪那些法师。~
 END
 
 I_C_T2 VALYGAR 28 C0SireneVALYGAR28
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~No! If you intend on killing this innocent man, <CHARNAME>, then I shall die alongside him!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~不！你若打算杀这个无辜的人，<CHARNAME>，那我就与他同死！~
 DO ~SetGlobal("C0SireneJoined","GLOBAL",0)
 ChangeAIScript("",DEFAULT)
 LeaveParty()
@@ -1100,50 +1100,50 @@ Enemy()~
 END
 
 I_C_T UHMAY01 18 C0SireneUHMAY18
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Quite the share of troubles that plagues this humble village, <CHARNAME>. Whether it be ogres, witches or wolves, none could be of good intent.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这小小的村子麻烦真不少，<CHARNAME>。无论是食人魔、女巫还是狼，都不会怀着好意。~
 END
 
 I_C_T2 UHOGRE01 15 C0SireneUHOGRE0115
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Tis a surprise to see such a thing, <CHARNAME>. I am inclined to believe they truly mean Imnesvale no harm, so I think 'twould be best to inform the mayor.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~见到这样的事真令人意外，<CHARNAME>。我倾向于相信他们真的无意害伊姆斯谷，所以我想最好告诉村长。~
 END
 
 INTERJECT MAZZY 6 C0SireneMAZZY6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Wait, <CHARNAME>. I have sensed the evil of this place since we entered, and there is none within this noble one. Allow me to release her.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~等等，<CHARNAME>。自我们进来我就感觉到这地方的邪恶，而这位高尚者身上没有。让我放了她。~
 EXTERN MAZZY 13
 
 I_C_T MAZZY 13 C0SireneMAZZY13
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I believe she would make a valuable companion, <CHARNAME>, and I would like to have the company of a fellow knight.~
-== MAZZY ~The choice is yours, of course. But if you will have me, my bow and sword are at your disposal.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我相信她会成为可贵的同伴，<CHARNAME>，我也想要一位同道骑士作伴。~
+== MAZZY ~选择当然在你。可你若愿意收我，我的弓与剑随你差遣。~
 END
 
 // Windspear Hills
 
 I_C_T KELDORJ 103 C0SireneKELDORJ103
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~A-Ajantis? Aye, 'tis truly him... today is a dark day indeed. He was my friend and brother-in-arms, and we killed him.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~阿——阿詹提斯？是的，真的是他……今天真是黑暗的一天。他曾是我的朋友和战友，而我们杀了他。~
 END
 
 I_C_T GARREN 1 C0SireneGARREN1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1) !InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~Gods, no... look closely, <CHARNAME>. This... this is Ajantis. My friend and brother-in-arms, slain by my own hand. What evil could have misled us into doing this?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1) !InParty("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN ~神明啊，不……仔细看，<CHARNAME>。这……这是阿詹提斯。我的朋友和战友，死在我自己手里。是什么邪恶误导我们做出这种事？~
 END
 
 I_C_T2 TAZOK 3 C0SireneTAZOK3
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~We defeated you once, and we shall do it again!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我们击败过你一次，我们还会再来一次！~
 END
 
 I_C_T2 FIRKRA02 25 C0SireneFIRKRA0225
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~In the name of Ilmater, and Ajantis and all who fell by your trickery, you will fall, dragon!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~以伊尔梅特之名，以阿詹提斯和所有因你诡计而倒下的人之名，你会倒下，龙！~
 END
 
 I_C_T2 FIRKRA02 25 C0SireneFIRKRA0225
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~May Ilmater's blessing guide us to victory, <CHARNAME>. We shall end your evil and tyranny today, dragon!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~愿伊尔梅特的祝福引我们走向胜利，<CHARNAME>。我们今日要终结你的邪恶与暴政，龙！~
 END
 
 I_C_T FIRKRA02 29 C0SireneFIRKRA0229
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Please, do not consider this, <CHARNAME>. The man has suffered enough, do not take away from him what he has left.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~求你，别考虑这个，<CHARNAME>。这人受够了苦，别夺走他仅剩的东西。~
 END
 
 I_C_T2 FIRKRA02 32 C0SireneFIRKRA0232
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You... you foul betrayer! May you get the punishment you deserve!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你……你这卑劣的叛徒！愿你得到应得的惩罚！~
 DO ~LeaveParty()
 EscapeArea()
 SetGlobal("C0SireneJoined","GLOBAL",0)~
@@ -1152,97 +1152,97 @@ END
 // de'Arnise Keep
 
 I_C_T NALIA 45 C0SireneNALIA45
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~We should hear her out, <CHARNAME>. The distress in her tone is clear enough to me.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们该听她把话说完，<CHARNAME>。她语气里的痛苦我听得够清楚。~
 END
 
 I_C_T NALIA 46 C0SireneNALIA46
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~We should hear her out, <CHARNAME>. The distress in her tone is clear enough to me.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们该听她把话说完，<CHARNAME>。她语气里的痛苦我听得够清楚。~
 END
 
 // Trademeet
 
 I_C_T NEEBER 7 C0SireneNEEBER7
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>, did we not meet this one in Nashkel? He is certainly bothersome enough to be the same person.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，我们不是在纳什克尔见过这个人吗？他烦人得足以是同一个。~
 END
 
 I_C_T TRSKIN02 10 C0SireneTRSKIN0210
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~We must help, <CHARNAME>. 'Tis the life of an innocent girl at stake.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我们必须帮忙，<CHARNAME>。这关系到一个无辜女孩的性命。~
 END
 
 I_C_T TRSKIN02 15 C0SireneTRSKIN0215
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Gods, I had hoped to encounter the monster again, so that justice may be exacted, but... not like this.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~神明啊，我本希望能再遇上那怪物，好让正义得以伸张，可是……不是这样。~
 END
 
 I_C_T MAZZYJ 58 C0SireneMAZZYJ58
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~If you would allow it, my friend, perhaps I could remain. Perhaps my healing powers may still be of use to your sister.~
-== MAZZYJ ~No, no. I appreciate the offer, but I suspect the healing is done. I simply wish to be with Pala when she wakes. <CHARNAME> has greater need for your skills.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~若你允许，我的朋友，也许我可以留下。也许我的治疗之力对你姐妹还有用。~
+== MAZZYJ ~不，不。我感激你的提议，可我想治疗已经完成了。我只想在帕拉醒来时陪着她。<CHARNAME>更需要你的本领。~
 END
 
 INTERJECT TRSKIN03 1 C0SireneTRSKIN031
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
-~Wait, <CHARNAME>, something is not right. I sense an aura of evil about this woman, and 'tis familiar. Explain yourselves!~
-== TRSKIN06 ~Er, well... surely you must be mistaken, we...~
+~等等，<CHARNAME>，有什么不对。我感觉到这女人周围有邪恶的气息，而且很熟悉。你们解释一下！~
+== TRSKIN06 ~呃，嗯……你一定是弄错了，我们……~
 EXTERN TRSKIN03 3
 
 I_C_T TRGENI01 7 C0SireneTRGENI017
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~The lives of innocents are not playthings for your amusement!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~无辜者的性命不是你取乐的玩物！~
 END
 
 I_C_T2 GPHIL01 3 C0SireneCPHIL013
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~True strength should be used to defend the weak, not oppress them. I cannot stand by and allow this to happen!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~真正的力量该用来护佑弱者，而非压迫他们。我不能袖手旁观让这事发生！~
 DO ~Attack("gphil03")~
 END
 
 // Brynnlaw + Spellhold
 	
 EXTEND_BOTTOM PPIMOEN 0
-+ ~IsValidForPartyDialog("C0Sirene") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~You should remember Sirene. Do you recognize her, Imoen?~ EXTERN C0SIRE2J C0SirenePPIMOEN0
++ ~IsValidForPartyDialog("C0Sirene") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你该记得塞琳。你认得她吗，爱蒙？~ EXTERN C0SIRE2J C0SirenePPIMOEN0
 END
 
 CHAIN C0SIRE2J C0SirenePPIMOEN0
-~She... oh, Ilmater's mercy, what has happened? I can barely recognize her... her mind is broken, and I have no power to do anything. Forgive me, <CHARNAME>.~
+~她……哦，伊尔梅特的慈悲，发生了什么？我几乎认不出她……她的心智碎了，而我无能为力。原谅我，<CHARNAME>。~
 END
 IF ~~ EXTERN PPIMOEN 1
 
 I_C_T PIRCOR02 12 C0SirenePIRCOR0212
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~This is disgusting, <CHARNAME>. We cannot stand by and allow this tyranny to continue.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这真恶心，<CHARNAME>。我们不能袖手旁观让这暴政继续。~
 END
 
 I_C_T PIRMUR01 2 C0SirenePIRMUR012
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Your thugs are no more, witch. I suggest you surrender and hand over Claire now lest you force our hand.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你的打手都没了，女巫。我建议你投降，现在把克莱尔交出来，免得逼我们动手。~
 END
 
 INTERJECT PPLDR01 1 C0SirenePPLDR011
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
-~I think not. We have no time for you, so I suggest you leave us be, lest we be forced to end your lives.~
+~我想不必。我们没时间理你，所以我建议你离我们远点，免得我们被迫了结你们的性命。~
 EXTERN PPLDR01 2
 
 INTERJECT PIRPIR05 1 C0SirenePIRPIR051
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
-~We are here for the sake of Ginia and Ason, slaving bastard. Defend yourself!~
+~我们是为吉妮娅和埃森来的，奴隶贩子。自卫吧！~
 EXTERN PIRPIR05 5
 
 I_C_T PPDILI 0 C0SirenePPDILI0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~By Ilmater, they have even incarcerated children? What kind of monsters would do such a thing?~
-== PPDILI ~I like your face, pretty miss. Why do you have horns, though? They make you look funny. Are they a part of you?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，他们连孩子都关？什么样的怪物会做这种事？~
+== PPDILI ~我喜欢你的脸，漂亮小姐。可你为什么有角？它们让你看起来怪怪的。它们是你身上的一部分吗？~
 END
 
 I_C_T2 PPDRADEE 3 C0SirenePPDRADEE3
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~Does he seem familiar to you, <CHARNAME>? Something about his ramblings reminds me of...~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~你觉得他面熟吗，<CHARNAME>？他那些胡话让我想起……~
 END
 
 I_C_T PPSAEM2 0 C0SirenePPSAEM20
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You again? Your face was not one that I had wished to see after the tedious travel through that maze.~
-== PPSAEM2 ~Perhaps what I am about to say might change your mind, my lady.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~又是你？在那迷宫里乏味地走了一趟之后，你的脸不是我愿再见的。~
+== PPSAEM2 ~也许我接下来要说的话能改变你的主意，我的女士。~
 END
 
 I_C_T PPSAEM2 19 C0SirenePPSAEM219
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~To traverse through the Underdark or put our trust in this scoundrel... I cannot say I am fond of either prospect.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~要么穿越幽暗地域，要么把信任交给这个恶棍……我说不上喜欢哪个方案。~
 END
 
 I_C_T2 IMOEN2 22 C0SireneIMOEN222
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>, no. You cannot abandon her, not when she has suffered through such a terrible ordeal.~
-== C0SIRE2J ~Leave me instead. I can fend for myself. Imoen needs you far more than you need me.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，不。你不能抛下她，尤其在她经历了那样可怕的磨难之后。~
+== C0SIRE2J ~那就抛下我吧。我能照顾自己。爱蒙比我更需要你。~
 END
 
 // Yoshimo
@@ -1250,8 +1250,8 @@ END
 APPEND C0SIRE2J
 
 IF ~Global("C0SireneYoshimoHeart","GLOBAL",1)~ C0SireneYoshimoHeart
- SAY ~*sigh* 'Tis a tortured life ended too soon, <CHARNAME>. Despite his betrayal, I cannot hate him. I can only hope that Ilmater may forgive him for his mistake.~ [C0BLANK]
- = ~Keep his heart, <CHARNAME>. If the gods are merciful, then perhaps there is yet hope for him.~
+ SAY ~（叹气）一个受尽折磨的生命结束得太早，<CHARNAME>。尽管他背叛了，我无法恨他。我只能希望伊尔梅特能宽恕他的错误。~ [C0BLANK]
+ = ~留下他的心，<CHARNAME>。若众神仁慈，也许他还有希望。~
 IF ~~ DO ~SetGlobal("C0SireneYoshimoHeart","GLOBAL",2)~ EXIT
 END
 
@@ -1260,215 +1260,215 @@ END
 // Sahuagin City
 
 I_C_T SAHKNG01 1 C0SireneSAHKNG011
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Tis as though he is sizing us up for his next meal, <CHARNAME>. I do not like this.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~他像是在打量我们，好准备下一顿，<CHARNAME>。我不喜欢这样。~
 END
 
 I_C_T SAHKNG01 36 C0SireneSAHKNG0136
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I would not put it past these shark-fiends to turn against us once we served their purpose, <CHARNAME>.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不排除这些鲨鱼魔在利用完我们之后就翻脸，<CHARNAME>。~
 END
 
 I_C_T SAHPR4 4 C0SireneSAHPR44
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~A frightening prospect... I can only hope that their kind's arrogance betrays them in the future.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~可怕的前景……我只能希望他们族类的傲慢将来会害了他们自己。~
 END
 
 // Underdark 
 
 I_C_T UDSVIR03 23 C0SireneUDSVIR0323
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~We would help, even if you had nothing to give us in exchange.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~即使你没有什么能回报我们，我们也会帮忙。~
 END
 
 I_C_T UDSILVER 0 C0SireneUDSILVER0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Oh... oh, my. She is so beautiful... I cannot even describe it.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~哦……哦，天。她太美了……我甚至无法形容。~
 END
 
 I_C_T UDSILVER 53 C0SireneUDSILVER53
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Tis like trading the blood of one fiend for another, <CHARNAME>. I cannot tell you which feels worse.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这就像用一个恶魔的血换另一个恶魔的血，<CHARNAME>。我说不上哪个感觉更糟。~
 END
 
 INTERJECT UDPHAE01 61 C0SireneUDPHAE0161
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN
-~What? Is there any cause for this? What threat do the deep gnomes pose, that you would murder them without reason?~
+~什么？这有什么理由？深地侏儒有什么威胁，值得你不问缘由就杀他们？~
 EXTERN UDPHAE01 62
 
 I_C_T2 UDPHAE01 88 C0SireneUDPHAE188
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~I dislike this, <CHARNAME>. Despite his hostility, Solaufein has been more than fair to us compared to the rest of these fiends. Perhaps we could warn him and find another way.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不喜欢这样，<CHARNAME>。尽管他有敌意，索劳芬相比其余这些恶魔对我们已算非常公道。也许我们可以警告他，另找办法。~
 END
 
 I_C_T2 UDSOLA01 132 C0SireneUDSOLA01132
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~A follower of the Dark Maiden, here... he is a braver man than I thought. 'Tis a good thing that we did not need to kill him.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一位黑少女的信徒，在这里……他比我想的更勇敢。幸好我们不必杀他。~
 END
 
 I_C_T2 UDSOLA01 140 C0SireneUDSOLA01140
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~A follower of the Dark Maiden, here... he is a braver man than I thought. 'Tis a good thing that we did not need to kill him.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一位黑少女的信徒，在这里……他比我想的更勇敢。幸好我们不必杀他。~
 END
 
 I_C_T2 UDTRAP02 3 C0SireneUDTRAP023
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~His mind must have been broken by his imprisonment, <CHARNAME>, but perhaps it can be mended. Violence may not be the only way!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~他的心智必定被囚禁弄坏了，<CHARNAME>，可也许还能修补。暴力未必是唯一的办法！~
 END
 
 I_C_T UDILSLA2 0 C0SireneUDILSLA20
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You are welcome, friends, though I am curious as to why you are here, of all places.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~欢迎你们，朋友们，不过我好奇你们为何偏偏来这里。~
 END
 
 // Coran
 
 I_C_T C6CORAN 1 C0SireneC6CORAN1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~(laugh) 'Tis more likely you were overly preoccupied with female attention to care to seek us out, Coran.~
-== C6CORAN ~Ah... dear, beautiful Sirene! 'Tis a pleasure to see you again. Er... perhaps I had such ideas, but my intention was to catch up to you eventually, I swear to you.~
-== C0SIRE2J ~You have not changed one bit, Coran... unfortunately.~
-== C6CORAN ~(laugh) I am what I am, milady.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（笑）更可能是你太忙于女人的关注，才没心思来找我们，科兰。~
+== C6CORAN ~啊……亲爱的、美丽的塞琳！再见到你真是件乐事。呃……也许我确实有过那些念头，可我的打算是终究要追上你，我向你发誓。~
+== C0SIRE2J ~你一点都没变，科兰……真不幸。~
+== C6CORAN ~（笑）我就是我，夫人。~
 END
 
 // Chapter 6-7
 
 I_C_T C6ELF1 2 C0SireneC6ELF12
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~*sigh* By Ilmater, will it ever stop?~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~（叹气）以伊尔梅特之名，这到底有没有完？~
 END
 
 I_C_T SUELF4 0 C0SireneC6ELF40
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Shh... fear not, children. We are friends, not monsters.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~嘘……别怕，孩子们。我们是朋友，不是怪物。~
 END
 
 I_C_T SUELF4 5 C0SireneC6ELF45
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Shh... fear not, children. We are friends, not monsters.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~嘘……别怕，孩子们。我们是朋友，不是怪物。~
 END
 
 I_C_T SUDEMIN 22 C0SireneSUDEMIN22
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~'Twas not enough, that much is clear, and 'twould seem your kin must share the blame for <CHARNAME>'s current condition.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~那还不够，这一点很清楚，而看来你的亲族也得为<CHARNAME>如今的状况分担罪责。~
 END
 
 I_C_T SUDEMIN 32 C0SireneSUDEMIN32
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~Though the issue of your lost soul is paramount, <CHARNAME>, we cannot just watch the city suffer.~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~虽然你失去灵魂的事最要紧，<CHARNAME>，可我们不能就看着这座城市受苦。~
 END
 
 I_C_T2 SUJON 14 C0SireneSUJON14
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~You have caused too many to suffer, and I will not rest until the blight of your existence has ended!~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你已让太多人受苦，不终结你存在的祸害，我不会罢休！~
 END
 
 // TALKS START HERE
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneBG1Talk","GLOBAL",2)~ THEN C0SIRE2J t0
-~<CHARNAME>... 'tis good to be in your company again. I have wondered if we would meet again, ever since we parted ways...~ [C0BLANK]
+~<CHARNAME>……又能与你作伴真好。自从我们分道，我一直在想我们会不会再见……~ [C0BLANK]
 DO ~RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",3600) SetGlobal("C0SireneBG1Talk","GLOBAL",3)~
 END
-++ ~Likewise. It's always good to run into an old friend again.~ + t0.1
-++ ~It's a pity you left after we defeated Sarevok together. You missed out on a lot.~ + t0.2
-++ ~That's not surprising. I was this close to being sentenced to death after the Dragonspear incident, after all.~ + t0.3
-+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~I'm surprised you're so pleased to see me again, after the Flaming Fist took me into custody. As I recall, you didn't want to see me again.~ + t0.4
-+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~I've wondered the same thing since we were apart. I've missed you.~ + t0.5
-+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~Don't take it the wrong way, but in a way, I'm almost glad you left. I didn't want you to watch me hang for Skie's murder... even if that's not what happened in the end.~ + t0.6
-++ ~We don't have time to talk right now, Sirene.~ + t.0
+++ ~我也是。再遇到老朋友总是好的。~ + t0.1
+++ ~真可惜，我们一起击败萨瑞沃克之后你就走了。你错过了许多。~ + t0.2
+++ ~那不奇怪。毕竟龙矛事件之后，我差一点就被判死刑。~ + t0.3
++ ~Global("C0SireneMatch","GLOBAL",1)~ + ~我很意外，火焰之拳把我收押之后，你再见我还这么高兴。我记得你并不想再见到我。~ + t0.4
++ ~Global("C0SireneMatch","GLOBAL",1)~ + ~分开之后我也一直在想同样的事。我想你。~ + t0.5
++ ~Global("C0SireneMatch","GLOBAL",1)~ + ~别误会，可某种意义上我几乎庆幸你走了。我不愿你看着我因谋杀斯基而被绞死……即使最后并不是那样。~ + t0.6
+++ ~我们现在没时间谈，塞琳。~ + t.0
 
 APPEND C0SIRE2J
 
 IF ~~ t.0
-SAY ~I understand. Another time, then.~
+SAY ~我明白。那改天吧。~
 IF ~~ DO ~RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",3600) SetGlobal("C0SireneBG1Talk","GLOBAL",0)~ EXIT
 END
 
 IF ~~ t0.1
-SAY ~I only wish that the circumstances were different. Khalid and Dynaheir... *sigh* Fate is cruel indeed.~
+SAY ~我只希望情形不是这样。卡立德和迪娜希尔……*叹气*命运真是残酷。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.2
-SAY ~Aye, I can imagine... 'tis a shame, really. When I learned of the Shining Lady's crusade threatening the land, I returned to Baldur's Gate... if fate was kinder, perhaps we would have met again sooner, and faced the crusade together.~
+SAY ~是的，我能想象……真可惜。当我听说光辉女士的十字军威胁这片土地时，我回到了博德之门……若命运更仁慈，也许我们会更早重逢，一起面对那场十字军。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.3
-SAY ~Skie's death has weighed heavily on my mind... but if 'tis any comfort to you, <CHARNAME>, I do not blame you for it, regardless of what I believed... before we were forced to part.~
+SAY ~斯基的死一直重重压在我心头……可若这能让你好受些，<CHARNAME>，我不怪你，无论在我们被迫分别之前我相信过什么。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.4
-SAY ~That... I... *sigh* That was impulsive of me. I allowed my emotions to cloud my judgment... lord Ilmater reminded me of that. I was wrong to believe you would truly do something as terrible as murder.~
-= ~Truly, I wish I did not say those words to you, in that dreadful prison... but I cannot take back my actions. I can only beg your forgiveness for condemning you.~
-++ ~I accept your apology. It was a hard situation, and I don't blame you in the least.~ + t0.4a
-++ ~It's hard for me to just forgive what you said or did, but if you're sincere, then that will change with time.~ + t0.4a
-++ ~It's too late for forgiveness. I'll allow you to remain with the group, but anything that was between us is done.~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ + t0.4b
-++ ~You expect forgiveness for judging and abandoning me? Not a chance. Get out of my sight.~ + t0.4c
+SAY ~那……我……*叹气*我那时太冲动了。我让情绪蒙蔽了判断……伊尔梅特大人提醒了我这一点。我不该相信你真的会做出谋杀那样可怕的事。~
+= ~真的，我希望我没有在那座可怕的牢里对你说那些话……可我无法收回我的行为。我只能求你宽恕我对你的责难。~
+++ ~我接受你的道歉。那时情况艰难，我一点也不怪你。~ + t0.4a
+++ ~要我原谅你说过的话、做过的事很难，可你若真心，那会随时间改变。~ + t0.4a
+++ ~宽恕已经太迟了。我可以让你留在队伍里，可我们之间的一切都结束了。~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ + t0.4b
+++ ~你责难我、抛下我，还指望得到宽恕？绝无可能。从我眼前消失。~ + t0.4c
 END
 
 IF ~~ t0.4a
-SAY ~I... you are kinder to me than I deserve, <CHARNAME>. Thank you.~
+SAY ~我……你对我比我所应得的更仁慈，<CHARNAME>。谢谢你。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.4b
-SAY ~I understand, <CHARNAME>. I must have hurt you greatly... this is what I deserve.~
+SAY ~我明白，<CHARNAME>。我一定深深伤了你……这是我应得的。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.4c
-SAY ~...If... if that is your wish, <CHARNAME>, then I will do as you command. I will not burden you with my presence again.~
+SAY ~……若……若那是你的愿望，<CHARNAME>，那我就照你的命令做。我不会再用我的存在来烦你。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3) LeaveParty() EscapeArea()~ EXIT
 END
 
 IF ~~ t0.5
-SAY ~I... *blush* I am flattered that you have thought of me at all, after everything you have been through, <CHARNAME>. ~
+SAY ~我……*脸红*你能想到我，即使经历了这一切，我真是受宠若惊，<CHARNAME>。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.6
-SAY ~Aye, perhaps I only left because I feared the possibility of seeing your death... nothing would have been more horrible for me to witness. Yet I wonder, would your tragedies have been prevented had I stayed...~
+SAY ~是的，也许我离开只是因为怕看见你死去……那对我会是最可怕的景象。可我在想，若我当时留下，你的那些悲剧会不会被避免……~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.7
-SAY ~*sigh* Forgive me. I have been haunted by guilt and regret ever since I left. I feel as though I have failed you, <CHARNAME>, by leaving you in your time of need.~
-= ~Everything you have lost... Khalid, Dynaheir, even Imoen... I cannot help but feel partially responsible.~
-++ ~Don't. There's nothing you could've possibly done, and no way you could have predicted what would happen.~ + t0.8
-++ ~You would have just been another casualty on the list, had you stayed.~ + t0.8
-++ ~Well, you're back with me again, and that's what matters now. What's done is done.~ + t0.8
-++ ~That's enough talking for now. We can come back to this another time.~ + t0.12
+SAY ~*叹气*原谅我。自从离开，我一直被愧疚与悔恨纠缠。我觉得我辜负了你，<CHARNAME>，在你最需要的时候离开了你。~
+= ~你失去的一切……卡立德、迪娜希尔，甚至爱蒙……我忍不住觉得自己要负一部分责任。~
+++ ~别这样。你什么都做不了，也无法预知会发生什么。~ + t0.8
+++ ~你若留下，也只会成为名单上又一个牺牲者。~ + t0.8
+++ ~嗯，你又回到我身边了，这才是现在要紧的。过去的事就过去了。~ + t0.8
+++ ~现在谈够了。改天我们可以再说这个。~ + t0.12
 END
 
 IF ~~ t0.8
-SAY ~That may indeed be true, but... truth be told, it does not comfort me. Since the day I offered my blade to your service, you have treated me as a friend and treated me fairly despite my cursed blood.~
-= ~<CHARNAME>, so long as your cause is just, I will devote my life to your cause, whether 'tis vengeance for the fallen or Imoen's safety that you seek. I swear as a paladin of Ilmater... and as a friend.~
-++ ~Thank you. I'm honored to have such a loyal friend.~ + t0.9
-++ ~That's quite a promise. I'll hold you to it.~ + t0.10
-++ ~Good to know. Now let's get moving.~ + t0.11
+SAY ~那也许确实如此，可是……说实话，那并不让我好受。自从我把剑献给你的差遣那天起，你一直把我当朋友，也不顾我受诅咒的血脉而公平待我。~
+= ~<CHARNAME>，只要你的目标正当，我就把一生献给这目标，无论你要的是为逝者复仇，还是爱蒙的平安。我以伊尔梅特的圣武士……也以一个朋友的身份起誓。~
+++ ~谢谢你。能有这样忠诚的朋友是我的荣幸。~ + t0.9
+++ ~这承诺可不小。我会盯着你兑现。~ + t0.10
+++ ~知道就好。现在我们走吧。~ + t0.11
 END
 
 IF ~~ t0.9
-SAY ~No, <CHARNAME>, 'tis my pleasure. I hope I will not disappoint you.~
+SAY ~不，<CHARNAME>，这是我的荣幸。我希望不会让你失望。~
 IF ~Global("C0SireneMatch","GLOBAL",1)~ + t0.12
 IF ~!Global("C0SireneMatch","GLOBAL",0)~ EXIT
 END
 
 IF ~~ t0.10
-SAY ~Of course, <CHARNAME>. I hope I will not disappoint you.~
+SAY ~当然，<CHARNAME>。我希望不会让你失望。~
 IF ~Global("C0SireneMatch","GLOBAL",1)~ + t0.12
 IF ~!Global("C0SireneMatch","GLOBAL",0)~ EXIT
 END
 
 IF ~~ t0.11
-SAY ~Aye... as you wish.~
+SAY ~是的……如你所愿。~
 IF ~Global("C0SireneMatch","GLOBAL",1)~ + t0.12
 IF ~!Global("C0SireneMatch","GLOBAL",0)~ EXIT
 END
 
 IF ~~ t0.12
-SAY ~There was... one more thing. Before we parted, I remember that we spoke of us, I expressed my desires for more than simple friendship. Have... have you considered the same, since then?~
-++ ~We've gone over this once already, at Dragonspear. We even kissed, remember?~ + t0.13
-++ ~Who can say? I'd like to find out.~ + t0.14
-++ ~No. I trust you as a friend, Sirene, but let's not go any further than that.~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ + t0.15
+SAY ~还有……一件事。我们分别之前，我记得我们谈过我们之间的事，我表示过我想要的不只是单纯的友谊。你……从那以后也考虑过同样的事吗？~
+++ ~我们在龙矛已经谈过一次了。我们还吻过，记得吗？~ + t0.13
+++ ~谁知道呢？我想弄清楚。~ + t0.14
+++ ~不。我信任你，塞琳，作为朋友，可我们就别越过那条线了。~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ + t0.15
 END
 
 IF ~~ t0.13
-SAY ~Aye, I doubt I will ever forget... if you truly still feel anything for me, <CHARNAME>, as I admit I still do for you, then... we can talk of this again soon. I... I would like that.~
+SAY ~是的，我想我永远不会忘记……你若真对我还有感觉，<CHARNAME>，正如我承认我对你仍有，那么……我们很快可以再谈这个。我……我会喜欢的。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",1)~ EXIT
 END
 
 IF ~~ t0.14
-SAY ~If that is the case... then perhaps we can speak more in the future. I... I would like that.~
+SAY ~若是那样……那我们以后也许可以多谈谈。我……我会喜欢的。~
 IF ~~ EXIT
 END
 
 IF ~~ t0.15
-SAY ~I understand, <CHARNAME>. I did not wish to force my feelings upon you. We shall continue as friends, then.~
+SAY ~我明白，<CHARNAME>。我不愿把感情强加于你。那我们就继续做朋友吧。~
 IF ~~ EXIT
 END
 END
@@ -1476,57 +1476,57 @@ END
 // Friendship talk 1
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",2)~ THEN C0SIRE2J t1
-~You have told me little of your goals, <CHARNAME>. I do not presume to demand any answers from you, but I would like to know... do you seek Imoen's safety, or vengeance against your enemy?~ [C0BLANK]
+~你很少谈你的目标，<CHARNAME>。我不打算向你要求答案，可我想知道……你要的是爱蒙的平安，还是向你的敌人复仇？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~Why do you ask?~ + t1.1
-++ ~That's not for you to know.~ + t1.0
-++ ~I'm sorry, but now is not really the time.~ + t1.x
+++ ~你为什么问？~ + t1.1
+++ ~那不是你该知道的。~ + t1.0
+++ ~对不起，可现在不太是时候。~ + t1.x
 
 APPEND C0SIRE2J
 
 IF ~~ t1.x
-SAY ~Yes, of course... I understand.~
+SAY ~是的，当然……我明白。~
 IF ~~ DO ~SetGlobal("C0SireneFriendshipTalk","GLOBAL",1)~ EXIT
 END
 
 IF ~~ t1.0
-SAY ~If that is the case, then... I will not bother you further.~
+SAY ~若是那样，那么……我不再烦你。~
 IF ~~ EXIT
 END
 
 IF ~~ t1.1
-SAY ~I do not wish to sound ungrateful. You have offered me a place in your group, and I know you are not an evil <PRO_MANWOMAN>. I just... wish to know what drives you along your path. Is it Imoen or Irenicus you are after?~
-++ ~Imoen's my main priority. Irenicus can rot in the Cowled Wizards' custody for all I care.~ + t1.2
-+ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~It's both. I want to save Imoen, but I also want to know what that mage wanted with me.~ + t1.3
-+ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~It's both. I want to save Imoen, but I also want to know what that mage wanted with me.~ + t1.3a
-++ ~Irenicus is who I'm after. If I can save Imoen along the way, then that's all well and good too.~ + t1.4
-++ ~My reasons for going after them are my own. I'd rather you not ask about it.~ + t1.0
+SAY ~我不愿显得不知感激。你给了我队伍里的位置，我也知道你不是邪恶的<PRO_MANWOMAN>。我只是……想知道是什么驱使你走这条路。你追的是爱蒙，还是艾瑞尼卡斯？~
+++ ~爱蒙是我首要的。艾瑞尼卡斯尽可以在蒙面法师的监管里烂掉，我不在乎。~ + t1.2
++ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~都是。我想救爱蒙，可我也想知道那法师为什么找我。~ + t1.3
++ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~都是。我想救爱蒙，可我也想知道那法师为什么找我。~ + t1.3a
+++ ~我追的是艾瑞尼卡斯。若路上能救爱蒙，那也很好。~ + t1.4
+++ ~我追他们的理由是我自己的事。我宁愿你别问。~ + t1.0
 END
 
 IF ~~ t1.2
-SAY ~That is an honorable cause, <CHARNAME>. I will be pleased to help you in any way I can.~
+SAY ~那是高尚的目标，<CHARNAME>。我会乐于尽力帮你。~
 IF ~~ + t1.5
 END
 
 IF ~~ t1.3
-SAY ~I understand. I would want to pursue him, as well, if he had done the same to me as he did to you.~
+SAY ~我明白。若他对我也做了对你做的事，我也会想追他。~
 IF ~~ + t1.5
 END
 
 IF ~~ t1.3a
-SAY ~I understand. After knowing what happened to Khalid and Dynaheir, not to mention Imoen... and yourself, most of all... I would want revenge.~
+SAY ~我明白。知道卡立德和迪娜希尔的遭遇，更别说爱蒙……还有你自己，最要紧的……我也会想复仇。~
 IF ~~ + t1.5
 END
 
 IF ~~ t1.4
-SAY ~Revenge, then? For what he has done to others, or what he has done to you?~
-= ~No, that does not matter. I know you are fighting for a good cause, and 'tis not my place to judge you. I will do my best for you, <CHARNAME>.~
+SAY ~那么是复仇？因为他害了别人，还是因为他害了你？~
+= ~不，那无关紧要。我知道你在为正当的目标战斗，评判你不是我的位置。我会尽力为你，<CHARNAME>。~
 IF ~~ + t1.5
 END
 
 IF ~~ t1.5
-SAY ~That is all I had to ask. Thank you for indulging me... and I hope we may talk again.~
+SAY ~我要问的就是这些。谢谢你愿意听我……我希望我们还能再谈。~
 IF ~~ EXIT
 END
 END
@@ -1534,93 +1534,93 @@ END
 // Friendship talk 2
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",4)~ THEN C0SIRE2J t2
-~I- I wanted to thank you for allowing me to join you, <CHARNAME>. Many would not have given me such trust.~ [C0BLANK]
+~我——我想谢谢你让我加入，<CHARNAME>。许多人不会给我这样的信任。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-+ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~They don't know you as well as I do. You're a close friend.~ + t2.1
-+ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~Have you still been travelling alone all this time?~ + t2.2
-+ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~Have you been travelling alone all this time?~ + t2.2
-++ ~I can't see why. You're seem trustworthy enough, and you're skilled in battle.~ + t2.3
-++ ~We have little time for small talk, Sirene. Perhaps another time.~ + t2.0
++ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~他们不如我了解你。你是位亲近的朋友。~ + t2.1
++ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~这些时候你仍一直是独自旅行吗？~ + t2.2
++ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你一直是独自旅行吗？~ + t2.2
+++ ~我看不出为什么。你看来很值得信任，战斗上也有本领。~ + t2.3
+++ ~我们没什么时间闲聊，塞琳。也许改天吧。~ + t2.0
 
 APPEND C0SIRE2J
 
 IF ~~ t2.0
-SAY ~If you say so, <CHARNAME>. Once again, I am grateful.~
+SAY ~你这么说就好，<CHARNAME>。我再一次感激你。~
 IF ~~ EXIT
 END
 
 IF ~~ t2.1
-SAY ~Aye, and I appreciate your friendship, <CHARNAME>, more than you could know.~
+SAY ~是的，我也珍视你的友谊，<CHARNAME>，比你所能知道的更多。~
 IF ~~ + t2.4
 END
 
 IF ~~ t2.2
-SAY ~Yes. 'Tis rare for anyone to be willing to accept one with fell blood, whether 'tis from their own misgivings or their fear that others may judge them. It has... affected my life greatly, as you might imagine.~
+SAY ~是的。很少有人愿意接纳一个身负邪血的人，无论是因为他们自己的疑虑，还是怕别人评判他们。这……严重影响了我的人生，你能想象。~
 IF ~~ + t2.4
 END
 
 IF ~~ t2.3
-SAY ~Not all are as... accepting towards one with fell blood as you are, <CHARNAME>.~
+SAY ~不是所有人都像你这样……接纳一个身负邪血的人，<CHARNAME>。~
 IF ~~ + t2.4
 END
 
 IF ~~ t2.4
-SAY ~Do you not have doubts, however? About allowing one such as myself to join you, despite what others may think?~
-++ ~No, I trust you.~ + t2.5
-++ ~That'd make me a hypocrite. Did you forget what I am?~ + t2.6
-++ ~Who cares? I certainly don't.~ + t2.7
+SAY ~可你不曾有过疑虑吗？不顾别人怎么想，让我这样的人加入你？~
+++ ~不，我信任你。~ + t2.5
+++ ~那我就是伪君子了。你忘了我是做什么的？~ + t2.6
+++ ~谁在乎？我才不在乎。~ + t2.7
 END
 
 IF ~~ t2.5
-SAY ~I know, and I thank you for that, but 'tis not only about whether you trust me, <CHARNAME>.~
+SAY ~我知道，我为此感谢你，可这不只是你信不信我的问题，<CHARNAME>。~
 IF ~ReputationGT(Player1,13)~ + t2.8
 IF ~!ReputationGT(Player1,13)~ + t2.9
 END
 
 IF ~~ t2.6
-SAY ~No... no, I have not, <CHARNAME>, but that should give you more cause to doubt.~
+SAY ~不……不，我没有，<CHARNAME>，可那更该让你有理由怀疑。~
 IF ~ReputationGT(Player1,13)~ + t2.8
 IF ~!ReputationGT(Player1,13)~ + t2.9
 END
 
 IF ~~ t2.7
-SAY ~This may not be my place to say so, but... perhaps you should, <CHARNAME>.~
+SAY ~这话也许不该我说，可是……也许你该说，<CHARNAME>。~
 IF ~ReputationGT(Player1,13)~ + t2.8
 IF ~!ReputationGT(Player1,13)~ + t2.9
 END
 
 IF ~~ t2.8
-SAY ~To the people, you are a hero, one that deserves respect. Have you not considered, perhaps, what my presence means towards that?~
+SAY ~在众人眼里，你是英雄，一位值得尊敬的人。你可曾想过，我的存在对这一点意味着什么吗？~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + t2.10
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + t2.11
 END
 
 IF ~~ t2.9
-SAY ~You could be much more in the eyes of the people, <CHARNAME>. Have you not considered, perhaps, what my presence means towards that?~
+SAY ~在众人眼里你可以远不止如此，<CHARNAME>。你可曾想过，我的存在对这一点意味着什么吗？~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + t2.10
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + t2.11
 END
 
 IF ~~ t2.10
-SAY ~I have left you once, out of fear for what others may think when they see me at your side. I did not want to diminish the admiration others had for you.~
-= ~Perhaps that was wrong of me to assume so, but... I wished the best for you, as my friend. Even now, I still wonder...~
+SAY ~我曾因怕别人看见我在你身边时怎么想而离开过你一次。我不愿减损别人对你的敬佩。~
+= ~也许我这样揣测是错的，可是……我愿为你好，作为你的朋友。即使如今，我仍在想……~
 IF ~~ + t2.11
 END
 
 IF ~~ t2.11
-SAY ~I am grateful, <CHARNAME>, more grateful than you could possibly know to have a place here, but if you ever believe that I am causing you trouble, then... you should do what you see fit. I will not begrudge you for it.~
-++ ~I would never do that.~ + t2.12
-++ ~I'll consider it.~ + t2.13
+SAY ~我感激，<CHARNAME>，你能知道能有这里的位置我有多感激，可你若哪天觉得我替你给我添了麻烦，那么……你该怎么做就怎么做。我不会为此怨你。~
+++ ~我绝不会那样做。~ + t2.12
+++ ~我会考虑。~ + t2.13
 END
 
 IF ~~ t2.12
-SAY ~You are kind, <CHARNAME>. Much kinder than I deserve. So long as you will have me, I will not fail you.~
+SAY ~你心肠好，<CHARNAME>。远比我应得的好。只要你愿意留我，我就不会辜负你。~
 IF ~~ EXIT
 END
 
 IF ~~ t2.13
-SAY ~As you should, <CHARNAME>. But so long as you will have me, I will not fail you.~
+SAY ~你本该如此，<CHARNAME>。可只要你愿意留我，我就不会辜负你。~
 IF ~~ EXIT
 END
 END
@@ -1631,13 +1631,13 @@ CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",6)
 !Class(Player1,CLERIC_ALL)
 !Class(Player1,DRUID_ALL)
 !Class(Player1,RANGER_ALL)~ THEN C0SIRE2J t3
-~Perhaps 'tis not my place to ask, but are you a <PRO_MANWOMAN> of faith, <CHARNAME>?~ [C0BLANK]
+~这话也许不该我问，可你是信神的<PRO_MANWOMAN>吗，<CHARNAME>？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~Yes, I am.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.1
-++ ~I'm not sure.~ + t3.2
-++ ~Will you judge me if I answer?~ + t3.3
-++ ~No, I'm not.~ DO ~SetGlobal("C0SirenePCFaithless","GLOBAL",1) IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.4
+++ ~是的，我是。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.1
+++ ~我不确定。~ + t3.2
+++ ~我回答你会评判我吗？~ + t3.3
+++ ~不，我不是。~ DO ~SetGlobal("C0SirenePCFaithless","GLOBAL",1) IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.4
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",6)
 OR(4)
@@ -1645,118 +1645,118 @@ Class(Player1,PALADIN_ALL)
 Class(Player1,CLERIC_ALL)
 Class(Player1,DRUID_ALL)
 Class(Player1,RANGER_ALL)~ THEN C0SIRE2J t3
-~As a <PRO_MANWOMAN> of faith, <CHARNAME>... would you indulge me for a moment?~ [C0BLANK]
+~作为信神的<PRO_MANWOMAN>，<CHARNAME>……你肯容我片刻吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~Of course. What do you want to ask?~ + t3.5
-++ ~Now's not really the best time.~ + t3.0
+++ ~当然。你想问什么？~ + t3.5
+++ ~现在实在不是好时候。~ + t3.0
 
 APPEND C0SIRE2J
 
 IF ~~ t3.0
-SAY ~Very well, <CHARNAME>. I will not bother you on this again.~
+SAY ~好罢，<CHARNAME>。我不再拿这事烦你。~
 IF ~~ EXIT
 END
 
 IF ~~ t3.1
-SAY ~I see. That is good, then... perhaps you are suitable to answer this.~
+SAY ~我明白了。那很好……也许你适合回答这个。~
 IF ~~ + t3.5
 END
 
 IF ~~ t3.2
-SAY ~So you have yet to find a god that aligns with your beliefs... that is alright. You may still be able to answer my question.~
+SAY ~所以你还没找到一个与你信念相合的神……那没关系。你也许仍能回答我的问题。~
 IF ~~ + t3.5
 END
 
 IF ~~ t3.3
-SAY ~No, of course not, my friend. I only had a question to ask, and... whether you have faith or not may be helpful to know.~
-++ ~In that case, I'll say yes - I do worship a deity.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.1
-++ ~I'm not sure. I believe they exist, and I'm not opposed to them... but I don't swear allegiance with any particular god.~ + t3.2
-++ ~No, I'm not a servant of faith.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.4
+SAY ~不，当然不会，我的朋友。我只是有个问题想问，而……你是否信神也许有帮助。~
+++ ~既然如此，那我就说是有——我确实敬拜一位神。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.1
+++ ~我不确定。我相信他们存在，我也不反对他们……可我不向任何特定的神宣誓效忠。~ + t3.2
+++ ~不，我不是信仰的仆人。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.4
 END
 
 IF ~~ t3.4
-SAY ~I see... perhaps you are the most suitable to answer this, then.~
+SAY ~我明白了……那也许你最合适回答这个。~
 IF ~~ + t3.5
 END
 
 IF ~~ t3.5
-SAY ~Do you believe one should be judged in death by the weight of their actions, rather by their loyalty to their god?~
+SAY ~你认为人死后该按其一生的行为轻重受审，还是按其对神的忠诚受审？~
 + ~OR(2)
 Class(Player1,CLERIC_ALL)
-CheckStatGT(Player1,14,WIS)~ + ~I know where this is going. You're thinking of the Wall of the Faithless, aren't you?~ + t3.6
-++ ~What are you going on about?~ + t3.7
-++ ~I've got no time to answer this right now. Ask someone else.~ + t3.0
+CheckStatGT(Player1,14,WIS)~ + ~我知道这话要往哪儿去。你在想无信者之墙，对吧？~ + t3.6
+++ ~你在说什么？~ + t3.7
+++ ~我现在没时间回答这个。问别人去。~ + t3.0
 END
 
 IF ~~ t3.6
-SAY ~Yes... that is correct, <CHARNAME>. You are wise to know that.~
+SAY ~是的……没错，<CHARNAME>。你聪明，知道这个。~
 IF ~~ + t3.7
 END
 
 IF ~~ t3.7
-SAY ~While I spent time among my brothers and sisters of the Ilmatati church in Athkatla, we... spoke of many things regarding not only our faith, but the way of the gods in general.~
-= ~At some point, we mentioned the Wall of the Faithless... the fate that awaits those who swear no allegiance to the gods. I have not heard the Wall mentioned since my studies during childhood, but the thought of it has persisted with me ever since.~
-++ ~What do the Ilmatari think of the Wall?~ + t3.8
-++ ~It's unjust. Many good men do not deserve the fate that awaits them.~ + t3.9
-++ ~The Wall is a travesty. It was created solely to force others to worship, and punish those who don't.~ + t3.9
-++ ~I think it's a worthy fate for the Faithless.~ + t3.10
-++ ~I don't want to talk about the Wall.~ + t3.0
+SAY ~我在阿斯卡特拉与伊尔梅特教会的兄弟姐妹们相处时，我们……谈过许多事，不只是我们的信仰，还有众神一般的行事之道。~
+= ~某个时候，我们提到了无信者之墙……那是等着那些不向众神宣誓效忠者的命运。我自童年学习以来就没听人提过那堵墙，可从那以后，这念头一直留在我心里。~
+++ ~伊尔梅特信徒怎么看那堵墙？~ + t3.8
+++ ~它不公。许多好人不应得那样的命运。~ + t3.9
+++ ~那堵墙是场荒谬。它存在只为了强迫别人敬拜，并惩罚不敬拜的人。~ + t3.9
+++ ~我觉得那是无信者该得的命运。~ + t3.10
+++ ~我不想谈那堵墙。~ + t3.0
 END
 
 IF ~~ t3.8
-SAY ~Some of us consider it unjust. Others believe 'tis not our place to decide, for Kelemvor, Lord of the Dead, was commanded by his fellow gods to maintain the Wall, to demand faith, to make an example of those who will not worship.~
+SAY ~我们中有些人认为它不公。另一些人相信那不是我们能决定的，因为死者之主凯兰沃受他同侪众神的命令维护那墙，要求信仰，以不肯敬拜者为警戒。~
 IF ~~ + t3.10
 END
 
 IF ~~ t3.9
-SAY ~I believe the same... inside the Wall are countless souls, both good and evil, condemned to the same fate as each other. A cruel worshipper of Cyric could find a better fate in death than a Faithless.~
+SAY ~我也这么认为……墙里有无数灵魂，无论善恶，都被判同样的命运。一个残忍的西瑞克信徒死后都可能比一个无信者得到更好的结局。~
 IF ~~ + t3.10
 END
 
 IF ~~ t3.10
-SAY ~There is no release for them, no chance at redemption for the wicked, no peace for those who suffered in life. Only crushing despair, until their will is destroyed utterly.~
-= ~The thought of it... haunts my dreams often. I believe faith should be a choice, a thing to take pride in, not... a necessity of coercion.~
-++ ~It's horrible, I agree.~ + t3.11
-++ ~The Wall's existence is a testament to the cowardice of the gods.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.12
-++ ~Do you not take comfort knowing you're safe from that fate?~ + t3.13
-++ ~Not all gods depend on the Wall. Many draw their power from the love of their followers.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.14
+SAY ~他们无从解脱，恶人没有赎罪的机会，生时受苦的人得不到安宁。只有压顶的绝望，直到他们的意志被彻底摧毁。~
+= ~想到这个……常萦绕我的梦。我相信信仰该是一种选择，一件值得自豪的事，而不是……胁迫的必需。~
+++ ~这很可怕，我同意。~ + t3.11
+++ ~那墙的存在证明了众神的怯懦。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.12
+++ ~知道自己免于那种命运，你不感到安慰吗？~ + t3.13
+++ ~不是所有神都靠那堵墙。许多神的力量来自信徒的爱。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.14
 END
 
 IF ~~ t3.11
-SAY ~The thought of it makes me question whether my faith is misplaced. I often wonder if... if my faith is little more than fear. Gods, I hope 'tis not.~
+SAY ~想到这个让我怀疑我的信仰是否错置。我常常想……我的信仰是否不过是恐惧。神明啊，我希望不是。~
 IF ~Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.16
 IF ~!Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.15
 END
 
 IF ~~ t3.12
-SAY ~Harsh words, <CHARNAME>, yet I cannot deny there is truth to what you say. Perhaps even the gods are not free of mortal weakness.~
+SAY ~话很严厉，<CHARNAME>，可我无法否认你说的有道理。也许连众神也未能免于凡人的弱点。~
 IF ~Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.16
 IF ~!Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.15
 END
 
 IF ~~ t3.13
-SAY ~How could I, <CHARNAME>? I can hardly rest, knowing the Faithless are doomed to a fate they do not deserve.~
-= ~I have failed to save so many others in my life. How many of them had never said a prayer, and were destined to become brick and mortar? Could I have helped them gain their faith, had I saved them? Am I partially to blame for the souls that are condemned to an eternity of suffering?~
-++ ~No, you're not. You did everything you could.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.14
-++ ~That was their choice to make, not yours.~ + t3.11
-++ ~Blame the gods, not yourself.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.12
+SAY ~我怎么能安心，<CHARNAME>？知道无信者注定要落进他们不该得的命运，我几乎无法安歇。~
+= ~我一生没能救下许多人。他们中有多少从未祈祷过，注定要变成砖石？若我救下他们，能否帮他们得到信仰？那些被判永恒受苦的灵魂，我是否也有一部分罪责？~
+++ ~不，你没有。你已尽力而为。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t3.14
+++ ~那是他们的选择，不是你的。~ + t3.11
+++ ~该怪众神，不该怪你自己。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + t3.12
 END
 
 IF ~~ t3.14
-SAY ~I can only believe that Ilmater himself does not support such an injustice, even if he has no power to stop it. *sigh* Proof that even the gods are not infallible, I suppose.~
+SAY ~我只能相信伊尔梅特本人也不支持这样的不公，即使他无力阻止。*叹气*这大概证明连众神也非全知全能。~
 IF ~Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.16
 IF ~!Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.15
 END
 
 IF ~~ t3.15
-SAY ~I have wasted enough of your time with my pondering, my friend. Let us continue, and may we not think of this again.~
+SAY ~我的思虑已经浪费了你太多时间，我的朋友。我们继续吧，愿我们不再想这事。~
 IF ~~ EXIT
 END
 
 IF ~~ t3.16
-SAY ~I fear for you, my friend. The thought that one day, you may be destined for the Wall is... one that is hard to bear.~
-= ~I only hope that one day, you may find a way to avoid that fate.~
+SAY ~我为你担心，我的朋友。想到你有一天可能注定要进那堵墙……这念头难以承受。~
+= ~我只希望有一天你能找到避开那命运的办法。~
 IF ~~ EXIT
 END
 END
@@ -1764,89 +1764,89 @@ END
 // Friendship talk 4
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",8)~ THEN C0SIRE2J t4
-~I do not believe I have yet asked you, <CHARNAME>. You did not leave your home in Candlekeep entirely by choice... are you satisfied with the life you now lead?~ [C0BLANK]
+~我想我还没问过你，<CHARNAME>。你离开烛堡的家并不完全是出于自愿……你对如今过的生活满意吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~It may not have been my choice to leave Candlekeep, but I'm glad I did. I've grown much since then.~ + t4.1
-++ ~Absolutely! Candlekeep was by far the most boring part of my life. I'm happy to be away from it.~ + t4.2
-++ ~I'm not sure. I may have been happy living in peace and comfort.~ + t4.3
-++ ~What brought this on?~ + t4.4
-++ ~I'm not in the mood to talk about Candlekeep.~ + t4.0
+++ ~离开烛堡也许不是我的选择，可我很高兴我离开了。自那以后我成长了许多。~ + t4.1
+++ ~当然！烛堡是我一生中最无聊的一段。我很高兴离开了它。~ + t4.2
+++ ~我不确定。也许我在安宁舒适中活着会更快乐。~ + t4.3
+++ ~你怎么突然问这个？~ + t4.4
+++ ~我没心情谈烛堡。~ + t4.0
 
 APPEND C0SIRE2J
 
 IF ~~ t4.0
-SAY ~Oh. Very well... if you would prefer that.~
+SAY ~哦。好罢……若你宁愿如此。~
 IF ~~ EXIT
 END
 
 IF ~~ t4.1
-SAY ~Yes... I understand that feeling well. Though perhaps my childhood was less enviable than your own. I do not have many regrets for what I left behind.~
+SAY ~是的……我很明白那种感觉。不过我的童年也许不如你的令人羡慕。我对自己抛下的一切没多少遗憾。~
 IF ~~ + t4.4
 END
 
 IF ~~ t4.2
-SAY ~I see... so you have no regrets for leaving your peaceful life behind. Then we are... more similar than I believed.~
+SAY ~我明白了……所以你对抛下平静的生活并无遗憾。那我们……比我想的更相似。~
 IF ~~ + t4.4
 END
 
 IF ~~ t4.3
-SAY ~Perhaps. (smile) But 'tis difficult to imagine you in such a life, seeing how comfortable you are in this one.~
+SAY ~也许。（微笑）可很难想象你过那样的生活，看你在这种生活里多么自在。~
 IF ~~ + t4.4
 END
 
 IF ~~ t4.4
-SAY ~I have been considering how much struggle we must go through in our current way of life. So many lives have been taken by my hand... too many. It is something I have greatly regretted.~
-= ~Sometimes I wonder if my life would have been better spent as a cloistered sister of the church, rather than a champion. 'Twould have been an easier life, no doubt.~
-++ ~That's only half of it. We take lives, certainly, but only when we must.~ + t4.5
-++ ~If this life of violence disgusts you so much, why don't you leave it behind?~ + t4.6
-++ ~You must enjoy something about this life, or you wouldn't be here.~ + t4.7
-++ ~That's enough talk for now.~ + t4.0
+SAY ~我一直在想我们如今这种活法要经历多少挣扎。那么多性命从我手中被夺走……太多了。这是我深深悔恨的事。~
+= ~有时我想，我的一生若用在教会里做隐修修女，而非做斗士，是否会更好。那无疑会是更轻松的一生。~
+++ ~那只是一半。我们确实夺人性命，可只在必须时。~ + t4.5
+++ ~若这种暴力的生活让你如此厌恶，你为什么不抛下它？~ + t4.6
+++ ~这种生活里总有你喜欢的什么，否则你不会在这里。~ + t4.7
+++ ~现在谈够了。~ + t4.0
 END
 
 IF ~~ t4.5
-SAY ~Aye... that is part of what drives me onwards. I doubt my life would have been better spent in a sheltered chapel. And... 'twould have been a life of loneliness. I would not have been blessed with your company.~
+SAY ~是的……这也是驱我前行的一部分。我怀疑我的一生若在庇护的礼拜堂里度过会更好。而且……那会是孤独的一生。我就不会有幸有你作伴。~
 IF ~~ + t4.8
 END
 
 IF ~~ t4.6
-SAY ~I have considered it. But I doubt my life would have been better spent in a sheltered chapel. And... 'twould have been a life of loneliness. I would not have been blessed with your company.~
+SAY ~我考虑过。可我怀疑我的一生若在庇护的礼拜堂里度过会更好。而且……那会是孤独的一生。我就不会有幸有你作伴。~
 IF ~~ + t4.8
 END
 
 IF ~~ t4.7
-SAY ~Aye, that is true... I have done much good as a paladin than I may have done in a sheltered life. I have seen much of the realms beyond my childhood home. And... I am blessed with the company I now have.~
+SAY ~是的，确实如此……我做圣武士行的善，也许多过我若在庇护中度过的一生。我见过童年家园之外的许多地界。而且……我有幸有如今的同伴。~
 IF ~~ + t4.8
 END
 
 IF ~~ t4.8
-SAY ~Thank you for listening, <CHARNAME>. Such things become easier to bear when spoken of to a friend.~
+SAY ~谢谢你听我说，<CHARNAME>。这种事跟朋友说出来就更容易承受。~
 IF ~Global("C0SireneMatch","GLOBAL",1) !Global("C0SireneRomanceActive","GLOBAL",3)~ + t4.9
 IF ~OR(2) !Global("C0SireneMatch","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ t4.9
-SAY ~If I may... you have been most kind to me since we met. I cannot deny I feel drawn to you... in more ways than one. I hope that does not bother you.~
-++ ~What are you getting at?~ + t4.10
-++ ~No, it doesn't. I'd love to get to know you better.~ + t4.11
-++ ~That's touching, but I'd rather we remain friends.~ + t4.12
+SAY ~若我可以……自我们相识，你对我一直极好。我不能否认我被你吸引……不止一种意义上。我希望这不让你困扰。~
+++ ~你想说什么？~ + t4.10
+++ ~不，不会。我很想更了解你。~ + t4.11
+++ ~这话动人，可我希望我们只做朋友。~ + t4.12
 END
 
 IF ~~ t4.10
-SAY ~I mean to say that I am interested... no, attracted to you, <CHARNAME>. As a friend, and as a <PRO_MANWOMAN>. If that is too much, then... I apologize. I will not bring this up again.~
-++ ~No, it's fine. I'd love to get to know you better.~ + t4.11
-++ ~I'm flattered, but I prefer to leave it at friendship.~ + t4.12
-++ ~You're a dear friend, but... I'm not attracted to women. I hope you can understand.~ + t4.12
-++ ~Make sure you don't. I'm not interested in you that way.~ + t4.12
+SAY ~我是说我有兴趣……不，我被你吸引，<CHARNAME>。作为朋友，也作为一个<PRO_MANWOMAN>。若这太过分，那么……我道歉。我不会再提。~
+++ ~不，没关系。我很想更了解你。~ + t4.11
+++ ~我受宠若惊，可我希望只停留在友谊。~ + t4.12
+++ ~你是位亲爱的朋友，可是……我不被女人吸引。希望你能理解。~ + t4.12
+++ ~那你就别再提了。我对你没有那种兴趣。~ + t4.12
 END
 
 IF ~~ t4.11
-SAY ~Oh, that... that is good. Perhaps we can talk again... soon, then.~
+SAY ~哦，那……那很好。那也许我们很快……可以再谈。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",1)~ EXIT
 END
 
 IF ~~ t4.12
-SAY ~I understand, <CHARNAME>, truly. Having you as a friend is already more than I can ask for.~
+SAY ~我明白，<CHARNAME>，真的。能有你这个朋友已超出我所能求的。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 END
@@ -1854,82 +1854,82 @@ END
 // Friendship talk 5
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",10)~ THEN C0SIRE2J t5
-~We have seen so much death. When I swore my vows to be a champion of the just, protector of the innocent... I had not expected to become so familiar with violence.~ [C0BLANK]
+~我们见过太多死亡。当我立誓要做正义的斗士、无辜者的护佑者时……我没想到会跟暴力如此熟悉。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~What had you expected?~ + t5.1
-++ ~Maybe this lifestyle isn't for you.~ + t5.2
-++ ~I'm busy now. Can we talk later?~ + t5.0
+++ ~你原以为会怎样？~ + t5.1
+++ ~也许这种活法不适合你。~ + t5.2
+++ ~我现在忙。能改天谈吗？~ + t5.0
 
 APPEND C0SIRE2J
 
 IF ~~ t5.0
-SAY ~As you wish.~
+SAY ~如你所愿。~
 IF ~~ DO ~SetGlobal("C0SireneFriendshipTalk","GLOBAL",9)~ EXIT
 END
 
 IF ~~ t5.1
-SAY ~I hardly remember. I was still but a brash youth when I left my village for my pilgrimage, hoping to do good as the knight-errants of heroic tales. The reality was... far more complex than I had expected.~
+SAY ~我几乎不记得了。我离开村子去朝圣时还只是个莽撞的少年，盼着像英雄传说里的游侠骑士那样行善。现实……远比我预想的复杂。~
 IF ~~ + t5.2
 END
 
 IF ~~ t5.2
-SAY ~'Tis not to say that I feel I am unsuited for this life, <CHARNAME>. I have the training and the will to be a champion of Ilmater, and I am grateful that I have the power to protect those close to me, such as you, but...~
-= ~Sometimes 'tis difficult for me to overlook the blood that has stained my hands, no matter how black it may be. It is... sickening.~
-++ ~I had no idea it affected you so much. You seem almost comfortable in the battlefield.~ + t5.3
-++ ~You're right. It's horrible, thinking of how many lives I've ended. I've lost count at this point.~ + t5.4
-++ ~Sometimes, killing is necessary to prevent further evil from occurring.~ + t5.5
-++ ~It's a necessity of life. Better get used to it.~ + t5.6
+SAY ~这不是说我觉得自己不适合这种生活，<CHARNAME>。我有训练也有意志做伊尔梅特的斗士，我也感激我有力量保护亲近的人，比如你，可是……~
+= ~有时我很难不去看沾在我手上的血，无论它多黑。那……令人作呕。~
+++ ~我不知道这竟这样影响你。你在战场上看起来几乎很自在。~ + t5.3
+++ ~你说得对。想到我终结了多少性命就可怕。到如今我已数不清了。~ + t5.4
+++ ~有时杀戮是必要的，以防更多邪恶发生。~ + t5.5
+++ ~这是生活的必需。最好习惯它。~ + t5.6
 END
 
 IF ~~ t5.3
-SAY ~I do not show it, so that my allies may not lose heart, but... it does pain me.~
+SAY ~我不表露出来，好让同伴们不至于失去勇气，可是……它确实让我心痛。~
 IF ~~ + t5.6
 END
 
 IF ~~ t5.4
-SAY ~Then you know it well. What I wouldn't give for a life of peace...~
+SAY ~那你就很明白它了。为过一种平静的生活，我愿意付出什么啊……~
 IF ~~ + t5.6
 END
 
 IF ~~ t5.5
-SAY ~You are right. Still, it does not make the inevitability any easier.~
+SAY ~你说得对。尽管如此，这也不让那必然性更好受些。~
 IF ~~ + t5.6
 END
 
 IF ~~ t5.6
-SAY ~Do you know why I choose to wear this white cloak, <CHARNAME>?~
-++ ~It's a symbol of your faith, isn't it?~ + t5.7
-++ ~I don't know. Why?~ + t5.8
-++ ~I always thought it was just a choice of fashion.~ + t5.8
+SAY ~你知道我为什么选择披这件白斗篷吗，<CHARNAME>？~
+++ ~那是你信仰的象征，不是吗？~ + t5.7
+++ ~我不知道。为什么？~ + t5.8
+++ ~我一直以为那只是衣着上的选择。~ + t5.8
 END
 
 IF ~~ t5.7
-SAY ~'Tis that, aye, but 'tis also more.~
+SAY ~是的，那是，可也不止如此。~
 IF ~~ + t5.8
 END
 
 IF ~~ t5.8
-SAY ~Many of my fellow worshippers would have chosen something less striking, perhaps a holy symbol or a shield to place the mark of Ilmater upon.~
-= ~I chose this cloak, so that the blood that stains it may serve as a reminder of what I must do to ensure that no more suffering will occur.~
-= ~It is an icon which I have come to both love and despise at the same time. Foolish, is it not, that I carry a reminder of what I fear the most, and made it the symbol of my faith?~
-++ ~I don't think it's foolish at all. I think it's a bold choice.~ + t5.9
-++ ~Maybe a little, but I don't think any less of you for it.~ + t5.9
-++ ~I think you should get rid of it.~ + t5.10
+SAY ~我的许多同信者会选择不那么醒目的东西，也许是圣徽，或是一面盾，把伊尔梅特的记号放在上面。~
+= ~我选了这件斗篷，好让沾在上面的血成为提醒，提醒我必须做什么，才能确保再不会有苦难发生。~
+= ~这是个我既爱又恨的象征。我带着自己最怕之物的提醒，还把它变成我信仰的象征，这不是很傻吗？~
+++ ~我觉得一点也不傻。我觉得这是个大胆的选择。~ + t5.9
+++ ~也许有一点，可我并不因此看轻你。~ + t5.9
+++ ~我觉得你该把它扔了。~ + t5.10
 END
 
 IF ~~ t5.9
-SAY ~You are kind to say so, <CHARNAME>.~
+SAY ~你这么说真是好心，<CHARNAME>。~
 IF ~~ + t5.11
 END
 
 IF ~~ t5.10
-SAY ~I have considered it, but I doubt 'twould bring me any peace.~
+SAY ~我考虑过，可我怀疑那不会给我带来任何安宁。~
 IF ~~ + t5.11
 END
 
 IF ~~ t5.11
-SAY ~At least now I have another's cause to fight for, one that is worth the blood I must shed. Somehow, that makes the thought more bearable.~
+SAY ~至少现在我有别人的目标可为之战斗，一个值得我流这些血的目标。不知怎地，这让那念头更能承受了。~
 IF ~~ EXIT
 END
 
@@ -1938,70 +1938,70 @@ END
 // Friendship talk 6
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",12)~ THEN C0SIRE2J t6
-~I... hope you did not think I was criticizing you during our last talk, <CHARNAME>. I did not mean to imply that I was dissatisfied with your leadership.~ [C0BLANK]
+~我……希望你没觉得我上次谈话是在批评你，<CHARNAME>。我不是想暗示我对你的领导不满。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~No, of course not.~ + t6.1
-++ ~Why would you think that?~ + t6.1
-++ ~We don't have time for this right now.~ + t6.0
+++ ~不，当然没有。~ + t6.1
+++ ~你为什么这么想？~ + t6.1
+++ ~我们现在没时间谈这个。~ + t6.0
 
 APPEND C0SIRE2J
 
 IF ~~ t6.0
-SAY ~Oh... very well.~
+SAY ~哦……好罢。~
 IF ~~ EXIT
 END
 
 IF ~~ t6.1
-SAY ~When we last spoke, I mentioned my distaste for the fighting and death, and I realized that I sounded as though I were blaming you for leading us into it all. That is not what I intended.~
-= ~Whether 'tis with you or in my lone journey, battle will never be gone from my life until the day I put down my blade. I have come to accept that.~
-++ ~I don't mind if you feel bothered by the amount of fighting we get into. I hate it as much as you do.~ + t6.2
-++ ~Do you think you'll ever retire from this life?~ + t6.3
-++ ~Well, it's good to know you don't hate me, at least. Can we move on?~ + t6.4
+SAY ~上次谈话时我提到我厌恶战斗与死亡，我意识到自己听起来像是在怪你领我们走进这一切。那不是我的本意。~
+= ~无论与你同行还是独自上路，战斗都不会离开我的生活，直到我放下剑的那天。我已接受这一点。~
+++ ~你若为我们打的仗多而心烦，我不介意。我跟你一样恨它。~ + t6.2
+++ ~你觉得你会有退出这种生活的一天吗？~ + t6.3
+++ ~嗯，至少知道你不恨我，这很好。我们能继续吗？~ + t6.4
 END
 
 IF ~~ t6.2
-SAY ~I am glad to know you are as eager for all this fighting to end as I am, <CHARNAME>. Regardless, so long as you may bear it, so will I.~
+SAY ~知道你我一样渴望这一切战斗结束，我很高兴，<CHARNAME>。无论如何，只要你能承受，我也能。~
 IF ~~ + t6.3
 END
 
 IF ~~ t6.3
-SAY ~Perhaps one day, I will settle down for a life of peace... though I do not see a chance for it within the next few years. I still have a duty to fulfil to my god, while I have the ability to.~
-++ ~Where do you think you'll be within the next few decades?~ + t6.5
-++ ~I, on the other hand, will happily be done with adventuring once I have the chance.~ + t6.6
-++ ~Let's not ponder this right now. We have work to do.~ + t6.4
+SAY ~也许有一天我会安定下来过平静的生活……不过我在这几年内看不到这样的机会。只要我还有能力，我就仍对我的神负有职责。~
+++ ~你觉得接下来几十年你会在哪里？~ + t6.5
+++ ~另一方面，我一旦有机会，会乐于结束冒险生涯。~ + t6.6
+++ ~我们别现在就想这个。我们还有事要做。~ + t6.4
 END
 
 IF ~~ t6.4
-SAY ~Yes, you are right. Thank you for indulging me for this brief moment.~
+SAY ~是的，你说得对。谢谢你容我这一刻。~
 IF ~~ EXIT
 END
 
 IF ~~ t6.5
-SAY ~If I do not fall in the name of Ilmater, then... perhaps I will retire to an Ilmatari church, to live my remaining years healing and mentoring others.~
-= ~I could try to venture to Tethyr to find my fellow members of the Holy Order of Suffering, but... they may not accept me. Not as I am.~
-++ ~Why not? Aren't followers of Ilmater supposed to be accepting?~ + t6.7
-++ ~What about starting a family? Wouldn't you like that?~ + t6.8
-++ ~This has been an interesting talk, but we really should move on.~ + t6.4
+SAY ~若我不以伊尔梅特之名倒下，那么……也许我会退隐到一座伊尔梅特教会，用余生治病救人、教导他人。~
+= ~我可以试着去泰瑟找我受苦圣战骑士团的同道，可是……他们也许不会接纳我。不会接纳如今的我。~
+++ ~为什么不会？伊尔梅特的信徒不是该宽容吗？~ + t6.7
+++ ~成家怎么样？你不想要吗？~ + t6.8
+++ ~这番谈话挺有意思，可我们真该走了。~ + t6.4
 END
 
 IF ~~ t6.6
-SAY ~That is your right, my friend. You have gone through much more than anyone I have known, and you deserve a peaceful life. I, on the other hand...~
+SAY ~那是你的权利，我的朋友。你经历的比我认识的任何人都多，你该有平静的生活。另一方面，我……~
 IF ~~ + t6.5
 END
 
 IF ~~ t6.7
-SAY ~Many are, aye, but I have only known priests of my faith. I cannot be certain that the knights of the order will be as sympathetic towards my heritage... I have only ever known my mentor, and he was a just man, far less willing to compromise than the peaceful members of the church.~
+SAY ~许多人是的，嗯，可我只认识我这一信仰的祭司。我不能确定骑士团的人对我的出身会不会一样宽容……我只认识我的导师，他是个正直的人，远不如教会里那些平和的人那样愿意妥协。~
 IF ~~ + t6.9
 END
 
 IF ~~ t6.8
-SAY ~I doubt that will ever happen, <CHARNAME>, much as I would like it. And the thought of burdening another with my blood... no, I think 'tis best if I remain alone.~
+SAY ~我怀疑那永远不会有，<CHARNAME>，无论我多想要。而想到把这样的血脉带给另一个人……不，我想我最好独自一人。~
 IF ~~ + t6.9
 END
 
 IF ~~ t6.9
-SAY ~But we should not spend all day talking about the future, <CHARNAME>. Still, I appreciate these moments of small talk.~
+SAY ~可我们不该整天谈未来，<CHARNAME>。不过我仍珍视这些闲聊的时刻。~
 IF ~~ EXIT
 END
 
@@ -2010,76 +2010,76 @@ END
 // Friendship talk 7
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",14)~ THEN C0SIRE2J t7
-~They still look upon me with suspicion. I thought things would change, but... it has not.~ [C0BLANK]
+~他们仍带着怀疑看我。我以为情况会变，可是……并没有。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~Are you still concerned about what others think of you?~ + t7.1
-++ ~What are you talking about?~ + t7.2
-++ ~We have no time for this now. You'll just have to deal with it.~ + t7.0
+++ ~你仍在意外人怎么看你吗？~ + t7.1
+++ ~你在说什么？~ + t7.2
+++ ~我们现在没时间谈这个。你只能自己应付。~ + t7.0
 
 APPEND C0SIRE2J
 
 IF ~~ t7.0
-SAY ~Yes, I suppose I must. Carry on, <CHARNAME>.~
+SAY ~是的，我想我必须。继续吧，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ t7.1
-SAY ~I know I should not be, but it bothers me regardless. For so long, my blood has dictated who I am, who others see me to be, and... it never gets any easier to handle.~
-= ~I wonder sometimes, if others in the same situation are looked down upon as I am. Perhaps they are fortunate enough to have fewer signs of their heritage, or have learned to disguise themselves. Some may even be able to walk amongst others, head raised high despite it all.~
-= ~If there is such a person, then I envy them. This is a difficult burden to bear, to be feared or loathed not for who, but what you are.~
-++ ~Not all fear you. Some do respect you as a knight of Ilmater.~ + t7.3
-++ ~If it makes you feel better, I fully support you going forward and giving those gawkers a few slaps to set them straight.~ + t7.4
-++ ~Do you think you'd have been happier if you were born human, just as everyone else?~ + t7.5
+SAY ~我知道我不该，可它仍然困扰我。这么久以来，我的血决定了我是谁、别人眼中的我是谁，而且……这从来不曾更容易应付。~
+= ~我有时想，同样处境的人是否也像我这样被人看轻。也许他们幸运些，出身的痕迹更少，或学会了遮掩自己。有些人甚至能走在人群里，尽管一切仍昂着头。~
+= ~若有这样的人，那我羡慕他们。这是副难扛的担子，因你是什么而被畏惧、被厌恶，而非因你是谁。~
+++ ~不是所有人都怕你。有些人确实敬重你这位伊尔梅特骑士。~ + t7.3
+++ ~若这能让你好受些，我完全支持你走上前，给那些瞪眼的人几个耳光，让他们端正态度。~ + t7.4
+++ ~你觉得你若生来是普通人类，跟别人一样，会更快乐吗？~ + t7.5
 END
 
 IF ~~ t7.2
-SAY ~The way others look upon my horns and see a cursed woman, <CHARNAME>. Even now, they stare.~
+SAY ~别人看我的角，看见的是个受诅咒的女人，<CHARNAME>。即使如今，他们也在盯着。~
 IF ~~ + t7.1
 END
 
 IF ~~ t7.3
-SAY ~That is true. I can appreciate that, at least, rare as it is that others treat me that way. Though 'tis not respect I strive for, simply acceptance.~
+SAY ~确实如此。至少这一点我能感激，尽管别人这样待我很少见。不过我求的不是敬重，只是接纳。~
 IF ~~ + t7.6
 END
 
 IF ~~ t7.4
-SAY ~*laugh* Perhaps that would, indeed, lighten my mood a little. Your jests give me some small comfort, at least.~
+SAY ~*笑*也许那确实能让我心情轻松一点。你的玩笑至少给了我些许安慰。~
 IF ~~ + t7.6
 END
 
 IF ~~ t7.5
-SAY ~I am human, <CHARNAME>. No matter what blood runs in my veins, I was raised and taught as any human child was. Though if 'twere my wish... I am not certain.~
-= ~Perhaps I would be happier if I were normal, but... I would not be myself. I would be another person, a reflection of what I could have become. The thought both awes... and terrifies me.~
+SAY ~我是人类，<CHARNAME>。无论我血管里流着什么血，我都是像任何人类孩子一样被养育、教导的。可若问我愿不愿……我不确定。~
+= ~也许我若正常些会更快乐，可是……那我就不是我了。我会是另一个人，是我本可能成为之人的一个倒影。这念头既让我敬畏……也让我恐惧。~
 IF ~~ + t7.6
 END
 
 IF ~~ t7.6
-SAY ~I would have your thoughts once more, <CHARNAME>. Do you believe I am right to consider my blood a curse, despite what it has shaped me into?~
-++ ~You should be proud of who you are. Regardless of what you were born as.~ + t7.7
-++ ~There's no point considering what could have been, Sirene. You must learn to accept it.~ + t7.8
-++ ~I can't answer that for you. You must decide for yourself.~ + t7.0
+SAY ~我还想再听你的想法，<CHARNAME>。你觉得我把自己的血视为诅咒，即使它塑成了如今的我，这算对吗？~
+++ ~你该为你是谁而自豪。无论你生来是什么。~ + t7.7
+++ ~想本可能如何没意义，塞琳。你必须学会接受它。~ + t7.8
+++ ~这我没法替你回答。你必须自己决定。~ + t7.0
 END
 
 IF ~~ t7.7
-SAY ~I want to, <CHARNAME>. Truly, I do.~
+SAY ~我想，<CHARNAME>。真的，我想。~
 IF ~~ + t7.9
 END
 
 IF ~~ t7.8
-SAY ~I have come to accept it long ago, but... perhaps there is more to this than resignation.~
+SAY ~我早就接受了，可是……也许这不止是认命而已。~
 IF ~~ + t7.9
 END
 
 IF ~~ t7.9
-SAY ~Regardless, I want you to know that you have inspired me much, <CHARNAME>. You are a child of Bhaal, yet you are your own person first and foremost. That is the example that I aspire to follow.~
-++ ~Thank you, Sirene.~ EXIT
-++ ~You don't need to emulate me, Sirene. Do what you think is best.~ + t7.10
-++ ~As well you should.~ EXIT
+SAY ~无论如何，我想让你知道，你给了我许多启发，<CHARNAME>。你是巴尔之子，可你首先是你自己。这正是我向往效法的榜样。~
+++ ~谢谢你，塞琳。~ EXIT
+++ ~你不必效法我，塞琳。做你认为最好的事。~ + t7.10
+++ ~你本该如此。~ EXIT
 END
 
 IF ~~ t7.10
-SAY ~I do, <CHARNAME>. This is exactly what I think is best.~
+SAY ~我确实，<CHARNAME>。这正是我认为最好的。~
 IF ~~ EXIT
 END
 END
@@ -2087,158 +2087,158 @@ END
 // Friendship talk 8
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",16)~ THEN C0SIRE2J t8
-~'From sacrifice comes pain. From pain, endurance. From endurance, strength. May Ilmater grant <PRO_HIMHER> the power to succeed, and the strength to endure.'~ [C0BLANK]
+~「苦难自牺牲而来。忍耐自苦难而来。力量自忍耐而来。愿伊尔梅特赐<PRO_HIMHER>成功之力，与忍耐之坚。」~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~Your voice is beautiful when you pray. Even more so than usual.~ + t8.1
-++ ~Are you praying, Sirene? I haven't heard you do that much.~ + t8.2
-++ ~I'm glad to see you still haven't lost your faith, even after everything we've talked about.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t8.3
+++ ~你祈祷时声音很美。比平常更美。~ + t8.1
+++ ~你在祈祷吗，塞琳？我没怎么听你这样过。~ + t8.2
+++ ~很高兴看到你经历了我们谈的这一切之后，仍没有失去信仰。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t8.3
 
 APPEND C0SIRE2J
 
 IF ~~ t8.0
-SAY ~Of course, <CHARNAME>. I will continue to pray for you, whenever I can.~
+SAY ~当然，<CHARNAME>。只要我能，我就会继续为你祈祷。~
 IF ~~ EXIT
 END
 
 IF ~~ t8.1
-SAY ~Thank you, <CHARNAME>. In truth, there is a reason for that.~
+SAY ~谢谢你，<CHARNAME>。说实话，这是有原因的。~
 IF ~~ + t8.2
 END
 
 IF ~~ t8.2
-SAY ~I wanted you to hear my prayers, for those words were for you, <CHARNAME>.~
-++ ~Why for me, specifically?~ + t8.4
-++ ~You're not offering me to your god as a sacrifice or something, are you?~ + t8.5
-++ ~That's kind of creepy, actually. What did you pray for?~ + t8.4
+SAY ~我想让你听见我的祈祷，因为那些话是为你说，<CHARNAME>。~
+++ ~为什么专门为我？~ + t8.4
+++ ~你不是要把我献给你的神当祭品什么的吧？~ + t8.5
+++ ~说实话有点瘆人。你祈祷了什么？~ + t8.4
 END
 
 IF ~~ t8.3
-SAY ~I have you to thank for that, my friend. You have been a constant source of support to me all this time.~
+SAY ~这要谢你，我的朋友。你一直是支撑我的恒常源泉。~
 IF ~~ + t8.2
 END
 
 IF ~~ t8.4
-SAY ~You are soon to face difficult trials, I know. I have given you my sword arm, yet... sometimes I feel as though that is not enough.~
-= ~So I... gave you the only other thing I have to offer. My prayers, for your continued success and good fortune.~
-++ ~That's very kind of you.~ + t8.6
-++ ~I don't need prayers. Your friendship is enough.~ + t8.7
-++ ~This is all very heartwarming, but may we move on?~ + t8.0
+SAY ~你很快要面对艰难的试炼，我知道。我已把持剑的手臂给了你，可是……有时我觉得那还不够。~
+= ~所以我……把另一件我仅有的东西给了你。我的祈祷，为你持续的成功与好运。~
+++ ~你真好心。~ + t8.6
+++ ~我不需要祈祷。你的友谊就够了。~ + t8.7
+++ ~这都很暖心，可我们能继续吗？~ + t8.0
 END
 
 IF ~~ t8.5
-SAY ~What? No, of course not... are you making light of me again, <CHARNAME>?~
+SAY ~什么？不，当然不是……你又在拿我说笑了吗，<CHARNAME>？~
 IF ~~ + t8.4
 END
 
 IF ~~ t8.6
-SAY ~It is little enough compared to the kindness you have shown me, <CHARNAME>.~
+SAY ~相比你给我的善意，这实在微不足道，<CHARNAME>。~
 IF ~~ + t8.8
 END
 
 IF ~~ t8.7
-SAY ~And you have it, I assure you. But this takes little of me, and perhaps 'twill be much for you.~
+SAY ~而你会有的，我保证。可这于我所需甚少，对你也许意义重大。~
 IF ~~ + t8.8
 END
 
 IF ~~ t8.8
-SAY ~In truth, I have prayed in your name for some time now... but only recently have I had the courage to allow you to hear it. I think I have become... more comfortable around you.~
-= ~You are a true friend, a leader worth admiring, and a wise mentor when I was in doubt. I owe much to you, perhaps too much to repay.~
-++ ~We're friends, Sirene. Friends don't owe each other anything.~ + t8.9
-++ ~Take your time. We're not dying any time soon.~ + t8.10
-++ ~I appreciate it.~ + t8.11
+SAY ~说实话，我已有一段时间以你的名义祈祷……可直到近来我才有勇气让你听见。我想我在你身边变得……更自在了。~
+= ~你是位真正的朋友，一位值得钦佩的领袖，在我疑惑时是位明智的导师。我欠你许多，也许多到还不清。~
+++ ~我们是朋友，塞琳。朋友之间不相欠。~ + t8.9
+++ ~慢慢来。我们一时半会儿不会死。~ + t8.10
+++ ~我感激。~ + t8.11
 END
 
 IF ~~ t8.9
-SAY ~No, but... I would give this to you for your sake. I would not like to see another rare friend lost.~
+SAY ~不，可是……为你，我愿把这给你。我不愿再见一位难得的朋友失去。~
 IF ~~ + t8.11
 END
 
 IF ~~ t8.10
-SAY ~I know, <CHARNAME>. You would not lead us astray.~
+SAY ~我知道，<CHARNAME>。你不会领我们走错路。~
 IF ~~ + t8.11
 END
 
 IF ~~ t8.11
-SAY ~When the time comes, I hope these prayers will aid you, <CHARNAME>. Ilmater watches over us both.~
+SAY ~时候到了，我希望这些祈祷能助你，<CHARNAME>。伊尔梅特看顾我们两人。~
 IF ~~ EXIT
 END
 END
 // Friendship talk 9
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",18)~ THEN C0SIRE2J t9
-~You do not look well, <CHARNAME>. Whatever happened to you at that foul asylum... I dare not imagine it.~ [C0BLANK]
+~你看起来不好，<CHARNAME>。你在那肮脏的收容所里无论遭遇了什么……我不敢想象。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-++ ~Best that you don't. No one should ever go through what I did.~ + t9.1
-++ ~Yes, well, losing a soul isn't something you experience every day.~ + t9.1
-++ ~I'm fine. It'll take more than Irenicus's torture to bring me down.~ + t9.1
-++ ~Could we leave this talk for another time? I'm not in the mood right now.~ + t9.0
+++ ~你最好别想。没人该经历我经历的事。~ + t9.1
+++ ~是，嗯，失去灵魂可不是每天都能经历的事。~ + t9.1
+++ ~我没事。要打垮我，艾瑞尼卡斯的折磨还远远不够。~ + t9.1
+++ ~这谈话能改天再说吗？我现在没心情。~ + t9.0
 
 APPEND C0SIRE2J
 
 IF ~~ t9.0
-SAY ~Yes, of course... but if you need anything, <CHARNAME>, I am always willing to lend an ear.~
+SAY ~是的，当然……可你若需要什么，<CHARNAME>，我随时愿意听。~
 IF ~~ EXIT
 END
 
 IF ~~ t9.1
-SAY ~You are a strong <PRO_MANWOMAN>, <CHARNAME>. I cannot see you as anything less, not after knowing you suffered the way you did.~
-= ~If 'tis not against your will to answer, my friend... how do you feel? Do you feel pain from what you have lost?~
-++ ~Not pain, exactly. More like... an emptiness.~ + t9.2
-++ ~There's no need to worry. I feel fine.~ + t9.3
-++ ~Pain's the wrong word for it, Sirene. I'm angry. I want revenge.~ + t9.4
+SAY ~你是坚强的<PRO_MANWOMAN>，<CHARNAME>。知道你这样受苦之后，我无法把你看成别的。~
+= ~若回答不违背你的意愿，我的朋友……你感觉如何？你为你失去的东西感到痛吗？~
+++ ~不完全是痛。更像是……一种空洞。~ + t9.2
+++ ~不必担心。我感觉很好。~ + t9.3
+++ ~痛这个词不对，塞琳。我在愤怒。我要复仇。~ + t9.4
 END
 
 IF ~~ t9.2
-SAY ~Yes... I thought you would describe it as such.~
+SAY ~是的……我想你会这样形容。~
 IF ~~ + t9.5
 END
 
 IF ~~ t9.3
-SAY ~If 'tis truly as you say, <CHARNAME>, then I should feel relieved. But I worry that you are only holding a brave front.~
+SAY ~若真如你所说，<CHARNAME>，那我该放心。可我担心你只是在硬撑。~
 IF ~~ + t9.5
 END
 
 IF ~~ t9.4
-SAY ~Anger... yes, perhaps you are right to feel it. I would pray that you do not allow it to consume you, but...~
+SAY ~愤怒……是的，也许你该感到它。我愿祈祷你别让它吞掉你，可是……~
 IF ~~ + t9.5
 END
 
 IF ~~ t9.5
-SAY ~If 'tis of any comfort to you, <CHARNAME>, I would share some of my feelings with you.~
-= ~I have known the feeling of becoming hollow. Though my soul was not torn out of my being, I have felt as though 'twas not mine that lingered in my body. It struggles within me, trying to escape. Sometimes... I feel as though it has.~
-= ~In my worst moments, I wish 'twould all end, as though the world itself were crushing me.~
-= ~I know it is pain that cannot be described, <CHARNAME>, but... I have found that your company soothes it. Now I hope that I... can help you in return. If you desire my support, I will gladly give it to you, whether 'tis words of comfort you require or simply a shoulder to lean on.~
-++ ~Thank you. I'm glad to have such a faithful friend.~ + t9.6
-++ ~That does make me feel better. I suspect I'll need more of your support from now on.~ + t9.6
-++ ~I appreciate it, but I really am fine. I'll stay strong.~ + t9.7
-++ ~In that case, could I... have that shoulder? Right now?~ + t9.8
-++ ~Don't think of me as weak. I don't need sympathy.~ + t9.9
+SAY ~若这能给你些许安慰，<CHARNAME>，我愿与你分享我的一些感受。~
+= ~我知道变得空洞是什么感觉。虽然我的灵魂并未被从我身体里撕走，可我感觉到留在我身体里的仿佛不是我的灵魂。它在我体内挣扎，想逃出去。有时……我觉得它已经逃了。~
+= ~在我最糟的时候，我希望一切结束，仿佛世界本身在压碎我。~
+= ~我知道那是无法形容的痛，<CHARNAME>，可是……我发现你的陪伴能安抚它。如今我希望我……也能反过来帮你。你若需要我的支撑，我会乐于给你，无论你需要的是安慰的话，还是仅仅一个可以靠的肩膀。~
+++ ~谢谢你。有这样的忠实朋友我很高兴。~ + t9.6
+++ ~这确实让我好受了些。我想从今往后我会更常需要你的支撑。~ + t9.6
+++ ~我感激，可我真的没事。我会坚强。~ + t9.7
+++ ~既然如此，我能……借那个肩膀吗？现在？~ + t9.8
+++ ~别把我看成软弱。我不需要同情。~ + t9.9
 END
 
 IF ~~ t9.6
-SAY ~You do not need to be grateful for my friendship, <CHARNAME>. You have given me more than I could have ever wished for. This is... the least I could do in return.~
+SAY ~你不必为我的友谊感激，<CHARNAME>。你给我的已超出我所能期望。这……是我至少能回报的。~
 IF ~~ + t9.10
 END
 
 IF ~~ t9.7
-SAY ~'Tis never wrong to depend on friends for once, <CHARNAME>. ~
+SAY ~偶尔依靠朋友绝不算错，<CHARNAME>。~
 IF ~~ + t9.10
 END
 
 IF ~~ t9.8
-SAY ~(She makes an effort to put up a reassuring smile, taking your head on her shoulder, giving you her full support.)~
+SAY ~（她努力挤出安抚的笑，把你的头靠在她的肩上，全力支撑着你。）~
 IF ~~ + t9.10
 END
 
 IF ~~ t9.9
-SAY ~I- If that is what you wish, <CHARNAME>. I will intrude no longer.~
+SAY ~我——若那是你的愿望，<CHARNAME>。我不再打扰。~
 IF ~~ EXIT
 END
 
 IF ~~ t9.10
-SAY ~No matter what it takes, we will make things right, my friend. This I swear to you.~
+SAY ~无论要付出什么，我们都会把事情纠正过来，我的朋友。我向你起誓。~
 IF ~~ EXIT
 END
 
@@ -2247,45 +2247,45 @@ END
 // Friendship talk 10
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",20)~ THEN C0SIRE2J t10
-~I have... considered my choices up to now since we encountered my brother. Things have changed. No... 'tis more accurate to say that *I* have changed.~ [C0BLANK]
+~自从遇见我兄弟，我……一直在想我至今的选择。情况变了。不……更准确地说，是*我*变了。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
-+ ~Alignment("C0Sirene",LAWFUL_GOOD)~ + ~For better, or for worse?~ + t10.1
-+ ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + ~For better, or for worse?~ + t10.2
-+ ~Alignment("C0Sirene",LAWFUL_GOOD)~ + ~You certainly seem different since then. Have you rediscovered your faith?~ + t10.1
-+ ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + ~You certainly seem different since then. Have you come to terms with yourself?~ + t10.2
-++ ~We have no time for this.~ + t10.0
++ ~Alignment("C0Sirene",LAWFUL_GOOD)~ + ~变好，还是变坏？~ + t10.1
++ ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + ~变好，还是变坏？~ + t10.2
++ ~Alignment("C0Sirene",LAWFUL_GOOD)~ + ~自那以后你确实看起来不一样了。你重新找回了信仰吗？~ + t10.1
++ ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + ~自那以后你确实看起来不一样了。你与自己和解了吗？~ + t10.2
+++ ~我们没时间谈这个。~ + t10.0
 
 APPEND C0SIRE2J
 
 IF ~~ t10.0
-SAY ~As you wish. But I do wish to say that... whatever the future holds for my current path, 'twas you who led me, and I appreciate what you have done.~
+SAY ~如你所愿。可我确实想说……无论我如今这条路前头有什么，都是你领我走的，我感激你所做的一切。~
 IF ~~ EXIT
 END
 
 IF ~~ t10.1
-SAY ~My faith is restored, and I feel renewed. My prayers are with T'samon... I hope that he will give up his hatred, and that we may meet again as true siblings.~
+SAY ~我的信仰恢复了，我觉得焕然一新。我的祈祷与特萨蒙同在……我希望他放下仇恨，希望我们能以真正的手足重逢。~
 IF ~~ + t10.3
 END
 
 IF ~~ t10.2
-SAY ~'Tis strange... I am no longer a paladin, yet I do not feel loss. I feel as though... Ilmater has freed me.~
+SAY ~真奇怪……我已不是圣武士，可我并不觉得失去。我觉得……伊尔梅特释放了我。~
 IF ~~ + t10.3
 END
 
 IF ~~ t10.3
-SAY ~I could not have done this without you, <CHARNAME>. If you had not guided me, my doubts would have kept me in place, unable to decide what to truly believe in. For that, I thank you, truly.~
-++ ~I did nothing. You did it all by yourself.~ + t10.4
-++ ~You're welcome.~ + t10.5
+SAY ~没有你，我做不到，<CHARNAME>。若不是你引导我，我的疑虑会把我定在原地，无法决定真正该信什么。为此，我真心感谢你。~
+++ ~我什么都没做。全是你自己做到的。~ + t10.4
+++ ~不客气。~ + t10.5
 END
 
 IF ~~ t10.4
-SAY ~No, you have taught me much, my friend. I will repay you however I can, no matter what it takes.~
+SAY ~不，你教了我许多，我的朋友。我会尽力回报你，无论要付出什么。~
 IF ~~ + t10.5
 END
 
 IF ~~ t10.5
-SAY ~No matter what may come, I should face it with courage, and trust in my beliefs. That is what you have shown me.~
+SAY ~无论将来如何，我都该以勇气面对，并信我的信念。这就是你向我显示的。~
 IF ~~ EXIT
 END
 END
@@ -2293,80 +2293,80 @@ END
 // Friendship talk 11
 
 CHAIN IF ~Global("C0SireneFriendshipHellTalk","GLOBAL",2)~ THEN C0SIRE2J t11
-~<CHARNAME>?~ [C0BLANK]
+~<CHARNAME>？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipHellTalk","GLOBAL",1)~
 END
-++ ~What is it?~ + t11.1
-++ ~Is something wrong? Do you sense danger?~ + t11.1
-++ ~Does this look like the place to be talking right now?~ + t11.1
+++ ~什么事？~ + t11.1
+++ ~有什么不对吗？你感觉到危险了？~ + t11.1
+++ ~这看起来像是现在谈这个的地方吗？~ + t11.1
 
 APPEND C0SIRE2J
 
 IF ~~ t11.1
-SAY ~I just wanted to thank you for everything once again. For the pleasure of both your leadership, and friendship. It had been my honor to fight at your side... as well as to die at your side.~
-++ ~Thank you, Sirene.~ + t11.2
-++ ~Aww... thanks. That almost makes me forget the rather dismal place we're in.~ + t11.2
-++ ~We're not dead yet. Not really.~ + t11.3
-++ ~You can save the heartwarming words for when we get out of this hell.~ + t11.3
+SAY ~我只是想再一次谢谢你的一切。为你领导与友谊的愉快。能在你身边战斗是我的荣幸……在你身边死去亦然。~
+++ ~谢谢你，塞琳。~ + t11.2
+++ ~噢……谢谢。这几乎让我忘了我们身处的地方有多阴沉。~ + t11.2
+++ ~我们还没死。不算是。~ + t11.3
+++ ~这些暖心的话，等我们出了这地狱再说吧。~ + t11.3
 END
 
 IF ~~ t11.2
-SAY ~I just wished to say that... I do not blame you for leading us here. 'Twas my choice to follow you into these pits to aid you against your foe... and I have no regrets.~
-++ ~No regrets? Not even a little bit?~ + t11.4
-++ ~Do you really believe we won't make it back?~ + t11.5
-++ ~That's all I needed to hear. Thank you.~ + t11.6
+SAY ~我只是想说……我不怪你领我们到这里。跟随你进这些坑洞对抗你的敌人，是我的选择……我没有遗憾。~
+++ ~没有遗憾？一点也不？~ + t11.4
+++ ~你真觉得我们回不去了？~ + t11.5
+++ ~这就是我要听的。谢谢你。~ + t11.6
 END
 
 IF ~~ t11.3
-SAY ~I know 'tis not the best place to exchange words, yet I cannot shake the feeling that we are soon to face our most difficult battle yet... and if we fail, then 'twill be too late for me to speak my mind.~
+SAY ~我知道这不是交谈的最好地方，可我甩不掉那种感觉——我们很快要面对至今最艰难的一战……若我们失败，那我要说心里话就太迟了。~
 IF ~~ + t11.2
 END
 
 IF ~~ t11.4
-SAY ~Well... (laugh) perhaps I have a few minor regrets on my mind. But... 'tis too late to think of them now.~
+SAY ~嗯……（笑）也许我心里确实有几件小小的遗憾。可是……现在想它们太迟了。~
 IF ~~ + t11.6
 END
 
 IF ~~ t11.5
-SAY ~I cannot deny the possibility, yet... I believe we will succeed. Because... I believe in you.~
+SAY ~我不能否认这有可能，可是……我相信我们会成功。因为……我相信你。~
 IF ~~ + t11.6
 END
 
 IF ~~ t11.6
-SAY ~You are the one who has guided us thus far, and in the journey, I have only persevered because of you... so, once again, thank you, my friend.~
+SAY ~是你一路领我们走到这里，而在这旅程中，我全因你才坚持下来……所以，再一次，谢谢你，我的朋友。~
 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ + t11.7
 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + t11.8
 END
 
 IF ~~ t11.7
-SAY ~If not for your guidance, I would have likely lost my faith a long time ago... wondering what I was fighting for. Only Ilmater knows how far I would have gone astray.~
+SAY ~若不是你的引导，我大概早就失去信仰了……不知道自己为何而战。只有伊尔梅特知道我本会迷得多远。~
 IF ~~ + t11.9
 END
 
 IF ~~ t11.8
-SAY ~Because of your leadership, I have come to know what I must do... what path I must take. I can make my choices without hesitation, believing in my own ability... all because of you.~
+SAY ~因为你的领导，我知道了必须做什么……必须走哪条路。我能毫不犹豫地做出选择，相信自己的能力……全因你。~
 IF ~~ + t11.9
 END
 
 IF ~~ t11.9
-SAY ~Even were such things not the case, I have valued the extent of our friendship, <CHARNAME>. I am glad we have journeyed together for so long. I am more than the person I once was.~
-++ ~It's not just you that's grown. I've learned a lot from your example, too.~ + t11.10
-++ ~I hope we'll still be friends, even after all this is over.~ + t11.11
-++ ~Finished? All right, let's move on.~ + t11.12
+SAY ~即使不是这样，我也珍视我们友谊的深度，<CHARNAME>。我很高兴我们同行了这么久。我比我曾经的那个人更多了。~
+++ ~成长的不仅是你。我也从你的榜样中学了许多。~ + t11.10
+++ ~我希望这一切结束后我们仍是朋友。~ + t11.11
+++ ~说完了？好，我们走吧。~ + t11.12
 END
 
 IF ~~ t11.10
-SAY ~Is that so? (Sirene's lips slowly curve into a smile) ...then, I am truly satisfied. Thank you for everything, my friend.~
+SAY ~是吗？（塞琳的唇慢慢弯成微笑）……那我真心满足了。谢谢你的一切，我的朋友。~
 IF ~~ EXIT
 END
 
 IF ~~ t11.11
-SAY ~Of course, <CHARNAME>. I doubt I will ever forget you, so long as I live.~
+SAY ~当然，<CHARNAME>。只要我活着，我想我永远不会忘记你。~
 IF ~~ EXIT
 END
 
 IF ~~ t11.12
-SAY ~Yes... with all our power... let us bring Irenicus to justice together.~
+SAY ~是的……倾我们全部之力……让我们一同把艾瑞尼卡斯绳之以法。~
 IF ~~ EXIT
 END
 END
@@ -2374,65 +2374,65 @@ END
 // Lovetalk 1
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",2)~ THEN C0SIRE2J lt1
-~Will you walk at my side for a moment, my friend?~ [C0BLANK]
+~你肯陪我走一会儿吗，我的朋友？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~Sure. Is there a problem?~ + lt1.1
-++ ~How can I refuse when a lady asks?~ + lt1.2
-++ ~No, I'd rather we walk separately.~ + lt1.3
+++ ~当然。有什么问题吗？~ + lt1.1
+++ ~女士相邀，我怎能拒绝？~ + lt1.2
+++ ~不，我宁愿我们分开走。~ + lt1.3
 
 APPEND C0SIRE2J
 
 IF ~~ lt1.1
-SAY ~No, not at all. I just... wanted your company for a while.~
+SAY ~不，一点也没有。我只是……想要你作伴一会儿。~
 IF ~~ + lt1.2
 END
 
 IF ~~ lt1.2
-SAY ~(You walk side by side, and while you may be imagining it, Sirene seems to be sidling closer to you as you move.)~
-= ~I should take this time to say how much I appreciate your company, <CHARNAME>. With you, I am able to almost forget all the other difficulties of my life.~
-= ~There have not been many as accepting as you. Your kindness has touched me greatly.~
-++ ~My thanks for the compliment.~ + lt1.4
-++ ~What can I say? Maybe I've grown fond of you.~ + lt1.5
-++ ~I keep you around because you are useful, Sirene. Let's just leave it at that.~ + lt1.3
+SAY ~（你们并肩而行，虽然也许是你多心，可你走动时塞琳似乎在渐渐靠近你。）~
+= ~我该趁这时候说说我多珍视你的陪伴，<CHARNAME>。有你在，我几乎能忘掉我生活里所有别的难处。~
+= ~像你这样宽容的人并不多。你的善意深深触动了我。~
+++ ~多谢你的称赞。~ + lt1.4
+++ ~我能说什么？也许我喜欢上你了。~ + lt1.5
+++ ~我留你在身边是因为你有用，塞琳。就这样吧。~ + lt1.3
 END
 
 IF ~~ lt1.3
-SAY ~As you wish, my friend. I am sorry if I have done something to upset you.~
+SAY ~如你所愿，我的朋友。若我做了什么让你不快，我很抱歉。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ lt1.4
-SAY ~I am merely stating the truth, <CHARNAME>. You do not need to thank me.~
+SAY ~我只是在说实话，<CHARNAME>。你不必谢我。~
 IF ~~ + lt1.6
 END
 
 IF ~~ lt1.5
-SAY ~*blush* <CHARNAME>, that is... I am not sure how to respond, after hearing such a thing.~
-++ ~Should I stop?~ + lt1.7
-++ ~How about with a smile?~ + lt1.6
+SAY ~*脸红*<CHARNAME>，那……听到这样的话，我不知道该怎么回应。~
+++ ~我该停下吗？~ + lt1.7
+++ ~笑一个怎么样？~ + lt1.6
 END
 
 IF ~~ lt1.6
-SAY ~(A gentle, nervous smile graces her lips, and suddenly you feel her hand touching yours.)~
-++ ~You have a charming smile. I wish you'd show it more often.~ + lt1.8
-++ ~I'm glad I have you.~ + lt1.9
-++ ~(Pull away) Don't do that.~ + lt1.3
+SAY ~（她唇上浮现温和紧张的笑，忽然你感觉到她的手碰到了你的手。）~
+++ ~你笑起来很迷人。我希望你多笑笑。~ + lt1.8
+++ ~有你在真好。~ + lt1.9
+++ ~（抽回手）别这样。~ + lt1.3
 END
 
 IF ~~ lt1.7
-SAY ~No, please do not. I appreciate that you would think highly of me.~
+SAY ~不，请别停。我感激你把我往好处想。~
 IF ~~ + lt1.6
 END
 
 IF ~~ lt1.8
-SAY ~For you, <CHARNAME>, I will try my best.~
+SAY ~为你，<CHARNAME>，我会尽力。~
 IF ~~ EXIT
 END
 
 IF ~~ lt1.9
-SAY ~As am I, <CHARNAME>.~
+SAY ~我也是，<CHARNAME>。~
 IF ~~ EXIT
 END
 END
@@ -2440,68 +2440,68 @@ END
 // Lovetalk 2
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",4)~ THEN C0SIRE2J lt2
-~Do you ever think of what could have been, <CHARNAME>? If it were not Bhaal's blood that runs in your veins?~ [C0BLANK]
+~你可曾想过本可能如何，<CHARNAME>？若你血管里流的不是巴尔的血？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~I try not to, no.~ + lt2.1
-++ ~All the time.~ + lt2.2
-++ ~Why would I think about such a thing?~ + lt2.1
+++ ~我尽量不去想。~ + lt2.1
+++ ~一直在想。~ + lt2.2
+++ ~我为什么会想这种事？~ + lt2.1
 
 APPEND C0SIRE2J
 
 IF ~~ lt2.1
-SAY ~Do you not think of how different your life would be, had you been born from mortal parents?~
+SAY ~你不曾想过，你若生自凡人父母，你的人生会有多大不同吗？~
 IF ~~ + lt2.2
 END
 
 IF ~~ lt2.2
-SAY ~I often think of where I would be, if infernal blood did not run in my veins. Perhaps I would never have become a ward of Ilmater's priests.~
-= ~I may even have known my family. Is it so strange to wonder such things?~
-++ ~No, not at all.~ + lt2.3
-++ ~You'd be a completely different person.~ + lt2.4
-++ ~It's pointless.~ + lt2.5
+SAY ~我常想，若我血管里流的不是魔性的血，我会在什么地方。也许我永远不会成为伊尔梅特祭司的受监护者。~
+= ~我甚至有可能认识我的家人。想这些很怪吗？~
+++ ~一点也不。~ + lt2.3
+++ ~那你会是完全另一个人。~ + lt2.4
+++ ~这没意义。~ + lt2.5
 END
 
 IF ~~ lt2.3
-SAY ~I am relieved to hear you say that, my friend. Sometimes I worry that I have my head in the clouds, when I should be focused upon the present.~
+SAY ~听你这么说我放心了，我的朋友。有时我担心自己心在天上，而我该专注于当下。~
 IF ~~ + lt2.6
 END
 
 IF ~~ lt2.4
-SAY ~Yes, that is true... I wonder if I would have liked the person I could have been.~
+SAY ~是的，确实……我在想我会不会喜欢那个我本可能成为的人。~
 IF ~~ + lt2.6
 END
 
 IF ~~ lt2.5
-SAY ~You may be right. Whatever I may believe, I cannot change what fate has made me.~
+SAY ~你也许说得对。无论我相信什么，我都无法改变命运造就的我。~
 IF ~~ + lt2.6
 END
 
 IF ~~ lt2.6
-SAY ~Still... the thought that I could have been normal is... well, 'tis something, at least. I cannot say I would not have preferred such a life.~
-++ ~Do you truly dislike your heritage that much?~ + lt2.7
-++ ~And what if we had never met? Would you still prefer that?~ + lt2.8
-++ ~That's enough philosophizing for one day. We have reality to deal with.~ + lt2.9
+SAY ~不过……想到我本可能正常，这……至少也算点什么。我不能说我就不会更喜欢那样的人生。~
+++ ~你真这么厌恶你的血脉吗？~ + lt2.7
+++ ~那若我们从未相遇呢？你还会宁愿那样吗？~ + lt2.8
+++ ~今天的哲学思辨够了。我们还有现实要应付。~ + lt2.9
 END
 
 IF ~~ lt2.7
-SAY ~What a strange question, <CHARNAME>. What else could I compare it to? I am not that naive - I know things could have been much, much worse.~
+SAY ~这问题真怪，<CHARNAME>。我还能拿它跟什么比？我没那么天真——我知道事情本可能糟得多得多。~
 IF ~~ + lt2.10
 END
 
 IF ~~ lt2.8
-SAY ~No... I cannot say I would have. Being where I am now... perhaps I would not change the past, even had I the power.~
+SAY ~不……我不能说我会。有如今的位置……也许即使我有能力，我也不会改变过去。~
 IF ~~ + lt2.10
 END
 
 IF ~~ lt2.9
-SAY ~Yes, true. Lead on, then.~
+SAY ~是的，没错。那就带路吧。~
 IF ~~ EXIT
 END
 
 IF ~~ lt2.10
-SAY ~I have wasted enough of your time with my daydreaming, <CHARNAME>. Still... it is good to have someone to share such thoughts with.~
+SAY ~我的白日梦已经浪费了你太多时间，<CHARNAME>。不过……有人可以分享这样的念头，真好。~
 IF ~~ EXIT
 END
 END
@@ -2509,84 +2509,84 @@ END
 // Lovetalk 3
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",6)~ THEN C0SIRE2J lt3
-~(You notice Sirene seemingly distracted, looking down at a small hand mirror.)~ [C0BLANK]
+~（你注意到塞琳似乎心不在焉，低头看着一面小小的手镜。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~Sirene? Are you all right?~ + lt3.1
-++ ~I didn't think you were one for vanity.~ + lt3.2
-++ ~You're putting us all at risk, not paying attention to your surroundings.~ + lt3.3
-++ ~(Leave her alone)~ + lt3.0
+++ ~塞琳？你还好吗？~ + lt3.1
+++ ~我没想到你是爱虚荣的人。~ + lt3.2
+++ ~你不注意周围，把这把所有人都置于危险中。~ + lt3.3
+++ ~（别理她）~ + lt3.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt3.0
-SAY ~(Eventually, with a sad expression, she returns the mirror to her pack and moves on, as though nothing had happened.)~
+SAY ~（终于，她带着悲伤的表情，把镜子放回行囊，像什么都没发生一样继续走。）~
 IF ~~ EXIT
 END
 
 IF ~~ lt3.x
-SAY ~Yes... we should.~
+SAY ~是的……我们该走了。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ lt3.1
-SAY ~Y-yes, of course I am, <CHARNAME>.~
+SAY ~是——是的，我当然没事，<CHARNAME>。~
 IF ~~ + lt3.4
 END
 
 IF ~~ lt3.2
-SAY ~I am not, <CHARNAME>. I was just pondering...~
+SAY ~我没事，<CHARNAME>。我只是在沉思……~
 IF ~~ + lt3.4
 END
 
 IF ~~ lt3.3
-SAY ~Yes... I know, <CHARNAME>. I should not have been distracted, but...~
+SAY ~是的……我知道，<CHARNAME>。我不该分心，可是……~
 IF ~~ + lt3.4
 END
 
 IF ~~ lt3.4
-SAY ~<CHARNAME>... do I seem a monster to you?~
-++ ~What? Why would you say such a thing?~ + lt3.5
-++ ~I'm not sure I understand what you're asking, Sirene.~ + lt3.5
-++ ~Would you think less of me if I said yes?~ + lt3.6
+SAY ~<CHARNAME>……在你看来我像怪物吗？~
+++ ~什么？你为什么说这种话？~ + lt3.5
+++ ~我不确定我明白你在问什么，塞琳。~ + lt3.5
+++ ~我若说是，你会看轻我吗？~ + lt3.6
 END
 
 IF ~~ lt3.5
-SAY ~Perhaps this was too sudden. I have just been looking at the... 'gifts' my blood has bestowed upon me.~ [C0BLANK]
-= ~Forgive me for saying so, but... I feel you are fortunate. Your heritage is a dark one, just as mine is, yet... you seem normal every way. 'Tis hard not to be envious of you.~
-++ ~That's wrong, Sirene. The taint of Bhaal may not be visible, but it affects me all the same.~ + lt3.7
-++ ~Would you have preferred it if our roles had been swapped?~ + lt3.8
-++ ~I'm not comfortable talking about this with you. Perhaps we should leave it at that.~ + lt3.x
+SAY ~也许这太突然了。我只是一直在看……我的血赐给我的那些「礼物」。~ [C0BLANK]
+= ~请原谅我这么说，可是……我觉得你幸运。你的血脉是黑暗的，正如我的，可是……你各方面看起来都正常。很难不羡慕你。~
+++ ~那不对，塞琳。巴尔的污秽也许看不见，可它一样影响我。~ + lt3.7
+++ ~你宁愿我们的角色互换吗？~ + lt3.8
+++ ~我不太舒服跟你谈这个。也许我们就到此为止。~ + lt3.x
 END
 
 IF ~~ lt3.6
-SAY ~I... no, I would not, <CHARNAME>. If you truly do, then... there is no reason for me to continue asking.~
-++ ~I'm sorry. I didn't mean to imply anything.~ + lt3.5
-++ ~No, go on. What were you going to say?~ + lt3.5
-++ ~If that's so, then we should focus on the road.~ + lt3.x
+SAY ~我……不，我不会，<CHARNAME>。你若真会，那么……我就没有理由继续问了。~
+++ ~对不起。我不是想暗示什么。~ + lt3.5
+++ ~不，说下去。你本来要说什么？~ + lt3.5
+++ ~既然如此，那我们该专心赶路。~ + lt3.x
 END
 
 IF ~~ lt3.7
-SAY ~No, that is true... you may not have known what evil rested in your blood, but it has shaped your life all the same.~
+SAY ~不，确实如此……你也许不知道你血里藏着什么邪恶，可它一样塑成了你的人生。~
 IF ~~ + lt3.9
 END
 
 IF ~~ lt3.8
-SAY ~I... I do not know. Perhaps I would not have.~
+SAY ~我……我不知道。也许我不会。~
 IF ~~ + lt3.9
 END
 
 IF ~~ lt3.9
-SAY ~If I have offended you by suggesting that the burden you bear is any lighter than mine, then truly, I apologize. I cannot hope to know how much this truly means to you.~
-++ ~I'm not offended, Sirene. You didn't mean anything by it.~ + lt3.10
-++ ~Don't worry. I actually think you've had a much harder life than me.~ + lt3.10
-++ ~It does make me uncomfortable. Maybe we should drop this.~ + lt3.x
+SAY ~若我说你背负的担子比我的轻，冒犯了你，那我真心道歉。我无法指望知道这对你真正意味着多少。~
+++ ~我没被冒犯，塞琳。你不是有意说什么。~ + lt3.10
+++ ~别担心。我其实觉得你的人生比我艰难得多。~ + lt3.10
+++ ~这确实让我不舒服。也许我们该放下这个。~ + lt3.x
 END
 
 IF ~~ lt3.10
-SAY ~You are too kind, <CHARNAME>. I wish I had met... someone such as you sooner.~
-= ~Thank you for listening to my thoughts. I am glad that you do not see me as the monster others think me to be. That is enough.~
+SAY ~你太好心了，<CHARNAME>。我希望我能更早遇到……像你这样的人。~
+= ~谢谢你听我的想法。我很高兴你不像别人那样把我看成怪物。那就够了。~
 IF ~~ EXIT
 END
 END
@@ -2594,83 +2594,83 @@ END
 // Lovetalk 4
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",8)~ THEN C0SIRE2J lt4
-~You are hurt, my friend, and it pains me to see it. Would you allow me to treat you?~ [C0BLANK]
+~你受伤了，我的朋友，看着让我心痛。你肯让我替你治吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
 + ~OR(2)
 Class(Player1,CLERIC_ALL)
-Class(Player1,DRUID_ALL)~ + ~I can treat my own wounds, thank you.~ + lt4.1
-++ ~That would be appreciated.~ + lt4.2
-++ ~No, save your healing for those who need it more.~ + lt4.3
-++ ~Leave me be.~ + lt4.4
+Class(Player1,DRUID_ALL)~ + ~我自己能治我的伤，谢谢。~ + lt4.1
+++ ~那我会感激。~ + lt4.2
+++ ~不，把你的治疗留给更需要的人。~ + lt4.3
+++ ~别管我。~ + lt4.4
 
 APPEND C0SIRE2J
 
 IF ~~ lt4.1
-SAY ~I know your skills at healing are far greater than mine, <CHARNAME>, but if I can do anything, I will. Please, hold still.~
+SAY ~我知道你的治疗本领远胜于我，<CHARNAME>，可若我能做什么，我就会做。求你，别动。~
 IF ~~ + lt4.5
 END
 
 IF ~~ lt4.2
-SAY ~Hold still, <CHARNAME>. I will do my best to tend to your wounds.~
+SAY ~别动，<CHARNAME>。我会尽力处理你的伤。~
 IF ~~ + lt4.5
 END
 
 IF ~~ lt4.3
-SAY ~You are no less in need of help than anyone else, <CHARNAME>. Please, just hold still and allow me to tend to your wounds.~
+SAY ~你需要的帮助不比任何人少，<CHARNAME>。求你，别动，让我处理你的伤。~
 IF ~~ + lt4.5
 END
 
 IF ~~ lt4.4
-SAY ~...as you wish, <CHARNAME>.~
+SAY ~……如你所愿，<CHARNAME>。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ lt4.5
-SAY ~I should apologize. I am sworn to your service, and to protect you. That you would come to harm is the fault of my negligence.~
-++ ~Don't blame yourself. Nobody can save everyone.~ + lt4.6
-++ ~I've made you swear no such oath. You're free to stay or leave as you please.~ + lt4.6
-++ ~I'm sick of hearing your doubts and self-pity. If you think you've failed, tell yourself that and leave me alone.~ + lt4.4
+SAY ~我该道歉。我宣誓为你效力、护你周全。你受伤是我的疏忽之过。~
+++ ~别怪自己。没人能救所有人。~ + lt4.6
+++ ~我没让你立过这样的誓。你愿意留或走都随你。~ + lt4.6
+++ ~我听腻了你的疑虑和自怜。你若觉得自己失败了，就自己跟自己说，别烦我。~ + lt4.4
 END
 
 IF ~~ lt4.6
-SAY ~I am here by choice, <CHARNAME>, and my oaths to Ilmater demand that I protect others to the best of my ability. This time, I feel I have failed.~
-= ~If I cannot protect you from harm, then I can at least... take your pain from you...~
+SAY ~我是自愿在这里的，<CHARNAME>，而我对伊尔梅特的誓约要求我尽力护人。这一回，我觉得我失败了。~
+= ~若我不能护你免于伤害，那至少……我能把你的痛带走……~
 IF ~~ + lt4.7
 END
 
 IF ~~ lt4.7
-SAY ~"Ilmater, One Who Endures... lift this one from <PRO_HISHER> suffering... and bestow <PRO_HISHER> pain upon your humble servant..."~
-++ ~My wounds... they're on your body now!~ + lt4.8
-++ ~What are you doing? Stop!~ + lt4.8
-++ ~Thank you.~ + lt4.9
+SAY ~「伊尔梅特，忍耐者……将此人的苦难从<PRO_HISHER>身上移去……把<PRO_HISHER>的痛加在您卑微的仆人身上……」~
+++ ~我的伤……现在到你身上了！~ + lt4.8
+++ ~你在做什么？停下！~ + lt4.8
+++ ~谢谢你。~ + lt4.9
 END
 
 IF ~~ lt4.8
-SAY ~Fear not, <CHARNAME>. I have done this many times, and... I am well used to it.~
+SAY ~别怕，<CHARNAME>。我做过许多次了，而且……我很习惯了。~
 IF ~~ + lt4.9
 END
 
 IF ~~ lt4.9
-SAY ~This, too, is part of my duty. How do you feel, <CHARNAME>?~
-++ ~Much better. But, Sirene...~ + lt4.10
-++ ~Next time, I suggest sticking with bandages.~ + lt4.11
-++ ~Promise me you'll never do that for me again.~ + lt4.12
+SAY ~这也是我职责的一部分。你感觉如何，<CHARNAME>？~
+++ ~好多了。可是，塞琳……~ + lt4.10
+++ ~下次我建议还是用绷带。~ + lt4.11
+++ ~答应我，别再为我那样做。~ + lt4.12
 END
 
 IF ~~ lt4.10
-SAY ~I will be fine, worry not. Come, let us walk together.~
+SAY ~我会没事的，别担心。来，我们一起走。~
 IF ~~ DO ~ForceSpellRES("C0ILMS1",Player1)~ EXIT
 END
 
 IF ~~ lt4.11
-SAY ~Perhaps, but... there is a certain sense of relief to doing this. Come, let us walk together.~
+SAY ~也许吧，可是……这么做确实有种解脱感。来，我们一起走。~
 IF ~~ DO ~ForceSpellRES("C0ILMS1",Player1)~ EXIT
 END
 
 IF ~~ lt4.12
-SAY ~(smile) I fear that is a promise I cannot make, my friend. Come, let us walk together.~
+SAY ~（微笑）我怕那是我不能做的承诺，我的朋友。来，我们一起走。~
 IF ~~ DO ~ForceSpellRES("C0ILMS1",Player1)~ EXIT
 END
 END
@@ -2678,74 +2678,74 @@ END
 // Lovetalk 5 - after rest
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",10)~ THEN C0SIRE2J lt5
-~(As you awaken, you hear Sirene groaning and crying softly in her sleep.)~ [C0BLANK]
+~（你醒来时，听见塞琳在睡梦中呻吟、轻声哭泣。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
-= ~Nngh... n-no, wait... do not leave me... please!~
+= ~嗯呃……不——不，等等……别离开我……求你！~
 END
-++ ~Sirene! Wake up!~ + lt5.1
-++ ~(Shake her)~ + lt5.1
-++ ~(Approach her but do not awaken her)~ + lt5.2
-++ ~(Ignore her and start packing)~ + lt5.3
+++ ~塞琳！醒醒！~ + lt5.1
+++ ~（摇她）~ + lt5.1
+++ ~（靠近她但不叫醒她）~ + lt5.2
+++ ~（不理她，开始收拾行装）~ + lt5.3
 
 APPEND C0SIRE2J
 
 IF ~~ lt5.1
-SAY ~(She suddently grabs hold of your hand, clutching it close to her, as though afraid to let go.)~
-= ~(Her eyes dart open, as she looks at you in shock.) Y-you... <CHARNAME>?~
-++ ~You gave me a fright, Sirene. What's wrong? Nightmares?~ + lt5.4
-++ ~Are you all right? Your face is all wet.~ + lt5.4
-++ ~You're finally awake. Come on, we should get moving.~ + lt5.5
+SAY ~（她忽然抓住你的手，紧紧抱在怀里，仿佛怕放开。）~
+= ~（她双眼猛然睁开，震惊地看着你。）你——你……<CHARNAME>？~
+++ ~你吓了我一跳，塞琳。怎么了？做噩梦了？~ + lt5.4
+++ ~你还好吗？你满脸都是湿的。~ + lt5.4
+++ ~你终于醒了。来吧，我们该走了。~ + lt5.5
 END
 
 IF ~~ lt5.2
-SAY ~Wh-why...? I... I can barely see you...~
+SAY ~为——为什么……？我……我几乎看不清你……~
 IF ~~ + lt5.1
 END
 
 IF ~~ lt5.3
-SAY ~(After a while, she awakens, wiping the sweat and tears from her face. With a resigned look, she packs while attempting to appear as though nothing's wrong.)~
+SAY ~（过了一会儿她醒来，擦去脸上的汗与泪。带着认命的表情，她收拾东西，努力装出什么都没发生的样子。）~
 IF ~~ EXIT
 END
 
 IF ~~ lt5.4
-SAY ~(She sits up from her bedroll, lost in thought.)~
-= ~I... I hope my behavior did not cause you distress. That dream... I have had it many times, yet I am no closer to understanding it.~
-++ ~You were muttering something about someone leaving. What did you see?~ + lt5.6
-++ ~Take your time. For now, we should really get moving.~ + lt5.5
-++ ~You're still holding onto my hand, you know.~ + lt5.7
+SAY ~（她从铺盖上坐起，陷入沉思。）~
+= ~我……我希望我的样子没让你不安。那个梦……我做过许多次，可我仍没更明白它。~
+++ ~你在嘟囔有人离开什么的。你看见了什么？~ + lt5.6
+++ ~慢慢来。不过现在，我们真该走了。~ + lt5.5
+++ ~你还抓着我的手呢，你知道吧。~ + lt5.7
 END
 
 IF ~~ lt5.5
-SAY ~Y-yes... I am sorry if I concerned you. I will be ready in a moment.~
+SAY ~是——是的……若我让你担心了，我很抱歉。我马上就好。~
 IF ~~ EXIT
 END
 
 IF ~~ lt5.6
-SAY ~It is always the same. Burning heat... and amidst the flames, visions... the shadow of a man and a woman, running.~
-= ~I... I can only imagine they must be my parents. But they do not hear me, no matter how much I call for them.~
+SAY ~每次都一样。灼热……火焰之中有影像……一个男人和一个女人的影子，在跑。~
+= ~我……我只能猜他们是我的父母。可无论我怎么呼唤，他们都不听我。~
 IF ~~ + lt5.8
 END
 
 IF ~~ lt5.7
-SAY ~What- oh!~
+SAY ~什么——哦！~
 IF ~~ + lt5.8
 END
 
 IF ~~ lt5.8
-SAY ~(She suddenly realizes she is pressing your hand against her chest and lets go, blushing. She turns away to hide her embarrassment.)~
-= ~I- I am sorry, <CHARNAME>. I should not have allowed you to see me like this.~
-++ ~It's alright. We all have bad memories.~ + lt5.9
-++ ~Don't let it affect you while you're awake.~ + lt5.10
+SAY ~（她忽然发觉自己正把你的手按在自己胸口，脸红着松开。她转开身去藏起羞意。）~
+= ~我——我很抱歉，<CHARNAME>。我不该让你看见我这样。~
+++ ~没关系。我们都有可怕的回忆。~ + lt5.9
+++ ~别让它在清醒时影响你。~ + lt5.10
 END
 
 IF ~~ lt5.9
-SAY ~I wish they were memories, but I cannot bring them forth while awake, no matter how much I try.~
+SAY ~我希望那些是回忆，可我醒着时怎么努力也召不出来。~
 IF ~~ + lt5.10
 END
 
 IF ~~ lt5.10
-SAY ~*sigh* I should not let this get in the way of my duty to you, <CHARNAME>. If you would... pretend you did not witness this, I would be most appreciative. Forgive me.~
+SAY ~*叹气*我不该让这个妨碍我对你的职责，<CHARNAME>。你若能……装作没看见，我会非常感激。原谅我。~
 IF ~~ EXIT
 END
 END
@@ -2753,98 +2753,98 @@ END
 // Lovetalk 6
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",12)~ THEN C0SIRE2J lt6
-~It has just occurred to me that... I have not been the most forthcoming with my past, <CHARNAME>.~ [C0BLANK]
-== C0SIRE2J IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~We have been friends for some time, yet I have only told you of my early childhood, as I recall.~
-== C0SIRE2J ~Perhaps you may be interested in knowing more of me. I feel that may... be necessary to build trust between us. Would you like that?~
+~我刚想到……我对自己的过去并不算坦白，<CHARNAME>。~ [C0BLANK]
+== C0SIRE2J IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我们做朋友有一段时间了，可我记得我只跟你讲过我的幼年。~
+== C0SIRE2J ~也许你会想更了解我。我觉得那也许……对我们之间建立信任是必要的。你愿意吗？~
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~I already trust you, Sirene.~ + lt6.1
-++ ~Does this have anything to do with your dream from before?~ + lt6.2
-++ ~Go ahead. I'm willing to listen.~ + lt6.3
-++ ~Not right now.~ + lt6.4
+++ ~我已经信任你了，塞琳。~ + lt6.1
+++ ~这跟你之前的梦有关吗？~ + lt6.2
+++ ~说吧。我愿意听。~ + lt6.3
+++ ~现在不行。~ + lt6.4
 
 APPEND C0SIRE2J
 
 IF ~~ lt6.1
-SAY ~I know, and for that I am grateful, but... I feel as though I have not been fair. I know much of you, both from your tales and what you have told me, yet... you know almost nothing of my past.~
+SAY ~我知道，我也为此感激，可是……我觉得我对你不公平。我从你的传说和你告诉我的事里了解了你许多，可是……你对我的过去几乎一无所知。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + lt6.3
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + lt6.5
 END
 
 IF ~~ lt6.2
-SAY ~Yes... well, perhaps not directly, but... it did lead me to consider telling you of myself.~
+SAY ~是的……嗯，也许不是直接相关，可是……它确实让我想到该跟你讲讲我自己。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + lt6.3
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + lt6.5
 END
 
 IF ~~ lt6.3
-SAY ~You already know a few things of me... about how the priests of Ilmater chose me to become a paladin, so that I might learn discipline after I grievously harmed one of my fellow wards at the temple. But there is more to that tale.~
+SAY ~你已经知道我的一些事……比如伊尔梅特的祭司为何选我做圣武士，好让我在重伤了神殿里一个同伴之后学会自律。可那故事还有更多。~
 IF ~~ + lt6.6
 END
 
 IF ~~ lt6.4
-SAY ~As you wish, my friend. Perhaps another time.~
+SAY ~如你所愿，我的朋友。也许改天吧。~
 IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",11)~ EXIT
 END
 
 IF ~~ lt6.5
-SAY ~I was abandoned as an infant and raised by priests of Ilmater... that you already know. I was a hot-tempered girl, feared and bullied by my fellow wards at the temple, until one day I committed a terrible sin out of anger.~
-= ~The other children that did not fear me enough to stay away would throw stones in my direction and call me a cursed child. One day, I flew into a rage and attacked several of them, grievously wounding a boy.~
-= ~I regretted it greatly, even then. I allowed the evil in my blood to control me, even if 'twas only for an instant... and I was punished for it.~
-= ~But... the priests saw hope in me still, and believed that paladinhood would give me the discipline to control my darker impulses. Or perhaps they hoped to turn my anger into righteous fury... either way, I am grateful that they gave me this chance.~
-++ ~I thought paladins usually belonged to a specific order.~ + lt6.7
-++ ~Go on.~ + lt6.6
-++ ~I've heard enough. Let's move on.~ + lt6.8
+SAY ~我婴儿时被遗弃，由伊尔梅特的祭司养大……这你已经知道。我是个脾气烈的女孩，被神殿里的同伴畏惧、欺侮，直到有一天我出于愤怒犯下了可怕的罪。~
+= ~那些不够怕我、没躲开的孩子们会朝我扔石头，叫我受诅咒的孩子。有一天我勃然大怒，攻击了他们几个，重伤了一个男孩。~
+= ~即使在那时我也极为悔恨。我让自己血里的邪恶控制了我，即使只是一瞬……而我为此受了罚。~
+= ~可是……祭司们在我身上仍看到希望，相信圣武士身份会给我自律，让我控制更黑暗的冲动。又或者他们希望把我的怒气变成正义的怒火……无论哪种，我都感激他们给了我这个机会。~
+++ ~我以为圣武士通常属于某个特定的骑士团。~ + lt6.7
+++ ~说下去。~ + lt6.6
+++ ~我听够了。我们走吧。~ + lt6.8
 END
 
 IF ~~ lt6.6
-SAY ~My small village was not the home of skilled warriors. But one of the brothers of the temple was familiar with the Holy Warriors of Suffering, and called for a paladin of the order to train me personally. Sir Marc Morris, martyr of Ilmater.~
-= ~I did not know this at first. When I first met this man who would become my mentor, face to face, I was still locked within my room within the temple, praying in repentance.~
-++ ~What did you think at the time?~ + lt6.9
-++ ~Go on.~ + lt6.9
-++ ~I've heard enough. Let's move on.~ + lt6.8
+SAY ~我那小小的村子并非出产精良战士的地方。可神殿的一位兄弟熟悉受苦圣战武士，便召来一位骑士团的圣武士亲自训练我。马克·莫里斯爵士，伊尔梅特的殉道者。~
+= ~我起初并不知道这些。我第一次与这位后来成为我导师的人面对面时，我还被锁在神殿自己的房间里，祈祷忏悔。~
+++ ~你当时怎么想？~ + lt6.9
+++ ~说下去。~ + lt6.9
+++ ~我听够了。我们走吧。~ + lt6.8
 END
 
 IF ~~ lt6.7
-SAY ~I am... by status, a knight of the Holy Warriors of Suffering. Though I have never met other of my order save for my mentor, I have become trained as one.~
+SAY ~我……按身份说，是受苦圣战武士的骑士。虽然除导师之外我从没见过同团的别人，可我受过那样的训练。~
 IF ~~ + lt6.6
 END
 
 IF ~~ lt6.8
-SAY ~As you wish.~
+SAY ~如你所愿。~
 IF ~~ EXIT
 END
 
 IF ~~ lt6.9
-SAY ~I wondered if he was here to take me away, perhaps to some asylum to be locked up. I remember asking him as much. Gods, how embarrassing that was...~
-= ~He did not respond at first... he only looked back at me, at this young, brash, tainted child staring back in defiance. Then... he simply nodded.~
-++ ~He approved of your behavior?~ + lt6.10
-++ ~What happened then?~ + lt6.10
+SAY ~我猜他是不是来把我带走，也许关进某个收容所。我记得我问过他这话。神明啊，那多尴尬……~
+= ~他起初没答……他只是回望我，望着这个年轻、莽撞、带污秽的孩子挑衅地瞪回去。然后……他只是点了头。~
+++ ~他认可你的行为？~ + lt6.10
+++ ~然后发生了什么？~ + lt6.10
 END
 
 IF ~~ lt6.10
-SAY ~He asked if I feared him. I said: "No." He asked me what I wanted the most, and I told him: "To be forgiven."~
-= ~Sir Morris nodded at me again, and said that I had what it took to become a champion of the faith. I know not what led me to think so... but I trusted him.~
-= ~He taught me how to hold a training sword; how to fight, not to hurt others, but defend them. I realized that even my infernal blood could be shed in the name of Ilmater.~
-= ~That is the tale of how I first began my training as a paladin, my friend. Perhaps, in the future, I will tell you more... if you would like that.~
-++ ~I'd like to know now.~ + lt6.11
-++ ~Sure, another time.~ + lt6.12
-++ ~I'm not interested.~ + lt6.13
+SAY ~他问我怕不怕他。我说：「不。」他问我最想要什么，我告诉他：「被宽恕。」~
+= ~莫里斯爵士又朝我点头，说我有成为信仰斗士的资质。我不知道是什么让我这样想……可我信了他。~
+= ~他教我怎样握训练剑；怎样战斗不是为了伤人，而是护人。我意识到，即使我魔性的血，也能以伊尔梅特之名洒出。~
+= ~这就是我最初开始圣武士训练的故事，我的朋友。也许将来我会告诉你更多……若你愿意。~
+++ ~我现在就想知道。~ + lt6.11
+++ ~当然，改天吧。~ + lt6.12
+++ ~我没兴趣。~ + lt6.13
 END
 
 IF ~~ lt6.11
-SAY ~If only I could, <CHARNAME>, but... I need time to think of the best tale to tell. Give me time, and I will try not to bore you.~
+SAY ~我若能就好了，<CHARNAME>，可是……我需要时间想个最好的故事来讲。给我时间，我会尽量不让你厌烦。~
 IF ~~ EXIT
 END
 
 IF ~~ lt6.12
-SAY ~Very well. I will think of the best tale to tell you... when the time comes.~
+SAY ~好罢。我会想个最好的故事讲给你听……到时候再说。~
 IF ~~ EXIT
 END
 
 IF ~~ lt6.13
-SAY ~That is your decision to make... though if you change your mind, I will be willing to tell.~
+SAY ~那是你该做的决定……不过你若改变主意，我愿意讲。~
 IF ~~ EXIT
 END
 
@@ -2853,80 +2853,80 @@ END
 // Lovetalk 7
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",14)~ THEN C0SIRE2J lt7
-~I told you the tale of how I came to join the paladin order of Ilmater, <CHARNAME>, but I did not finish the tale. Are you still interested?~ [C0BLANK]
+~我跟你讲过我如何加入伊尔梅特的圣武士骑士团，<CHARNAME>，可我没讲完。你还感兴趣吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~It wouldn't hurt to listen.~ + lt7.1
-++ ~Not right now.~ + lt7.2
-++ ~I'm not interested.~ + lt7.3
+++ ~听听也无妨。~ + lt7.1
+++ ~现在不行。~ + lt7.2
+++ ~我没兴趣。~ + lt7.3
 
 APPEND C0SIRE2J
 
 IF ~~ lt7.1
-SAY ~Very well. Where was I? I told you of how I first met my mentor, Sir Morris of the Holy Warriors. I began my martial training at the age of twelve.~
-= ~I had never wielded a sword before, and I was not... the most temperate of pupils. My impatience often got the best of me, and I would hurt myself or otherwise put myself at risk of harm.~
-= ~Strangely, however... though I expected Sir Morris to scold me each time I made a mistake, he rarely did. He simply tended to my wounds, and allowed me to continue.~
-++ ~He never showed you where you went wrong?~ + lt7.4
-++ ~Go on.~ + lt7.4
-++ ~I'd rather not listen to this tale after all.~ + lt7.3
+SAY ~好罢。我说到哪儿了？我讲过初次见到我导师，受苦圣战武士的莫里斯爵士。我十二岁开始习武。~
+= ~我从没握过剑，也不是……最有耐性的学生。我的急躁常占上风，我会伤到自己，或者把自己置于险境。~
+= ~可奇怪的是……虽然我每次犯错都以为莫里斯爵士会斥责我，他却很少如此。他只是替我处理伤口，让我继续。~
+++ ~他从没指出你错在哪里？~ + lt7.4
+++ ~说下去。~ + lt7.4
+++ ~这故事我还是不想听了。~ + lt7.3
 END
 
 IF ~~ lt7.2
-SAY ~As you wish. Another time, then.~
+SAY ~如你所愿。那改天吧。~
 IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",13)~ EXIT
 END
 
 IF ~~ lt7.3
-SAY ~Very well. If you would prefer it.~
+SAY ~好罢。若你宁愿如此。~
 IF ~~ EXIT
 END
 
 IF ~~ lt7.4
-SAY ~I realized something was strange, one day... when I had been particularly aggravated, though for what reason, I cannot recall... I went to the field to practice.~
-= ~In my anger, I made a critical mistake in my footing, and suffered a near-fatal injury when my head struck a rock as I tripped.~
-++ ~What happened next?~ + lt7.5
-++ ~Ouch! Were you alright?~ + lt7.6
-++ ~I don't want to hear any more.~ + lt7.3
+SAY ~有一天我发觉有什么不对……那天我特别烦躁，为了什么我已记不得……我去校场练习。~
+= ~盛怒之中我脚步犯了个严重错误，绊倒时头撞上石头，受了近乎致命的伤。~
+++ ~然后怎么了？~ + lt7.5
+++ ~哎哟！你没事吧？~ + lt7.6
+++ ~我不想再听了。~ + lt7.3
 END
 
 IF ~~ lt7.5
-SAY ~I lost consciousness, but when I came to... I was confused. My head was completely unharmed, and I felt as though I had awoken from a peaceful sleep.~
-= ~When I turned my head to look around... what I saw startled and horrified me. Sir Morris was looking at me from above, his head bleeding from the same wound that I had inflicted upon myself.~
-= ~He told me that he had taken my suffering upon himself, that *this* was the duty of the order of Ilmater - live to defend others, suffer for others, and, if necessary... die for others.~
-= ~I realized then, every mistake I made, I made him suffer for it. I asked if he would have traded his life for mine, to save me from my own foolishness, and... he was silent. But I knew the answer, and I remember... shedding tears of remorse.~
-++ ~That was a very brave thing he did.~ + lt7.6
-++ ~Go on.~ + lt7.6
+SAY ~我失去了知觉，可等我醒过来……我很困惑。我的头完好无损，而且我觉得像是从一场安眠中醒来。~
+= ~我转头看四周时……看见的景象让我惊骇。莫里斯爵士从上方看着我，他的头正流着血，伤口跟我给自己造成的一样。~
+= ~他告诉我，他把我的苦痛接到自己身上，说*这*就是伊尔梅特骑士团的职责——活着护人，为人受苦，必要时……为人而死。~
+= ~我那时明白了，我犯的每一个错，都让他为我受苦。我问他是否愿意用他的命换我的命，把我从我自己的愚蠢中救出，而他……沉默了。可我知道答案，我记得……我流下了悔恨的泪。~
+++ ~他做的这事真勇敢。~ + lt7.6
+++ ~说下去。~ + lt7.6
 END
 
 IF ~~ lt7.6
-SAY ~Instead of apologizing to him, I... I begged him to teach me how to do the same. I was inspired. I wanted to save others as he had saved me.~
-++ ~And he did, correct?~ + lt7.7
-++ ~Touching story, but we really should be going.~ + lt7.8
+SAY ~我没有向他道歉，而是……我求他教我怎么也能这样做。我受到了感召。我想像他救我那样去救别人。~
+++ ~而他教了，对吧？~ + lt7.7
+++ ~故事感人，可我们真该走了。~ + lt7.8
 END
 
 IF ~~ lt7.7
-SAY ~He smiled at me, while still bleeding heavily... that was the first time I ever saw my mentor smile.~
-= ~I bandaged and tended to his wound myself afterward, and devoted every second of my time to learning the abilities of the Martyrs of Ilmater. I became dedicated towards my training ever since then, both in healing and swordplay.~
-= ~I can only aspire to become as great a knight as my Sir Marc Morris himself... but I still have much to learn.~
-= ~Thank you for listening, <CHARNAME>, to my long-winded tale. I hope it did not bore you.~
-++ ~Not at all. It's a good story.~ + lt7.9
-++ ~It dragged on a bit, but it's over now, right?~ + lt7.10
+SAY ~他朝我笑了，同时还流着不少血……那是我第一次见导师笑。~
+= ~之后我亲手替他包扎处理伤口，把每一秒都用在学伊尔梅特殉道者的本领上。从那以后我便专心训练，治疗与剑术都是。~
+= ~我只能向往成为像我的莫里斯爵士那样伟大的骑士……可我仍有许多要学。~
+= ~谢谢你听我讲这冗长的故事，<CHARNAME>。我希望没让你厌烦。~
+++ ~一点也没有。这是个好故事。~ + lt7.9
+++ ~有点拖，可现在讲完了，对吧？~ + lt7.10
 END
 
 IF ~~ lt7.8
-SAY ~Very well. I- I hope I did not bore you.~
+SAY ~好罢。我——我希望没让你厌烦。~
 IF ~~ EXIT
 END
 
 IF ~~ lt7.9
-SAY ~That is good to know, <CHARNAME>. I have more to tell, if you will not tire of them.~
-= ~But 'twould be best to leave that for another time, I think.~
+SAY ~知道这个很好，<CHARNAME>。我还有更多可讲，只要你不厌倦。~
+= ~不过我想最好还是留到改天。~
 IF ~~ EXIT
 END
 
 IF ~~ lt7.10
-SAY ~Yes... yes, it is. I apologize for taking up so much of your time.~
+SAY ~是的……是的，是这样。抱歉占了你这么多时间。~
 IF ~~ EXIT
 END
 END
@@ -2934,179 +2934,179 @@ END
 // Lovetalk 8
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",16)~ THEN C0SIRE2J lt8
-~(Sirene is absently rubbing the scar over her left eye, as if it is causing her discomfort.)~ [C0BLANK]
+~（塞琳不经意地揉着左眼上的疤，仿佛它让她不舒服。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~Does it still hurt?~ + lt8.1
-++ ~Where did you get that?~ + lt8.2
-++ ~(Leave her alone)~ + lt8.0
+++ ~还疼吗？~ + lt8.1
+++ ~那道疤是哪儿来的？~ + lt8.2
+++ ~（别理她）~ + lt8.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt8.0
-SAY ~(Sirene blinks a few times before stopping and falling back in line.)~
+SAY ~（塞琳眨了几下眼，然后停下，回到队伍里。）~
 IF ~~ EXIT
 END
 
 IF ~~ lt8.1
-SAY ~Hmm? Oh, no... well, perhaps it does a little, but...~
+SAY ~嗯？哦，不……嗯，也许有点疼，可是……~
 IF ~~ + lt8.3
 END
 
 IF ~~ lt8.2
-SAY ~I have yet to tell you the origin of this scar, have I? Forgive me, but 'tis not a pleasant tale to tell. Perhaps 'tis best if you did not know.~
-++ ~Regardless, I would like to hear it.~ + lt8.3
-++ ~If you think that's best.~ + lt8.4
+SAY ~我还没跟你讲过这道疤的来历，对吧？原谅我，可这不是个愉快的可说之事。也许你最好不知道。~
+++ ~无论如何，我想听。~ + lt8.3
+++ ~若你觉得那样最好。~ + lt8.4
 END
 
 IF ~~ lt8.3
-SAY ~Very well... though if you should regret it, I will stop when you say so.~
-= ~'Twas... a few years since I had begun my pilgrimage. I was still a brash youth then. I was travelling along the Coast Way road, seeking to do my duty.~
-= ~During this time, I was not alone. There was another... someone I cared for greatly. We were together, looking to do some good where we could.~
-++ ~Will you tell me of that person?~ + lt8.5
-++ ~Go on.~ + lt8.6
-++ ~What does this have to do with your scar?~ + lt8.6
+SAY ~好罢……不过你若后悔，你说停我就停。~
+= ~那是我开始朝圣几年之后的事……我那时仍是个莽撞的少年。我沿识海岸大道路走，想尽我的职责。~
+= ~那时我并不孤单。还有另一个……一个我非常在意的人。我们在一起，想在能行之处做些好事。~
+++ ~你肯跟我讲讲那个人吗？~ + lt8.5
+++ ~说下去。~ + lt8.6
+++ ~这跟你的疤有什么关系？~ + lt8.6
 END
 
 IF ~~ lt8.4
-SAY ~Yes... I believe it is.~
+SAY ~是的……我相信是。~
 IF ~~ EXIT
 END
 
 IF ~~ lt8.5
-SAY ~Perhaps another time... if you are interested. That is another tale of its own.~
+SAY ~也许改天吧……若你有兴趣。那本身就是另一个故事。~
 IF ~~ + lt8.6
 END
 
 IF ~~ lt8.6
-SAY ~The Coast Way road was... a dangerous place. The road had always had the risk of bandits and raiders, but... 'twas worse at the time. A band of slavers, led by a man named Asador, had abducted many travellers.~
-= ~In my arrogance, I led myself and my companion to seek out this slaving group... and we found them.~
-++ ~That doesn't sound good. What happened next?~ + lt8.7
-++ ~I think I've heard enough of this tale.~ + lt8.8
+SAY ~海岸大道路……是个危险的地方。那条路一直有强盗与劫掠者的风险，可是……那时更糟。一伙奴隶贩子，由一个叫阿萨多尔的人领头，掳走了许多旅人。~
+= ~我出于傲慢，带着自己与同伴去找这伙奴隶贩子……而我们找到了他们。~
+++ ~这听起来不妙。然后怎么了？~ + lt8.7
+++ ~我想这故事我听够了。~ + lt8.8
 END
 
 IF ~~ lt8.7
-SAY ~We encountered our adversaries in a forest clearing, where we were outnumbered and at a disadvantage. We fought back, but were defeated and nearly slain... or worse. I fled into the woods, barely escaping with my life.~
-= ~That night... I prayed to Ilmater, asking for guidance. I dreamed of the battle that day, and was compelled to return to the scene.~
-++ ~You went back? Wasn't that dangerous?~ + lt8.10
-++ ~Go on.~ + lt8.9
-++ ~I've heard enough.~ + lt8.8
+SAY ~我们在林中一片空地遇上对手，那里我们人数处于劣势，处境不利。我们反击，却被打败，几乎被杀……或更糟。我逃进林子，勉强保住性命。~
+= ~那天夜里……我向伊尔梅特祈祷，求指引。我梦见了当日的战斗，并被驱使回到那地方。~
+++ ~你回去了？那不是很危险吗？~ + lt8.10
+++ ~说下去。~ + lt8.9
+++ ~我听够了。~ + lt8.8
 END
 
 IF ~~ lt8.8
-SAY ~As you wish. Perhaps 'tis for the best that you do not hear of the atrocities committed... nor what I was forced to do.~
+SAY ~如你所愿。也许你没听见那些暴行……也没听见我被迫做的事，倒是最好。~
 IF ~~ EXIT
 END
 
 IF ~~ lt8.9
-SAY ~I found corpses, men I had slain the prior day. I found a map on their bodies, leading me to their leader, Asador... and I knew what I had to do.~
-= ~I disguised myself as one of the slavers, hiding my armor beneath their clothing, and found my way to their camp. I was hidden amongst my enemies, with the risk of being discovered. I shudder to think of it, even now... but I had to remove this threat, no matter what.~
-++ ~You killed their leader, then?~ + lt8.11
-++ ~Why didn't you just give the map to the nearest authorities?~ + lt8.12
-++ ~That's enough. We should move on.~ + lt8.13
+SAY ~我找到了尸体，我前一日杀的人。我在他们身上找到一张地图，引我去找他们的首领阿萨多尔……而我知道我该做什么。~
+= ~我伪装成他们中的一个奴隶贩子，把盔甲藏在他们的衣服下，找到了去他们营地的路。我藏身于敌人之中，有被发现的风险。即使如今想到也令我战栗……可我必须除掉这威胁，无论付出什么。~
+++ ~那么你杀了他们的首领？~ + lt8.11
+++ ~你为什么不干脆把地图交给最近的官署？~ + lt8.12
+++ ~够了。我们该走了。~ + lt8.13
 END
 
 IF ~~ lt8.10
-SAY ~Perhaps... but I trusted in my god, and so I went.~
+SAY ~也许……可我信我的神，所以我去了。~
 IF ~~ + lt8.9
 END
 
 IF ~~ lt8.11
-SAY ~Using my cover as a slaver, I found Asador. I recognized the fear his men had for him, and I had expected him to seem powerful. But he was... far from what I expected.~
-++ ~What was he, then?~ + lt8.14
-++ ~Go on.~ + lt8.14
+SAY ~借着我奴隶贩子的伪装，我找到了阿萨多尔。我看出他手下对他的畏惧，本以为他会显得强大。可他……远不是我想的那样。~
+++ ~那他是什么样？~ + lt8.14
+++ ~说下去。~ + lt8.14
 END
 
 IF ~~ lt8.12
-SAY ~I should have. But I had a burning hate for these men, and... I wanted to slay them myself. I was foolish.~
+SAY ~我本该那样。可我对这些人怀着炽烈的恨，而且……我想亲手杀他们。我太蠢了。~
 IF ~~ + lt8.11
 END
 
 IF ~~ lt8.13
-SAY ~As you wish, <CHARNAME>.~
+SAY ~如你所愿，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ lt8.14
-SAY ~In his private quarters, I saw a man- lean, short, with horns protruding from his forehead and cruel eyes. He was of fell blood- just as I was.~
-= ~I was stunned, and let down my guard. He quickly realized I was not one of his men, and demanded to know who I was.~
-++ ~What did you tell him?~ + lt8.15
-++ ~Did you run away?~ + lt8.15
+SAY ~在他的私室里，我看见一个男人——精瘦、矮小，额头突出双角，眼神残酷。他身负邪血——正如我。~
+= ~我愣住了，放松了戒备。他很快发觉我不是他的手下，便质问我是谁。~
+++ ~你怎么回答他？~ + lt8.15
+++ ~你逃了吗？~ + lt8.15
 END
 
 IF ~~ lt8.15
-SAY ~I knew escape was impossible, and lying was futile. I said to him, with false bravado: "I am Sirene, champion of Ilmater. I have come to punish you for your crimes."~
-= ~He laughed in my face, with a mocking compliment towards my audacity. I felt my fear give way to anger, and I challenged him to a duel.~
-= ~Asador agreed. He was arrogant, and believed he would succeed... and, in truth, perhaps he would have.~
-++ ~So you defeated and killed him?~ + lt8.16
-++ ~Go on.~ + lt8.16
-++ ~That's enough. We should move on.~ + lt8.13
+SAY ~我知道逃不掉，撒谎也无用。我带着虚假的勇气对他说：「我是塞琳，伊尔梅特的斗士。我来为你的罪行惩罚你。」~
+= ~他当面大笑，还嘲弄地称赞我的胆量。我觉得恐惧化成了愤怒，便向他挑战决斗。~
+= ~阿萨多尔答应了。他傲慢，相信自己会赢……而说实话，也许他本会赢。~
+++ ~所以你击败并杀了他？~ + lt8.16
+++ ~说下去。~ + lt8.16
+++ ~够了。我们该走了。~ + lt8.13
 END
 
 IF ~~ lt8.16
-SAY ~We drew our blades and fought, but his skill was far superior to mine. I fully expected to die, right there and then, but I would have died with my honor.~
-= ~His first strike that landed... led to this scar on my face. At the same time, I was assaulted by burning ashes that burned away my cowl, revealing me for what I was.~
-= ~He was shocked, and for an instant, he lowered his guard - and I struck him at that instant.~
-++ ~Did it kill him?~ + lt8.17
-++ ~Go on.~ + lt8.17
+SAY ~我们拔剑相斗，可他的技艺远胜于我。我完全料到会当场死去，可我至少会带着荣誉死。~
+= ~他第一记命中的攻击……造成了我脸上的这道疤。同时，我被燃烧的灰烬扑打，烧掉了我的兜帽，露出了我的真身。~
+= ~他震惊了，有一瞬放松了戒备——我就在那一瞬击中了他。~
+++ ~杀了他吗？~ + lt8.17
+++ ~说下去。~ + lt8.17
 END
 
 IF ~~ lt8.17
-SAY ~The blow wounded him, but I was weak - 'twas not enough to slay him. He was furious, and raised his hand while chanting an incantation. At that moment I realized he was not merely a warrior, but also a mage.~
-= ~I was engulfed by a ball of flame, and if not for my infernal blood, I would have likely died. But I was defeated... helpless before him.~
-= ~I expected him to finish me, but he did not. When he pressed me against the ground, I realized what he intended for me was worse than a swift death, and I was horrified.~
-++ ~That's horrible!~ + lt8.18
-++ ~Did he... succeed?~ + lt8.18
-++ ~I can't hear any more of this.~ + lt8.19
+SAY ~那一击伤了他，可我虚弱——不足以杀他。他暴怒，抬手念咒。那一刻我明白他不只是战士，还是法师。~
+= ~我被一团火焰吞没，若不是我魔性的血，我大概就死了。可我被击败了……在他面前毫无还手之力。~
+= ~我以为他会了结我，可他没有。当他把我按在地上时，我明白他打算对我做的事比速死更糟，我惊恐万分。~
+++ ~太可怕了！~ + lt8.18
+++ ~他……得逞了吗？~ + lt8.18
+++ ~我不能再听了。~ + lt8.19
 END
 
 IF ~~ lt8.18
-SAY ~He mocked me as he ripped my armor from my body, saying that I had too much potential to be killed or thrown aside. But... in his negligence, he had not noticed a knife he carried at his belt.~
-= ~I... feigned defeat, and when he allowed himself to become vulnerable, I drew the knife and... stabbed him in the back of his neck.~
-= ~Gods, I can still remember the taste of his blood as it dripped upon my face. Even now, years later, I still recall that moment in my darkest nightmares.~
-++ ~But you saved yourself. Were you at least relieved?~ + lt8.20
-++ ~Go on.~ + lt8.21
+SAY ~他一边嘲弄我，一边从我身上剥下盔甲，说我有太多潜力，不该被杀或扔掉。可是……他疏忽了，没注意到自己腰带上带着的一把刀。~
+= ~我……假装屈服，等他让自己露出破绽时，我抽出那把刀……刺进他的后颈。~
+= ~神明啊，我至今还记得他的血滴在我脸上的味道。即使如今，多年之后，我最深的噩梦里仍会想起那一刻。~
+++ ~可你救了自己。你至少松了口气吗？~ + lt8.20
+++ ~说下去。~ + lt8.21
 END
 
 IF ~~ lt8.19
-SAY ~Yes... perhaps that is for the best.~
+SAY ~是的……也许那样最好。~
 IF ~~ EXIT
 END
 
 IF ~~ lt8.20
-SAY ~Relieved, aye... but also horrified.~
+SAY ~松了口气，是的……可也惊恐。~
 IF ~~ + lt8.21
 END
 
 IF ~~ lt8.21
-SAY ~At the moment before I committed the act, I lost all thoughts of my honor, my lord Ilmater, everything... all I could think of was survival. And... when I plunged the knife through Asador's throat... I did it without a moment's hesitation.~
-= ~Looking at the corpse that lay atop me, the blood on my fingers, I realized the worst of what I could become. I threw the body from myself, and resisted the urge to scream.~
-+ ~OR(2) PartyHasItem("c0sw2h") PartyHasItem("c0sw2h2")~ + ~How did you escape?~ + lt8.22
-+ ~!PartyHasItem("c0sw2h") !PartyHasItem("c0sw2h2")~ + ~How did you escape?~ + lt8.23
+SAY ~在我动手的前一刻，我失去了所有关于荣誉、我的主伊尔梅特的念头，一切……我所能想到的只有活下去。而且……当我把刀刺进阿萨多尔的喉咙时……我没有一丝犹豫。~
+= ~看着躺在我身上的尸体，看着我手指上的血，我明白了我可能变成的最坏样子。我把尸体推开，强忍住尖叫的冲动。~
++ ~OR(2) PartyHasItem("c0sw2h") PartyHasItem("c0sw2h2")~ + ~你怎么逃出来的？~ + lt8.22
++ ~!PartyHasItem("c0sw2h") !PartyHasItem("c0sw2h2")~ + ~你怎么逃出来的？~ + lt8.23
 END
 
 IF ~~ lt8.22
-SAY ~I escaped the same way I entered - I took Asador's cloak and wore it myself, as well as taking his blade... this one that I now carry with me.~
+SAY ~我照进来的方式逃出去——我取下阿萨多尔的斗篷披上，也拿了他的剑……就是我现在带着的这把。~
 IF ~~ + lt8.24
 END
 
 IF ~~ lt8.23
-SAY ~I escaped the same way I entered - I took Asador's cloak and wore it myself, as well as taking his blade... the blade of smoke and ashes that I carried for many years.~
+SAY ~我照进来的方式逃出去——我取下阿萨多尔的斗篷披上，也拿了他的剑……那把烟与灰的剑，我带了多年。~
 IF ~~ + lt8.24
 END
 
 IF ~~ lt8.24
-SAY ~Only one with blood of the lower planes could safely wield his blade. Asador's minions must have known that, for they believed me to be him without doubt as I left.~
-= ~I knew I had seen the worst of my kind that day. The kind of person I would never become... so I learned to hate violence. The cruelty of Asador had taught me a valuable lesson.~
-= ~That is the tale of my past, <CHARNAME>. I hope it did not overly disgust you.~
-++ ~It was... uncomfortable, but I appreciate you telling me.~ + lt8.25
-++ ~It was terrible. I can't believe you've been though such a thing.~ + lt8.25
+SAY ~只有身负下层位面之血的人才能安全使用他的剑。阿萨多尔的手下必定知道这一点，因为我离开时他们毫不怀疑地以为我就是他。~
+= ~我知道那天我见到了我族类最坏的一面。那种我永远不会成为的人……于是我学会了憎恨暴力。阿萨多尔的残忍给了我宝贵的一课。~
+= ~这就是我过去的故事，<CHARNAME>。我希望它没让你太过厌恶。~
+++ ~这……让人不舒服，可我感激你告诉我。~ + lt8.25
+++ ~太可怕了。我不敢相信你经历过这种事。~ + lt8.25
 END
 
 IF ~~ lt8.25
-SAY ~I should thank you, <CHARNAME>. You are the only person I have ever told this tale to... and 'twas easier to tell than I had thought. Perhaps this memory will no longer haunt my dreams.~
-= ~I can only hope. I do not wish to carry it with my any longer.~
+SAY ~我该谢谢你，<CHARNAME>。你是我唯一讲过这故事的人……而讲出来比我以为的容易。也许这段记忆不会再缠我的梦了。~
+= ~我只能希望。我不愿再带着它了。~
 IF ~~ EXIT
 END
 END
@@ -3114,63 +3114,63 @@ END
 // Lovetalk 9
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",18)~ THEN C0SIRE2J lt9
-~You are a good listener, <CHARNAME>. Thank you for sparing me your time... I feel as though I have lifted several heavy burdens from my heart.~ [C0BLANK]
+~你是个好听众，<CHARNAME>。谢谢你腾出时间给我……我觉得像是从心里卸下了几副重担。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~Are you all right? You looked rather down after we last talked.~ + lt9.1
-++ ~I'm glad my presence was enough to help you.~ + lt9.1
-++ ~That's good, but could we talk later?~ + lt9.0
+++ ~你还好吗？我们上次谈完之后你看起来很消沉。~ + lt9.1
+++ ~很高兴我的存在就足以帮到你。~ + lt9.1
+++ ~那很好，可我们能改天再谈吗？~ + lt9.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt9.0
-SAY ~Of course, <CHARNAME>. I have said all that I needed to.~
+SAY ~当然，<CHARNAME>。我该说的都说了。~
 IF ~~ EXIT
 END
 
 IF ~~ lt9.1
-SAY ~The tale I spoke of last time... though it was somewhat frightening to retell, I feel better having done so. I have kept too many things to myself.~
-= ~Though I hope that I am not coming across as unloading my burdens upon you, my friend. I know you have your own share of troubles.~
-++ ~Perhaps I could tell you of them, one day.~ + lt9.2
-++ ~It's fine. I like knowing more about you, even the... darker things.~ + lt9.3
-++ ~As long as they're more pleasant than your last tale, go ahead and tell me everything.~ + lt9.4
+SAY ~我上次讲的那个故事……虽然重述起来有些可怕，可讲完我觉得好多了。我把太多事都藏在心里。~
+= ~不过我希望自己没显得是在把担子卸给你，我的朋友。我知道你也有你自己的烦恼。~
+++ ~也许有一天我可以跟你讲讲那些。~ + lt9.2
+++ ~没关系。我喜欢更了解你，即使是……更黑暗的部分。~ + lt9.3
+++ ~只要比你上一个故事愉快些，你就尽管全告诉我。~ + lt9.4
 END
 
 IF ~~ lt9.2
-SAY ~I would... like that, I think.~
+SAY ~我……会喜欢的，我想。~
 IF ~~ + lt9.5
 END
 
 IF ~~ lt9.3
-SAY ~I am just glad that... even knowing about what I have told you, you do not think any less of me.~
+SAY ~我只是高兴……即使知道我告诉你的事，你也没有看轻我。~
 IF ~~ + lt9.5
 END
 
 IF ~~ lt9.4
-SAY ~Do not worry, <CHARNAME>, the last time was the worst of it.~
+SAY ~别担心，<CHARNAME>，上回那些是最糟的了。~
 IF ~~ + lt9.5
 END
 
 IF ~~ lt9.5
-SAY ~(She takes your hand between both of hers) I am ever so grateful to have your friendship, your company, and...~
-++ ~And?~ + lt9.6
-++ ~Would you want for more? Because I'm willing to offer it.~ + lt9.7
-++ ~(Take your hand away) Yes, well, let's leave it at that, shall we?~ + lt9.8
+SAY ~（她双手把你的手合在中间）能有你的友谊、你的陪伴，我真是太感激了，还有……~
+++ ~还有什么？~ + lt9.6
+++ ~你想要更多吗？因为我愿意给。~ + lt9.7
+++ ~（抽回手）是，嗯，我们就到此为止，好吗？~ + lt9.8
 END
 
 IF ~~ lt9.6
-SAY ~Oh, nothing. Just a slip of the tongue. You have given me more than enough as you are.~
+SAY ~哦，没什么。只是说漏了嘴。你如今给我的已经够多了。~
 IF ~~ EXIT
 END
 
 IF ~~ lt9.7
-SAY ~I- *blush* well, I will take that into consideration.~
+SAY ~我——*脸红*嗯，我会考虑这个。~
 IF ~~ EXIT
 END
 
 IF ~~ lt9.8
-SAY ~Oh... of course. I apologize if I have stepped out of bounds.~
+SAY ~哦……当然。若我越了界，我道歉。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 END
@@ -3178,69 +3178,69 @@ END
 // Lovetalk 10
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",20)~ THEN C0SIRE2J lt10
-~*sigh* I fear that I will never get used to the city. I had always heard such tales as a child, of how the streets of Waterdeep were paved in white and gold, but... I always suspected that the reality would be much different.~ [C0BLANK]
+~*叹气*我怕我永远习惯不了城市。我小时候总听那样的传说，说深水城的街道铺着白色与金色，可是……我一直怀疑现实会大不相同。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
-== C0SIRE2J IF ~!Class(Player1,RANGER_ALL) !Class(Player1,DRUID_ALL)~ THEN ~What do you think, <CHARNAME>? Are you at home in such a place?~
-== C0SIRE2J IF ~Class(Player1,RANGER_ALL)~ THEN ~You are a ranger, <CHARNAME>. I cannot imagine you are any more fond of this place as I am. Or am I wrong to assume such?~
-== C0SIRE2J IF ~Class(Player1,DRUID_ALL)~ THEN ~You are a druid, <CHARNAME>. I cannot imagine you are any more fond of this place as I am. Or am I wrong to assume such?~
+== C0SIRE2J IF ~!Class(Player1,RANGER_ALL) !Class(Player1,DRUID_ALL)~ THEN ~你觉得呢，<CHARNAME>？你在这样的地方自在吗？~
+== C0SIRE2J IF ~Class(Player1,RANGER_ALL)~ THEN ~你是游侠，<CHARNAME>。我无法想象你会比我更喜欢这地方。还是我猜错了？~
+== C0SIRE2J IF ~Class(Player1,DRUID_ALL)~ THEN ~你是德鲁伊，<CHARNAME>。我无法想象你会比我更喜欢这地方。还是我猜错了？~
 END
-++ ~Not really. Candlekeep was better.~ + lt10.1
-++ ~That's not a fair comparison. Not all cities are alike.~ + lt10.2
-++ ~I prefer the city, actually.~ + lt10.3
-++ ~We have no time to ponder such things, Sirene.~ + lt10.0
+++ ~不太喜欢。烛堡更好。~ + lt10.1
+++ ~这比较不公平。不是所有城市都一样。~ + lt10.2
+++ ~其实我更喜欢城市。~ + lt10.3
+++ ~我们没时间想这些，塞琳。~ + lt10.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt10.0
-SAY ~Yes, of course... I apologize.~
+SAY ~是的，当然……我道歉。~
 IF ~~ DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",2)~ EXIT
 END
 
 IF ~~ lt10.1
-SAY ~Then you know what 'tis like. Well... I am relieved that you understand what I mean, at least.~
+SAY ~那你就知道那是什么滋味。嗯……至少你明白我的意思，这让我放心。~
 IF ~~ + lt10.4
 END
 
 IF ~~ lt10.2
-SAY ~Aye, that is true for the place, but the people... I have a hard time differentiating the people here from those at Baldur's Gate.~
+SAY ~是的，这地方确实如此，可人……我很难把这里的人跟博德之门的人区分开。~
 IF ~~ + lt10.4
 END
 
 IF ~~ lt10.3
-SAY ~Do you truly? I do not wish to judge, but... I can hardly see the appeal.~
+SAY ~你真的喜欢？我不愿评判，可是……我几乎看不出有什么吸引力。~
 IF ~~ + lt10.4
 END
 
 IF ~~ lt10.4
-SAY ~I have not seen many cities, but... I have never found one in which the people did not feel... burdened.~
-= ~There are no words I know that could accurately describe how I feel about the city, but... I have begun to appreciate the peaceful village life I had left behind. ~
-= ~Perhaps, if we had the time... I would like to see the countryside once more. Just to remember what 'tis like. Could we do that, I wonder?~
-++ ~That's a good idea. I'd enjoy it as well.~ + lt10.5
-++ ~So... are you asking for a date, then?~ + lt10.6
-++ ~Maybe when we have the time, but not right now.~ + lt10.7
+SAY ~我见过的城市不多，可……我从没找到一座城里的人不显得……负累的。~
+= ~我知道没有言语能准确描述我对城市的感受，可是……我开始怀念我抛下的平静乡村生活。~
+= ~也许若我们有时间……我想再去看看乡野。只是去记起那是什么滋味。我们能去吗，我在想？~
+++ ~好主意。我也会喜欢。~ + lt10.5
+++ ~那么……你是在约我吗？~ + lt10.6
+++ ~也许等我们有时间，可不是现在。~ + lt10.7
 END
 
 IF ~~ lt10.5
-SAY ~Thank you, <CHARNAME>. It does not have to be today, or tomorrow, or even soon. Just... eventually. That is all I ask.~
+SAY ~谢谢你，<CHARNAME>。不必是今天，也不必是明天，甚至不必很快。只是……终究有一天。我求的就是这个。~
 IF ~~ EXIT
 END
 
 IF ~~ lt10.6
-SAY ~*blush* No! I- I mean... if you would like to see it that way, that is your decision, but... I did not mean it that way.~
-++ ~Are you saying you don't like me?~ + lt10.8
-++ ~Alright, I get it. Maybe we'll go to the countryside eventually, but not right now.~ + lt10.7
+SAY ~*脸红*不！我——我是说……你若愿意那样看，那是你的决定，可是……我不是那个意思。~
+++ ~你是说你不喜欢我？~ + lt10.8
+++ ~好，我明白。也许我们终究会去乡野，可不是现在。~ + lt10.7
 END
 
 IF ~~ lt10.7
-SAY ~I understand, <CHARNAME>. It does not have to be today, or tomorrow, or even soon. Just... eventually. That is all I ask.~
+SAY ~我明白，<CHARNAME>。不必是今天，也不必是明天，甚至不必很快。只是……终究有一天。我求的就是这个。~
 IF ~~ EXIT
 END
 
 IF ~~ lt10.8
-SAY ~No, I did not mean to say that...~
-= ~*sigh* You, you are... a brilliant leader, and a <PRO_MANWOMAN> that I admire greatly. But if you ask about my deeper feelings... I- I fear I will only make a fool of myself.~
-= ~As I was saying... I would like to see the countryside once more, to relive some memories of my childhood, and... spend more time with you, <CHARNAME>.~
+SAY ~不，我不是想说那个……~
+= ~*叹气*你，你是个出色的领袖，是我非常钦佩的<PRO_MANWOMAN>。可你若问我更深的感受……我——我怕我只会让自己出丑。~
+= ~正如我说的……我想再去看看乡野，重温一些童年的回忆，还有……多和你在一起，<CHARNAME>。~
 IF ~~ EXIT
 END
 END
@@ -3248,93 +3248,93 @@ END
 // lovetalk 11 - at Umar Hills
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",22) !Global("C0SireneUmarLovetalk","GLOBAL",1)~ THEN C0SIRE2J lt11
-~Yes, this place is perfect... would you take a walk with me, <CHARNAME>?~ [C0BLANK]
+~是的，这地方很美……你肯陪我去走走吗，<CHARNAME>？~ [C0BLANK]
 DO ~SetGlobal("C0SireneUmarLovetalk","GLOBAL",1) ClearAllActions() StartCutSceneMode() StartCutScene("c0slake1")~
 EXIT
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",22) Global("C0SireneUmarLovetalk","GLOBAL",1)~ THEN C0SIRE2J lt11a
-~I remember a lake just like this one, not far from my temple... the other children rarely played there, so 'twas a place where I could have some peace.~ [C0BLANK]
+~我记得有个跟这里一模一样的湖，离我的神殿不远……别的孩子很少去那里玩，所以那是个我能得些安宁的地方。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
-= ~When I was five, my horns had already grown to the point that I could no longer hide them beneath my hair... I was but an odd-looking child to my fellows before that, but after they realized what I was...~
-= ~(While speaking, she sits down close to the edge of the pond, picking reeds and twisting them absently)~
-= ~The first time one of the other children threw a stone at me, I remember I ran away, crying to the lake, so that I might be alone.~
+= ~我五岁时，我的角已经长到再也不能藏在头发底下了……在那之前我对同伴来说只是个长得奇怪的孩子，可他们明白我是什么之后……~
+= ~（说着，她在池边坐下来，摘着芦苇，不经意地拧着它们）~
+= ~别的孩子第一次朝我扔石头时，我记得我哭着跑向湖边，好一个人待着。~
 END
-++ ~That's terrible. Were you really all alone?~ + lt11.1
-++ ~Go on.~ + lt11.1
-++ ~Well, that's interesting and all, but we really should be going.~ + lt11.0
+++ ~太可怕了。你真的独自一人吗？~ + lt11.1
+++ ~说下去。~ + lt11.1
+++ ~嗯，这挺有意思，可我们真该走了。~ + lt11.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt11.0
-SAY ~As you wish, <CHARNAME>. We have spent enough time here.~
+SAY ~如你所愿，<CHARNAME>。我们在这里待得够久了。~
 IF ~~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("c0slake2")~ EXIT
 END
 
 IF ~~ lt11.1
-SAY ~One of the younger sisters of the temple, Camilla, found me there... or perhaps she had followed me.~
-= ~I was shamed to weep in front of her that day, but she comforted me. She brought me to that same place day after day, telling me stories, teaching me to sing...~
-= ~Once, she showed me how to whistle, using a leaf to make a soothing tune. I could never do it as a child. I wonder if now...~
-= ~(She plucks a thin leaf from a nearby bush, bringing it to her lips. A very soft, mournful, disjointed note comes from her.)~
-= ~(She laughs) No, I believe I had only gotten worse since then. But I enjoyed the time I spent there, where I forgot about what I... what I am.~
-++ ~Here, let me show you how to do it.~ + lt11.2
-++ ~Did you love her? She seems to mean a great deal to you.~ + lt11.3
-++ ~I'm glad you could have moments of peace, no matter how brief they were.~ + lt11.4
-++ ~This was a nice diversion, but we really should go back.~ + lt11.0
+SAY ~神殿里一位年轻的修女，卡米拉，在那里找到了我……又或者她是跟着我来的。~
+= ~那天我在她面前哭让我感到羞耻，可她安慰我。她一天天带我去同一个地方，给我讲故事，教我唱歌……~
+= ~有一次，她教我用叶子吹口哨，吹出舒缓的曲调。我小时候怎么也学不会。我在想如今会不会……~
+= ~（她从附近的灌木上摘下一片薄叶，送到唇边。一声极轻柔、哀伤而不成调的音响从她那里发出。）~
+= ~（她笑了）不，我想我自那以后只有更糟。可我喜欢在那里度过的时光，那里我忘了我……我是什么。~
+++ ~来，我教你怎么吹。~ + lt11.2
+++ ~你爱她吗？她似乎对你意义重大。~ + lt11.3
+++ ~我很高兴你能有安宁的时刻，无论多么短暂。~ + lt11.4
+++ ~这消遣不错，可我们真该回去了。~ + lt11.0
 END
 
 IF ~~ lt11.2
-SAY ~(You take the leaf from her, placing it between your lips and whistling a pleasant tune.)~
-= ~(She sits back on the grass, eyes shut, listening intently.)~
-++ ~(Stop and kiss her)~ + lt11.2a
-++ ~Did you enjoy that?~ + lt11.2b
+SAY ~（你从她手里接过叶子，放在唇间，吹出一段悦耳的曲调。）~
+= ~（她坐回草地上，闭着眼，专心听着。）~
+++ ~（停下，吻她）~ + lt11.2a
+++ ~你喜欢吗？~ + lt11.2b
 END
 
 IF ~~ lt11.2a
-SAY ~Oh... (She is initially shocked, but relaxes as she holds you close to her. Her lips are warm, almost hot.)~
-= ~(When you finally part, she is noticeably flustered, but not at all upset.) <CHARNAME>...~
-++ ~Was that too bold of me?~ + lt11.2c
-++ ~*That's* something new, isn't it?~ + lt11.2d
+SAY ~哦……（她起初一惊，可当你把她抱近时便放松下来。她的唇温热，几乎发烫。）~
+= ~（你们终于分开时，她明显慌乱了，可一点也不恼怒。）<CHARNAME>……~
+++ ~我是不是太大胆了？~ + lt11.2c
+++ ~*这*倒是新鲜，对吧？~ + lt11.2d
 END
 
 IF ~~ lt11.2b
-SAY ~Yes, I did, <CHARNAME>. Thank you for entertaining me, though you had no need to do so.~
+SAY ~是的，我喜欢，<CHARNAME>。谢谢你哄我开心，虽然你本不必如此。~
 IF ~~ + lt11.4
 END
 
 IF ~~ lt11.2c
-SAY ~N-no, not at all, <CHARNAME>, actually, I, um... (She runs her tongue across her lips nervously)~
-= ~I enjoyed that. Thank you.~
+SAY ~不——不，一点也没有，<CHARNAME>，其实，我，嗯……（她紧张地用舌头舔过嘴唇）~
+= ~我喜欢那个。谢谢你。~
 IF ~NumInPartyGT(2)~ + lt11.5
 IF ~!NumInPartyGT(2)~ + lt11.6
 END
 
 IF ~~ lt11.2d
-SAY ~Yes, it was... 'twas unexpected, but... I enjoyed it. We, um...~
+SAY ~是的，那……那出乎意料，可是……我喜欢。我们，嗯……~
 IF ~NumInPartyGT(2)~ + lt11.5
 IF ~!NumInPartyGT(2)~ + lt11.6
 END
 
 IF ~~ lt11.3
-SAY ~Sister Camilla was like a sister to me, <CHARNAME>. If I had held deeper feelings for her, I would not have known them for what they were.~
-= ~You could say that she was important to me, and you would be correct - but... not in the same way that you are.~
+SAY ~卡米拉修女对我来说像姐姐，<CHARNAME>。若我对她有更深的感情，我也不会知道那是什么。~
+= ~你可以说她对我很重要，你说得对——可是……不是像你对我那样的方式。~
 IF ~~ + lt11.4
 END
 
 IF ~~ lt11.4
-SAY ~Now that I think back... my childhood was a difficult one, but despite it all... there were still many valuable memories there.~
-= ~Thank you for bringing me here, <CHARNAME>. It has meant a lot to me, and... 'tis the most enjoyment I have had in a while.~
+SAY ~如今回想起来……我的童年很艰难，可尽管如此……那里仍有许多宝贵的记忆。~
+= ~谢谢你带我来这里，<CHARNAME>。这对我意义重大，而且……这是我近来最开心的时候。~
 IF ~NumInPartyGT(2)~ + lt11.5
 IF ~!NumInPartyGT(2)~ + lt11.6
 END
 
 IF ~~ lt11.5
-SAY ~Come, <CHARNAME>. We should not keep the others waiting.~
+SAY ~来吧，<CHARNAME>。我们不该让别人等。~
 IF ~~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("c0slake2")~ EXIT
 END
 
 IF ~~ lt11.6
-SAY ~Come, <CHARNAME>. We should return to our tasks.~
+SAY ~来吧，<CHARNAME>。我们该回去做事了。~
 IF ~~ DO ~ClearAllActions() StartCutSceneMode() StartCutScene("c0slake2")~ EXIT
 END
 END
@@ -3342,178 +3342,178 @@ END
 // Lovetalk 12
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",24)~ THEN C0SIRE2J lt12
-~(smile) Would you care for a sweet, <CHARNAME>?~ [C0BLANK]
+~（微笑）你想来块糖吗，<CHARNAME>？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~What sort of sweet?~ + lt12.1
-++ ~Ooh, I love sweets! Give me some!~ + lt12.1
-++ ~No thanks, I hate sweets.~ + lt12.2
-++ ~Now's not the time for snacks, Sirene.~ + lt12.0
+++ ~什么样的糖？~ + lt12.1
+++ ~哦，我爱甜食！给我点！~ + lt12.1
+++ ~不了，我讨厌甜食。~ + lt12.2
+++ ~现在不是吃零食的时候，塞琳。~ + lt12.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt12.0
-SAY ~Oh, very well... if you insist, <CHARNAME>.~
+SAY ~哦，好罢……若你坚持，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ lt12.1
-SAY ~(She takes a small bar of chocolate from a velvet pouch in her hands, breaks it in half, and hands one half to you.)~
+SAY ~（她从手里一个天鹅绒小袋中取出一条小巧克力，掰成两半，把一半递给你。）~
 IF ~~ + lt12.3
 END
 
 IF ~~ lt12.2
-SAY ~Oh. 'Tis a shame... I had been hoping to share this chocolate with you.~
+SAY ~哦。真可惜……我本盼着跟你分享这块巧克力。~
 IF ~~ + lt12.3
 END
 
 IF ~~ lt12.3
-SAY ~I have always loved sweet things... they remind me of the better moments of my childhood, when Sister Camilla would take me along with some of the girls of the village to the lakeside, to share little cakes and sing silly little songs together.~
-= ~Things changed, of course, when I began my martial training under Sir Morris. But she would still bring me chocolate cakes while I was out in the field.~
-= ~I... I wonder if she is well. It has been many years since we last met.~
-++ ~Don't you ever write home?~ + lt12.4
-++ ~I think of home as well, sometimes. About Winthrop, Tethtoril, all those old monks...~ + lt12.5
-++ ~You sound homesick. Do you think you'll ever go back?~ + lt12.6
+SAY ~我一直爱甜食……它们让我想起童年较好的时刻，那时卡米拉修女会带我和村里几个女孩去湖边，一起分享小蛋糕，唱些傻气的小歌。~
+= ~当然，我在莫里斯爵士手下开始习武之后，事情变了。可我在外头练武时，她仍会给我送巧克力蛋糕。~
+= ~我……我在想她是否安好。我们上次见面已是许多年前了。~
+++ ~你从不写信回家吗？~ + lt12.4
+++ ~我有时也想家。想温斯罗普、泰斯托瑞尔，那些老修士……~ + lt12.5
+++ ~你听起来很想家。你觉得你会有回去的一天吗？~ + lt12.6
 END
 
 IF ~~ lt12.4
-SAY ~Rarely... and as a wandering knight, it is... difficult, if not impossible, for them to contact me in return. 'Tis a shame... I would like to hear from them once again.~
+SAY ~很少……而作为一个游历骑士，他们想反过来联系我……很难，若非不可能。真可惜……我想再收到他们的消息。~
 IF ~~ + lt12.7
 END
 
 IF ~~ lt12.5
-SAY ~You are closer to home than I, at least. The choice to return could be yours, once this is all over.~
+SAY ~至少你比我离家近。等这一切结束，回去的选择可以是你自己的。~
 IF ~~ + lt12.7
 END
 
 IF ~~ lt12.6
-SAY ~I hope... I pray that I might, aye. But I may never get the chance.~
+SAY ~我希望……我祈祷我能，是的。可我也许永远没有那机会。~
 IF ~~ + lt12.7
 END
 
 IF ~~ lt12.7
-SAY ~'Tis a strange thing, not to treasure the things you have until they are gone... if I had known I would miss them so badly, I... I would have liked to make more of such memories.~
-= ~Ah, but wait... *laugh*~
-++ ~What's so funny?~ + lt12.8
-++ ~Well, this was a nice break, but we really should be moving on.~ + lt12.0
+SAY ~真奇怪，人总是不到失去就不珍视拥有的东西……若我早知道我会这样想念他们，我……我会想多留些那样的记忆。~
+= ~啊，可是等等……*笑*~
+++ ~有什么好笑的？~ + lt12.8
+++ ~嗯，这休息不错，可我们真该走了。~ + lt12.0
 END
 
 IF ~~ lt12.8
-SAY ~The thought just occurred to me... I regret not having more fond memories, but... here I am, making new ones, with someone I consider dear to me. I have all that I could wish for, and I did not even notice.~
-= ~(She takes the last piece of chocolate, looks at it with quiet contemplation for a moment, before returning it to the bag.)~
-= ~This is all there is left, <CHARNAME>. Would you care to finish it?~
-++ ~Thank you.~ + lt12.9
-++ ~No, you take it.~ + lt12.10
-++ ~(Break it in half, giving a piece to her)~ + lt12.11
-++ ~(Take it and slip it into her mouth)~ + lt12.12
+SAY ~我刚想到……我后悔没有更多美好的回忆，可是……我如今就在这里，跟一个我认为珍贵的人创造新的回忆。我想要的都有了，而我甚至没注意到。~
+= ~（她拿起最后一块巧克力，静静凝视了一会儿，然后把它放回袋里。）~
+= ~就剩这些了，<CHARNAME>。你想吃完它吗？~
+++ ~谢谢你。~ + lt12.9
+++ ~不，你吃吧。~ + lt12.10
+++ ~（掰成两半，把一块给她）~ + lt12.11
+++ ~（接过它，塞进她嘴里）~ + lt12.12
 END
 
 IF ~~ lt12.9
-SAY ~The best things in life are shared between friends.~
+SAY ~人生最好的东西该在朋友之间分享。~
 IF ~~ EXIT
 END
 
 IF ~~ lt12.10
-SAY ~(She smiles, takes it, and snaps the bar in half before returning a half to you.)~
+SAY ~（她笑着接过，把巧克力掰成两半，把一半还给你。）~
 IF ~~ + lt12.9
 END
 
 IF ~~ lt12.11
-SAY ~Thank you.~
+SAY ~谢谢你。~
 IF ~~ + lt12.9
 END
 
 IF ~~ lt12.12
-SAY ~Oh...~
-= ~(Before you take your hand away, she takes your fingers and kisses them.)~
-= ~*That* is something I will remember fondly, <CHARNAME>.~
+SAY ~哦……~
+= ~（在你把手抽回之前，她抓住你的手指吻了它们。）~
+= ~*这个*我会好好记住，<CHARNAME>。~
 IF ~~ EXIT
 END
 END
 // Lovetalk 13
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",26)~ THEN C0SIRE2J lt13
-~(Sirene is sneaking glances in your direction, while unsuccessfully trying to keep you from noticing.)~ [C0BLANK]
+~（塞琳偷偷朝你这边瞟，却没能成功地不让你发觉。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~Is there a reason you're watching me, Sirene?~ + lt13.1
-++ ~What? Is there something on my face?~ + lt13.1
-++ ~(Ignore her)~ + lt13.2
+++ ~你看我是有什么原因吗，塞琳？~ + lt13.1
+++ ~什么？我脸上有东西吗？~ + lt13.1
+++ ~（别理她）~ + lt13.2
 
 APPEND C0SIRE2J
 
 IF ~~ lt13.1
-SAY ~Oh, 'tis nothing, <CHARNAME>. I was just...~
+SAY ~哦，没什么，<CHARNAME>。我只是……~
 IF ~Gender(Player1,MALE)~ + lt13.3
 IF ~Gender(Player1,FEMALE)~ + lt13.4
 END
 
 IF ~~ lt13.2
-SAY ~(She eventually abandons all subtlety, ogling you while under the impression you do not notice, before blushing and turning away.)~
+SAY ~（她终于放弃所有含蓄，以为你没注意便直勾勾看你，然后脸红着转开。）~
 IF ~~ EXIT
 END
 
 IF ~~ lt13.3
-SAY ~I was just... admiring your features, <CHARNAME>. I do not think I have met another as... as attractive as you.~
-++ ~Well, thank you, Sirene.~ + lt13.5
-++ ~I'm flattered... I think.~ + lt13.5
-++ ~I think you're beautiful as well.~ + lt13.6
-++ ~You're blushing again.~ + lt13.8
+SAY ~我只是……在欣赏你的容貌，<CHARNAME>。我想我没见过像你这样……这样有吸引力的人。~
+++ ~嗯，谢谢你，塞琳。~ + lt13.5
+++ ~我受宠若惊……我想。~ + lt13.5
+++ ~我也觉得你很美。~ + lt13.6
+++ ~你又脸红了。~ + lt13.8
 END
 
 IF ~~ lt13.4
-SAY ~I was just... admiring your beauty, <CHARNAME>. I do not think I have met another as beautiful as you.~
-++ ~Well, thank you, Sirene.~ + lt13.5
-++ ~I'm flattered... I think.~ + lt13.5
-++ ~I think you're beautiful as well.~ + lt13.7
-++ ~I noticed you're more comfortable with praising women. Am I wrong to think so?~ + lt13.9
+SAY ~我只是……在欣赏你的美，<CHARNAME>。我想我没见过像你这样美的人。~
+++ ~嗯，谢谢你，塞琳。~ + lt13.5
+++ ~我受宠若惊……我想。~ + lt13.5
+++ ~我也觉得你很美。~ + lt13.7
+++ ~我注意到你夸女人时更自在。我这样想错了吗？~ + lt13.9
 END
 
 IF ~~ lt13.5
-SAY ~I speak only the truth as I see it, <CHARNAME>. I hope this is not too much, but... I do find you appealing.~
+SAY ~我只说我所见的实话，<CHARNAME>。我希望这不算太过，可是……我确实觉得你很有吸引力。~
 IF ~~ + lt13.10
 END
 
 IF ~~ lt13.6
-SAY ~I... I am flattered that you think so, <CHARNAME>.~
+SAY ~我……你这样想让我受宠若惊，<CHARNAME>。~
 IF ~~ + lt13.10
 END
 
 IF ~~ lt13.7
-SAY ~I... I am flattered that you think so, <CHARNAME>, but I could not compare to you. There is an... appeal to you that I am drawn to.~
+SAY ~我……你这样想让我受宠若惊，<CHARNAME>，可我比不上你。你身上有种……吸引力，我被它牵动。~
 IF ~~ + lt13.10
 END
 
 IF ~~ lt13.8
-SAY ~It... happens, <CHARNAME>. Perhaps more frequently than usual, when I am around you.~
+SAY ~这……会发生的，<CHARNAME>。也许比平常频繁些，当我在你身边时。~
 IF ~~ + lt13.10
 END
 
 IF ~~ lt13.9
-SAY ~No... you are not wrong, <CHARNAME>. It is... easier. Most women I have met are less likely to take such a comment in a, um... flirtatious light.~
+SAY ~不……你没想错，<CHARNAME>。这……更容易。我见过的大多数女人不太会把这样的话往，嗯……调情的方面想。~
 IF ~~ + lt13.10
 END
 
 IF ~~ lt13.10
-SAY ~I think 'twas... your kindness and acceptance which first appealed to me, but past that... I consider you attractive both inside and outside.~
-++ ~Are you saying you're attracted to me, then?~ + lt13.11
-++ ~You're dodging around what you're really trying to say, Sirene.~ + lt13.12
+SAY ~我想最初吸引我的是……你的善意与接纳，可在那之后……我觉得你内外都迷人。~
+++ ~那你是在说你被我吸引了？~ + lt13.11
+++ ~你在绕着真正想说的话打转，塞琳。~ + lt13.12
 END
 
 IF ~~ lt13.11
-SAY ~I, well... yes, I am. I think of you often. Sometimes... less innocently than I should. *blush*~
+SAY ~我，嗯……是的，我是。我常想到你。有时……比我所该的更不纯洁。*脸红*~
 IF ~~ + lt13.13
 END
 
 IF ~~ lt13.12
-SAY ~No, I... *sigh* well, yes. You are probably right.~
+SAY ~不，我……*叹气*嗯，是的。你大概说得对。~
 IF ~~ + lt13.13
 END
 
 IF ~~ lt13.13
-SAY ~This... this is all becoming very awkward, <CHARNAME>. I- I think 'twould be best to end this conversation here.~
+SAY ~这……这一切变得很尴尬，<CHARNAME>。我——我想最好就在这里结束这番谈话。~
 IF ~~ EXIT
 END
 END
@@ -3521,151 +3521,151 @@ END
 // Lovetalk 14 - rest at inn
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",28)~ THEN C0SIRE2J lt14
-~(You have retired for the evening, ready for a night of well-deserved rest. As you are undressing, you hear a light knock on your door.)~ [C0BLANK]
+~（你已就寝，准备睡一晚应得的休息。你正脱衣时，听见门上轻轻一敲。）~ [C0BLANK]
 END
-++ ~Who's there?~ + lt14.1
-++ ~Come in, whoever it is.~ + lt14.2
-++ ~(Ignore it and go to bed)~ + lt14.0
-++ ~Go away!~ + lt14.0
+++ ~谁？~ + lt14.1
+++ ~进来吧，不管是谁。~ + lt14.2
+++ ~（不理它，去睡）~ + lt14.0
+++ ~走开！~ + lt14.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt14.0
-SAY ~(There is no response, and all is quiet until you finally drift off to sleep.)~
+SAY ~（没有回应，一切寂静，直到你终于睡去。）~
 IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",31) RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700) RestParty()~ EXIT
 END
 
 IF ~~ lt14.1
-SAY ~(There is a long pause you get a response) 'Tis I, <CHARNAME>... if you have not retired to your bed already, I would... like to share your company a while.~
-++ ~Sirene? Come in.~ + lt14.2
-++ ~No, I'm too tired right now.~ + lt14.0
+SAY ~（隔了很久才有回应）是我，<CHARNAME>……你若还没上床，我想……陪你待一会儿。~
+++ ~塞琳？进来。~ + lt14.2
+++ ~不，我现在太累了。~ + lt14.0
 END
 
 IF ~~ lt14.2
-SAY ~(Sirene slips into the room and shuts the door as quietly as she can.)~
-= ~I am sorry to disturb, <CHARNAME>. I know you must be tired.~
-++ ~What's wrong? Can't sleep?~ + lt14.3a
-++ ~Do you need to talk to me?~ + lt14.3
-++ ~Yes, I am. Whatever it is, can you leave it until tomorrow?~ + lt14.2a
+SAY ~（塞琳溜进房间，尽可能轻地关上门。）~
+= ~很抱歉打扰，<CHARNAME>。我知道你一定累了。~
+++ ~怎么了？睡不着？~ + lt14.3a
+++ ~你有话要跟我说？~ + lt14.3
+++ ~是的，我累了。不管是什么，能留到明天吗？~ + lt14.2a
 END
 
 IF ~~ lt14.2a
-SAY ~As you wish. Rest well.~
+SAY ~如你所愿。好好休息。~
 IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",31) RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700) RestParty()~ EXIT
 END
 
 IF ~~ lt14.3a
-SAY ~No, 'tis not that. I just... wished to talk to you for a while.~
+SAY ~不，不是那个。我只是……想跟你谈一会儿。~
 IF ~~ + lt14.3
 END
 
 IF ~~ lt14.3
-SAY ~(She moves to sit beside you on the bed, taking your hand)~
-= ~Forgive my undignified manner, <CHARNAME>. I was alone, and... I began to feel restless.~
-++ ~I can tell. How much wine did you drink?~ + lt14.4
-++ ~This is unlike you. What's the matter?~ + lt14.5
-++ ~I'm sorry, but I really am tired right now, Sirene. We can talk tomorrow.~ + lt14.2a
+SAY ~（她坐到床上你身边，握住你的手）~
+= ~原谅我这不成体统的样子，<CHARNAME>。我独自一人，然后……我开始觉得不安。~
+++ ~我看得出。你喝了多少酒？~ + lt14.4
+++ ~这不像你。怎么了？~ + lt14.5
+++ ~对不起，可我现在真的很累，塞琳。我们明天再谈。~ + lt14.2a
 END
 
 IF ~~ lt14.4
-SAY ~Only a couple glasses. I needed to... to work up the courage to see you alone.~
+SAY ~只喝了两杯。我需要……鼓起勇气独自来见你。~
 IF ~~ + lt14.6
 END
 
 IF ~~ lt14.5
-SAY ~I... that is... you, <CHARNAME>, are the matter.~
+SAY ~我……就是……你，<CHARNAME>，就是那件事。~
 IF ~~ + lt14.6
 END
 
 IF ~~ lt14.6
-SAY ~I have been thinking of you much as of late, and... it has been difficult to stop myself. I fear you have changed me, <CHARNAME>, with this growth in our... feelings towards each other.~
-= ~For most of my life, I have been resigned to be alone, and I had accepted it. But, since I have known you, I have come to fear bearing that loneliness once more.~
-= ~You have become too important to me, <CHARNAME>, and I... I now know I have fallen for you, for 'tis more than just your company I desire.~
-= ~When I am with you, my words, my feelings... nothing comes as easily. This... whirlwind of emotions and desire towards you frightens me, yet I... I wish to get... closer...~
-++ ~Are you saying that you wish to... bed me?~ + lt14.7
-++ ~I understand. Come here, and let me show you how I feel about you.~ + lt14.8
-++ ~No, Sirene. This is too soon. Don't do something we both might regret.~ + lt14.9
+SAY ~我近来常想到你，而且……很难制止自己。我怕你改变了我，<CHARNAME>，随着我们……对彼此的感情的增长。~
+= ~我一生大半都认命要独自一人，我也接受了。可是，自从认识你，我开始怕再一次承受那种孤独。~
+= ~你对我已变得太重要，<CHARNAME>，而我……我如今知道我陷进去了，因为我想要的不只是你的陪伴。~
+= ~我在你身边时，我的话、我的感受……什么都不再那么容易。这……对你的情绪与渴望的风暴让我害怕，可我……我想更……靠近……~
+++ ~你是在说你想……跟我上床？~ + lt14.7
+++ ~我明白。过来，让我告诉你我对你的感觉。~ + lt14.8
+++ ~不，塞琳。这太早了。别做我们俩都可能后悔的事。~ + lt14.9
 END
 
 IF ~~ lt14.7
-SAY ~I... yes, that is exactly what I am saying. I can no longer deny my desire for you. If... if this is a mistake, then I want you to tell me, for I cannot do it myself.~
-++ ~No, wait. Actually... I want this as well. Come here...~ + lt14.8
-++ ~I think this is too soon. We don't have to rush things like this.~ + lt14.9
-++ ~I'm sorry. I just don't think of you that way.~ + lt14.11
+SAY ~我……是的，我说的正是这个。我再不能否认我对你的渴望。若……若这是个错误，那我要你告诉我，因为我自己做不到。~
+++ ~不，等等。其实……我也想要这个。过来……~ + lt14.8
+++ ~我觉得这太早了。我们不必这样急。~ + lt14.9
+++ ~对不起。我只是没那样看你。~ + lt14.11
 END
 
 IF ~~ lt14.8
-SAY ~*sigh* Gods... may the gods forgive my weakness, for I can resist no longer.~
-= ~(She presses herself against you, pushing you down upon the sheets and guides your hands to the string holding her bodice, showering your face with kisses, gently biting your ear.)~
-= ~(Her breath carries the scent of red wine; her fingers stroke your bare skin as she removes each piece of your clothing, urging you to give in.)~
-++ ~(Surrender yourself to her)~ + lt14.10
-++ ~(Take control, rolling her beneath you)~ + lt14.10
-++ ~No... stop it. I've changed my mind.~ + lt14.9
+SAY ~*叹气*神明啊……愿众神宽恕我的软弱，因为我再无法抵抗了。~
+= ~（她把身体压向你，把你推倒在床单上，引你的手到她胸衣的系带上，一边在你脸上落满吻，轻轻咬你的耳朵。）~
+= ~（她的呼吸带着红酒的香；她一件件脱去你的衣裳，手指抚过你赤裸的皮肤，催你屈服。）~
+++ ~（向她屈服）~ + lt14.10
+++ ~（夺取主动，把她翻到身下）~ + lt14.10
+++ ~不……停下。我改变主意了。~ + lt14.9
 END
 
 IF ~~ lt14.9
-SAY ~*sigh* Yes, you are right, <CHARNAME>. This was impulsive of me. I should... I should go, before I change my mind.~
-= ~(She rises abruptly to leave, as though fearful that she will be unable to.)~
-= ~Rest well, <CHARNAME>.~
+SAY ~*叹气*是的，你说得对，<CHARNAME>。我太冲动了。我该……我该走了，趁我还没改变主意。~
+= ~（她猛地起身要走，仿佛怕自己走不掉。）~
+= ~好好休息，<CHARNAME>。~
 IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",30) RestParty()~ EXIT
 END
 
 IF ~~ lt14.10
-SAY ~I am yours, <CHARNAME>, all yours...~
+SAY ~我是你的，<CHARNAME>，全是你的……~
 IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",30) SetGlobal("C0SireneSlept","GLOBAL",1) RestParty()~ EXIT
 END
 
 IF ~~ lt14.11
-SAY ~*sigh* Then 'tis as I feared.~
-= ~(Resignedly, she rises and moves to the door, defeated.)~
-= ~I want you to know... I hold no resentment toward you for this. Rest well, my friend.~
+SAY ~*叹气*那就如我所怕的。~
+= ~（她认命地起身，走向门口，一副败退的样子。）~
+= ~我想让你知道……我不因此对你怀怨。好好休息，我的朋友。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3) RestParty()~ EXIT
 END
 END
 // Lovetalk 15
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",30)~ THEN C0SIRE2J lt15
-~Good <DAYNIGHTALL>, <CHARNAME>. Did... did you rest well?~ [C0BLANK]
+~日安，<CHARNAME>。你……你休息得好吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-+ ~Global("C0SireneSlept","GLOBAL",1)~ + ~So, about last night...~ + lt15.1
-+ ~!Global("C0SireneSlept","GLOBAL",1)~ + ~So, about last night...~ + lt15.2
-+ ~Global("C0SireneSlept","GLOBAL",1)~ + ~I wish you had been there when I awoke.~ + lt15.3
-+ ~!Global("C0SireneSlept","GLOBAL",1)~ + ~I only wish you had stayed with me.~ + lt15.2
-+ ~Global("C0SireneSlept","GLOBAL",1)~ + ~Very much so. How about you?~ + lt15.3
-+ ~!Global("C0SireneSlept","GLOBAL",1)~ + ~Very much so. How about you?~ + lt15.2
++ ~Global("C0SireneSlept","GLOBAL",1)~ + ~那么，昨晚的事……~ + lt15.1
++ ~!Global("C0SireneSlept","GLOBAL",1)~ + ~那么，昨晚的事……~ + lt15.2
++ ~Global("C0SireneSlept","GLOBAL",1)~ + ~我醒来时希望你在身边。~ + lt15.3
++ ~!Global("C0SireneSlept","GLOBAL",1)~ + ~我只希望你留下来陪我。~ + lt15.2
++ ~Global("C0SireneSlept","GLOBAL",1)~ + ~非常好。你呢？~ + lt15.3
++ ~!Global("C0SireneSlept","GLOBAL",1)~ + ~非常好。你呢？~ + lt15.2
 
 APPEND C0SIRE2J
 
 IF ~~ lt15.1
-SAY ~No, please say nothing, <CHARNAME>. I should apologize to you. I allowed passion to take me... then fled like a coward when I was overwhelmed by it.~
+SAY ~不，请什么都别说，<CHARNAME>。我该向你道歉。我让情欲带走了我……然后被它淹没时又像个懦夫一样逃走。~
 IF ~~ + lt15.4
 END
 
 IF ~~ lt15.2
-SAY ~I... I think 'twas right for us to part last night, before... before we did anything we might regret. There was no need to force anything between us, and I... I apologize. If you would rather we end this now, then... I understand.~
-++ ~I don't want that, Sirene. What happened is behind us now, but I still care for you.~ + lt15.5
-++ ~Maybe that's for the best. We can't afford to let any distractions get in the way of our tasks.~ + lt15.6
+SAY ~我……我想昨晚我们在……在做可能后悔的事之前分开是对的。我们之间没有必要强迫什么，而我……我道歉。你若宁愿现在就结束，那么……我明白。~
+++ ~我不要那样，塞琳。发生的事已过去了，可我仍在乎你。~ + lt15.5
+++ ~也许那样最好。我们承担不起让任何分心的事妨碍任务。~ + lt15.6
 END
 
 IF ~~ lt15.3
-SAY ~I... I am sorry for leaving you in the morning. I was overwhelmed, and fled like a coward when I awoke. You deserve better than to be treated that way.~
+SAY ~我……我很抱歉早上离开了你。我被淹没了，醒来时像个懦夫一样逃走。你不该被这样对待。~
 IF ~~ + lt15.4
 END
 
 IF ~~ lt15.4
-SAY ~Perhaps what we did was a... mistake, perhaps not. Regardless, I think 'twould be best not to speak of it for now. I... I hope you can understand.~
+SAY ~也许我们做的是……错事，也许不是。无论如何，我想现在最好不谈它。我……希望你能理解。~
 IF ~~ EXIT
 END
 
 IF ~~ lt15.5
-SAY ~I- I see. That, at least, gives me hope.~
+SAY ~我——我明白了。至少这一点给了我希望。~
 IF ~~ EXIT
 END
 
 IF ~~ lt15.6
-SAY ~Yes... you are right. We shall remain friends, then.~
+SAY ~是的……你说得对。那我们就继续做朋友。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 END
@@ -3673,106 +3673,106 @@ END
 // Lovetalk 16
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",32)~ THEN C0SIRE2J lt16
-~<CHARNAME>, I- I must confess the truth to you. I have kept this from you for too long, and I can bear to do so no longer.~ [C0BLANK]
+~<CHARNAME>，我——我必须向你坦白真相。我把这事瞒你太久了，我再也受不住了。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~What is it?~ + lt16.1
-++ ~I know what you're going to say, Sirene. You don't have to spell it out for me.~ + lt16.2
-++ ~Look, Sirene... I think we made a mistake before. We should end this thing between us.~ + lt16.x
+++ ~什么事？~ + lt16.1
+++ ~我知道你要说什么，塞琳。你不必替我说明。~ + lt16.2
+++ ~听着，塞琳……我觉得我们之前犯了错。我们该结束我们之间这件事。~ + lt16.x
 
 APPEND C0SIRE2J
 
 IF ~~ lt16.x
-SAY ~(She looks back at you in silence, stunned.)~
-= ~Do... do you truly mean that, <CHARNAME>?~
-= ~I... (She turns away from you)~
-++ ~Are you... crying?~ + lt16.1x
-++ ~I'm sorry.~ + lt16.2x
+SAY ~（她沉默地回望你，惊呆了。）~
+= ~你……你真是这个意思吗，<CHARNAME>？~
+= ~我……（她转开身去）~
+++ ~你……在哭？~ + lt16.1x
+++ ~对不起。~ + lt16.2x
 END
 
 IF ~~ lt16.1x
-SAY ~...no. No, 'tis nothing. I am fine, <CHARNAME>.~
+SAY ~……不。不，没什么。我没事，<CHARNAME>。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ lt16.2x
-SAY ~So am I, <CHARNAME>...~
+SAY ~我也是，<CHARNAME>……~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ lt16.1
-SAY ~Since the day we met, you have become someone truly important to me, <CHARNAME>, someone I feel bound to protect with my life. I enjoy speaking with you, and when you smile at me, I feel at ease...~
-++ ~Go on.~ + lt16.3
-++ ~Is this some sort of roundabout love confession?~ + lt16.4
-++ ~Please, stop it. I know what you're trying to say, but I cannot return your feelings.~ + lt16.x
+SAY ~自从我们相识那天，你已成为对我真正重要的人，<CHARNAME>，一个我觉得该以性命去护的人。我喜欢与你交谈，你朝我笑时，我便觉得安心……~
+++ ~说下去。~ + lt16.3
+++ ~这算是某种绕圈子的爱的告白吗？~ + lt16.4
+++ ~求你，别说了。我知道你想说什么，可我无法回应你的感情。~ + lt16.x
 END
 
 IF ~~ lt16.2
-SAY ~I must, <CHARNAME>. If I do not... then I fear this feeling clutching at my heart will never let go.~
+SAY ~我必须说，<CHARNAME>。若我不说……那我怕这份揪着我心的感情永远不会松开。~
 IF ~~ + lt16.1
 END
 
 IF ~~ lt16.3
-SAY ~Oh... damn it all. What I truly mean is... I have fallen in love with you, <CHARNAME>.~
-++ ~You... you have?~ + lt16.3a
-++ ~I'm glad you finally said it. I love you as well, Sirene.~ + lt16.5
-++ ~This is hard to say, but... I cannot return your feelings, Sirene. We should remain friends.~ + lt16.x
+SAY ~哦……管他呢。我真正要说的是……我爱上你了，<CHARNAME>。~
+++ ~你……你爱上了？~ + lt16.3a
+++ ~我很高兴你终于说了。我也爱你，塞琳。~ + lt16.5
+++ ~这话很难说，可是……我无法回应你的感情，塞琳。我们该继续做朋友。~ + lt16.x
 END
 
 IF ~~ lt16.3a
-SAY ~Aye, <CHARNAME>. Though I thought 'twas but a brief affection at first, but as time passed, I became drawn to your kindness, your strength and courage...~
-= ~I think I had fallen for you a long time ago, but... I could not put it into words. But this affection for you has grown to the point where... I cannot hide it anymore.~
-= ~So I ask of you, <CHARNAME>... do you feel the same for me?~
-++ ~Of course I do.~ + lt16.5
-++ ~I'm sorry, Sirene. I don't.~ + lt16.x
+SAY ~是的，<CHARNAME>。虽然我起初以为那只是一时的好感，可随着时间过去，我被你的善意、你的力量与勇气吸引……~
+= ~我想我很久以前就喜欢上你了，可是……我无法用言语说出来。可这份对你的感情已长到……我再也藏不住。~
+= ~所以我问你，<CHARNAME>……你对我也有同样的感觉吗？~
+++ ~我当然有。~ + lt16.5
+++ ~对不起，塞琳。我没有。~ + lt16.x
 END
 
 IF ~~ lt16.4
-SAY ~N-no! *blush* Well, perhaps...~
+SAY ~不——不！*脸红*嗯，也许……~
 IF ~~ + lt16.3
 END
 
 IF ~~ lt16.5
-SAY ~Do... do you truly?~
-++ ~I do.~ + lt16.6
-++ ~Do you doubt me?~ + lt16.7
+SAY ~你……你真的？~
+++ ~我真的。~ + lt16.6
+++ ~你怀疑我？~ + lt16.7
 END
 
 IF ~~ lt16.6
-SAY ~By Ilmater, I... I never would have imagined...~
+SAY ~以伊尔梅特之名，我……我从没想过……~
 IF ~Global("C0SireneFlowers","GLOBAL",1)~ + lt16.8
 IF ~!Global("C0SireneFlowers","GLOBAL",1)~ + lt16.9
 END
 
 IF ~~ lt16.7
-SAY ~N-no, of course not. I just... never would have imagined...~
+SAY ~不——不，当然没有。我只是……从没想过……~
 IF ~Global("C0SireneFlowers","GLOBAL",1)~ + lt16.8
 IF ~!Global("C0SireneFlowers","GLOBAL",1)~ + lt16.9
 END
 
 IF ~~ lt16.8
-SAY ~Perhaps I should have seen it sooner, with the flirting, and the flowers, and...~
+SAY ~也许我该早点看出来，那些调情、那些花，还有……~
 IF ~~ + lt16.9
 END
 
 IF ~~ lt16.9
-SAY ~I thought... perhaps 'twas just a flight of fancy, the thought that you would be in love with me. But now I know that 'tis real, I...~
-= ~(She sighs in exasperation before giving a small laugh.)~
-= ~Of course, now my words would fail me. So I will ask... will you hold me, <CHARNAME>?~
-++ ~Absolutely.~ + lt16.10
-++ ~(Say nothing, just embrace her)~ + lt16.10
-++ ~I'd love to, but for now, we should get going.~ + lt16.11
+SAY ~我以为……也许你爱上我只是我的一场幻想。可如今我知道那是真的，我……~
+= ~（她无奈地叹气，然后轻轻笑了一声。）~
+= ~当然，现在我反倒说不出话了。所以我要问……你肯抱抱我吗，<CHARNAME>？~
+++ ~当然。~ + lt16.10
+++ ~（什么都不说，只是抱住她）~ + lt16.10
+++ ~我很想，可现在我们该走了。~ + lt16.11
 END
 
 IF ~~ lt16.10
-SAY ~Thank you.~
-= ~With you at my side, I... I feel as though all the suffering, the trials I have endured... they have all been worth it, if this is to be my reward.~
+SAY ~谢谢你。~
+= ~有你在身边，我……我觉得我受的一切苦、一切试炼……若这就是我的报偿，那全都值得。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",2)~ EXIT
 END
 
 IF ~~ lt16.11
-SAY ~Mm, very well, <CHARNAME>. Perhaps, tonight instead... we could share more of our feelings together. I would like that.~
+SAY ~嗯，好罢，<CHARNAME>。也许今晚……我们可以多分享彼此的感受。我会喜欢的。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",2)~ EXIT
 END
 
@@ -3781,135 +3781,135 @@ END
 // Lovetalk 17
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",34)~ THEN C0SIRE2J lt17
-~(You notice that Sirene is smiling to herself, a rare occurrence for her.)~ [C0BLANK]
+~（你注意到塞琳自己在笑，这对她来说很少见。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~It's nice to see you smile for once, Sirene.~ + lt17.1
-++ ~Hey, what's so funny?~ + lt17.2
-++ ~(Leave her alone)~ + lt17.0
+++ ~难得见你笑，真好，塞琳。~ + lt17.1
+++ ~嘿，有什么好笑的？~ + lt17.2
+++ ~（别理她）~ + lt17.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt17.0
-SAY ~(After a while, she approaches and touches you gently. Her arms wrap around you in a warm embrace.)~
+SAY ~（过了一会儿，她走近，轻轻触碰你。她的双臂环住你，给你一个温暖的拥抱。）~
 IF ~~ EXIT
 END
 
 IF ~~ lt17.1
-SAY ~I have had cause for it as of late, I think. You have given me such joy just by being at my side.~
+SAY ~我想我近来有理由笑。你只是在我身边，就给了我这样的喜悦。~
 IF ~~ + lt17.3
 END
 
 IF ~~ lt17.2
-SAY ~Nothing. I am simply... very happy.~
+SAY ~没什么。我只是……非常快乐。~
 IF ~~ + lt17.3
 END
 
 IF ~~ lt17.3
-SAY ~It feels good having released the feelings I once held secret from you, <CHARNAME>. My heart feels much lighter, now that you know how I feel for you.~
-= ~I do not believe I have felt such happiness in a long time.~
-++ ~So long as you're happy, I'm happy.~ + lt17.4
-++ ~Have you never felt this way before?~ + lt17.5
-++ ~I'm glad to hear it. Shall we walk together?~ + lt17.6
+SAY ~把曾对你藏着的情感说出来感觉真好，<CHARNAME>。既然你知道了我的感受，我的心轻了许多。~
+= ~我想我许久没有过这样的快乐了。~
+++ ~只要你快乐，我就快乐。~ + lt17.4
+++ ~你以前从未有过这种感觉吗？~ + lt17.5
+++ ~听你这么说我很高兴。我们一起走走？~ + lt17.6
 END
 
 IF ~~ lt17.4
-SAY ~I only hope that this comes to last. I would not want to lose you as... as I have lost others before.~
-= ~Theirs was pain enough. But you... losing you would be worse than anything else.~
-= ~*sigh* I am sorry. I should not ruin the moment with such thoughts.~
+SAY ~我只希望这能长久。我不愿像……像从前失去别人那样失去你。~
+= ~他们的痛已够多了。可你……失去你会比任何事都糟。~
+= ~*叹气*对不起。我不该用这样的念头破坏这一刻。~
 IF ~~ + lt17.6
 END
 
 IF ~~ lt17.5
-SAY ~I may have believed I did, once, but 'twas all hidden beneath my own fears and insecurities, and... I did not truly know what love was.~
-= ~Now I know better. I know what I feel for you is truly love, and... I am not afraid of it any longer.~
+SAY ~我也许曾以为自己有过，可那全藏在我自己的恐惧与不安之下，而且……我并不真正知道爱是什么。~
+= ~如今我更明白了。我知道我对你的感受是真正的爱，而且……我不再怕它了。~
 IF ~~ + lt17.6
 END
 
 IF ~~ lt17.6
-SAY ~(She takes your hand and walks with you, arm in arm.)~
-= ~For once, I feel I am truly blessed, to have you at my side. Please, never leave me.~
+SAY ~（她握住你的手，与你挽臂同行。）~
+= ~这一回，我觉得自己真是有福，能有你在身边。求你，永远别离开我。~
 IF ~~ EXIT
 END
 END
 // Lovetalk at Ust Natha
 
 CHAIN IF ~Global("C0SireneUstNathaLovetalk","GLOBAL",1)~ THEN C0SIRE2J lt18
-~My- Veldrin. I... I wish to speak with you privately. This is important.~ [C0BLANK]
+~我的——维尔德林。我……我想私下跟你谈谈。这很重要。~ [C0BLANK]
 DO ~SetGlobal("C0SireneUstNathaLovetalk","GLOBAL",2)~
 END
-+ ~Gender(Player1,MALE)~ + ~Of course, my mistress.~ + lt18.1
-+ ~Gender(Player1,FEMALE)~ + ~Of course.~ + lt18.1
-++ ~*whisper* You need to be more demanding.~ + lt18.2
-++ ~A room for two, then? We'll have all the privacy we need.~ + lt18.3
-++ ~Not here. We can't afford to reveal anything.~ + lt18.0
++ ~Gender(Player1,MALE)~ + ~当然，我的女主人。~ + lt18.1
++ ~Gender(Player1,FEMALE)~ + ~当然。~ + lt18.1
+++ ~*低声*你得更强硬些。~ + lt18.2
+++ ~那就要个两人房间？我们会有需要的一切私密。~ + lt18.3
+++ ~不在这里。我们承担不起暴露任何东西。~ + lt18.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt18.0
-SAY ~Yes, you are right, I suppose... I shall hold my thoughts, then.~
+SAY ~是的，我想你说得对……那我把话压着。~
 IF ~~ EXIT
 END
 
 IF ~~ lt18.1
-SAY ~Here, where we will not be overheard...~
-= ~...~
-++ ~Wh-why are you just staring at me?~ + lt18.4
-++ ~I thought you had something to say.~ + lt18.4
-++ ~(Say nothing and look at her)~ + lt18.4
-++ ~This is getting awkward. Let's just leave before someone suspects us.~ + lt18.0
+SAY ~这里，不会有人听见……~
+= ~……~
+++ ~你——你为什么只是盯着我？~ + lt18.4
+++ ~我以为你有话要说。~ + lt18.4
+++ ~（什么都不说，只是看着她）~ + lt18.4
+++ ~这变得尴尬了。我们趁没人怀疑赶紧走吧。~ + lt18.0
 END
 
 IF ~~ lt18.2
-SAY ~*sigh* Veldrin, just... come. Quickly.~
+SAY ~*叹气*维尔德林，就……快过来。~
 IF ~~ + lt18.1
 END
 
 IF ~~ lt18.3
-SAY ~*sigh* Now is not the time for jests, Veldrin. Just come aside with me a moment.~
+SAY ~*叹气*现在不是开玩笑的时候，维尔德林。就跟我到一边待一会儿。~
 IF ~~ + lt18.1
 END
 
 IF ~~ lt18.4
-SAY ~*sigh* Forgive me, <CHARNAME>. I was meaning to speak, but I became distracted by your new features.~
-= ~'Tis so strange. Your face, even your voice is entirely different... even face to face, I can no longer recognize you...~
-= ~Only your eyes, without the cruelty and ambition of these fiends around us can assure me 'tis truly you. I feel as though I am once more amongst a crowd of hostile strangers, and I am not proud to admit it, but I... I am afraid.~
-++ ~I understand. I'm afraid too.~ + lt18.5
-++ ~Don't worry. I'm still <CHARNAME>, you're still Sirene, and that will never change.~ + lt18.5
-++ ~You look completely strange to me too. I'll admit, it makes me uncomfortable.~ + lt18.5
-++ ~There's nothing we can do about it at this point.~ + lt18.5
-++ ~It's pointless to complain about it, now that we're already here.~ + lt18.5
+SAY ~*叹气*原谅我，<CHARNAME>。我本想说话，可我被你的新模样弄得分了神。~
+= ~真奇怪。你的脸，甚至你的声音都完全不同……即使面对面，我也认不出你了……~
+= ~只有你的眼睛，没有周围这些恶魔的残忍与野心，才能让我确信真的是你。我觉得自己又像是身处一群敌意的陌生人之中，我不愿承认，可我……我怕。~
+++ ~我明白。我也怕。~ + lt18.5
+++ ~别担心。我仍是<CHARNAME>，你仍是塞琳，这永远不会变。~ + lt18.5
+++ ~你在我看来也完全陌生。我承认，这让我不舒服。~ + lt18.5
+++ ~到这一步我们对此无能为力。~ + lt18.5
+++ ~既然我们已经在这里了，抱怨也没意义。~ + lt18.5
 END
 
 IF ~~ lt18.5
-SAY ~*sigh* I suppose it does no good to say such things. We are here for a cause, and I cannot afford to be plagued with such doubts. Just...~
-= ~(She raises one ebony hand to stroke your cheek while none of the patrons notice.)~
-= ~So strange... <CHARNAME>, promise me that you will not allow this place to change you. That is all I ask.~
-++ ~I promise.~ + lt18.6
-++ ~You're right. I can't let myself be corrupted.~ + lt18.6
-++ ~Enough of this. Why don't we get a private room instead?~ + lt18.7
-++ ~I'm sorry. I can't promise that.~ + lt18.8
+SAY ~（叹气）我想说这些也没用。我们是为一个目标来的，我承担不起被这样的疑虑纠缠。只是……~
+= ~（她抬起一只乌黑的手抚你的脸颊，没有一个客人注意到。）~
+= ~真奇怪……<CHARNAME>，答应我，别让这地方改变你。我求的就是这个。~
+++ ~我答应。~ + lt18.6
+++ ~你说得对。我不能让自己被腐化。~ + lt18.6
+++ ~够了。我们何不要个私人房间？~ + lt18.7
+++ ~对不起。我不能答应。~ + lt18.8
 END
 
 IF ~~ lt18.6
-SAY ~Thank you.~
+SAY ~谢谢你。~
 IF ~~ + lt18.9
 END
 
 IF ~~ lt18.7
-SAY ~No, <CHARNAME>... even knowing it were you, I will only regret anything between us in these false forms. But... I wish I could... at least...~
+SAY ~不，<CHARNAME>……即使知道那是你，我也只会后悔我们以这些虚假的模样之间发生任何事。可是……我希望我能……至少……~
 IF ~~ + lt18.9
 END
 
 IF ~~ lt18.8
-SAY ~I feared that you may say that...~
+SAY ~我怕你会这么说……~
 IF ~~ + lt18.9
 END
 
 IF ~~ lt18.9
-SAY ~(Sirene leans forward to kiss you, but stops just short of it.)~
-= ~*sigh* I have forgotten myself already... 'tis neither the place nor the time. Please, let us be gone from this place as soon as possible.~
+SAY ~（塞琳前倾要吻你，却在将触未触时停下。）~
+= ~*叹气*我已经忘了自己……这既不是地方也不是时候。求你，我们尽快离开这里吧。~
 IF ~~ EXIT
 END
 END
@@ -3919,26 +3919,26 @@ END
 EXTEND_TOP UDPHAE01 106
 + ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
-Global("C0SireneRomanceActive","GLOBAL",2)~ + ~My companion, Sirene.~ EXTERN UDPHAE01 110
+Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我的同伴，塞琳。~ EXTERN UDPHAE01 110
 END
 
 APPEND C0SIRE2J
 
 IF ~Global("C0SirenePhaere","GLOBAL",1)~ C0SirenePhaere
-SAY ~You... <CHARNAME>, were you...~ [C0BLANK]
+SAY ~你……<CHARNAME>，你是不是……~ [C0BLANK]
 IF ~Global("PhaereInnuendo","GLOBAL",2)~ + C0SirenePhaere1
 IF ~!Global("PhaereInnuendo","GLOBAL",2)~ + C0SirenePhaere2
 END
 
 IF ~~ C0SirenePhaere1
-SAY ~You were with that... beast of a woman for far too long. I was worried if... if you and her...~
-= ~*sigh* No, I will not ask. For better and worse, I think 'tis best if I did not know. If you care for me at all, <CHARNAME>, then do not tell me.~
+SAY ~你跟那……那畜生一样的女人待得太久了。我担心你和她是不是……~
+= ~*叹气*不，我不问。无论好坏，我想我最好不知道。你若有一点在乎我，<CHARNAME>，那就别告诉我。~
 IF ~~ DO ~SetGlobal("C0SirenePhaere","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SirenePhaere2
-SAY ~You managed to escape the drow's clutches sooner than I thought. I feared that she may have used you for torture, or worse...~
-= ~I am glad. Both that you are safe and the knowledge that you are still you. Come, we should go.~
+SAY ~你比我以为的更快逃出那卓尔的掌握。我怕她可能用你来做折磨，或更糟……~
+= ~我很高兴。既为你平安，也为知道你仍是你。来吧，我们该走了。~
 IF ~~ DO ~SetGlobal("C0SirenePhaere","GLOBAL",2)~ EXIT
 END
 END
@@ -3946,94 +3946,94 @@ END
 // Lovetalk after Bodhi
 
 CHAIN IF ~Global("C0SireneSleepLovetalk","GLOBAL",1)~ THEN C0SIRE2J lt19
-~I wonder if you will wish to hear this, my love, but... I have been thinking of my time spent in the Fugue Plane.~ [C0BLANK]
+~我不知道你愿不愿听这个，我的爱，可是……我一直在想我在亡者之境的那段时候。~ [C0BLANK]
 DO ~SetGlobal("C0SireneSleepLovetalk","GLOBAL",2)~
 END
-++ ~It was a terrible ordeal. Are you all right?~ + lt19.1
-++ ~I'm just so glad I didn't lose you.~ + lt19.2
-++ ~Could we just forget that horrible moment ever happened?~ + lt19.3
+++ ~那是可怕的磨难。你还好吗？~ + lt19.1
+++ ~我太庆幸没有失去你。~ + lt19.2
+++ ~我们能不能就当那可怕的时刻从未发生过？~ + lt19.3
 
 APPEND C0SIRE2J
 
 IF ~~ lt19.1
-SAY ~Y-yes, I am now, more or less. At least... I am, physically.~
+SAY ~是——是的，我如今多多少少好了。至少……身体上是。~
 IF ~~ + lt19.4
 END
 
 IF ~~ lt19.2
-SAY ~And I am glad for that as well, <CHARNAME>. Leaving you behind was... more painful than anything I have experienced.~
+SAY ~我也为此高兴，<CHARNAME>。把你留下……比我经历过的任何事都痛。~
 IF ~~ + lt19.4
 END
 
 IF ~~ lt19.3
-SAY ~I wish I could, <CHARNAME>, but I have learned too much to simply forget now.~
+SAY ~我希望我能，<CHARNAME>，可如今我学到的太多，没法就这样忘掉。~
 IF ~~ + lt19.4
 END
 
 IF ~~ lt19.4
-SAY ~The prospect of death... the true, final death, while it has frightened me before, I had always been willing to accept it as part of my duty to Ilmater.~
-= ~When I learned that I may have needed to make the ultimate sacrifice, to give my life so that I may not be turned, and become a weapon to be used against you, I... I accepted that as my fate without hesitation.~
-++ ~You shouldn't have. I would've fought tooth and nail to save us both.~ + lt19.5
-++ ~It broke my heart to watch you die, Sirene. I don't want to ever see that happen again.~ + lt19.6
-++ ~It was very brave of you to sacrifice yourself for me.~ + lt19.6
+SAY ~死亡的前景……真正的、最终的死亡，虽然以前也让我害怕，可我一直愿意把它当作我对伊尔梅特职责的一部分来接受。~
+= ~当我得知我可能需要做出最终的牺牲，献出性命以免被转变、变成用来对付你的武器时，我……我毫不犹豫地接受了这是我的命运。~
+++ ~你不该那样。我会拼命保住我们两个。~ + lt19.5
+++ ~看着你死去让我心碎，塞琳。我不愿再见到那样的事发生。~ + lt19.6
+++ ~你为我牺牲自己，真勇敢。~ + lt19.6
 END
 
 IF ~~ lt19.5
-SAY ~I know, <CHARNAME>, and I love you all the more for that, but... I could not allow myself to become everything I despised. Even if it meant we would be apart forever.~
+SAY ~我知道，<CHARNAME>，我因此更爱你，可是……我不能让自己变成我所憎恶的一切。即使那意味着我们永远分离。~
 IF ~~ + lt19.6
 END
 
 IF ~~ lt19.6
-SAY ~When I accepted that I would have to die, I was... peaceful. Even in that graveyard, I felt no fear. I had only hope that you would be victorious over our foes, and carried that hope into death.~
-= ~But when I saw you, in that dream - or was it truly a dream? I... I found that everything I had convinced myself to believe was only a facade.~
-= ~Even as I awaited judgment, my one sole regret was to lose you as I departed for Martyrdom. When you came to me, I... I fell apart. I was reminded of everything I would lose.~
-= ~So as I awoke back in my body once more, I... decided that I would not choose death so easily again. I do not want to depart once again with any regrets.~
-++ ~I'm glad you decided that.~ + lt19.7
-++ ~Promise me, you'll never do something that foolish again.~ + lt19.8
-++ ~Come, we have a journey to finish.~ + lt19.7
+SAY ~当我接受我必须死去时，我……很平静。即使在那墓地里，我也感觉不到恐惧。我只抱着希望，希望你能战胜我们的敌人，并带着这希望进入死亡。~
+= ~可当我在那梦里看见你——那真是梦吗？我……我发现我说服自己相信的一切都只是表面。~
+= ~即使在我等待审判时，我唯一的遗憾就是在我走向殉道时失去你。当你来到我身边时，我……我崩溃了。我想起了我将失去的一切。~
+= ~所以当我醒来重回我的身体时，我……决定不再那样轻易选择死亡。我不愿再带着任何遗憾离开。~
+++ ~我很高兴你这样决定。~ + lt19.7
+++ ~答应我，别再做什么那样愚蠢的事。~ + lt19.8
+++ ~来吧，我们还有一段旅程要走完。~ + lt19.7
 END
 
 IF ~~ lt19.7
-SAY ~(She kisses you suddenly, pressing her body against yours.)~
+SAY ~（她突然吻你，把身体压向你。）~
 IF ~Global("C0SireneSlept","GLOBAL",1)~ + lt19.9
 IF ~!Global("C0SireneSlept","GLOBAL",1)~ + lt19.10
 END
 
 IF ~~ lt19.8
-SAY ~I promise, my love. I know that I should have trusted you... and I can only hope that you will forgive me for not doing the same before.~
+SAY ~我答应，我的爱。我知道我该信任你……我只能希望你能原谅我此前没有做到。~
 IF ~~ + lt19.7
 END
 
 IF ~~ lt19.9
-SAY ~I... I regret how I fled from you last time, the morning after I told you about my true feelings. I promise, I will not run again. Will you... have me, my love?~
-++ ~Is... is this really the best time?~ + lt19.11
-++ ~Absolutely. Shall we go aside for a while?~ + lt19.12
-++ ~No. Not until I'm whole again.~ + lt19.13
+SAY ~我……我后悔上次向你坦白真心之后，第二天早上却从你身边逃走。我答应，我不会再逃。你肯……要我吗，我的爱？~
+++ ~这……这真是最好的时候吗？~ + lt19.11
+++ ~当然。我们到一边去待一会儿？~ + lt19.12
+++ ~不。等我完整了再说。~ + lt19.13
 END
 
 IF ~~ lt19.10
-SAY ~I... I regret the way things ended the night that I told you everything... about my true feelings for you. You refused me then, but I ask now... will you have me?~
-++ ~Is... is this really the best time?~ + lt19.11
-++ ~Absolutely. Shall we go aside for a while?~ + lt19.12
-++ ~No. Not until I'm whole again.~ + lt19.13
-++ ~I love you, Sirene, but no. I don't want this to be all we're about.~ + lt19.13
+SAY ~我……我后悔那晚把一切都告诉你之后就那样结束了……关于我对你的真心。你那时拒绝了我，可我如今要问……你肯要我吗？~
+++ ~这……这真是最好的时候吗？~ + lt19.11
+++ ~当然。我们到一边去待一会儿？~ + lt19.12
+++ ~不。等我完整了再说。~ + lt19.13
+++ ~我爱你，塞琳，可不行。我不愿让这事成为我们之间的全部。~ + lt19.13
 END
 
 IF ~~ lt19.11
-SAY ~If you have no wish for it, I will not force you. I just... would not want to fall again before... we shared this time together.~
-++ ~Then let's find somewhere private for a while.~ + lt19.12
-++ ~Not now, Sirene. Wait until I'm whole again, at least.~ + lt19.13
-++ ~I love you, Sirene, but no. I don't want this to be all we're about.~ + lt19.13
+SAY ~你若不愿意，我不会强迫你。我只是……不愿在我们共享这段时光之前又倒下。~
+++ ~那我们就找个私密的地方待一会儿。~ + lt19.12
+++ ~现在不行，塞琳。至少等我把自己完整了再说。~ + lt19.13
+++ ~我爱你，塞琳，可不行。我不愿让这事成为我们之间的全部。~ + lt19.13
 END
 
 IF ~~ lt19.12
-SAY ~Come with me, my love... let us forget everything else for a while, and make this time about us.~
+SAY ~跟我来，我的爱……让我们暂时忘掉别的一切，把这段时间留给我们。~
 IF ~!Global("C0SireneSlept","GLOBAL",1)~ DO ~SetGlobal("C0SireneSlept","GLOBAL",1) RestParty()~ EXIT
 IF ~Global("C0SireneSlept","GLOBAL",1)~ DO ~RestParty()~ EXIT
 END
 
 IF ~~ lt19.13
-SAY ~Yes, you are right. I... I do not need this to love you. Let me... at least hold you for a while.~
+SAY ~是的，你说得对。我……我并非需要这个才能爱你。至少让我……抱你一会儿。~
 IF ~~ DO ~SetGlobal("C0SireneSleepLovetalk","GLOBAL",3)~ EXIT
 END
 
@@ -4042,74 +4042,74 @@ END
 // Lovetalk after sex
 
 CHAIN IF ~Global("C0SireneAfterSleep","GLOBAL",1)~ THEN C0SIRE2J lt20
-~(Sirene lies on the soft grass next to you, dishevelled and breathless. She shifts to your side, taking your hand while holding you close.)~ [C0BLANK]
+~（塞琳躺到你旁边的软草地上，衣衫凌乱，气息未定。她挪到你身侧，握住你的手，把你搂紧。）~ [C0BLANK]
 DO ~SetGlobal("C0SireneAfterSleep","GLOBAL",2)~
-= ~Thank you for that, <CHARNAME>... please, stay...~
+= ~谢谢你，<CHARNAME>……求你，留下……~
 END
-++ ~Did you enjoy that?~ + lt20.1
-++ ~If you want, we can stay here forever.~ + lt20.2
-++ ~No, I really do need to get up.~ + lt20.3
-++ ~I wish I could, but we have things to do. Come on, let's get dressed.~ + lt20.0
+++ ~你喜欢吗？~ + lt20.1
+++ ~你若愿意，我们可以永远留在这里。~ + lt20.2
+++ ~不，我真得起来了。~ + lt20.3
+++ ~我希望我能，可我们有事情要做。来吧，穿衣服。~ + lt20.0
 
 APPEND C0SIRE2J
 
 IF ~~ lt20.0
-SAY ~Of course... (smile) The memory of your touch shall be enough. Come, my love... 'tis time to rise.~
+SAY ~当然……（微笑）你触碰的记忆就足够了。来吧，我的爱……该起来了。~
 IF ~~ EXIT
 END
 
 IF ~~ lt20.1
-SAY ~Aye... more than you can imagine.~
+SAY ~是的……比你能想象的更多。~
 IF ~Gender(Player1,MALE)~ + lt20.4a
 IF ~Gender(Player1,FEMALE)~ + lt20.4b
 END
 
 IF ~~ lt20.2
-SAY ~(laugh) If only...~
+SAY ~（笑）要是能就好了……~
 IF ~Gender(Player1,MALE)~ + lt20.4a
 IF ~Gender(Player1,FEMALE)~ + lt20.4b
 END
 
 IF ~~ lt20.3
-SAY ~(smile) Am I truly that bad?~
+SAY ~（微笑）我真有那么糟吗？~
 IF ~Gender(Player1,MALE)~ + lt20.4a
 IF ~Gender(Player1,FEMALE)~ + lt20.4b
 END
 
 IF ~~ lt20.4a
-SAY ~'Twas the most amazing feeling I have ever had. You were amazing. I had never thought I would come to love such a thing...~
-= ~'Tis another feeling altogether, to be so close to you, to feel you, and...~
+SAY ~那是我有过的最奇妙的感觉。你太棒了。我从没想过我会喜欢这种事……~
+= ~离你这么近，感觉着你，完全是另一种感受，还有……~
 IF ~~ + lt20.5
 END
 
 IF ~~ lt20.4b
-SAY ~'Twas the most amazing feeling I have ever had... I had never thought I would come to love such a thing, and with another woman...~
-= ~You are so beautiful, so radiant, so...~
+SAY ~那是我有过的最奇妙的感觉……我从没想过我会喜欢这种事，而且是跟另一个女人……~
+= ~你真美，那样光彩照人，那样……~
 IF ~~ + lt20.5
 END
 
 IF ~~ lt20.5
-SAY ~(laugh) Am I being overly dramatic? 'Tis a little embarrassing.~
-= ~(She turns to her side to face you and lovingly brushes your face while smiling.)~
-= ~I love you, <CHARNAME>...~
-++ ~I love you too.~ + lt20.6
-++ ~We can have another go...~ + lt20.7
-++ ~Let's get dressed.~ + lt20.0
+SAY ~（笑）我是不是太夸张了？有点难为情。~
+= ~（她转过身来面对你，微笑著深情地抚你的脸。）~
+= ~我爱你，<CHARNAME>……~
+++ ~我也爱你。~ + lt20.6
+++ ~我们可以再来一次……~ + lt20.7
+++ ~我们穿衣服吧。~ + lt20.0
 END
 
 IF ~~ lt20.6
-SAY ~(She responds with several kisses over your chest, rising to your neck and face.)~
+SAY ~（她以几个吻回应在你的胸口，一路升到你的颈与脸。）~
 IF ~~ + lt20.8
 END
 
 IF ~~ lt20.7
-SAY ~(laugh) 'Tis a tempting offer, but...~
-= ~(She shakes her head.) No, we should not overindulge. We have more important matters at hand.~
+SAY ~（笑）这提议很诱人，可是……~
+= ~（她摇头。）不，我们不该过度放纵。我们手头有更要紧的事。~
 IF ~~ + lt20.8
 END
 
 IF ~~ lt20.8
-SAY ~Come, let us get dressed, my love. Once you are restored, perhaps we can consider what this has meant to us together... but I will treasure this memory forever.~
+SAY ~来吧，我们穿衣服，我的爱。等你复原之后，也许我们可以想想这对我们意味着什么……可我会永远珍藏这段记忆。~
 IF ~~ DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1) RealSetGlobalTimer("C0SireneLoveTimer","GLOBAL",3600)~ EXIT
 END
 END
@@ -4117,9 +4117,9 @@ END
 // Chapter 5.
 
 CHAIN IF ~Global("C0SireneChapter5","GLOBAL",1)~ THEN C0SIRE2J c5
-~The air is so heavy, and the darkness is overwhelming...~ [C0BLANK]
+~空气好沉重，黑暗压得人喘不过气……~ [C0BLANK]
 DO ~SetGlobal("C0SireneChapter5","GLOBAL",2)~
-= ~I thought the tales were exaggerating, but 'tis every bit as treacherous as they tell. Lead on, <CHARNAME>... we must always be on our guard here.~
+= ~我以为那些传说是夸大，可它跟人家说的一样凶险。带路吧，<CHARNAME>……在这里我们必须时刻戒备。~
 EXIT
 
 // Planar Sphere Abyss
@@ -4127,142 +4127,142 @@ EXIT
 APPEND C0SIRE2J
 
 IF ~Global("C0SireneAbyss","GLOBAL",1)~ C0SireneAbyss
-SAY ~Gods, this is worse than I could have imagined... I never thought that I would come here, of all places.~ [C0BLANK]
-+ ~CheckStatGT(Player1,13,INT)~ + ~What, the Abyss?~ + C0SireneAbyss1
-++ ~What do you mean?~ + C0SireneAbyss2
-++ ~Uh, yeah. Where are we exactly?~ + C0SireneAbyss2
-++ ~Let's just get what we came for and get back into the sphere, then.~ + C0SireneAbyss0
+SAY ~神明啊，这比我能想象的更糟……我从没想过我偏偏会来这里。~ [C0BLANK]
++ ~CheckStatGT(Player1,13,INT)~ + ~什么，深渊？~ + C0SireneAbyss1
+++ ~你什么意思？~ + C0SireneAbyss2
+++ ~呃，是啊。我们到底在哪里？~ + C0SireneAbyss2
+++ ~我们拿到要拿的就回球里去，然后走吧。~ + C0SireneAbyss0
 END
 
 IF ~~ C0SireneAbyss0
-SAY ~Aye... lead on.~
+SAY ~是的……带路吧。~
 IF ~~ DO ~SetGlobal("C0SireneAbyss","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneAbyss1
-SAY ~Aye, exactly. I was unsure at first, but with this feeling in my blood... no, I do not doubt it.~
+SAY ~是的，正是。我起初不确定，可凭着我血里的这种感觉……不，我不再怀疑。~
 IF ~~ + C0SireneAbyss3
 END
 
 IF ~~ C0SireneAbyss2
-SAY ~'Tis the Abyss, <CHARNAME>. Or at least, one layer of it. I was unsure at first, but with this feeling in my blood... no, I do not doubt it.~
+SAY ~这是深渊，<CHARNAME>。至少是它的一层。我起初不确定，可凭着我血里的这种感觉……不，我不再怀疑。~
 IF ~~ + C0SireneAbyss3
 END
 
 IF ~~ C0SireneAbyss3
-SAY ~I may have told you this before, but my fell lineage is said to have originated from the Nine Hells. Just as devils and demons oppose each other, my very presence in this place brings forth a fury, unlike anything I have ever felt before.~
-= ~I can suppress it for the brief time we must spend in this place, but... I do not enjoy being here.~
-++ ~I'm sorry. We'll be out of here as soon as we can.~ + C0SireneAbyss4
-++ ~Would you rather wait in the sphere instead?~ + C0SireneAbyss5
-++ ~As long as you don't decide to 'lose it' around me anytime soon.~ + C0SireneAbyss6
-++ ~Alright. We'll get what we came for and go back inside as soon as possible.~ + C0SireneAbyss0
+SAY ~我也许跟你讲过，据说我的魔性血脉源自九层地狱。正如魔鬼与恶魔彼此敌对，我在这地方的存在本身就会激起一股狂怒，那是我从未感受过的。~
+= ~在我们必须待在这地方的短时间里我能压住它，可是……我不喜欢在这里。~
+++ ~对不起。我们会尽快离开。~ + C0SireneAbyss4
+++ ~你宁愿在球里等着吗？~ + C0SireneAbyss5
+++ ~只要你别哪天在我旁边「失控」就行。~ + C0SireneAbyss6
+++ ~好。我们拿到东西就尽快回去。~ + C0SireneAbyss0
 END
 
 IF ~~ C0SireneAbyss4
-SAY ~There is no need to apologize, <CHARNAME>, but thank you regardless.~
+SAY ~不必道歉，<CHARNAME>，不过仍谢谢你。~
 IF ~~ DO ~SetGlobal("C0SireneAbyss","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneAbyss5
-SAY ~No. I would be more uncomfortable leaving you to face the denizens of the Abyss alone. Lead on.~
+SAY ~不。让你独自面对深渊的住民，我会更不舒服。带路吧。~
 IF ~~ DO ~SetGlobal("C0SireneAbyss","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneAbyss6
-SAY ~You may jest, <CHARNAME>, but in truth... it may actually happen. At the very least, I may act more wrathful in battle. Lead on.~
+SAY ~你可以开玩笑，<CHARNAME>，可说实话……那也许真会发生。至少战斗中我可能更暴烈。带路吧。~
 IF ~~ DO ~SetGlobal("C0SireneAbyss","GLOBAL",2)~ EXIT
 END
 
 // Temple of Lathander
 
 IF ~Global("C0SireneLathander","GLOBAL",1)~ C0SireneLathander
-SAY ~Magnificent... the faithful of Lathander truly have an eye for beauty.~ [C0BLANK]
-+ ~Kit(Player1,GODLATHANDER)~ + ~Our religion does encourage creativity, after all.~ + C0SireneLathander1
-++ ~It's quite something, I admit.~ + C0SireneLathander2
-++ ~Really? ...I don't see it.~ + C0SireneLathander3
-++ ~This? This is hideous! The designers' artistic sense is atrocious!~ + C0SireneLathander3
-++ ~If you say so.~ + C0SireneLathander0
+SAY ~真壮丽……兰森德尔的信徒确实懂得鉴赏美。~ [C0BLANK]
++ ~Kit(Player1,GODLATHANDER)~ + ~毕竟我们的宗教确实鼓励创造力。~ + C0SireneLathander1
+++ ~我承认，这确实不凡。~ + C0SireneLathander2
+++ ~是吗？……我看不出来。~ + C0SireneLathander3
+++ ~这个？这丑死了！设计者的艺术感糟透了！~ + C0SireneLathander3
+++ ~你这么说就这么说吧。~ + C0SireneLathander0
 END
 
 IF ~~ C0SireneLathander0
-SAY ~I- I apologize for being distracted. I know we have not come for sightseeing. Please, lead on.~
+SAY ~我——我为分心道歉。我知道我们不是来观光的。请带路吧。~
 IF ~~ DO ~SetGlobal("C0SireneLathander","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneLathander1
-SAY ~(smile) Truly, I do not think I have ever mentioned how much I admire your faith. Had I been raised amongst your clergy, I think I would have embraced it as much as Ilmater's teachings.~
+SAY ~（微笑）真的，我想我从没提过我多钦佩你的信仰。若我在你的教士中间长大，我想我会像接受伊尔梅特的教导一样接受它。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4a
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4b
 END
 
 IF ~~ C0SireneLathander2
-SAY ~I am happy to know you feel the same. But 'tis more than the beauty that attracts me. I have always admired the beliefs of those who worship the Morninglord. I think if my circumstances were different, I would have embraced it as much as Ilmater's teachings.~
+SAY ~很高兴知道你也有同感。不过吸引我的不只是美。我一直钦佩敬拜晨光之主者的信念。我想若我的境遇不同，我会像接受伊尔梅特的教导一样接受它。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4a
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4b
 END
 
 IF ~~ C0SireneLathander3
-SAY ~Well, erm... to each <PRO_HISHER> own, I suppose.~
+SAY ~嗯，呃……各人有各人的看法吧。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4a
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4b
 END
 
 IF ~~ C0SireneLathander4a
-SAY ~'Tis nostalgic, as well. After all, we met outside of a temple of Lathander, did we not? I think that, in a way, 'tis good fortune when my path crosses with that of the Morninglord.~
+SAY ~这也让人怀旧。毕竟我们是在兰森德尔神殿外相遇的，不是吗？我想某种意义上，我的路与晨光之主交错是种福气。~
 IF ~~ + C0SireneLathander5
 END
 
 IF ~~ C0SireneLathander4b
-SAY ~While I travelled the Sword Coast, I crossed the Beregost's temple of Lathander. There was beauty there, but 'twas in its simplicity. This is entirely different. 'Tis as though this temple were made by more than the hands of mortals.~
+SAY ~我在剑湾旅行时，曾经过贝雷戈斯特的兰森德尔神殿。那里也有美，可那是朴素之美。这里完全不同。这神殿仿佛不是凡人双手所能造出。~
 IF ~~ + C0SireneLathander5
 END
 
 IF ~~ C0SireneLathander5
-SAY ~But... 'tis more than just the beauty of this temple that fills me with joy.~
-= ~Though the faiths of Lathander and Ilmater are different in many ways, their portfolios are closely aligned. While Ilmater governs endurance and perserverance, Lathander brings forth the vitality and renewal that follows. As such, I hope you can understand why I consider the followers of the Morninglord almost to be those of my own faith.~
-= ~Oh... I have spoken for too long as is. Forgive me, I did not mean to lecture you. We should carry on.~
+SAY ~可是……让我满心喜悦的不只是这神殿的美。~
+= ~虽然兰森德尔与伊尔梅特的信仰在许多方面不同，他们的神职却紧密相连。伊尔梅特执掌忍耐与坚持，兰森德尔则带来随之而来的生机与更新。因此，我希望你能明白我为何几乎把晨光之主的信徒看作我自己信仰的人。~
+= ~哦……我已经说得太久了。原谅我，我不是想给你说教。我们该继续了。~
 IF ~~ DO ~SetGlobal("C0SireneLathander","GLOBAL",2)~ EXIT
 END
 
 // Tanner's basement
 
 IF ~Global("C0SireneTanner","GLOBAL",1) Global("EnteredTanner","GLOBAL",1)~ C0SireneTannerBasement
-SAY ~Ilmater's mercy, what atrocities have been committed here... these bodies have been defiled beyond restoration. I can only pray they did not suffer before they died.~ [C0BLANK]
-= ~Step carefully, <CHARNAME>. I can only imagine what mechanisms the murderer must have set up for us.~
+SAY ~伊尔梅特的慈悲，这里发生过何等暴行……这些遗体被亵渎得无法复原。我只能祈祷他们死前没有受苦。~ [C0BLANK]
+= ~小心脚下，<CHARNAME>。我只能想象那凶手给我们设了什么机关。~
 IF ~~ DO ~SetGlobal("C0SireneTanner","GLOBAL",2)~ EXIT
 END
 
 // Neb's head
 
 IF ~Global("C0SireneNebHead","GLOBAL",1)~ C0SireneNebHead
-SAY ~Despicable wretch... if nothing else, 'tis at least a relief to know that his atrocities are at an end.~ [C0BLANK]
-= ~*sigh* We should take the fiend's head to the local authorities. Small comfort for the children, but... t'would be best if the law knew of this.~
+SAY ~卑劣的恶棍……至少知道他的暴行到头了，也算一件宽慰。~ [C0BLANK]
+= ~（叹气）我们该把这恶魔的头交给当地官署。对孩子们来说算不了什么安慰，可是……最好让律法知道这事。~
 IF ~~ DO ~SetGlobal("C0SireneNebHead","GLOBAL",2)~ EXIT
 END
 
 // Demogorgon's shrine
 
 IF ~Global("C0SireneDemogorgon","GLOBAL",2)~ C0SireneDemogorgon
-SAY ~This... this place emanates evil from every stone, <CHARNAME>. We should not be here.~ [C0BLANK]
-++ ~What do you mean?~ DO ~SetGlobal("C0SireneDemogorgon","GLOBAL",3)~ + C0SireneDemogorgon2
-++ ~There's something strange about that statue.~ DO ~SetGlobal("C0SireneDemogorgon","GLOBAL",3)~ + C0SireneDemogorgon2
+SAY ~这……这地方每块石头都散着邪恶，<CHARNAME>。我们不该在这里。~ [C0BLANK]
+++ ~你什么意思？~ DO ~SetGlobal("C0SireneDemogorgon","GLOBAL",3)~ + C0SireneDemogorgon2
+++ ~那尊雕像有点古怪。~ DO ~SetGlobal("C0SireneDemogorgon","GLOBAL",3)~ + C0SireneDemogorgon2
 END
 
 IF ~~ C0SireneDemogorgon2
-SAY ~I... I can scarcely believe it, but this is a shrine to the Prince of Demons, <CHARNAME>. I cannot imagine why there is such a place here, but...~
-= ~It cannot be anything else. I have seen that effigy's likeness once, in a tome within the library of Ilmater's temple. And... my blood is reacting with fear and hatred just by being here.~
-= ~We must not remain, <CHARNAME>. I feel an unnatural urge to smash everything in this room, and doing so would only draw the ire of the demon, or that of his servants.~
-++ ~Then we will leave immediately.~ + C0SireneDemogorgon3
-++ ~Just a moment. I want to look around a bit first.~ + C0SireneDemogorgon4
+SAY ~我……我几乎不敢相信，可这是恶魔王子的神龛，<CHARNAME>。我无法想象这里为何会有这样的地方，可是……~
+= ~不可能有别的解释。我在伊尔梅特神殿藏书的一卷书里见过那雕像的形貌。而且……光是待在这里，我的血就在恐惧与憎恨中反应。~
+= ~我们不能留下，<CHARNAME>。我有种不自然的冲动想砸碎这房间的一切，而那样只会招来那恶魔或他仆从的怒火。~
+++ ~那我们立刻离开。~ + C0SireneDemogorgon3
+++ ~就一会儿。我想先四处看看。~ + C0SireneDemogorgon4
 END
 
 IF ~~ C0SireneDemogorgon3
-SAY ~Yes, that would be for the best. Thank you... <CHARNAME>.~
+SAY ~是的，那样最好。谢谢你……<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ C0SireneDemogorgon4
-SAY ~If you must... though I advise that you avoid the statue at all costs. Even touching it may draw the demon's attention.~
+SAY ~若你非要……不过我劝你千万别靠近那雕像。连碰它都可能引来那恶魔的注意。~
 IF ~~ EXIT
 END
 END
@@ -4270,30 +4270,30 @@ END
 // Given Carsomyr
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneCarsomyr","GLOBAL",1)~ THEN C0SIRE2J C0SireneCarsomyr
-~Wh-what is the meaning of this, <CHARNAME>?~ [C0BLANK]
+~这——这是什么意思，<CHARNAME>？~ [C0BLANK]
 DO ~SetGlobal("C0SireneCarsomyr","GLOBAL",2)~
 END
-++ ~Meaning of what? Is there something wrong?~ + C0SireneCarsomyr2
-++ ~I'm giving you a sword. Is there a problem?~ + C0SireneCarsomyr2
+++ ~什么意思？有什么不对吗？~ + C0SireneCarsomyr2
+++ ~我给你一把剑。有问题吗？~ + C0SireneCarsomyr2
 
 APPEND C0SIRE2J
 
 IF ~~ C0SireneCarsomyr2
-SAY ~<CHARNAME>, you know not what you speak of. This... this blade is a holy avenger! Only the greatest of paladins are ever granted the honor...~
-++ ~It is? Er... I didn't know that.~ + C0SireneCarsomyr3
+SAY ~<CHARNAME>，你不知道自己在说什么。这……这把剑是神圣复仇者！只有最伟大的圣武士才蒙赐这样的荣耀……~
+++ ~是吗？呃……我不知道。~ + C0SireneCarsomyr3
 + ~OR(3)
 False()
 !Class(Player1,PALADIN)
-Kit(Player1,Blackguard)~ + ~Well, then it's a perfect match for you.~ + C0SireneCarsomyr4a
+Kit(Player1,Blackguard)~ + ~嗯，那它跟你正相配。~ + C0SireneCarsomyr4a
 + ~!Kit(Player1,Blackguard)
 True()
 Class(Player1,PALADIN)
-!FallenPaladin(Player1)~ + ~Well, then it's a perfect match for you.~ + C0SireneCarsomyr4b
-++ ~Can you wield it or not?~ + C0SireneCarsomyr5
+!FallenPaladin(Player1)~ + ~嗯，那它跟你正相配。~ + C0SireneCarsomyr4b
+++ ~你到底能不能用？~ + C0SireneCarsomyr5
 END
 
 IF ~~ C0SireneCarsomyr3
-SAY ~You should not speak so lightly of such a thing, <CHARNAME>. Such a blade can only be wielded by the purest of heart. As for whether I could...~
+SAY ~你不该这样轻率地说这种事，<CHARNAME>。这样的剑只有最纯净的心才能使用。至于我能不能……~
 IF ~OR(3)
 False()
 !Class(Player1,PALADIN)
@@ -4305,17 +4305,17 @@ Class(Player1,PALADIN)
 END
 
 IF ~~ C0SireneCarsomyr4a
-SAY ~No... no, I could not. I do not believe myself worthy.~
+SAY ~不……不，我不能。我不觉得自己配得上。~
 IF ~~ + C0SireneCarsomyr6
 END
 
 IF ~~ C0SireneCarsomyr4b
-SAY ~No... no, I could not. I do not believe myself worthy. If anyone deserves to wield such a blade, it should be you.~
+SAY ~不……不，我不能。我不觉得自己配得上。若有人配用这样的剑，那该是你。~
 IF ~~ + C0SireneCarsomyr6
 END
 
 IF ~~ C0SireneCarsomyr5
-SAY ~Well... yes, perhaps I could, but...~
+SAY ~嗯……是的，也许我能，可是……~
 IF ~OR(3)
 False()
 !Class(Player1,PALADIN)
@@ -4327,215 +4327,215 @@ Class(Player1,PALADIN)
 END
 
 IF ~~ C0SireneCarsomyr6
-SAY ~I do not deserve to wield such a blade, even if I could. My blood is tainted... even to touch it, never mind wield it, puts it ill at ease. 'Tis made for greater hands than mine.~
+SAY ~即使我能，我也不配用这样的剑。我的血被污了……连碰它都会让它不安，更别说使用。它是为比我更伟大的手打造的。~
 + ~!Kit(Player1,Blackguard)
 True()
 Class(Player1,PALADIN)
-!FallenPaladin(Player1)~ + ~You're just as worthy of wielding this blade as I am. Take it.~ + C0SireneCarsomyr7
-++ ~I think you're being too hard on yourself. Fiendish blood or no, the sword accepts you. You should wield it with pride.~ + C0SireneCarsomyr7
-++ ~I won't force you to use it, if you truly don't want to.~ + C0SireneCarsomyr8
-++ ~Your choice.~ + C0SireneCarsomyr8
+!FallenPaladin(Player1)~ + ~你跟我一样配用这把剑。拿着。~ + C0SireneCarsomyr7
+++ ~我觉得你对自己太苛刻了。不管有没有魔性血脉，这剑接受了你。你该带着自豪使用它。~ + C0SireneCarsomyr7
+++ ~你若真不愿意，我不会强迫你用。~ + C0SireneCarsomyr8
+++ ~你自己决定。~ + C0SireneCarsomyr8
 END
 
 IF ~~ C0SireneCarsomyr7
-SAY ~Yes... you are correct, of course. If the blade considers me worthy... then by all rights I should carry it with pride.~
-= ~Truth be told, I have always dreamed of wielding such a blade in Ilmater's name, since the day I read its name. But never would I have imagined that my dream would come true... thank you for believing in me, <CHARNAME>.~
+SAY ~是的……你说得当然对。若这剑认为我配得上……那我理当带着自豪携带它。~
+= ~说实话，自从我读到它名字的那天，我就一直梦想以伊尔梅特之名使用这样的剑。可我从未想象梦想会成真……谢谢你相信我，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ C0SireneCarsomyr8
-SAY ~*sigh* I cannot be selfish, can I? If the blade considers me worthy, then by all rights I should accept the honor. For now, I will wield the blade, so long as it allows me.~
+SAY ~（叹气）我不能自私，对吧？若这剑认为我配得上，那我理当接受这份荣耀。眼下，只要它允许，我就使用这把剑。~
 IF ~~ EXIT
 END
 
 // Post-Daeron encounter
 
 IF ~Global("C0SireneDaeron","GLOBAL",2)~ daeron
-SAY ~How... how could this have come to pass?~ [C0BLANK]
-+ ~Global("C0SireneDaeronExecute","GLOBAL",1)~ + ~You did what you had to, Sirene.~ + daeron1
-+ ~Global("C0SireneDaeronKill","GLOBAL",1)~ + ~You did what you had to, Sirene.~ + daeron2
-+ ~Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~You did what you had to, Sirene.~ + daeron3
-+ ~Global("C0SireneDaeronRedeem","GLOBAL",1)~ + ~You did what you had to, Sirene.~ + daeron4
-++ ~Think about it later. Right now, we need to move on.~ + daeron0
+SAY ~怎……怎会走到这一步？~ [C0BLANK]
++ ~Global("C0SireneDaeronExecute","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron1
++ ~Global("C0SireneDaeronKill","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron2
++ ~Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron3
++ ~Global("C0SireneDaeronRedeem","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron4
+++ ~以后再想。现在我们必须往前走。~ + daeron0
 END
 
 IF ~~ daeron0
-SAY ~This... this has been quite the revelation for me, <CHARNAME>. I... I will have to come to terms with it in time.~
+SAY ~这……这对我来说是相当大的启示，<CHARNAME>。我……我会慢慢接受它。~
 IF ~~ DO ~SetGlobal("C0SireneDaeron","GLOBAL",3)~ EXIT
 END
 
 IF ~~ daeron1
-SAY ~That... that is not what I mean, <CHARNAME>. This was the right thing to do, I know it. But...~
+SAY ~那……那不是我的意思，<CHARNAME>。这是该做的事，我知道。可是……~
 IF ~~ + daeron5
 END
 
 IF ~~ daeron2
-SAY ~I... I have just slain my fellow brothers and sisters, when I had sworn to myself never to harm another of my faith. Yet... this was the *right* thing to do?~
+SAY ~我……我刚杀了我的兄弟姐妹，而我曾发誓绝不伤害另一个同信者。可这……这是*该做*的事吗？~
 IF ~~ + daeron5
 END
 
 IF ~~ daeron3
-SAY ~I did nothing, <CHARNAME>. Even knowing what Daeron did, I did nothing. I allowed him to leave, to escape from judgment. How could this have been right?~
+SAY ~我什么都没做，<CHARNAME>。即使知道戴伦做了什么，我也什么都没做。我放他走了，让他逃过审判。这怎么可能是对的？~
 IF ~~ + daeron5
 END
 
 IF ~~ daeron4
-SAY ~That is not what I mean, <CHARNAME>. Daeron will face proper judgment for what he has done, but...~
+SAY ~我不是那个意思，<CHARNAME>。戴伦会为他的所作所为受到应有的审判，可是……~
 IF ~~ + daeron5
 END
 
 IF ~~ daeron5
-SAY ~Ilmater *supported* him, <CHARNAME>. He knew everything Daeron was doing, but continued to give him power, continued to make him believe that what he was doing was righteous. Why... why did my lord not stop him? How could he allow this to happen?~
-= ~I have never doubted Ilmater in my life, only my own ability to serve him. Yet after what I have seen, I wonder if... if he is all that I believed him to be.~
-++ ~Perhaps Ilmater pitied him. Even Daeron believed himself that what he did was right, after all.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron6
-++ ~You can't doubt your god, Sirene. Ilmater trusts his followers to do his will, and you must continue, regardless of how others abuse that trust.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",2)~ + daeron7
-+ ~!Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~Gods act in strange ways, Sirene. Perhaps you were always meant to be the one to stop him.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron8
-++ ~What can I say? Maybe you're right.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + daeron9
-++ ~You don't need Ilmater to tell you what's right and what's wrong, Sirene. You can trust yourself to judge that.~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-2)~ + daeron10
-++ ~Think on it. I'm afraid I can't help you much on this.~ + daeron0
+SAY ~伊尔梅特*支持*了他，<CHARNAME>。他清楚戴伦所做的一切，却继续赐他力量，继续让他相信自己所做的是正义的。为什么……为什么我的主不阻止他？他怎么能让这种事发生？~
+= ~我一生从未怀疑过伊尔梅特，只怀疑我服侍他的能力。可在见了我所见的事之后，我在想……他是否真如我所信的那样。~
+++ ~也许伊尔梅特怜悯他。毕竟连戴伦自己也相信他所做的是对的。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron6
+++ ~你不能怀疑你的神，塞琳。伊尔梅特信任他的信徒去行他的旨意，而你必须继续，无论别人如何滥用这份信任。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",2)~ + daeron7
++ ~!Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~神明行事的方式很古怪，塞琳。也许你本就是注定要阻止他的那个人。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron8
+++ ~我能说什么？也许你说得对。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + daeron9
+++ ~你不需要伊尔梅特告诉你什么是对、什么是错，塞琳。你可以相信自己来判断。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-2)~ + daeron10
+++ ~想想吧。这方面我怕帮不上你多少。~ + daeron0
 END
 
 IF ~~ daeron6
-SAY ~You may be right. Perhaps Ilmater hoped that Daeron would see the truth and repent before things came to this... but if that is so, then he was wrong, was he not?~
+SAY ~你也许说得对。也许伊尔梅特本希望戴伦在看到真相后、在事情走到这一步之前悔改……可若是那样，那他就错了，不是吗？~
 IF ~~ + daeron11
 END
 
 IF ~~ daeron7
-SAY ~Perhaps... perhaps I am wrong to doubt.~
+SAY ~也许……也许我怀疑是错的。~
 IF ~~ + daeron11
 END
 
 IF ~~ daeron8
-SAY ~Why? Why would he... require me to do this? Why could he not prevent this with his own guidance?~
+SAY ~为什么？他为什么……要我做这个？为什么他不能用他自己的指引来阻止这一切？~
 IF ~~ + daeron11
 END
 
 IF ~~ daeron9
-SAY ~I hope I am wrong, <CHARNAME>. By the gods, I truly wish I am wrong.~
+SAY ~我希望我错了，<CHARNAME>。神明在上，我真希望我错了。~
 IF ~~ + daeron11
 END
 
 IF ~~ daeron10
-SAY ~I shall... think of that.~
-= ~Gods, I cannot believe I am truly thinking of this. 'Twould be a betrayal of everything I have learned...~
+SAY ~我会……想想这个。~
+= ~神明啊，我不敢相信我真在想这个。这会是背叛我学过的一切……~
 IF ~~ + daeron11
 END
 
 IF ~~ daeron11
-SAY ~*sigh* This is my burden to bear, <CHARNAME>, not yours. I am sorry for taking up so much of your time. We should move on.~
+SAY ~（叹气）这是我的担子，<CHARNAME>，不是你的。抱歉占了你这么多时间。我们该走了。~
 IF ~~ DO ~SetGlobal("C0SireneDaeron","GLOBAL",3)~ EXIT
 END
 // Messenger
 
 IF ~Global("C0SireneMessenger","GLOBAL",2)~ C0SireneLetter
-SAY ~(Sirene is reading the letter intently; her expression suddenly darkens)~ [C0BLANK]
-= ~'...If you wish to know the truth of all your sins, meet me at the location below'... 'T.D.T'. What could this possibly mean?~
-+ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~Is this from that conjurer we encountered during the journey to Dragonspear Castle?~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
-++ ~Do you know who wrote this letter?~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
-++ ~We have no time for distractions, Sirene.~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
+SAY ~（塞琳专心读着那封信；她的表情忽然阴沉下来。）~ [C0BLANK]
+= ~「……你若想知道你一切罪的真相，就在下面这地点见我」……「T.D.T」。这可能是什么意思？~
++ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~这是我们在去龙矛堡垒途中遇见的那个召唤师写的吗？~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
+++ ~你知道这封信是谁写的吗？~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
+++ ~我们没时间分心，塞琳。~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
 END
 
 IF ~~ C0SireneLetter1
-SAY ~I cannot be certain... but this letter mentions the encounter at Dead Man's Pass. It can only be...~
-= ~The one who wrote this letter... I know not who he is, but from what little I learned from our previous encounter, he knows about my past. Before he attempted to kill me, he called me 'kinslayer'.~
-= ~This will likely be dangerous, but... I wish to speak with this 'T.D.T'. Though with such hostility in his message, I do not doubt there will be violence.~
-++ ~I'm not sure that's a good idea. This reeks of a trap.~ + C0SireneLetter2
-++ ~Well, what are we waiting for? Let's go find him.~ + C0SireneLetter2
-++ ~We have greater priorities, Sirene. I can't waste time chasing after strangers.~ + C0SireneLetter2
+SAY ~我不能确定……可这封信提到了死人隘口的遭遇。只能是……~
+= ~写这封信的人……我不知道他是谁，可从我上次遭遇中了解的那一点点看，他知道我的过去。在他想杀我之前，他叫我「弑亲者」。~
+= ~这多半会很危险，可是……我想跟这个「T.D.T」谈谈。虽然他信里满是敌意，我不怀疑会有暴力。~
+++ ~我不确定这是个好主意。这满是陷阱的味道。~ + C0SireneLetter2
+++ ~嗯，我们还在等什么？去找他吧。~ + C0SireneLetter2
+++ ~我们有更优先的事，塞琳。我不能浪费时间追陌生人。~ + C0SireneLetter2
 END
 
 IF ~~ C0SireneLetter2
-SAY ~I... cannot ask for your aid in this, <CHARNAME>. This man is powerful, and I cannot allow you to risk your life for my sake. The matter of your soul is still my highest priority.~
-= ~Though... I need to know what this man wishes of me, and what he knows of my past. If... if you would allow it, we can reach the location drawn on this letter via the City Gates. But I will not force you to do so.~
-= ~The decision is ultimately yours, <CHARNAME>. I do not doubt that this will be dangerous, but... I would not want such an opportunity to simply pass by.~
+SAY ~我……这事我不能求你相助，<CHARNAME>。这人很强，我不能让你为我冒性命。你灵魂的事仍是我最优先的。~
+= ~不过……我需要知道这人想对我做什么，他知道我过去的什么。若……若你允许，我们可以从城门区到信上画的地点。可我不会强迫你。~
+= ~决定终究在你，<CHARNAME>。我不怀疑这会危险，可是……我不愿这样的机会就这么错过。~
 IF ~~ EXIT
 END
 
 // T'samon's Camp
 
 IF ~Global("C0SIR1SireneArea","C0SIR1",1)~ C0SireneArea
-SAY ~I believe this is the place. 'Tis very ominous... look at the ground, <CHARNAME>. It looks as though it has been poisoned. There is also a strange presence, as though there are hidden enemies around every corner.~ [C0BLANK]
-= ~I suggest we prepare for battle just in case. This place makes me feel uneasy, to say the least.~
+SAY ~我想就是这里了。很不祥……看这地面，<CHARNAME>。它像是被毒过。还有一种古怪的存在感，仿佛每个转角都藏着敌人。~ [C0BLANK]
+= ~我建议我们以防万一先做好战斗准备。至少可以说，这地方让我不安。~
 IF ~~ DO ~SetGlobal("C0SIR1SireneArea","C0SIR1",2)~ EXIT
 END
 
 // Post-encounter
 
 IF ~Global("C0SirenePostEncounter","GLOBAL",1)~ C0SirenePostEncounter
-SAY ~...~ [C0BLANK]
+SAY ~……~ [C0BLANK]
 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ + C0SirenePostEncounter1
 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + C0SirenePostEncounter2
 END
 
 IF ~~ C0SirenePostEncounter1
-SAY ~He is gone. I wonder if I will ever see him again.~
-++ ~Are you alright?~ + C0SirenePostEncounter3
-++ ~If so, I hope he returns a changed man.~ + C0SirenePostEncounter4
-++ ~Would you want that?~ + C0SirenePostEncounter5
+SAY ~他走了。我在想我还会不会再见到他。~
+++ ~你还好吗？~ + C0SirenePostEncounter3
+++ ~若是如此，我希望他回来时已变了个人。~ + C0SirenePostEncounter4
+++ ~你希望那样吗？~ + C0SirenePostEncounter5
 END
 
 IF ~~ C0SirenePostEncounter2
-SAY ~'Tis done. Of all those I have been forced to kill, this was... by far the most difficult. It has cost me much.~
-++ ~Are you alright?~ + C0SirenePostEncounter6
-++ ~You weren't forced to kill him. You chose it yourself.~ + C0SirenePostEncounter7
-++ ~Perhaps, but you are free now, are you not?.~ + C0SirenePostEncounter8
+SAY ~做完了。在我被迫杀过的人里，这一次……是最难的。这让我付出许多。~
+++ ~你还好吗？~ + C0SirenePostEncounter6
+++ ~你不是被迫杀他。是你自己选择的。~ + C0SirenePostEncounter7
+++ ~也许，可你如今自由了，不是吗？~ + C0SirenePostEncounter8
 END
 
 IF ~~ C0SirenePostEncounter3
-SAY ~No, not right now, but... I think I will be, in time.~
+SAY ~不，现在还不算，可是……我想随着时间会吧。~
 IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter4
-SAY ~Aye... I hope so as well.~
+SAY ~是的……我也希望如此。~
 IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter5
-SAY ~I... am not sure. Perhaps, one day.~
+SAY ~我……不确定。也许有一天吧。~
 IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter6
-SAY ~No. I feel... angry. Almost betrayed.~
-= ~Yet, strangely, I also feel relieved, as though a great burden has left me. 'Tis a difficult feeling to describe.~
+SAY ~不。我觉得……愤怒。几乎像是被背叛。~
+= ~可奇怪的是，我也觉得解脱，仿佛一副重担离我而去。这感觉很难形容。~
 IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter7
-SAY ~Aye, I did. But whether 'twas right or wrong, I can only decide for myself. I have lost Ilmater's favor with this action, and his guidance with it.~
+SAY ~是的，我做了。可这是对是错，我只能自己判断。这一举动让我失去了伊尔梅特的眷顾，也失去了他的指引。~
 IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter8
-SAY ~Free? Aye... I suppose that I am.~
+SAY ~自由？是的……我想我是自由了。~
 IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter9
-SAY ~I... I require some time to think, <CHARNAME>. I need to... reflect on how this has changed me. Perhaps we can talk later.~
+SAY ~我……我需要一些时间思考，<CHARNAME>。我需要……想一想这如何改变了我。也许我们改天再谈。~
 IF ~~ DO ~SetGlobal("C0SirenePostEncounter","GLOBAL",2)~ EXIT
 END
 
 // New Power
 
 IF ~Global("C0SireneNewPowers","GLOBAL",2)~ C0SireneNewPowers
-SAY ~<CHARNAME>, since our encounter with... my brother, T'samon, I have taken time to reflect upon my actions, and there have been some... developments in my power.~ [C0BLANK]
+SAY ~<CHARNAME>，自从我们遇上……我兄弟特萨蒙之后，我用了些时间反思我的行为，而我的力量也有了一些……变化。~ [C0BLANK]
 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ + C0SireneNewPowers1
 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + C0SireneNewPowers2
 END
 
 IF ~~ C0SireneNewPowers1
-SAY ~I have prayed to Ilmater for guidance... and I believe he has shown his favor towards my decision of mercy by granting me a special boon.~
-= ~My healing touch has become stronger, and I can now purge others of their ailments of both body and mind and protect them from such afflictions for a short while afterwards.~
-= ~It may take some time to become accustomed to this new power... I doubt I could draw upon it more than once a day. But I think 'twill be a valuable asset to our cause.~
+SAY ~我向伊尔梅特祈祷指引……我相信他以赐我一份特殊的恩惠，表明他赞许我选择仁慈。~
+= ~我的治疗之触变强了，如今我能驱除他人身与心的疾病，并在之后一小段时间里保护他们免于此等病痛。~
+= ~要习惯这新力量也许需要些时间……我怀疑我一天用不了超过一次。可我想这会是我们目标的可贵助力。~
 IF ~~ DO ~AddSpecialAbility("C0ILMN4") SetGlobal("C0SireneNewPowers","GLOBAL",3)~ EXIT
 END
 
 IF ~~ C0SireneNewPowers2
-SAY ~Since I relinquished the boons granted to me by Ilmater, I have... made efforts to relearn the powers from my heritage, so that I will not become a burden to you.~
-= ~It has been many years since I have attempted using my tiefling powers, and they are weaker than I remember them, but I still have enough control to use them as I please to a limited extent.~
-= ~My infernal blood allows me to unleash flames from my hands, conceal myself with a distorted illusion and even strike others blind with a glance... all vicious powers, which I had once sworn a vow never to use. But... I am not bound by that anymore, and without my former powers, I fear I will need them.~
+SAY ~自从我放弃伊尔梅特赐我的恩惠以来，我……努力重新学习我血脉里的力量，好不成为你的负担。~
+= ~我已有许多年没试着用我的提夫林力量了，它们比我记得的弱，可我仍有足够的控制，能在有限范围内随意使用。~
+= ~我魔性的血让我能从手中放火，用扭曲的幻象藏身，甚至一眼击瞎别人……全是凶恶的力量，我曾发誓绝不使用。可是……我再不受那誓约束缚，而没有从前的力量，我怕我会需要它们。~
 IF ~~ DO ~AddSpecialAbility("C0SBLIND")
 AddSpecialAbility("C0SBURN")
 AddSpecialAbility("C0SBLUR") SetGlobal("C0SireneNewPowers","GLOBAL",3)~ EXIT
@@ -4544,180 +4544,180 @@ END
 // Chapter 6 - Pre-Bodhi talk
 
 IF ~Global("C0SireneC6BodhiTalk","GLOBAL",1)~ C0SireneC6Bodhi
-SAY ~Wait, <CHARNAME>... I need to speak with you.~ [C0BLANK]
-++ ~I'm listening, what is it?~ DO ~SetGlobal("C0SireneC6BodhiTalk","GLOBAL",2)~ + C0SireneC6Bodhi1
-++ ~Not right now. We've got a task to complete.~ DO ~SetGlobal("C0SireneC6BodhiTalk","GLOBAL",2)~ + C0SireneC6Bodhi2
+SAY ~等等，<CHARNAME>……我需要跟你谈谈。~ [C0BLANK]
+++ ~我在听，什么事？~ DO ~SetGlobal("C0SireneC6BodhiTalk","GLOBAL",2)~ + C0SireneC6Bodhi1
+++ ~现在不行。我们有个任务要完成。~ DO ~SetGlobal("C0SireneC6BodhiTalk","GLOBAL",2)~ + C0SireneC6Bodhi2
 END
 
 IF ~~ C0SireneC6Bodhi1
-SAY ~We are soon to face the first of our two main adversaries, but... there is something you must know before we go on.~
-= ~I had... a vision, not long after we saw the light once more. I think... 'twas a warning. A warning from Ilmater.~
-++ ~What was it?~ + C0SireneC6Bodhi3
-++ ~Are you all right?~ + C0SireneC6Bodhi4
-++ ~We have no time to listen to your dreams, <CHARNAME>.~ + C0SireneC6Bodhi5
+SAY ~我们很快要面对两个主要敌人中的第一个，可是……在我们继续之前，有些事你必须知道。~
+= ~我……在我们再次看见光之后不久，得了一个幻象。我想……那是警告。来自伊尔梅特的警告。~
+++ ~是什么？~ + C0SireneC6Bodhi3
+++ ~你还好吗？~ + C0SireneC6Bodhi4
+++ ~我们没时间听你的梦，<CHARNAME>。~ + C0SireneC6Bodhi5
 END
 
 IF ~~ C0SireneC6Bodhi2
-SAY ~I know. That I why I must speak with you now. Please listen to me, <CHARNAME>.~
+SAY ~我知道。所以我现在必须跟你说。求你听我说，<CHARNAME>。~
 IF ~~ + C0SireneC6Bodhi1
 END
 
 IF ~~ C0SireneC6Bodhi3
-SAY ~In my vision, I saw... death. My death.~
-++ ~What?!~ + C0SireneC6Bodhi6
-++ ~Go on...~ + C0SireneC6Bodhi6
+SAY ~在幻象里，我看见……死亡。我的死亡。~
+++ ~什么？！~ + C0SireneC6Bodhi6
+++ ~说下去……~ + C0SireneC6Bodhi6
 END
 
 IF ~~ C0SireneC6Bodhi4
-SAY ~I... I will be, in due time. I think...~
+SAY ~我……到时候我会的。我想……~
 IF ~~ + C0SireneC6Bodhi3
 END
 
 IF ~~ C0SireneC6Bodhi5
-SAY ~'Twas no mere dream, <CHARNAME>. This concerns us both. Please, just listen to me!~
+SAY ~那不只是梦，<CHARNAME>。这关系我们两个。求你，听我说！~
 IF ~~ + C0SireneC6Bodhi3
 END
 
 IF ~~ C0SireneC6Bodhi6
-SAY ~I... I was lying on cold stone, my vision blurred. You were not there... but I was not alone. That vampire... Bodhi was with me, her lips at my throat.~
-= ~I felt pain... unbearable pain as I felt her fangs. Then... nothing. No pain, nor warmth... I felt evil within me, manifesting into an inhuman hunger... threatening to tear me apart from within if I did not sate it.~
-= ~Then... I saw you, <CHARNAME>, and all I felt was that hunger. I could not stop myself from leaping towards you and...~
-= ~(She lets out a pained groan and grasps her forehead.)~
-++ ~So... you saw her turning you into a vampire?~ + C0SireneC6Bodhi7
-++ ~But... but that's nothing more than a dream, right?~ + C0SireneC6Bodhi8
-++ ~What could it possibly mean?~ + C0SireneC6Bodhi7
-++ ~(Embrace her)~ + C0SireneC6Bodhi9
+SAY ~我……我躺在冰冷的石头上，视线模糊。你不在那里……可我不是独自一人。那个吸血鬼……波迪和我在一起，她的唇贴在我的喉上。~
+= ~我感觉到痛……难以忍受的痛，当我感觉到她的尖牙。然后……什么都没有。没有痛，也没有温暖……我感觉到体内的邪恶，化成一种非人的饥渴……若我不满足它，它威胁要把我从内部撕开。~
+= ~然后……我看见了你，<CHARNAME>，而我所感觉到的只有那饥渴。我止不住自己向你扑去，然后……~
+= ~（她发出一声痛苦的呻吟，抓住自己的额头。）~
+++ ~那么……你看见她把你变成吸血鬼？~ + C0SireneC6Bodhi7
+++ ~可……可那不过是个梦，对吧？~ + C0SireneC6Bodhi8
+++ ~那可能是什么意思？~ + C0SireneC6Bodhi7
+++ ~（抱住她）~ + C0SireneC6Bodhi9
 END
 
 IF ~~ C0SireneC6Bodhi7
-SAY ~It... it must be a warning from Ilmater. I can see no other possibility...~
+SAY ~那……那必定是伊尔梅特的警告。我看不出别的可能……~
 IF ~~ + C0SireneC6Bodhi10
 END
 
 IF ~~ C0SireneC6Bodhi8
-SAY ~I... I do not think so, <CHARNAME>. It must have been a glimpse into the future.~
+SAY ~我……我不这么想，<CHARNAME>。那必是对未来的一瞥。~
 IF ~~ + C0SireneC6Bodhi10
 END
 
 IF ~~ C0SireneC6Bodhi9
-SAY ~<CHARNAME>... (she clings to you desperately, as though afraid you will disappear if she lets go)~
+SAY ~<CHARNAME>……（她绝望地抓着你，仿佛怕一松手你就会消失）~
 IF ~~ + C0SireneC6Bodhi10
 END
 
 IF ~~ C0SireneC6Bodhi10
-SAY ~I... I will not become a vampire, <CHARNAME>. I will not allow that... that monster to corrupt me, to make me betray everything I have lived for. And I cannot hurt you... ever.~
-++ ~I understand. Stay behind, and I will face her alone.~ + C0SireneC6Bodhi11
-++ ~What will you do, then?~ + C0SireneC6Bodhi11
+SAY ~我……我不会变成吸血鬼，<CHARNAME>。我不会允许那……那怪物腐化我，让我背叛我一生所信奉的一切。而我也绝不能伤害你……永远不能。~
+++ ~我明白。你留在后头，我独自面对她。~ + C0SireneC6Bodhi11
+++ ~那你打算怎么办？~ + C0SireneC6Bodhi11
 END
 
 IF ~~ C0SireneC6Bodhi11
-SAY ~If my presence means I would be turned against you and harm you, then... I should not come with you. But I cannot bear the thought of allowing you to face Bodhi alone...~
-= ~No. There is only one choice. If Bodhi attempts to take me, then... you must kill me, <CHARNAME>. I would sooner die by your hand than become corrupted into a tool of evil.~
-++ ~No! You cannot demand this of me!~ + C0SireneC6Bodhi12
-++ ~Do you have a clue what you're saying, Sirene? I could never kill you.~ + C0SireneC6Bodhi12
-++ ~If that is what must be done, then so be it. I promise I will do as you ask.~ + C0SireneC6Bodhi13
+SAY ~若我的存在意味着我会被转变来对付你、伤害你，那么……我不该跟你去。可我也无法忍受让你独自面对波迪……~
+= ~不。只有一个选择。若波迪想夺取我，那么……你必须杀了我，<CHARNAME>。我宁愿死在你的手里，也不愿被腐化成邪恶的工具。~
+++ ~不！你不能这样要求我！~ + C0SireneC6Bodhi12
+++ ~你知道自己在说什么吗，塞琳？我永远杀不了你。~ + C0SireneC6Bodhi12
+++ ~若必须如此，那就如此吧。我答应我会照你说的做。~ + C0SireneC6Bodhi13
 END
 
 IF ~~ C0SireneC6Bodhi12
-SAY ~I... I know 'tis difficult. I hope it will not come to such an extreme, either... but if it is truly what happens, then... I would sooner choose death.~
-= ~You must understand, <CHARNAME>. Undeath is anathema to a paladin. If I were to fall to it, I fear I will never redeem myself in Ilmater's eyes. And... if I were to slay you as a result, then... I could not continue on.~
-= ~I can only trust you to spare me from such a fate, <CHARNAME>. That is why... why I want your promise, that you will kill me before such a thing comes to pass.~
-++ ~I... I promise.~ + C0SireneC6Bodhi13
-++ ~If I have no other choice. But it won't come to that, Sirene.~ + C0SireneC6Bodhi13
-++ ~No, I can't promise such a thing. We'll make it through this, I know it. Don't make me do this to you.~ + C0SireneC6Bodhi14
+SAY ~我……我知道这很难。我也希望不会走到那样的极端……可若真会发生，那么……我宁愿选择死亡。~
+= ~你必须明白，<CHARNAME>。不死对圣武士是诅咒。若我堕入其中，我怕我永远无法在伊尔梅特眼中赎清自己。而且……若我因此杀了你，那么……我也活不下去。~
+= ~我只能信你会把我从这样的命运中救出，<CHARNAME>。所以我……我要你承诺，在那样的事发生之前杀了我。~
+++ ~我……我答应。~ + C0SireneC6Bodhi13
+++ ~若我别无选择。可不会走到那一步的，塞琳。~ + C0SireneC6Bodhi13
+++ ~不，我不能答应这种事。我们会撑过去的，我知道。别逼我对你做这个。~ + C0SireneC6Bodhi14
 END
 
 IF ~~ C0SireneC6Bodhi13
-SAY ~Thank you, <CHARNAME>...~
-= ~I... I can only hope that I am mistaken. But if I am not... then your promise means I can face death without any fear.~
+SAY ~谢谢你，<CHARNAME>……~
+= ~我……我只能希望是我弄错了。可若我没弄错……那么你的承诺让我能毫无畏惧地面对死亡。~
 IF ~~ EXIT
 END
 
 IF ~~ C0SireneC6Bodhi14
-SAY ~<CHARNAME>...~
-= ~Perhaps I am worried about nothing. I can only hope I am mistaken, but if my fears come true, then... I can only do what is necessary. I will not harm you, <CHARNAME>, whatever that may cost me.~
+SAY ~<CHARNAME>……~
+= ~也许我只是在白担心。我只能希望是我弄错了，可若我的恐惧成真，那么……我只能做该做的事。我不会伤害你，<CHARNAME>，无论那要我付出什么。~
 IF ~~ EXIT
 END
 
 // Chapter 5 + 7 PID
 
 IF ~IsGabber(Player1) Global("Chapter","GLOBAL",%bg2_chapter_5%)~ C0SirenePIDUnderdark
-SAY ~No, not here, <CHARNAME>. Danger is around every corner, and we must stay alert.~ [C0BLANK]
+SAY ~不，不在这里，<CHARNAME>。危险在每个转角，我们必须保持警觉。~ [C0BLANK]
 IF ~~ EXIT
 END
 
 IF ~IsGabber(Player1) AreaCheck("AR2900")~ C0SirenePIDHell
-SAY ~<CHARNAME>... there are greater matters at hand. We can talk once this is over.~ [C0BLANK]
+SAY ~<CHARNAME>……有更要紧的事。等这一切结束我们再谈。~ [C0BLANK]
 IF ~~ EXIT
 END
 
 // Romance conflict
 
 IF ~Global("C0SireneRomanceConflict","GLOBAL",1) RealGlobalTimerExpired("C0SireneRomanceConflictTimer","GLOBAL")~ C0SireneConflict
-SAY ~<CHARNAME>, may we talk a moment? 'Tis of an important matter to me.~ [C0BLANK]
-++ ~Of course. What is it?~ + C0SireneConflict1
-++ ~I'm afraid I don't have the time right now.~ + C0SireneConflict0
+SAY ~<CHARNAME>，我们能谈一会儿吗？这对我是一件要紧事。~ [C0BLANK]
+++ ~当然。什么事？~ + C0SireneConflict1
+++ ~我怕我现在没时间。~ + C0SireneConflict0
 END
 
 IF ~~ C0SireneConflict0
-SAY ~I... I see. Forgive me, then. I will not bother you again.~
+SAY ~我……我明白了。那原谅我。我不会再烦你。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict1
-SAY ~I... I know we have talked often, and I do feel that we have become close. However, I feel like 'tis time to ask if... if you have affections for someone else. Within our group, in particular.~
-= ~It may not be my place to ask, but... at the same time, I hope you will be truthful. I do not wish to intrude, if you truly have strong feelings for another.~
-++ ~If you're forcing me to make a choice, then I'll admit it- I'd choose you. Whether it goes any further than that is up to you.~ + C0SireneConflict8
-+ ~Global("AerieRomanceActive","GLOBAL",1)~ + ~In that case, I'll be honest. I may truly have feelings for Aerie.~ + C0SireneConflict2
-+ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + ~My thoughts about Jaheira are... complicated. I may be seeing her as more than just a guardian.~ + C0SireneConflict3
-+ ~Global("AnomenRomanceActive","GLOBAL",1)~ + ~Anomen is rough around the edges, but I think it may work out.~ + C0SireneConflict4
-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + ~Viconia may in fact have captured my heart.~ + C0SireneConflict5
-+ ~Global("RasaadRomanceActive","GLOBAL",1)~ + ~Rasaad is a good man. I do wish to become closer with him.~ + C0SireneConflict6
-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + ~I'm not entirely sure how well it'll, but I do like Neera, even with the danger involved.~ + C0SireneConflict7
-++ ~For another? No... I much prefer talking to you, in truth.~ + C0SireneConflict8
-++ ~Not in particular. I greatly value all our allies, but I'm not interested in starting a relationship.~ + C0SireneConflict9
-++ ~What are you implying, Sirene? I don't have any special feelings for you, or anyone in particular.~ + C0SireneConflict9
+SAY ~我……我知道我们常谈，我也确实觉得我们走得近了。可我觉得该问一下……你是否对别人有意。尤其是我们队伍里的人。~
+= ~这话也许不该我问，可是……同时，我希望你如实相告。你若真对别人有强烈的感情，我不愿插进来。~
+++ ~你若逼我做选择，那我承认——我会选你。这会不会更进一步发展，取决于你。~ + C0SireneConflict8
++ ~Global("AerieRomanceActive","GLOBAL",1)~ + ~既然如此，我就说实话。我也许真的对艾黎有感情。~ + C0SireneConflict2
++ ~Global("JaheiraRomanceActive","GLOBAL",1)~ + ~我对贾希拉的念头……很复杂。我也许把她看得不只是守护者。~ + C0SireneConflict3
++ ~Global("AnomenRomanceActive","GLOBAL",1)~ + ~阿诺门脾气粗，可我想也许能成。~ + C0SireneConflict4
++ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + ~维康尼亚也许真的俘获了我的心。~ + C0SireneConflict5
++ ~Global("RasaadRomanceActive","GLOBAL",1)~ + ~拉萨德是个好人。我确实想跟他更亲近。~ + C0SireneConflict6
++ ~Global("NeeraRomanceActive","GLOBAL",1)~ + ~我不完全确定会有多顺利，可我确实喜欢妮拉，即使有危险。~ + C0SireneConflict7
+++ ~对别人？不……说实话，我更愿意跟你说话。~ + C0SireneConflict8
+++ ~没有特别的人。我很珍视我们所有的盟友，可我无意开始一段感情。~ + C0SireneConflict9
+++ ~你是在暗示什么，塞琳？我对你、对任何特定的人都没有特别的感情。~ + C0SireneConflict9
 END
 
 IF ~~ C0SireneConflict2
-SAY ~Ah... I should have realized sooner. Aerie is close to my own heart as well... I hope you will take good care of her, <CHARNAME>.~
+SAY ~啊……我该早点想到。艾黎在我心里也很亲近……我希望你好好待她，<CHARNAME>。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict3
-SAY ~I understand, <CHARNAME>. I do not think such feelings are so wrong, in truth.~
+SAY ~我明白，<CHARNAME>。说实话，我不觉得那样的感情有什么错。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict4
-SAY ~Aye, he is not such a bad person, despite his flaws. Perhaps you may bring out the good in him.~
+SAY ~是的，尽管有缺点，他并不算坏人。也许你能引出他好的一面。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict5
-SAY ~If that is so, then I pray you know what you are doing. I do not think she is incapable of kindness, but... take care not to let her pull you into the darkness.~
+SAY ~若是那样，那我祈祷你知道自己在做什么。我不觉得她没有善良的能力，可是……小心别让她把你拖进黑暗。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict6
-SAY ~In that case, I only ask that you treat him well, <CHARNAME>. He has suffered much, and I only wish for some happiness in his life once more.~
+SAY ~既然如此，我只求你好好待他，<CHARNAME>。他受了许多苦，我只希望他的人生能再有几分幸福。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict7
-SAY ~(laugh) I think the risk may be worth it, <CHARNAME>. She truly is a kind person, regardless of how unpredictable she may be.~
+SAY ~（笑）我想这风险也许值得，<CHARNAME>。无论她多难测，她确实是个善良的人。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)
 SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict8
-SAY ~Oh... I am flattered, truly. I hope that we may... continue as we were, then.~
+SAY ~哦……我真是受宠若惊。那我希望我们能……照原样继续。~
 IF ~~ DO ~SetGlobal("AerieRomanceActive","GLOBAL",3)
 SetGlobal("JaheiraRomanceActive","GLOBAL",3)
 SetGlobal("ViconiaRomanceActive","GLOBAL",3)
@@ -4728,7 +4728,7 @@ SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneConflict9
-SAY ~I see. That is... disappointing, I suppose. I thought that perhaps... no, never mind. That is your decision to make.~
+SAY ~我明白了。那……我想有点失望。我以为也许……不，算了。那是你该做的决定。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3) SetGlobal("C0SireneRomanceConflict","GLOBAL",2)~ EXIT
 END
 END
@@ -4736,13 +4736,13 @@ END
 // Low Reputation
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneLowRep","GLOBAL",1)~ THEN C0SIRE2J C0SireneRep01
-~<CHARNAME>, I feel as though you are taking us down the wrong path.~ [C0BLANK]
+~<CHARNAME>，我觉得你正把我们领上错路。~ [C0BLANK]
 DO ~SetGlobal("C0SireneLowRep","GLOBAL",2)~
-= ~I shall withhold judgment for now, but I suggest you make a turn for the better.~
+= ~我暂且不作评判，可我建议你转向更好的方向。~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneRepBreak","GLOBAL",1)~ THEN C0SIRE2J C0SireneRep02
-~So, you have no intention of changing your course. In that case, I will take my leave. May Ilmater show mercy upon your soul, for if we meet again, I will have none.~ [C0BLANK]
+~那么，你无意改变方向。既如此，我就告辞。愿伊尔梅特怜悯你的灵魂，因为若我们再相见，我不会。~ [C0BLANK]
 DO ~SetGlobal("C0SireneRepBreak","GLOBAL",2) SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() EscapeArea()~ 
 EXIT
 
@@ -4750,7 +4750,7 @@ EXIT
 APPEND C0SIRE2J
 
 IF ~Global("C0SireneFlirt","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",1)~ flirt1
-SAY ~(Sirene has been watching you closely as of late.)~ [C0BLANK]
+SAY ~（塞琳近来一直在密切留意你。）~ [C0BLANK]
 IF ~RandomNum(15,1) Global("C0SirenePartyBG1","GLOBAL",1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a1
 IF ~RandomNum(15,1) !Global("C0SirenePartyBG1","GLOBAL",1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a2
 IF ~RandomNum(15,2)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a2
@@ -4777,172 +4777,172 @@ IF ~HPPercentLT(Player1,50) Alignment("C0Sirene",LAWFUL_GOOD)~ DO ~RealSetGlobal
 END
 
 IF ~~ a1
-SAY ~Do you remember Beregost, <CHARNAME>? The day we first met?~
-++ ~Of course I do.~ + a1.1a
-++ ~Not particularly.~ + a1.1b
+SAY ~你记得贝雷戈斯特吗，<CHARNAME>？我们初次相遇那天？~
+++ ~我当然记得。~ + a1.1a
+++ ~不太记得。~ + a1.1b
 END
 
 IF ~~ a1.1a
-SAY ~(smile) 'Twas a blessing, I think, to have had the chance to travel at your side.~
+SAY ~（微笑）能有幸与你同行，我想那是种福气。~
 IF ~~ EXIT
 END
 
 IF ~~ a1.1b
-SAY ~I remember it as though it were yesterday...~
+SAY ~我记得清清楚楚，就像昨天一样……~
 IF ~~ + a1.1a
 END
 
 IF ~~ a2
-SAY ~(She brushes against you, slipping something small and delicate into your hand. You look down to see a tiny white blossom. When you look back at Sirene, she has turned away from you and is appearing to keep her distance.)~
+SAY ~（她擦过你身边，把什么小巧精致的东西塞进你手里。你低头看见一朵小小的白花。你再回头看塞琳时，她已转过身去，似乎在刻意保持距离。）~
 IF ~~ EXIT
 END
 
 IF ~~ a3
-SAY ~(She approaches and strokes your arm, smiling gently.) How are you, my friend?~
+SAY ~（她走近，抚你的手臂，温柔地笑着。）你好吗，我的朋友？~
 IF ~~ EXIT
 END
 
 IF ~~ a4
-SAY ~(She is loosening her armor before she notices you and shifts away with embarrassment to avoid eye contact.)~
+SAY ~（她正解开盔甲，忽然发觉你在看，便尴尬地挪开，避开视线。）~
 IF ~~ EXIT
 END
 
 IF ~~ a5
-SAY ~I had a dream last night, my friend, of a <PRO_MANWOMAN>... I could not see <PRO_HISHER> face, but I felt I still knew <PRO_HIMHER>...~
-= ~I believe... 'twas you, <CHARNAME>.~
+SAY ~我昨晚做了个梦，我的朋友，梦见一位<PRO_MANWOMAN>……我看不清<PRO_HISHER>的脸，可我觉得我仍认得<PRO_HIMHER>……~
+= ~我相信……那是你，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ a6
-SAY ~(She is nibbling on something as she realizes you are watching her.)~
-= ~Do you like chocolate, <CHARNAME>? (laugh) I must admit, 'tis a childish thing, but I am quite partial to it.~
+SAY ~（她正啃着什么，忽然发觉你在看她。）~
+= ~你喜欢巧克力吗，<CHARNAME>？（笑）我得承认，这是孩子气的东西，可我相当偏爱它。~
 IF ~~ EXIT
 END
 
 IF ~~ a7
-SAY ~(She walks up and kisses your cheek, and as though just realizing what she did, flushes.)~
-= ~I-I do not know what came over me, <CHARNAME>...~
-++ ~It's okay.~ + a7.1
-++ ~I liked it. Thank you.~ + a7.1
-++ ~That was nice, but I've got another one that feels lonely...~ + a7.2
-++ ~Don't do it again.~ + a7.0
+SAY ~（她走过来吻你的脸颊，仿佛才意识到自己做了什么，脸红起来。）~
+= ~我——我不知道自己怎么了，<CHARNAME>……~
+++ ~没关系。~ + a7.1
+++ ~我喜欢。谢谢你。~ + a7.1
+++ ~那很好，可我另一边脸还寂寞着……~ + a7.2
+++ ~别再这样了。~ + a7.0
 END
 
 IF ~~ a7.0
-SAY ~I... I understand.~
+SAY ~我……我明白。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ a7.1
-SAY ~(She looks relieved that you were receptive to her advances.)~
-= ~I... I might do that again, another time, if you do not mind.~
+SAY ~（她见你接受了她的亲近，似乎松了口气。）~
+= ~我……若你不介意，我改天也许还会这样。~
 IF ~~ EXIT
 END
 
 IF ~~ a7.2
-SAY ~(She laughs and kisses your other cheek.)~
-= ~Now, that is enough. We have important things to do... right?~
+SAY ~（她笑着吻你另一边脸颊。）~
+= ~好了，够了。我们有要紧事要做……对吧？~
 IF ~~ EXIT
 END
 
 IF ~~ a8
-SAY ~(She approaches with a wet cloth and tenderly wipes the sweat off your face.)~
+SAY ~（她拿着湿布走近，温柔地擦去你脸上的汗。）~
 IF ~~ EXIT
 END
 
 IF ~~ a9
-SAY ~(She looks at you silently, observing every detail on your face before raising a hand to brush off a fallen eyelash from your cheek.)~
+SAY ~（她沉默地看着你，仔细观察你脸上的每一处细节，然后抬手拂去你脸颊上一根掉落的睫毛。）~
 IF ~~ EXIT
 END
 
 IF ~~ a10
-SAY ~(She sidles to your side bashfully and walks with you for a while.)~
+SAY ~（她羞怯地挨到你身边，陪你走了一阵。）~
 IF ~~ EXIT
 END
 
 IF ~~ a11
-SAY ~(She takes your hand and links her fingers with yours, flashing a brief smile your way as you walk side by side.)~
+SAY ~（她握住你的手，把手指与你的交缠，并肩走时朝你飞快一笑。）~
 IF ~~ EXIT
 END
 
 IF ~~ a12
-SAY ~(She is scratching at an intimate gap on her breastplate but stops when she notices you.)~
-++ ~I could help you with that.~ + a12.1
-++ ~What are you doing, Sirene?~ + a12.2
-++ ~(Look away.)~ + a12.3
+SAY ~（她在挠胸甲上一处贴身的缝隙，发觉你在看便停下。）~
+++ ~我可以帮你。~ + a12.1
+++ ~你在做什么，塞琳？~ + a12.2
+++ ~（移开视线。）~ + a12.3
 END
 
 IF ~~ a12.1
-SAY ~N-no! Er, I mean... 'twould be most inappropriate, I think... (blush)~
+SAY ~不——不！呃，我是说……我想那很不合适……（脸红）~
 IF ~~ EXIT
 END
 
 IF ~~ a12.2
-SAY ~N-nothing...~
+SAY ~没——没什么……~
 IF ~~ EXIT
 END
 
 IF ~~ a12.3
-SAY ~(You think you could hear a sigh of relief, and she has likely resumed to trying to relieve an unreachable itch.)~
+SAY ~（你觉得听见了一声松气，她大概又开始试着缓解够不着的痒处。）~
 IF ~~ EXIT
 END
 
 IF ~~ a13
-SAY ~(She has pulled down her hood and is running her fingers through her hair, and you watch her shoulder-length flaming locks dance in the sunlight.)~
+SAY ~（她拉下兜帽，用手指梳过头发，你看她及肩的火红发卷在日光下舞动。）~
 IF ~~ EXIT
 END
 
 IF ~~ a14
-SAY ~(Despite her heavy armor, she nimbly steps past the fallen twigs, roots and pools of mud on the forest path with grace.)~
+SAY ~（尽管穿着沉重盔甲，她仍优雅轻捷地越过林间小径上的落枝、树根与泥洼。）~
 IF ~~ EXIT
 END
 
 IF ~~ a15
-SAY ~You look tired, <CHARNAME>. Perhaps 'twould be best to make camp soon, for your sake.~
+SAY ~你看起来累了，<CHARNAME>。为了你，也许最好尽快扎营。~
 IF ~~ EXIT
 END
 
 IF ~~ a16
-SAY ~(There is an expression of horror and concern on her face as she observes your wounds.)~
-= ~Do not move, <CHARNAME>. (She whispers a blessing with her hands touching your injuries.)~
+SAY ~（她看着你的伤，脸上是惊恐与担忧。）~
+= ~别动，<CHARNAME>。（她双手触着你的伤处，低声念了一句祝福。）~
 IF ~~ DO ~ForceSpell(Player1,PALADIN_LAY_ON_HANDS)~ EXIT
 END
 
 IF ~~ a17
-SAY ~(The day is hot and dry, and Sirene is indulging in her waterskin. She raises it overhead and allows water to flow across her face and into her armor.)~
-= ~(She realizes that you are watching and stops quickly, blushing.)~
+SAY ~（天气又热又干，塞琳正尽情喝水袋里的水。她把水袋举过头顶，让水淋过脸，流进盔甲里。）~
+= ~（她发觉你在看，赶紧停下，脸红起来。）~
 IF ~~ EXIT
 END
 
 IF ~~ a18
-SAY ~(Her eyes, normally a light chartreuse, are glowing with an orange tint in the darkness. Even so, they only portray warmth and care when looking at you.)~
+SAY ~（她的眼睛平日是浅黄绿色，此刻在黑暗里泛着橙光。即使如此，看向你时，它们只流露温暖与关切。）~
 IF ~~ EXIT
 END
 
 IF ~~ a19
-SAY ~(She has stopped to wash her face in a nearby stream, and raises her head to look at you. The glistening drops of water dotting her face and hair are oddly appealing.)~
+SAY ~（她停下来在附近的溪里洗脸，然后抬头看你。她脸上与发上点缀的水珠有种奇特的动人。）~
 IF ~~ EXIT
 END
 
 IF ~~ a20
-SAY ~You are such a kind and virtuous person, <CHARNAME>... I cannot deny I am envious. But my admiration for you is greater than any other feelings I hold.~
+SAY ~你真是位善良正直的人，<CHARNAME>……我不能否认我羡慕你。可我对你的钦佩胜过我所怀的任何其他感情。~
 IF ~~ EXIT
 END
 
 IF ~~ a21
-SAY ~(She observes you quietly, biting on her lip as though words are trying to escape from her, yet she seems uncomfortable with letting them out.)~
+SAY ~（她静静地观察你，咬着嘴唇，仿佛有话要从她嘴里逃出，可她似乎又不舒服于让它们出来。）~
 IF ~~ EXIT
 END
 
 IF ~~ a22
-SAY ~(She is quietly humming a tune you are not familiar with, and when she looks at you, she seems to continue with more enthusiasm.)~
+SAY ~（她轻声哼着你陌生的一段调子，当她看向你时，似乎哼得更有劲了。）~
 IF ~~ EXIT
 END
 
 // Flirts for Branwen, C0SireneRomanceActive=2
 
 IF ~Global("C0SireneFlirt","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ flirt2
-SAY ~(Sirene is watching you with newfound confidence, her eyes full of warmth.)~ [C0BLANK]
+SAY ~（塞琳带着新生的自信看你，眼里满是温暖。）~ [C0BLANK]
 IF ~RandomNum(17,1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + b1
 IF ~RandomNum(17,2) !Race(Player1,GNOME)
 !Race(Player1,DWARF)
@@ -4996,189 +4996,189 @@ IF ~HPPercentLT(Player1,50) Alignment("C0Sirene",LAWFUL_GOOD)~ DO ~RealSetGlobal
 END
 
 IF ~~ b1
-SAY ~(She walks close to you and kisses you fully on the lips.)~
+SAY ~（她走近你，实实地吻上你的唇。）~
 IF ~~ EXIT
 END
 
 IF ~~ b2
-SAY ~(She presses herself against you, flinging her arms limply over your shoulders, relying on your support to keep her standing.)~
+SAY ~（她把身体压向你，双臂无力地搭上你的肩，靠着你的支撑才站得住。）~
 IF ~~ EXIT
 END
 
 IF ~~ b3
-SAY ~(She brushes herself across you as she walks by, and you catch her strange but alluring scent.)~
+SAY ~（她走过时擦过你身边，你闻到她那股古怪却诱人的气息。）~
 IF ~~ EXIT
 END
 
 IF ~~ b4
-SAY ~<CHARNAME>... (Your name almost seems to linger on her lips, and her soft voice remains in your mind long after the word was spoken.)~
+SAY ~<CHARNAME>……（你的名字几乎停在她唇上，她柔软的声音在那个词说出之后许久仍留在你心里。）~
 IF ~~ EXIT
 END
 
 IF ~~ b5
-SAY ~I love you, <CHARNAME>... 'tis becoming easier to say each time I try.~
+SAY ~我爱你，<CHARNAME>……每次开口，这话都变得更易说。~
 IF ~~ EXIT
 END
 
 IF ~~ b6
-SAY ~(She strokes your thigh with immodest intentions.) I hope you know what I am getting at, <CHARNAME>...~
+SAY ~（她带着不端庄的意图抚你的大腿。）我希望你知道我在暗示什么，<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ b6a
-SAY ~(She looks at you wistfully, regretfully, raising her hand to touch your face... but stops just before she makes contact.)~
+SAY ~（她带着怅然与悔意看你，抬手要触你的脸……却在将触未触时停下。）~
 IF ~~ EXIT
 END
 
 IF ~~ b7
-SAY ~<CHARNAME>... I cannot hold it in any longer. I need you. Tonight.~
+SAY ~<CHARNAME>……我再也忍不住了。我需要你。今晚。~
 IF ~~ EXIT
 END
 
 IF ~~ b7a
-SAY ~(Her lips quiver as she makes eye contact with you, forming a nervous half-smile.)~
+SAY ~（她与你对视时唇微微颤动，挤出紧张的一半微笑。）~
 IF ~~ EXIT
 END
 
 IF ~~ b8
-SAY ~(Having seen Sirene's body without the usual constrictions of her armor, you only just notice how different she looks on the road.)~
+SAY ~（见过没有盔甲束缚的塞琳之后，你才注意到她在路上看起来多么不同。）~
 IF ~~ EXIT
 END
 
 IF ~~ b8a
-SAY ~(She is watching you intently, and you feel slightly exposed under her gaze.)~
+SAY ~（她专心地看你，在她目光下你觉得有些暴露。）~
 IF ~~ EXIT
 END
 
 IF ~~ b9
-SAY ~(She takes you with surprising confidence and showers you with kisses from face to neck.)~
-= ~You can look forward to getting more later...~
+SAY ~（她以惊人的自信接受你，从你的脸一路吻到颈。）~
+= ~你可以期待稍后更多……~
 IF ~~ EXIT
 END
 
 IF ~~ b9a
-SAY ~I hope you do not resent me for... my actions that night, <CHARNAME>. Perhaps you were right to keep me away.~
+SAY ~我希望你不为……我那晚的行为怨恨我，<CHARNAME>。也许你把我推离身边是对的。~
 IF ~~ EXIT
 END
 
 IF ~~ b10
-SAY ~(She is licking her lips sensually, an unusual act for her usually modest self. You have noticed her doing similar things in your sight ever since consummating your love with her.)~
+SAY ~（她挑逗地舔着嘴唇，这对平日端庄的她很不寻常。自你们的爱成真之后，你注意到她常在你眼前做类似的事。）~
 IF ~~ EXIT
 END
 
 IF ~~ b10a
-SAY ~You have taught me much of love and desire since we met, <CHARNAME>. I... have learned to appreciate how I feel for you.~
+SAY ~自从我们相识，你教了我许多关于爱与渴望的事，<CHARNAME>。我……学会了欣赏我对你的感觉。~
 IF ~~ EXIT
 END
 
 IF ~~ b11
-SAY ~Close your eyes...~ 
-= ~(She slips a small piece of chocolate into your mouth, and you enjoy the sweetness of the sudden treat.)~
+SAY ~闭上眼……~ 
+= ~（她把一小块巧克力塞进你嘴里，你享受这突如其来的甜美。）~
 IF ~~ EXIT
 END
 
 IF ~~ b12
-SAY ~(She darts forward and nibbles your nose affectionately, giggling with embarrassment afterwards.)~
+SAY ~（她猛地凑过来，深情地咬你的鼻子，事后又羞得笑出声。）~
 IF ~~ EXIT
 END
 
 IF ~~ b13
-SAY ~(She presses her forehead against yours, looking directly into your eyes. It seems a long moment passes before she lets you go.)~
+SAY ~（她把自己的额头贴上你的，直直望进你眼里。过了似乎很久，她才放开你。）~
 IF ~~ EXIT
 END
 
 IF ~~ b14
-SAY ~(She embraces you lovingly, nipping your ear with her pointed teeth gently enough to not cause pain.)~
+SAY ~（她深情地抱住你，用尖牙轻咬你的耳朵，轻得不会造成疼痛。）~
 IF ~~ EXIT
 END
 
 IF ~~ b15
-SAY ~I... I have never known fear like when I thought I would lose you forever, there at the tombs. I am so glad that we were not parted...~
+SAY ~我……我在那些墓室里以为要永远失去你时，从没体会过那样的恐惧。我太庆幸我们没有分离……~
 IF ~~ EXIT
 END
 
 IF ~~ b16
-SAY ~<CHARNAME>... I do not like to see you hurt. Come to me...~
-= ~(She touches your wounds and mutters prayers under her breath. You feel your wounds closing.)~
+SAY ~<CHARNAME>……我不愿见你受伤。到我这儿来……~
+= ~（她触着你的伤口，低声念着祷词。你感觉到伤口在愈合。）~
 IF ~~ DO ~ForceSpell(Player1,PALADIN_LAY_ON_HANDS)~ EXIT
 END
 
 IF ~~ b17
-SAY ~(She touches you, exploring your jawline before running her fingers down your chest.)~
+SAY ~（她触着你，探索你的下颌线，然后手指一路滑下你的胸膛。）~
 IF ~~ EXIT
 END
 
 IF ~~ b18
-SAY ~(She touches you, exploring your jawline before moving down to the curves of your chest.)~
+SAY ~（她触着你，探索你的下颌线，然后一路下移到你胸前的曲线。）~
 IF ~~ EXIT
 END
 
 IF ~~ b19
-SAY ~(She hands you a cloth bag full of fat red dates.) Try them, <CHARNAME>. They are delicious.~
+SAY ~（她递给你一个装满肥大红枣的布袋。）尝尝，<CHARNAME>。很好吃。~
 IF ~~ EXIT
 END
 
 IF ~~ b20
-SAY ~(She wraps her arms around your neck and whispers sweet nothings into your ear, while nipping at it gently.)~
+SAY ~（她双臂环上你的脖子，在你耳边低语情话，同时轻轻咬它。）~
 IF ~~ EXIT
 END
 
 IF ~~ b21
-SAY ~(In the relative safety and comfort of the inn, Sirene sits at your side and leans on your shoulder, eyes lidded. You are unsure of whether she has dozed off.)~
-= ~(The image of her smiling with her eyes closed, resting at your side makes her look extremely innocent and endearing.)~
+SAY ~（在这旅店里相对安全舒适，塞琳坐在你身边，靠在你肩上，眼睑低垂。你不确定她是否打起了盹。）~
+= ~（她闭眼笑着，在你身边歇息，看起来极天真动人。）~
 IF ~~ EXIT
 END
 
 IF ~IsGabber(Player1) !Global("C0SireneRomanceActive","Global",2)~ C0SirenePID    			
-SAY ~You have need of me, <CHARNAME>?~ [C0SIR015]
-+ ~Global("C0SireneBook","GLOBAL",0) PartyHasItem("c0sbook")~ + ~How's the book?~ + book
+SAY ~你需要我吗，<CHARNAME>？~ [C0SIR015]
++ ~Global("C0SireneBook","GLOBAL",0) PartyHasItem("c0sbook")~ + ~书怎么样？~ + book
 + ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
-Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Flirt)~ + flirt
-+ ~RandomNum(4,1)~ + ~How are you doing?~ + p1.1
-+ ~RandomNum(4,2)~ + ~How are you doing?~ + p1.2
-+ ~RandomNum(4,3)~ + ~How are you doing?~ + p1.3
-+ ~RandomNum(4,4)~ + ~How are you doing?~ + p1.4
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_2%)~ + ~What do you think of our quest?~ + chapter2
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) Global("C0SirenePartyBG1","GLOBAL",1)~ + ~What do you think of our quest?~ + chapter3a
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~What do you think of our quest?~ + chapter3b
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_4%)~ + ~What do you think of our quest?~ + chapter4
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_6%)~ + ~What do you think of our quest?~ + chapter6
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + ~What do you think of our quest?~ + chapter7
-++ ~May I ask you a question?~ + questions
-+ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~I'd rather you not talk with me for a while, Sirene.~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
-+ ~Global("C0SireneShutUp","GLOBAL",1)~ + ~I miss talking to you. You can chat me up whenever you wish.~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",0)~ + again
-++ ~I think there's something wrong with your voice.~ + stringfix
-++ ~No, never mind.~ EXIT
+Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（调情）~ + flirt
++ ~RandomNum(4,1)~ + ~你近来如何？~ + p1.1
++ ~RandomNum(4,2)~ + ~你近来如何？~ + p1.2
++ ~RandomNum(4,3)~ + ~你近来如何？~ + p1.3
++ ~RandomNum(4,4)~ + ~你近来如何？~ + p1.4
++ ~Global("Chapter","GLOBAL",%bg2_chapter_2%)~ + ~你觉得我们的任务怎么样？~ + chapter2
++ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得我们的任务怎么样？~ + chapter3a
++ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得我们的任务怎么样？~ + chapter3b
++ ~Global("Chapter","GLOBAL",%bg2_chapter_4%)~ + ~你觉得我们的任务怎么样？~ + chapter4
++ ~Global("Chapter","GLOBAL",%bg2_chapter_6%)~ + ~你觉得我们的任务怎么样？~ + chapter6
++ ~Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + ~你觉得我们的任务怎么样？~ + chapter7
+++ ~我能问你一个问题吗？~ + questions
++ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~塞琳，我希望你暂时别跟我说话。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
++ ~Global("C0SireneShutUp","GLOBAL",1)~ + ~我挺想念跟你说话的。你想聊随时都可以来找我。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",0)~ + again
+++ ~我觉得你的声音有点不对劲。~ + stringfix
+++ ~不，算了。~ EXIT
 END
 
 IF ~IsGabber(Player1) Global("C0SireneRomanceActive","Global",2)~ C0SireneRomancePID    			
-SAY ~(Sirene smiles as you approach.) I am by your side.~ [C0SIR016]
-+ ~Global("C0SireneBook","GLOBAL",0) PartyHasItem("c0sbook")~ + ~How's the book?~ + book
+SAY ~（你走近时，塞琳微笑。）我在你身边。~ [C0SIR016]
++ ~Global("C0SireneBook","GLOBAL",0) PartyHasItem("c0sbook")~ + ~书怎么样？~ + book
 + ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
-Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Flirt)~ + flirt
-+ ~RandomNum(4,1)~ + ~How are you doing?~ + p1.1
-+ ~RandomNum(4,2)~ + ~How are you doing?~ + p1.2
-+ ~RandomNum(4,3)~ + ~How are you doing?~ + p1.3
-+ ~RandomNum(4,4)~ + ~How are you doing?~ + p1.4
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_2%)~ + ~What do you think of our quest?~ + chapter2
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) Global("C0SirenePartyBG1","GLOBAL",1)~ + ~What do you think of our quest?~ + chapter3a
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~What do you think of our quest?~ + chapter3b
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_4%)~ + ~What do you think of our quest?~ + chapter4
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_6%)~ + ~What do you think of our quest?~ + chapter6
-+ ~Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + ~What do you think of our quest?~ + chapter7
-++ ~May I ask you a question?~ + questions
-+ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~I'd rather you not talk with me for a while, Sirene.~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
-+ ~Global("C0SireneShutUp","GLOBAL",1)~ + ~I miss talking to you. You can chat me up whenever you wish.~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",0)~ + again
-++ ~I think there's something wrong with your voice.~ + stringfix
-++ ~Never mind.~ EXIT
+Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（调情）~ + flirt
++ ~RandomNum(4,1)~ + ~你近来如何？~ + p1.1
++ ~RandomNum(4,2)~ + ~你近来如何？~ + p1.2
++ ~RandomNum(4,3)~ + ~你近来如何？~ + p1.3
++ ~RandomNum(4,4)~ + ~你近来如何？~ + p1.4
++ ~Global("Chapter","GLOBAL",%bg2_chapter_2%)~ + ~你觉得我们的任务怎么样？~ + chapter2
++ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得我们的任务怎么样？~ + chapter3a
++ ~Global("Chapter","GLOBAL",%bg2_chapter_3%) !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得我们的任务怎么样？~ + chapter3b
++ ~Global("Chapter","GLOBAL",%bg2_chapter_4%)~ + ~你觉得我们的任务怎么样？~ + chapter4
++ ~Global("Chapter","GLOBAL",%bg2_chapter_6%)~ + ~你觉得我们的任务怎么样？~ + chapter6
++ ~Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + ~你觉得我们的任务怎么样？~ + chapter7
+++ ~我能问你一个问题吗？~ + questions
++ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~塞琳，我希望你暂时别跟我说话。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
++ ~Global("C0SireneShutUp","GLOBAL",1)~ + ~我挺想念跟你说话的。你想聊随时都可以来找我。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",0)~ + again
+++ ~我觉得你的声音有点不对劲。~ + stringfix
+++ ~算了。~ EXIT
 END
 
 // Flirt Menu
 
 IF ~~ flirt
-SAY ~Yes?~ [C0SIR017]
+SAY ~什么事？~ [C0SIR017]
 + ~Global("C0SireneRomanceActive","GLOBAL",2)
 Global("C0SireneSleepLovetalk","GLOBAL",2) Global("C0SireneSlept","GLOBAL",0)
 OR(11)
@@ -5192,65 +5192,65 @@ AreaCheck("AR0021")
 AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
-AreaCheck("AR1602")~ + ~Sirene, I'm ready. Stay with me tonight.~ DO ~SetGlobal("C0SireneSlept","GLOBAL",1)~ + sleepwithme
-+ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Kiss her)~ + r1.1
-+ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Kiss her)~ + r1.2
-+ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Kiss her)~ + r1.3
-+ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Kiss her)~ + r1.4
-+ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Caress her face)~ + r2.1
-+ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Caress her face)~ + r2.2
-+ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Caress her face)~ + r2.3
-+ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Caress her face)~ + r2.4
-+ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Take her hand)~ + r3.1
-+ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Take her hand)~ + r3.2
-+ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Take her hand)~ + r3.3
-+ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Take her hand)~ + r3.4
-+ ~RandomNum(4,1)~ + ~(Stroke her hair)~ + f1.1
-+ ~RandomNum(4,2)~ + ~(Stroke her hair)~ + f1.2
-+ ~RandomNum(4,3)~ + ~(Stroke her hair)~ + f1.3
-+ ~RandomNum(4,4)~ + ~(Stroke her hair)~ + f1.4
-+ ~RandomNum(4,1)~ + ~(Kiss her cheek)~ + f2.1
-+ ~RandomNum(4,2)~ + ~(Kiss her cheek)~ + f2.2
-+ ~RandomNum(4,3)~ + ~(Kiss her cheek)~ + f2.3
-+ ~RandomNum(4,4)~ + ~(Kiss her cheek)~ + f2.4
-+ ~RandomNum(4,1)~ + ~You look beautiful.~ + f3.1
-+ ~RandomNum(4,2)~ + ~You look beautiful.~ + f3.2
-+ ~RandomNum(4,3)~ + ~You look beautiful.~ + f3.3
-+ ~RandomNum(4,4) Gender(Player1,FEMALE)~ + ~You look beautiful.~ + f3.4
-+ ~RandomNum(4,4) Gender(Player1,MALE)~ + ~You look beautiful.~ + f3.5
-+ ~RandomNum(4,1)~ + ~(Hug her)~ + f4.1
-+ ~RandomNum(4,2)~ + ~(Hug her)~ + f4.2
-+ ~RandomNum(4,3)~ + ~(Hug her)~ + f4.3
-+ ~RandomNum(4,4) Gender(Player1,FEMALE)~ + ~(Hug her)~ + f4.4a
-+ ~RandomNum(4,4) Gender(Player1,MALE)~ + ~(Hug her)~ + f4.4b
-+ ~RandomNum(4,1)~ + ~(Massage her shoulders)~ + f5.1
-+ ~RandomNum(4,2)~ + ~(Massage her shoulders)~ + f5.2
-+ ~RandomNum(4,3)~ + ~(Massage her shoulders)~ + f5.2
-+ ~RandomNum(4,4)~ + ~(Massage her shoulders)~ + f5.3
-+ ~RandomNum(4,1)~ + ~I love your eyes.~ + f6.1
-+ ~RandomNum(4,2)~ + ~I love your eyes.~ + f6.2
-+ ~RandomNum(4,3)~ + ~I love your eyes.~ + f6.3
-+ ~RandomNum(4,4)~ + ~I love your eyes.~ + f6.4
-+ ~RandomNum(4,1)~ + ~Sirene...~ + f7.1
-+ ~RandomNum(4,2)~ + ~Sirene...~ + f7.2
-+ ~RandomNum(4,3)~ + ~Sirene...~ + f7.3
-+ ~RandomNum(4,4)~ + ~Sirene...~ + f7.4
-+ ~RandomNum(4,1)~ + ~(Tickle her)~ + f8.1
-+ ~RandomNum(4,2)~ + ~(Tickle her)~ + f8.2
-+ ~RandomNum(4,3)~ + ~(Tickle her)~ + f8.3
-+ ~RandomNum(4,4)~ + ~(Tickle her)~ + f8.4
-+ ~RandomNum(4,1) Global("C0SireneLovetalk","GLOBAL",20)~ + ~(Offer her chocolate)~ + f9.1
-+ ~RandomNum(4,2) Global("C0SireneLovetalk","GLOBAL",20)~ + ~(Offer her chocolate)~ + f9.2
-+ ~RandomNum(4,3) Global("C0SireneLovetalk","GLOBAL",20)~ + ~(Offer her chocolate)~ + f9.3
-+ ~RandomNum(4,4) Global("C0SireneLovetalk","GLOBAL",20)~ + ~(Offer her chocolate)~ + f9.4
-+ ~RandomNum(4,1) Global("C0SireneSlept","GLOBAL",1)~ + ~I want you tonight.~ + r4.1
-+ ~RandomNum(4,2) Global("C0SireneSlept","GLOBAL",1)~ + ~I want you tonight.~ + r4.2
-+ ~RandomNum(4,3) Global("C0SireneSlept","GLOBAL",1)~ + ~I want you tonight.~ + r4.3
-+ ~RandomNum(4,4) Global("C0SireneSlept","GLOBAL",1)~ + ~I want you tonight.~ + r4.4
-+ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~I love you.~ + r5.1
-+ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~I love you.~ + r5.2
-+ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~I love you.~ + r5.3
-+ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~I love you.~ + r5.4
+AreaCheck("AR1602")~ + ~塞琳，我准备好了。今晚留在我身边。~ DO ~SetGlobal("C0SireneSlept","GLOBAL",1)~ + sleepwithme
++ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.1
++ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.2
++ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.3
++ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.4
++ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（抚她的脸）~ + r2.1
++ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（抚她的脸）~ + r2.2
++ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（抚她的脸）~ + r2.3
++ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（抚她的脸）~ + r2.4
++ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（牵她的手）~ + r3.1
++ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（牵她的手）~ + r3.2
++ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（牵她的手）~ + r3.3
++ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（牵她的手）~ + r3.4
++ ~RandomNum(4,1)~ + ~（抚她的头发）~ + f1.1
++ ~RandomNum(4,2)~ + ~（抚她的头发）~ + f1.2
++ ~RandomNum(4,3)~ + ~（抚她的头发）~ + f1.3
++ ~RandomNum(4,4)~ + ~（抚她的头发）~ + f1.4
++ ~RandomNum(4,1)~ + ~（吻她的脸颊）~ + f2.1
++ ~RandomNum(4,2)~ + ~（吻她的脸颊）~ + f2.2
++ ~RandomNum(4,3)~ + ~（吻她的脸颊）~ + f2.3
++ ~RandomNum(4,4)~ + ~（吻她的脸颊）~ + f2.4
++ ~RandomNum(4,1)~ + ~你看起来很美。~ + f3.1
++ ~RandomNum(4,2)~ + ~你看起来很美。~ + f3.2
++ ~RandomNum(4,3)~ + ~你看起来很美。~ + f3.3
++ ~RandomNum(4,4) Gender(Player1,FEMALE)~ + ~你看起来很美。~ + f3.4
++ ~RandomNum(4,4) Gender(Player1,MALE)~ + ~你看起来很美。~ + f3.5
++ ~RandomNum(4,1)~ + ~（抱她）~ + f4.1
++ ~RandomNum(4,2)~ + ~（抱她）~ + f4.2
++ ~RandomNum(4,3)~ + ~（抱她）~ + f4.3
++ ~RandomNum(4,4) Gender(Player1,FEMALE)~ + ~（抱她）~ + f4.4a
++ ~RandomNum(4,4) Gender(Player1,MALE)~ + ~（抱她）~ + f4.4b
++ ~RandomNum(4,1)~ + ~（给她揉肩）~ + f5.1
++ ~RandomNum(4,2)~ + ~（给她揉肩）~ + f5.2
++ ~RandomNum(4,3)~ + ~（给她揉肩）~ + f5.2
++ ~RandomNum(4,4)~ + ~（给她揉肩）~ + f5.3
++ ~RandomNum(4,1)~ + ~我爱你的眼睛。~ + f6.1
++ ~RandomNum(4,2)~ + ~我爱你的眼睛。~ + f6.2
++ ~RandomNum(4,3)~ + ~我爱你的眼睛。~ + f6.3
++ ~RandomNum(4,4)~ + ~我爱你的眼睛。~ + f6.4
++ ~RandomNum(4,1)~ + ~塞琳……~ + f7.1
++ ~RandomNum(4,2)~ + ~塞琳……~ + f7.2
++ ~RandomNum(4,3)~ + ~塞琳……~ + f7.3
++ ~RandomNum(4,4)~ + ~塞琳……~ + f7.4
++ ~RandomNum(4,1)~ + ~（挠她痒）~ + f8.1
++ ~RandomNum(4,2)~ + ~（挠她痒）~ + f8.2
++ ~RandomNum(4,3)~ + ~（挠她痒）~ + f8.3
++ ~RandomNum(4,4)~ + ~（挠她痒）~ + f8.4
++ ~RandomNum(4,1) Global("C0SireneLovetalk","GLOBAL",20)~ + ~（请她吃巧克力）~ + f9.1
++ ~RandomNum(4,2) Global("C0SireneLovetalk","GLOBAL",20)~ + ~（请她吃巧克力）~ + f9.2
++ ~RandomNum(4,3) Global("C0SireneLovetalk","GLOBAL",20)~ + ~（请她吃巧克力）~ + f9.3
++ ~RandomNum(4,4) Global("C0SireneLovetalk","GLOBAL",20)~ + ~（请她吃巧克力）~ + f9.4
++ ~RandomNum(4,1) Global("C0SireneSlept","GLOBAL",1)~ + ~今晚我要你。~ + r4.1
++ ~RandomNum(4,2) Global("C0SireneSlept","GLOBAL",1)~ + ~今晚我要你。~ + r4.2
++ ~RandomNum(4,3) Global("C0SireneSlept","GLOBAL",1)~ + ~今晚我要你。~ + r4.3
++ ~RandomNum(4,4) Global("C0SireneSlept","GLOBAL",1)~ + ~今晚我要你。~ + r4.4
++ ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我爱你。~ + r5.1
++ ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我爱你。~ + r5.2
++ ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我爱你。~ + r5.3
++ ~RandomNum(4,4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我爱你。~ + r5.4
 + ~RandomNum(4,1) Global("C0SireneSlept","GLOBAL",1) OR(10)
 AreaCheck("AR0704")
 AreaCheck("AR0709")
@@ -5261,7 +5261,7 @@ AreaCheck("AR0021")
 AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
-AreaCheck("AR1602")~ + ~Will you bathe with me?~ + r6.1
+AreaCheck("AR1602")~ + ~你肯跟我一起洗澡吗？~ + r6.1
 + ~RandomNum(4,2) Global("C0SireneSlept","GLOBAL",1) OR(10)
 AreaCheck("AR0704")
 AreaCheck("AR0709")
@@ -5272,7 +5272,7 @@ AreaCheck("AR0021")
 AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
-AreaCheck("AR1602")~ + ~Will you bathe with me?~ + r6.2
+AreaCheck("AR1602")~ + ~你肯跟我一起洗澡吗？~ + r6.2
 + ~RandomNum(4,3) Global("C0SireneSlept","GLOBAL",1) OR(10)
 AreaCheck("AR0704")
 AreaCheck("AR0709")
@@ -5283,7 +5283,7 @@ AreaCheck("AR0021")
 AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
-AreaCheck("AR1602")~ + ~Will you bathe with me?~ + r6.3
+AreaCheck("AR1602")~ + ~你肯跟我一起洗澡吗？~ + r6.3
 + ~RandomNum(4,4) Global("C0SireneSlept","GLOBAL",1) OR(10)
 AreaCheck("AR0704")
 AreaCheck("AR0709")
@@ -5294,540 +5294,540 @@ AreaCheck("AR0021")
 AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
-AreaCheck("AR1602")~ + ~Will you bathe with me?~ + r6.4
-+ ~RandomNum(4,1) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Press your body against hers suggestively)~ + r7.1
-+ ~RandomNum(4,2) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Press your body against hers suggestively)~ + r7.2
-+ ~RandomNum(4,3) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~(Press your body against hers suggestively)~ + r7.3
-+ ~RandomNum(4,4) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2) Gender(Player1,FEMALE)~ + ~(Press your body against hers suggestively)~ + r7.4a
-+ ~RandomNum(4,4) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2) Gender(Player1,MALE)~ + ~(Press your body against hers suggestively)~ + r7.4b
-+ ~RandomNum(5,1) Global("C0SireneSlept","GLOBAL",1)~ + ~(Press your body against hers suggestively)~ + r7.1
-+ ~RandomNum(5,2) Global("C0SireneSlept","GLOBAL",1)~ + ~(Press your body against hers suggestively)~ + r7.2
-+ ~RandomNum(5,3) Global("C0SireneSlept","GLOBAL",1)~ + ~(Press your body against hers suggestively)~ + r7.3
-+ ~RandomNum(5,4) Global("C0SireneSlept","GLOBAL",1) Gender(Player1,FEMALE)~ + ~(Press your body against hers suggestively)~ + r7.4a
-+ ~RandomNum(5,4) Global("C0SireneSlept","GLOBAL",1) Gender(Player1,MALE)~ + ~(Press your body against hers suggestively)~ + r7.4b
-+ ~RandomNum(5,5) Global("C0SireneSlept","GLOBAL",1)~ + ~(Press your body against hers suggestively)~ + r7.5
-+ ~RandomNum(4,1) Global("C0SireneSlept","GLOBAL",1)~ + ~(Stroke her thighs)~ + r8.1
-+ ~RandomNum(4,2) Global("C0SireneSlept","GLOBAL",1)~ + ~(Stroke her thighs)~ + r8.2
-+ ~RandomNum(4,3) Global("C0SireneSlept","GLOBAL",1)~ + ~(Stroke her thighs)~ + r8.3
-+ ~RandomNum(4,4) Global("C0SireneSlept","GLOBAL",1)~ + ~(Stroke her thighs)~ + r8.4
-+ ~Global("C0SireneStopFlirting","GLOBAL",0)~ + ~I really like you, Sirene, but I need to concentrate. Please stop flirting with me.~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",1)~ + noflirt
-+ ~Global("C0SireneStopFlirting","GLOBAL",1)~ + ~I miss your attention, Sirene. If you want to flirt with me, then go ahead.~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",0)~ + yesflirt
-++ ~Sirene, I know we've become close recently, but I have to tell you know... I want us to just be friends, and nothing more.~ + breakup
-++ ~No, nothing.~ EXIT
+AreaCheck("AR1602")~ + ~你肯跟我一起洗澡吗？~ + r6.4
++ ~RandomNum(4,1) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（挑逗地把身体贴向她）~ + r7.1
++ ~RandomNum(4,2) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（挑逗地把身体贴向她）~ + r7.2
++ ~RandomNum(4,3) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（挑逗地把身体贴向她）~ + r7.3
++ ~RandomNum(4,4) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2) Gender(Player1,FEMALE)~ + ~（挑逗地把身体贴向她）~ + r7.4a
++ ~RandomNum(4,4) !Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2) Gender(Player1,MALE)~ + ~（挑逗地把身体贴向她）~ + r7.4b
++ ~RandomNum(5,1) Global("C0SireneSlept","GLOBAL",1)~ + ~（挑逗地把身体贴向她）~ + r7.1
++ ~RandomNum(5,2) Global("C0SireneSlept","GLOBAL",1)~ + ~（挑逗地把身体贴向她）~ + r7.2
++ ~RandomNum(5,3) Global("C0SireneSlept","GLOBAL",1)~ + ~（挑逗地把身体贴向她）~ + r7.3
++ ~RandomNum(5,4) Global("C0SireneSlept","GLOBAL",1) Gender(Player1,FEMALE)~ + ~（挑逗地把身体贴向她）~ + r7.4a
++ ~RandomNum(5,4) Global("C0SireneSlept","GLOBAL",1) Gender(Player1,MALE)~ + ~（挑逗地把身体贴向她）~ + r7.4b
++ ~RandomNum(5,5) Global("C0SireneSlept","GLOBAL",1)~ + ~（挑逗地把身体贴向她）~ + r7.5
++ ~RandomNum(4,1) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.1
++ ~RandomNum(4,2) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.2
++ ~RandomNum(4,3) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.3
++ ~RandomNum(4,4) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.4
++ ~Global("C0SireneStopFlirting","GLOBAL",0)~ + ~塞琳，我真的很喜欢你，可我需要专心。请别跟我调情了。~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",1)~ + noflirt
++ ~Global("C0SireneStopFlirting","GLOBAL",1)~ + ~我怀念你的关注，塞琳。你想调情就来吧。~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",0)~ + yesflirt
+++ ~塞琳，我知道我们近来走得很近，可我现在得告诉你……我希望我们只做朋友，仅此而已。~ + breakup
+++ ~不，没什么。~ EXIT
 END
 
 // Romance novel
 
 IF ~~ book
-SAY ~Oh... *blush* It... it is wonderful.~
-= ~I stayed up all night reading it. The story is so beautiful. I, um... *sniffle*~
-++ ~Heh, I see.~ + book1
-++ ~Can I read it?~ + book2
-++ ~Don't get all sappy on me, now.~ + book3
-++ ~Whatever. Just keep your head out of the clouds.~ + book3
+SAY ~哦……*脸红*那……那真好。~
+= ~我熬夜读了一整晚。这故事太美了。我，嗯……*抽鼻子*~
+++ ~嘿，我明白。~ + book1
+++ ~能让我读读吗？~ + book2
+++ ~别在我面前哭哭啼啼的。~ + book3
+++ ~随便吧。别把心飘在云上就行。~ + book3
 END
 
 IF ~~ book1
-SAY ~<CHARNAME>, stop... stop teasing me. *blush*~
-+ ~Global("C0SireneRomanceActive","GLOBAL",2)~ + ~Stop teasing? Would you rather I... (lean forward to kiss her)~ + book1a
-++ ~But you're cute when you're embarrassed.~ + book1b
-++ ~Haha, sorry.~ + book1c
+SAY ~<CHARNAME>，别……别逗我了。*脸红*~
++ ~Global("C0SireneRomanceActive","GLOBAL",2)~ + ~别逗你？你宁愿我……（前倾吻她）~ + book1a
+++ ~可你难为情的时候很可爱。~ + book1b
+++ ~哈哈，抱歉。~ + book1c
 END
 
 IF ~~ book1a
-SAY ~Oh! Mmmph...~
-++ ~How's that? Better than that silly book?~ + book1d
-++ ~Did you like that?~ + book1d
+SAY ~哦！唔嗯……~
+++ ~怎么样？比那本傻书好吧？~ + book1d
+++ ~你喜欢吗？~ + book1d
 END
 
 IF ~~ book1b
-SAY ~Stop it, you are so... Oh, gods, I need to hide my face now.~
+SAY ~别说了，你真是……哦，神明啊，我现在得把脸藏起来。~
 IF ~~ + book1c
 END
 
 IF ~~ book1c
-SAY ~I- Is there something we should be doing right now? Perhaps we should... focus on the road. Yes, I think 'twould be best.~
+SAY ~我——我们现在是不是该做点什么？也许我们该……专心赶路。对，我想那样最好。~
 IF ~~ DO ~SetGlobal("C0SireneBook","Global",1)~ EXIT
 END
 
 IF ~~ book1d
-SAY ~Yes...~
+SAY ~是的……~
 IF ~~ + book1c
 END
 
 IF ~~ book2
-SAY ~Any time you wish. 'Tis your gold that bought it, after all.~
-= ~I, um, am not quite finished yet. But once I am, it is yours.~
+SAY ~你想读随时都行。毕竟那本书是你花钱买的。~
+= ~我，嗯，还没读完。可等我读完，它就是你的。~
 IF ~~ DO ~SetGlobal("C0SireneBook","Global",1)~ EXIT
 END
 
 IF ~~ book3
-SAY ~A-aye, of course. You do not need to doubt me.~
+SAY ~是——是的，当然。你不必怀疑我。~
 IF ~~ DO ~SetGlobal("C0SireneBook","Global",1)~ EXIT
 END
 
 IF ~~ again
-SAY ~I understand.~
+SAY ~我明白。~
 IF ~~ EXIT
 END
 
 IF ~~ noflirt
-SAY ~Oh... I did not realize my attention was bothering you so much. Forgive me.~
+SAY ~哦……我没意识到我的关注这么扰你。原谅我。~
 IF ~~ EXIT
 END
 
 IF ~~ yesflirt
-SAY ~(smile) Very well.~
+SAY ~（微笑）好罢。~
 IF ~~ EXIT
 END
 
 IF ~~ breakup
-SAY ~I... had hoped you had some interest in me, <CHARNAME>, but perhaps I have misunderstood... do you truly mean it?~
-++ ~I am.~ + breakup2
-++ ~No, forget it.~ + again
+SAY ~我……本希望你对我有些兴趣，<CHARNAME>，可也许是我误会了……你真是这个意思吗？~
+++ ~是的。~ + breakup2
+++ ~不，算了。~ + again
 END
 
 IF ~~ breakup2
-SAY ~I... very well. Thank you for telling me.~
+SAY ~我……好罢。谢谢你告诉我。~
 IF ~~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ EXIT
 END
 
 IF ~~ sleepwithme
-SAY ~(smile) Then let us find a place for ourselves...~
+SAY ~（微笑）那我们找个只有我们的地方……~
 IF ~~ DO ~RestParty()~ EXIT
 END
 
 IF ~~ brotheralive
-SAY ~*sigh* Not well, <CHARNAME>.~
-= ~I know that I did the right thing... you assured me that. Yet, I still feel angry, betrayed. Even though I never knew him, 'twas...~
-= ~(She shakes her head sadly) I do not want to talk about it.~
+SAY ~*叹气*不太好，<CHARNAME>。~
+= ~我知道我做的是对的事……你向我保证过。可我仍觉得愤怒、被背叛。即使我从没认识过他，那还是……~
+= ~（她难过地摇头）我不想谈这个。~
 IF ~~ EXIT
 END
 
 IF ~~ brotherdead
-SAY ~*sigh* Now I know how you must have felt, killing Sarevok in the Undercity... 'tis horrible.~
-= ~I do not feel regret, not for his death nor for walking away from Ilmater's path. But... I wish I had known him as more than the man I slew.~
+SAY ~*叹气*如今我知道你在下城区杀萨瑞沃克时必是什么感受了……真可怕。~
+= ~我不后悔，不后悔他的死，也不后悔离开伊尔梅特的路。可是……我希望我认识他不只是作为我杀掉的那个人。~
 IF ~~ EXIT
 END
 
 IF ~~ chapter2
-SAY ~I cannot say I savor the thought of aligning with Shadow Thieves, but truly, I see little choice.~
+SAY ~我说不上喜欢与影贼结盟，可说实话，我看不出多少选择。~
 IF ~~ EXIT
 END
 
 IF ~~ chapter3a
-SAY ~Were the task to save Imoen not of utmost importance, I would not deign to work with the Shadow Thieves. But I suppose 'tis necessary.~
+SAY ~若不是救爱蒙的任务最要紧，我不会屈尊与影贼合作。可我想这是必要的。~
 IF ~~ EXIT
 END
 
 IF ~~ chapter3b
-SAY ~Were the task to save your friend not of utmost importance, I would not deign to work with the Shadow Thieves. But I suppose 'tis necessary.~
+SAY ~若不是救你朋友的任务最要紧，我不会屈尊与影贼合作。可我想这是必要的。~
 IF ~~ EXIT
 END
 
 IF ~~ chapter4
-SAY ~This whole isle and its inhabitants are surrounded by evil, <CHARNAME>. I hope we can complete our task posthaste.~
+SAY ~这整座岛和它的住民都被邪恶包围，<CHARNAME>。我希望我们能尽快完成任务。~
 IF ~~ EXIT
 END
 
 IF ~~ chapter6
-SAY ~The elves can be trusted to cooperate with us, though they are reluctant to share the whole truth. We can only hope to earn their trust.~
+SAY ~精灵们可以信任会与我们合作，虽然他们不愿说出全部真相。我们只能希望赢得他们的信任。~
 IF ~~ EXIT
 END
 
 IF ~~ chapter7
-SAY ~Many lives are at stake now, <CHARNAME>, including your own. We must stop Irenicus as soon as we can.~
+SAY ~如今许多性命悬于一线，<CHARNAME>，包括你自己的。我们必须尽快阻止艾瑞尼卡斯。~
 IF ~~ EXIT
 END
 
 IF ~~ f1.1
-SAY ~(Your fingers run through the soft flaming locks of Sirene's hair, brushing down to her neck.)~
+SAY ~（你的手指穿过塞琳柔软火红的发卷，一路拂到她的颈后。）~
 IF ~~ EXIT
 END
 
 IF ~~ f1.2
-SAY ~(Sirene catches your hand and, while smiling, presses it gently against her cheek before letting go.)~
+SAY ~（塞琳抓住你的手，笑着把它轻轻按在自己脸颊上，然后放开。）~
 IF ~~ EXIT
 END
 
 IF ~~ f1.3
-SAY ~(Sirene sighs softly in contentment as she allows you to touch her auburn locks)~
+SAY ~（塞琳满足地轻叹，任你触碰她赤褐色的发卷）~
 IF ~~ EXIT
 END
 
 IF ~~ f1.4
-SAY ~(laugh) <CHARNAME>... is now truly the time for that?~
+SAY ~（笑）<CHARNAME>……现在真是做这个的时候吗？~
 IF ~~ EXIT
 END
 
 IF ~~ f2.1
-SAY ~(Sirene flushes slightly as you press your lips against her cheek.)~
-= ~<CHARNAME>...~
+SAY ~（你的唇贴在她脸颊上时，塞琳微微泛红。）~
+= ~<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ f2.2
-SAY ~(Sirene's skin is smooth and slightly tastes slightly salty of sweat. She smiles nervously as your pull away.)~
+SAY ~（塞琳的皮肤光滑，微微带着汗的咸味。你退开时，她紧张地笑着。）~
 IF ~~ EXIT
 END
 
 IF ~~ f2.3
-SAY ~(Before you move away from her, she takes your face and kisses you in return.)~
+SAY ~（在你退开之前，她捧住你的脸，回吻你。）~
 IF ~~ EXIT
 END
 
 IF ~~ f2.4
-SAY ~(laugh) What did I do to deserve that?~
+SAY ~（笑）我做了什么，值得这个？~
 IF ~~ EXIT
 END
 
 IF ~~ f3.1
-SAY ~(She simply flushes and looks away with a slight smile.)~
+SAY ~（她只是红了脸，带着浅笑把目光移开。）~
 IF ~~ EXIT
 END
 
 IF ~~ f3.2
-SAY ~Oh, th... thank you, <CHARNAME>.~
+SAY ~哦，谢……谢谢你，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ f3.3
-SAY ~(smile) Thank you for your compliment.~
+SAY ~（微笑）谢谢你的称赞。~
 IF ~~ EXIT
 END
 
 IF ~~ f3.4
-SAY ~And you are the most beautiful, charming woman I have ever... (blush) oh, excuse me...~
+SAY ~而你是我见过最美、最迷人的女人……（脸红）哦，失礼了……~
 IF ~~ EXIT
 END
 
 IF ~~ f3.5
-SAY ~And you are the greatest, most wonderful man I have ever... (blush) oh, excuse me...~
+SAY ~而你是我见过最伟大、最了不起的男人……（脸红）哦，失礼了……~
 IF ~~ EXIT
 END
 
 IF ~~ f4.1
-SAY ~(Sirene flinches as you embrace her.)~
-= ~Oh! Hm, hmm...~
+SAY ~（你抱住她时，塞琳颤了一下。）~
+= ~哦！嗯，嗯嗯……~
 IF ~~ EXIT
 END
 
 IF ~~ f4.2
-SAY ~(Sirene falls into you as you hold her, hands pressing against your back.)~
+SAY ~（你抱住她时，塞琳靠进你怀里，双手按在你背上。）~
 IF ~~ EXIT
 END
 
 IF ~~ f4.3
-SAY ~(While embracing you in return, Sirene leans forward and nuzzles your hair.)~
+SAY ~（她回抱你时，前倾把脸埋进你的头发里。）~
 IF ~~ EXIT
 END
 
 IF ~~ f4.4a
-SAY ~(Sirene sighs in contentment and leans her head over your shoulder.)~
+SAY ~（塞琳满足地叹气，把头靠在你的肩上。）~
 IF ~~ EXIT
 END
 
 IF ~~ f4.4b
-SAY ~(Sirene sighs in contentment and presses her head against your chest.)~
+SAY ~（塞琳满足地叹气，把头贴在你的胸口。）~
 IF ~~ EXIT
 END
 
 IF ~~ f5.1
-SAY ~Oh, I would like that. Thank you, <CHARNAME>.~
+SAY ~哦，我会喜欢的。谢谢你，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ f5.2
-SAY ~Mm, 'tis quite comfortable... you are good at this, <CHARNAME>.~
+SAY ~嗯，挺舒服的……你这手法很好，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ f5.3
-SAY ~(Sirene looses the straps of her armor and relaxes as you work your fingers on her shoulders.)~
+SAY ~（塞琳松开盔甲的系带，在你手指在她肩上揉按时放松下来。）~
 IF ~~ EXIT
 END
 
 IF ~~ f6.1
-SAY ~Oh, thank you, <CHARNAME>.~
+SAY ~哦，谢谢你，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ f6.2
-SAY ~(smile) You are being kind, <CHARNAME>.~
+SAY ~（微笑）你真是体贴，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ f6.3
-SAY ~(Sirene responds by leaning towards you, giving you a clear look into her chartreuse yellow eyes.)~
+SAY ~（塞琳回应着向你倾身，让你看清她那双黄绿色的眼睛。）~
 IF ~~ EXIT
 END
 
 IF ~~ f6.4
-SAY ~I am glad at least you like them.~
+SAY ~我很高兴至少你喜欢它们。~
 IF ~~ EXIT
 END
 
 IF ~~ f7.1
-SAY ~Yes, <CHARNAME>?~
+SAY ~什么事，<CHARNAME>？~
 IF ~~ EXIT
 END
 
 IF ~~ f7.2
-SAY ~<CHARNAME>...~
+SAY ~<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ f7.3
-SAY ~(smile) I am here.~ [C0SIR012]
+SAY ~（微笑）我在。~ [C0SIR012]
 IF ~~ EXIT
 END
 
 IF ~~ f7.4
-SAY ~Hmm?~
+SAY ~嗯？~
 IF ~~ EXIT
 END
 
 IF ~~ f8.1
-SAY ~(Sirene doubles over in a fit of uncomfortable giggles as you tease the gaps between her armor.)~
+SAY ~（你挠她盔甲缝隙时，塞琳笑得弯下腰，笑得不自在。）~
 IF ~~ EXIT
 END
 
 IF ~~ f8.2
-SAY ~No, no, stop it! 'Tis too much!~
+SAY ~不，不，停下！太过了！~
 IF ~~ EXIT
 END
 
 IF ~~ f8.3
-SAY ~(Sirene playfully swats your hands away.)~
+SAY ~（塞琳打闹着把你的手拍开。）~
 IF ~~ EXIT
 END
 
 IF ~~ f8.4
-SAY ~(Sirene laughs and fidgets as you tickle the curves of her neck where her skin is exposed.)~
+SAY ~（你挠她颈侧露出的皮肤时，塞琳笑着扭动。）~
 IF ~~ EXIT
 END
 
 IF ~~ f9.1
-SAY ~(Sirene licks her lips and fingers teasingly after eating the piece of chocolate you gave her, and with a coy smile traces her chocolate-stained finger across your lips.)~
+SAY ~（塞琳吃完你给的巧克力后，挑逗地舔着嘴唇、吮着手指，然后带着羞怯的笑，用沾了巧克力的手指划过你的唇。）~
 IF ~~ EXIT
 END
 
 IF ~~ f9.2
-SAY ~(Sirene breaks off a piece and slips it into your mouth.)~
+SAY ~（塞琳掰下一块，塞进你嘴里。）~
 IF ~~ EXIT
 END
 
 IF ~~ f9.3
-SAY ~Mm, just what I needed...~
+SAY ~嗯，正是我需要的……~
 IF ~~ EXIT
 END
 
 IF ~~ f9.4
-SAY ~(Sirene takes the chocolate with one hand and, with the other, takes your hand to her lips and licks your fingers.)~
+SAY ~（塞琳一手接过巧克力，另一手把你的手拉到唇边，舔你的手指。）~
 IF ~~ EXIT
 END
 
 IF ~~ r1.1
-SAY ~(Sirene responds to you passionately, pressing herself against you.)~
+SAY ~（塞琳热烈地回应你，把身体压向你。）~
 IF ~~ EXIT
 END
 
 IF ~~ r1.2
-SAY ~(When you finally pull apart, Sirene stops you and licks your lips sweetly.)~
+SAY ~（你们终于分开时，塞琳拦住你，甜甜地舔你的嘴唇。）~
 IF ~~ EXIT
 END
 
 IF ~~ r1.3
-SAY ~(She is forced to catch her breath once the kiss ends.) <CHARNAME>...~
+SAY ~（吻结束后，她不得不喘息。）<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ r1.4
-SAY ~Mmmph...~
+SAY ~唔嗯……~
 IF ~~ EXIT
 END
 
 IF ~~ r2.1
-SAY ~(Sirene's face is smooth and warm, and she closes her eyes as your fingers brush up her cheekbones and over her eyebrows.)~
+SAY ~（塞琳的脸光滑温暖，你的手指拂过她的颧骨和眉骨时，她闭上了眼。）~
 IF ~~ EXIT
 END
 
 IF ~~ r2.2
-SAY ~(Sirene takes your hand as it lays on her cheek and kisses it.)~
+SAY ~（塞琳把你贴在她脸颊上的手握住，吻了它。）~
 IF ~~ EXIT
 END
 
 IF ~~ r2.3
-SAY ~(In response, Sirene touches your face in return, exploring your features with a soft touch.)~
+SAY ~（塞琳也回应着触碰你的脸，以轻柔的触感探索你的五官。）~
 IF ~~ EXIT
 END
 
 IF ~~ r2.4
-SAY ~(Sirene's face flushes with color at your touch, turning warm as you teasingly stroke her cheek and jaw.)~
+SAY ~（你的触碰让塞琳脸上泛红，你挑逗地抚过她的脸颊与下颌时，她的脸变得温热。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.1
-SAY ~(Sirene's nails are slightly longer and curved compared to the average human female, though it feels pleasant when they dig slightly into your palm.)~
+SAY ~（塞琳的指甲比一般人类女性略长且弯，可它们微微掐进你掌心时，感觉却很好。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.2
-SAY ~(Sirene's hand is feminine in shape, yet is as strong and calloused as a warrior's hand.)~
+SAY ~（塞琳的手形是女性的，却像战士的手一样有力、布满老茧。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.3
-SAY ~(Sirene responds by linking his fingers with yours.)~
+SAY ~（塞琳回应着，把手指与你的交缠在一起。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.4
-SAY ~(You walk together, hand in hand, for a long while before she reluctantly lets you go.)~
+SAY ~（你们牵着手走了很久，她才不舍地放开你。）~
 IF ~~ EXIT
 END
 
 IF ~~ r4.1
-SAY ~(You can see her eyes flare with desire upon hearing your words.)~
-= ~I am yours, whenever you want me.~
+SAY ~（听见你的话，你看见她眼里燃起渴望。）~
+= ~我是你的，你何时想要我都行。~
 IF ~~ EXIT
 END
 
 IF ~~ r4.2
-SAY ~I hope you are willing to back that up, <CHARNAME>.~
+SAY ~我希望你愿意兑现这话，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ r4.3
-SAY ~(teasingly) Tonight? Must we wait that long?~
+SAY ~（挑逗地）今晚？非得等那么久吗？~
 IF ~~ EXIT
 END
 
 IF ~~ r4.4
-SAY ~Mm, I shall be waiting eagerly, <CHARNAME>...~
+SAY ~嗯，我会热切地等着，<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ r5.1
-SAY ~(smile) It means more than you can imagine to hear you say that, <CHARNAME>...~
+SAY ~（微笑）听你说这话，意义比你能想象的更大，<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ r5.2
-SAY ~I love you as well... more than I can say.~
+SAY ~我也爱你……胜过我能说出的。~
 IF ~~ EXIT
 END
 
 IF ~~ r5.3
-SAY ~(Though you have said the same words to her before, she seems pleased to hear them each time.)~
+SAY ~（虽然你已对她说过同样的话，可每次听到她似乎都很高兴。）~
 IF ~~ EXIT
 END
 
 IF ~~ r5.4
-SAY ~'Tis the only words I need to hear, <CHARNAME>.~
+SAY ~这是我唯一需要听的话，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ r6.1
-SAY ~(She raises an eyebrow with a none too honest smile.)~
-= ~If you wish to look at my body, <CHARNAME>, you do not need to make such excuses.~
+SAY ~（她挑着一根眉毛，带着不太诚恳的笑。）~
+= ~你若想看我身子，<CHARNAME>，不必编这样的借口。~
 IF ~~ EXIT
 END
 
 IF ~~ r6.2
-SAY ~'Twould be a pleasant diversion, I think. Yes... I will.~
+SAY ~我想那会是件愉快的消遣。是的……我会的。~
 IF ~~ DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0bathe")~ EXIT
 END
 
 IF ~~ r6.3
-SAY ~(laugh) I may have asked you the same, had you not come to me first... shall we?~
+SAY ~（笑）若你没先来找我，我也许会问你同样的话……我们开始吧？~
 IF ~~ DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0bathe")~ EXIT
 END
 
 IF ~~ r6.4
-SAY ~Aye, though 'twould be best if it were done in private, I think.~
+SAY ~是的，不过我想最好还是私下做。~
 IF ~~ DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0bathe")~ EXIT
 END
 
 IF ~~ r7.1
-SAY ~(Sirene's hands rest on your sides and you can feel her warm breath on your neck.)~
+SAY ~（塞琳的手放在你腰侧，你能感觉到她温热的呼吸落在你颈上。）~
 IF ~~ EXIT
 END
 
 IF ~~ r7.2
-SAY ~(Even with the armor Sirene wears, her body is shapely and petite, and you feel the curves of her body from her chest to her slender waist.)~
+SAY ~（即使塞琳穿着盔甲，她的身形仍玲珑娇小，你感觉到她从胸到纤细腰身的曲线。）~
 IF ~~ EXIT
 END
 
 IF ~~ r7.3
-SAY ~(laugh) <CHARNAME>... I am not sure whether I should feel embarrassed.~
+SAY ~（笑）<CHARNAME>……我不确定我该不该觉得难为情。~
 IF ~~ EXIT
 END
 
 IF ~~ r7.4a
-SAY ~(As you lightly press against her, you feel her chest heaving and falling slowly against yours, and she traces a finger along your breast.)~
+SAY ~（你轻轻贴住她时，感觉到她的胸口在你胸前缓缓起伏，她用一根手指沿着你的胸膛划过。）~
 IF ~~ EXIT
 END
 
 IF ~~ r7.4b
-SAY ~(As you lightly press against her, you feel her chest heaving and falling slowly against yours, and she traces a finger along your chest.)~
+SAY ~（你轻轻贴住她时，感觉到她的胸口在你胸前缓缓起伏，她用一根手指沿着你的胸口划过。）~
 IF ~~ EXIT
 END
 
 IF ~~ r7.5
-SAY ~Mmm... <CHARNAME>, I would like to try this again... without all this armor and clothing.~
+SAY ~嗯……<CHARNAME>，我想再试一次这个……不穿这些盔甲和衣裳。~
 IF ~~ EXIT
 END
 
 IF ~~ r8.1
-SAY ~(Sirene lets out a sharp gasp when you touch her inner thighs, and she abruptly grasps your hand.)~
-= ~<CHARNAME>, please...~
+SAY ~（你碰到她大腿内侧时，塞琳尖利地抽了口气，猛地抓住你的手。）~
+= ~<CHARNAME>，求你……~
 IF ~~ EXIT
 END
 
 IF ~~ r8.2
-SAY ~Aaah... (Sirene closes her eyes in pleasure as you stroke her tenderly.)~
+SAY ~啊啊……（你温柔地抚她时，塞琳舒服地闭上眼。）~
 IF ~~ EXIT
 END
 
 IF ~~ r8.3
-SAY ~(Sirene bashfully tries to move away, but relents and allows you to touch the unarmored parts of her legs.)~
+SAY ~（塞琳羞怯地想挪开，却还是让步，任你触碰她腿上没有护甲的部分。）~
 IF ~~ EXIT
 END
 
 IF ~~ r8.4
-SAY ~(Sirene takes your hand and, instead of pulling it away, guides it between her legs and moans softly.)~
+SAY ~（塞琳握住你的手，没有推开，而是把它引到她双腿之间，轻声呻吟。）~
 IF ~~ EXIT
 END
 
 IF ~~ p1.1
-SAY ~I am well. Why? Is there something you need of me?~
+SAY ~我很好。怎么？你有什么需要我吗？~
 IF ~~ EXIT
 END
 
 IF ~~ p1.2
-SAY ~I am thinking of the tasks we have ahead of us.~
+SAY ~我在想我们前头的任务。~
 IF ~~ EXIT
 END
 
 IF ~~ p1.3
-SAY ~Everything is fine. What of yourself?~
+SAY ~一切都好。你自己呢？~
 IF ~~ EXIT
 END
 
 IF ~~ p1.4
-SAY ~I am... a little lost in thought at the moment. Do not mind me.~
+SAY ~我……此刻有点走神。别在意我。~
 IF ~~ EXIT
 END
 
 IF ~~ stringfix 
-SAY ~Aye, that may be... give me a moment.~ 
+SAY ~是的，也许……给我一点时间。~ 
 IF ~~ THEN DO ~ClearAllActions() 
       StartCutSceneMode() 
       StartCutScene("C0RESET")~ EXIT 
@@ -5836,92 +5836,92 @@ END
 // Questions
 
 IF ~~ questions
-SAY ~Of course. Ask what you will.~
+SAY ~当然。你想问什么就问。~
 + ~OR(2)
 Global("BardPlotOn","GLOBAL",5)
 Global("BardPlotOn","GLOBAL",6)
 GlobalGT("playquality","GLOBAL",0)
-Global("C0SirenePIDPlay","GLOBAL",0)~ + ~I noticed you were almost tearing up by the end of that Turmish play. Did you really like it that much?~ DO ~SetGlobal("C0SirenePIDPlay","GLOBAL",1)~ + bardplay
-+ ~Global("C0SirenePIDIlmater","GLOBAL",0) Alignment("C0Sirene",LAWFUL_GOOD)~ + ~Are you satisfied with following Ilmater?~ DO ~SetGlobal("C0SirenePIDIlmater","GLOBAL",1)~ + ilmater
-+ ~Global("C0SirenePIDHome","GLOBAL",0)~ + ~Have you ever missed home?~ DO ~SetGlobal("C0SirenePIDHome","GLOBAL",1)~ + home
-+ ~Global("C0SirenePIDPaladin","GLOBAL",0)~ + ~How long have you been a paladin?~ DO ~SetGlobal("C0SirenePIDPaladin","GLOBAL",1)~ + paladin
-+ ~Global("C0SirenePIDRadiantHeart","GLOBAL",0)~ + ~What do you think of the Order of the Radiant Heart?~ DO ~SetGlobal("C0SirenePIDRadiantHeart","GLOBAL",1)~ + radiantheart
-+ ~Global("C0SirenePIDScars","GLOBAL",0)~ + ~Do your scars still cause you pain?~ DO ~SetGlobal("C0SirenePIDScars","GLOBAL",1)~ + scars
-+ ~Global("C0SirenePIDFood","GLOBAL",0)~ + ~What kinds of food do you prefer?~ DO ~SetGlobal("C0SirenePIDFood","GLOBAL",1)~ + food
-+ ~Global("C0SirenePIDSettle","GLOBAL",0)~ + ~Have you ever considered settling down?~ DO ~SetGlobal("C0SirenePIDSettle","GLOBAL",1)~ + settle
+Global("C0SirenePIDPlay","GLOBAL",0)~ + ~我注意到那出图米什戏剧结尾时你几乎要落泪了。你真那么喜欢？~ DO ~SetGlobal("C0SirenePIDPlay","GLOBAL",1)~ + bardplay
++ ~Global("C0SirenePIDIlmater","GLOBAL",0) Alignment("C0Sirene",LAWFUL_GOOD)~ + ~你对追随伊尔梅特满意吗？~ DO ~SetGlobal("C0SirenePIDIlmater","GLOBAL",1)~ + ilmater
++ ~Global("C0SirenePIDHome","GLOBAL",0)~ + ~你可曾想念过家乡？~ DO ~SetGlobal("C0SirenePIDHome","GLOBAL",1)~ + home
++ ~Global("C0SirenePIDPaladin","GLOBAL",0)~ + ~你做圣武士多久了？~ DO ~SetGlobal("C0SirenePIDPaladin","GLOBAL",1)~ + paladin
++ ~Global("C0SirenePIDRadiantHeart","GLOBAL",0)~ + ~你觉得光辉之心骑士团怎么样？~ DO ~SetGlobal("C0SirenePIDRadiantHeart","GLOBAL",1)~ + radiantheart
++ ~Global("C0SirenePIDScars","GLOBAL",0)~ + ~你的疤还会疼吗？~ DO ~SetGlobal("C0SirenePIDScars","GLOBAL",1)~ + scars
++ ~Global("C0SirenePIDFood","GLOBAL",0)~ + ~你偏好什么样的食物？~ DO ~SetGlobal("C0SirenePIDFood","GLOBAL",1)~ + food
++ ~Global("C0SirenePIDSettle","GLOBAL",0)~ + ~你可曾想过安定下来？~ DO ~SetGlobal("C0SirenePIDSettle","GLOBAL",1)~ + settle
 + ~GlobalGT("C0SireneLovetalk","GLOBAL",16)
 !Global("C0SirenePIDFirstLove","GLOBAL",1)
 OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
-Global("C0SireneRomanceActive","GLOBAL",2)~ + ~Can you tell me about your first love?~ + firstlove
+Global("C0SireneRomanceActive","GLOBAL",2)~ + ~你能跟我讲讲你的初恋吗？~ + firstlove
 + ~Global("C0SirenePIDFirstLove","GLOBAL",1)
 !Global("C0SirenePIDSecondLove","GLOBAL",1)
 OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
-Global("C0SireneRomanceActive","GLOBAL",2)~ + ~Can you tell me about your second love?~ DO ~SetGlobal("C0SirenePIDSecondLove","GLOBAL",1)~ + secondlove
-+ ~Global("C0SireneRomanceActive","GLOBAL",2) Global("C0SirenePIDAppearance","GLOBAL",0)~ + ~I've noticed you're taking care of your appearance more than usual. What brought this change?~ + appearance
-+ ~Global("C0SireneRomanceActive","GLOBAL",2) Global("C0SirenePIDBhaalspawn","GLOBAL",0)~ + ~Do you ever have any doubts about loving a Bhaalspawn?~ + bhaalspawn
-+ ~GlobalLT("C0SireneTsamon","GLOBAL",3)~ + ~How do you feel about your faith at the moment?~ + faith
-+ ~NumInPartyAliveGT(2)~ + ~I'd like to ask you about one of our companions.~ + companions
-++ ~On second thought, there's nothing I wish to ask.~ EXIT
+Global("C0SireneRomanceActive","GLOBAL",2)~ + ~你能跟我讲讲你的第二段爱吗？~ DO ~SetGlobal("C0SirenePIDSecondLove","GLOBAL",1)~ + secondlove
++ ~Global("C0SireneRomanceActive","GLOBAL",2) Global("C0SirenePIDAppearance","GLOBAL",0)~ + ~我注意到你比平常更照顾自己的外表了。是什么带来了这变化？~ + appearance
++ ~Global("C0SireneRomanceActive","GLOBAL",2) Global("C0SirenePIDBhaalspawn","GLOBAL",0)~ + ~你可曾怀疑过爱上一个巴尔之子？~ + bhaalspawn
++ ~GlobalLT("C0SireneTsamon","GLOBAL",3)~ + ~你此刻对自己的信仰感觉如何？~ + faith
++ ~NumInPartyAliveGT(2)~ + ~我想问你一位同伴的事。~ + companions
+++ ~再想想，我没什么想问的。~ EXIT
 END
 
 IF ~~ bardplay
-SAY ~Oh... aye, have I mentioned that I have a weakness towards romance in fiction? That play struck me deeply... I have not seen anything of its like in my life.~
+SAY ~哦……是的，我提过我对虚构作品里的恋情有软肋吗？那出戏深深打动了我……我一生没见过那样的东西。~
 IF ~GlobalLT("playmistake","GLOBAL",3)~ + bardplay1
 IF ~!GlobalLT("playmistake","GLOBAL",3)~ EXIT
 END
 
 IF ~~ bardplay1
-SAY ~Your performance was exemplary as well, <CHARNAME>. Sometimes 'tis easy to forget that you are as much an artist as a leader.~
+SAY ~你的演出也很出色，<CHARNAME>。有时很容易忘了你既是领袖也是个艺术家。~
 IF ~~ EXIT
 END
 
 IF ~~ ilmater
-SAY ~I... have never stopped to consider it. Though I was raised among priests of Ilmater, 'twas never demanded for me to follow the faith. To worship the Crying God was my own decision.~
-= ~Perhaps if I had made a different choice, my life would have been easier. Am I satisfied as I am? I do not know, but I do find satisfaction in helping others with their burdens and suffering. And that is why I continue to serve Ilmater, despite all my responsibilities.~
+SAY ~我……从没停下来想过这个。虽然我在伊尔梅特的祭司中间长大，可从来没人要求我信奉这信仰。敬拜哭泣之神是我自己的决定。~
+= ~也许我若做了别的选择，我的人生会更容易。我对我如今的样子满意吗？我不知道，可我确实在帮人分担重负与苦难中得到满足。这就是为什么我继续服侍伊尔梅特，尽管有这一切职责。~
 IF ~~ EXIT
 END
 
 IF ~~ home
-SAY ~Sometimes... though I do not truly miss the people, save for the brothers and sisters of the temple. They were always wary of me, even after I took my vows to become a paladin.~
-= ~There was one exception, however... the baker of the village was a devout follower of Ilmater, and often visited the church. Unlike most of the villagers, he always treated me well, and sometimes brought sweet pastries for all the children.~
-= ~When I was accepted into the order of the Holy Warriors of Suffering, he was the only one aside from the priests to congratulate me. But... he passed away not long before I left on my pilgrimage.~
-= ~What of you, <CHARNAME>? Do you miss your home? It has been a long time since you last returned.~
-++ ~I often think of Candlekeep. I would return right now if I had the choice.~ + home1
-++ ~It was a good childhood, but I don't really miss it.~ + home1
-++ ~Are you kidding me? The day I left was the happiest time of my life!~ + home1
+SAY ~有时会……不过我并不真想念那些人，除了神殿的兄弟姐妹。他们一直对我戒备，即使在我发誓成为圣武士之后。~
+= ~可有一个例外……村里的面包师是伊尔梅特的虔诚信徒，常来教堂。跟大多数村民不同，他一直待我很好，有时还给所有孩子带甜点。~
+= ~当我被受苦圣战武士接纳时，除了祭司们，他是唯一恭喜我的人。可是……在我出发朝圣前不久，他去世了。~
+= ~你呢，<CHARNAME>？你想念家乡吗？你上次回去已是好久之前了。~
+++ ~我常想起烛堡。若我有得选，我现在就回去。~ + home1
+++ ~那是很好的童年，可我不太想念它。~ + home1
+++ ~你在开玩笑吗？我离开那天是我一生最快乐的时刻！~ + home1
 END
 
 IF ~~ home1
-SAY ~I see... 'tis interesting to know your thoughts. But we have talked long enough, we should move on.~
+SAY ~我明白了……知道你的想法很有趣。可我们谈得够久了，该走了。~
 IF ~~ EXIT
 END
 
 IF ~~ paladin
-SAY ~Eight years now, I believe... though it feels like it has been my entire life. 'Tis been a while since I have stopped to consider how much time has passed by.~
+SAY ~到如今八年了，我想……可感觉像过了一辈子。我已有好一阵没停下来想过了多久。~
 IF ~~ EXIT
 END
 
 IF ~~ radiantheart
-SAY ~I did not spend any time among them, but from what I know, they appear to be the only true pillar of moral virtue within the city of Athkatla. I respect them, despite their... uncompromising code.~
+SAY ~我没在他们中间待过，可据我所知，他们似乎是阿斯卡特拉城里唯一真正的道德支柱。我敬重他们，尽管他们……不肯妥协的守则。~
 IF ~~ EXIT
 END
 
 IF ~~ scars
-SAY ~Sometimes, aye. Though rarely enough to hamper my performance in battle... often when I lay at rest, I think of the battles which led to these scars, and I will relive the feeling of pain.~
-= ~You may think it foolish, <CHARNAME>, but many of my scars bring me pride, for they were gained in exchange for protecting others.~
+SAY ~有时会，是的。不过很少严重到妨碍我战斗……常在我歇息时，我会想起那些留下这些疤的战斗，重新体验那种痛。~
+= ~你也许觉得这很傻，<CHARNAME>，可我的许多疤让我自豪，因为它们是为保护别人而换来的。~
 IF ~~ EXIT
 END
 
 IF ~~ food
-SAY ~I was not raised among wealth, <CHARNAME>. As a ward of the church of Ilmater, I learned to appreciate the meals the priests took the time and effort to provide.~
-= ~Sometimes, I hunted in the wild to try and acquire meat for my fellows, but I was never too fond of the taste. I much preferred the taste of fish, although I lacked the patience for fishing.~
+SAY ~我不是在富贵中长大的，<CHARNAME>。作为伊尔梅特教会的受监护者，我学会了珍惜祭司们花时间心力供的饭菜。~
+= ~有时我会在野地里打猎，想给同伴弄些肉，可我从不太喜欢那个味道。我更喜欢鱼的味道，虽然我没钓鱼的耐性。~
 IF ~~ EXIT
 END
 
 IF ~~ settle
-SAY ~I would like the prospect of retiring from battle and starting a family, but I have a duty to my order... a duty to Ilmater. I cannot see myself leaving this life, so long as there are still others in need.~
+SAY ~我会喜欢退出战斗、成家立业的前景，可我对我的骑士团有职责……对伊尔梅特有职责。只要还有人需要，我看不出自己能离开这种生活。~
 IF ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
 Global("C0SireneRomanceActive","GLOBAL",2)~ + settle2
@@ -5930,147 +5930,147 @@ IF ~!Global("C0SireneRomanceActive","GLOBAL",1)
 END
 
 IF ~~ settle2
-SAY ~Though... if there was another willing to settle down at my side, I cannot deny the thought would be tempting... perhaps enough to tempt me to let go of this life.~
+SAY ~不过……若有人愿意在我身边安定下来，我不能否认那念头很诱人……也许足以诱我放下这种生活。~
 IF ~~ EXIT
 END
 
 IF ~~ settle3
-SAY ~Besides, I doubt that another would be willing to spend a lifetime at my side. No, I think I will be serving as Ilmater's servant even as I grow old, until I die.~
+SAY ~何况，我怀疑别人会愿意在我身边过一辈子。不，我想我会一直做伊尔梅特的仆人，直到老死。~
 IF ~~ EXIT
 END
 
 IF ~~ firstlove
-SAY ~If you wish... though I must warn you 'tis not a happy tale. Do you truly wish to know?~
-++ ~Yes, I do.~ DO ~SetGlobal("C0SirenePIDFirstLove","GLOBAL",1)~ + firstlove1
-++ ~Perhaps another time.~ + again
+SAY ~若你愿意……不过我必须警告你，这不是个快乐的故事。你真想知道？~
+++ ~是的，我想。~ DO ~SetGlobal("C0SirenePIDFirstLove","GLOBAL",1)~ + firstlove1
+++ ~也许改天吧。~ + again
 END
 
 IF ~~ firstlove1
-SAY ~Very well. My first love... was a companion I once knew a few years past. I was only nineteen then... 'twas only around two years since I left my home village on my pilgrimage.~
-= ~He was a mercenary from Tethyr... a young man, perhaps two years my senior. We met on the road to the Sword Coast, while he was serving as a guard for a merchant caravan.~
-= ~The caravan was attacked by a group of troglodyte raiders, and many of the guards defending the band were wounded. I helped tend to their wounds, and that was when I met him.~
-++ ~What was his name?~ + firstlove2
-++ ~I've no interest in hearing any more.~ + again
+SAY ~好罢。我的初恋……是我几年前认识的一位同伴。我那时才十九岁……离我离开家乡村子去朝圣大约才两年。~
+= ~他是来自泰瑟的佣兵……一个年轻人，也许比我大两岁。我们是在去剑湾的路上相遇的，他当时给一支商队做护卫。~
+= ~商队遭到一伙穴居人劫掠者袭击，护卫商队的许多人都受了伤。我帮忙处理他们的伤口，就是在那里遇见他的。~
+++ ~他叫什么？~ + firstlove2
+++ ~我没兴趣再听了。~ + again
 END
 
 IF ~~ firstlove2
-SAY ~His name was Cail. After we met, I travelled with the merchants for a time, though I kept my heritage a secret for the longest time out of fear that I would be turned away.~
-= ~Cail found out first, however... I had left the group to bathe one day, and he, the philanderer that he was, followed me. By the time I realized, I had already entered the water and there was no chance to hide.~
-++ ~How did he react?~ + firstlove3
-++ ~Ouch. I hope you taught him a lesson.~ + firstlove4
-++ ~I'd rather not hear any more.~ + again
+SAY ~他叫凯尔。我们相遇之后，我跟着商人们走了一阵，不过我一直把自己的血脉藏着，怕因此被赶走。~
+= ~可凯尔先发现了……有一天我离开队伍去洗澡，而他，那个爱拈花惹草的家伙，跟了我来。等我发现时，我已经进了水，没机会遮掩了。~
+++ ~他什么反应？~ + firstlove3
+++ ~哎哟。我希望你教训了他。~ + firstlove4
+++ ~我不想再听了。~ + again
 END
 
 IF ~~ firstlove3
-SAY ~He was shocked at first, but I gave him little time to speak. I was more hotheaded then, and in a fit of rage and embarrassment I took my bag and swung it at him.~
+SAY ~他起初震惊，可我几乎没给他说话的时间。我那时更火爆，在一阵羞怒之中，我抓起包朝他抡去。~
 IF ~~ + firstlove5
 END
 
 IF ~~ firstlove4
-SAY ~*laugh* I certainly did, although I was more hotheaded in my youth. I was furious and shamed when I saw him, and in a fit of rage I took my bag and swung it at him.~
+SAY ~*笑*我当然教训了，虽然我年轻时更火爆。我看见他时又怒又羞，一阵暴怒之下抓起包朝他抡去。~
 IF ~~ + firstlove5
 END
 
 IF ~~ firstlove5
-SAY ~I struck him square in the head and he reeled backwards, and that was when I came to my senses. I left the water to help him, fearing I had harmed him severely.~
-= ~When he came to, he simply laughed it off. He said that he was shocked that I did not kill him, and that I reacted just as any other woman would have. He did not believe my blood made me any different.~
-= ~Ever since then, I trusted Cail completely, and over time we became close.~
-++ ~What happened to him?~ + firstlove6
+SAY ~我正中他的头，他向后踉跄，我这才清醒过来。我离开水去帮他，怕我把他伤得重了。~
+= ~他醒过来后，只是笑着揭过。他说他震惊于我竟没杀他，说我反应得跟任何别的女人一样。他不信我的血让我有什么不同。~
+= ~从那以后，我完全信任凯尔，随着时间我们变得亲近。~
+++ ~他后来怎么了？~ + firstlove6
 END
 
 IF ~~ firstlove6
-SAY ~I... I did say this tale did not have a happy ending, did I not?~
-= ~Cail and I parted ways with the caravan once they had completed their journey, and we travelled together. We had only become lovers soon after that, but...~
-= ~We encountered a band of Asador's slaver army on the Coast Way road. We were outnumbered four to one, and though we defeated them, Cail... he took a poisoned arrow to the chest.~
-= ~I felt as though my life would end then. I tried to save him, but in the end, I could only hold him and ease his passing.~
-++ ~I'm sorry. That must have been awful.~ + firstlove7
-++ ~Was revenge the reason you killed Asador?~ + firstlove8
+SAY ~我……我说过这故事没有圆满结局，对吧？~
+= ~商队走完行程后，凯尔和我跟他们分了道，我们一起旅行。之后不久我们才成为恋人，可是……~
+= ~我们在海岸大道路上遇上一伙阿萨多尔的奴隶军。我们人数是一比四，虽然我们打败了他们，可凯尔……胸口中了一支毒箭。~
+= ~我觉得我的命那时也要结束了。我试着救他，可最后，我只能抱着他，减轻他离世的痛苦。~
+++ ~对不起。那一定很可怕。~ + firstlove7
+++ ~复仇是你杀阿萨多尔的理由吗？~ + firstlove8
 END
 
 IF ~~ firstlove7
-SAY ~I... thank you for listening, <CHARNAME>. I have not told this tale to anyone aside from you... I feel slightly better having done so.~
+SAY ~我……谢谢你听我说，<CHARNAME>。除你之外我没跟任何人讲过这故事……说出来我觉得好受了些。~
 IF ~~ EXIT
 END
 
 IF ~~ firstlove8
-SAY ~It was Cail's death that drove me to seek Asador's death, aye... but I would have killed him regardless, if the choice was given to me. Revenge did not bring me any peace.~
+SAY ~是凯尔的死驱我去取阿萨多尔的命，是的……可若给我选择，我无论如何也会杀他。复仇没给我带来任何安宁。~
 IF ~~ + firstlove7
 END
 
 IF ~~ secondlove
-SAY ~Did I mention that? It must have been a slip of the tongue. Regardless, I see no harm in telling.~
-= ~This tale has a happier ending than the last... her name was Ashera, and she was a priestess of Sune.~
-= ~I cannot say this is an interesting tale. We met long after I had avenged Cail's death, and she... saved my life after a foolish action almost cost me my life.~
-= ~Like Cail, she never judged me for my blood, and encouraged me to embrace beauty. In time, I began to care for her.~
-++ ~Was she beautiful?~ + secondlove2
-++ ~What happened to her?~ + secondlove3
+SAY ~我提过那个吗？一定是说漏了嘴。无论如何，讲出来我看没什么害处。~
+= ~这故事比上一个结局好些……她叫阿谢拉，是苏妮的女祭司。~
+= ~我说不上这是有趣的故事。我们相遇在我为凯尔复仇很久之后，而她……在我一次愚蠢举动几乎送命之后救了我。~
+= ~像凯尔一样，她从不因我的血评判我，还鼓励我拥抱美。渐渐地，我开始在意她。~
+++ ~她美吗？~ + secondlove2
+++ ~她后来怎么了？~ + secondlove3
 END
 
 IF ~~ secondlove2
-SAY ~Ashera was a great beauty, said by her fellow priests to have been blessed by Sune herself. But she told me 'twas her dedication, not divine intervention, that gave her beauty, and that I could do the same if I made the attempt.~
-= ~She had a talent for giving joy to others, and I think that was why I was... attracted to her, moreso than her beauty.~
+SAY ~阿谢拉是个大美人，她的同僚祭司说她蒙苏妮亲赐美貌。可她告诉我，给她美的是她的用心，而非神力干预，说只要我肯尝试，我也能如此。~
+= ~她有给人带来欢愉的才能，我想那就是我……被她吸引的原因，胜过她的美貌。~
 IF ~~ + secondlove3
 END
 
 IF ~~ secondlove3
-SAY ~We parted ways eventually, albeit amiably. I still had my pilgrimage, and though I was relucant to part, I knew it must happen. Though...~
-= ~The day before I left, I was injured and taken back to the temple of Sune. Ashera tended to my wounds, and... we spent the night together.~
-++ ~Do you want to see her again?~ + secondlove4
-++ ~We've talked enough. Let's move on.~ EXIT
+SAY ~我们终究分了道，不过是和气分手。我仍有我的朝圣，虽然我不愿分离，可我知道那必定发生。不过……~
+= ~我离开前一天受了伤，被送回苏妮神殿。阿谢拉替我处理伤口，然后……我们一起过了那一夜。~
+++ ~你想再见她吗？~ + secondlove4
+++ ~我们谈够了。走吧。~ EXIT
 END
 
 IF ~~ secondlove4
-SAY ~I would like that, aye, though whether we could rekindle our relationship... I doubt it. I prayed that she could seek love and companionship with another when I left. Even now, I... still hope for that.~
+SAY ~我会想，是的，不过能否重燃我们的关系……我怀疑。我离开时祈祷她能另寻爱与陪伴。即使如今，我……仍希望如此。~
 IF ~~ EXIT
 END
 
 IF ~~ appearance
-SAY ~Well... *blush* have I, truly? I have not noticed any changes... perhaps you are mistaken.~
-++ ~What's that I smell, then? Is that perfume?~ + appearance1
-++ ~No, I don't think I am. Your hair looks tidier than usual. Shinier, too.~ + appearance2
-++ ~Really? So what's with your sudden change of attire during our last stay at an inn?~ + appearance3
-++ ~Maybe I am. Never mind.~ EXIT
+SAY ~嗯……*脸红*我真的有吗？我没注意到任何变化……也许你弄错了。~
+++ ~那我闻到的是什么？是香水吗？~ + appearance1
+++ ~不，我想我没有。你的头发比平常整齐。也更亮。~ + appearance2
+++ ~真的？那我们上次住旅店时，你忽然换了衣着是怎么回事？~ + appearance3
+++ ~也许我有。算了。~ EXIT
 END
 
 IF ~~ appearance1
-SAY ~N-no! It was just a... healing salve. That must be the scent you mentioned.~
-++ ~You're a terrible liar, Sirene. Why not just tell the truth? I promise I won't laugh.~ + appearance4
-++ ~Suuure.~ + appearance4
-++ ~Whatever...~ EXIT
+SAY ~不——不！那只是……治伤的药膏。那一定就是你闻到的味道。~
+++ ~你撒谎撒得真糟，塞琳。为什么不干脆说实话？我保证不笑。~ + appearance4
+++ ~当——然。~ + appearance4
+++ ~随便吧……~ EXIT
 END
 
 IF ~~ appearance2
-SAY ~I... just needed to shorten and trim it after one of our previous foes almost grabbed it in the midst of battle. 'Twas growing a little too long.~
-++ ~You're a terrible liar, Sirene. Why not just tell the truth? I promise I won't laugh.~ + appearance4
-++ ~Suuure.~ + appearance4
-++ ~Whatever...~ EXIT
+SAY ~我……只是上次有个敌人差点在战斗中抓住它，所以需要剪短修整。它长得有点太长了。~
+++ ~你撒谎撒得真糟，塞琳。为什么不干脆说实话？我保证不笑。~ + appearance4
+++ ~当——然。~ + appearance4
+++ ~随便吧……~ EXIT
 END
 
 IF ~~ appearance3
-SAY ~It... it was because the day was warmer than usual. That was why I...~
-++ ~You're a terrible liar, Sirene. Why not just tell the truth? I promise I won't laugh.~ + appearance4
-++ ~Suuure.~ + appearance4
-++ ~Whatever...~ EXIT
+SAY ~那……那是因为那天比平常暖。所以我才……~
+++ ~你撒谎撒得真糟，塞琳。为什么不干脆说实话？我保证不笑。~ + appearance4
+++ ~当——然。~ + appearance4
+++ ~随便吧……~ EXIT
 END
 
 IF ~~ appearance4
-SAY ~*sigh* This is no good. Aye, I have been... taking care of myself more closely as of late, so that I might... impress you.~
-++ ~I know. I'm flattered that you'd put in so much effort.~ + appearance5
-++ ~You don't have to change yourself for me. I like you just as you are.~ + appearance5
+SAY ~*叹气*这不行。是的，我近来……更仔细地照顾自己了，好能……让你动心。~
+++ ~我知道。你这样花心思让我受宠若惊。~ + appearance5
+++ ~你不必为我改变自己。我就喜欢你现在的样子。~ + appearance5
 END
 
 IF ~~ appearance5
-SAY ~*blush* Thank you, <CHARNAME>.~
+SAY ~*脸红*谢谢你，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ bhaalspawn
-SAY ~*smile* Why would I? I know you for who you are, just as you saw past my blood. I would be a hypocrite to judge you for your heritage.~
+SAY ~*微笑*我为什么要？我知道你是谁，正如你看穿了我的血。若我因你的血脉评判你，那我就是伪君子。~
 IF ~~ EXIT
 END
 
 IF ~~ faith
-SAY ~That is a curious question, <CHARNAME>... though I have been considering the matter of my faith in Ilmater much, as of late.~
+SAY ~这问题真古怪，<CHARNAME>……不过我近来确实常想我在伊尔梅特的信仰这件事。~
 IF ~GlobalGT("C0SireneFaith","GLOBAL",5)~ + maxfaith
 IF ~GlobalLT("C0SireneFaith","GLOBAL",6) GlobalGT("C0SireneFaith","GLOBAL",0)~ + goodfaith
 IF ~Global("C0SireneFaith","GLOBAL",0)~ + midfaith
@@ -6079,191 +6079,191 @@ IF ~GlobalLT("C0SireneFaith","GLOBAL",-5)~ + minfaith
 END
 
 IF ~~ maxfaith
-SAY ~My faith may have wavered in the past, but... your support has given me the confidence to be proud of my service of my god. Thank you for that, <CHARNAME>.~
+SAY ~我的信仰过去也许动摇过，可是……你的支持给了我自信，让我能为我服侍我的神而自豪。为此谢谢你，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ goodfaith
-SAY ~I admit some doubts remain, but... I am slowly beginning to understand what it truly means to serve Ilmater. Perhaps with time, I will abandon what uncertainties that remain.~
+SAY ~我承认还有些疑虑，可是……我正慢慢开始明白服侍伊尔梅特真正意味着什么。也许随着时间，我会抛下剩下的不确定。~
 IF ~~ EXIT
 END
 
 IF ~~ midfaith
-SAY ~I am... conflicted, <CHARNAME>. Perhaps I will have a better answer for you in the future.~
+SAY ~我很……矛盾，<CHARNAME>。也许将来我能给你更好的答案。~
 IF ~~ EXIT
 END
 
 IF ~~ badfaith
-SAY ~My doubts are beginning to question whether I am worthy of being Ilmater's servant. Things may change, but... I wonder for how long I will be able to continue this path.~
+SAY ~我的疑虑开始质疑我是否配做伊尔梅特的仆人。事情也许会有变化，可是……我在想我还能走这条路多久。~
 IF ~~ EXIT
 END
 
 IF ~~ minfaith
-SAY ~This may sound blasphemous, but... I am beginning to wonder if service to Ilmater is truly the role I am meant to play. Sometimes I wonder if... I should consider making my own path, without the rules of a deity to control me.~
+SAY ~这话也许听着亵渎，可是……我开始怀疑服侍伊尔梅特是否真是我该扮演的角色。有时我想……我是否该考虑走自己的路，不受神的规则控制。~
 IF ~~ EXIT
 END
 
 // Companions
 
 IF ~~ companions
-SAY ~Of course... for you, I will do my best to answer truthfully.~
-+ ~InParty("Aerie")~ + ~What do you think of Aerie?~ + aerie
-+ ~InParty("Anomen") Global("AnomenIsKnight","GLOBAL",1)~ + ~What do you think of Anomen?~ + anomengood
-+ ~InParty("Anomen") Global("AnomenIsNotKnight","GLOBAL",1)~ + ~What do you think of Anomen?~ + anomenbad
+SAY ~当然……为你，我会尽力如实回答。~
++ ~InParty("Aerie")~ + ~你觉得艾黎怎么样？~ + aerie
++ ~InParty("Anomen") Global("AnomenIsKnight","GLOBAL",1)~ + ~你觉得阿诺门怎么样？~ + anomengood
++ ~InParty("Anomen") Global("AnomenIsNotKnight","GLOBAL",1)~ + ~你觉得阿诺门怎么样？~ + anomenbad
 + ~InParty("Anomen") !Global("AnomenIsNotKnight","GLOBAL",1)
-!Global("AnomenIsNotKnight","GLOBAL",1)~ + ~What do you think of Anomen?~ + anomenneutral
-+ ~InParty("Cernd")~ + ~What do you think of Cernd?~ + cernd
-+ ~InParty("Edwin")~ + ~What do you think of Edwin?~ + edwin
-+ ~InParty("E3Fade")~ + ~What do you think of Fade?~ + fade
-+ ~InParty("L#Fou")~ + ~What do you think of Foundling?~ + foundling
-+ ~InParty("C0Gley")~ + ~What do you think of Gleya?~ + gleya
-+ ~InParty("HaerDalis")~ + ~What do you think of Haer'Dalis?~ + haerdalis
-+ ~InParty("Imoen") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~What do you think of Imoen?~ + imoen1
-+ ~InParty("Imoen") !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~What do you think of Imoen?~ + imoen2
-+ ~InParty("Jaheira")~ + ~What do you think of Jaheira?~ + jaheira
-+ ~InParty("Jan")~ + ~What do you think of Jan?~ + jan
-+ ~InParty("Keldorn")~ + ~What do you think of Keldorn?~ + keldorn
-+ ~InParty("Korgan")~ + ~What do you think of Korgan?~ + korgan
-+ ~InParty("Mazzy")~ + ~What do you think of Mazzy?~ + mazzy
-+ ~InParty("Minsc")~ + ~What do you think of Minsc?~ + minsc
-+ ~InParty("Nalia")~ + ~What do you think of Nalia?~ + nalia
-+ ~InParty("Neera")~ + ~What do you think of Neera?~ + neera
-+ ~InParty("C0PaiNa")~ + ~What do you think of Pai'Na?~ + paina
-+ ~InParty("Rasaad")~ + ~What do you think of Rasaad?~ + rasaad
-+ ~InParty("Viconia")~ + ~What do you think of Viconia?~ + viconia
-+ ~InParty("Valygar")~ + ~What do you think of Valygar?~ + valygar
-+ ~InParty("Yoshimo")~ + ~What do you think of Yoshimo?~ + yoshimo
-+ ~InParty("YxYve")~ + ~What do you think of Yvette?~ + yvette
-++ ~Never mind. I don't want to know.~ EXIT
+!Global("AnomenIsNotKnight","GLOBAL",1)~ + ~你觉得阿诺门怎么样？~ + anomenneutral
++ ~InParty("Cernd")~ + ~你觉得瑟恩德怎么样？~ + cernd
++ ~InParty("Edwin")~ + ~你觉得艾德温怎么样？~ + edwin
++ ~InParty("E3Fade")~ + ~你觉得费德怎么样？~ + fade
++ ~InParty("L#Fou")~ + ~你觉得弃儿怎么样？~ + foundling
++ ~InParty("C0Gley")~ + ~你觉得格蕾雅怎么样？~ + gleya
++ ~InParty("HaerDalis")~ + ~你觉得海尔达利怎么样？~ + haerdalis
++ ~InParty("Imoen") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得爱蒙怎么样？~ + imoen1
++ ~InParty("Imoen") !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得爱蒙怎么样？~ + imoen2
++ ~InParty("Jaheira")~ + ~你觉得贾希拉怎么样？~ + jaheira
++ ~InParty("Jan")~ + ~你觉得扬怎么样？~ + jan
++ ~InParty("Keldorn")~ + ~你觉得凯尔登怎么样？~ + keldorn
++ ~InParty("Korgan")~ + ~你觉得科根怎么样？~ + korgan
++ ~InParty("Mazzy")~ + ~你觉得玛兹怎么样？~ + mazzy
++ ~InParty("Minsc")~ + ~你觉得明斯克怎么样？~ + minsc
++ ~InParty("Nalia")~ + ~你觉得娜莉亚怎么样？~ + nalia
++ ~InParty("Neera")~ + ~你觉得妮拉怎么样？~ + neera
++ ~InParty("C0PaiNa")~ + ~你觉得派娜怎么样？~ + paina
++ ~InParty("Rasaad")~ + ~你觉得拉萨德怎么样？~ + rasaad
++ ~InParty("Viconia")~ + ~你觉得维康尼亚怎么样？~ + viconia
++ ~InParty("Valygar")~ + ~你觉得瓦里格怎么样？~ + valygar
++ ~InParty("Yoshimo")~ + ~你觉得吉野怎么样？~ + yoshimo
++ ~InParty("YxYve")~ + ~你觉得伊薇特怎么样？~ + yvette
+++ ~算了。我不想知道。~ EXIT
 END
 
 IF ~~ aerie
-SAY ~I care greatly about her, but sometimes I feel overly protective at the same time, worrying about the risks of this life. 'Tis unfair to her.~
+SAY ~我非常在意她，可同时我有时又觉得自己保护得过头，担心这种生活的风险。这对她不公平。~
 IF ~~ EXIT
 END
 
 IF ~~ anomengood
-SAY ~Knighthood suits him well. He is a worthy companion, <CHARNAME>.~
+SAY ~骑士身份很适合他。他是个可敬的同伴，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ anomenbad
-SAY ~I cannot condone what he has done, <CHARNAME>. I will accept him as a comrade, but you will not care to hear how I feel about him.~
+SAY ~我不能宽恕他所做的事，<CHARNAME>。我会接纳他为同伴，可你不会想听我对他的看法。~
 IF ~~ EXIT
 END
 
 IF ~~ anomenneutral
-SAY ~He distrusts me, and our faiths are in disagreement, but I can sympathize with his dreams.~
+SAY ~他不信任我，我们的信仰也不合，可我能同情他的梦想。~
 IF ~~ EXIT
 END
 
 IF ~~ cernd
-SAY ~I believe he is a good man... even if I do not understand him.~
+SAY ~我相信他是个好人……即使我不理解他。~
 IF ~~ EXIT
 END
 
 IF ~~ edwin
-SAY ~I do not trust him, <CHARNAME>. He is loyal to no one but himself.~
+SAY ~我不信任他，<CHARNAME>。他只忠于他自己。~
 IF ~~ EXIT
 END
 
 IF ~~ fade
-SAY ~We share little in common, yet I still feel a certain kinship with her. I hope to gain her friendship one day.~
+SAY ~我们几乎没有共同之处，可我仍觉得与她有种亲近。我希望有一天能赢得她的友谊。~
 IF ~~ EXIT
 END
 
 IF ~~ foundling
-SAY ~Truth be told, I cannot fully trust him. He has lived and grown in the shadow of evil... and I cannot say I care for the powers that evil has nurtured within him.~
+SAY ~说实话，我不能完全信任他。他在邪恶的阴影里生活、成长……而我说不上喜欢那邪恶在他心里养出的力量。~
 IF ~~ EXIT
 END
 
 IF ~~ gleya
-SAY ~I have a strange admiration for her spirit and carefree nature.~
+SAY ~我对她的精神与洒脱有种古怪的钦佩。~
 IF ~~ EXIT
 END
 
 IF ~~ haerdalis
-SAY ~I find him rather charming, though his nihilistic ideology is mildly discomforting.~
+SAY ~我觉得他颇迷人，虽然他那虚无主义的理念让人有些不舒服。~
 IF ~~ EXIT
 END
 
 IF ~~ imoen1
-SAY ~She... by Ilmater, <CHARNAME>, she is so different to the girl I remember. I cannot imagine the horrors that must have driven her to thus.~
+SAY ~她……以伊尔梅特之名，<CHARNAME>，她跟我记得的那个女孩太不一样了。我无法想象是怎样可怕的经历把她逼成这样。~
 IF ~~ EXIT
 END
 
 IF ~~ imoen2
-SAY ~I shudder to think of the things that could drive her into her current state. Though I did not know her, I can see hints of the youthful girl she must have once been...~
+SAY ~想到可能把她逼到如今地步的那些事，我就不寒而栗。虽然我不认识她，可我能看出她从前必定是个怎样的年轻女孩的痕迹……~
 IF ~~ EXIT
 END
 
 IF ~~ jaheira
-SAY ~I admire her discipline, and value her friendship.~
+SAY ~我钦佩她的自律，也珍视她的友谊。~
 IF ~~ EXIT
 END
 
 IF ~~ jan
-SAY ~I do not know what to make of his chatter, <CHARNAME>. I do not wish to offend him, but how is it possible to withstand it?~
+SAY ~我不知道该怎么应付他那些絮叨，<CHARNAME>。我不想冒犯他，可这怎么忍得住？~
 IF ~~ EXIT
 END
 
 IF ~~ keldorn
-SAY ~'Tis an honor to travel and fight at his side, though I feel 'tis more than I deserve. I hope I can learn from his example.~
+SAY ~能在他身边同行作战是种荣幸，虽然我觉得这超过我应得的。我希望我能从他的榜样中学到东西。~
 IF ~~ EXIT
 END
 
 IF ~~ korgan
-SAY ~I cannot approve of your decision to keep him, <CHARNAME>.~
+SAY ~我不能赞同你留着他的决定，<CHARNAME>。~
 IF ~~ EXIT
 END
 
 IF ~~ mazzy
-SAY ~She is a close friend and stalwart sister-at-arms. I have nothing but the truest respect and admiration for her.~
+SAY ~她是位亲密的朋友，也是坚定的战友。我对她只有最真诚的敬重与钦佩。~
 IF ~~ EXIT
 END
 
 IF ~~ minsc
-SAY ~He is a valuable friend, and his heart is pure. I am satisfied to share his company.~
+SAY ~他是位可贵的朋友，心地纯正。我很满足能有他作伴。~
 IF ~~ EXIT
 END
 
 IF ~~ nalia
-SAY ~I cannot say I have known many nobles so closely. She is... not what I expected.~
+SAY ~我说不上曾这样亲近地认识多少贵族。她……跟我预想的不一样。~
 IF ~~ EXIT
 END
 
 IF ~~ neera
-SAY ~She is a dear friend. I am fond of her, despite the danger her magic poses.~
+SAY ~她是位亲爱的朋友。尽管她的魔法有危险，我仍喜欢她。~
 IF ~~ EXIT
 END
 
 IF ~~ paina
-SAY ~She can be cruel, yet I would like to believe she can be kind, as well... I do not fully understand her yet.~
+SAY ~她可以很残忍，可我愿相信她也能善良……我还没完全理解她。~
 IF ~~ EXIT
 END
 
 IF ~~ rasaad
-SAY ~I respect his skill and the tenets of his faith, but his pursuit of vengeance concerns me.~
+SAY ~我敬重他的技艺与他信仰的信条，可他追寻复仇这一点让我担忧。~
 IF ~~ EXIT
 END
 
 IF ~~ viconia
-SAY ~I am uneasy with the presence of a Sharran, but... I know her life has been a cruel one. My feelings regarding her are... conflicted, and that is all I can say.~
+SAY ~有个莎尔信徒在，我很不安，可是……我知道她的一生很残酷。我对她的感受……很矛盾，我只能说这些。~
 IF ~~ EXIT
 END
 
 IF ~~ valygar
-SAY ~He is a difficult man to talk to, <CHARNAME>, but he does truly have a kind heart. I would not devalue his friendship.~
+SAY ~他是个难交谈的人，<CHARNAME>，可他确实有颗善良的心。我不会轻视他的友谊。~
 IF ~~ EXIT
 END
 
 IF ~~ yoshimo
-SAY ~He seems likeable enough despite his profession, I am oddly fond of him.~
+SAY ~尽管他干那一行，他看起来还挺讨人喜欢，我古怪地有点喜欢他。~
 IF ~~ EXIT
 END
 
 IF ~~ yvette
-SAY ~I cannot deny that I am wary of her origins... yet I do enjoy her company. She reminds me of someone I... once knew, that was important to me.~
+SAY ~我不能否认我对她的出身有戒心……可我确实喜欢有她作伴。她让我想起我……曾经认识的某个人，那人对我很重要。~
 IF ~~ EXIT
 END
 

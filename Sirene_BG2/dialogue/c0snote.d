@@ -3,15 +3,15 @@
 BEGIN C0SNOTE
 
 CHAIN IF ~!AreaCheck("AR0020") !AreaCheck("C0SIR1") GlobalLT("C0SireneTsamon","GLOBAL",2)~ THEN C0SNOTE note1
-~The directions on the letter begin from Athkatla's City Gates district. Starting from there may be the best option.~
+~信上的指引从阿斯卡特拉城门区开始。从那里出发也许是最好的选择。~
 EXIT
 
 CHAIN IF ~!InParty("C0Sirene") AreaCheck("AR0020") GlobalLT("C0SireneTsamon","GLOBAL",2)~ THEN C0SNOTE note5
-~You see little reason to travel to the location drawn in the letter without Sirene.~
+~没有塞琳，你觉得没什么理由去信上画的地点。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene") AreaCheck("AR0020") GlobalLT("C0SireneTsamon","GLOBAL",2)~ THEN C0SNOTE note2
-~You follow the directions as the letter instructs you...~
+~你照着信上的指引走……~
 END
 IF ~~ DO ~StartCutsceneMode()
 	FadeToColor([10.0],0)
@@ -26,10 +26,10 @@ IF ~~ DO ~StartCutsceneMode()
 	EndCutsceneMode()~ EXIT
 	
 CHAIN IF ~AreaCheck("C0SIR1") GlobalLT("C0SireneTsamon","GLOBAL",2)~ THEN C0SNOTE note3
-~You have no use for this letter at the moment.~
+~此刻这封信对你没用。~
 EXIT
 	
 CHAIN IF ~GlobalGT("C0SireneTsamon","GLOBAL",1)~ THEN C0SNOTE note4
-~With the threat of T'samon Thornhaven eliminated, you have no further need of this letter.~
+~特萨蒙·索恩港的威胁已除，你不再需要这封信了。~
 END
 IF ~~ DO ~DestroyItem("c0snote")~ EXIT

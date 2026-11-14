@@ -1,64 +1,64 @@
 BEGIN C0SIRE25
 
 IF ~Global("C0SireneSummoned","GLOBAL",1) !Global("C0SireneRomanceActive","GLOBAL",2)~ b1
-SAY ~Where... where am I?~ [C0BLANK]
-++ ~It's alright. I summoned you here.~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
-++ ~Welcome to my personal pocket plane, Sirene.~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
+SAY ~我……我在哪里？~ [C0BLANK]
+++ ~没事。是我把你召来的。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
+++ ~欢迎来到我私人的口袋位面，塞琳。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
 END
 
 IF ~~ b1.1
-SAY ~<CHARNAME>? 'Twas you that brought me here? 'Tis a relief, then.~
-= ~I am sorry that I parted ways with you. I should have expected that you may need my aid once more. I am at your service, if you wish it.~
-++ ~Of course.~ + b1.2
-++ ~Not yet.~ + b1.3
+SAY ~<CHARNAME>？是你把我带到这里来的？那倒让我放心了。~
+= ~很抱歉我与你分了道。我本该料到你可能再次需要我的助力。你若愿意，我听候差遣。~
+++ ~当然。~ + b1.2
+++ ~还不是时候。~ + b1.3
 END
 
 IF ~~ b1.2
-SAY ~Aye... I am glad to be at your side again.~
+SAY ~是的……很高兴又回到你身边。~
 IF ~~ DO ~JoinParty()~ EXIT
 END
 
 IF ~~ b1.3
-SAY ~Truly? As you wish it, my friend. I will wait for you.~
+SAY ~真的？如你所愿，我的朋友。我等你。~
 IF ~~ DO ~MoveToPointNoInterrupt([1717.1717]) Face(0)~ EXIT
 END
 
 IF ~Global("C0SireneSummoned","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ b2
-SAY ~<CHARNAME>! I am so glad to see you again. 'Twas frightening when you left Suldanessellar without me. I tried to seek you out, but...~ [C0BLANK]
-= ~Where... where are we? <CHARNAME>... is this the Abyss once more?~
-++ ~Not exactly. This is my own pocket plane.~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b2.1
+SAY ~<CHARNAME>！再见到你我太高兴了。你把我留在苏丹娜塞拉就走了，那很吓人。我试着找你，可是……~ [C0BLANK]
+= ~我们……我们在哪里？<CHARNAME>……这又是深渊吗？~
+++ ~不完全是。这是我自己的口袋位面。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b2.1
 END
 
 IF ~~ b2.1
-SAY ~I see... I have likely missed much while we were apart, then.~
-= ~Let us leave this place together... and please, do not leave me again.~
-++ ~Of course.~ + b1.2
-++ ~Not yet.~ + b2.3
+SAY ~我明白了……那我们分开的这些时候，我大概错过了许多。~
+= ~让我们一起离开这地方……还有，求你，别再丢下我。~
+++ ~当然。~ + b1.2
+++ ~还不是时候。~ + b2.3
 END
 
 IF ~~ b2.3
-SAY ~But- all right. I trust you. Just please come back to me.~
+SAY ~可——好吧。我信你。只是求你回到我身边。~
 IF ~~ DO ~MoveToPointNoInterrupt([1717.1717]) Face(0)~ EXIT
 END
 
 IF ~Global("C0SireneSummoned","GLOBAL",2) !Global("C0SireneRomanceActive","GLOBAL",2)~ b3a
-SAY ~Waiting here does not put me at ease, my friend. I would like to be away from here, in your company.~ [C0BLANK]
-++ ~Then join me.~ + b1.2
-++ ~Just wait a little longer.~ + b3.1
+SAY ~在这里等并不能让我安心，我的朋友。我想离开这里，在你的身边。~ [C0BLANK]
+++ ~那就加入我。~ + b1.2
+++ ~再等一会儿。~ + b3.1
 END 
 
 IF ~Global("C0SireneSummoned","GLOBAL",2) Global("C0SireneRomanceActive","GLOBAL",2)~ b3b
-SAY ~I do not want you to leave me behind while you face danger alone, <CHARNAME>. Please, my love, take me with you.~ [C0BLANK]
-++ ~Alright.~ + b3.2
-++ ~Not yet.~ + b3.1
+SAY ~我不愿你独自面对危险，却把我留在这里，<CHARNAME>。求你，我的爱，带上我。~ [C0BLANK]
+++ ~好。~ + b3.2
+++ ~还不是时候。~ + b3.1
 END 
 
 IF ~~ b3.1
-SAY ~(sigh) Very well.~
+SAY ~（叹气）好罢。~
 IF ~~ EXIT
 END
 
 IF ~~ b3.2
-SAY ~Thank you.~
+SAY ~谢谢你。~
 IF ~~ DO ~JoinParty()~ EXIT
 END

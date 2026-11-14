@@ -18,6 +18,9 @@ END
 LANGUAGE ~English~
          ~English~
          ~%MOD_FOLDER%/tra/english/sirene.tra~
+LANGUAGE ~Schinese~
+         ~schinese~
+         ~%MOD_FOLDER%/tra/schinese/sirene.tra~
 
 BEGIN ~Sirene NPC for BG2:EE~
 INCLUDE ~%MOD_FOLDER%/lib/Sirene_BG2.tpa~

@@ -2,42 +2,42 @@ BEGIN C0TSAMON
 
 CHAIN IF WEIGHT #-1
 ~Global("C0SireneTsamon","GLOBAL",0)~ THEN C0TSAMON C0SireneTsamon1
-~Well, well... so you came after all. I wondered if you had the courage, Sirene of Ilmater.~
+~好啊，好啊……你终究来了。我还在想你有没有这个胆量，伊尔梅特的塞琳。~
 DO ~SetGlobal("C0SireneTsamon","GLOBAL",1)~
-== C0SIRE2J ~I have come as you bid me, Talonite. Now I will have answers from you.~
-== C0TSAMON ~Will you now? And what if those answers are not what you wished, then? If I were to list each of your crimes committed, the deaths that were the price of your existence?~
-== C0SIRE2J ~Who... who are you?~
-== C0TSAMON ~My name is T'samon De'bryll Thornhaven... but I presume that name means nothing to you.~
-== C0SIRE2J ~T'samon...? You speak as if you know of me, yet neither your name nor your face is familiar. What have I done to earn your hatred?~
-== C0TSAMON ~I know much of you, Sirene. After all... we share the same blood, you and I.~
-== C0SIRE2J ~You-?! You are...~
-== C0TSAMON ~Aye. I am T'samon, son of Lena of the noble house De'Bryll. Our mother.~
-== C0SIRE2J ~If what you say is the truth, then why have you called me here? Even if we are siblings, I am a servant of Ilmater, and you of Talona. We are enemies by our faiths alone.~
-== C0TSAMON ~Perhaps. But know that I sought you for my own purposes, not my patron's. You were a fool to come, but I thank you for it... for my vengeance is soon to come to fruition.~
-== C0SIRE2J ~'Your vengeance'...? Of what do you speak?~
-== C0TSAMON ~You do not know? What of your companion, then? Does <PRO_HESHE> know the extent of your sins? Well, <CHARNAME>, child of Bhaal? Speak for yourself.~
+== C0SIRE2J ~我照你吩咐来了，塔罗娜信徒。现在我要你给答案。~
+== C0TSAMON ~是吗？若那些答案不如你所愿呢？若我一一列出你犯下的罪，那些以你的存在为代价的死呢？~
+== C0SIRE2J ~你……你是谁？~
+== C0TSAMON ~我叫特萨蒙·德布里尔·索恩港……不过我猜这名字对你毫无意义。~
+== C0SIRE2J ~特萨蒙……？你说得好像认识我，可你的名字和脸我都不熟。我做了什么招来你的恨？~
+== C0TSAMON ~我知道你许多事，塞琳。毕竟……你我流着同样的血。~
+== C0SIRE2J ~你——？！你是……~
+== C0TSAMON ~是的。我是特萨蒙，贵族德布里尔家族莱娜之子。我们的母亲。~
+== C0SIRE2J ~若你说的是真的，那你为什么叫我来？即使我们是兄妹，我是伊尔梅特的仆人，你是塔罗娜的。单凭信仰我们就是敌人。~
+== C0TSAMON ~也许吧。可要知道，我找你是为了我自己的目的，不是为了我的主神。你来这里很蠢，可我为此谢你……因为我的复仇即将结果。~
+== C0SIRE2J ~“你的复仇”……？你在说什么？~
+== C0TSAMON ~你不知道？那你那位同伴呢？<PRO_HESHE>知道你罪行的全貌吗？那么，<CHARNAME>，巴尔之子？你自己说。~
 END
-++ ~I don't know what you're babbling about, but if you have a problem with Sirene, you have a problem with me.~ EXTERN C0TSAMON tsa1.1
-+ ~Global("C0SireneRomanceActive","GLOBAL",2)~ + ~Sirene is my beloved, and I will not stand for your slander.~ EXTERN C0TSAMON tsa1.2
-++ ~Whatever Sirene might have done in the past, she is a valuable companion to me, and nothing you say will change that.~ EXTERN C0TSAMON tsa1.1
-++ ~Enough words. If you intend to fight us, then get on with it.~ EXTERN C0TSAMON tsa1.3
+++ ~我不知道你在胡扯什么，可你若对塞琳有意见，就是对我有意见。~ EXTERN C0TSAMON tsa1.1
++ ~Global("C0SireneRomanceActive","GLOBAL",2)~ + ~塞琳是我的挚爱，我不会容忍你诽谤她。~ EXTERN C0TSAMON tsa1.2
+++ ~无论塞琳过去做过什么，她对我都是可贵的同伴，你说什么都改变不了。~ EXTERN C0TSAMON tsa1.1
+++ ~话够多了。你若想跟我们打，就动手吧。~ EXTERN C0TSAMON tsa1.3
 
 CHAIN C0TSAMON tsa1.1
-~It matters not. I may have granted you a chance to back out of this family reunion, but it seems you have no intention of such. Pity. You will die for my sister's crimes.~
+~无所谓。我也许给了你退出了这场家庭重聚的机会，可看来你无意如此。可惜。你会为我妹妹的罪而死。~
 EXTERN C0TSAMON tsa1.4
 
 CHAIN C0TSAMON tsa1.2
-~You claim to *love* her? O, ignorant fool...~
+~你说你*爱*她？哦，无知的蠢货……~
 EXTERN C0TSAMON tsa1.4
 
 CHAIN C0TSAMON tsa1.3
-~As you wish. You will suffer alongside my sister for her crimes!~
+~如你所愿。你就跟我妹妹一起为她的罪受苦吧！~
 EXTERN C0TSAMON tsa1.4
 
 CHAIN C0TSAMON tsa1.4
-~The time for talk is over. I will have my vengeance now, Sirene!~
-== C0SIRE2J ~Wait, T'samon! There is no cause to do this! Why do you so desperately seek my death?~
-== C0TSAMON ~Seek your answers in the grave with our mother. You will be joining her soon enough. Now taste of the unholy miasma of Talona, and may your souls writhe in the Abyss!~
+~说话的时候结束了。我现在就要复仇，塞琳！~
+== C0SIRE2J ~等等，特萨蒙！没理由这么做！你为什么这样迫切要我的死？~
+== C0TSAMON ~到坟墓里跟我们的母亲一起去寻答案吧。你很快就去找她。现在尝尝塔罗娜的邪恶瘴气，愿你们的灵魂在深渊里翻滚！~
 END
 IF ~~ DO ~ClearAllActions()
 StartCutsceneMode()
@@ -45,136 +45,136 @@ StartCutscene("c0tsamo2")~ EXIT
 
 CHAIN IF WEIGHT #-1
 ~Global("C0SireneTsamon","GLOBAL",1) Global("Defeat","LOCALS",1)~ THEN C0TSAMON C0SireneTsamon2
-~Heh, impressive... it seems I have underestimated you after all, sister. Very well, then. I will not beg - send me to join our mother in the afterlife, if you have the stomach for it.~
+~嘿，厉害……看来我终究低估了你，妹妹。那好罢。我不会求饶——你若下得了手，就把我送去与母亲在死后相聚。~
 DO ~SetGlobal("C0SireneTsamon","GLOBAL",2)~
-== C0SIRE2J ~...~
-== C0TSAMON ~Too cowardly to deal the finishing blow, are you? You consider yourself a follower of Ilmater? Then put an end to my misery.~
-== C0SIRE2J ~I do not understand. If you are truly my brother, then why... why did you do any of this?~
-== C0TSAMON ~Why? Because I desired vengeance. Vengeance for the day our parents died so that you could live.~
-== C0SIRE2J ~What are you talking about? Why did they die? Tell me!~
-== C0TSAMON ~You were my greatest mistake, Sirene. I should have saved mother, before the flames consumed her that day from those ignorant, *wretched* humans...~
-== C0TSAMON ~The villagers of our home never trusted our mother nor I, who had the blood of Baator in our noble bloodline. When you were born, and your visible heritage known... the worst of the swine, in their prejudice and fear, put our home to the torch... I heard mother's anguished *screams*... my last memory as I fled with you, only an infant, in tow.~
-== C0TSAMON ~I could have saved them both, and punished the scum that wronged us... but they died to give you to me. I brought you to the Marsh of Chelimber, where I should have killed you... but my weakness overtook me.~
-== C0SIRE2J ~This is...~
-== C0TSAMON ~I believed you dead. I enacted my revenge upon the monsters who killed our parents, and for years I enjoyed a fragile illusion of peace until Talona informed me of your survival. You are a living reminder of my failure... one which I could not allow to continue existing.~
-== C0SIRE2J ~No... *this* is why you hold such hatred for me?~
-== C0TSAMON ~...Enough of this. I no longer have the power to stand against you, Sirene. And with my betrayal of Talona's commands, she will no longer favor me... death will be a blessing. I do not want your pity, sister. Kill me quickly, and perhaps this hatred shall finally die with me.~
-== C0SIRE2J ~I...~
-== IMOEN2J IF ~InParty("Imoen2")~ THEN ~C'mon, Sirene, just look at him. Do you really think he deserves it?~
-== AERIEJ IF ~InParty("Aerie")~ THEN ~H-he looks so pitiful... but he also worships an evil goddess. I can't tell what's the right thing to do...~
-== KORGANJ IF ~InParty("Korgan")~ THEN ~Hnh. What's so hard 'bout this, eh? I killed me father with nae a regret. Gut 'im an' be done with it.~
-== VICONIJ IF ~InParty("Viconia")~ THEN ~Does the fool truly think his blood ties shall save him? Fratricide is commonplace in drow society. Finish him, jalil, if you do not wish to appear weak.~
-== RASAADJ IF ~InParty("Rasaad")~ THEN ~I know what it is like to kill my own kin. You may not know him, but his blood will stain your conscience forever, Sirene.~
-== NEERAJ IF ~InParty("Neera")~ THEN ~Geez, I know he almost tried to kill us, but he just looks so depressing. I'm not sure I'd be able to do it if I were you.~
-== KELDORJ IF ~InParty("Keldorn")~ THEN ~Remember the tenets of your faith, Sirene. Though he may worship Talona, his heart is not entirely impure. If you truly believe he deserves mercy, then spare him.~
-== MAZZYJ IF ~InParty("Mazzy")~ THEN ~Think carefully, my friend. There is a difference between defeating an enemy and executing a helpless man.~
+== C0SIRE2J ~……~
+== C0TSAMON ~太懦弱，下不了最后一击，是吧？你自认是伊尔梅特的追随者？那就结束我的痛苦。~
+== C0SIRE2J ~我不明白。你若真是我的兄弟，那为什么……为什么要做这一切？~
+== C0TSAMON ~为什么？因为我要复仇。为我们父母为让你活下来而死那天复仇。~
+== C0SIRE2J ~你在说什么？他们为什么死？告诉我！~
+== C0TSAMON ~你是我最大的错误，塞琳。我本该救母亲，在那天那些无知、*可鄙*的人类放火烧死她之前……~
+== C0TSAMON ~我们家乡的村民从不信任我们的母亲和我，因为我们高贵的血脉里有巴托的血。当你出生，你可见的血脉为人所知……那些猪猡中最坏的，在偏见与恐惧中，放火烧了我们的家……我听见母亲痛苦的*尖叫*……那是我带着还是婴儿的你逃走时的最后记忆。~
+== C0TSAMON ~我本可以救他们两个，惩罚那些害我们的渣滓……可他们死了，把你交给了我。我把你带到凯林伯沼泽，在那里我本该杀了你……可我的软弱压倒了我。~
+== C0SIRE2J ~这是……~
+== C0TSAMON ~我以为你死了。我对那些杀死我们父母的怪物施行了复仇，多年享受着脆弱的安宁假象，直到塔罗娜告知我你还活着。你是我的失败活生生的提醒……我不能容许它继续存在。~
+== C0SIRE2J ~不……*这*就是你这样恨我的原因？~
+== C0TSAMON ~……够了。我再没有力量与你对抗，塞琳。加之我违背了塔罗娜的命令，她再不会眷顾我……死会是种恩赐。我不要你的怜悯，妹妹。快点杀了我，也许这恨意终能与我同死。~
+== C0SIRE2J ~我……~
+== IMOEN2J IF ~InParty("Imoen2")~ THEN ~来吧，塞琳，就看看他。你真觉得他该死吗？~
+== AERIEJ IF ~InParty("Aerie")~ THEN ~他……他看起来那么可怜……可他也敬拜一个邪恶女神。我分不清什么才是对的……~
+== KORGANJ IF ~InParty("Korgan")~ THEN ~哼。这有什么难的，嗯？我杀我父亲时一点不后悔。捅了他就完事。~
+== VICONIJ IF ~InParty("Viconia")~ THEN ~这蠢货真以为血亲关系能救他？在卓尔社会里杀亲是常事。了结他，jalil，你若不想显得软弱。~
+== RASAADJ IF ~InParty("Rasaad")~ THEN ~我知道杀自己亲族是什么滋味。你也许不认识他，可他的血会永远染在你的良心上，塞琳。~
+== NEERAJ IF ~InParty("Neera")~ THEN ~天啊，我知道他差点杀了我们，可他看起来太惨了。我要是你，我不确定下得了手。~
+== KELDORJ IF ~InParty("Keldorn")~ THEN ~记住你信仰的信条，塞琳。即使他敬拜塔罗娜，他的心也并非全然不纯。你若真信他该得怜悯，那就饶了他。~
+== MAZZYJ IF ~InParty("Mazzy")~ THEN ~仔细想，我的朋友。击败一个敌人与处死一个无力反抗的人，是两回事。~
 END
 IF ~GlobalGT("C0SireneFaith","GLOBAL",5)~ EXTERN C0SIRE2J a1.1
 IF ~!GlobalGT("C0SireneFaith","GLOBAL",5) !GlobalLT("C0SireneFaith","GLOBAL",-5)~ EXTERN C0SIRE2J a1.2
 IF ~GlobalLT("C0SireneFaith","GLOBAL",-5)~ EXTERN C0SIRE2J a1.3
 
 CHAIN C0SIRE2J a1.1
-~I will not kill a helpless man, much less my own kin. Ilmater would never forgive me if I did so. Though I do not know you, I will not strike you down, brother.~
-== C0TSAMON ~No! Damn you, Sirene! Your mercy is the greatest cruelty that you can inflict!~
-== C0SIRE2J ~Perhaps you may believe that, but... I pray that this will one day cure your heart of hatred. But if you come to me with the goal of vengeance a second time... then I will satiate your desire for death.~
-== C0SIRE2J ~Farewell, T'samon. I hope that when we meet again, I may truly call you brother.~
-== C0TSAMON ~Heh, I see... that's how it's going to be. Very well, then... farewell, sister. Perhaps we *will* meet again.~
+~我不会杀一个无力反抗的人，更不会杀我的亲族。若我这么做，伊尔梅特绝不会原谅我。虽然我不认识你，我不会击倒你，兄弟。~
+== C0TSAMON ~不！该死，塞琳！你的怜悯是你能施加的最大残忍！~
+== C0SIRE2J ~你也许这么想，可是……我祈祷有一天这能治好你心中的恨。可你若第二次带着复仇之心来找我……那我就满足你对死的渴望。~
+== C0SIRE2J ~再会，特萨蒙。我希望我们再见时，我能真正叫你一声兄弟。~
+== C0TSAMON ~嘿，我明白了……那就这样吧。好罢……再会，妹妹。也许我们*真会*再见。~
 DO ~ActionOverride("C0TSAMON",ForceSpell(Myself,DRYAD_TELEPORT)~ EXIT
 
 CHAIN C0SIRE2J a1.2
-~What... what should I do, <CHARNAME>?~
+~什么……我该怎么办，<CHARNAME>？~
 END
 IF ~GlobalGT("C0SireneFaith","GLOBAL",-1)~ EXTERN C0SIRE2J a1.4
 IF ~GlobalLT("C0SireneFaith","GLOBAL",0)~ EXTERN C0SIRE2J a1.5
 
 CHAIN C0SIRE2J a1.3
-~If you seek death so desperately, T'samon... then I will not deny you. Your crimes as a follower of Talona, and your attempt on my life, are enough to condemn you.~
-= ~Ilmater is a merciful god, and will not forgive me for this. But... 'tis time for me to decide what is right... with my own hands.~
-= ~Farewell, brother.~
-== C0TSAMON ~Heh... so this is how it ends...~
+~你既这样迫切求死，特萨蒙……那我就不拦你。你身为塔罗娜信徒的罪，加上谋害我，已足以定你的罪。~
+= ~伊尔梅特是慈悲的神，不会为此原谅我。可是……该由我用自己的手决定什么才是对的。~
+= ~再会，兄弟。~
+== C0TSAMON ~嘿……原来就这样结束了……~
 DO ~ClearAllActions() StartCutsceneMode() StartCutscene("c0tsamo3")~ EXIT
 
 CHAIN C0SIRE2J a1.4
-~Knowing his reasons for all of this, I... I cannot bring myself to hate him. If I were to strike him down, I would be betraying the teachings of Ilmater...~
-= ~But... I am conflicted. A part of me truly believes he deserves death, and I should end his life here and now. What... what is the right decision?~
+~知道了他做这一切的理由，我……我恨不起来他。若我击倒他，我就背叛了伊尔梅特的教导……~
+= ~可是……我很矛盾。我有一部分真相信他该死，我该在此刻了结他。什么……什么才是对的决定？~
 END
-++ ~I can't make this choice for you, Sirene.~ EXTERN C0SIRE2J a1.6
-++ ~You said it yourself. If you truly don't believe he deserves death, then you should let him go. I doubt he's a threat to anyone now.~ EXTERN C0SIRE2J a1.7
+++ ~这个选择我不能替你做，塞琳。~ EXTERN C0SIRE2J a1.6
+++ ~你自己说过。你若真不信他该死，那就放他走。我怀疑他如今威胁不了任何人。~ EXTERN C0SIRE2J a1.7
 + ~!Global("C0SireneRomanceActive","GLOBAL",2)
 OR(3)
 CheckStatGT(Player1,17,INT)
 CheckStatGT(Player1,17,WIS)
-CheckStatGT(Player1,17,CHR)~ + ~I think you should execute him. Not only is he a Talonite, but he just tried to kill us. Who's to say he won't try it again?~ EXTERN C0SIRE2J a1.8
+CheckStatGT(Player1,17,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.8
 + ~!Global("C0SireneRomanceActive","GLOBAL",2)
 CheckStatLT(Player1,18,INT)
 CheckStatLT(Player1,18,WIS)
-CheckStatLT(Player1,18,CHR)~ + ~I think you should execute him. Not only is he a Talonite, but he just tried to kill us. Who's to say he won't try it again?~ EXTERN C0SIRE2J a1.9
+CheckStatLT(Player1,18,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.9
 + ~Global("C0SireneRomanceActive","GLOBAL",2)
 OR(3)
 CheckStatGT(Player1,14,INT)
 CheckStatGT(Player1,14,WIS)
-CheckStatGT(Player1,14,CHR)~ + ~I think you should execute him. Not only is he a Talonite, but he just tried to kill us. Who's to say he won't try it again?~ EXTERN C0SIRE2J a1.8
+CheckStatGT(Player1,14,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.8
 + ~Global("C0SireneRomanceActive","GLOBAL",2)
 CheckStatLT(Player1,15,INT)
 CheckStatLT(Player1,15,WIS)
-CheckStatLT(Player1,15,CHR)~ + ~I think you should execute him. Not only is he a Talonite, but he just tried to kill us. Who's to say he won't try it again?~ EXTERN C0SIRE2J a1.9
+CheckStatLT(Player1,15,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.9
 
 CHAIN C0SIRE2J a1.5
-~I believe he deserves death for what he has done. He has been wholly consumed by vengeance, and as a Talonite, he deserves death for his crimes.~
-= ~But... Ilmater will not take kindly if I choose to forsake mercy. I doubt I can redeem myself in his eyes if I were to kill my own kin.~
+~我相信他该为所做的事去死。他已被复仇彻底吞没，而作为塔罗娜信徒，他的罪也该死。~
+= ~可是……若我选择抛弃怜悯，伊尔梅特不会善待我。若我杀死自己的亲族，我怀疑我还能在他眼中赎清自己。~
 END
-++ ~I can't make this choice for you, Sirene.~ EXTERN C0SIRE2J a1.6
-++ ~You mean you'll forsake your paladinhood if you choose to kill him?~ EXTERN C0SIRE2J a1.12
-++ ~You're right. He deserves to die for trying to kill us. Finish him, Sirene.~ EXTERN C0SIRE2J a1.7
+++ ~这个选择我不能替你做，塞琳。~ EXTERN C0SIRE2J a1.6
+++ ~你是说若你选择杀他，你就会抛弃你的圣武士身份？~ EXTERN C0SIRE2J a1.12
+++ ~你说得对。他企图杀我们，该死。了结他，塞琳。~ EXTERN C0SIRE2J a1.7
 + ~!Global("C0SireneRomanceActive","GLOBAL",2)
 OR(3)
 CheckStatGT(Player1,13,INT)
 CheckStatGT(Player1,13,WIS)
-CheckStatGT(Player1,13,CHR)~ + ~No, Sirene. Don't do this. I was forced to kill my brother as well, and it brought me no peace in the end. The cost is too great... you'll regret this for life.~ EXTERN C0SIRE2J a1.10
+CheckStatGT(Player1,13,CHR)~ + ~不，塞琳。别这样。我也被迫杀过我的兄弟，最后它没给我带来任何安宁。代价太大……你会后悔一辈子。~ EXTERN C0SIRE2J a1.10
 + ~!Global("C0SireneRomanceActive","GLOBAL",2)
 CheckStatLT(Player1,14,INT)
 CheckStatLT(Player1,14,WIS)
-CheckStatLT(Player1,14,CHR)~ + ~No, Sirene. Don't do this. I was forced to kill my brother as well, and it brought me no peace in the end. The cost is too great... you'll regret this for life.~ EXTERN C0SIRE2J a1.11
-+ ~Global("C0SireneRomanceActive","GLOBAL",2)~ + ~No, Sirene. Don't do this. I was forced to kill my brother as well, and it brought me no peace in the end. The cost is too great... you'll regret this for life.~ EXTERN C0SIRE2J a1.10
+CheckStatLT(Player1,14,CHR)~ + ~不，塞琳。别这样。我也被迫杀过我的兄弟，最后它没给我带来任何安宁。代价太大……你会后悔一辈子。~ EXTERN C0SIRE2J a1.11
++ ~Global("C0SireneRomanceActive","GLOBAL",2)~ + ~不，塞琳。别这样。我也被迫杀过我的兄弟，最后它没给我带来任何安宁。代价太大……你会后悔一辈子。~ EXTERN C0SIRE2J a1.10
 
 CHAIN C0SIRE2J a1.6
-~Then... I will trust in my own decision, and do what I believe is right.~
+~那么……我会相信自己的决定，做我认为对的事。~
 END
 IF ~GlobalGT("C0SireneFaith","GLOBAL",-4)~ EXTERN C0SIRE2J a1.1
 IF ~GlobalLT("C0SireneFaith","GLOBAL",-3)~ EXTERN C0SIRE2J a1.3
 
 CHAIN C0SIRE2J a1.7
-~Aye... there is truth in your words. I know what I must do...~
+~是的……你的话里有真理。我知道我该做什么……~
 END
 IF ~GlobalGT("C0SireneFaith","GLOBAL",-1)~ EXTERN C0SIRE2J a1.1
 IF ~GlobalLT("C0SireneFaith","GLOBAL",0)~ EXTERN C0SIRE2J a1.3
 
 CHAIN C0SIRE2J a1.8
-~Perhaps... perhaps you are right.~
+~也许……也许你说得对。~
 EXTERN C0SIRE2J a1.3
 
 CHAIN C0SIRE2J a1.9
-~...No, <CHARNAME>. I will not betray Ilmater's teachings, despite my doubts.~
+~……不，<CHARNAME>。尽管有疑虑，我不会背叛伊尔梅特的教导。~
 EXTERN C0SIRE2J a1.1
 
 CHAIN C0SIRE2J a1.10
-~But... no, you are right. I allowed my judgment to be clouded by my feelings. I should not turn my back on Ilmater for this.~
+~可是……不，你说得对。我让感情蒙蔽了判断。为此我不该背弃伊尔梅特。~
 EXTERN C0SIRE2J a1.1
 
 CHAIN C0SIRE2J a1.11
-~Aye, but 'twas it not you whom taught me to make my own choices? I know it in my heart... I cannot allow this man to live.~
+~是的，可不是你教我做出自己的选择吗？我心里明白……我不能让这个人活着。~
 EXTERN C0SIRE2J a1.3
 
 CHAIN C0SIRE2J a1.12
-~I... I am certain it will. Though this man is far from innocent, he is helpless... and the suffering in his heart cannot be healed with death. If I were to strike him down now... I would commit a great sin in Ilmater's eyes.~
-= ~Knowing that, I cannot help but hesitate. I have followed Ilmater's teachings my whole life... but this time, my own wishes clash with that of my faith.~
+~我……我确信会的。虽然这人远非无辜，可他无力反抗……而他心里的苦不是死能治的。若我现在击倒他……我就犯了伊尔梅特眼中的大罪。~
+= ~知道这些，我忍不住犹豫。我一生遵循伊尔梅特的教导……可这一次，我自己的意愿与我的信仰相冲。~
 END
-++ ~I see... then I cannot tell you what to do. You must make this decision yourself.~ EXTERN C0SIRE2J a1.6
-++ ~Then kill him. If you truly believe that is the right thing to do, then do it.~ EXTERN C0SIRE2J a1.7
+++ ~我明白了……那我不能告诉你该怎么做。这决定你必须自己做。~ EXTERN C0SIRE2J a1.6
+++ ~那就杀了他。你若真相信那是对的，就动手。~ EXTERN C0SIRE2J a1.7
 + ~OR(3)
 CheckStatGT(Player1,15,INT)
 CheckStatGT(Player1,15,WIS)
-CheckStatGT(Player1,15,CHR)~ + ~No, Sirene. Don't do this. I was forced to kill my brother as well, and it brought me no peace in the end. The cost is too great... you'll regret this for life.~ EXTERN C0SIRE2J a1.10
+CheckStatGT(Player1,15,CHR)~ + ~不，塞琳。别这样。我也被迫杀过我的兄弟，最后它没给我带来任何安宁。代价太大……你会后悔一辈子。~ EXTERN C0SIRE2J a1.10
 + ~CheckStatLT(Player1,16,INT)
 CheckStatLT(Player1,16,WIS)
-CheckStatLT(Player1,16,CHR)~ + ~No, Sirene. Don't do this. I was forced to kill my brother as well, and it brought me no peace in the end. The cost is too great... you'll regret this for life.~ EXTERN C0SIRE2J a1.11
+CheckStatLT(Player1,16,CHR)~ + ~不，塞琳。别这样。我也被迫杀过我的兄弟，最后它没给我带来任何安宁。代价太大……你会后悔一辈子。~ EXTERN C0SIRE2J a1.11

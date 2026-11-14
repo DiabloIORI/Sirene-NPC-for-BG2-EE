@@ -1,159 +1,159 @@
 BEGIN C0SIRENG
 
 IF ~Global("C0SireneLoveDream","GLOBAL",1)~ a1
-SAY ~Is't truly you, <CHARNAME>? Have... have you come to join me, here in the afterlife?~
-= ~No... no, that is not possible. You would never come here. This... this is nothing more than a dream.~
-+ ~OR(2) Class(Player1,CLERIC_ALL) CheckStatGT(Player1,14,INT)~ + ~This... is the Fugue Plane, isn't it?~ + a1.1
-+ ~CheckStatLT(Player1,15,INT) !Class(Player1,CLERIC_ALL)~ + ~Wh-what is this place?~ + a1.2
-++ ~Is it mine, or is it yours?~ + a1.3
-++ ~What... what's happened to you, Sirene?~ + a1.4
+SAY ~真是你吗，<CHARNAME>？你……你是来这儿跟我作伴的吗，在这死后世界？~
+= ~不……不，那不可能。你绝不会来这里。这……这不过是个梦。~
++ ~OR(2) Class(Player1,CLERIC_ALL) CheckStatGT(Player1,14,INT)~ + ~这……是亡者之境，对吧？~ + a1.1
++ ~CheckStatLT(Player1,15,INT) !Class(Player1,CLERIC_ALL)~ + ~这——这是什么地方？~ + a1.2
+++ ~这是我的，还是你的？~ + a1.3
+++ ~你……你怎么了，塞琳？~ + a1.4
 END
 
 IF ~~ a1.1
-SAY ~Aye... this is where the spirits of the dead gather, waiting for Kelemvor's judgment. Though... I have waited here for long past my time.~
+SAY ~是的……这是死者的灵魂聚集之处，等待凯兰沃的审判。不过……我在这里等了远超我该等的时间。~
 IF ~~ + a1.5
 END
 
 IF ~~ a1.2
-SAY ~This is the Fugue Plane, <CHARNAME>... this is where the spirits of the dead gather, waiting for Kelemvor's judgment. Though... I have waited here for long past my time.~
+SAY ~这是亡者之境，<CHARNAME>……这是死者的灵魂聚集之处，等待凯兰沃的审判。不过……我在这里等了远超我该等的时间。~
 IF ~~ + a1.5
 END
 
 IF ~~ a1.3
-SAY ~Who knows? In this realm, I cannot even tell my own dreams from reality. Perhaps we are both dreaming right now, while our spirits are worlds apart.~
+SAY ~谁知道呢？在这领域里，我连自己的梦与现实都分不清。也许此刻我们都在做梦，而灵魂相隔世界之远。~
 IF ~~ + a1.5
 END
 
 IF ~~ a1.4
-SAY ~I... I would have thought it obvious, <CHARNAME>. I passed on to this realm when I ended my life in that graveyard. This... form is all of me that exists.~
+SAY ~我……我以为这很明显，<CHARNAME>。我在那片墓地里结束自己的生命时就来到了这领域。这……形态就是我还存在的一切。~
 IF ~~ + a1.5
 END
 
 IF ~~ a1.5
-SAY ~If you are still alive, then... you must have defeated Bodhi. I am glad of that, at least...~
-= ~I have waited here for what seems to have been an eternity. For what reason, I do not know. Not my judgment, of that I am certain. Perhaps... I knew you would come.~
-= ~But... whatever your reasons for being here, <CHARNAME>, and whether 'tis reality or simply my delusions, I am glad to see you once more, so you may bid me farewell before I pass on to Martyrdom.~
-++ ~'Bid you farewell'? What are you talking about?~ + a1.6
-++ ~No... you're not talking about passing on, are you?~ + a1.6
-++ ~I don't know how I got here, but since I found you, I'm bringing you back, Sirene.~ + a1.7
+SAY ~你若还活着，那么……你必定打败了波迪。至少这一点让我高兴……~
+= ~我在这里等了仿佛永恒之久。为什么，我不知道。不是为我的审判，这一点我确定。也许……我知道你会来。~
+= ~可是……无论你来这里是为了什么，<CHARNAME>，也无论这是现实还是我的妄念，能再见你一面我都高兴，好让你在我前往殉道之前与我道别。~
+++ ~“与你道别”？你在说什么？~ + a1.6
+++ ~不……你不是在说要去赴死，对吧？~ + a1.6
+++ ~我不知道我怎么来的，可既然我找到你了，我就要把你带回去，塞琳。~ + a1.7
 END
 
 IF ~~ a1.6
-SAY ~During my time spent awaiting judgment, I have come to terms with my fate. My sacrifice ensured I cannot return to the living world... I knew that when I made the choice.~
-= ~'Twas the most difficult sacrifice I have ever made, yet... I do not regret it at all. Not if it meant I did not raise a hand against you... my love.~
-++ ~I regret it. I would have saved you, Sirene. You know that.~ + a1.8
-++ ~You... can't come back? There's no chance at all?~ + a1.9
-++ ~I'm not having that nonsense. We promised to spend our lives together, and I'm holding you to that promise.~ + a1.9
+SAY ~在等待审判的这段时间里，我已与我的命运和解。我的牺牲注定了我无法回到生者的世界……我做那选择时就知道。~
+= ~那是我做过最艰难的牺牲，可是……我一点也不后悔。只要这意味着我没有对你动手……我的爱。~
+++ ~我后悔。我本会救你，塞琳。你知道的。~ + a1.8
+++ ~你……回不来？一点机会都没有？~ + a1.9
+++ ~我不接受这种胡说。我们发誓要共度一生，我要你守这誓言。~ + a1.9
 END
 
 IF ~~ a1.7
-SAY ~Bring me back? If only you could...~
+SAY ~把我带回去？若你能就好了……~
 IF ~~ + a1.6
 END
 
 IF ~~ a1.8
-SAY ~Aye, perhaps, but 'twas not a risk I wished to take... I would have made the same choice a thousand times over, if the alternative meant possibly killing you and spending an eternity as Bodhi's thrall.~
+SAY ~是的，也许能，可那不是我愿意冒的险……若另一个选择是可能杀死你、并永恒做波迪的奴仆，我宁可重复一千次同样的选择。~
 IF ~~ + a1.9
 END
 
 IF ~~ a1.9
-SAY ~...~
-= ~(Amidst the distorted form of Sirene's spirit, you see a hint of something glistening that you believe to be tears.)~
-= ~I... I have forestalled my judgment too long, <CHARNAME>. Ilmater came to me, while I awaited here, and gave me time to let go of my grief... but that time is running out.~
-= ~This is not how I wished it, <CHARNAME>. I wish I could have been at your side until we were old, and looked into your eyes before I died, but... our fate is rarely what we wish it to be.~
+SAY ~……~
+= ~（在塞琳灵魂扭曲的形态之中，你看见一点闪亮的东西，你相信那是泪。）~
+= ~我……我把我的审判拖延太久了，<CHARNAME>。我在这里等待时，伊尔梅特来找过我，给了我时间放下我的悲伤……可那时间正在耗尽。~
+= ~这不是我希望的方式，<CHARNAME>。我希望我能陪在你身边直到我们老去，在我死前望进你的眼睛，可是……我们的命运很少如我们所愿。~
 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ + a1.10
 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + a1.11
 END
 
 IF ~~ a1.10
-SAY ~I surrendered myself to my fate the day I swore my vows to Ilmater. Despite knowing one day, my duty would cross with what I truly wanted. But... I was a faithful servant to Ilmater in life, and I will continue to be in death.~
+SAY ~我在向伊尔梅特发誓那天就把自己交给了命运。尽管知道有一天我的职责会与我真正想要的相冲突。可是……我生时是伊尔梅特忠实的仆人，死后我也会继续如此。~
 IF ~~ + a1.12
 END
 
 IF ~~ a1.11
-SAY ~I believed that changing my fate with my own hands and making my own path would change things, yet... I was not strong enough. Felled before I had a chance to change...~
+SAY ~我相信用自己的手改变命运、走自己的路会改变一切，可是……我不够强。还没机会改变就被击倒了……~
 IF ~~ + a1.12
 END
 
 IF ~~ a1.12
-SAY ~I love you, <CHARNAME>. I will continue to love you even in death, but now that we must be apart... I beg you to succeed without me. I do not want my sacrifice to have been for naught. If you can achieve victory, then... that will be of some comfort to me.~
-++ ~So you're just giving up? Even after saying that you love me?~ + a1.13
-++ ~Please... you can't go. I still need you.~ + a1.13
-++ ~This... this is all a bad dream. This can't actually be happening.~ + a1.13
-++ ~If you truly have to go, then I can't stop you. The question is, do you really?~ + a1.14
+SAY ~我爱你，<CHARNAME>。即使死后我也会继续爱你，可如今我们非得分离……我求你，没有我也要成功。我不愿我的牺牲白费。你若能取得胜利，那么……那对我也算些安慰。~
+++ ~所以你就这样放弃了？即使说过你爱我？~ + a1.13
+++ ~求你……你不能走。我仍需要你。~ + a1.13
+++ ~这……这全是场噩梦。这不可能是真的。~ + a1.13
+++ ~你若真非走不可，我拦不住你。问题是，你真的非走不可吗？~ + a1.14
 END
 
 IF ~~ a1.13
-SAY ~We... we should put an end to this, <CHARNAME>. Every second we spend in this nightmare only makes the parting more difficult.~
-++ ~You say we have to part here, but... what if that isn't true?~ + a1.14
+SAY ~我们……我们该结束这一切，<CHARNAME>。我们在这噩梦里每多待一秒，分别就更难。~
+++ ~你说我们得在这里分离，可是……若那不是真的呢？~ + a1.14
 END
 
 IF ~~ a1.14
-SAY ~Wh-what do you mean, <CHARNAME>?~
-++ ~You said you thought Ilmater let you wait for me. Maybe... he wanted me to stop you.~ + a1.15
-++ ~I don't know. But I know now that I'm here, I'm taking you back where you belong, even if I have to drag you kicking and screaming.~ + a1.16
+SAY ~你……你是什么意思，<CHARNAME>？~
+++ ~你说你觉得是伊尔梅特让你等我。也许……他是想让我来阻止你。~ + a1.15
+++ ~我不知道。可我现在知道，既然我在这里，我就要把你带回你该在的地方，哪怕我得把你又踢又叫地拖回去。~ + a1.16
 END
 
 IF ~~ a1.15
-SAY ~That... that is optimistic thinking. Yet I wonder if that is the actual truth...~
+SAY ~那……那是乐观的想法。可我在想那是否就是真相……~
 IF ~~ + a1.17
 END
 
 IF ~~ a1.16
-SAY ~...(She laughs reluctantly)~
-= ~You have such conviction, <CHARNAME>. Perhaps that was why I fell for you, since the moment we met. You were a true friend to me, then more than a friend...~
+SAY ~……（她勉强地笑了）~
+= ~你有这样的信念，<CHARNAME>。也许那就是我从遇见你那一刻起就爱上你的原因。你那时是我真正的朋友，后来不只是朋友……~
 IF ~~ + a1.17
 END
 
 IF ~~ a1.17
-SAY ~'Tis strange... I have had all the time since my death to come to terms with this... yet in the few moments I have spoken with you, 'tis as though all of that has been shattered in an instant.~
-= ~Perhaps... I have not severed my ties as well as I thought.~
-+ ~Alignment("C0Sirene",LAWFUL_GOOD)~ + ~You don't have to. I know you can come back. Ilmater would surely grant you that.~ + a1.18
-+ ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + ~You don't have to. I know you can come back. Ilmater would surely grant you that.~ + a1.19
-++ ~If you have no choice to go, then that's that. But you don't have to be so resigned to the fact.~ + a1.20
-++ ~Will you change your mind now?~ + a1.21
+SAY ~真奇怪……我死后有那么多时间与这件事和解……可跟你说了这几句话，仿佛那一切都瞬间崩碎了。~
+= ~也许……我没能像自己想的那样斩断牵绊。~
++ ~Alignment("C0Sirene",LAWFUL_GOOD)~ + ~你不必斩断。我知道你能回来。伊尔梅特必定会赐你这个。~ + a1.18
++ ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + ~你不必斩断。我知道你能回来。伊尔梅特必定会赐你这个。~ + a1.19
+++ ~你若真非走不可，那就罢了。可你不必就这样认命。~ + a1.20
+++ ~你现在会改变主意吗？~ + a1.21
 END
 
 IF ~~ a1.18
-SAY ~Aye, perhaps he will... Ilmater is a merciful patron. Perhaps, if I prayed for him now, here in this place... then my words will reach him.~
-= ~...(She closes her ghostly eyes, kneeling and muttering words you cannot hear.)~
-= ~I know not if this will change my fate. But... just the attempt gives me faith.~
+SAY ~是的，也许他会……伊尔梅特是慈悲的主。也许，若我现在向他祈祷，就在这地方……我的话就能传到他那里。~
+= ~……（她闭上幽灵般的眼，跪下低声念着你听不见的话。）~
+= ~我不知道这是否会改变我的命运。可是……仅仅尝试就给了我信念。~
 IF ~~ + a1.24
 END
 
 IF ~~ a1.19
-SAY ~Will he? I have forsaken my duties as a paladin in order to pursue my own way in life. I may still pay worship to Ilmater, but will he still listen to his wayward servant?~
-= ~No... if I still have any faith in Ilmater, then I cannot doubt his mercy. I will try, if it means I can return to you.~
+SAY ~他会吗？我为走自己的路而背弃了圣武士的职责。我也许仍敬拜伊尔梅特，可他还会听他那迷途的仆人吗？~
+= ~不……若我对伊尔梅特还有一丝信仰，那我就不能怀疑他的慈悲。若这意味着我能回到你身边，我愿意试。~
 IF ~~ + a1.24
 END
 
 IF ~~ a1.20
-SAY ~Yes... yes, you are right.~
+SAY ~是的……你说得对。~
 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ + a1.22
 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + a1.23
 END
 
 IF ~~ a1.21
-SAY ~I... I do not know. Perhaps...~
+SAY ~我……我不知道。也许……~
 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ + a1.22
 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + a1.23
 END
 
 IF ~~ a1.22
-SAY ~I will believe in Ilmater's mercy. Perhaps, if I prayed for him now, here in this place... then my words will reach him.~
-= ~...(She closes her ghostly eyes, kneeling and muttering words you cannot hear.)~
-= ~I know not if this will change my fate. But... just the attempt gives me faith.~
+SAY ~我会相信伊尔梅特的慈悲。也许，若我现在向他祈祷，就在这地方……我的话就能传到他那里。~
+= ~……（她闭上幽灵般的眼，跪下低声念着你听不见的话。）~
+= ~我不知道这是否会改变我的命运。可是……仅仅尝试就给了我信念。~
 IF ~~ + a1.24
 END
 
 IF ~~ a1.23
-SAY ~The only one who can save me now is Ilmater... but I have forsaken my duties as a paladin in order to pursue my own way in life. Even if I pray, will he still listen to his wayward servant?~
-= ~No... if I still have any faith in Ilmater, then I cannot doubt his mercy. I will try, if it means I can return to you.~
+SAY ~如今唯一能救我的只有伊尔梅特……可我为走自己的路而背弃了圣武士的职责。即使我祈祷，他还会听他那迷途的仆人吗？~
+= ~不……若我对伊尔梅特还有一丝信仰，那我就不能怀疑他的慈悲。若这意味着我能回到你身边，我愿意试。~
 IF ~~ + a1.24
 END
 
 IF ~~ a1.24
-SAY ~Thank you, <CHARNAME>.~
+SAY ~谢谢你，<CHARNAME>。~
 IF ~~ DO ~SetGlobal("C0SireneLoveDream","GLOBAL",2)
 ClearAllActions()
 StartCutSceneMode()
@@ -161,8 +161,8 @@ StartCutScene("C0ILM04")~ EXIT
 END
 
 IF ~Global("C0SireneLoveDream","GLOBAL",2)~ a2
-SAY ~(She raises a hand to your chest and lays her fingers on your skin; all you feel is a strange warmth.)~
-= ~(With a faint smile, she turns and takes a few steps away from you as her ghostly form begins to emit a holy glow.)~
+SAY ~（她把手抬到你胸前，手指落在你的皮肤上；你只感觉到一种奇异的温暖。）~
+= ~（她带着淡淡的笑转身离开你几步，她幽灵般的身形开始发出神圣的光。）~
 IF ~~ DO ~SetGlobal("C0SireneLoveDream","GLOBAL",3)
 ClearAllActions()
 StartCutSceneMode()

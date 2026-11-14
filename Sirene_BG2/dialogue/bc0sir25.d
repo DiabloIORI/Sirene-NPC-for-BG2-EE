@@ -9,36 +9,36 @@ See("C0Sirene")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneAerieImoenToB","GLOBAL",0)~ THEN BIMOEN25 C0SireneAerieImoen
-~So? What d'ya think?~ [C0BLANK]
+~怎么样？你觉得如何？~ [C0BLANK]
 DO ~SetGlobal("C0SireneAerieImoenToB","GLOBAL",1)~
-== BAERIE25 ~I- I think it still looks ugly...~
-== BIMOEN25 ~Aw, don't be like that. We can, uh... aw, Hells. Who am I kidding? You're right, this whole thing looks dreadful. What are we doing, Aerie?~
-== BAERIE25 ~I don't know... I guess embroidery wasn't really for us, after all. Maybe we should just buy something nice the next time we stop by a market?~
-== BIMOEN25 ~But it has to be something we make ourselves. It's not really a proper gift, a toil of love, otherwise, right?~
-== BAERIE25 ~You... you're right. Heehee, you're really dedicated to this, Imoen.~
-== BIMOEN25 ~Well, of course! She deserves something nice for working herself to the bone for the two of us.~
-== BAERIE25 ~I know what you mean. It's almost like having a big sister.~
-== BIMOEN25 ~Exactly. That's why it needs to be perfect! Come on, let's ditch this cloth and try again-~
-== BC0SIR25 ~Aerie? Imoen? What is wrong?~
-== BIMOEN25 ~Eek!~
-== BAERIE25 ~H- Hello, Sirene...~
-== BC0SIR25 ~You two are falling behind. Is there a problem?~
-== BIMOEN25 ~Nope!~
-== BAERIE25 ~We were just, um...~
-== BC0SIR25 ~There is... something by your feet, Imoen.~
-== BIMOEN25 ~Oh, this? It's just some, er...~
-== BAERIE25 ~Maybe we should just be honest, Imoen. We were... trying to make something for you, Sirene.~
-== BC0SIR25 ~For... for me?~
-== BIMOEN25 ~Yeah. Here ya go. It's awful, though, so you should, er, throw it away as soon as possible. So we can make you a better one.~
-== BC0SIR25 ~No, no, 'tis lovely. It... *sniff*~
-== BAERIE25 ~Wh- why are you crying? Is it really that bad?~
-== BC0SIR25 ~Forgive me, I am just... so overwhelmed. Thank you both, truly...~
-== BIMOEN25 ~Aw, there, there. We just thought we'd do something nice in return for all the times you've looked out for us.~
-== BC0SIR25 ~Thank you, Imoen, Aerie. I have come to care for you both... so much...~
-== BIMOEN25 ~We care about you too, big sis. Wait, you don't mind if we call you that now, right?~
-== BC0SIR25 ~Of course... I could not be happier.~
-== BIMOEN25 ~Alright! How's that, Aerie?~
-== BAERIE25 ~Heehee. Let's get going then!~
+== BAERIE25 ~我——我觉得还是很难看……~
+== BIMOEN25 ~唉，别这样。我们可以，呃……唉，见鬼。我在骗谁呢？你说得对，这整件东西难看得要命。我们到底在干什么，艾黎？~
+== BAERIE25 ~我不知道……我想刺绣终究不适合我们。也许下次路过集市时，我们就买点现成的好东西吧？~
+== BIMOEN25 ~可那必须是我们亲手做的东西。不然就不算一份像样的礼物，不算一份用心的劳作，对吧？~
+== BAERIE25 ~你……你说得对。嘻嘻，你对这事真上心，爱蒙。~
+== BIMOEN25 ~那当然！她为我们俩累得筋疲力尽，该得到点好东西。~
+== BAERIE25 ~我明白你的意思。这几乎就像有个大姐一样。~
+== BIMOEN25 ~正是。所以才必须做得完美！来吧，把这破布扔了，我们再试一次——~
+== BC0SIR25 ~艾黎？爱蒙？怎么了？~
+== BIMOEN25 ~呀！~
+== BAERIE25 ~你——你好，塞琳……~
+== BC0SIR25 ~你们俩落在后面了。出什么事了吗？~
+== BIMOEN25 ~没有！~
+== BAERIE25 ~我们只是，嗯……~
+== BC0SIR25 ~你脚边……有东西，爱蒙。~
+== BIMOEN25 ~哦，这个？只是一些，呃……~
+== BAERIE25 ~也许我们该说实话，爱蒙。我们在……想给你做点东西，塞琳。~
+== BC0SIR25 ~给……给我？~
+== BIMOEN25 ~是啊。喏，给你。不过做得很难看，所以你最好，呃，赶紧扔了。这样我们才能给你做个更好的。~
+== BC0SIR25 ~不，不，它很美。它……*抽鼻子*~
+== BAERIE25 ~你——你哭什么？真有那么糟吗？~
+== BC0SIR25 ~原谅我，我只是……太受触动了。谢谢你们俩，真的……~
+== BIMOEN25 ~唉，好了好了。我们只是想回报你一直以来对我们的照顾。~
+== BC0SIR25 ~谢谢你们，爱蒙、艾黎。我已经……这么在乎你们俩了……~
+== BIMOEN25 ~我们也在乎你，大姐。等等，我们现在这么叫，你不介意吧？~
+== BC0SIR25 ~当然不……我再高兴不过了。~
+== BIMOEN25 ~好啦！怎么样，艾黎？~
+== BAERIE25 ~嘻嘻。那我们走吧！~
 EXIT
 
 CHAIN
@@ -47,26 +47,26 @@ See("C0Sirene")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneAerieToB","GLOBAL",0)~ THEN BAERIE25 C0SireneAerieToB
-~How are you feeling, Sirene?~ [C0BLANK]
+~你感觉怎么样，塞琳？~ [C0BLANK]
 DO ~SetGlobal("C0SireneAerieToB","GLOBAL",1)~
-== BC0SIR25 ~I am well, Aerie. Is there something you require?~
-== BAERIE25 ~No, no. *giggle* I've just wanted to ask you that for a while. You've been looking out for me for so long, so I wanted to help you for a change.~
-== BC0SIR25 ~You have helped me... no, you have helped all of us countless times, Aerie. Even if you have not noticed, you have become strong... stronger than I am.~
-== BAERIE25 ~Haha! That's impossible. You're just saying that to make me feel better.~
-== BC0SIR25 ~No, 'tis true, Aerie. Our enemies grow ever stronger, and I have been on the brink of death many times, but each time, 'tis you that saved me. I think, by this point, I owe you my life many times over.~
-== BAERIE25 ~I can't believe it's been that many times... when I see you hurt, I just... do everything I can. It's so strange, having this much power. And it feels... normal.~
-== BC0SIR25 ~You have grown so strong, Aerie, and... I am proud of you.~
-== BAERIE25 ~Thank you, Sirene. I hope... I won't have to rely on you any more, and I hope you can start relying on me. We'll support each other from now on.~
+== BC0SIR25 ~我很好，艾黎。你有什么需要吗？~
+== BAERIE25 ~不不。*轻笑*我只是早就想问你这句话了。你照顾了我这么久，所以这回我想帮帮你。~
+== BC0SIR25 ~你帮过我……不，你无数次帮过我们所有人，艾黎。就算你自己没察觉，你也已经变强了……比我更强。~
+== BAERIE25 ~哈哈！那不可能。你这么说只是让我好受些。~
+== BC0SIR25 ~不，这是真的，艾黎。我们的敌人越来越强，我许多次濒临死亡，可每一次，都是你救了我。我想事到如今，我欠你的命已经多得数不清了。~
+== BAERIE25 ~我不敢相信竟有那么多次……每当我看见你受伤，我就……做我能做的一切。拥有这么大的力量真奇怪。可它感觉……很平常。~
+== BC0SIR25 ~你变得这么强了，艾黎，而且……我为你骄傲。~
+== BAERIE25 ~谢谢你，塞琳。我希望……我不必再依赖你，也希望你能开始依赖我。从今往后我们互相扶持。~
 == BAERIE25 IF ~Global("AerieRomanceActive","GLOBAL",2)
-GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~But, there is one thing I might... need to count on you for, in the near future.~
+GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~不过，有一件事我近期也许……需要仰仗你。~
 == BC0SIR25 IF ~Global("AerieRomanceActive","GLOBAL",2)
-GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~What is it, Aerie?~
+GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~什么事，艾黎？~
 == BAERIE25 IF ~Global("AerieRomanceActive","GLOBAL",2)
-GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~I'm sure you know of me and... and <CHARNAME>. There may be a time where I need your support... can I count on you when that time comes?~
+GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~你肯定知道我，还有……还有<CHARNAME>。也许会有那么一刻，我需要你的支持……到时候我能指望你吗？~
 == BC0SIR25 IF ~Global("AerieRomanceActive","GLOBAL",2)
-GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~Of course, Aerie, but what-~
+GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~当然，艾黎，可到底是什么——~
 == BAERIE25 IF ~Global("AerieRomanceActive","GLOBAL",2)
-GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~Later. I'll tell you later... when it's just the two of us.~
+GlobalGT("ExpLoveTalk","LOCALS",13) GlobalLT("ExpLoveTalk","LOCALS",18)~ THEN ~以后。我以后告诉你……等只有我们两个人的时候。~
 EXIT
 
 CHAIN 
@@ -76,22 +76,22 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 !Alignment("Anomen",CHAOTIC_NEUTRAL)
 Global("C0SireneAnomenToB","GLOBAL",0)~ THEN BANOME25 C0SireneAnomenToB
-~My lady... if you would sate my curiosity for but a moment?~ [C0BLANK]
+~女士……可否暂且满足一下我的好奇？~ [C0BLANK]
 DO ~SetGlobal("C0SireneAnomenToB","GLOBAL",1)~
-== BC0SIR25 ~Of course. What do you need?~
-== BANOME25 ~I... hope this will not offend you, but I must ask... have you ever willingly sought the death of another?~
-== BC0SIR25 ~...~
-== BANOME25 ~By Helm, I should not have asked such a tactless question. 'Twas a mistake on my part, my friend. I will not bother you again.~
-== BC0SIR25 ~No, Anomen... wait. I will tell you.~
-== BANOME25 ~You will? I thank you for this.~
-== BC0SIR25 ~I have... had the desire to kill in the past. I have felt hatred towards those who made those dear to me suffer, and others who bring injustice towards innocents. I have sought vengeance towards those that have wronged me... wronged others. I will not deny it.~
-== BANOME25 ~I see. Forgive me for saying so, but 'twould seem we are not so different after all.~
-== BC0SIR25 ~Perhaps. But why did you ask such a thing?~
-== BANOME25 ~Ever since I was granted my knighthood, I have reflected upon my past acts... and I have come to the realization that my actions may not have been as just as I believed them to be.~
-== BANOME25 ~I have always stood for showing no mercy to those of evil intent. Many men I considered the lowest of the low fell by my hand, and I had never felt the slightest guilt for it.~
-== BANOME25 ~But after seeing your example... showing mercy to those that I would have deemed irredeemable, taking no satisfaction in the act of killing, no matter how evil the enemy... I feel it may have affected me. And now I wonder if I have been wrong all this time.~
-== BC0SIR25 ~No, Anomen. You are not... I do not believe you are, at least. Only the gods know the truth. And Helm has shown his favor towards your actions, has he not?~
-== BANOME25 ~Aye, that he has. Perhaps neither of us are in the wrong. I can only follow Helm's guidance, as you do for Ilmater. Thank you for your time, my lady.~
+== BC0SIR25 ~当然。你需要什么？~
+== BANOME25 ~我……希望这话不会冒犯你，可我必须问……你可曾主动求取过他人的性命？~
+== BC0SIR25 ~……~
+== BANOME25 ~以海姆之名，我不该问这种不知轻重的问题。是我的错，我的朋友。我不会再打扰你了。~
+== BC0SIR25 ~不，阿诺门……等等。我会告诉你。~
+== BANOME25 ~你会？那我多谢了。~
+== BC0SIR25 ~我……过去确曾有过杀意。对那些让我所爱之人受苦的人，对那些把不义加于无辜者的人，我感受过憎恨。对那些亏待过我的人……亏待过别人的人，我寻求过复仇。我不否认。~
+== BANOME25 ~我明白了。请原谅我这么说，但看来我们终究没那么不同。~
+== BC0SIR25 ~也许吧。可你为何要问这个？~
+== BANOME25 ~自从受封骑士以来，我不断反思自己过往的行径……我逐渐意识到，我的所作所为也许并不像我所以为的那样公正。~
+== BANOME25 ~我一贯主张对心怀恶意者绝不宽恕。许多我认为最卑劣不过的人倒在我的剑下，而我从未为此感到一丝愧疚。~
+== BANOME25 ~可看过你的榜样之后……对那些我本会视为无可救药的人施以宽恕，无论敌人多恶，也不从杀戮中取一丝快意……我觉得这影响了我。如今我开始怀疑，我这一直以来是否都错了。~
+== BC0SIR25 ~不，阿诺门。你并没有……至少我不认为你错了。真相只有神明知道。而海姆已经对你的行止显出他的眷顾，不是吗？~
+== BANOME25 ~唉，确实如此。也许我们俩谁都没有错。我只能遵循海姆的指引，正如你遵循伊尔梅特。多谢你拨冗，女士。~
 EXIT
 
 CHAIN 
@@ -100,17 +100,17 @@ See("Cernd")
 !StateCheck("Cernd",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneViconiaToB","GLOBAL",0)~ THEN BC0SIR25 C0SireneCerndToB
-~I think... I dreamt again, last eve.~ [C0BLANK]
+~我想……我昨夜又做梦了。~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconiaToB","GLOBAL",1)~
-== BCERND25 ~Truly? Did you recall anything vividly, this time?~
-== BC0SIR25 ~Some, but... forgive me, Cernd, but I can no longer bear to use this.~
-== BCERND25 ~If the images have proven too overwhelming, I can always...~
-== BC0SIR25 ~Nay, 'tis not that. Your incense helped bring the images into focus. I cannot see faces, but I could hear voices... ~
-== BC0SIR25 ~I could not remember anything when I woke, but my face was wet with tears, and my heart was in pain. I fear that... the memories buried in the depths of my mind are something I do not wish to recall.~
-== BCERND25 ~Though we may fall countless times before we first learn to walk, we never consider failure, we only try again until we succeed. Just as the instinct to walk is in all of us, the instinct to remember is within you. I still feel you are giving up too early.~
-== BC0SIR25 ~I do not wish to give up, but...~
-== BCERND25 ~Keep the incense. I fear that just as fledglings must one day fly from the nest, the day that we part will come soon. I would not wish for you to have any regrets, should you change your mind.~
-== BC0SIR25 ~As you say, Cernd. I shall keep this gift from you.~
+== BCERND25 ~真的？这次你清楚地记起什么了吗？~
+== BC0SIR25 ~记起一些，可是……原谅我，瑟恩德，我实在再用不下去这个了。~
+== BCERND25 ~若那些影像太过压人，我随时可以……~
+== BC0SIR25 ~不，不是那个缘故。你的香帮我让影像清晰起来。我看不见脸，可我能听见声音……~
+== BC0SIR25 ~我醒来时什么都记不得，可我的脸被泪水打湿，心里疼得厉害。我怕……埋在心底深处的那些记忆，是我不愿回想的。~
+== BCERND25 ~我们在学会走路之前或许会跌倒无数次，可我们从不考虑失败，只是一次又一次地尝试，直到成功。正如行走的本能人人皆有，记忆的本能也在你心里。我仍觉得你放弃得太早了。~
+== BC0SIR25 ~我不想放弃，可是……~
+== BCERND25 ~留着这香吧。我怕正如雏鸟终有一日要离巢，我们分别的日子也快到了。你若改变主意，我不愿你留下任何遗憾。~
+== BC0SIR25 ~就依你所说，瑟恩德。我会留住你这份礼物。~
 EXIT
 
 CHAIN 
@@ -119,14 +119,14 @@ See("C0Sirene")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneEdwinToB","GLOBAL",0)~ THEN BEDWIN25 C0SireneEdwinToB
-~Well, I am surprised, fiendling. Despite your apparent lack of prowess in the powers of your heritage, you seem to be worth something after all.~ [C0BLANK]
+~嗯，我倒是惊讶，魔崽子。尽管你对自己血脉的力量显然毫无本领，看来你终究还有点用处。~ [C0BLANK]
 DO ~SetGlobal("C0SireneEdwinToB","GLOBAL",1)~
-== BC0SIR25 ~Your words drip with condescension, Edwin. I would rather you remained silent.~
-== BEDWIN25 ~Such ungrateful impudence, I believe I had given you a compliment. (Though you are perhaps too simple-minded to realize it...) You may lack any semblance of a clear mind, but as a meat shield, you are... remarkably competent.~
-== BC0SIR25 ~My body and skill were honed to defend others. My only regret is that I must waste it on one such as you.~
-== BEDWIN25 ~And yet you do it regardless. Fascinating.~
-== BC0SIR25 ~I assure you, that will not last. One day we may be on the opposite sides of the battlefield... and you will see a different side of me entirely.~
-== BEDWIN25 ~Perhaps, though it behooves me to warn you that you will only have one chance.~
+== BC0SIR25 ~你的话里满是居高临下，艾德温。我倒宁愿你闭口不言。~
+== BEDWIN25 ~如此不知感恩的放肆，我可是给了你一句称赞。（虽然你也许蠢得领会不到……）你或许毫无清醒头脑的痕迹，可当肉盾，你……倒是意外地称职。~
+== BC0SIR25 ~我的身体与技艺，是为守护他人而磨炼的。我唯一的遗憾，是不得不把它浪费在你这种人身上。~
+== BEDWIN25 ~可你照样在做。真有意思。~
+== BC0SIR25 ~我向你保证，这不会长久。总有一天我们或许会站在战场两端……那时你会看到一个完全不同的我。~
+== BEDWIN25 ~也许吧。不过我该警告你，你只会有一个机会。~
 EXIT
 
 CHAIN 
@@ -135,19 +135,19 @@ See("HaerDalis")
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneHaerdalisToB","GLOBAL",0)~ THEN BC0SIR25 C0SireneHaerdalisToB
-~Haer'Dalis... I think we should talk a while, you and I.~ [C0BLANK]
+~海尔达利……我觉得我们该谈一谈，你和我。~ [C0BLANK]
 DO ~SetGlobal("C0SireneHaerdalisToB","GLOBAL",1)~
-== BHAERD25 ~Certainly. Shall we practice a duet? Or will this be a mutual exchange of affections?~
-== BC0SIR25 ~...~
-== BHAERD25 ~Ahh... I see that grim countenance you are so fond of displaying. Perhaps a song to soothe your spirit?~
-== BC0SIR25 ~No, please stop. I would have you be serious this one time.~
-== BHAERD25 ~Stifle my humor? 'Tis as a barb to my heart, my lovely goshawk! What would this sparrow be without his wit?~
-== BC0SIR25 ~Your wit is exactly what concerns me. We have seen too much bloodshed in this journey, yet you do not seem preturbed in the least. No... you seem to revel in it.~
-== BHAERD25 ~Destruction is a beautiful thing, my dear. Terrible, yet beautiful nonetheless. As an artisan, I must know to appreciate it.~
-== BC0SIR25 ~There is nothing beautiful about death, Haer'Dalis. Do you not feel anything for those that have fallen?~
-== BHAERD25 ~I sympathize, but all things must ultimately return to oblivion. Should I feel sorrow for the fortunate individuals taking the journey before us?~
-== BC0SIR25 ~Your resignation towards this... ideal is something I will never understand.~
-== BHAERD25 ~You do not need to, Sirene. Entropy will take us all before we know it.~
+== BHAERD25 ~当然。我们是要练一首二重唱？还是这将是一场互相倾诉情意？~
+== BC0SIR25 ~……~
+== BHAERD25 ~啊……我看见你偏爱摆出的那副阴沉面容了。也许来首歌安抚你的心灵？~
+== BC0SIR25 ~不，请你停下。这一回我希望你认真。~
+== BHAERD25 ~要我收起诙谐？那对我这颗心犹如一根倒刺，我可爱的苍鹰！这只麻雀若没了机智，还剩下什么？~
+== BC0SIR25 ~让我忧心的正是你的机智。这一路上我们见的血腥太多了，可你似乎一点也不为所扰。不……你似乎还乐在其中。~
+== BHAERD25 ~毁灭是美丽的事物，亲爱的。可怕，却依然美丽。身为艺人，我须懂得欣赏它。~
+== BC0SIR25 ~死亡没有什么美丽的，海尔达利。你对那些倒下的人就毫无感受吗？~
+== BHAERD25 ~我同情，可万物终须归于虚无。那些有幸先行踏上此途的人，我该为他们悲伤吗？~
+== BC0SIR25 ~你对这……理念的认命，我永远无法理解。~
+== BHAERD25 ~你无需理解，塞琳。在我们察觉之前，熵已将我们尽数带走。~
 EXIT
 
 CHAIN
@@ -157,20 +157,20 @@ See("Imoen2")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneImoenToB","GLOBAL",0)~ THEN BC0SIR25 C0SireneImoenToB
-~Imoen? Are you feeling unwell?~ [C0BLANK]
+~爱蒙？你不舒服吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneImoenToB","GLOBAL",1)~
-== BIMOEN25 ~Hm? N-no, not at all. I'm right as rain just like usual, e-heh. Why would you think otherwise?~
-== BC0SIR25 ~Perhaps I was mistaken. You just... do not seem your usual self.~
-== BIMOEN25 ~Oh. Well, you know. I've just been trying to be more serious. Kind of like you, I guess.~
-== BC0SIR25 ~Like me?~
-== BIMOEN25 ~Yeah, you know. The whole solemn and selfless schtick. "I will protect my friends!" and all that.~
-== BC0SIR25 ~Do... do I truly sound that way to you?~
-== BIMOEN25 ~Hehe, just teasing. Mmm... I might've exaggerated a bit, but... I meant it when I said I was trying to copy you.~
-== BC0SIR25 ~But... why? There is no need for you to change who you are.~
-== BIMOEN25 ~Well, I wouldn't go that far. It's just that... you've become a role model to me now. Like a big sister.~
-== BC0SIR25 ~I... I did not realize you thought of me that way, Imoen. I am flattered.~
-== BIMOEN25 ~Heh heh. Now that I've said that, you'd better act the part. I expect to be spoiled!~
-== BC0SIR25 ~(laugh) I will do my best.~
+== BIMOEN25 ~嗯？不——不，一点也没有。我跟平常一样好得很，嘿——呃。你怎么会这么想？~
+== BC0SIR25 ~也许是我看错了。你只是……不像平常的你。~
+== BIMOEN25 ~哦。嗯，你知道的。我只是一直在试着更严肃些。有点像你那样，我想。~
+== BC0SIR25 ~像我？~
+== BIMOEN25 ~是啊，你知道的。那套一本正经又无私的把戏。「我会保护我的朋友们！」诸如此类。~
+== BC0SIR25 ~我……我在你听来真是那样吗？~
+== BIMOEN25 ~嘿嘿，只是逗你。嗯……我也许夸张了点，可……我说想学你，是真心的。~
+== BC0SIR25 ~可……为什么？你没有必要改变自己。~
+== BIMOEN25 ~嗯，我也没到那个地步。只是……你现在成了我的榜样。像个大姐一样。~
+== BC0SIR25 ~我……我没意识到你这么看我，爱蒙。我很受宠若惊。~
+== BIMOEN25 ~嘿嘿。既然我说了，你最好就照这角色演。我等着被你宠呢！~
+== BC0SIR25 ~（笑）我会尽力的。~
 EXIT
 
 CHAIN 
@@ -179,18 +179,18 @@ See("C0Sirene")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneJaheiraToB","GLOBAL",0)~ THEN BJAHEI25 C0SireneJaheiraToB
-~Sirene, there is a very important we must discuss, and the sooner the better.~ [C0BLANK]
+~塞琳，有件很重要的事我们必须谈，越早越好。~ [C0BLANK]
 DO ~SetGlobal("C0SireneJaheiraToB","GLOBAL",1)~
-== BC0SIR25 ~You have my attention, Jaheira.~
-== BJAHEI25 ~I should hope so, as this is a vital matter for this whole group. You have become strong, and many of us have come to depend on you in our trials.~
-== BC0SIR25 ~I- you give me too much praise. I have only done what I always have.~
-== BJAHEI25 ~Therein lies the problem. You cannot continue to recklessly throw your life at risk. If we were to lose as you are now, I fear it would mean all of our doom.~
-== BC0SIR25 ~Should I become lax in my duty and put <CHARNAME>, or you at risk instead, then? No, I cannot have that.~
-== BJAHEI25 ~Do you think so little of us, Sirene? We are not weaklings in need of you to protect us at all times. We are a group, and must learn to depend on each other.~
-== BJAHEI25 IF ~Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~That aside, how do you think <CHARNAME> will react, were you to fall?~
-== BJAHEI25 ~You cannot carry the weight of the world on your shoulders, Sirene, no matter how much you may try. Your friends are here to share the burden.~
-== BC0SIR25 ~There is... truth in what you say, Jaheira. Forgive me, I have been most arrogant.~
-== BJAHEI25 ~Thank Silvanus, you are finally starting to see sense. I hope this will be the last we must talk of this.~
+== BC0SIR25 ~我在听，贾希拉。~
+== BJAHEI25 ~我希望如此，因为这关乎整个队伍。你已经变强了，我们许多人都在磨难中开始依赖你。~
+== BC0SIR25 ~我——你过奖了。我只是做了我一贯做的事。~
+== BJAHEI25 ~问题就在这里。你不能继续这样不顾性命地冒险。若我们失去如今这样的你，我怕那意味着我们所有人的灭亡。~
+== BC0SIR25 ~那我难道该松懈职守，转而把<CHARNAME>或你置于险境吗？不，我不能那样。~
+== BJAHEI25 ~你把我们看得这么轻吗，塞琳？我们不是需要你时时保护的弱者。我们是一个队伍，必须学会互相依靠。~
+== BJAHEI25 IF ~Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~且不说这个，你若倒下，你觉得<CHARNAME>会如何反应？~
+== BJAHEI25 ~你不能把整个世界的重量都担在肩上，塞琳，无论你多想这么做。你的朋友们就在这里分担这份重负。~
+== BC0SIR25 ~你所说……确有道理，贾希拉。原谅我，我一直太过自负。~
+== BJAHEI25 ~感谢西尔瓦纳斯，你终于开始明白道理了。我希望这是我们最后一次谈这事。~
 EXIT
 
 CHAIN 
@@ -199,16 +199,16 @@ See("C0Sirene")
 !StateCheck("Jan",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneJanToB","GLOBAL",0)~ THEN BJAN25 C0SireneJanToB
-~Sirene, my girl, have a whiff of this. I'm sure it'll fix your problems in a jiffy!~ [C0BLANK]
+~塞琳，我的姑娘，闻闻这个。我保证它立马就能解决你的问题！~ [C0BLANK]
 DO ~SetGlobal("C0SireneJanToB","GLOBAL",1)~
-== BC0SIR25 ~(Ilmater preserve me...) Um, Jan... thank you, but I do not think such a condiment is for me.~
-== BJAN25 ~Oh no no, this isn't for eating, lassie. Well, I suppose you could eat it, but the gas you'd get would stun an ox. No, this is my patented Jansen family recipe for anti-scarring salve. After all the battles you've been throwing yourself into, I thought you could use a lot of it. Here, have a look! It doesn't smell that bad.~
-== BC0SIR25 ~I... suppose there is no harm in trying a little... (gods, 'tis so pungent!)~
-== BJAN25 ~There, isn't that a pleasant feel? And for a young lass like you, it doubles as a cream for facial care! I assure you, you'll never see a shinier glow on your cheeks after a week of using this! Well, side-effects include the occasional rash and color change, but with your complexion I'm sure no one would notice.~
-== BC0SIR25 ~(I... need to put this on my face?)~
-== BJAN25 ~Go ahead, take it! There's plenty more where that came from. I made a whole batch from the harvest of my portable turnip farm. It'll be good to use for at least another month or two.~
-== BC0SIR25 ~Th-thank you, Jan, but I fear I must pass. My scars, erm, serve a spiritual purpose, and removing them would be wrong.~
-== BJAN25 ~Your loss. I suppose I'll save it for my own use then.~
+== BC0SIR25 ~（伊尔梅特保佑我……）呃，扬……谢谢你，可我觉得这种调料不适合我。~
+== BJAN25 ~哦不不，这不是吃的，小姑娘。嗯，我猜你也能吃，可你放出的气能把一头牛熏晕。不，这是我詹森家祖传秘方的祛疤膏。你打了那么多仗，我想你能用掉很多。来，瞧瞧！闻着没那么糟。~
+== BC0SIR25 ~我……想试试一点也不碍事……（神明啊，这东西真冲！）~
+== BJAN25 ~瞧，是不是感觉挺舒服？而且对你这样的小姑娘，它还能兼作护肤霜！我保证，用上一周，你脸颊上的光润无人能及！嗯，副作用包括偶尔起疹子和变色，不过以你的肤色，我确信没人看得出来。~
+== BC0SIR25 ~（我……要把这个涂在脸上？）~
+== BJAN25 ~拿去，收下吧！这种东西我多的是。我用我那便携芜菁农场的收成做了一整批。至少还能再用上一两个月。~
+== BC0SIR25 ~谢——谢谢你，扬，可我怕只能推辞了。我的疤，呃，有精神上的用途，把它们去掉是不对的。~
+== BJAN25 ~那是你的损失。那我想我就留着自己用吧。~
 EXIT
 
 CHAIN 
@@ -217,16 +217,16 @@ See("C0Sirene")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneKeldornToB","GLOBAL",0)~ THEN BKELDO25 C0SireneKeldornToB
-~We have come far together, have we not, Sirene? Though our battles grow ever fiercer, we persevere. And I have watched you grow stronger from the experience.~ [C0BLANK]
+~我们一起走了很远，不是吗，塞琳？虽然战事越来越凶，我们仍坚持下来。而我看着你从这些经历中变得更强。~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldornToB","GLOBAL",1)~
-== BC0SIR25 ~Thank you, sir, but... how about you? As you say, our foes only increase in strength and vigor. At your age, sometimes I worry...~
-== BKELDO25 ~Do you fear that this one's old bones shall fall in the midst of battles? I am old, aye, but not so frail yet.~
-== BC0SIR25 ~No, I did not mean to imply-~
-== BKELDO25 ~Hah, worry not, child. I know you are only concerned for my health and well-being. Why, for a moment I almost believed I was speaking to my daughters.~
-== BC0SIR25 ~Your daughters... do you miss them, sir Keldorn? It must be many months since you last saw them.~
-== BKELDO25 ~Aye... I think of them, each day and night. If Torm is kind, then perhaps I shall live to see them once more.~
-== BC0SIR25 ~You will, sir. I will make that certain. If you can see my daughters in me, then... I shall speak my mind. I have never known my father, but... I would have liked nothing more, to be raised by one such as you.~
-== BKELDO25 ~Sirene... hah, you seem intent on bringing forth tears from this old fool's eyes. Thank you, child. Your words do me more honor than you know.~
+== BC0SIR25 ~谢谢你，先生，可是……您呢？如你所说，我们的敌人只增不减，越来越强。以您的年纪，我有时会担心……~
+== BKELDO25 ~你怕这副老骨头会倒在战阵之中？我是老了，没错，可还没那么衰弱。~
+== BC0SIR25 ~不，我不是想暗示——~
+== BKELDO25 ~哈，别担心，孩子。我知道你只是关心我的健康与安危。有一刻我几乎以为自己在跟我女儿们说话。~
+== BC0SIR25 ~你的女儿们……你想她们吗，凯尔登爵士？你上次见她们一定已是好几个月前了。~
+== BKELDO25 ~唉……我日日夜夜都在想她们。若托姆慈悯，也许我还能活着再见她们一面。~
+== BC0SIR25 ~您会的，先生。我会确保如此。如果您能在我身上看见您的女儿们，那么……我就说出心里话。我从不知我父亲是谁，可是……再没有比被您这样的人抚养长大更让我愿意的了。~
+== BKELDO25 ~塞琳……哈，你似乎一心要逼出这老傻瓜的眼泪。谢谢你，孩子。你这话给我的荣耀，比你知道的更多。~
 EXIT
 
 CHAIN 
@@ -235,14 +235,14 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("C0SireneKorganToB","GLOBAL",0)~ THEN BKORGA25 C0SireneKorganToB
-~Ach, I must admit, fiendling, I had thought ye a yellow-bellied wench, unfit fer the frontline, but I cannae deny that yer handy with a blade.~ [C0BLANK]
+~唉，我得承认，魔崽子，我本以为你是个胆小的娘们，上不了前线，可我不得不承认你用刀挺利索。~ [C0BLANK]
 DO ~SetGlobal("C0SireneKorganToB","GLOBAL",1)~
-== BC0SIR25 ~I suppose I should be grateful for the compliment, especially coming from you, Korgan, but I doubt that is the end of it.~
-== BKORGA25 ~Ar, a shame yer head's too full o' rocks, or I'd find ye almost bearable.~
-== BC0SIR25 ~So, in essence, your opinion of me has changed little, then?~
-== BKORGA25 ~Have ye been listenin' to me, wench, or are yer ears as full as yer head? I said yer good in a fight, so yer not totally useless after all. Ye should be grateful I haven't slit yer throat while ye slept.~
-== BC0SIR25 ~Aye, I have not forgotten your treatment of your former comrades. I should be glad, indeed, that you have not done the same to present company. As much as I wish to trust my companions... I cannot extend the same to you, Korgan.~
-== BKORGA25 ~Hnh. Me past comrades had their fate comin'. As fer ye, so long as ye pull yer weight, skinny as ye are, yer in no danger... fer now. Heh heh.~
+== BC0SIR25 ~我想我该为这句称赞感激你，尤其是从你嘴里说出来，科根，可我怀疑话还没说完。~
+== BKORGA25 ~嘿，可惜你脑袋里塞满石头，不然我几乎会觉得你还算能忍。~
+== BC0SIR25 ~那么归根结底，你对我的看法几乎没变？~
+== BKORGA25 ~你听我说话了没有，娘们，还是你耳朵跟你脑袋一样塞满了东西？我说你打仗不错，所以你终究不算全无用处。你该庆幸我没趁你睡觉割了你喉咙。~
+== BC0SIR25 ~嗯，我没忘记你如何对待你从前的同伴。我确实该庆幸，你没对现在这些人做同样的事。尽管我愿信任我的同伴……我却不能把同样的信任给你，科根。~
+== BKORGA25 ~哼。我从前的同伴是自找的下场。至于你，只要你出力干活，瘦成那样也无妨，你没有危险……目前。嘿嘿。~
 EXIT
 
 CHAIN 
@@ -251,19 +251,19 @@ See("C0Sirene")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneMazzyToB","GLOBAL",0)~ THEN BMAZZY25 C0SireneMazzyToB
-~My friend, do you have any plans for the future? Once our service to <CHARNAME> is over?~ [C0BLANK]
+~我的朋友，你对将来有什么打算吗？等我们为<CHARNAME>效力的事结束之后？~ [C0BLANK]
 DO ~SetGlobal("C0SireneMazzyToB","GLOBAL",1)~
-== BC0SIR25 ~No, I... I have not thought that far ahead.~
-== BMAZZY25 ~Well, you are welcome to accompany me up north. To Waterdeep, perhaps, if we make it that far.~
-== BMAZZY25 IF ~Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~Though I know of your feelings for <CHARNAME>, and if you would rather remain by his side, I would give you my blessing.~
-== BC0SIR25 ~To the north... just the two of us?~
-== BMAZZY25 ~Perhaps a small adventuring band, not so different from present company. Is that satisfactory for you?~
-== BC0SIR25 ~I- I would like nothing more, Mazzy, truly... but will my presence not bring you trouble?~
-== BMAZZY25 ~Of course not. I would never allow mere prejudice to impose upon our friendship. Regardless of what anyone else may think of you, it would be my highest honor to continue adventuring by your side.~
-== BC0SIR25 ~No... I appreciate it, my friend, but I fear our callings are different. I must continue doing the work of my god. You are destined for greatness, Mazzy. I am not.~
-== BMAZZY25 ~Do not say that, Sirene. We are comrades on equal ground, not pieces on a board.~
-== BC0SIR25 ~Perhaps, but... what we seek in life are different. I do not wish for glory, or adventure as you do. We have developed a great friendship, Mazzy, and I do not wish for our separate desires to put that at risk. I hope you can understand that.~
-== BMAZZY25 ~I see... nothing will change your mind, then? As you wish, but remember that my door shall always be open for you.~
+== BC0SIR25 ~不，我……我没想那么远。~
+== BMAZZY25 ~嗯，欢迎你跟我一起北上。去深水城，也许，如果我们能走那么远。~
+== BMAZZY25 IF ~Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~我虽知道你我对<CHARNAME>的情意，但你若宁愿留在他身边，我会祝福你。~
+== BC0SIR25 ~去北方……就我们两个？~
+== BMAZZY25 ~也许一个小冒险团，跟现在这些人差不多。这样你可满意？~
+== BC0SIR25 ~我——我再没有比这更愿意的了，玛兹，真的……可我的存在不会给你带来麻烦吗？~
+== BMAZZY25 ~当然不会。我绝不会容许区区偏见侵扰我们的友谊。不管别人怎么看你，能继续与你并肩冒险，是我至高的荣幸。~
+== BC0SIR25 ~不……我很领情，我的朋友，可我怕我们的道路不同。我必须继续做我神的事工。你注定要成就伟业，玛兹。我不是。~
+== BMAZZY25 ~别这么说，塞琳。我们是平等的同伴，不是棋盘上的棋子。~
+== BC0SIR25 ~也许吧，可是……我们在人生中求的东西不同。我不像你那样渴求荣耀或冒险。我们已结下深厚的友谊，玛兹，我不希望我们各自的愿望拿这份友谊去冒险。我希望你能明白。~
+== BMAZZY25 ~我明白了……那么是什么都不能让你改变主意了？就依你吧，可记住我的门永远为你敞开。~
 EXIT
 
 CHAIN 
@@ -272,17 +272,17 @@ See("C0Sirene")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneMinscToB","GLOBAL",0)~ THEN BMINSC25 C0SireneMinscToB
-~Sirene, Boo is telling Minsc that you are very lonely.~ [C0BLANK]
+~塞琳，布布跟明斯克说，你很孤独。~ [C0BLANK]
 DO ~SetGlobal("C0SireneMinscToB","GLOBAL",1)~
-== BC0SIR25 ~I... excuse me, Minsc?~
-== BMINSC25 ~Boo says that Minsc should find you a companion just like him. Then you will not be lonely anymore.~
-== BC0SIR25 ~Minsc... (laugh)~
-== BMINSC25 ~Eh? Did Minsc say something funny?~
-== BC0SIR25 ~No, I should not have laughed. Forgive me, 'tis just... I had just become jealous of your strange companionship, and suddenly you say such a thing... I could not stop myself.~
-== BMINSC25 ~Minsc does not understand. Why would you be jealous of us?~
-== BC0SIR25 ~Yes, Minsc, but... do not take it the wrong way. I am simply envious of your close relationship. Others may not realize it, but... having a friend at your side always is a valuable thing. That is something that I have desired for my whole life.~
-== BMINSC25 ~Boo says that true friendship is a valuable thing indeed. But we are your friends, are we not?~
-== BC0SIR25 ~Aye, Minsc... you certainly are.~
+== BC0SIR25 ~我……你说什么，明斯克？~
+== BMINSC25 ~布布说，明斯克该给你找个像他那样的伙伴。那样你就不再孤独了。~
+== BC0SIR25 ~明斯克……（笑）~
+== BMINSC25 ~嗯？明斯克说了什么好笑的事吗？~
+== BC0SIR25 ~不，我不该笑的。原谅我，只是……我刚在嫉妒你们这份古怪的友谊，忽然你就说了那样一句……我忍不住。~
+== BMINSC25 ~明斯克不明白。你为什么要嫉妒我们？~
+== BC0SIR25 ~是，明斯克，可是……别想歪了。我只是羡慕你们这份亲密。别人也许看不出来，可……身边永远有个朋友，是件宝贵的事。那是我一辈子都渴望的。~
+== BMINSC25 ~布布说，真正的友谊确实宝贵。可我们就是你的朋友，不是吗？~
+== BC0SIR25 ~是的，明斯克……你们当然是。~
 EXIT
 
 CHAIN 
@@ -291,19 +291,19 @@ See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneNaliaToB","GLOBAL",0)~ THEN BC0SIR25 C0SireneNaliaToB
-~You look solemn, Nalia. Has the day been wearing you down?~ [C0BLANK]
+~你看着很严肃，娜莉亚。这一天使你疲惫了吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneNaliaToB","GLOBAL",1)~
-== BNALIA25 ~Hmm? Oh, no. I mean, I am tired, but it's not because of what you think it is.~
-== BC0SIR25 ~I understand. You have been pushing yourself day and night, reading and practicing your magic for hours on end.~
-== BNALIA25 ~Noticed that, did you? I *did* try to make it subtle so the group wouldn't get worried over nothing...~
-== BC0SIR25 ~'Tis far from nothing, Nalia. I can tell from the bags under your eyes that you have been deprived of sleep as of late. What has driven you to such a drastic change?~
-== BNALIA25 ~I've been thinking about the future. I've gained so much power now, that I can't help but consider how I can best use it to correct everything that's gone wrong with my life. Once <CHARNAME>'s quest is over, I intend to return to my home and change everything for the better.~
-== BC0SIR25 ~I see. You are committed to this, are you not? I can tell you are determined to make your ideals a reality.~
-== BNALIA25 ~We once talked of the corruption in Amn's society and bureaucracy, and it was all theorizing, because I believed I lacked the power, but now... it's different. I know I can make the changes I want happen. But I need more knowledge than I have right now.~
-== BNALIA25 ~Once I am ready, I intend on making changes on a greater scale, and reform my homeland from the corruption that has taken over. If such a day comes, I hope I can count on those of conviction, such as yourself, to do what I cannot.~
-== BC0SIR25 ~You hardly need to ask, Nalia. Of course I will do everything in my power to assist, whenever you need me.~
-== BNALIA25 ~Thank you. I ask you this because I respect you. If I am changed for the worse by the power I seek... I'll need someone of your moral fiber to set me right.~
-== BC0SIR25 ~Nalia... you are better than you think you are, so I beseech you, stop this self-doubt. I know you can reach whatever goal you are aiming for.~
+== BNALIA25 ~嗯？哦，没有。我是说，我累了，可并不是你想的那个缘故。~
+== BC0SIR25 ~我明白。你日夜催逼自己，读书、练法术，一练就是好几个时辰。~
+== BNALIA25 ~你注意到了？我*确实*试着做得不那么明显，免得队伍里白担心……~
+== BC0SIR25 ~这远不是白担心，娜莉亚。从你眼下的黑圈我就看得出，你近来缺觉。是什么逼你有了这么大的改变？~
+== BNALIA25 ~我一直在想未来。我现在掌握了这么多力量，忍不住想该怎么最好地用它来纠正我生活里所有出错的地方。等<CHARNAME>的任务结束，我打算回家去，把一切都改得更好。~
+== BC0SIR25 ~我明白了。你对此很坚定，是吗？我看得出你决心让自己的理想成为现实。~
+== BNALIA25 ~我们曾谈过安姆社会与官僚的腐败，那都只是空谈，因为我相信自己缺乏力量，可现在……不同了。我知道我能让自己想要的改变发生。可我需要的知识比现在多。~
+== BNALIA25 ~等我准备好了，我打算在更大的范围上做出改变，把我家乡从盘踞其上的腐败中革新过来。若真有那一天，我希望我能仰仗像你这样有信念的人，去做我做不到的事。~
+== BC0SIR25 ~你几乎不必开口问，娜莉亚。你需要我时，我当然会尽全力相助。~
+== BNALIA25 ~谢谢你。我向你提这个，是因为我敬重你。如果我被自己所求的力量变得比从前更坏……我会需要一个像你这样有操守的人把我扶正。~
+== BC0SIR25 ~娜莉亚……你比你自己以为的更好，所以我求你，别再这样自我怀疑。我知道你能达到你瞄准的任何目标。~
 EXIT
 
 CHAIN 
@@ -313,19 +313,19 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneSarevokToB","GLOBAL",0)
 Alignment("Sarevok",MASK_EVIL)~ THEN BSAREV25 C0SireneSarevokToB
-~How surprising, Ilmatari. You have yet to speak a word to me since my restoration. No words of condemnation from you? I'm disappointed... I expected more from you.~ [C0BLANK]
+~真令人意外，伊尔梅特信徒。自从我复原以来，你还没跟我说过一句话。没有一句谴责？我失望了……我本以为你能有更多表现。~ [C0BLANK]
 DO ~SetGlobal("C0SireneSarevokToB","GLOBAL",1)~
-== BC0SIR25 ~I have nothing to say to you, Sarevok.~
-== BSAREV25 ~No? Yet you seem to look my way often enough, and always with a look of unease. Is my existence so much of an affront to you, that your glare threatens to burn into my very soul?~
-== BC0SIR25 ~Perhaps I would, were I convinced that you have one. Yet even as you stand before me, I see nothing but a murderous shell, a shade of what was once a man.~
-== BSAREV25 ~Is that what it is? You avoid me because I have no soul? How amusing.~
-== BC0SIR25 ~I avoid you because you are an abomination, a creature without the empathy that makes a man. I have watched you, and you derive pleasure in nothing but sowing discord and murder.~
-== BSAREV25 ~Ha!~
-== BC0SIR25 ~Why do you laugh?~
-== BSAREV25 ~The hypocrisy of this is not lost to me. If you would condemn me as a murderer, by what standards do you judge yourself? How many men have you slaughtered as <CHARNAME>'s lackey? Hundreds, thousands, more? It is so amusingly ridiculous that you believe you have any right to judge *me*!~
-== BC0SIR25 ~You have had your judgment. That <CHARNAME> was willing to bring you back is a testament to <PRO_HISHER> mercy. But if you are so foolish as to repeat your mistakes, then I will end you without regret.~
-== BSAREV25 ~Oh, this is simply too precious for words. Where is your precious 'mercy' now, wench?~
-== BC0SIR25 ~There is mercy. But just as you know none, you shall recieve none.~
+== BC0SIR25 ~我跟你无话可说，萨瑞沃克。~
+== BSAREV25 ~没有？可你似乎够频繁地往我这边看，而且总带着不安的神色。我的存在就这么冒犯你，以至于你的瞪视都要烧进我的灵魂？~
+== BC0SIR25 ~也许我会，若我相信你有灵魂的话。可即使你站在我面前，我看见的也不过是一副杀人的空壳，一个曾经是人的影子。~
+== BSAREV25 ~是这样吗？你躲着我，是因为我没有灵魂？真有意思。~
+== BC0SIR25 ~我躲着你，是因为你是个可憎之物，一个没有那使人成其为人的共情的生物。我观察过你，你除了播撒不和与杀戮，别无所乐。~
+== BSAREV25 ~哈！~
+== BC0SIR25 ~你笑什么？~
+== BSAREV25 ~这其中的伪善我看得清楚。你若要谴责我是杀人者，又凭什么标准评判你自己？作为<CHARNAME>的走狗，你屠了多少人？几百、几千、更多？你竟相信自己有权评判*我*，这可笑得荒唐！~
+== BC0SIR25 ~你已经受过审判。 <CHARNAME>愿意把你带回来，是<PRO_HISHER>仁慈的明证。但你若蠢到重犯旧错，那我会毫无遗憾地了结你。~
+== BSAREV25 ~哦，这真是妙不可言。你如今那宝贝的「仁慈」上哪儿去了，娘们？~
+== BC0SIR25 ~仁慈是有的。可正如你从不知仁慈，你也将得不到仁慈。~
 EXIT
 
 CHAIN 
@@ -335,17 +335,17 @@ See("Sarevok")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneSarevokToB2","GLOBAL",0)
 !Alignment("Sarevok",MASK_EVIL)~ THEN BC0SIR25 C0SireneSarevokToB2
-~You have been quiet for some time, Sarevok. Have you grown tired of your mockery so soon? That is unlike you.~ [C0BLANK]
+~你沉默了一阵子，萨瑞沃克。这么快就厌了你的嘲弄？这不像你。~ [C0BLANK]
 DO ~SetGlobal("C0SireneSarevokToB2","GLOBAL",1)~
-== BSAREV25 ~I have no interest in trading barbs with you anymore, woman, though if you prod me further, that may be what you will get.~
-== BC0SIR25 ~No, I... I did not mean to provoke you. Perhaps my words were impulsive. I... apologize.~
-== BSAREV25 ~...~
-== BC0SIR25 ~If... if that is all?~
-== BSAREV25 ~You are a strange person, Ilmatari. One moment your words are dripping with hostility, the next you are apologizing with such sincerity that I almost believe it. What do you truly feel, I wonder?~
-== BC0SIR25 ~Are... are you truly asking? I did not think you cared.~
-== BSAREV25 ~Perhaps I do not. But <CHARNAME>'s strange desire to know those <PRO_HESHE> walks with may have gotten to me. So, answer me, paladin - how much hate do you still feel towards me?~
-== BC0SIR25 ~Hate is not something I feel easily. I cannot forgive the man you died as once, Sarevok, but as you are now... no, I cannot see any reason to hate you.~
-== BSAREV25 ~I see. If that is so, then I am satisfied.~
+== BSAREV25 ~我再没兴趣跟你斗嘴了，女人，不过你若再激我，你得到的也许就是这个。~
+== BC0SIR25 ~不，我……我不是想挑你。也许我的话太冲动了。我……道歉。~
+== BSAREV25 ~……~
+== BC0SIR25 ~如果……如果就这些的话？~
+== BSAREV25 ~你是个怪人，伊尔梅特信徒。这一刻你的话里满是敌意，下一刻你又道歉得那么真诚，我几乎都信了。你到底真正感受什么，我倒想知道。~
+== BC0SIR25 ~你……你真是在问吗？我以为你不在意。~
+== BSAREV25 ~也许我确实不在意。可<CHARNAME>那想知道<PRO_HESHE>同行者究竟是什么人的怪念头，也许传到我身上了。那么答我，圣武士——你还对我怀着多少恨？~
+== BC0SIR25 ~恨不是我轻易会有的东西。我无法原谅你死去时那个人，萨瑞沃克，可如今的你……不，我看不出有什么理由恨你。~
+== BSAREV25 ~我明白了。若果真如此，那我也满意了。~
 EXIT
 
 CHAIN
@@ -355,22 +355,22 @@ See("C0Sirene")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneValygarToB","GLOBAL",0)~ THEN BVALYG25 C0SireneValygarToB
-~Your stance still has too many openings, Sirene. Concentrate.~ [C0BLANK]
+~你的架势破绽还是太多，塞琳。专心。~ [C0BLANK]
 DO ~SetGlobal("C0SireneValygarToB","GLOBAL",1)~
-== BC0SIR25 ~I.. all right, give me a moment.~
-== BVALYG25 ~There is no room for mistakes in battle, Sirene, and neither will your foe give you the chance to correct them. Defend yourself!~
-== BC0SIR25 ~...argh!~
-== BVALYG25 ~*sigh* I think we'd best leave it at that for today. Did I go too far?~
-== BC0SIR25 ~No, my friend. I appreciate that you are not holding back. Even though I am still far from your level, I have learned much.~
-== BVALYG25 ~There's no need to be so humble. Your skill has improved tremendously since we started sparring.~
-== BC0SIR25 ~Yet... I have not beaten you once.~
-== BVALYG25 ~That's only because I have trained with a blade far longer. Besides... I am not sure that skill is the issue.~
-== BC0SIR25 ~What do you mean?~
-== BVALYG25 ~I've noticed something about the way you fight, whether it's during training or in real battle. You're still reluctant to kill, aren't you?~
-== BC0SIR25 ~...Aye, I believe I am. 'Tis a weakness that I fear I shall never correct.~
-== BVALYG25 ~I don't believe that's necessarily a weakness. It holds you back, true, but if you can remain a good person because of it... I think that would be worth it.~
-== BC0SIR25 ~Those are very kind words, Valygar. I appreciate it.~
-== BVALYG25 ~Hmph. Don't get too used to it.~
+== BC0SIR25 ~我……好吧，给我一点时间。~
+== BVALYG25 ~战斗中没有犯错的余地，塞琳，你的敌人也不会给你改正的机会。护住自己！~
+== BC0SIR25 ~……呃啊！~
+== BVALYG25 ~*叹气*我想今天最好就到这儿。我是不是太过分了？~
+== BC0SIR25 ~不，我的朋友。我很感激你不留情面。虽然我离你的水平还远，可我学到了很多。~
+== BVALYG25 ~不必这么谦逊。从我们开始对练以来，你的技艺进步极大。~
+== BC0SIR25 ~可是……我一次都没赢过你。~
+== BVALYG25 ~那只是因为我练剑的时间长得多。再说……我不确定问题出在技艺上。~
+== BC0SIR25 ~你什么意思？~
+== BVALYG25 ~我注意到你打斗时的样子，不管是训练还是实战。你还是不愿下杀手，对吧？~
+== BC0SIR25 ~……是的，我想我是。这是种弱点，我怕我永远改不掉。~
+== BVALYG25 ~我不觉得那一定是弱点。它确实拖住你，可若你能因此仍是个好人……我觉得那就值得。~
+== BC0SIR25 ~这话很厚道，瓦里格。我很领情。~
+== BVALYG25 ~哼。别太习惯就好。~
 EXIT
 
 CHAIN 
@@ -379,13 +379,13 @@ See("C0Sirene")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneViconiaToB","GLOBAL",0)~ THEN BVICON25 C0SireneViconiaToB
-~I admit I am surprised, jalil. I had not thought that our alliance would last until now.~ [C0BLANK]
+~我承认我很惊讶，jalil。我没想到我们的同盟能维持到如今。~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconiaToB","GLOBAL",1)~
-== BC0SIR25 ~What had you expected, Viconia? That I would kill you as you slept?~
-== BVICON25 ~Perhaps, once, I would not have thought you above it. If you did not kill me, then you would allow me to die, or I would kill you. Such is 'companionship' as I know it.~
-== BC0SIR25 ~That sounds... cruel indeed. Knowing the life you have experienced, Viconia, I... cannot bring it in myself to even blame you, much less hate you.~
-== BVICON25 ~You trust far too easily, Sirene. Do you believe I am incapable of taking advantage of your trust?~
-== BC0SIR25 ~If that is what must do, Viconia, I will accept it.~
-== BVICON25 ~You are so very, incorrigibly foolish... abbil. I cannot understand you at all.~
-== BVICON25 ~At the same time, I find your honestly oddly refreshing. Perhaps this alliance can prove to be in both our benefits.~
+== BC0SIR25 ~你原本指望什么，维康尼亚？指望我趁你睡着杀了你？~
+== BVICON25 ~也许吧，从前我不会觉得你做不出这种事。你若不杀我，那就让我死，或者我杀了你。这就是我所知的「同伴之情」。~
+== BC0SIR25 ~这听起来……确实残忍。知道你所经历的生活，维康尼亚，我……我甚至没法怪你，更别说恨你。~
+== BVICON25 ~你太容易信人了，塞琳。你相信我做不出利用你信任的事吗？~
+== BC0SIR25 ~若那是我必须承受的，维康尼亚，我会接受。~
+== BVICON25 ~你真是不可救药地愚蠢……abbil。我完全弄不懂你。~
+== BVICON25 ~同时，我又觉得你的诚实有种古怪的清新。也许这份同盟对双方都有益。~
 EXIT

@@ -1,14 +1,14 @@
 BEGIN C0SRAID
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneZalorne","GLOBAL",0)~ THEN C0SRAID a1
-~So, that dusty old book's what's been hidden under those glyphs, then? Hand it over, woman.~
+~那么，那些符文底下藏着的就是这本旧书？交出来，女人。~
 DO ~SetGlobal("C0SireneZalorne","GLOBAL",1)~
-== C0SIR25J ~Were you the ones who destroyed this chapel?~
-== C0SRAID ~That's none of your concern. Suffice to say that we have observed these ruins from the shadows for many a night waiting for someone with the ability to retrieve whatever was hidden there. Hand it over, or we will take it from you.~
-== C0SIR25J ~You intend to claim an Ilmatari holy artifact? You have no right to it.~
-== C0SRAID ~We have the advantage in numbers, woman. You cannot hope to protect it from us. The enchantments protecting this place from us broke when you unlocked that altar. You have nowhere to hide.~
-== C0SIR25J ~Do what you must. You will not have this book.~
-== C0SRAID ~Fool. Time to pay the price for your arrogance, then!~
+== C0SIR25J ~毁掉这礼拜堂的是你们吗？~
+== C0SRAID ~这不关你的事。只说一句：我们已在暗处观察这废墟许多夜了，等一个能取出藏着的东西的人。交出来，否则我们就从你手里抢。~
+== C0SIR25J ~你们想夺一件伊尔梅特圣物？你们没有这个权利。~
+== C0SRAID ~我们人数占优，女人。你没法从我们手里护住它。你打开那祭坛时，防着我们的结界就破了。你无处可躲。~
+== C0SIR25J ~该做什么就做吧。这本书你们拿不到。~
+== C0SRAID ~蠢货。那就为你的傲慢付出代价吧！~
 DO ~Enemy()
 ActionOverride("C0SRAID1",Enemy())
 ActionOverride("C0SRAID2",Enemy())
