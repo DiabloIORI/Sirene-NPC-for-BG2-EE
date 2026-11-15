@@ -21,7 +21,7 @@
 | `Sirene_BG2.tp2` | 已声明 `LANGUAGE ~Schinese~ ~schinese~ ~%MOD_FOLDER%/tra/schinese/sirene.tra~` | **未改动** |
 | `dialogue\crossmod\` 下 9 个 `.d` | 与 Romance Encounters、Fade、Foundling、Innershade、Isnf、Pai'Na、ToTDG、Yoshimo、Yvette 等模组的跨模组对话，共 **432 个文本块** | 就地替换 `~…~` 内文；备份存于工作区 `sir_backup\crossmod__<文件名>.d` |
 | `scripts\*.baf` | 脚本中硬编码的 `DisplayStringHead(...)` 台词，共 **9 条**已译；另有 **4 条**判定保留（1 条纯 `<CHARNAME>` 占位符无言台词、3 条拉丁施法咒语） | 就地替换 `~…~` 内文；备份存于工作区 `sir_backup\baf__<文件名>.baf` |
-| `lib\*.tpa`、`lib\*.tp2` | 装备名/描述、职业与组件标签、安装报错消息 | 前序已就地译出；第三方通用库 `a7#add_kit_ex.tpa` 整体保留未动 |
+| `lib\*.tpa`、`lib\*.tp2` | 装备名/描述、职业与组件标签、安装报错消息、EET 命运灵体过渡召唤台词 | 前序已就地译出；第三方通用库 `a7#add_kit_ex.tpa` 整体保留未动 |
 | `Sirene_BG2.ini` | 启动器列表的一行 `Description` 简介 | 已译为中文；`Name`/`Author`/链接保留原文 |
 
 说明：tp2 里的 `AUTO_TRA ~%MOD_FOLDER%/translations/%s~` 指向的 `translations\` 目录在本模组中并不存在，因此该行实际加载不到任何文件；真正决定文本的是 `dialogue\*.d`，这也是必须直接改源码的原因。
@@ -116,11 +116,12 @@
 | crossmod 落盘 | 9 个 `.d` 全部 UTF-8 无 BOM、纯 CRLF、`~` 偶数成对，无英文长句残留 |
 | baf 台词 | 9 条硬编码 `DisplayStringHead` 全部命中并落盘；4 条保留项（1 纯占位符、3 拉丁咒语）复核无误 |
 | 译名统一 | 主目录 15 处旧译笔误已对齐译名表：`塔罗娜→塔洛娜`（14）、`洛薇塔塔→洛薇雅塔`（1）；替换前后 `~` 数量不变 |
+| EET 过渡台词 | `lib\Sirene_BG2.tpa` 的 `EET_NPC_TRANSITION` 硬编码召唤台词已译，与 `FATESP.d` 对应句一致：「把塞琳带来给我，那个提夫林殉道者。」；`stringPosDV = "Skie"` 为原 NPC 标识，保留 |
 | 二进制兜底 | ITM/CRE/SPL/STO/EFF 无内嵌英文散文（名称/描述走 strref）；2 个 ARE 仅含环境音标签 `Main Ambient`，非玩家可见文本 |
 
 ## 7. 备注
 
-- 本模组属「代码内嵌汉化」，按惯例只在直接改写源码的文件（19 个 `.d`）留 `.bak`，`tra\schinese\` 为新增文件无需备份；本轮 crossmod 9 个 `.d`、baf 8 个文件与 ini 的原始备份存于独立工作区 `sir_backup\`（`crossmod__*`、`baf__*`、`main__*`、`ini__*`），未在模组目录另留 `.bak`。
+- 本模组属「代码内嵌汉化」，按惯例只在直接改写源码的文件（19 个 `.d`）留 `.bak`，`tra\schinese\` 为新增文件无需备份；本轮 crossmod 9 个 `.d`、baf 8 个文件、ini 与 tpa 定点修正的原始备份存于独立工作区 `sir_backup\`（`crossmod__*`、`baf__*`、`main__*`、`ini__*`、`libfix__*`），未在模组目录另留 `.bak`。
 - `Sirene_BG2.ini` 的 `Description` 模组简介已译为中文（启动器列表可见，不进游戏内对话）；`Name`、`Author` 与主页/论坛/下载链接按惯例保留原文。ini 为单语言文件，不随 Schinese 组件切换语言。
 - 安装时选择 `Schinese` 语言组件即可；模组组件的安装顺序（主组件、头像子组件、职业子组件）与原版一致，汉化不影响安装。
 - 与其它 NPC 模组的 crossmod 仍由游戏内 `InParty(...)` 判断是否触发，不需要预先安装对应角色模组即可正常编译；只是没装对应角色时那些 banter 不会出现。

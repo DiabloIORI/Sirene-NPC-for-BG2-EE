@@ -1081,7 +1081,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
       dialog_ToB = "C0SIRE25"
       //traFile = "%MOD_FOLDER%/tra/%LANGUAGE%/sirene.tra"
       //string = "@1"
-      string = "Bring me Sirene, the tiefling martyr."
+      string = "把塞琳带来给我，那个提夫林殉道者。"
       stringPosDV = "Skie"
   END
 END ELSE BEGIN
