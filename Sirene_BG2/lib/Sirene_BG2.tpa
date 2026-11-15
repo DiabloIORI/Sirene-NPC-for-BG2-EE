@@ -9,121 +9,121 @@ APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
 // Martyr
 
 COPY ~%MOD_FOLDER%/Spells/C0SIRSP1.spl~ ~override~
-SAY NAME1 ~Darkness, 15' Radius~
-SAY UNIDENTIFIED_DESC ~Darkness, 15' Radius
-(Alteration)
+SAY NAME1 ~黑暗术，15 尺半径~
+SAY UNIDENTIFIED_DESC ~黑暗术，15 尺半径
+（变化系）
 
-Level: 2
-Range: 30 ft.
-Duration: 1 turn
-Casting Time: 2
-Area of Effect: 8-ft. radius
-Saving Throw: None
+等级：2
+射程：30 尺
+持续时间：1 回合
+施法时间：2
+作用范围：8 尺半径
+豁免检定：无
 
-This spell causes total, impenetrable darkness. Neither normal nor magical light works in the area of effect. All vision (including infravision) is severely limited; anyone hostile caught in the area of effect is for all practical purposes blinded as per the 1st-level wizard spell. Creatures that leave the area covered by darkness will have their vision restored after 1 round.~
+此法术召唤出完全无法穿透的黑暗。作用范围内普通与魔法光线均无法生效。一切视觉（包括夜视）都大受限制；被困在作用范围内的敌对目标，实际上等同 1 级法师法术致盲。离开黑暗笼罩区域的生物，其视觉将在 1 轮后恢复。~
 
 ACTION_IF NOT MOD_IS_INSTALLED ~ArtisansKitpack.tp2~ ~3005~ BEGIN
 INCLUDE ~%MOD_FOLDER%/lib/Martyr.tpa~
 END
 
 COPY ~%MOD_FOLDER%/spells/C0ilmn4.spl~ ~override~
-SAY NAME1 ~Purging Touch~
-SAY UNIDENTIFIED_DESC ~Purging Touch
+SAY NAME1 ~涤净之触~
+SAY UNIDENTIFIED_DESC ~涤净之触
 
-The most trusted and worthy of Ilmater's followers are granted a powerful healing touch. Once per day, Sirene may heal one creature other than herself by half their total hit points and removing the effects of all poisons and diseases as well as the effects of blindness, deafness, fear, sleep, feeblemind, unconsciousness, and intoxication, as well as berserk and confused states of mind. In addition, the recipient is protected against spells and other attacks that cause these effects for 1 turn.~
+伊尔梅特最受信赖、最虔诚的信徒可获得强大的治愈之触。每日一次，塞琳可为自身以外的一只生物治愈其总生命值的一半，并移除一切中毒、疾病以及失明、失聪、恐惧、沉睡、弱智、昏迷和醉酒状态，以及狂暴与困惑的心绪。此外，受术者在 1 回合内免疫造成这些效果的法术与其他攻击。~
 
 COPY ~%MOD_FOLDER%/spells/C0sblind.spl~ ~override~
-SAY NAME1 ~Racial Power: Blinding Gaze~
-SAY UNIDENTIFIED_DESC ~Blinding Gaze
+SAY NAME1 ~种族能力：致盲凝视~
+SAY UNIDENTIFIED_DESC ~致盲凝视
 
-Sirene's racial powers allow her to blind others upon making eye contact. The target must make a saving throw vs. spells at -3 or become blinded for one turn. Additionally, targets have a 20% chance to go berserk for two rounds (no save).~
+塞琳的种族能力使她能在与他人对视时致盲对方。目标须进行对抗法术的豁免检定，减值 -3，否则被致盲 1 回合。此外，目标有 20% 几率狂暴 2 轮（无豁免）。~
 
 COPY ~%MOD_FOLDER%/spells/C0sburn.spl~ ~override~
-SAY NAME1 ~Racial Power: Burning Hands~
-SAY UNIDENTIFIED_DESC ~Burning Hands
+SAY NAME1 ~种族能力：燃手术~
+SAY UNIDENTIFIED_DESC ~燃手术
 
-Tieflings with infernal heritage have the innate power to cast the Burning Hands spell.
+带有地狱血统的提夫林天生可施放燃手术。
 
-When Sirene casts this spell, a jet of searing flame shoots from her fingertips. Sirene's hands must be held so as to send forth a fan-like sheet of flames: her thumbs must touch each other and the fingers must be spread. The burning hands send out flame jets of 5 ft. length in a horizontal arc of about 120 degrees in front of Sirene. Any creature in the area of the flames suffers 1d3 points of damage, +2 points for each level of the caster, to a maximum of 1d3+20 points of fire damage. Those successfully saving vs. Spell receive half damage.~
+塞琳施放此法术时，一道灼热火舌自她指尖喷出。她须张开双手，使火焰呈扇形铺开：拇指相触，五指张开。燃手术在塞琳面前约 120 度的水平弧线内喷出 5 尺长的火舌。火焰范围内的所有生物受到 1d3 点伤害，每级施法者再加 2 点，火焰伤害上限为 1d3+20。豁免对抗法术成功则伤害减半。~
 
 COPY ~%MOD_FOLDER%/spells/C0sblur.spl~ ~override~
-SAY NAME1 ~Racial Power: Blur~
-SAY UNIDENTIFIED_DESC ~Blur
+SAY NAME1 ~种族能力：朦胧术~
+SAY UNIDENTIFIED_DESC ~朦胧术
 
-Tieflings with infernal heritage have the innate power to cast the Blur spell.
+带有地狱血统的提夫林天生可施放朦胧术。
 
-When a Blur spell is cast, Sirene causes the outline of her form to become blurred, shifting and wavering. This distortion causes all missile and melee attacks against her to be made with a -3 penalty. Sirene also gains a +1 bonus to all of her Saving Throws. The effects of this ability last for 4 rounds + 2 rounds per level.~
+施放朦胧术后，塞琳的身形轮廓变得模糊、晃动不定。这种扭曲使所有针对她的远程与近战攻击承受 -3 减值。塞琳所有豁免检定 +1。此能力持续 4 轮，每级再加 2 轮。~
 
 COPY ~%MOD_FOLDER%/spells/c0spr1.spl~ ~override~
-SAY NAME1 ~Favor of Ilmater~
-SAY UNIDENTIFIED_DESC ~Favor of Ilmater
-(Necromancy)
+SAY NAME1 ~伊尔梅特之眷佑~
+SAY UNIDENTIFIED_DESC ~伊尔梅特之眷佑
+（死灵系）
 
-Level: 3
-Sphere: Necromantic, Protection
-Range: 10 ft.
-Casting Time: 6
-Area of Effect: One creature
-Duration: Instant
-Saving Throw: None
+等级：3
+学派：死灵、防护
+射程：10 尺
+施法时间：6
+作用范围：一只生物
+持续时间：瞬间
+豁免检定：无
 
-This spell allows the priest to take on the injuries of another creature, healing 3 hit points per level of the caster and dealing the same amount to <PRO_HIMHER>self as non-lethal damage.~
+此法术使祭司承受另一只生物的伤痛，每级施法者治愈 3 点生命值，并将同等数值作为非致命伤害施加给<PRO_HIMHER>自己。~
 
 COPY ~%MOD_FOLDER%/spells/c0spr2.spl~ ~override~
-SAY NAME1 ~Endurance of Ilmater~
-SAY UNIDENTIFIED_DESC ~Endurance of Ilmater
-(Necromancy)
+SAY NAME1 ~伊尔梅特之坚韧~
+SAY UNIDENTIFIED_DESC ~伊尔梅特之坚韧
+（死灵系）
 
-Level: 4
-Sphere: Necromantic, Protection
-Range: Touch
-Casting Time: 7
-Area of Effect: One creature
-Duration: 1 round/level
-Saving Throw: None
+等级：4
+学派：死灵、防护
+射程：接触
+施法时间：7
+作用范围：一只生物
+持续时间：每级 1 回合
+豁免检定：无
 
-This spell doubles the hit points of the spell recipient for the spell duration. Any damage suffered is taken first from these phantom hit points until they are all exhausted; damage is only then taken from the real hit points of the affected being. The spell also protects the vitality of the spell recipient so that all system shock rolls and checks of any sort against contracting diseases automatically succeed, and all other saving throws receive a +2 bonus. In addition, no being protected by endurance of Ilmater can be knocked over, trampled, ridden down, or overthrown; all protected beings can stand firm against all charges.
+法术持续期间，受术者生命值翻倍。所受伤害先从这些虚设生命值中扣除，直至耗尽；之后才从受术者真实生命值中扣除。此法术还保护受术者的活力，一切体质冲击检定与各类染病检定自动成功，其余所有豁免检定 +2。此外，受伊尔梅特之坚韧保护的生物不会被击倒、践踏、冲撞或掀翻；所有受保护者都能屹立不退，抵御一切冲锋。
 
-Endurance of Ilmater may only affect the same target once every 8 hours - repeated castings will have no effect until that amount of time has passed.~
+伊尔梅特之坚韧对同一目标 8 小时内只能生效一次——在此时间之前反复施放无效。~
 
 COPY ~%MOD_FOLDER%/spells/c0spr2a.spl~ ~override~
-SAY NAME1 ~Endurance of Ilmater~
+SAY NAME1 ~伊尔梅特之坚韧~
 
 COPY ~%MOD_FOLDER%/spells/c0spr3.spl~ ~override~
-SAY NAME1 ~Blast of Pain~
-SAY UNIDENTIFIED_DESC ~Blast of Pain
-(Evocation)
+SAY NAME1 ~苦痛爆裂~
+SAY UNIDENTIFIED_DESC ~苦痛爆裂
+（塑能系）
 
-Level: 5
-Sphere: Combat, Necromantic
-Range: 10 ft.
-Casting Time: 5
-Area of Effect: One creature
-Duration: 4 rounds
-Saving Throw: Special
+等级：5
+学派：战斗、死灵
+射程：10 尺
+施法时间：5
+作用范围：一只生物
+持续时间：4 轮
+豁免检定：特殊
 
-This spell creates a beam of smoky gray radiance that streaks unerringly from the priest to a single chosen target who must be within view and range of the caster as casting begins. The target creature must make a saving throw vs. spell at a -5 penalty. If the saving throw is successful, the target is overwhelmed by pain for one round (slowing its movement by half, adding 3 to all casting times, and forcing it to make all attack rolls at a -2 penalty) and suffers 1d4+1 points of non-lethal damage to its nervous system; it is then free of the spell.
+此法术射出一道烟灰般的光芒，自祭司处无误地直奔施法开始时处于视野与射程内的单个选定目标。目标须进行对抗法术的豁免检定，减值 -5。豁免成功：目标被苦痛淹没 1 轮（移动速度减半，所有施法时间 +3，所有攻击掷骰 -2 减值），神经系统受到 1d4+1 点非致命伤害，随后摆脱法术。
 
-If the saving throw is failed, the target creature suffers 4d6 points of non-lethal damage and is stunned and writhing helplessly in pain for the remainder of the current round and the following round. It can make no deliberate attacks, and its awareness of its surroundings is blotted out.
+豁免失败：目标受到 4d6 点非致命伤害，在当前剩余轮次与下一轮中陷入昏迷、在苦痛中无助翻滚。无法发动有意识的攻击，对周遭的感知一片模糊。
 
-At the beginning of the second round after it was affected, the target being is allowed another saving throw vs. spell, this time at a -4 penalty. If the target succeeds at the saving throw, it suffers 1d4+1 points of non-lethal damage but is then free of the spell. If it fails, 3d6 points of non-lethal damage are inflicted, and the victim continues to be stunned and to writhe helplessly.
+受影响后第 2 轮开始时，目标可再进行一次对抗法术豁免，减值 -4。豁免成功：受到 1d4+1 点非致命伤害后摆脱法术。豁免失败：受到 3d6 点非致命伤害，受害者继续昏迷、无助翻滚。
 
-At the beginning of the third round after it was affected, the target is allowed a third saving throw vs. spell at a -3 penalty. If the saving throw is successful, the victim suffers 1d4+1 points of non-lethal damage and is then freed from the spell. If the saving throw is failed, 2d6 points of non-lethal damage are inflicted, and the victim continues to be stunned and to writhe helplessly until the end of the round, when the spell ends.~
+受影响后第 3 轮开始时，目标进行第三次对抗法术豁免，减值 -3。豁免成功：受到 1d4+1 点非致命伤害后脱离法术。豁免失败：受到 2d6 点非致命伤害，继续昏迷、无助翻滚直至该轮结束，法术终止。~
 
 COPY ~%MOD_FOLDER%/spells/c0spr3a.spl~ ~override~
-SAY NAME1 ~Blast of Pain~
+SAY NAME1 ~苦痛爆裂~
 
 COPY ~%MOD_FOLDER%/spells/c0spr3b.spl~ ~override~
-SAY NAME1 ~Blast of Pain~
+SAY NAME1 ~苦痛爆裂~
 
 COPY ~%MOD_FOLDER%/spells/c0spr3c.spl~ ~override~
-SAY NAME1 ~Blast of Pain~
+SAY NAME1 ~苦痛爆裂~
 
 COPY ~%MOD_FOLDER%/spells/c0poison.spl~ ~override/c0poison.spl~
-SAY NAME1 ~Talona's Curse~
+SAY NAME1 ~塔洛娜之诅咒~
 
 COPY ~%MOD_FOLDER%/spells/c0title.spl~ ~override/c0title.spl~
-SAY 0xCE ~Fallen Martyr~
+SAY 0xCE ~堕落殉道者~
 
 EXTEND_TOP ~AR0334.bcs~ ~%MOD_FOLDER%/Scripts/AR0334.baf~
 EXTEND_TOP ~AR0809.bcs~ ~%MOD_FOLDER%/Scripts/AR0809.baf~
@@ -138,48 +138,48 @@ EXTEND_TOP ~AR6200.bcs~ ~%MOD_FOLDER%/Scripts/AR6200.baf~
 // Sirene SoA
 
 COPY ~%MOD_FOLDER%/creatures/C0Sire2.cre~ ~override/C0Sire2.cre~
-  SAY NAME1 ~Sirene~
-  SAY NAME2 ~Sirene~
-  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive having by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.~
-  SAY HAPPY ~You inspire me with your example.~ [C0SR001]
-  SAY UNHAPPY_ANNOYED ~I cannot approve of such actions.~ [C0SR002]
-  SAY UNHAPPY_SERIOUS ~There is little mercy left for one such as you.~ [C0SR003]
-  SAY UNHAPPY_BREAKING_POINT ~I’ll shed no more blood on this evil cause.~ [C0SR004]
-  SAY LEADER ~I am not worthy of this honor, but so be it. I will not fail you.~ [C0SR005]
-  SAY TIRED ~I fear for my ability to act while weary. May we rest?~ [C0SR006]
-  SAY BORED ~There must surely be a more appropriate use of our time.~ [C0SR007]
-  SAY BATTLE_CRY1 ~I will not falter!~ [C0SR008]
-  SAY BATTLE_CRY2 ~The time for mercy has passed!~ [C0SR009]
-  SAY BATTLE_CRY3 ~Forgive me for what I must do!~ [C0SR010]
-  SAY BATTLE_CRY4 ~In Ilmater's name!~ [C0SR011a]
-  SAY BATTLE_CRY5 ~For the Crying God!~ [C0SR012a]
-  SAY DAMAGE ~Ngh!~ [C0SR013]
-  SAY DYING ~Ilmater, take me...~ [C0SR014a]
-  SAY HURT ~You shall harm no one else while I still stand!~ [C0SR015]
-  SAY AREA_FOREST ~The tranquility of the forest always puts me at ease.~ [C0SR016]
-  SAY AREA_CITY ~It is easier to walk the streets among friends.~ [C0SR017]
-  SAY AREA_DUNGEON ~I will be on my guard so long as we remain in this dangerous place.~ [C0SR018]
-  SAY AREA_DAY ~The sun is warm. Few feelings grant me greater comfort.~ [C0SR019]
-  SAY AREA_NIGHT ~The night is foreboding, yet... I find myself at ease, knowing it hides what I am.~ [C0SR020]
-  SAY SELECT_COMMON1 ~I am here.~ [C0SR021]
-  SAY SELECT_COMMON2 ~How can I help?~ [C0SR022]
-  SAY SELECT_COMMON3 ~Ready and willing.~ [C0SR023]
-  SAY SELECT_COMMON4 ~What is it?~ [C0SR024]
-  SAY SELECT_COMMON5 ~I am at your side.~ [C0SR025]
-  SAY SELECT_COMMON6 ~Whatever you require.~ [C0SR026]
-  SAY SELECT_ACTION1 ~Of course.~ [C0SR027]
-  SAY SELECT_ACTION2 ~Very well.~ [C0SR028]
-  SAY SELECT_ACTION3 ~Aye, I will.~ [C0SR029]
-  SAY SELECT_ACTION4 ~That is all?~ [C0SR030]
-  SAY SELECT_ACTION5 ~Consider it done.~ [C0SR031]
-  SAY SELECT_ACTION6 ~Understood.~ [C0SR032]
-  SAY SELECT_RARE1 ~I act in Ilmater's name.~ [C0SR033a]
-  SAY SELECT_RARE2 ~So long as I bear this life, it shall be yours to forfeit.~ [C0SR034]
-  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SR035]
-  SAY CRITICAL_MISS ~Ugh!~ [C0SR036]
-  SAY TARGET_IMMUNE ~This is futile!~ [C0SR037]
-  SAY INVENTORY_FULL ~I fear I am overloaded.~ [C0SR038]
-  SAY SPELL_DISRUPTED ~I was careless.~ [C0SR039]
+  SAY NAME1 ~塞琳~
+  SAY NAME2 ~塞琳~
+  SAY BIO ~被问及过往时，塞琳会移开目光，干脆地说没什么可说的。她尚在襁褓时便成了孤儿、被弃置等死，多半是因为身上显露的邪魔血统。能活下来全凭运气：一位云游的伊尔梅特祭司发现了她，把她带回教中，将她养大，培养成一名苦难圣战士——侍奉哭泣之神的圣骑士教团成员。她憎恶自身矛盾的本性，却也说不清自己究竟偏向哪一边。~
+  SAY HAPPY ~你的榜样激励着我。~ [C0SR001]
+  SAY UNHAPPY_ANNOYED ~我不能赞同这种行径。~ [C0SR002]
+  SAY UNHAPPY_SERIOUS ~对你这样的人，已没多少慈悲可施。~ [C0SR003]
+  SAY UNHAPPY_BREAKING_POINT ~我不会再为这邪恶的勾当流一滴血。~ [C0SR004]
+  SAY LEADER ~我不配这份殊荣，但既已如此，我不会辜负你。~ [C0SR005]
+  SAY TIRED ~我怕疲惫之下无力行动。我们可否休息？~ [C0SR006]
+  SAY BORED ~我们的时间该有更合适的用处。~ [C0SR007]
+  SAY BATTLE_CRY1 ~我绝不会退缩！~ [C0SR008]
+  SAY BATTLE_CRY2 ~慈悲的时刻已过！~ [C0SR009]
+  SAY BATTLE_CRY3 ~请原谅我不得不做的事！~ [C0SR010]
+  SAY BATTLE_CRY4 ~以伊尔梅特之名！~ [C0SR011a]
+  SAY BATTLE_CRY5 ~为了哭泣之神！~ [C0SR012a]
+  SAY DAMAGE ~呃！~ [C0SR013]
+  SAY DYING ~伊尔梅特，接走我吧……~ [C0SR014a]
+  SAY HURT ~只要我还站着，你就伤不到任何人！~ [C0SR015]
+  SAY AREA_FOREST ~森林的宁静总让我心安。~ [C0SR016]
+  SAY AREA_CITY ~与朋友同走街巷，反倒轻松些。~ [C0SR017]
+  SAY AREA_DUNGEON ~只要还在这险地，我都会保持警惕。~ [C0SR018]
+  SAY AREA_DAY ~阳光温暖。少有什么感觉比这更让我安心。~ [C0SR019]
+  SAY AREA_NIGHT ~夜色可怖，可……知道它遮掩了我的真面目，我反倒安心。~ [C0SR020]
+  SAY SELECT_COMMON1 ~我在。~ [C0SR021]
+  SAY SELECT_COMMON2 ~需要我做什么？~ [C0SR022]
+  SAY SELECT_COMMON3 ~随时待命。~ [C0SR023]
+  SAY SELECT_COMMON4 ~怎么了？~ [C0SR024]
+  SAY SELECT_COMMON5 ~我在你身边。~ [C0SR025]
+  SAY SELECT_COMMON6 ~但凭差遣。~ [C0SR026]
+  SAY SELECT_ACTION1 ~当然。~ [C0SR027]
+  SAY SELECT_ACTION2 ~好的。~ [C0SR028]
+  SAY SELECT_ACTION3 ~好，我这就去。~ [C0SR029]
+  SAY SELECT_ACTION4 ~就这些？~ [C0SR030]
+  SAY SELECT_ACTION5 ~交给我。~ [C0SR031]
+  SAY SELECT_ACTION6 ~明白。~ [C0SR032]
+  SAY SELECT_RARE1 ~我以伊尔梅特之名行事。~ [C0SR033a]
+  SAY SELECT_RARE2 ~只要我还活着，这条命便由你支配。~ [C0SR034]
+  SAY CRITICAL_HIT ~你的审判就在眼前！~[C0SR035]
+  SAY CRITICAL_MISS ~呃！~ [C0SR036]
+  SAY TARGET_IMMUNE ~这是徒劳！~ [C0SR037]
+  SAY INVENTORY_FULL ~只怕我已负担过重。~ [C0SR038]
+  SAY SPELL_DISRUPTED ~是我大意了。~ [C0SR039]
   SAY SET_A_TRAP ~~ []
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []
@@ -193,48 +193,48 @@ COPY ~%MOD_FOLDER%/creatures/C0Sire2.cre~ ~override/C0Sire2.cre~
 // Sirene ToB
   
 COPY ~%MOD_FOLDER%/creatures/C0Sire25.cre~ ~override/C0Sire25.cre~
-  SAY NAME1 ~Sirene~
-  SAY NAME2 ~Sirene~
-  SAY BIO ~When asked about her past, SIRENE averts her gaze and flatly states that there is little to say. She was orphaned and left to die as a babe, likely abandoned due to her apparent fiendish heritage. Only by luck did she survive having by being discovered by a travelling priest of Ilmater, who brought her to others of his faith and raised her as a Holy Warrior of Suffering, the order of paladins dedicated to the Crying God. She resents her own contradictory nature, though she is unsure of which side.~
-  SAY HAPPY ~You inspire me with your example.~ [C0SR001]
-  SAY UNHAPPY_ANNOYED ~I cannot approve of such actions.~ [C0SR002]
-  SAY UNHAPPY_SERIOUS ~There is little mercy left for one such as you.~ [C0SR003]
-  SAY UNHAPPY_BREAKING_POINT ~I’ll shed no more blood on this evil cause.~ [C0SR004]
-  SAY LEADER ~I am not worthy of this honor, but so be it. I will not fail you.~ [C0SR005]
-  SAY TIRED ~I fear for my ability to act while weary. May we rest?~ [C0SR006]
-  SAY BORED ~There must surely be a more appropriate use of our time.~ [C0SR007]
-  SAY BATTLE_CRY1 ~I will not falter!~ [C0SR008]
-  SAY BATTLE_CRY2 ~The time for mercy has passed!~ [C0SR009]
-  SAY BATTLE_CRY3 ~Forgive me for what I must do!~ [C0SR010]
-  SAY BATTLE_CRY4 ~In Ilmater's name!~ [C0SR011a]
-  SAY BATTLE_CRY5 ~For the Crying God!~ [C0SR012a]
-  SAY DAMAGE ~Ngh!~ [C0SR013]
-  SAY DYING ~Ilmater, take me...~ [C0SR014a]
-  SAY HURT ~You shall harm no one else while I still stand!~ [C0SR015]
-  SAY AREA_FOREST ~The tranquility of the forest always puts me at ease.~ [C0SR016]
-  SAY AREA_CITY ~It is easier to walk the streets among friends.~ [C0SR017]
-  SAY AREA_DUNGEON ~I will be on my guard so long as we remain in this dangerous place.~ [C0SR018]
-  SAY AREA_DAY ~The sun is warm. Few feelings grant me greater comfort.~ [C0SR019]
-  SAY AREA_NIGHT ~The night is foreboding, yet... I find myself at ease, knowing it hides what I am.~ [C0SR020]
-  SAY SELECT_COMMON1 ~I am here.~ [C0SR021]
-  SAY SELECT_COMMON2 ~How can I help?~ [C0SR022]
-  SAY SELECT_COMMON3 ~Ready and willing.~ [C0SR023]
-  SAY SELECT_COMMON4 ~What is it?~ [C0SR024]
-  SAY SELECT_COMMON5 ~I am at your side.~ [C0SR025]
-  SAY SELECT_COMMON6 ~Whatever you require.~ [C0SR026]
-  SAY SELECT_ACTION1 ~Of course.~ [C0SR027]
-  SAY SELECT_ACTION2 ~Very well.~ [C0SR028]
-  SAY SELECT_ACTION3 ~Aye, I will.~ [C0SR029]
-  SAY SELECT_ACTION4 ~That is all?~ [C0SR030]
-  SAY SELECT_ACTION5 ~Consider it done.~ [C0SR031]
-  SAY SELECT_ACTION6 ~Understood.~ [C0SR032]
-  SAY SELECT_RARE1 ~I act in Ilmater's name.~ [C0SR033a]
-  SAY SELECT_RARE2 ~So long as I bear this life, it shall be yours to forfeit.~ [C0SR034]
-  SAY CRITICAL_HIT ~Your judgment is at hand!~[C0SR035]
-  SAY CRITICAL_MISS ~Ugh!~ [C0SR036]
-  SAY TARGET_IMMUNE ~This is futile!~ [C0SR037]
-  SAY INVENTORY_FULL ~I fear I am overloaded.~ [C0SR038]
-  SAY SPELL_DISRUPTED ~I was careless.~ [C0SR039]
+  SAY NAME1 ~塞琳~
+  SAY NAME2 ~塞琳~
+  SAY BIO ~被问及过往时，塞琳会移开目光，干脆地说没什么可说的。她尚在襁褓时便成了孤儿、被弃置等死，多半是因为身上显露的邪魔血统。能活下来全凭运气：一位云游的伊尔梅特祭司发现了她，把她带回教中，将她养大，培养成一名苦难圣战士——侍奉哭泣之神的圣骑士教团成员。她憎恶自身矛盾的本性，却也说不清自己究竟偏向哪一边。~
+  SAY HAPPY ~你的榜样激励着我。~ [C0SR001]
+  SAY UNHAPPY_ANNOYED ~我不能赞同这种行径。~ [C0SR002]
+  SAY UNHAPPY_SERIOUS ~对你这样的人，已没多少慈悲可施。~ [C0SR003]
+  SAY UNHAPPY_BREAKING_POINT ~我不会再为这邪恶的勾当流一滴血。~ [C0SR004]
+  SAY LEADER ~我不配这份殊荣，但既已如此，我不会辜负你。~ [C0SR005]
+  SAY TIRED ~我怕疲惫之下无力行动。我们可否休息？~ [C0SR006]
+  SAY BORED ~我们的时间该有更合适的用处。~ [C0SR007]
+  SAY BATTLE_CRY1 ~我绝不会退缩！~ [C0SR008]
+  SAY BATTLE_CRY2 ~慈悲的时刻已过！~ [C0SR009]
+  SAY BATTLE_CRY3 ~请原谅我不得不做的事！~ [C0SR010]
+  SAY BATTLE_CRY4 ~以伊尔梅特之名！~ [C0SR011a]
+  SAY BATTLE_CRY5 ~为了哭泣之神！~ [C0SR012a]
+  SAY DAMAGE ~呃！~ [C0SR013]
+  SAY DYING ~伊尔梅特，接走我吧……~ [C0SR014a]
+  SAY HURT ~只要我还站着，你就伤不到任何人！~ [C0SR015]
+  SAY AREA_FOREST ~森林的宁静总让我心安。~ [C0SR016]
+  SAY AREA_CITY ~与朋友同走街巷，反倒轻松些。~ [C0SR017]
+  SAY AREA_DUNGEON ~只要还在这险地，我都会保持警惕。~ [C0SR018]
+  SAY AREA_DAY ~阳光温暖。少有什么感觉比这更让我安心。~ [C0SR019]
+  SAY AREA_NIGHT ~夜色可怖，可……知道它遮掩了我的真面目，我反倒安心。~ [C0SR020]
+  SAY SELECT_COMMON1 ~我在。~ [C0SR021]
+  SAY SELECT_COMMON2 ~需要我做什么？~ [C0SR022]
+  SAY SELECT_COMMON3 ~随时待命。~ [C0SR023]
+  SAY SELECT_COMMON4 ~怎么了？~ [C0SR024]
+  SAY SELECT_COMMON5 ~我在你身边。~ [C0SR025]
+  SAY SELECT_COMMON6 ~但凭差遣。~ [C0SR026]
+  SAY SELECT_ACTION1 ~当然。~ [C0SR027]
+  SAY SELECT_ACTION2 ~好的。~ [C0SR028]
+  SAY SELECT_ACTION3 ~好，我这就去。~ [C0SR029]
+  SAY SELECT_ACTION4 ~就这些？~ [C0SR030]
+  SAY SELECT_ACTION5 ~交给我。~ [C0SR031]
+  SAY SELECT_ACTION6 ~明白。~ [C0SR032]
+  SAY SELECT_RARE1 ~我以伊尔梅特之名行事。~ [C0SR033a]
+  SAY SELECT_RARE2 ~只要我还活着，这条命便由你支配。~ [C0SR034]
+  SAY CRITICAL_HIT ~你的审判就在眼前！~[C0SR035]
+  SAY CRITICAL_MISS ~呃！~ [C0SR036]
+  SAY TARGET_IMMUNE ~这是徒劳！~ [C0SR037]
+  SAY INVENTORY_FULL ~只怕我已负担过重。~ [C0SR038]
+  SAY SPELL_DISRUPTED ~是我大意了。~ [C0SR039]
   SAY SET_A_TRAP ~~ []
   SAY HIDDEN_IN_SHADOWS ~~ []
   SAY PICKED_POCKET ~~ []
@@ -341,97 +341,97 @@ UNLESS ~C0Sirene~
 IF ~25FILE~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir01.2da~
-REPLACE ~99999~ ~The fall of the Throne of Bhaal closed a long chapter in the lives of Sirene and her beloved <CHARNAME>, but was also the beginning of a new life for the couple. Sirene convinced her lover to have their wedding soon after returning to Amn, and though the ceremony was quiet, it was exactly as she had wished it. The union of <CHARNAME> and Sirene would only be the first of many events which would shape their future, however, as not long afterwards Sirene gave birth to <CHARNAME>'s child - a daughter, with the same fell blood that runs through her own veins. Despite her fears of burdening her offspring with the prejudice that her infernal blood would bring, Sirene resolved to provide this child with the familial love that she never had a chance to experience. Accounts differ as to what became of Sirene and <CHARNAME> after their marriage - some claim they continued to venture across Faerun after their daughter's birth, while others suggest they retired from the adventuring life altogether to begin a life of peace. Whatever the truth may be, there is no doubt their future would be long and fruitful.~
+REPLACE ~99999~ ~巴尔王座的陷落为塞琳与她挚爱 <CHARNAME> 的人生写下漫长一章的终篇，却也是两人新生的开端。回到安姆后不久，塞琳便说服爱侣尽快完婚；婚礼虽简朴，却正合她的心意。<CHARNAME> 与塞琳的结合只是塑造二人未来的诸多事件之首——不久之后，塞琳便怀上了 <CHARNAME> 的孩子，一个流淌着与她同样堕落血脉的女儿。尽管害怕自己的地狱血统会给孩子招来偏见、成为负担，塞琳仍决心给这个孩子她从未享受到的家庭之爱。婚后塞琳与 <CHARNAME> 去向如何，说法不一：有人说女儿出生后二人仍继续在费伦各地游历；也有人说他们彻底退隐冒险生涯，过上了安宁日子。无论真相如何，他们的未来必定漫长而充实。~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir02.2da~
-REPLACE ~99999~ ~The fall of the Throne of Bhaal closed a long chapter in the lives of Sirene and her beloved <CHARNAME>, but was also the beginning of a new life for the couple. Sirene convinced her lover to have their wedding soon after returning to Amn, and though the ceremony was quiet, it was exactly as she had wished it. The union of <CHARNAME> and Sirene would only be the first of many events which would shape their future, however, as the couple would lead a chain of exciting adventures not long after, venturing the realms the way they desired to, without the burdens of either of their bloodlines. The couple would grow weary of the demanding nature of the adventuring life, however, and would eventually retire into a life of peace. At Sirene's suggestion, the couple built an orphanage together, in which Sirene would care for and raise her wards just as she was raised by the priests of Ilmater. Though Sirene sometime missed the excitement of her previous life, she much preferred the opportunity to live a long life with her beloved <CHARNAME>, as well as the chance to gain the love of her fostered children, who never judged her for her blood as the world did.~
+REPLACE ~99999~ ~巴尔王座的陷落为塞琳与她挚爱 <CHARNAME> 的人生写下漫长一章的终篇，却也是两人新生的开端。塞琳说服爱侣在回到安姆后不久完婚；婚礼虽简朴，却正合她的心意。<CHARNAME> 与塞琳的结合只是塑造二人未来的诸多事件之首：不久之后，两人便踏上一连串精彩冒险，按自己的意愿闯荡诸国度，摆脱了各自血脉的包袱。然而，冒险生涯的奔波令二人渐生倦意，最终退隐过上安宁日子。在塞琳的提议下，两人一同建起一座孤儿院；塞琳在那里照料、抚养她的养子养女，一如当年伊尔梅特的祭司抚养她长大。虽说塞琳有时也会怀念昔日生活的激荡，但她更珍惜能与挚爱 <CHARNAME> 共度漫长一生的机会，也珍视这些养子养女的爱——他们从不像世人那样因她的血脉评判她。~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir01a.2da~
-REPLACE ~99999~ ~The fall of the Throne of Bhaal closed a long chapter in the lives of Sirene and her beloved <CHARNAME>, but was also the beginning of a new life for the couple. Though <CHARNAME> did not care for the formality of marriage, the couple were bonded for life regardless, as they devoted every moment of their life to each others' happiness. Their close relationship came to its natural conclusion, as Sirene eventually gave birth to <CHARNAME>'s child - a daughter, with the same fell blood that runs through her own veins. Despite her fears of burdening her offspring with the prejudice that her infernal blood would bring, Sirene resolved to provide this child with the familial love that she never had a chance to experience. Accounts differ as to what became of Sirene and <CHARNAME> after their marriage - some claim they continued to venture across Faerun after their daughter's birth, while others suggest they retired from the adventuring life altogether to begin a life of peace. Whatever the truth may be, there is no doubt their future would be long and fruitful.~
+REPLACE ~99999~ ~巴尔王座的陷落为塞琳与她挚爱 <CHARNAME> 的人生写下漫长一章的终篇，却也是两人新生的开端。虽说 <CHARNAME> 并不在意婚姻的形式，两人仍以一生相守，把每一刻都献给彼此的幸福。这段亲密关系自然走到了结果：塞琳最终怀上 <CHARNAME> 的孩子，一个流淌着与她同样堕落血脉的女儿。尽管害怕自己的地狱血统会给孩子招来偏见、成为负担，塞琳仍决心给这个孩子她从未享受到的家庭之爱。婚后塞琳与 <CHARNAME> 去向如何，说法不一：有人说女儿出生后二人仍继续在费伦各地游历；也有人说他们彻底退隐冒险生涯，过上了安宁日子。无论真相如何，他们的未来必定漫长而充实。~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir02a.2da~
-REPLACE ~99999~ ~The fall of the Throne of Bhaal closed a long chapter in the lives of Sirene and her beloved <CHARNAME>, but was also the beginning of a new life for the couple. hough <CHARNAME> did not care for the formality of marriage, the couple were bonded for life regardless, as they devoted every moment of their life to each others' happiness. Their tale had not yet ended however, as the couple would lead a chain of exciting adventures after ending their current journey, venturing the realms the way they desired to, without the burdens of either of their bloodlines. The couple would grow weary of the demanding nature of the adventuring life, however, and would eventually retire into a life of peace. At Sirene's suggestion, the couple built an orphanage together, in which Sirene would care for and raise her wards just as she was raised by the priests of Ilmater. Though Sirene sometime missed the excitement of her previous life, she much preferred the opportunity to live a long life with her beloved <CHARNAME>, as well as the chance to gain the love of her fostered children, who never judged her for her blood as the world did.~
+REPLACE ~99999~ ~巴尔王座的陷落为塞琳与她挚爱 <CHARNAME> 的人生写下漫长一章的终篇，却也是两人新生的开端。虽说 <CHARNAME> 并不在意婚姻的形式，两人仍以一生相守，把每一刻都献给彼此的幸福。然而他们的故事尚未终结：结束当前旅程后，两人又踏上一连串精彩冒险，按自己的意愿闯荡诸国度，摆脱了各自血脉的包袱。冒险生涯的奔波令二人渐生倦意，最终退隐过上安宁日子。在塞琳的提议下，两人一同建起一座孤儿院；塞琳在那里照料、抚养她的养子养女，一如当年伊尔梅特的祭司抚养她长大。虽说塞琳有时也会怀念昔日生活的激荡，但她更珍惜能与挚爱 <CHARNAME> 共度漫长一生的机会，也珍视这些养子养女的爱——他们从不像世人那样因她的血脉评判她。~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir03.2da~
-REPLACE ~99999~ ~Though Sirene felt a sense of loss at <CHARNAME>'s ascendency to the Throne of Blood, knowing that it would be unlikely to ever see <PRO_HIMHER> again in her life, she returned to her duty as Ilmater's champion soon afterwards. She never fully recovered from her heartbreak, though she dedicated each life she healed and save to the names of both her deity and her beloved. Those who saw her face under her ever-present white cowl would often tell tales of the sadness in her eyes, until she became known not as a woman cursed with her blood, but a selfless woman with an untold great loss. Sirene continued to help others for her entire life, though she never seemed to form bonds as close as that which she shared with <CHARNAME>. She became weary of battle and bloodshed, putting down her weapon forever. She dedicated her life to building a sanctuary in the underground caverns of Waterdeep, for persecuted outcasts with no home that would accept them. It is assumed that she eventually passed away, though tales still tell of a lady in white wandering the bowels of the City of Splendors, vigilantly guarding her wards for the rest of eternity.~
+REPLACE ~99999~ ~眼见 <CHARNAME> 登上帝血王座，塞琳心中满是失落，她知道此生多半再难见到 <PRO_HIMHER>。但不久后她便重归伊尔梅特冠军的职责。心碎始终未能平复，可她把每一次治愈、每一条救下的性命都献给自己的神与挚爱之名。常有人见到她罩着从不离身的白色兜帽下的面容，便会传颂她眼中的哀伤；到后来，人们不再把她视作身负血脉诅咒的女子，而是一位承受着无人知晓的巨大失去、无私奉献的人。塞琳终生助人，却似乎再未能建立起与 <CHARNAME> 那般亲密的羁绊。她厌倦了征战与杀戮，永久放下了武器。她毕生致力于在深水城的地下洞窟中建起一处庇护所，收容那些无家可归、无处容身的受迫害弃民。人们推测她最终离世，但仍有传言说，一位白衣女子在异彩之城的地底徘徊，永恒守望她庇护的人。~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir04.2da~
-REPLACE ~99999~ ~Sirene walked away from the events of the Throne of Blood a changed person. Though she knew she would come to miss <CHARNAME> and <PRO_HISHER> companionship, she knew that with the power and confidence she had developed at her beloved friend's side, she would be able to continue her path as Ilmater's loyal knight with her own ability. Sirene learned from <CHARNAME>'s journey that one could become a hero despite the evil in their blood, and discovered in herself a powerful determination to do the same for herself. She returned to her duties as a paladin of the Crying God, bringing peace and healing to many who suffered from pain and persecution. Over time, her deeds became recognized among the people of the Realms, until the Order of the Holy Warrior of Suffering officially welcomed her to Castle Dasaajk as a respected fellow sister-at-arms. Within a few years, her skills at leadership, learned from <CHARNAME>'s example, led to her advancement to Knight-Commander of her order - a role she never wished for, but came to accept nonetheless. She would proceed to live an arduous, yet fulfilling long life, each day of which she would silently thank <CHARNAME> for everything <PRO_HESHE> had done for her.~
+REPLACE ~99999~ ~离开帝血王座的种种事件后，塞琳脱胎换骨。她知道自己会想念 <CHARNAME> 与 <PRO_HISHER> 的陪伴，但也明白，有了在挚友身旁练就的力量与自信，她足以凭自身能力继续走伊尔梅特忠骑士的道路。从 <CHARNAME> 的旅程中，塞琳领悟到：即便血脉中带着邪恶，人也能成为英雄；她在自己身上发掘出同样为之践行的坚定意志。她重归哭泣之神圣骑士的职责，为众多遭受苦痛与迫害的人带去安宁与治愈。久而久之，她的事迹在国度民众间传扬，苦难圣战士教团正式接纳她，成为达萨雅克堡备受敬重的同袍姊妹。几年后，她从 <CHARNAME> 身上学到的领导才能使她晋升为教团的骑士统领——这一角色她从未奢求，却最终坦然接受。此后她度过了辛劳却充实的漫长一生，每一天都在默默感念 <CHARNAME> 为她所做的一切，感念 <PRO_HESHE> 的恩情。~
 
 COPY ~%MOD_FOLDER%/Epilogue/C0Sirzz.2da~ ~override/C0Sir05.2da~
-REPLACE ~99999~ ~Sirene walked away from the events of the Throne of Blood a changed person. Though she knew she would come to miss <CHARNAME> and <PRO_HISHER> companionship, she knew that with the power and confidence she had developed at her beloved friend's side, she would be able to move on and forge her own destiny with her hands. Sirene learned from <CHARNAME>'s journey that one's heritage did not control them, and discovered in herself the determination to follow her own righteous path - whether the world chose to accept her or not. She knew that despite her forsaking of her duty to Ilmater, her heroic deeds would redeem her to the Holy Warriors of Suffering... but despite that, she decided not to rejoin her order, instead choosing to become a wanderer, seeking and eliminating evil wherever she could. Though few knew of her as the heroine she was, and her name would rarely grace the bardic tales of tavern halls, it mattered not to her - so long as she succeeded in her duty, it mattered not whether she was recognized for it. Sirene eventually became lost to history, and the few who knew her name believed she had fallen in battle - though tales of evil across the Realms falling by a nameless vigilante's hand persisted for many years.~
+REPLACE ~99999~ ~离开帝血王座的种种事件后，塞琳脱胎换骨。她知道自己会想念 <CHARNAME> 与 <PRO_HISHER> 的陪伴，但也明白，有了在挚友身旁练就的力量与自信，她能够继续前行，靠自己的双手开创命运。从 <CHARNAME> 的旅程中，塞琳领悟到：出身并不能主宰一个人；她在自己身上发掘出追随正义之路的决心——无论世人是否接纳她。她知道，尽管背弃了对伊尔梅特的职责，自己的英勇事迹终将让苦难圣战士们接纳她……但即便如此，她仍决定不再回到教团，而是选择成为一名流浪者，四处搜寻并铲除邪恶。鲜有人知晓她这位女英雄，她的名字也很少出现在酒馆吟游诗人的故事里，可这对她无关紧要——只要能尽责，是否被人认可并不重要。塞琳最终湮没于历史，少数知道她名字的人以为她战死沙场——可多年以来，国度各处仍流传着邪恶丧命于一名无名义警之手的故事。~
   
 COPY ~%MOD_FOLDER%/items/C0sw2h.BAM~ ~override~
 COPY ~%MOD_FOLDER%/Items/C0SW2H.itm~ ~override/C0SW2H.itm~
-SAY NAME1 ~Two-handed Sword~
-SAY NAME2 ~Brimstone +1~
-SAY DESC ~This two-handed sword is warm as though left under the sun and smells faintly of smoke. Not only is it a well balanced weapon, but each swing in battle releases a trail of burning ash which distracts foes and makes it more difficult to retaliate.
+SAY NAME1 ~双手剑~
+SAY NAME2 ~硫磺 +1~
+SAY DESC ~这把双手剑温热如晒过太阳，隐隐带着烟味。它不仅平衡性良好，每次挥击还会拖出一道燃烧的灰烬，分散敌人注意，使其更难反击。
 
-This blade was once the possession of the tiefling slaver Asador, a vicious spellsword who terrorized the Coast Way road. Brimstone was created through infernal magic and cold iron, and in the tiefling's hands it was a vicious weapon. Asador was eventually slain by Sirene, tiefling paladin of Ilmater, whose fiendish blood allowed her to wield the blade. It has accompanied her through many battles since. Anyone without fiendish ancestry who attempts to wield the blade will suffer burning pain.
+此剑曾属提夫林奴隶贩子阿萨多，一名在海岸大道上肆虐的恶毒法术剑士。硫磺以地狱魔法与寒铁铸成，在那提夫林手中是一柄凶刃。阿萨多最终被伊尔梅特的提夫林圣骑士塞琳斩杀，她的邪魔血统使她得以驾驭此剑。此后它随她身经百战。不具邪魔血统者若试图挥动此剑，将承受灼烧之痛。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
+战斗能力：
+– 每次命中使对手 THAC0 降低 1，持续 2 轮（豁免对抗喷吐可避免）
 
-Equipped abilities:
-– -1 Constitution
-– 20% resistance to fire damage
+装备能力：
+– 体质 -1
+– 火焰伤害抗性 20%
 
-THAC0: +1
-Damage: 1d10+1, 1 fire damage (slashing)
-Speed Factor: 8
-Proficiency Type: Two-handed Sword
-Type: Two-handed
-Requires:
- 14 Strength
+THAC0：+1
+伤害：1d10+1，1 点火焰伤害（挥砍）
+速度因素：8
+熟练度类型：双手剑
+类型：双手
+需要：
+  14 力量
 
-Weight: 10~
+重量：10~
 
 COPY ~%MOD_FOLDER%/Items/C0SW2H2.itm~ ~override/C0SW2H2.itm~
-SAY NAME1 ~Two-handed Sword~
-SAY NAME2 ~Brimstone +3~
-SAY DESC ~This two-handed sword is warm as though left under the sun and smells faintly of smoke. Not only is it a well balanced weapon, but each swing in battle releases a trail of burning ash which distracts foes and makes it more difficult to retaliate.
+SAY NAME1 ~双手剑~
+SAY NAME2 ~硫磺 +3~
+SAY DESC ~这把双手剑温热如晒过太阳，隐隐带着烟味。它不仅平衡性良好，每次挥击还会拖出一道燃烧的灰烬，分散敌人注意，使其更难反击。
 
-This blade was once the possession of the tiefling slaver Asador, a vicious spellsword who terrorized the Coast Way road. Brimstone was created through infernal magic and cold iron, and in the tiefling's hands it was a vicious weapon. Asador was eventually slain by Sirene, tiefling paladin of Ilmater, whose fiendish blood allowed her to wield the blade. It has accompanied her through many battles since. Anyone without fiendish ancestry who attempts to wield the blade will suffer burning pain.
+此剑曾属提夫林奴隶贩子阿萨多，一名在海岸大道上肆虐的恶毒法术剑士。硫磺以地狱魔法与寒铁铸成，在那提夫林手中是一柄凶刃。阿萨多最终被伊尔梅特的提夫林圣骑士塞琳斩杀，她的邪魔血统使她得以驾驭此剑。此后它随她身经百战。不具邪魔血统者若试图挥动此剑，将承受灼烧之痛。
 
-With a blood of a demon used to enhance the blade, its power is now significantly greater.
+此剑以恶魔之血淬炼，力量如今大为增强。
 
-STATISTICS:
+属性：
 
-Combat abilities:
-– Each hit decreases the opponent's THAC0 by 1 for 2 rounds (save vs. breath to avoid)
-– Deals an extra 1d10 points of fire damage and blinds the target for 1 round (no save) on a critical hit	
-– If the wielder's maximum hit points fall below 50%, they gain an additional attack per round
+战斗能力：
+– 每次命中使对手 THAC0 降低 1，持续 2 轮（豁免对抗喷吐可避免）
+– 重击时额外造成 1d10 点火焰伤害，并使目标失明 1 轮（无豁免）
+– 若持剑者最大生命值低于 50%，每轮额外获得一次攻击
 
-Equipped abilities:
-– -1 Constitution
-– 40% resistance to fire damage
+装备能力：
+– 体质 -1
+– 火焰伤害抗性 40%
 
-THAC0: +3
-Damage: 1d10+3, 1 fire damage (slashing)
-Speed Factor: 8
-Proficiency Type: Two-handed Sword
-Type: Two-handed
-Requires:
- 14 Strength
+THAC0：+3
+伤害：1d10+3，1 点火焰伤害（挥砍）
+速度因素：8
+熟练度类型：双手剑
+类型：双手
+需要：
+  14 力量
 
-Weight: 10~
+重量：10~
 
 COPY ~%MOD_FOLDER%/items/c02amul.BAM~ ~override~
 COPY ~%MOD_FOLDER%/Items/c02amul.itm~ ~override/c02amul.itm~
-SAY NAME1 ~Silver Necklace~
-SAY NAME2 ~Painbearer's Amulet~
-SAY DESC ~This coin-sized silver disc has the holy symbol of Ilmater crudely printed on top. While its craftsmanship leaves much to be desired, wearing it provides the bearer with an aura of protection, even more so if the wearer is faithful to the Crying God.
+SAY NAME1 ~银项链~
+SAY NAME2 ~承痛护符~
+SAY DESC ~这枚硬币大小的银盘上粗糙地铸着伊尔梅特的圣徽。工艺虽远称不上精良，佩戴者仍能获得一层护佑；若佩戴者忠于哭泣之神，护佑更甚。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-- Armor Class: +2 (Paladins), +1 (others)
-- Hit Points: +10 (Paladins)
-- Protection from Evil
+装备能力：
+- 护甲等级：+2（圣骑士），+1（其他）
+- 生命值：+10（圣骑士）
+- 防护邪恶
 
-Weight: 1~
+重量：1~
 
 COPY ~%MOD_FOLDER%/Items/c0sring.itm~ ~override/c0sring.itm~
   LPF ADD_ITEM_EQEFFECT
@@ -441,95 +441,95 @@ COPY ~%MOD_FOLDER%/Items/c0sring.itm~ ~override/c0sring.itm~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~Sirene~)
+	  special = RESOLVE_STR_REF (~塞琳~)
 	STR_VAR
 	  resource = C0Sirene
 END
-SAY NAME1 ~Ring~
-SAY NAME2 ~De'Bryll Signet Ring~
-SAY DESC ~The rubies in this iron ring possess an inner flame and keep it warm to the touch. Though little is known of its past, it belonged to Sirene's mother, Lena, the daughter of a noble family rumored to have devilish ancestry. When Lena fled from the De'Bryll manor and married the ranger Edric Thornhaven, this ring was used during their wedding ceremony. When Sirene's parents lost their lives in a fire started by fearful townsfolk, this ring was discovered by Edric's sister and carried by her until she passed it on to Sirene.
+SAY NAME1 ~戒指~
+SAY NAME2 ~德布赖尔纹章戒指~
+SAY DESC ~这枚铁戒指上的红宝石燃着内焰，摸上去温热。它的来历已鲜为人知，曾属于塞琳的母亲莱娜·德布赖尔——据传出身有恶魔血统的贵族家庭。莱娜逃离德布赖尔庄园、嫁给游侠埃德里克·索恩黑文时，这枚戒指曾用于二人的婚礼。塞琳的父母在惊恐的镇民纵起的大火中丧生后，戒指被埃德里克的妹妹发现，由她保管，最终传给塞琳。
 
-Aside from its sentimental value, the ring bears some protective enchantments to make it of practical use, although the same enchantments make it worthless to anyone not of Sirene's bloodline.
+除情感价值外，戒指附有一些防护附魔，颇具实用价值；但同样的附魔也使它对非塞琳血脉的人毫无用处。
 
-Charge abilities:
-- Fire Shield (Red) once per day
-- Protection from Evil 10' radius once per day
+充能能力：
+- 每日一次火焰护盾（红）
+- 每日一次 10 尺半径防护邪恶
 
-Equipped abilities:
-- Armor Class: +2, +4 vs. demons and devils
-- Saving Throws: +2, +4 vs. demons and devils~
+装备能力：
+- 护甲等级：+2，对抗恶魔与魔鬼时 +4
+- 豁免检定：+2，对抗恶魔与魔鬼时 +4~
 
 COPY ~%MOD_FOLDER%/Items/c0sring2.itm~ ~override/c0sring2.itm~
-SAY NAME1 ~Ring~
-SAY NAME2 ~Serpent Ring~
-SAY DESC ~This appears to be a baby serpent of some sort that has been frozen into the shape of a ring. Its eyes glitter and swirl like jewels and even appear to move occasionally.
+SAY NAME1 ~戒指~
+SAY NAME2 ~巨蛇戒指~
+SAY DESC ~它看起来像是某种小蛇被冻成了戒指的形状。蛇眼如宝石般闪烁游动，偶尔还像是会转动。
 
-Equipped abilities:
-- Immunity to poison
-- Magic Resistance: 20%
-- Save vs. Spells: +2~
+装备能力：
+- 免疫毒素
+- 魔法抗性：20%
+- 对抗法术豁免：+2~
 
 COPY ~%MOD_FOLDER%/items/c02plat.BAM~ ~override~
 COPY ~%MOD_FOLDER%/Items/c02plat.itm~ ~override/c02plat.itm~
-SAY NAME1 ~Full Plate Armor~
-SAY NAME2 ~Abyssal Plate Armor~
-SAY DESC ~This absurdly heavy suit of full plate is forged out of some extraplanar metal, making it difficult to wear and move in but extremely durable. Letters in the Abyssal language are carved on the different sections and occasionally give off a faint, hot glow.
+SAY NAME1 ~全身板甲~
+SAY NAME2 ~深渊板甲~
+SAY DESC ~这套重得离谱的全身板甲以某种异界金属铸成，穿戴与行动都颇为吃力，却极为坚固。甲胄各部分刻着深渊文字，偶尔泛起微弱灼热的光。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-- Dexterity: -1
-- 20% fire resistance
-- 20% cold resistance
+装备能力：
+- 敏捷：-1
+- 火焰抗性 20%
+- 冰冷抗性 20%
 
-Armor Class: -1 (-5 vs. slashing, -4 vs. piercing and missile)
-Requires:
- 18 Strength
+护甲等级：-1（对抗挥砍 -5，对抗穿刺与飞射 -4）
+需要：
+  18 力量
 
-Weight: 100~
+重量：100~
 
 COPY ~%MOD_FOLDER%/Items/c0sbook.itm~ ~override/c0sbook.itm~
-SAY NAME1 ~Book~
-SAY NAME2 ~A Tale of Romantic Tragedy~
-SAY DESC ~This novel tells the tragic story of an affair between a pair of star-crossed lovers, the female a socialite and the male a brave officer, and the many trials and tribulations faced by both are narrated in great detail. Though this is the first time you have heard of the story, the book has clearly condensed and simplified parts of a much greater work. Regardless, the book is an entertaining read and has no doubt captured the hearts (and judging from the stains on some of the pages, more than a few tears) of many youths in the past.~
+SAY NAME1 ~书~
+SAY NAME2 ~浪漫悲剧故事~
+SAY DESC ~这部小说讲述一对有缘无分的恋人之间的悲剧恋情：女方是社交名媛，男方是英勇军官；两人历经的种种磨难与考验都被详尽道出。虽说你头一回听说这个故事，但这本书显然是把一部宏大得多的作品压缩、简化过。尽管如此，读来仍饶有兴味；过去无疑俘获了许多年轻人的心——从某些书页上的渍迹判断，还赚了不少眼泪。~
 
 COPY ~%MOD_FOLDER%/Items/c0sbrac.itm~ ~override/c0sbrac.itm~
-SAY NAME1 ~Bracers~
-SAY NAME2 ~Bands of Sacrifice~
-SAY DESC ~This pair of cowhide bracers appears common enough at first glance save for the red dye used to decorate its straps, which imitate the red thread that bind the hands of priests of Ilmater. Though far from an artifact of great power, this item was enchanted by the high priest who once owned them. It is said that he never removed them until the end of his life, which came sooner than anticipated when he used up the last of his life force to save a mother dying from childbirth.
+SAY NAME1 ~护腕~
+SAY NAME2 ~献祭之腕带~
+SAY DESC ~这副牛皮护腕乍看平平无奇，唯有束带上所用的红染值得留意，那是模仿伊尔梅特祭司缚手的红线。这件物品远非什么强大的宝物，由曾拥有它的大祭司附魔而成。据说他直至生命终结都未曾摘下；他耗尽最后一丝生命力救下一位难产垂危的母亲，生命也就此提前走到尽头。
 
-Equipped abilities:
-- Hit Points: -10
-- Armor Class: +1
-- May only be removed with a Remove Curse spell.
+装备能力：
+- 生命值：-10
+- 护甲等级：+1
+- 只能以解除诅咒法术卸下。
 
-Charge abilities:
-- Cast Sacrifice (heals the target for 1d6+10 hit points and deals 1d6+10 non-lethal damage to the caster) three times per day.~
+充能能力：
+- 每日三次施放献祭（为目标治愈 1d6+10 点生命值，并对施法者造成 1d6+10 点非致命伤害）。~
 
 COPY ~%MOD_FOLDER%/Items/c0sleat.itm~ ~override/c0sleat.itm~
-SAY NAME1 ~Hide Armor~
-SAY NAME2 ~Hair Shirt of Ilmater~
-SAY DESC ~This thick shirt of coarse brown horsehair constrains its wearer but provides additional protection from damage. In addition, the wearer can invoke cure serious wounds once per day. 
+SAY NAME1 ~皮甲~
+SAY NAME2 ~伊尔梅特苦衣~
+SAY DESC ~这件厚实的粗棕马毛衣束缚穿戴者，却能提供额外的伤害防护。此外，穿戴者每日可施展一次中度治疗。
 
-Generally made and worn by disciples of Ilmater, the wearers of these garments usually only use the shirt's curative powers to ease the suffering of others.
+此类衣裳通常由伊尔梅特弟子制作并穿着，穿戴者多以衣袍的治愈之力缓解他人的苦难。
 
-STATISTICS:
+属性：
 
-Charge abilities:
-- Cure Serious Wounds once per day
+充能能力：
+- 每日一次中度治疗
 
-Equipped abilities:
-- Dexterity: -2
-- Open Locks: -20%
-- Find Traps: -20%
-- Pick Pockets: -20%
-- Move Silently: -30%
+装备能力：
+- 敏捷：-2
+- 开锁：-20%
+- 侦测陷阱：-20%
+- 扒窃：-20%
+- 移动静默：-30%
 
-Armor Class: 3 (5 vs. piercing and missile)
-Requires:
- 6 Strength
+护甲等级：3（对抗穿刺与飞射 5）
+需要：
+  6 力量
 
-Weight: 40~
+重量：40~
 
 COPY ~%MOD_FOLDER%/Items/c0sclck.itm~ ~override/c0sclck.itm~
   LPF ADD_ITEM_EQEFFECT
@@ -539,283 +539,284 @@ COPY ~%MOD_FOLDER%/Items/c0sclck.itm~ ~override/c0sclck.itm~
 	  timing = 2
 	  parameter2 = 11
 	  power = 1
-	  special = RESOLVE_STR_REF (~T'samon
-Sirene~)
+	  special = RESOLVE_STR_REF (~察蒙
+塞琳~)
 	STR_VAR
 	  resource = C0Sirene
 END
-SAY NAME1 ~Cloak~
-SAY NAME2 ~Mantle of the Damned~
-SAY DESC ~This tattered cloak has seen better days, frayed and torn at its edges with the brown tint of dried blood staining it. Despite this, it somehow manages to keep its wearer warm and bestows great protection. It is unknown how the tiefling T'samon acquired this cloak, but considering his power it is likely he crafted it himself. It resembles its former owner - damaged and hideous, yet powerful regardless.
+SAY NAME1 ~斗篷~
+SAY NAME2 ~诅咒者之斗篷~
+SAY DESC ~这件破旧斗篷早已风光不再，边缘磨损撕裂，还沾着干涸血迹的褐色印痕。尽管如此，它却莫名能为穿戴者保暖，并赐予强大的防护。没人知道提夫林察蒙是如何得到这件斗篷的，但以他的力量，多半是他亲手炼制。它恰似旧主本人——残破丑陋，却依旧强大。
 
-As this powerful cloak was created for T'samon's use only, it is doubtful anyone not of his bloodline could take advantage of its power.
+这件强大斗篷只为察蒙一人所造，非其血脉者恐怕难以驾驭它的力量。
 
-Equipped abilities:
-- Strength: +2
-- Dexterity: +2
-- Saving Throws: +2
-- Immunity to backstab
-- Regenerates 1 hit point per round~
+装备能力：
+- 力量：+2
+- 敏捷：+2
+- 豁免检定：+2
+- 免疫背刺
+- 每轮再生 1 点生命值~
 
 COPY ~%MOD_FOLDER%/items/c0snote.itm~ ~override/c0snote.itm~
-SAY NAME1 ~Mysterious Letter~
-SAY NAME2 ~Mysterious Letter~
-SAY DESC ~Sirene,
-I presume you have not forgotten about our little encounter at Dead Man's Pass? No doubt many questions have plagued your mind since then. Fear not, for it is time to end this farce. Though my patroness, Talona, demands that you live a while longer, I tire of waiting. If you wish to know the truth of all your sins, then meet me at the location below, and perhaps you will understand... assuming you survive. Bring your friends if you must... you will need them.
+SAY NAME1 ~神秘信件~
+SAY NAME2 ~神秘信件~
+SAY DESC ~塞琳：
 
-I will be waiting.
- - T.D.T~
+想必你还没忘记我们在死人隘口那次小小的遭遇吧？自那以后，无疑有许多问题困扰着你。不必惊慌，这场闹剧也该收场了。虽说我的女主人塔洛娜要你再多活些时日，我却已等得厌烦。若想知道你一切罪孽的真相，便到下面的地点来见我，也许你就会明白……前提是你活得到那一刻。必要的话就带上你的朋友吧……你会需要他们的。
+
+我会等着。
+ ——T.D.T~
 
 APPEND ~itemdial.2da~
 ~C0SNOTE    17567  C0SNOTE~
 UNLESS ~C0SNOTE~
  
 COPY ~%MOD_FOLDER%/Items/c0swand.itm~ ~override/c0swand.itm~
-SAY NAME1 ~Wand~
-SAY NAME2 ~Wand of Miasma~
-SAY DESC ~This wand is colored a sickly green and is unnerving to the touch. With a single word, the user can launch a bolt of deadly toxin or emit a miasmic cloud to inflict a slow death upon their target. Wands of this type are common among mages in the clergy of Talona, Lady of Poison.
+SAY NAME1 ~法杖~
+SAY NAME2 ~瘴气法杖~
+SAY DESC ~这根法杖呈病态的绿色，摸上去令人不安。使用者只需念出一个词，便可发射夺命毒箭，或喷出瘴气云雾，令目标缓慢死去。此类法杖在塔洛娜——毒药女神——的祭司法师中颇为常见。
 
-Charge abilities:
-- Talona's Curse (1x/day)
-  Special: Deals 8d8 damage + 6/round and decreases Constitution by 4 for 1 turn; those who make their Saving Throw vs. Poison are unaffected
-  Range: 15 ft.
-  Area of Effect: 1 creature
+充能能力：
+- 塔洛娜之诅咒（每日 1 次）
+  特殊：造成 8d8 点伤害 + 每轮 6 点，并使体质降低 4，持续 1 回合；对抗毒素豁免成功则不受影响
+  射程：15 尺
+  作用范围：1 只生物
   
-- Cloudkill (1x/day)
-  Damage: 1d10 poison per round
-  Special: Slays creatures with 1-4 HD; creatures with 5-6 HD must save vs. Spell or die
-  Range: 60 ft.
-  Area of Effect: 20-ft. radius
-  Duration: 1d4 turns
- 
-- Death Fog (1x/day)
-  Special: Deals 8 points of acid damage per round; slays all summoned creatures regardless of Hit Dice or immunities
-  Range: 60 ft.
-  Area of Effect: 30-ft. radius
-  Duration: 1 turn
+- 死云术（每日 1 次）
+  伤害：每轮 1d10 点毒素
+  特殊：斩杀 1–4 生命值骰的生物；5–6 生命值骰的生物须豁免对抗法术，否则死亡
+  射程：60 尺
+  作用范围：20 尺半径
+  持续时间：1d4 回合
+  
+- 死雾（每日 1 次）
+  特殊：每轮造成 8 点酸蚀伤害；斩杀一切召唤生物，无论其生命值骰或免疫属性
+  射程：60 尺
+  作用范围：30 尺半径
+  持续时间：1 回合
 
-Requires:
- 9 Intelligence
+需要：
+  9 智力
 
-Weight: 1~
+重量：1~
 
 COPY ~%MOD_FOLDER%/Items/C0SS1H1.itm~ ~override/C0SS1H1.itm~
-SAY NAME1 ~Bastard Sword~
-SAY NAME2 ~Celestial Fire +2~
-SAY DESC ~This heavy blade is warm to the touch, and flames have been carved across the surface of the blade. The intricacy of the carvings is breathtaking; they are done with such skill that the sword seems to be burning with metallic flames... someone must have spent several centuries rendering them. The metal of the blade is unfamiliar... it is heavy, but it shines like silver.
+SAY NAME1 ~宽刃剑~
+SAY NAME2 ~天界之火 +2~
+SAY DESC ~这把重剑摸上去温热，剑身上刻满火焰纹样。雕工繁复得令人屏息，技艺之精湛，仿佛剑身在金属烈焰中燃烧……必定有人花了数百年才雕成。剑的金属陌生沉重，却闪耀如银。
 
-The sword looks several millennia old. A faint hum can be felt within it, and the vibration becomes stronger when it touches human flesh. Not surprisingly, Celestial Fire can be wielded only by those with sufficient strength and purity of heart. When used in combat, Celestial Fire bursts into a holy radiance that burns any evil creature it strikes in combat. This majestic blade once belonged to the celestial being Trias and how a weapon such as this made its way to the Prime Material Plane is unknown.
+此剑看似已有数千年历史。剑内传来隐约的嗡鸣，触及血肉时震动便会加剧。不出所料，天界之火唯有力量足够、心性纯洁者方能驾驭。战斗中，天界之火迸发出神圣光辉，灼烧命中的一切邪恶生物。这柄威严之剑曾属天界存在特里亚斯，如此一件武器如何来到主物质位面，无人知晓。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
- - Armor Class: +2
- - Slashing Resistance: +10%
+装备能力：
+ - 护甲等级：+2
+ - 挥砍抗性：+10%
 
-THAC0: +2, strikes as a +4 weapon
-Damage: 3d6+2 (slashing), +1d10 fire damage vs. evil creatures
-Speed Factor: 3
-Proficiency Type: Bastard Sword
-Type: One-handed
-Requires:
- 11 Strength
+THAC0：+2，视同 +4 武器命中
+伤害：3d6+2（挥砍），对抗邪恶生物 +1d10 火焰伤害
+速度因素：3
+熟练度类型：宽刃剑
+类型：单手
+需要：
+  11 力量
 
-Weight: 7~
+重量：7~
 
 COPY ~%MOD_FOLDER%/Items/C0SBLUN.itm~ ~override/C0SBLUN.itm~
-SAY NAME1 ~Flail~
-SAY NAME2 ~Harbinger of Pain +4~
-SAY DESC ~This sinister weapon is coated with blood that seems impossible to clean off, though from whose the blood comes from is a question best left unanswered. Its horrifying appearance reflects its equally horrifying design, being a weapon which draws its strength from the pain of both the wielder and the unfortunate victim. The risk of the weapon is that it makes the wielder more powerful the closer <PRO_HESHE> is to death. While the double-edged nature of this weapon makes it a hard bargain for the typical warrior, it is heavily favoured by followers of masochistic and sadistic deities such as Loviatar and Talona.
+SAY NAME1 ~连枷~
+SAY NAME2 ~苦痛先驱 +4~
+SAY DESC ~这件邪异武器裹着一层仿佛怎么也擦不掉的血渍，至于这血来自谁，最好不去追问。它骇人的外观映照出同样骇人的设计：这柄武器汲取持用者与不幸受害者双方的苦痛为力量。其风险在于，持用者越接近死亡，<PRO_HESHE> 便越强。这件武器双刃皆利，对寻常战士而言并不划算，却深受洛薇雅塔、塔洛娜这类施虐与受虐神祇的信徒青睐。
 
-STATISTICS:
+属性：
 
-Combat abilities:
- - Shared Oath of Pain: On a critical hit, reduces target's Strength by 4 for 1 round and deals 1d10 piercing damage to both the target and the wielder.
- - Deals 4 nonlethal damage to the wielder on every successful hit.
+战斗能力：
+ - 苦痛共誓：重击时使目标力量降低 4，持续 1 轮，并对目标与持用者双方造成 1d10 点穿刺伤害。
+ - 每次成功命中，对持用者造成 4 点非致命伤害。
 
-Equipped abilities (all effects are cumulative):
- - When the wielder's Hit Points drop below 50%, <PRO_HESHE> gains +1 THAC0 and damage.
- - When the wielder's Hit Points drop below 25%, <PRO_HESHE> gains +2 Dexterity.
- - When the wielder's Hit Points drop below 10%, <PRO_HESHE> gains +2 bonus to hit and damage rolls, one extra attack per round, doubled movement rate and deals maximum damage.
+装备能力（所有效果可叠加）：
+ - 持用者生命值低于 50% 时，<PRO_HESHE> THAC0 与伤害 +1。
+ - 生命值低于 25% 时，<PRO_HESHE> 敏捷 +2。
+ - 生命值低于 10% 时，<PRO_HESHE> 命中与伤害掷骰 +2，每轮额外一次攻击，移动速度翻倍，并造成最大伤害。
 
-THAC0: +4
-Damage: 1d6+5, +1 fire damage
-Damage type: Crushing
-Speed Factor: 5
-Proficiency Type: Flail
-Type: One-handed
-Requires:
- 13 Strength
+THAC0：+4
+伤害：1d6+5，1 点火焰伤害
+伤害类型：钝击
+速度因素：5
+熟练度类型：连枷
+类型：单手
+需要：
+  13 力量
 
-Weight: 10~
+重量：10~
 
 COPY ~%MOD_FOLDER%/Items/C0SS1H2.itm~ ~override/C0SS1H2.itm~
-SAY NAME1 ~Bastard Sword~
-SAY NAME2 ~Celestial Fire +4~
-SAY DESC ~This heavy blade is warm to the touch, and flames have been carved across the surface of the blade. The intricacy of the carvings is breathtaking; they are done with such skill that the sword seems to be burning with metallic flames... someone must have spent several centuries rendering them. The metal of the blade is unfamiliar... it is heavy, but it shines like silver.
+SAY NAME1 ~宽刃剑~
+SAY NAME2 ~天界之火 +4~
+SAY DESC ~这把重剑摸上去温热，剑身上刻满火焰纹样。雕工繁复得令人屏息，技艺之精湛，仿佛剑身在金属烈焰中燃烧……必定有人花了数百年才雕成。剑的金属陌生沉重，却闪耀如银。
 
-The sword looks several millennia old. A faint hum can be felt within it, and the vibration becomes stronger when it touches human flesh. Not surprisingly, Celestial Fire can be wielded only by those with sufficient strength and purity of heart. When used in combat, Celestial Fire bursts into a holy radiance that burns any evil creature it strikes in combat. This majestic blade once belonged to the celestial being Trias and how a weapon such as this made its way to the Prime Material Plane is unknown.
+此剑看似已有数千年历史。剑内传来隐约的嗡鸣，触及血肉时震动便会加剧。不出所料，天界之火唯有力量足够、心性纯洁者方能驾驭。战斗中，天界之火迸发出神圣光辉，灼烧命中的一切邪恶生物。这柄威严之剑曾属天界存在特里亚斯，如此一件武器如何来到主物质位面，无人知晓。
 
-With the Eye of the Celestial embedded in its pommel, the power of this holy weapon has become even greater.
+天界之眼嵌于剑柄之后，这件神圣武器的力量更胜从前。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
- - Armor Class: +2
- - Slashing Resistance: +25%
+装备能力：
+ - 护甲等级：+2
+ - 挥砍抗性：+25%
 
-THAC0: +4, strikes as a +5 weapon
-Damage: 3d6+4 (slashing), +1d10 fire damage vs. evil creatures
-Speed Factor: 3
-Proficiency Type: Bastard Sword
-Type: One-handed
-Requires:
- 11 Strength
+THAC0：+4，视同 +5 武器命中
+伤害：3d6+4（挥砍），对抗邪恶生物 +1d10 火焰伤害
+速度因素：3
+熟练度类型：宽刃剑
+类型：单手
+需要：
+  11 力量
 
-Weight: 7~
+重量：7~
 
 COPY_EXISTING ~compon02.itm~ ~override/C0SCOMP1.itm~
-SAY NAME1 ~Gem~
-SAY NAME2 ~Eye of the Celestial~
-SAY DESC ~A gift from a powerful celestial being from the Outer Planes, this pommel gem gleams with a holy fire. If the burning stone were to be set into the hilt of a weapon of virtue, the result would be a blade capable of carving a righteous swath through all the evils that plague the realms.
+SAY NAME1 ~宝石~
+SAY NAME2 ~天界之眼~
+SAY DESC ~这枚剑柄宝石来自一位来自外层位面的强大天界存在，燃着神圣火光。若将这颗燃烧的宝石嵌进一柄武德之剑的剑柄，所成之剑将能横扫困扰诸国度的一切邪恶。
 
-STATISTICS:
+属性：
 
-Weight: 1~
+重量：1~
 
 COPY_EXISTING ~key07.itm~ ~override/c0alkey.itm~
-SAY NAME1 ~Old Key~
-SAY NAME2 ~Old Key~
-SAY DESC ~This rusted key was found within a crack in the walls of the ruined chapel of Ilmater.
+SAY NAME1 ~旧钥匙~
+SAY NAME2 ~旧钥匙~
+SAY DESC ~这把生锈的钥匙是在伊尔梅特破败礼拜堂的墙缝里找到的。
 
-STATISTICS:
+属性：
 
-Weight: 0~
+重量：0~
 
 COPY ~%MOD_FOLDER%/items/c0sberry.itm~ ~override/c0sberry.itm~
-SAY NAME1 ~Wild Berries~
-SAY NAME2 ~Wild Berries~
-SAY DESC ~A handful of various fresh and appetizing berries. Good for use as a light snack or an ingredient in pies.
+SAY NAME1 ~野浆果~
+SAY NAME2 ~野浆果~
+SAY DESC ~一把各色新鲜诱人的浆果。可作小点心酸用，也可做馅饼的配料。
 
-STATISTICS:
+属性：
 
-Special: Removes fatigue
+特殊：消除疲惫
 
-Weight: 0~
+重量：0~
 
 COPY ~%MOD_FOLDER%/items/c0sbody.itm~ ~override/c0sbody.itm~
-SAY NAME1 ~Sirene's Body~
-SAY NAME2 ~Sirene's Body~
-SAY DESC ~Sirene was able to somehow bless herself by ending her life, protecting her from Bodhi's attempt to infect her with vampirism but also preventing her from being raised by conventional means. There may be some way to revive her, though you don't know what it would be. Perhaps the local temple of Ilmater may be of assistance.
+SAY NAME1 ~塞琳的遗体~
+SAY NAME2 ~塞琳的遗体~
+SAY DESC ~塞琳以某种方式结束自己的生命，为自己赐福，这既使她免遭博迪以吸血鬼之术感染，也让她无法以常规手段复生。或许另有办法复活她，只是你不知道那会是什么。当地的伊尔梅特神殿或许能提供帮助。
 
-Weight: 135~
+重量：135~
 
 COPY_EXISTING ~scrl3i.itm~ ~override/c0snote2.itm~
-SAY NAME1 ~Note~
-SAY NAME2 ~Note~
-SAY DESC ~"Gonna make a break for it while I can. Leaving this here so bandits don't slice me open to take it. If I'm not back in a week, it probably means I'm spilling my guts out somewhere on the road. In that case, some other lucky bastard can keep it. Ilmater preserve me, I hope I make it.
+SAY NAME1 ~便笺~
+SAY NAME2 ~便笺~
+SAY DESC ~“趁还能走，我这就溜了。把这东西留在这儿，免得被强盗剖开肚子抢走。要是我一周内没回来，多半就是把肠子洒在路边哪个角落了。那样的话，哪个走运的杂种就留着它吧。伊尔梅特保佑我，但愿我能逃掉。
 
-Damn these Bhaalspawn and the dead god that spawned them. - N."
+去他这些巴尔后裔，还有生出他们的死神。——N。”
 
-This note was left behind along with a rather valuable gem. It seems to have been written in a hurry.~
+这张便笺与一颗相当值钱的宝石一同被留下。看来写得很匆忙。~
 
 COPY ~%MOD_FOLDER%/items/c0sbook2.itm~ ~override/c0sbook2.itm~
-SAY NAME1 ~Book~
-SAY NAME2 ~Ilmatari Tenets of Faith~
-SAY DESC ~This book contains several rituals known to high priests of Ilmater. While many are meant for mundane or spiritual purposes and are unsuitable for combat, there are a few which may be useful.
+SAY NAME1 ~书~
+SAY NAME2 ~伊尔梅特信徒信条~
+SAY DESC ~这本书收录了伊尔梅特大祭司所知的数种仪式。其中许多用于日常或精神用途，不适合战斗，但也有几种颇具实用价值。
 
-STATISTICS:
+属性：
 
-Teaches the reader the priest spells 'Favor of Ilmater', 'Endurance of Ilmater' and 'Blast of Pain'
-Special: The book is consumed upon use
-Usage: Place into quick item slot
-
------
-
-Favor of Ilmater
-(Necromancy)
-
-Level: 3
-Sphere: Necromantic, Protection
-Range: 10 ft.
-Casting Time: 6
-Area of Effect: One creature
-Duration: Instant
-Saving Throw: None
-
-This spell allows the priest to take on the injuries of another creature, healing 3 hit points per level of the caster and dealing the same amount to <PRO_HIMHER>self as non-lethal damage.
+教会读者祭司法术“伊尔梅特之眷佑”“伊尔梅特之坚韧”与“苦痛爆裂”
+特殊：使用后此书被消耗
+用法：放入快捷物品栏
 
 -----
 
-Endurance of Ilmater
-(Necromancy)
+伊尔梅特之眷佑
+（死灵系）
 
-Level: 4
-Sphere: Necromantic, Protection
-Range: Touch
-Casting Time: 7
-Area of Effect: One creature
-Duration: 1 round/level
-Saving Throw: None
+等级：3
+学派：死灵、防护
+射程：10 尺
+施法时间：6
+作用范围：一只生物
+持续时间：瞬间
+豁免检定：无
 
-This spell doubles the hit points of the spell recipient for the spell duration. Any damage suffered is taken first from these phantom hit points until they are all exhausted; damage is only then taken from the real hit points of the affected being. The spell also protects the vitality of the spell recipient so that all system shock rolls and checks of any sort against contracting diseases automatically succeed, and all other saving throws receive a +2 bonus. In addition, no being protected by endurance of Ilmater can be knocked over, trampled, ridden down, or overthrown; all protected beings can stand firm against all charges.
+此法术使祭司承受另一只生物的伤痛，每级施法者治愈 3 点生命值，并将同等数值作为非致命伤害施加给<PRO_HIMHER>自己。
 
 -----
 
-Blast of Pain
-(Evocation)
+伊尔梅特之坚韧
+（死灵系）
 
-Level: 5
-Sphere: Combat, Necromantic
-Range: 10 ft.
-Casting Time: 5
-Area of Effect: One creature
-Duration: 4 rounds
-Saving Throw: Special
+等级：4
+学派：死灵、防护
+射程：接触
+施法时间：7
+作用范围：一只生物
+持续时间：每级 1 回合
+豁免检定：无
 
-This spell creates a beam of smoky gray radiance that streaks unerringly from the priest to a single chosen target who must be within view and range of the caster as casting begins. The target creature must make a saving throw vs. spell at a -5 penalty. If the saving throw is successful, the target is overwhelmed by pain for one round (slowing its movement by half, adding 3 to all casting times, and forcing it to make all attack rolls at a -2 penalty) and suffers 1d4+1 points of non-lethal damage to its nervous system; it is then free of the spell.
+法术持续期间，受术者生命值翻倍。所受伤害先从这些虚设生命值中扣除，直至耗尽；之后才从受术者真实生命值中扣除。此法术还保护受术者的活力，一切体质冲击检定与各类染病检定自动成功，其余所有豁免检定 +2。此外，受伊尔梅特之坚韧保护的生物不会被击倒、践踏、冲撞或掀翻；所有受保护者都能屹立不退，抵御一切冲锋。
 
-If the saving throw is failed, the target creature suffers 4d6 points of non-lethal damage and is stunned and writhing helplessly in pain for the remainder of the current round and the following round. It can make no deliberate attacks, and its awareness of its surroundings is blotted out.
+-----
 
-At the beginning of the second round after it was affected, the target being is allowed another saving throw vs. spell, this time at a -4 penalty. If the target succeeds at the saving throw, it suffers 1d4+1 points of non-lethal damage but is then free of the spell. If it fails, 3d6 points of non-lethal damage are inflicted, and the victim continues to be stunned and to writhe helplessly.
+苦痛爆裂
+（塑能系）
 
-At the beginning of the third round after it was affected, the target is allowed a third saving throw vs. spell at a -3 penalty. If the saving throw is successful, the victim suffers 1d4+1 points of non-lethal damage and is then freed from the spell. If the saving throw is failed, 2d6 points of non-lethal damage are inflicted, and the victim continues to be stunned and to writhe helplessly until the end of the round, when the spell ends.
+等级：5
+学派：战斗、死灵
+射程：10 尺
+施法时间：5
+作用范围：一只生物
+持续时间：4 轮
+豁免检定：特殊
 
-Weight: 2~
+此法术射出一道烟灰般的光芒，自祭司处无误地直奔施法开始时处于视野与射程内的单个选定目标。目标须进行对抗法术的豁免检定，减值 -5。豁免成功：目标被苦痛淹没 1 轮（移动速度减半，所有施法时间 +3，所有攻击掷骰 -2 减值），神经系统受到 1d4+1 点非致命伤害，随后摆脱法术。
+
+豁免失败：目标受到 4d6 点非致命伤害，在当前剩余轮次与下一轮中陷入昏迷、在苦痛中无助翻滚。无法发动有意识的攻击，对周遭的感知一片模糊。
+
+受影响后第 2 轮开始时，目标可再进行一次对抗法术豁免，减值 -4。豁免成功：受到 1d4+1 点非致命伤害后摆脱法术。豁免失败：受到 3d6 点非致命伤害，受害者继续昏迷、无助翻滚。
+
+受影响后第 3 轮开始时，目标进行第三次对抗法术豁免，减值 -3。豁免成功：受到 1d4+1 点非致命伤害后脱离法术。豁免失败：受到 2d6 点非致命伤害，继续昏迷、无助翻滚直至该轮结束，法术终止。
+
+重量：2~
 
 COPY ~%MOD_FOLDER%/items/c0srobe.itm~ ~override/c0srobe.itm~
-SAY NAME1 ~Mage Robe~
-SAY NAME2 ~Robes of the Unfettered~
-SAY DESC ~Zalorne the Unfettered was a former mage of the Arcane Brotherhood of Luskan turned bandit when a certain experiment involving a mind flayer gone awry disgraced him and caused his exile from the Hosttower. An enchanter of no small skill and endless ambition, this robe was but one of his many creations, though this is the only item he saw worthy of personal use. Its power is quite remarkable, as is the quality of the material used - Zalorne was clearly as much a dandy as he was an arcanist.
+SAY NAME1 ~法师长袍~
+SAY NAME2 ~不羁者之袍~
+SAY DESC ~不羁者扎洛恩本是路斯坎秘法兄弟会的一名法师，因一场夺心魔实验出了差错，令他蒙羞并被逐出主塔，落草为寇。这位附魔师技艺不弱、野心无穷，这件长袍只是他众多造物之一，却是唯一一件他认为值得自用的。它的力量颇为可观，所用材料的品质也同样不凡——扎洛恩显然既是个术师，也是个讲究排场的纨绔。
 
-STATISTICS:
+属性：
 
-Equipped abilities:
-- Armor Class: 3
-- Caster Level: +4 (Enchanters), +2 (non-Enchanter mages)
-- Immunity to mind-affecting spells and psionics
+装备能力：
+- 护甲等级：3
+- 施法等级：+4（附魔师），+2（非法师附魔师）
+- 免疫影响心智的法术与灵能
 
-Weight: 6~
+重量：6~
 
 COPY_EXISTING ~book10.itm~ ~override/c0sbook3.itm~
-SAY NAME1 ~Zalorne's Journal~
-SAY NAME2 ~Zalorne's Journal~
-SAY DESC ~The first several pages of this journal contain very little interest, save for a few entries which mostly consist of insults towards several named members of the Arcane Brotherhood of Luskan. The profanities written in the journal include those from the Common tongue, words borrowed from at least three foreign languages and several which sound made up. Only the most recent entries hold anything of value.
+SAY NAME1 ~扎洛恩的日志~
+SAY NAME2 ~扎洛恩的日志~
+SAY DESC ~这本日志开头几页没什么可读的，只有几条记录，多半是对路斯坎秘法兄弟会几位具名成员的辱骂。日志里的脏话既有通用语，也有借自至少三种外语的词，还有几个听着像生造的。唯有最近几条记录才有价值。
 
-"Kythorn 2
-One of the mercenaries drank too much again and vomited all over my favorite robes. The pig! He has been punished with permanent lobotomy via a Feeblemind spell and left on the wayside to rot. Bah! I shall have to wear the one I brought from the Hosttower. That one, at least, is enchanted to remove stains."
+“皓月之月 2
+有个佣兵又喝多了，吐了我最心爱的长袍一身。猪猡！我已用弱智法术给他做了永久性脑部切除，丢在路边烂掉。呸！我只能穿从主塔带来那件了。那件至少附了去除污渍的附魔。”
 
-"Kythorn 4
-A man in rags passed by our regular raiding path today. We allowed him to pass. It was clear that he had nothing of value."
+“皓月之月 4
+今天有个衣衫褴褛的男人路过我们常走的劫掠路线。我们放他过去了。看得出来他身上没什么值钱东西。”
 
-"Kythorn 5
-Interesting. The man from yesterday has returned, and visited the ruined chapel in the nearby village. That place has been abandoned since the recent Bhaalspawn wars. What could he be doing?"
+“皓月之月 5
+有意思。昨天那人又回来了，去了附近村子那座破败礼拜堂。自从不久前的巴尔后裔战争起，那地方就荒了。他想干什么？”
 
-"Kythorn 7
-There is an altar within the chapel, but some enchantment prevents anyone from entering the grounds. Blast! I must know what has been hidden in those ruins. Perhaps it is an artifact powerful enough to help me reclaim my position at the Hosttower."
+“皓月之月 7
+礼拜堂里有座祭坛，但某种附魔阻止任何人进入场地。可恶！我必须知道那些废墟里藏了什么。说不定是件足够强大的宝物，能帮我夺回在主塔的地位。”
 
-"Kythorn 9
-Two days spent attempting to break the glyphs surrounding those ruins with no luck. This is pointless. I shall have to wait and observe from the shadows. Someone will come for it... eventually."~
+“皓月之月 9
+花了两天想破开环绕废墟的符文，毫无进展。毫无意义。我只能躲在暗处观察等待。总会有人来取它的……迟早的事。”~
 
 // Areas
 
@@ -831,16 +832,16 @@ COPY ~%MOD_FOLDER%/creatures/c0scler1.cre~ ~override/c0scler1.cre~
 WRITE_ASCII 0x2cc ~c0scler1~ #8  // dialogue
 WRITE_ASCII 0x248 ~c0scler1~  #8  // override
 WRITE_ASCII 0x280 ~c0scler1~ #32 // death variable
-SAY NAME1 ~Revered Brother Daeron~
-SAY NAME2 ~Revered Brother Daeron~
+SAY NAME1 ~尊敬的达隆修士~
+SAY NAME2 ~尊敬的达隆修士~
 WRITE_ASCII 0x34  ~DaeronL~ #8
 
 COPY ~%MOD_FOLDER%/creatures/c0sgirl.cre~ ~override/c0sgirl.cre~
 WRITE_ASCII 0x2cc ~c0sgirl~ #8  // dialogue
 WRITE_ASCII 0x248 ~c0sgirl~  #8  // override
 WRITE_ASCII 0x280 ~c0sgirl~ #32 // death variable
-SAY NAME1 ~Flower Girl~
-SAY NAME2 ~Flower Girl~
+SAY NAME1 ~卖花女孩~
+SAY NAME2 ~卖花女孩~
 WRITE_ASCII 0x34  ~FGIRLL~ #8
 
 COPY_EXISTING ~slilmat.cre~ ~override/c0scler2.cre~
@@ -877,15 +878,15 @@ COPY_EXISTING ~drpar2.cre~ ~override/c0scler8.cre~
 WRITE_ASCII 0x2cc ~c0scler3~ #8  // dialogue
 WRITE_ASCII 0x248 ~c0scler3~  #8  // override
 WRITE_ASCII 0x280 ~c0scler8~ #32 // death variable
-SAY NAME1 ~Injured Man~
-SAY NAME2 ~Injured Man~
+SAY NAME1 ~受伤男子~
+SAY NAME2 ~受伤男子~
 
 COPY_EXISTING ~terl.cre~ ~override/c0smess.cre~
 WRITE_ASCII 0x248 ~c0smess~  #8  // override
 WRITE_ASCII 0x2cc ~c0smess~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0smess~ #32 // death variable
-SAY NAME1 ~Brother Theodore~
-SAY NAME2 ~Brother Theodore~
+SAY NAME1 ~西奥多修士~
+SAY NAME2 ~西奥多修士~
 WRITE_BYTE 0x27b 17 		// alignment: lawful good
 ADD_CRE_ITEM ~c0snote~ #0 #0 #0 ~NONE~ ~qitem1~
 
@@ -893,22 +894,22 @@ COPY ~%MOD_FOLDER%/creatures/c0tsamon.cre~ ~override/c0tsamon.cre~
 WRITE_ASCII 0x2cc ~c0tsamon~ #8  // dialogue
 WRITE_ASCII 0x248 ~c0tsamon~  #8  // override
 WRITE_ASCII 0x280 ~c0tsamon~ #32 // death variable
-SAY NAME1 ~T'samon~
-SAY NAME2 ~T'samon~
+SAY NAME1 ~察蒙~
+SAY NAME2 ~察蒙~
 
 COPY ~%MOD_FOLDER%/creatures/c0slove1.cre~ ~override/c0slove1.cre~
 WRITE_ASCII 0x2cc ~c0slove1~ #8  // dialogue
 WRITE_ASCII 0x248 ~c0slove1~  #8  // override
 WRITE_ASCII 0x280 ~c0slove1~ #32 // death variable
-SAY NAME1 ~Lena De'bryll~
-SAY NAME2 ~Lena De'bryll~
+SAY NAME1 ~莱娜·德布赖尔~
+SAY NAME2 ~莱娜·德布赖尔~
 
 COPY ~%MOD_FOLDER%/creatures/c0tsamon.cre~ ~override/c0slove2.cre~
 WRITE_ASCII 0x2cc ~c0slove2~ #8  // dialogue
 WRITE_ASCII 0x248 ~c0slove2~  #8  // override
 WRITE_ASCII 0x280 ~c0slove2~ #32 // death variable
-SAY NAME1 ~T'samon~
-SAY NAME2 ~T'samon~
+SAY NAME1 ~察蒙~
+SAY NAME2 ~察蒙~
 REMOVE_CRE_ITEM ~c0sblun~
 REMOVE_CRE_ITEM ~shld28a~
 REMOVE_CRE_ITEM ~slng04~
@@ -919,16 +920,16 @@ COPY_EXISTING ~kpmaid02.cre~ ~override/c0scleo.cre~
 WRITE_ASCII 0x248 ~c0scleo~  #8  // override
 WRITE_ASCII 0x2cc ~c0scleo~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0scleo~ #32 // death variable
-SAY NAME1 ~Cleo~
-SAY NAME2 ~Cleo~
+SAY NAME1 ~克蕾奥~
+SAY NAME2 ~克蕾奥~
 WRITE_BYTE 0x27b 33 		// alignment: neutral good
 
 COPY ~%MOD_FOLDER%/creatures/c0sraid.cre~ ~override/c0sraid.cre~
 WRITE_ASCII 0x248 ~c0sraid~  #8  // override
 WRITE_ASCII 0x2cc ~c0sraid~  #8  // dialogue
 WRITE_ASCII 0x280 ~c0sraid~ #32 // death variable
-SAY NAME1 ~Zalorne the Unfettered~
-SAY NAME2 ~Zalorne the Unfettered~
+SAY NAME1 ~不羁者扎洛恩~
+SAY NAME2 ~不羁者扎洛恩~
 
 COPY_EXISTING ~sargrd04.cre~ ~override/c0sraid1.cre~
 WRITE_ASCII 0x248 ~c0sraid1~  #8  // override
@@ -980,8 +981,8 @@ COPY_EXISTING ~hspectr1.cre~ ~override/C0SirenG.cre~
 WRITE_ASCII 0x248 ~C0SirenG~  #8  // override
 WRITE_ASCII 0x2cc ~C0SirenG~  #8  // dialogue
 WRITE_ASCII 0x280 ~C0SirenG~ #32 // death variable
-SAY NAME1 ~Sirene~
-SAY NAME2 ~Sirene~
+SAY NAME1 ~塞琳~
+SAY NAME2 ~塞琳~
 WRITE_ASCII 0x34  ~SireneG~ #8
 SAY INITIAL_MEETING ~~
 SAY SELECT_COMMON1 ~~
@@ -995,35 +996,35 @@ WRITE_ASCII 0x280 ~wilmat~ #32 // death variable
 // Sirene-Pai'Na
 ACTION_IF FILE_EXISTS_IN_GAME ~bc0paina.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Sirene and Pai'Na~
+  PRINT ~正在添加塞琳与 Pai'Na 的跨模组闲聊~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/paina.d~
 END
 
 // Sirene-Foundling
 ACTION_IF FILE_EXISTS_IN_GAME ~l#foub.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Sirene and Foundling~
+  PRINT ~正在添加塞琳与 Foundling 的跨模组闲聊~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/foundling.d~
 END
 
 // Sirene-Yvette
 ACTION_IF FILE_EXISTS_IN_GAME ~yxyveb.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Sirene and Yvette~
+  PRINT ~正在添加塞琳与 Yvette 的跨模组闲聊~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/yvette.d~
 END
 
 // Sirene-Fade
 ACTION_IF FILE_EXISTS_IN_GAME ~be3fade.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod banters between Sirene and Fade~
+  PRINT ~正在添加塞琳与 Fade 的跨模组闲聊~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/fade.d~
 END
 
 // Sirene-Innershade
 ACTION_IF FILE_EXISTS_IN_GAME ~9xcc.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod interjections for Sirene and Innershade~
+  PRINT ~正在添加塞琳与 Innershade 的跨模组插话~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/innershade.d~
 EXTEND_BOTTOM ~C0Sire2.bcs~ ~%MOD_FOLDER%/dialogue/crossmod/innershade.baf~
 END
@@ -1031,7 +1032,7 @@ END
 // Sirene-TotDG
 ACTION_IF FILE_EXISTS_IN_GAME ~0xal2dg.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod interjections for Sirene and Tales of the Deep Gardens~
+  PRINT ~正在添加塞琳与 Tales of the Deep Gardens 的跨模组插话~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/totdg.d~
 EXTEND_BOTTOM ~C0Sire2.bcs~ ~%MOD_FOLDER%/dialogue/crossmod/totdg.baf~
 END
@@ -1039,7 +1040,7 @@ END
 // Sirene-ISNF
 ACTION_IF FILE_EXISTS_IN_GAME ~isnfxa.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod interjections for Sirene and I Shall Never Forget~
+  PRINT ~正在添加塞琳与 I Shall Never Forget 的跨模组插话~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/isnf.d~
 EXTEND_BOTTOM ~C0Sire2.bcs~ ~%MOD_FOLDER%/dialogue/crossmod/isnf.baf~
 END
@@ -1047,7 +1048,7 @@ END
 // Sirene-Romantic Encounters
 ACTION_IF MOD_IS_INSTALLED ~Setup-RE.tp2~ ~0~
 THEN BEGIN
-  PRINT ~Adding crossmod interjections for Sirene and Romantic Encounters~
+  PRINT ~正在添加塞琳与 Romantic Encounters 的跨模组插话~
 EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/dialogue/crossmod/RE.baf~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/RE.d~
 END
@@ -1055,7 +1056,7 @@ END
 // Sirene-Yoshimo Romance
 ACTION_IF FILE_EXISTS_IN_GAME ~yrxvam.dlg~
 THEN BEGIN
-  PRINT ~Adding crossmod interjections for Sirene and Yoshimo Romance~
+  PRINT ~正在添加塞琳与 Yoshimo Romance 的跨模组插话~
 COMPILE ~%MOD_FOLDER%/dialogue/crossmod/yoshirom.d~
 EXTEND_BOTTOM ~C0Sire2.bcs~ ~%MOD_FOLDER%/dialogue/crossmod/yoshirom.baf~
 END

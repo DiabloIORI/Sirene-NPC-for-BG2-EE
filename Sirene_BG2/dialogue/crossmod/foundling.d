@@ -6,17 +6,17 @@ See("C0Sirene")
 !StateCheck("L#Fou",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFoundling1","GLOBAL",0)~ THEN L#FOUB C0SireneFoundling1
-~You are such a strange person. Why do you wish to die so badly?~
+~你这人真奇怪。你为什么这么想死？~
 DO ~SetGlobal("C0SireneFoundling1","GLOBAL",1)~
-== BC0SIRE2 ~I know not what you speak of, Foundling. Speak plainly.~
-== L#FOUB ~I've watched you when we fight- whenever one of us is in danger, you always defend us, even if it puts your life at risk. Aren't you afraid to die?~
-== BC0SIRE2 ~I wish I could say that I have no fear of dying in battle, but... I cannot.~
-== L#FOUB ~Then why do you do it?~
-== BC0SIRE2 ~Out of duty. I am sworn as a holy knight of Ilmater to defend the innocent.~
-== L#FOUB ~'Duty'... I have heard you say the word before. But what is the point? What do you owe these so-called 'innocents'?~
-== BC0SIRE2 ~'Tis not about what I owe them. What fear I have of death is nothing compared to the guilt upon my conscience for those that have fallen because of my failure to protect them.~
-== L#FOUB ~Your ideas are so confusing to me. In the Plane of Shadow, every creature is out for themselves. The thought of sacrificing yourself for another simply... did not exist.~
-== BC0SIRE2 ~Aye, but you are no longer in that world, Foundling. Perhaps in this one... you may learn what it means to truly be human.~
+== BC0SIRE2 ~我听不懂你在说什么，Foundling。有话直说。~
+== L#FOUB ~打架时我一直看着你——只要我们当中谁有危险，你总会上去护着，哪怕拿自己的命冒险。你不怕死吗？~
+== BC0SIRE2 ~我也想说自己不怕战死，可……我说不出口。~
+== L#FOUB ~那你为什么还这么做？~
+== BC0SIRE2 ~出于职责。我以伊尔梅特神圣骑士的誓言守护无辜者。~
+== L#FOUB ~“职责”……我以前听你说过这个词。可有什么意义？你欠这些所谓的“无辜者”什么？~
+== BC0SIRE2 ~这不是我欠他们什么。与那些因我未能保护而倒下的人在我心头压下的愧疚相比，我对死亡的恐惧根本算不了什么。~
+== L#FOUB ~你的想法让我费解。在影界，每个生物都只为自己。为别人牺牲自己这种念头……根本不存在。~
+== BC0SIRE2 ~是啊，可你已经不在那个世界了，Foundling。也许在这个世界……你会明白真正做人意味着什么。~
 EXIT
 
 CHAIN
@@ -25,16 +25,16 @@ See("C0Sirene")
 !StateCheck("L#Fou",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFoundling2","GLOBAL",0)~ THEN L#FOUB C0SireneFoundling2
-~Tell me about this 'Ilmater' of yours. Why do you serve him? What do you stand to gain?~
+~跟我说说你这位“伊尔梅特”。你为什么侍奉他？你能得到什么好处？~
 DO ~SetGlobal("C0SireneFoundling2","GLOBAL",1)~
-== BC0SIRE2 ~Some things have deeper meaning than what there is to gain alone.~
-== L#FOUB ~Really? So you are not rewarded at all for serving your god?~
-== BC0SIRE2 ~'Twould depend on what you consider rewarding, I suppose... I find solace in the knowledge that others live because I suffered for their sake. For me, that is enough.~
-== L#FOUB ~You are beyond illogical... why do you do such things? I know you have the blood of fiends, and people fear you because of it... do you not despise them? Wouldn't you prefer that they suffered?~
-== BC0SIRE2 ~Perish the thought! I would be no better than the evil that taints my blood if I truly thought such things.~
-== L#FOUB ~The look in your eyes changed for a moment... are you angry?~
-== BC0SIRE2 ~*sigh* No, I am not, Foundling. I still do not know if your words are meant to offend, but I cannot afford to even think on them. I think 'twould be best if we both forgot about this conversation.~
-== L#FOUB ~As you wish.~
+== BC0SIRE2 ~有些事的意义，比单纯的所得更深。~
+== L#FOUB ~真的？那侍奉你的神，你一点回报都得不到？~
+== BC0SIRE2 ~这要看你把什么算作回报吧……想到自己承受苦痛是为了让别人活下去，我便心安。对我来说，这就够了。~
+== L#FOUB ~你简直不可理喻……你为什么做这些？我知道你身上流着邪魔之血，人们因此怕你……你不恨他们吗？你不更希望他们受苦吗？~
+== BC0SIRE2 ~绝无此事！我若真这么想，便和玷污我血脉的邪恶没什么两样。~
+== L#FOUB ~你眼神刚才变了一下……你生气了？~
+== BC0SIRE2 ~*叹气* 不，我没有，Foundling。我仍不确定你的话是不是有意冒犯，但这种念头我连想都不能想。我觉得我俩都把这场对话忘掉最好。~
+== L#FOUB ~随你便。~
 EXIT
 
 // ToB
@@ -45,14 +45,14 @@ See("C0Sirene")
 !StateCheck("L#Fou",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFoundlingToB","GLOBAL",0)~ THEN L#FOU25B C0SireneFoundlingToB
-~You are still alive.~
+~你还活着。~
 DO ~SetGlobal("C0SireneFoundlingToB","GLOBAL",1)~
-== BC0Sir25 ~Aye, so I am... does that surprise you?~
-== L#FOU25B ~I'm not sure. You are quite strong- I won't deny it. But each time you throw yourself into harm to save others, I wonder if it will be the last time... but you're still here. How do you do it?~
-== BC0Sir25 ~To protect those that fight at my side... 'tis what gives me the will to survive. Though my life is worth little, I must live so that I may protect those I hold dear.~
-== L#FOU25B ~And... does that include me?~
-== BC0Sir25 ~Of course it does, Foundling.~
-== L#FOU25B ~I see.~
-== BC0Sir25 ~If you do not mind my asking... how does the knowledge make you feel?~
-== L#FOU25B ~I don't know... it's strange. I think the best way to put it would be to say... I feel less tense around you.~
+== BC0Sir25 ~是啊，我还活着……让你意外了？~
+== L#FOU25B ~说不好。你确实很强——这点我不否认。可每次你挺身涉险救人，我都想知道这会不会是最后一次……但你还是在这儿。你怎么做到的？~
+== BC0Sir25 ~保护与我并肩作战的人……这就是我活下去的意志。虽说我的命不值什么，可我必须活着，才能守护我珍视的人。~
+== L#FOU25B ~那……包括我吗？~
+== BC0Sir25 ~当然包括，Foundling。~
+== L#FOU25B ~这样啊。~
+== BC0Sir25 ~若你不介意我问……知道这些，你心里是什么感觉？~
+== L#FOU25B ~我不知道……很奇妙。要我说的话……在你身边我没那么紧绷了。~
 EXIT

@@ -3,7 +3,7 @@ IF
 THEN
   RESPONSE #100
 	Explore()
-    DisplayStringHead(Player1,~You encounter a group of strangers during your travels...~)
+    DisplayStringHead(Player1,~旅途中，你遇见了一群陌生人……~)
 	SetGlobal("C0SireneEncounter","C0SIR0",1)
 	StartCutsceneMode()
 	ActionOverride(Player1,MoveToPoint([540.550]))

@@ -4,7 +4,7 @@ THEN
   RESPONSE #100
 	CutsceneId("C0Sirene")
 	Wait(1)
-	ActionOverride("C0SCLER1",DisplayStringHead(Myself,~May we meet again, champion.~)
+	ActionOverride("C0SCLER1",DisplayStringHead(Myself,~愿我们再会，勇士。~)
 	Wait(2)
 	ActionOverride("C0SCLER1",EscapeArea())
 	ActionOverride("C0SCLER2",EscapeArea())

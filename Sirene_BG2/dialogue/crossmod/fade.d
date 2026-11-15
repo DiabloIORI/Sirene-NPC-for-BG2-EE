@@ -6,16 +6,16 @@ See("C0Sirene")
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFade1","GLOBAL",0)~ THEN BE3Fade C0SireneFade1
-~...*stare*~
+~……*凝视*~
 DO ~SetGlobal("C0SireneFade1","GLOBAL",1)~
-== BC0SIRE2 ~Is there a reason you have been watching me, Fade? If you have something to say, go ahead and say it.~
-== BE3Fade ~I wish I could. But to be totally honest - I don't trust you yet.~
-== BC0SIRE2 ~I... I see. Can I do anything to gain that trust?~
-== BE3Fade ~Maybe, I'll admit it, you've got a convincing image going on. I've seen my share of frauds out there, but your faith looks to be the real deal. Still... I'm not entirely convinced. Your scent makes it difficult to trust you.~
-== BC0SIRE2 ~My... scent?~
-== BE3Fade ~Yeah. You've got the scent of the Nine Hells in you. I suppose that must be your blood.~
-== BC0SIRE2 ~I do not understand. Aye, I have the blood of the Lower Planes, but... is that your sole reason to distrust me?~
-== BE3Fade ~Nothing against you personally... yet. But it's in my blood to dislike you just like devils and demons despise each other. You might prove trustworthy yet... but I'll be watching you.~
+== BC0SIRE2 ~你一直盯着我，是有什么缘故吗，Fade？有话就直说。~
+== BE3Fade ~我也想直说。可实话说——我还信不过你。~
+== BC0SIRE2 ~我……明白了。我能做些什么赢得你的信任吗？~
+== BE3Fade ~也许吧。我承认，你这模样很有说服力。这种骗子我见得多了，可你的虔诚看着不像装的。不过……我还没完全信服。你身上的气味让人很难信你。~
+== BC0SIRE2 ~我的……气味？~
+== BE3Fade ~对。你身上有九层地狱的味道。想必是你血脉带来的。~
+== BC0SIRE2 ~我不明白。没错，我流着下层位面的血，可……这就是你信不过我的唯一原因？~
+== BE3Fade ~我对你个人并无成见……至少目前没有。可就像魔鬼与恶魔彼此憎恶一样，讨厌你也是我的天性。你或许最终能证明自己值得信任……但我会盯着你。~
 EXIT
 
 CHAIN
@@ -24,15 +24,15 @@ See("BE3Fade")
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFade2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneFade2
-~I know you are still watching me, Fade. Could we perhaps talk face to face instead, as allies should?~
+~我知道你还在盯着我，Fade。咱们能不能像盟友那样当面谈谈？~
 DO ~SetGlobal("C0SireneFade2","GLOBAL",1)~
-== BE3Fade ~...I guess. What do you want?~
-== BC0SIRE2 ~I only wish to understand you. What drives you to watch me so vigilantly, Fade? Even if I were not what I claim to be, you should know I am no threat to you.~
-== BE3Fade ~Sure. Not to me, but...~
-== BC0SIRE2 ~Do you fear that I am a threat to <CHARNAME>?~
-== BE3Fade ~Not directly. I'm almost convinced you really are a holy paladin, but I know from experience that ties to the Lower Planes catch up to you eventually. You're still a risk even if you don't intend to be.~
-== BC0SIRE2 ~Infernal blood may run in my veins, Fade, but I was a Prime born and raised. What ties might I have?~
-== BE3Fade ~You never know. I watch my back countless times every day. I suggest you do the same thing.~
+== BE3Fade ~……好吧。你想怎样？~
+== BC0SIRE2 ~我只是想了解你。是什么让你这么警惕地盯着我，Fade？即便我并非自己所说的那样，你也该知道我不会对你构成威胁。~
+== BE3Fade ~行。对你或许不是，可……~
+== BC0SIRE2 ~你是怕我会威胁到 <CHARNAME>？~
+== BE3Fade ~倒不是直接针对我。我几乎已经相信你真是神圣圣骑士，可经验告诉我，与下层位面的牵连迟早会找上门。哪怕你无意为恶，仍是个风险。~
+== BC0SIRE2 ~我血管里或许流着地狱之血，Fade，可我在主物质位面出生长大。我能有什么牵连？~
+== BE3Fade ~谁知道呢。我每天都无数次提防身后。建议你也一样。~
 EXIT
 
 CHAIN
@@ -41,14 +41,14 @@ See("C0Sirene")
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFade3","GLOBAL",0)~ THEN BE3Fade C0SireneFade3
-~Those cuts... you have so many of them. They remind me so much of... torture. Were you a slave once?~
+~这些伤痕……你身上真多。它们让我想起……酷刑。你以前当过奴隶吗？~
 DO ~SetGlobal("C0SireneFade3","GLOBAL",1)~
-== BC0SIRE2 ~A slave? No... I have endured many struggles, but that is not one of them, mercifully. My scars were earned in battle to protect others.~
-== BE3Fade ~You say that with so much pride, I can believe you... maybe you really are what you seem to be.~
-== BC0SIRE2 ~Thank you. But what brought this up, Fade? Do have you faced similar trials?~
-== BE3Fade ~No. My scars were earned through my defiance and will to survive. I can't say I've saved many people in my lifetime.~
-== BC0SIRE2 ~'Tis never too late to begin, Fade. I can tell you have compassion, even as you attempt to hide it. Is that not why you chose to join <CHARNAME>?~
-== BE3Fade ~*shrug* It was orders. But maybe you're not entirely wrong.~
+== BC0SIRE2 ~奴隶？不……我熬过许多磨难，但万幸不包括这一种。我的伤痕是在保护他人的战斗中落下的。~
+== BE3Fade ~你说这话时那么坦然，我信得过你……也许你真就是表面看上去的样子。~
+== BC0SIRE2 ~谢谢。可怎么说起这个了，Fade？你也经历过类似的磨难吗？~
+== BE3Fade ~没有。我的伤痕来自抗拒和求生的意志。这辈子我救过多少人，可说不上。~
+== BC0SIRE2 ~想开始永远不晚，Fade。我看得出你有恻隐之心，哪怕你想藏起来。你加入 <CHARNAME> 一行，不也是因为这个？~
+== BE3Fade ~*耸肩* 是奉命行事。不过你也许不全说错。~
 EXIT
 
 CHAIN
@@ -57,15 +57,15 @@ See("E3Fade")
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFade4","GLOBAL",0)~ THEN BC0SIRE2 C0SireneFade4
-~Your markings are beautiful.~
+~你的纹饰很美。~
 DO ~SetGlobal("C0SireneFade4","GLOBAL",1)~
-== BE3Fade ~Huh? You mean these?~
-== BC0SIRE2 ~Aye, those. 'Tis as though they were drawn with the careful strokes of an artist.~
-== BE3Fade ~Well... I don't know what to say to that. I'm flattered, I guess. But you should know... I'm not interested in... you know.~
-== BC0SIRE2 ~I do know. I was simply complimenting you, since you still seem uncomfortable in my presence. I hope I did not achieve the opposite.~
-== BE3Fade ~No, it's alright. I've noticed your markings too. The one on your back is quite pretty.~
-== BC0SIRE2 ~Wh- *blush* what? How did you know about that one?~
-== BE3Fade ~*wink* Did you forget my profession? It's my job to know about things.~
+== BE3Fade ~啊？你说这些？~
+== BC0SIRE2 ~对，就是这些。像是画师一笔一笔精心描出来的。~
+== BE3Fade ~这个……我不知该说什么。算是抬举我了吧。可你该知道……我对……那个没兴趣，你懂的。~
+== BC0SIRE2 ~我懂。我只是夸夸你，毕竟你在我面前仍有些不自在。希望没弄巧成拙。~
+== BE3Fade ~没事，无妨。我也留意到你的纹饰了。你背上那处挺好看。~
+== BC0SIRE2 ~什、*脸红* 什么？你怎么知道那一处？~
+== BE3Fade ~*眨眼* 忘了我是干什么的了？打听这些就是我的本职。~
 EXIT
 
 CHAIN
@@ -74,19 +74,19 @@ See("C0Sirene")
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFade5","GLOBAL",0)~ THEN BE3Fade C0SireneFade5
-~I hope you don't take it the wrong way, but I think it's incredible you managed to become a paladin.~
+~希望你别误会，我觉得你能当上圣骑士真不容易。~
 DO ~SetGlobal("C0SireneFade5","GLOBAL",1)~
-== BC0SIRE2 ~Is't truly so strange to you? After all, I was nurtured into such a role.~
-== BE3Fade ~You were raised into it? I guess it's not so strange then. I just can't imagine myself... like you. Some follower of faith.~
-== BC0SIRE2 ~Do you have no faith, Fade?~
+== BC0SIRE2 ~这在你眼里真这么奇怪？说到底，我是被培养成这个角色的。~
+== BE3Fade ~你是被养大走上这条路的？那倒不算奇怪。我只是想象不出自己……像你这样。信什么教的人。~
+== BC0SIRE2 ~你没有信仰吗，Fade？~
 == BE3Fade ~...~
-== BC0SIRE2 ~F-forgive me. I did not mean to sound patronizing.~
-== BE3Fade ~...where I grew up, faith wasn't a concept that existed. Power and decadence were the only constants in the Abyss.~
-== BC0SIRE2 ~I... I see. But is't not better for you now?~
-== BE3Fade ~I... don't know. I've never really thought about it.~
-== BE3Fade ~I mean, I appreciate everything the guild has done for me. I have a place I can call home, and people I can call friends, though I trust them as far as I can throw them. Still... sometimes I feel like I'm still being used, just like when I was nothing more than a slave.~
-== BC0SIRE2 ~Do you believe that faith in a god is the same thing? That you are simply a tool to be used?~
-== BE3Fade ~I've had enough experience of people controlling me for several lifetimes. I'm not about to add more to the load.~
+== BC0SIRE2 ~抱、抱歉。我不是想说教压人。~
+== BE3Fade ~……在我长大的地方，信仰这个概念根本不存在。在无底深渊里，权力与纵欲是仅有的永恒。~
+== BC0SIRE2 ~我……明白了。可你现在不是好过些了吗？~
+== BE3Fade ~我……不知道。我从没认真想过。~
+== BE3Fade ~我是说，我感激公会为我做的一切。我有了能称作家的地方，有了能称作朋友的人——尽管我信不过他们。可……有时我仍觉得自己被利用着，就像从前我不过是个奴隶时一样。~
+== BC0SIRE2 ~你觉得侍奉神明也是一回事吗？觉得自己不过是件被利用的工具？~
+== BE3Fade ~被人操控的经历，我几辈子都受够了。我不会再给自己添这副担子。~
 EXIT
 
 // ToB
@@ -97,15 +97,15 @@ See("E3Fade")
 !StateCheck("E3Fade",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneFadeToB","GLOBAL",0)~ THEN BC0Sir25 C0SireneFadeToB
-~That last battle left quite an impression, I think.~
+~上一场仗给人印象很深，我觉得。~
 DO ~SetGlobal("C0SireneFadeToB","GLOBAL",1)~
-== BE3Fad25 ~Yeah. It did.~
-== BC0SIRE2 ~You fought well, Fade. 'Tis good to know that I have you to watch my back in battle.~
-== BE3Fad25 ~Thanks. You're... not so bad, yourself. And you helped me out when I was surrounded, even though it endangered you. I appreciate that.~
-== BC0SIRE2 ~I only did what I would do for any friend.~
-== BE3Fad25 ~Friend, huh? Well... I wasn't exactly the friendliest to you at first. Do you really consider me a friend?~
-== BC0SIRE2 ~Of course. I know your blood draws you to dislike me, Fade, but I do not hold that against you.~
-== BE3Fad25 ~No, I don't feel like that anymore. I'd like us to be friends. But... you sure it's okay? After all, I'm a thief, and you're a paladin. We're haven't exactly got friendly relations by default.~
-== BC0SIRE2 ~You may be a thief, but you have a good heart, Fade, as you have proven time and time again. I have no reservations against having your friendship.~
-== BE3Fad25 ~Well, as long as you don't regret anything, I'm all for it.~
+== BE3Fad25 ~是啊，确实。~
+== BC0SIRE2 ~你打得不错，Fade。战斗中有你替我断后，让人安心。~
+== BE3Fad25 ~谢了。你……也不赖。我被围住时你还出手帮我，哪怕那会危及你自己。这份情我记着。~
+== BC0SIRE2 ~我只是对任何朋友都会这么做。~
+== BE3Fad25 ~朋友，呵。一开始……我对你可算不上友善。你真把我当朋友？~
+== BC0SIRE2 ~当然。我知道你的天性让你反感我，Fade，但我不怪你。~
+== BE3Fad25 ~不，我已经不那么想了。我愿意和你做朋友。不过……你确定这样没关系？毕竟我是贼，你是圣骑士。我俩天生算不得友好。~
+== BC0SIRE2 ~你或许是个贼，可你心地不坏，Fade，这一点你一次又一次证明了。和你结交朋友，我毫无顾虑。~
+== BE3Fad25 ~行，只要你日后不后悔，我没意见。~
 EXIT

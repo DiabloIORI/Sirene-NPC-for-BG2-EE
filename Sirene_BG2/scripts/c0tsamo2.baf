@@ -4,7 +4,7 @@ THEN
   RESPONSE #100
 	CutsceneId("C0Tsamon")
 	MoveViewPoint([1040.737],INSTANT)
-    DisplayStringHead("C0Tsamon",~Wither before Talona's blight...~)
+    DisplayStringHead("C0Tsamon",~在塔洛娜的枯萎之下凋零吧……~)
 	Wait(2)
     DisplayStringHead("C0Tsamon",~*INFICIO...*~)
 	Wait(1)

@@ -1020,7 +1020,7 @@ I_C_T KAYL2 14 C0SireneKAYL214
 END
 
 I_C_T GAAL 6 C0SireneGAAL6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这真是*可憎*，<CHARNAME>。这比洛薇塔塔和塔罗娜的教会还要残忍。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这真是*可憎*，<CHARNAME>。这比洛薇雅塔和塔洛娜的教会还要残忍。~
 END
 
 I_C_T2 GAAL 23 C0SireneGAAL23

@@ -371,7 +371,7 @@ Global("RacialInnate","LOCALS",0)
 THEN
 RESPONSE #100
 PlaySound("GAM_11")
-DisplayStringHead(Myself,~Racial Bonus: +1 Dexterity and Charisma, +15% fire and cold resistance.~)
+DisplayStringHead(Myself,~种族加成：敏捷与魅力各 +1，火焰与寒冷抗性 +15%。~)
 ApplySpellRES("C0SRACE",Myself)
 SetGlobal("RacialInnate","LOCALS",1)
 END

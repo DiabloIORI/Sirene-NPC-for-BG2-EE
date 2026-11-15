@@ -1,102 +1,102 @@
 APPEND C0SIRE2J
 
 IF WEIGHT #-1 ~Global("C0SireneInnershade","GLOBAL",1)~ a1
-SAY ~This village may be small, yet there is a certain beauty to it. It reminds me greatly of my home village, even if it looks completely different.~ [C0BLANK]
-++ ~Feeling homesick, are we?~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.1
-++ ~How does this place compare to your home?~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.2
-++ ~I can't see anything pleasant about this dump.~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.3
-++ ~We have no time for your daydreaming. Let's get moving.~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.0
+SAY ~这村子虽小，却有一种别致的美。它让我想起故乡的村子，尽管看上去全然不同。~ [C0BLANK]
+++ ~想家了？~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.1
+++ ~这里和你家乡比起来如何？~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.2
+++ ~这破地方我看不出有什么可取。~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.3
+++ ~没空让你做白日梦了。走吧。~ DO ~SetGlobal("C0SireneInnershade","GLOBAL",2)~ + a1.0
 END
 
 IF ~~ a1.0
-SAY ~Aye... of course.~
+SAY ~是啊……当然。~
 IF ~~ EXIT
 END
 
 IF ~~ a1.1
-SAY ~I did not think that I would, but... aye, I suppose I am.~
+SAY ~我本以为自己不会，可……是啊，大概是吧。~
 IF ~~ + a1.3
 END
 
 IF ~~ a1.2
-SAY ~Aye, that it is... I had never appreciated the beauty of my home village, but... now I am reminded of it.~
+SAY ~是啊……我从前未曾留意故乡村子的美，可……此刻我又想起了它。~
 IF ~~ + a1.3
 END
 
 IF ~~ a1.3
-SAY ~I suppose growing up in a place as large and sheltered as Candlekeep is a different experience altogether. But... I think such a place has its charm.~
+SAY ~我想，在烛堡那样宏大而受庇护的地方长大，是完全不同的经历。不过……我觉得那样的地方也自有它的魅力。~
 IF ~~ + a1.4
 END
 
 IF ~~ a1.4
-SAY ~My childhood was not a particularly exciting one, for I spent most of my days closed in the temple's small library reading fairytales...~
-= ~I still remember those times, when I would look out the window and watch the other children, my fellow wards, playing at war and catching frogs by the pond. I was lonely then, but my memories of those times are still... nostalgic, despite that.~
-++ ~You sound happy to be here. Do you really like this place so much?~ + a1.5
-++ ~Why didn't you ever join them?~ + a1.6
-++ ~If you want, we could go frog-catching right now. I'm sure there's a pond somewhere.~ + a1.7
-++ ~That's enough reminiscing for one day.~ + a1.0
+SAY ~我的童年算不上精彩，大半日子都关在神殿的小图书馆里读童话……~
+= ~我仍记得那时，我会望着窗外，看其他孩子——和我一样受庇护的同伴——在池塘边玩打仗、捉青蛙。那时我很孤独，可如今想起那些日子，仍然……带着怀念。~
+++ ~听你说起来在这儿很开心。你真这么喜欢这地方？~ + a1.5
+++ ~你当时为什么不和他们一起玩？~ + a1.6
+++ ~你愿意的话，我们现在就可以去捉青蛙。附近肯定有池塘。~ + a1.7
+++ ~今天就别再怀旧了。~ + a1.0
 END
 
 IF ~~ a1.5
-SAY ~It does, but at the same time, I have a strange sadness by being here, as it makes me wonder whether or not I wasted my childhood as a shut-in.~
-= ~I fear my childhood has not done wonders for my confidence. Perhaps if I had not allowed my heritage to make me feel different, I would have become a stronger person than I am now.~
+SAY ~是喜欢，可同时，身处此地我又有种莫名的难过，因为这让我怀疑自己是不是把童年虚度在了闭门独处中。~
+= ~恐怕我的童年对我的自信没什么帮助。倘若我不曾让自己的血统使我自觉异类，或许我如今会是个更坚强的人。~
 IF ~~ + a1.8
 END
 
 IF ~~ a1.6
-SAY ~I could have, I suppose, but I was always afraid to. Save for the priests that raised me, everyone around me was at least a little unnerved by my appearance... the children even more so.~
-= ~Perhaps if I were more confident, it would not have mattered, but I suppose such things did not matter to me as a child. I was content with losing myself in books and praying.~
+SAY ~我本可以的，我想，可我一直不敢。除了抚养我的祭司，身边的人多少都被我的容貌弄得不安……孩子们更是如此。~
+= ~倘若我更自信些，这些也就不算什么了。可我小时候大概并不在意这些。我满足于沉浸在书本与祈祷中。~
 IF ~~ + a1.8
 END
 
 IF ~~ a1.7
-SAY ~*laugh* I think I will pass. Though the prospect is tempting, I fear I would not be any good at it... and I feel 'twould be too childish of us.~
-= ~But I appreciate that you would consider my feelings to suggest such a thing. Perhaps if I had a friend such as you in my youth, I could have learned to be more confident and become a stronger person than I am now.~
+SAY ~*笑* 我想还是算了。虽说这主意挺诱人，可我怕自己不擅长……而且我觉得那样我们也太孩子气了。~
+= ~不过你能顾及我的感受才提这个建议，我很感激。倘若年少时有你这样的朋友，我或许能学会更自信，成为比现在更坚强的人。~
 IF ~~ + a1.8
 END
 
 IF ~~ a1.8
-SAY ~Gods, I think we have spent enough time talking here. We should be taking the time to appreciate this place, not talking about something as silly as my childhood.~
-= ~Lead on, my friend. I am right behind you.~
+SAY ~诸神在上，我觉得我们在这儿聊得够久了。该好好领略这地方，而不是聊我童年这种琐事。~
+= ~带路吧，我的朋友。我跟在你身后。~
 IF ~~ EXIT
 END
 
 IF WEIGHT #-1 ~Global("C0SireneInnershade2","GLOBAL",1)~ b1
-SAY ~To think that... memory was languishing in that realm, that darkness... all this time. Alone and forgotten... 'tis no wonder it almost descended to madness.~ [C0BLANK]
+SAY ~想想看……那记忆一直在那个国度、那片黑暗中煎熬……这么久。孤独、被遗忘……难怪它几乎堕入疯狂。~ [C0BLANK]
 IF ~Global("ISHxMain","GLOBAL",40)~ DO ~SetGlobal("C0SireneInnershade2","GLOBAL",2)~ + b1.1
 IF ~Global("ISHxMain","GLOBAL",30)~ DO ~SetGlobal("C0SireneInnershade2","GLOBAL",2)~ + b1.2
 END
 
 IF ~~ b1.1
-SAY ~And now it is within you. How do you feel, <CHARNAME>?~
-++ ~It's so strange. There's a feeling of sorrow and regret, but... not my own. It's difficult to explain.~ + b1.3
-++ ~I feel fine. Did you expect otherwise?~ + b1.4
-++ ~This really isn't worth talking about.~ + b1.5
+SAY ~如今它在你体内了。你感觉如何，<CHARNAME>？~
+++ ~太奇怪了。有种悲伤和悔恨的感觉，可……不是我自己的。很难解释。~ + b1.3
+++ ~我没事。你以为会怎样？~ + b1.4
+++ ~这事真不值得一提。~ + b1.5
 END
 
 IF ~~ b1.2
-SAY ~And now it is dead. I know it had to be done for the villagers, yet... I cannot say I feel any satisfaction for it. 'Twas horrible to see it plead for death, as though its very existence was pain. I have seen many men suffer in my life, yet none came close to that...~
-= ~I doubt I will sleep well in the near future after witnessing such horrors.~
+SAY ~如今它消散了。我知道为了村民必须这么做，可……我说不上有任何宽慰。看着它哀求死亡，仿佛它的存在本身就是痛苦，太可怕了。我这一生见过许多人受苦，可没有一个比得上……~
+= ~目睹了这样的恐怖，恐怕我近期都睡不安稳。~
 IF ~~ EXIT
 END
 
 IF ~~ b1.3
-SAY ~I suppose it must be, to have the dream of another sharing your body.~
+SAY ~我想，让别人的梦分享你的身体，滋味想必如此。~
 IF ~~ + b1.6
 END
 
 IF ~~ b1.4
-SAY ~No, in truth I did not know what to expect at all. This is all beyond anything in my knowledge.~
+SAY ~不，说实话我完全不知道该期待什么。这一切都超出了我的认知。~
 IF ~~ + b1.6
 END
 
 IF ~~ b1.5
-SAY ~As you wish. But... if you ever feel any pain, I am here to help... even if 'tis only to listen.~
+SAY ~随你。不过……你若感到任何苦痛，我都能帮上忙……哪怕只是听你倾诉。~
 IF ~~ + b1.6
 END
 
 IF ~~ b1.6
-SAY ~For what 'tis worth, I think you made the right decision, <CHARNAME>. You have saved this village from a doomed fate, and if you can bring this dream to a proper ending, then... all the better.~
+SAY ~不管怎么说，我认为你做了正确的决定，<CHARNAME>。你把这村子从注定的厄运中救了出来；若你能给这场梦一个妥善的了结，那就……再好不过。~
 IF ~~ EXIT
 END
 

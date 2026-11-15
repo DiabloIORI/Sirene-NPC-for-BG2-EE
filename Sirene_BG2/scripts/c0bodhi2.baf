@@ -8,7 +8,7 @@ THEN
     Wait(2)
     ActionOverride("C0Sirene",ApplySpell(Myself,CUTSCENE_DAMAGE_1))
 	Wait(1)
-	ActionOverride("C0Sirene",DisplayStringHead(Myself,~I'm sorry... <CHARNAME>...~))
+	ActionOverride("C0Sirene",DisplayStringHead(Myself,~对不起……<CHARNAME>……~))
 	Wait(1)
 	ActionOverride("C0Sirene",DropInventory())
 	ActionOverride("C0Sirene",LeaveParty())

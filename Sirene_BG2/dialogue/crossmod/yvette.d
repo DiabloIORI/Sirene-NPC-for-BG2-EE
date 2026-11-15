@@ -6,16 +6,16 @@ See("C0Sirene")
 !StateCheck("YxYve",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneYvette1","GLOBAL",0)~ THEN YXYVEB C0SireneYvette1
-~Why do you always look so severe, lady Sirene? I think you have a beautiful smile. You should show it more often.~
+~塞琳女士，你为什么总是神情这么严肃？我觉得你笑起来很美。你该多笑笑。~
 DO ~SetGlobal("C0SireneYvette1","GLOBAL",1)~
-== BC0SIRE2 ~I wish I could, but... there are precious few things to smile about in my life.~
-== YXYVEB ~I'm sorry. I just wanted to compliment your beauty somehow. It's such a shame that you hide your face under your hood... especially your hair. Its color reminds me of lady Sune herself.~
-== BC0SIRE2 ~I appreciate the thought, Yvette, but... I am no beauty. My blood is tainted. I am a monster.~
-== YXYVEB ~Please, don't say that about yourself. You can't help what you are, but still became a paladin despite it. I really admire that.~
-== BC0SIRE2 ~'Tis not only that. I fear the scars I have acquired in the name of duty have ruined me.~
-== YXYVEB ~Scars can be beautiful too, if they were earned honorably. I think yours are proof that you're brave and selfless, so you shouldn't be ashamed of them.~
-== BC0SIRE2 ~Yvette... (laugh) I have met few as optimistic as you are. Thank you, truly.~
-== YXYVEB ~Hehe, now you're blushing. But I'm glad I managed to make you smile at last.~
+== BC0SIRE2 ~我也想，可……我这辈子值得一笑的事实在太少。~
+== YXYVEB ~抱歉。我只是想夸夸你的容貌。你把脸藏在兜帽下真可惜……尤其是你的头发。这颜色让我想起淑妮女神本人。~
+== BC0SIRE2 ~谢谢你的心意，Yvette，可……我谈不上美貌。我的血是污浊的。我是个怪物。~
+== YXYVEB ~请别这么说自己。你无法选择自己的出身，却仍成了一名圣骑士。我真的很敬佩这一点。~
+== BC0SIRE2 ~还不只是这个。我怕自己因职责留下的伤痕已经毁了我。~
+== YXYVEB ~若是光荣得来的伤痕，也可以是美丽的。我觉得你的伤痕正证明你勇敢无私，不该为此羞愧。~
+== BC0SIRE2 ~Yvette……（笑）很少有人像你这么乐观。真心谢谢你。~
+== YXYVEB ~呵呵，你脸红了。不过能终于让你笑出来，我很高兴。~
 EXIT
 
 CHAIN
@@ -24,15 +24,15 @@ See("C0Sirene")
 !StateCheck("YxYve",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneYvette2","GLOBAL",0)~ THEN YXYVEB C0SireneYvette2
-~You know, lady Sirene, I think you would have become a great Heartwarder of Sune, if you were raised among my clergy.~
+~说真的，塞琳女士，如果你在我的神职人员中长大，我想你会成为一名出色的淑妮之心卫士。~
 DO ~SetGlobal("C0SireneYvette2","GLOBAL",1)~
-== BC0SIRE2 ~Do you truly think so, Yvette? I fear I know little in the ways of love and beauty...~
-== YXYVEB ~Hehe, that doesn't matter. I didn't remember much of my own faith either, after all. Lady Sune still accepted me, even as I am.~
-== YXYVEB ~Anyway, I'm certain that your looks would make members of my church envious. They say that those born with red hair and green eyes like yours are blessed by lady Firehair.~
-== BC0SIRE2 ~'Tis different, Yvette. My appearance stems from the blood of fiends, not the blessing of a goddess.~
-== YXYVEB ~I think you're being too hard on yourself, my lady. No matter where your blood comes from, you can still make something beautiful out of it.~
-== BC0SIRE2 ~Aye, that may be true, but... I have not even begun to consider such things.~
-== YXYVEB ~I know, you're always concerned with protecting us. But if you change your mind, I'd be more than happy to help you.~
+== BC0SIRE2 ~你真这么认为吗，Yvette？恐怕我对爱与美的道知之甚少……~
+== YXYVEB ~呵呵，那不碍事。毕竟我当初对自己的信仰也记得不多。即便我这样，淑妮女神还是接纳了我。~
+== YXYVEB ~总之，我敢说你的容貌会让我教团的人羡慕。人们说，像你这样红发绿眸的人，是受火发夫人赐福的。~
+== BC0SIRE2 ~这不一样，Yvette。我的容貌源于邪魔之血，不是女神的赐福。~
+== YXYVEB ~我觉得你对自己太苛刻了，女士。无论你的血统从何而来，你仍能把它活成美丽的东西。~
+== BC0SIRE2 ~是啊，也许吧……可这类事我连想都还没想过。~
+== YXYVEB ~我知道，你总惦记着保护我们。但要是你改变主意，我非常乐意帮你。~
 EXIT
 
 // ToB
@@ -43,12 +43,12 @@ See("YxYve")
 !StateCheck("YxYve",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneYvetteToB","GLOBAL",0)~ THEN BC0SIR25 C0SireneYvetteToB
-~Pardon me, Yvette, but you have been acting more subdued than usual as of late. Is something bothering you?~
+~打扰一下，Yvette，你最近比往常沉静许多。有什么心事吗？~
 DO ~SetGlobal("C0SireneYvetteToB","GLOBAL",1)~
-== YXYV25B ~N-no, lady Sirene. It's nothing that should concern you.~
-== BC0SIR25 ~If you are troubled, Yvette, then it does concern me. We are friends, after all.~
-== YXYV25B ~Thank you for reassuring me, but... it really isn't worth talking about.~
-== BC0SIR25 ~You may say so, but your face tells otherwise, Yvette. 'Tis as though you are in pain. Please, tell me what is wrong.~
-== YXYV25B ~It's... really nothing. I'm just feeling a little stressed. If you want to help me, then... could you pray together with me tonight? I think I'd like the company.~
-== BC0SIR25 ~Of course, Yvette. Every night, if that is what you require.~
+== YXYV25B ~不、不，塞琳女士。没什么值得你操心的。~
+== BC0SIR25 ~你若有烦恼，Yvette，那就与我有关。我们毕竟是朋友。~
+== YXYV25B ~谢谢你安慰我，可……这事真不值得一提。~
+== BC0SIR25 ~你嘴上这么说，脸色却不是这样，Yvette。你像是在受着煎熬。请告诉我怎么了。~
+== YXYV25B ~真……没什么。我只是有点压力大。你要是想帮我……今晚能陪我一起祈祷吗？我想有人陪着。~
+== BC0SIR25 ~当然，Yvette。只要你需要，每晚都可以。~
 EXIT

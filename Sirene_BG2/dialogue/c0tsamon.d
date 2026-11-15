@@ -4,7 +4,7 @@ CHAIN IF WEIGHT #-1
 ~Global("C0SireneTsamon","GLOBAL",0)~ THEN C0TSAMON C0SireneTsamon1
 ~好啊，好啊……你终究来了。我还在想你有没有这个胆量，伊尔梅特的塞琳。~
 DO ~SetGlobal("C0SireneTsamon","GLOBAL",1)~
-== C0SIRE2J ~我照你吩咐来了，塔罗娜信徒。现在我要你给答案。~
+== C0SIRE2J ~我照你吩咐来了，塔洛娜信徒。现在我要你给答案。~
 == C0TSAMON ~是吗？若那些答案不如你所愿呢？若我一一列出你犯下的罪，那些以你的存在为代价的死呢？~
 == C0SIRE2J ~你……你是谁？~
 == C0TSAMON ~我叫特萨蒙·德布里尔·索恩港……不过我猜这名字对你毫无意义。~
@@ -12,7 +12,7 @@ DO ~SetGlobal("C0SireneTsamon","GLOBAL",1)~
 == C0TSAMON ~我知道你许多事，塞琳。毕竟……你我流着同样的血。~
 == C0SIRE2J ~你——？！你是……~
 == C0TSAMON ~是的。我是特萨蒙，贵族德布里尔家族莱娜之子。我们的母亲。~
-== C0SIRE2J ~若你说的是真的，那你为什么叫我来？即使我们是兄妹，我是伊尔梅特的仆人，你是塔罗娜的。单凭信仰我们就是敌人。~
+== C0SIRE2J ~若你说的是真的，那你为什么叫我来？即使我们是兄妹，我是伊尔梅特的仆人，你是塔洛娜的。单凭信仰我们就是敌人。~
 == C0TSAMON ~也许吧。可要知道，我找你是为了我自己的目的，不是为了我的主神。你来这里很蠢，可我为此谢你……因为我的复仇即将结果。~
 == C0SIRE2J ~“你的复仇”……？你在说什么？~
 == C0TSAMON ~你不知道？那你那位同伴呢？<PRO_HESHE>知道你罪行的全貌吗？那么，<CHARNAME>，巴尔之子？你自己说。~
@@ -37,7 +37,7 @@ EXTERN C0TSAMON tsa1.4
 CHAIN C0TSAMON tsa1.4
 ~说话的时候结束了。我现在就要复仇，塞琳！~
 == C0SIRE2J ~等等，特萨蒙！没理由这么做！你为什么这样迫切要我的死？~
-== C0TSAMON ~到坟墓里跟我们的母亲一起去寻答案吧。你很快就去找她。现在尝尝塔罗娜的邪恶瘴气，愿你们的灵魂在深渊里翻滚！~
+== C0TSAMON ~到坟墓里跟我们的母亲一起去寻答案吧。你很快就去找她。现在尝尝塔洛娜的邪恶瘴气，愿你们的灵魂在深渊里翻滚！~
 END
 IF ~~ DO ~ClearAllActions()
 StartCutsceneMode()
@@ -56,9 +56,9 @@ DO ~SetGlobal("C0SireneTsamon","GLOBAL",2)~
 == C0TSAMON ~我们家乡的村民从不信任我们的母亲和我，因为我们高贵的血脉里有巴托的血。当你出生，你可见的血脉为人所知……那些猪猡中最坏的，在偏见与恐惧中，放火烧了我们的家……我听见母亲痛苦的*尖叫*……那是我带着还是婴儿的你逃走时的最后记忆。~
 == C0TSAMON ~我本可以救他们两个，惩罚那些害我们的渣滓……可他们死了，把你交给了我。我把你带到凯林伯沼泽，在那里我本该杀了你……可我的软弱压倒了我。~
 == C0SIRE2J ~这是……~
-== C0TSAMON ~我以为你死了。我对那些杀死我们父母的怪物施行了复仇，多年享受着脆弱的安宁假象，直到塔罗娜告知我你还活着。你是我的失败活生生的提醒……我不能容许它继续存在。~
+== C0TSAMON ~我以为你死了。我对那些杀死我们父母的怪物施行了复仇，多年享受着脆弱的安宁假象，直到塔洛娜告知我你还活着。你是我的失败活生生的提醒……我不能容许它继续存在。~
 == C0SIRE2J ~不……*这*就是你这样恨我的原因？~
-== C0TSAMON ~……够了。我再没有力量与你对抗，塞琳。加之我违背了塔罗娜的命令，她再不会眷顾我……死会是种恩赐。我不要你的怜悯，妹妹。快点杀了我，也许这恨意终能与我同死。~
+== C0TSAMON ~……够了。我再没有力量与你对抗，塞琳。加之我违背了塔洛娜的命令，她再不会眷顾我……死会是种恩赐。我不要你的怜悯，妹妹。快点杀了我，也许这恨意终能与我同死。~
 == C0SIRE2J ~我……~
 == IMOEN2J IF ~InParty("Imoen2")~ THEN ~来吧，塞琳，就看看他。你真觉得他该死吗？~
 == AERIEJ IF ~InParty("Aerie")~ THEN ~他……他看起来那么可怜……可他也敬拜一个邪恶女神。我分不清什么才是对的……~
@@ -66,7 +66,7 @@ DO ~SetGlobal("C0SireneTsamon","GLOBAL",2)~
 == VICONIJ IF ~InParty("Viconia")~ THEN ~这蠢货真以为血亲关系能救他？在卓尔社会里杀亲是常事。了结他，jalil，你若不想显得软弱。~
 == RASAADJ IF ~InParty("Rasaad")~ THEN ~我知道杀自己亲族是什么滋味。你也许不认识他，可他的血会永远染在你的良心上，塞琳。~
 == NEERAJ IF ~InParty("Neera")~ THEN ~天啊，我知道他差点杀了我们，可他看起来太惨了。我要是你，我不确定下得了手。~
-== KELDORJ IF ~InParty("Keldorn")~ THEN ~记住你信仰的信条，塞琳。即使他敬拜塔罗娜，他的心也并非全然不纯。你若真信他该得怜悯，那就饶了他。~
+== KELDORJ IF ~InParty("Keldorn")~ THEN ~记住你信仰的信条，塞琳。即使他敬拜塔洛娜，他的心也并非全然不纯。你若真信他该得怜悯，那就饶了他。~
 == MAZZYJ IF ~InParty("Mazzy")~ THEN ~仔细想，我的朋友。击败一个敌人与处死一个无力反抗的人，是两回事。~
 END
 IF ~GlobalGT("C0SireneFaith","GLOBAL",5)~ EXTERN C0SIRE2J a1.1
@@ -88,7 +88,7 @@ IF ~GlobalGT("C0SireneFaith","GLOBAL",-1)~ EXTERN C0SIRE2J a1.4
 IF ~GlobalLT("C0SireneFaith","GLOBAL",0)~ EXTERN C0SIRE2J a1.5
 
 CHAIN C0SIRE2J a1.3
-~你既这样迫切求死，特萨蒙……那我就不拦你。你身为塔罗娜信徒的罪，加上谋害我，已足以定你的罪。~
+~你既这样迫切求死，特萨蒙……那我就不拦你。你身为塔洛娜信徒的罪，加上谋害我，已足以定你的罪。~
 = ~伊尔梅特是慈悲的神，不会为此原谅我。可是……该由我用自己的手决定什么才是对的。~
 = ~再会，兄弟。~
 == C0TSAMON ~嘿……原来就这样结束了……~
@@ -104,23 +104,23 @@ END
 OR(3)
 CheckStatGT(Player1,17,INT)
 CheckStatGT(Player1,17,WIS)
-CheckStatGT(Player1,17,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.8
+CheckStatGT(Player1,17,CHR)~ + ~我觉得你该处死他。他不仅是塔洛娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.8
 + ~!Global("C0SireneRomanceActive","GLOBAL",2)
 CheckStatLT(Player1,18,INT)
 CheckStatLT(Player1,18,WIS)
-CheckStatLT(Player1,18,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.9
+CheckStatLT(Player1,18,CHR)~ + ~我觉得你该处死他。他不仅是塔洛娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.9
 + ~Global("C0SireneRomanceActive","GLOBAL",2)
 OR(3)
 CheckStatGT(Player1,14,INT)
 CheckStatGT(Player1,14,WIS)
-CheckStatGT(Player1,14,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.8
+CheckStatGT(Player1,14,CHR)~ + ~我觉得你该处死他。他不仅是塔洛娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.8
 + ~Global("C0SireneRomanceActive","GLOBAL",2)
 CheckStatLT(Player1,15,INT)
 CheckStatLT(Player1,15,WIS)
-CheckStatLT(Player1,15,CHR)~ + ~我觉得你该处死他。他不仅是塔罗娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.9
+CheckStatLT(Player1,15,CHR)~ + ~我觉得你该处死他。他不仅是塔洛娜信徒，还刚想杀我们。谁能说他不会再试一次？~ EXTERN C0SIRE2J a1.9
 
 CHAIN C0SIRE2J a1.5
-~我相信他该为所做的事去死。他已被复仇彻底吞没，而作为塔罗娜信徒，他的罪也该死。~
+~我相信他该为所做的事去死。他已被复仇彻底吞没，而作为塔洛娜信徒，他的罪也该死。~
 = ~可是……若我选择抛弃怜悯，伊尔梅特不会善待我。若我杀死自己的亲族，我怀疑我还能在他眼中赎清自己。~
 END
 ++ ~这个选择我不能替你做，塞琳。~ EXTERN C0SIRE2J a1.6

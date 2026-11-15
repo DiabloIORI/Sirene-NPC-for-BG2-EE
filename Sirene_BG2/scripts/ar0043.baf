@@ -11,7 +11,7 @@ THEN
 	StartCutSceneMode()
 	CutSceneId(Player1)
 	ForceRandomEncounter("")
-    DisplayStringHead(Player1,~You encounter a group of strangers during your travels...~)
+    DisplayStringHead(Player1,~旅途中，你遇见了一群陌生人……~)
 	FadeToColor([10.0],0)
 	Wait(4)
     ActionOverride(Player1,LeaveAreaLUA("c0sir0","",[1303.1028],SSE))
