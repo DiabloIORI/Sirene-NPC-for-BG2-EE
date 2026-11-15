@@ -53,7 +53,7 @@ SUBCOMPONENT ~为塞琳选择替换立绘？~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneS.bmp~
 		
-BEGIN ~纯正圣骑士~
+BEGIN ~纯正圣武士~
 SUBCOMPONENT ~为塞琳选择替换职业？~
 REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装塞琳模组~
 COPY_EXISTING ~c0sire2.cre~ ~override~

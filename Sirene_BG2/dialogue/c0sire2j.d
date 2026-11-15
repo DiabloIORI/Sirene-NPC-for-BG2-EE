@@ -785,7 +785,7 @@ I_C_T ARAN 51 C0SireneARAN51
 END
 
 I_C_T LYROS 11 C0SireneLYROS11
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我本希望与他分开后就再不见这疯狂的死灵法师。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我本希望与他分开后就再不见这疯狂的死灵师。~
 == LYROS ~而我本希望你已躺进棺材里，圣武士。看来我们俩都该失望了，嗯？~
 END
 
@@ -1705,7 +1705,7 @@ SAY ~我在阿斯卡特拉与伊尔梅特教会的兄弟姐妹们相处时，我
 END
 
 IF ~~ t3.8
-SAY ~我们中有些人认为它不公。另一些人相信那不是我们能决定的，因为死者之主凯兰沃受他同侪众神的命令维护那墙，要求信仰，以不肯敬拜者为警戒。~
+SAY ~我们中有些人认为它不公。另一些人相信那不是我们能决定的，因为死者之主克兰沃受他同侪众神的命令维护那墙，要求信仰，以不肯敬拜者为警戒。~
 IF ~~ + t3.10
 END
 
@@ -2087,7 +2087,7 @@ END
 // Friendship talk 8
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",16)~ THEN C0SIRE2J t8
-~「苦难自牺牲而来。忍耐自苦难而来。力量自忍耐而来。愿伊尔梅特赐<PRO_HIMHER>成功之力，与忍耐之坚。」~ [C0BLANK]
+~「苦难自牺牲而来。忍耐自苦难而来。力量自忍耐而来。愿伊尔梅特赐<PRO_HESHE>成功之力，与忍耐之坚。」~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
 ++ ~你祈祷时声音很美。比平常更美。~ + t8.1
@@ -4808,7 +4808,7 @@ IF ~~ EXIT
 END
 
 IF ~~ a5
-SAY ~我昨晚做了个梦，我的朋友，梦见一位<PRO_MANWOMAN>……我看不清<PRO_HISHER>的脸，可我觉得我仍认得<PRO_HIMHER>……~
+SAY ~我昨晚做了个梦，我的朋友，梦见一位<PRO_MANWOMAN>……我看不清<PRO_HISHER>的脸，可我觉得我仍认得<PRO_HESHE>……~
 = ~我相信……那是你，<CHARNAME>。~
 IF ~~ EXIT
 END

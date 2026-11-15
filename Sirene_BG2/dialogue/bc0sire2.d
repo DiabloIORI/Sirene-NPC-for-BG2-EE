@@ -87,7 +87,7 @@ DO ~SetGlobal("C0SireneAerie4","GLOBAL",1)~
 == BC0SIRE2 ~我确实明白。可我怕你是在过度补偿。我不愿你伤到自己。~
 == BAERIE ~好——好吧，可你还是在回避我的问题。~
 == BC0SIRE2 ~问题？~
-== BAERIE ~你为什么特别对我这么好？毕竟<CHARNAME>才是领队……我们更需要<PRO_HIMHER>，而不是我……~
+== BAERIE ~你为什么特别对我这么好？毕竟<CHARNAME>才是领队……我们更需要<PRO_HESHE>，而不是我……~
 == BC0SIRE2 ~是的，可这既是为了<CHARNAME>，也是为了我自己……还有为了你。我并没有你说的那么无私。~
 == BAERIE ~你……这话什么意思？~
 == BC0SIRE2 ~帮助别人是……一种分心，好让我不去想自己。它让我能……忘掉，我想，至少暂时忘掉一切困扰我的事。~
@@ -1204,11 +1204,11 @@ See("Yoshimo")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneYoshimo2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneYoshimo2
-~多跟我讲讲卡拉图。那听起来是个美丽的国度。~ [C0BLANK]
+~多跟我讲讲卡拉-图。那听起来是个美丽的国度。~ [C0BLANK]
 DO ~SetGlobal("C0SireneYoshimo2","GLOBAL",1)~
 == BYOSHIM ~我怕言语不足以形容我故乡的奇景，可我还是会尽力，我的朋友。你想知道什么？~
-== BC0SIRE2 ~凡你愿意讲的。我对卡拉图所知只有一点，都来自史书。它听起来几乎……太神秘了，不像是真的。~
-== BYOSHIM ~是的，在这些地方，卡拉图的传说被浪漫化得更多。可其中也有真实。比如那美，就再真实不过。~
+== BC0SIRE2 ~凡你愿意讲的。我对卡拉-图所知只有一点，都来自史书。它听起来几乎……太神秘了，不像是真的。~
+== BYOSHIM ~是的，在这些地方，卡拉-图的传说被浪漫化得更多。可其中也有真实。比如那美，就再真实不过。~
 == BC0SIRE2 ~全部吗？连樱花树也是？~
 == BYOSHIM ~尤其是樱花树。~
 == BC0SIRE2 ~我只见过图画……我真希望我能亲眼看看。~
@@ -1227,7 +1227,7 @@ CombatCounter(0)
 Global("C0SireneYoshimo3","GLOBAL",0)~ THEN BC0SIRE2 C0SireneYoshimo3
 ~你觉得你有朝一日会回家吗，吉野？~ [C0BLANK]
 DO ~SetGlobal("C0SireneYoshimo3","GLOBAL",1)~
-== BYOSHIM ~当然！我连想都不会想到死，除非再看一眼卡拉图。~
+== BYOSHIM ~当然！我连想都不会想到死，除非再看一眼卡拉-图。~
 == BC0SIRE2 ~你说得这么肯定。我羡慕……~
 == BYOSHIM ~你呢，我的朋友？你想再见你的故乡吗？~
 == BC0SIRE2 ~我……说实话，我不知道。我当然想过，可是……~

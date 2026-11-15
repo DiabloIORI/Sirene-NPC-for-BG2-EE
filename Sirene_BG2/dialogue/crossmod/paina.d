@@ -6,7 +6,7 @@ See("C0Paina")
 Global("C0SirenePaina1","GLOBAL",0)~ THEN BC0SIRE2 C0SirenePaina1
 ~我们俩在这世上都是边缘人，Pai'Na。~
 DO ~SetGlobal("C0SirenePaina1","GLOBAL",1)~
-== BC0Paina ~你若以为能在我俩之间找到共同点，圣骑士，那可要大失所望了。~
+== BC0Paina ~你若以为能在我俩之间找到共同点，圣武士，那可要大失所望了。~
 == BC0SIRE2 ~我知道你把我俩视作对立面。可说实话，我对你并无敌意。我看得出你坚硬的外表下受着孤独的煎熬。~
 == BC0Paina ~我从没觉得孤独。我的蜘蛛就是我需要的全部朋友。~
 == BC0SIRE2 ~Pai'Na……我知道孤独是什么滋味。掩饰它只会让你更痛苦。~

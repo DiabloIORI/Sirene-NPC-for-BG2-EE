@@ -38,7 +38,7 @@ END
 // Aran
 
 IF WEIGHT #-1 ~Global("C0SireneREAran","GLOBAL",1)~ Aran
-SAY ~你看起来很满足，<CHARNAME>。暗影之主想必备下了一顿丰盛的夜宴。~ [C0BLANK]
+SAY ~你看起来很满足，<CHARNAME>。影主想必备下了一顿丰盛的夜宴。~ [C0BLANK]
 ++ ~真的挺不错。~ DO ~SetGlobal("C0SireneREAran","GLOBAL",2)~ + Aran1
 ++ ~你不赞成？~ DO ~SetGlobal("C0SireneREAran","GLOBAL",2)~ + Aran2
 ++ ~呃，还行吧。~ DO ~SetGlobal("C0SireneREAran","GLOBAL",2)~ + Aran1
@@ -52,7 +52,7 @@ END
 
 IF ~~ Aran2
 SAY ~不……嗯，也许你选择和一个强盗共度私密夜晚时，我确实有点担心你。但我得承认，到目前为止他对我们还算客气。~
-= ~而且……暗影之主确实很有魅力，你想和他相处，我也不能怪你……我还一度以为自己得等你一整夜。~
+= ~而且……影主确实很有魅力，你想和他相处，我也不能怪你……我还一度以为自己得等你一整夜。~
 ++ ~哎呀，你这话听着都快吃醋了，塞琳。~ + Aran3
 ++ ~你知道，你要是有意思，我随时可以撮合你们俩……~ + Aran3
 ++ ~随便吧。我们还有事要办。~ EXIT
