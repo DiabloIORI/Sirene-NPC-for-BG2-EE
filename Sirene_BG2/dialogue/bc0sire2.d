@@ -45,7 +45,7 @@ DO ~SetGlobal("C0SireneAerie2","GLOBAL",1)~
 == BAERIE ~好吧，只是……至少你还能为自己的疤多少骄傲一点。我看着我的疤时，想到的全是我多软弱、多脆弱……连对我那么重要的东西都护不住。它们让我那么羞耻……~
 == BC0SIRE2 ~艾黎……不。别那样看自己。~
 == BC0SIRE2 ~你比你以为的更强。你失去了我无法想象的重要之物，可你能继续走下去，还能笑得出来、还能像这样关心别人，这就是你坚强的明证。你有许多值得我钦佩之处，我绝不会因为你的疤而看轻你。~
-== BAERIE ~哈哈！你这么说，我几乎就信了。谢谢你，塞琳。~
+== BAERIE ~哈哈！你这么说，我几乎就信了。谢谢你，茜琳。~
 EXIT
 
 CHAIN
@@ -55,7 +55,7 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneAerie3","GLOBAL",0)
 HPPercentLT("C0Sirene",75)~ THEN BAERIE C0SireneAerie3
-~塞琳？呃……对不起。~ [C0BLANK]
+~茜琳？呃……对不起。~ [C0BLANK]
 DO ~SetGlobal("C0SireneAerie3","GLOBAL",1)~
 == BC0SIRE2 ~你为何道歉，艾黎？你没做任何冒犯我的事。~
 == BAERIE ~可我做了！你为了护我又受伤了。~
@@ -79,7 +79,7 @@ Global("C0SireneAerie4","GLOBAL",0)~ THEN BC0SIRE2 C0SireneAerie3
 DO ~SetGlobal("C0SireneAerie4","GLOBAL",1)~
 == BAERIE ~嗯……好吧。~
 == BC0SIRE2 ~你若需要水或口粮，尽管开口。~
-== BAERIE ~塞琳？~
+== BAERIE ~茜琳？~
 == BC0SIRE2 ~什么事，艾黎？~
 == BAERIE ~你为什么，嗯，对我这么好？我——我是说，我不是说你不对别人好，可你特别照顾我。我能问为什么吗？~
 == BC0SIRE2 ~我……你不该多想，我的朋友。分担别人的重负正是我的职责。尤其是你的。~
@@ -93,7 +93,7 @@ DO ~SetGlobal("C0SireneAerie4","GLOBAL",1)~
 == BC0SIRE2 ~帮助别人是……一种分心，好让我不去想自己。它让我能……忘掉，我想，至少暂时忘掉一切困扰我的事。~
 == BAERIE ~哦。那是……~
 == BC0SIRE2 ~仔细想想，我其实是个很自私的人，不是吗？~
-== BAERIE ~不——不。我一点也不觉得那自私。我觉得那真的很可佩……我也希望我能那么容易就忘掉自己的烦恼。可是……我不觉得忘记是对的辦法。~
+== BAERIE ~不——不。我一点也不觉得那自私。我觉得那真的很可佩……我也希望我能那么容易就忘掉自己的烦恼。可是……我不觉得忘记是对的办法。~
 == BAERIE ~我想……我们真正需要的，是一个能说话的人，或者一个能靠一靠的肩膀。我——我知道我还软弱无知，可我想这一点，我能给你……我的朋友。~
 == BC0SIRE2 ~艾黎……我再没有更多可求的了……而你也永远可以指望我。~
 EXIT
@@ -115,7 +115,7 @@ DO ~SetGlobal("C0SireneAnomen1","GLOBAL",1)~
 == BANOMEN ~很好。既然如此，我就直说。我不信任你。~
 == BC0SIRE2 ~这一点很清楚。还有别的吗？~
 == BANOMEN ~你自称是哭泣之神的神圣斗士，可除了你自己的话，你没有任何凭据。而你那邪恶的血统，对我来说却一目了然。~
-== BC0SIRE2 ~我从未做过这样大胆的宣称，阿诺门，你在往我嘴里塞话。我只是伊尔梅特的信徒，仅此而已。~
+== BC0SIRE2 ~我从未做过这样大胆的宣称，阿诺门，你在往我嘴里塞话。我只是伊尔玛特的信徒，仅此而已。~
 == BC0SIRE2 ~我确实除了自己的话，没有别的能让你安心，可我向你保证，我的血统不能决定我是谁。~
 == BANOMEN ~哼。你这么说，可我并不会因此更信你。自己当心，提夫林。我若察觉一丝背信，愿海姆对你仁慈。~
 EXIT
@@ -128,7 +128,7 @@ See("C0Sirene")
 !Global("AnomenIsKnight","GLOBAL",1)
 !Global("AnomenIsNotKnight","GLOBAL",1)
 Global("C0SireneAnomen2","GLOBAL",0)~ THEN BANOMEN C0SireneAnomen2
-~邪——伊尔梅特信徒，如果你真是的话。我要问你一个问题，关于你的信仰。你真相信每个人都配得怜悯吗？~ [C0BLANK]
+~邪——伊尔玛特信徒，如果你真是的话。我要问你一个问题，关于你的信仰。你真相信每个人都配得怜悯吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneAnomen2","GLOBAL",1)~
 == BC0SIRE2 ~配得……？不是每个人，不。可那些真心想走回光里、想救赎自己的人……是的，我相信他们配得。~
 == BANOMEN ~哼。若容我说，你们这一派太宽恕了。就算一个人选择回到正道，他过往的行径仍须受审判。~
@@ -149,12 +149,12 @@ See("C0Sirene")
 !Global("AnomenIsKnight","GLOBAL",1)
 !Global("AnomenIsNotKnight","GLOBAL",1)
 Global("C0SireneAnomen3","GLOBAL",0)~ THEN BANOMEN C0SireneAnomen3
-~我问你，呃，塞琳。你打过许多小仗吗？讨伐邪恶势力的圣战？~ [C0BLANK]
+~我问你，呃，茜琳。你打过许多小仗吗？讨伐邪恶势力的圣战？~ [C0BLANK]
 DO ~SetGlobal("C0SireneAnomen3","GLOBAL",1)~
 == BC0SIRE2 ~我曾与恶人交战并将其击败，可是……没有你说得那么宏大。~
 == BANOMEN ~嗯。真令人失望。~
 == BC0SIRE2 ~那你呢，阿诺门？你面对邪恶的经验多吗？~
-== BANOMEN ~自然。讨伐丘陵巨人的圣战、巨魔山脉的野兽、西斯里西安帝国的入侵……只要骑士团征召执行任务，我总是第一批应召的人之一。~
+== BANOMEN ~自然。讨伐丘陵巨人的圣战、巨魔山脉的野兽、塞希里斯帝国的入侵……只要骑士团征召执行任务，我总是第一批应召的人之一。~
 == BC0SIRE2 ~听起来确实很了不起。~
 == BANOMEN ~的确。多年来，我在上位者面前一次又一次证明了自己。如你所见，我丝毫不比任何人差。~
 == BC0SIRE2 ~你说的「任何人」是真心的，还是指我？~
@@ -182,7 +182,7 @@ DO ~SetGlobal("C0SireneAnomen4","GLOBAL",1)~
 == BANOMEN ~我……我明白了。~
 == BANOMEN ~我很惊讶，以我待你的方式，你竟会显出这样的关切。我……不习惯这样的同情，即使来自骑士团里的同僚。你的信仰要求你这么做吗？~
 == BC0SIRE2 ~有几分……可我对你的关切不止于此。当我看见你离开家宅时的表情……那让我极不舒服。我必须确认你没事。~
-== BANOMEN ~也许……也许我看错你了，伊尔梅特信徒。~
+== BANOMEN ~也许……也许我看错你了，伊尔玛特信徒。~
 EXIT
 
 CHAIN
@@ -223,7 +223,7 @@ DO ~SetGlobal("C0SireneAnomen4","GLOBAL",1)~
 == BC0SIRE2 ~不比你评判自己、评判你为何失去了所珍视之物更过分。~
 == BANOMEN ~我所珍视的一切，都在骑士团——那些背信的狗——背弃我时失去了。~
 == BC0SIRE2 ~不是骑士团，阿诺门，而是你自己背叛了自己，背叛了你曾代表的一切。你跌得多深，竟看不清真相……~
-== BANOMEN ~你懂什么真相，伊尔梅特信徒？这难道也是你那宝贝「职责」的一部分，来纠缠一个堕落的人？笑吧，若这能让你满足，该死的伪君子！~
+== BANOMEN ~你懂什么真相，伊尔玛特信徒？这难道也是你那宝贝「职责」的一部分，来纠缠一个堕落的人？笑吧，若这能让你满足，该死的伪君子！~
 == BC0SIRE2 ~我不会那样做，阿诺门。对你来说还不算太晚，只要你能再看一眼光。~
 == BANOMEN ~让你的话噎死你吧，魔物。我再不想听！~
 == BC0SIRE2 ~你像个孩子似的。你可想过，你妹妹若看见你这副样子会说什么？~
@@ -241,7 +241,7 @@ AreaType(FOREST)
 Global("C0SireneCernd1","GLOBAL",0)~ THEN BC0SIRE2 C0SireneCernd1
 ~*啊——啊——啊嚏！*~ [C0BLANK]
 DO ~SetGlobal("C0SireneCernd1","GLOBAL",1)~
-== BCERND ~有什么事吗，塞琳？你莫非对什么植物过敏？~
+== BCERND ~有什么事吗，茜琳？你莫非对什么植物过敏？~
 == BC0SIRE2 ~不，没什么。也许是风里的什么东西，仅此而已。~
 == BCERND ~是的，正是花粉飞扬、新芽萌发的时节。不过几个月，新花便会在旧花凋亡之处开放，循环不息。自然的和谐便是如此。~
 == BC0SIRE2 ~这确实很美，瑟恩德，虽然我不像你那样为之着迷。~
@@ -324,7 +324,7 @@ DO ~SetGlobal("C0SireneEdwin2","GLOBAL",1)~
 == BEDWIN ~眼下来看，我大失所望。你没显出任何特殊能力。连最轻微的炼狱之力都没有。你确定你真是魔物所生，而不只是一个变形法术出了岔子的倒霉受害者？~
 == BC0SIRE2 ~你的话已接近侮辱，可我已习惯从你嘴里听到这类东西。我会忍。~
 == BEDWIN ~（该死！我以为那一定能激出反应。）我只关心这一点：你当真没有任何源自血统的显著力量？~
-== BC0SIRE2 ~那不是你该知道的，艾德温。我无意动用血中的力量。我有伊尔梅特赐予的恩典，那就够了。~
+== BC0SIRE2 ~那不是你该知道的，艾德温。我无意动用血中的力量。我有伊尔玛特赐予的恩典，那就够了。~
 == BEDWIN ~（嗯，算不上肯定，可目前我也只能问到这么接近了。我继续观察。）~
 EXIT
 
@@ -340,7 +340,7 @@ DO ~SetGlobal("C0SireneEdwin3","GLOBAL",1)~
 == BC0SIRE2 ~……~
 == BEDWIN ~怎么样？一个「是」或「否」就够了，应该不超过你那有限的心智容量。答了便罢。~
 == BC0SIRE2 ~你是个危险的人，艾德温。~
-== BEDWIN ~嗯？对，对。我完全明白。（她总算察觉了！）可眼下，我更想看看你血统里有哪些未开采的潜能。（也许还够我利用一番，嗯……）~
+== BEDWIN ~嗯？对，对。我完全明白。（她总算察觉了！）可眼下，我更想看看你血统里有哪些尚未发掘的潜力。（也许还够我利用一番，嗯……）~
 == BC0SIRE2 ~你的话有毒……我以前听过这类话，只是都在我自己的念头里。你想在我心里点起的这份渴望，去承认我的力量……我曾认识它，也滥用过它。我无论如何都不愿它回来。~
 == BEDWIN ~你那些孩子气的信念在此无关。力量就是一切，以及驾驭它的强韧意志。（我本人就是活例。）~
 == BC0SIRE2 ~我曾被力量诱惑过，艾德温。我不会再沦为它的猎物。~
@@ -375,11 +375,11 @@ Global("C0SireneHaerDalis1","GLOBAL",0)~ THEN BHAERDA C0SireneHaerDalis1
 ~你对诸位面了解多少，我的犄角苍鹰？~ [C0BLANK]
 DO ~SetGlobal("C0SireneHaerDalis1","GLOBAL",1)~
 == BC0SIRE2 ~怕是不多。尽管我血管里有那种血，无论出身还是教养，我都实实在在是个主物质界之人。~
-== BHAERDA ~随你说。不过我不过是好奇，因为我分明能感觉到巴托之触落在你身上。~
-== BC0SIRE2 ~巴托，九层地狱……有人告诉我，我的血统可以追溯到那里。这念头并不让我安心。~
-== BHAERDA ~你竟这样想，真是可惜。巴托并非那样难以容身之地，只要你有心玩弄权术，又能让那些魔物恩主觉得你足够有趣。~
-== BC0SIRE2 ~你在巴托演出过，海尔达利？当真？~
-== BHAERDA ~（笑）我若说谎，愿痛苦女士将我击倒。是的，巴托的魔鬼们喜欢我们讽刺他们的对手。当然，这很危险，可危险中自有刺激。台上一次失手，或观众不满，就会让你迅即与熵之女士相会。~
+== BHAERDA ~随你说。不过我不过是好奇，因为我分明能感觉到巴托地狱之触落在你身上。~
+== BC0SIRE2 ~巴托地狱，九层地狱……有人告诉我，我的血统可以追溯到那里。这念头并不让我安心。~
+== BHAERDA ~你竟这样想，真是可惜。巴托地狱并非那样难以容身之地，只要你有心玩弄权术，又能让那些魔物恩主觉得你足够有趣。~
+== BC0SIRE2 ~你在巴托地狱演出过，海尔达利？当真？~
+== BHAERDA ~（笑）我若说谎，愿痛苦女士将我击倒。是的，巴托地狱的魔鬼们喜欢我们讽刺他们的对手。当然，这很危险，可危险中自有刺激。台上一次失手，或观众不满，就会让你迅即与熵之女士相会。~
 == BC0SIRE2 ~你真是个怪人，海尔达利。你这样追忆那些事，我都不知该不该当真。可是……（笑）我承认，你身上有种特别的魅力。~
 == BHAERDA ~（鞠躬）我活着就是为了取悦……直到虚无将我们尽数收去的那一天。~
 EXIT
@@ -390,7 +390,7 @@ See("C0Sirene")
 !StateCheck("HaerDalis",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneHaerDalis2","GLOBAL",0)~ THEN BHAERDA C0SireneHaerDalis2
-~塞琳，我勇敢的苍鹰，你的神情阴沉得像虚无本身。要我为你奏一曲吗？~ [C0BLANK]
+~茜琳，我勇敢的苍鹰，你的神情阴沉得像虚无本身。要我为你奏一曲吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneHaerDalis2","GLOBAL",1)~
 == BC0SIRE2 ~那倒是个愉快的消遣。可你今天要演什么，我倒想知道。~
 == BHAERDA ~当然是我为你挑的曲子。啊，可别告诉我，我想猜。~
@@ -398,7 +398,7 @@ DO ~SetGlobal("C0SireneHaerDalis2","GLOBAL",1)~
 == BHAERDA ~嗯，那么也许是一首你故乡的歌？你秀美的容貌明显是科米尔人的，那么也许是这首……？~
 == BC0SIRE2 ~……不，怕是不熟。我年幼就成了孤儿，在北方长大，所以对科米尔文化所知甚少。~
 == BHAERDA ~那么给这倒霉的诗人一点提示？~
-== BC0SIRE2 ~好罢。我在剑湾以北、尚未到深水城的一个法伦北方村庄长大。这对你够了吗？~
+== BC0SIRE2 ~好罢。我在剑湾以北、尚未到深水城的一个费伦北方村庄长大。这对你够了吗？~
 == BHAERDA ~嗯，不好办，可若我没弄错，你一定知道这首……「嗯——哼——嗯——哼」……（吹口哨）~
 == BC0SIRE2 ~……啊！那首歌……~
 == BHAERDA ~（笑）大成功！这小调是否拨动了熟悉的弦？~
@@ -480,7 +480,7 @@ See("C0Sirene")
 !StateCheck("Imoen2",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneImoen3","GLOBAL",0)~ THEN BIMOEN2 C0SireneImoen3
-~嘿，塞琳。好久没见你读书了。怎么了？~ [C0BLANK]
+~嘿，茜琳。好久没见你读书了。怎么了？~ [C0BLANK]
 DO ~SetGlobal("C0SireneImoen3","GLOBAL",1)~
 == BC0SIRE2 ~*叹气*有什么用呢，爱蒙？我的秘密已经暴露了。你只会没完没了地取笑我。~
 == BIMOEN2 ~哎，你真觉得我会那样？~
@@ -498,7 +498,7 @@ DO ~SetGlobal("C0SireneImoen3","GLOBAL",1)~
 == BC0SIRE2 ~……~
 == BIMOEN2 ~怎么了？~
 == BC0SIRE2 ~……果然如此。你也喜欢言情小说，对不对？~
-== BIMOEN2 ~*脸红*才——才没有！你——你为什么会这么想？只是……从前老「胀肚」在烛堡给我读睡前故事。我怀念那些日子。~
+== BIMOEN2 ~*脸红*才——才没有！你——你为什么会这么想？只是……从前老肥肚在烛堡给我读睡前故事。我怀念那些日子。~
 == BC0SIRE2 ~（笑）你骗不了我，爱蒙。现在我知道你的秘密了。不过是的，我很乐意。~
 EXIT
 
@@ -535,11 +535,11 @@ CombatCounter(0)
 !See([ENEMY])
 Global("C0SirenePartyBG1","GLOBAL",1)
 Global("C0SireneJaheira1","GLOBAL",0)~ THEN BJAHEIR C0SireneJaheira1
-~见你安好真好，塞琳。以你爱冒险的性子，我怕我们在博德之门就已见你最后一面了。~ [C0BLANK]
+~见你安好真好，茜琳。以你爱冒险的性子，我怕我们在博德之门就已见你最后一面了。~ [C0BLANK]
 DO ~SetGlobal("C0SireneJaheira1","GLOBAL",1)~
 == BC0SIRE2 ~是的，虽然我但愿情形不是这样……我本希望再见卡立德一面。~
 == BJAHEIR ~我想他，可我不愿总是提起令人痛苦的回忆。我只能从祈祷他安息中寻得慰藉。~
-== BC0SIRE2 ~他安息了，贾希拉，我确信。我也会向伊尔梅特祈求他安好。~
+== BC0SIRE2 ~他安息了，贾希拉，我确信。我也会向伊尔玛特祈求他安好。~
 == BJAHEIR ~我很领情，可这是我宁愿独自做的事。当然，我无意冒犯。~
 == BC0SIRE2 ~若你宁愿如此。可你若需要我作伴，我一直都在。~
 EXIT
@@ -552,7 +552,7 @@ See("Jaheira")
 Global("C0SireneJaheira2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneJaheira2
 ~神明啊，我的头……~ [C0BLANK]
 DO ~SetGlobal("C0SireneJaheira2","GLOBAL",1)~
-== BJAHEIR ~怎么了，塞琳？你看着不舒服。你哪里受伤了吗？~
+== BJAHEIR ~怎么了，茜琳？你看着不舒服。你哪里受伤了吗？~
 == BC0SIRE2 ~不……至少据我所知没有伤口。可我头疼，而且觉得昨晚根本没睡。~
 == BJAHEIR ~别动，等一下。啊……我想我知道缘由了。你近来做过噩梦吗？~
 == BC0SIRE2 ~做过……近来比平常更频繁。~
@@ -567,7 +567,7 @@ See("C0Sirene")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneJaheira2","GLOBAL",1)~ THEN BJAHEIR C0SireneJaheira3
-~你今天脸色红润，塞琳。睡得好吗？~ [C0BLANK]
+~你今天脸色红润，茜琳。睡得好吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneJaheira2","GLOBAL",2)~
 == BC0SIRE2 ~是的。我昨夜做了个极美的梦。多谢你的草药，贾希拉。~
 == BJAHEIR ~记得按正确的分量用。过量会起反效果，或者更糟，让你长睡不醒。~
@@ -577,17 +577,17 @@ DO ~SetGlobal("C0SireneJaheira2","GLOBAL",2)~
 == BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我梦见了我们在剑湾的冒险。真奇怪，那些回忆如今竟如此愉快。~
 == BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~可是……回想起来，那时和现在不也一样吗？我们每天都杀人，正如如今。我每夜想起那些被我们杀死的人，他们缠着我……~
 == BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我明白了。那就是你噩梦的源头，是吗？~
-== BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~是的。我闭上眼，看见的全是血和尸体。我本以为击败萨瑞沃克就能结束这一切，可是……~
-== BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我觉得自己可悲，贾希拉。我本以为经历了那么多杀戮，这事会变得容易些。可它没有。我怕我的软弱让我不配作伊尔梅特的斗士。~
+== BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~是的。我闭上眼，看见的全是血和尸体。我本以为击败沙洛佛克就能结束这一切，可是……~
+== BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我觉得自己可悲，贾希拉。我本以为经历了那么多杀戮，这事会变得容易些。可它没有。我怕我的软弱让我不配作伊尔玛特的斗士。~
 == BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~……~
-== BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~塞琳。~
+== BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~茜琳。~
 == BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~什么事？~
 == BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~有这样念头的并不只你一个。我第一次遇见卡立德时，他在许多方面也是这样。他……每次被迫杀人都会受影响。~
 == BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~他常向我倾诉，而我会斥责他，以至于他学会了在我面前藏起来，可我怀疑那些念头从未离开他的心里。~
 == BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~真的？我从没想过。我从没见过卡立德在战斗中犹豫，尽管他厌恶战斗。那很鼓舞人。~
 == BJAHEIR IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我说的是实话。你若认为有良心让你更软弱，那我建议你先去问问自己的常识，再来找我。~
 == BC0SIRE2 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我明白了。谢谢你，贾希拉。~
-== BC0SIRE2 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我在想，我用这个是否正当。从前我梦见那些被我杀死的人，如今那些梦没了，我在想，我是否为了自私的目的除去痛苦，而背弃了伊尔梅特的教诲。~
+== BC0SIRE2 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我在想，我用这个是否正当。从前我梦见那些被我杀死的人，如今那些梦没了，我在想，我是否为了自私的目的除去痛苦，而背弃了伊尔玛特的教诲。~
 == BC0SIRE2 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~也许我终究该把这些草药还回去。~
 == BJAHEIR IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~这太荒唐了。若你的休息被噩梦搅扰，白天你还能做什么？让自己保持健康，好去保护同伴，这算自私之举吗？~
 == BC0SIRE2 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~我想确实如此。原谅我有这样的念头。~
@@ -601,7 +601,7 @@ See("C0Sirene")
 Global("C0SirenePartyBG1","GLOBAL",1)
 Global("C0SireneJaheira4","GLOBAL",2)
 HPPercentLT("C0Sirene",50)~ THEN BJAHEIR C0SireneJaheira4
-~你又再一次不顾必要地鲁莽与死亡调情。你就这么渴望死亡，以至于不顾性命地扑向敌人？~ [C0BLANK]
+~你又一次毫无必要地拿性命冒险，与死亡调情。你就这么想死，才会不顾性命地扑向敌人吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneJaheira4","GLOBAL",3)~
 == BC0SIRE2 ~我不愿死，贾希拉，可我宁愿舍命，也不愿因我的怯懦让另一个人倒下。~
 == BJAHEIR ~愚蠢的念头。你若是因自己的鲁莽倒下，又怎么去护住任何人？~
@@ -622,13 +622,13 @@ See("Jaheira")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("JaheiraNotHarper","GLOBAL",1)
 Global("C0SireneJaheira5","GLOBAL",0)~ THEN BC0SIRE2 C0SireneJaheira5
-~贾希拉，我……我不知道该说什么。想到你竟为<CHARNAME>……为我们的缘故舍弃竖琴手的位置。我无话可说。~ [C0BLANK]
+~贾希拉，我……我不知道该说什么。想到你竟为<CHARNAME>……为我们的缘故舍弃竖琴手同盟的位置。我无话可说。~ [C0BLANK]
 DO ~SetGlobal("C0SireneJaheira5","GLOBAL",1)~
-== BJAHEIR ~这事不必绕弯子，塞琳。你若不赞同我的行止，尽可当众说出来，只要你乐意。~
+== BJAHEIR ~这事不必绕弯子，茜琳。你若不赞同我的行止，尽可当众说出来，只要你乐意。~
 == BC0SIRE2 ~不，我——我不是那个意思。说实话，我钦佩你的决定。我知道那大概不是容易做的决定。~
 == BJAHEIR ~你这就错了。虽然我做选择时也许犹豫过，可那是唯一正确的选择。若有需要，我还会再做一次。~
-== BC0SIRE2 ~那么……你不后悔离开竖琴手？~
-== BJAHEIR ~我没有抛弃同伴，塞琳，并非真的抛弃。我虽舍弃了在他们当中的位置，可我这样做正是因为那才是竖琴手的正道。也许你还不明白这一点，可假以时日你会明白的。~
+== BC0SIRE2 ~那么……你不后悔离开竖琴手同盟？~
+== BJAHEIR ~我没有抛弃同伴，茜琳，并非真的抛弃。我虽舍弃了在他们当中的位置，可我这样做正是因为那才是竖琴手同盟的正道。也许你还不明白这一点，可假以时日你会明白的。~
 == BC0SIRE2 IF ~Alignment("C0Sirene",LAWFUL_GOOD)~ ~是的……也许你说得对。~
 == BC0SIRE2 IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ ~我相信我对此的理解比你以为的更深，贾希拉……而我相信你所做的没错。~
 EXIT
@@ -644,13 +644,13 @@ Global("C0SireneJan1","GLOBAL",0)~ THEN BJAN C0SireneJan1
 ~那么，你身上有点魔鬼的血，嗯，姑娘？这让我想起我母亲那边的三表兄，兰巴。~ [C0BLANK]
 DO ~SetGlobal("C0SireneJan1","GLOBAL",1)~
 == BC0SIRE2 ~你的表兄有魔物祖先？~
-== BJAN ~不，不完全是。我表兄兰巴是个颇有名气的法师，你看。他觉得法术对家族生意有益，果然，他的芜菁园是你见过最好的。他种的芜菁比我脑袋还大。他是你在法伦任何角落都找得到的最富有的詹森，这是实情。~
+== BJAN ~不，不完全是。我表兄兰巴是个颇有名气的法师，你看。他觉得法术对家族生意有益，果然，他的芜菁园是你见过最好的。他种的芜菁比我脑袋还大。他是你在费伦任何角落都找得到的最富有的姚森，这是实情。~
 == BC0SIRE2 ~我看不出这跟……任何事有什么关系。~
 == BJAN ~你等着瞧。兰巴遇到的事是场可怕的悲剧。他的竞争对手大多很嫉妒他，而他知道。所以，为防他们对他的宝贝生计使坏，他召来一个深坑魔物，签下千年契约，保护他的园子不受任何可能的破坏者侵扰。那魔物发现自己在看守一片芜菁田时，当然暴怒。可你若签了魔鬼的契约，双方谁都脱不了身。~
 == BC0SIRE2 ~哦。天哪。那不可能有好结果。~
-== BJAN ~确实。偏巧兰巴的妻子，一位名叫米莉·詹森的可爱花朵，看上了她丈夫召来的那个深坑魔物。起初只是芜菁园里愉快的长谈。然后她忽然有了身孕，兰巴心碎了。他把那魔物逐回九层地狱，烧平了自己的芜菁园，然后消失了。家族里没人知道他出了什么事，可这对家族是巨大的损失。~
+== BJAN ~确实。偏巧兰巴的妻子，一位名叫米莉·姚森的可爱花朵，看上了她丈夫召来的那个深坑魔物。起初只是芜菁园里愉快的长谈。然后她忽然有了身孕，兰巴心碎了。他把那魔物逐回九层地狱，烧平了自己的芜菁园，然后消失了。家族里没人知道他出了什么事，可这对家族是巨大的损失。~
 = ~至于米莉，她那个坎比翁儿子生来红皮，头顶还长着小角。我猜那小子若还活着，如今该跟你差不多年纪了。~
-== BC0SIRE2 ~扬，这故事……真让人不安。请原谅我要尽快把它忘掉。~
+== BC0SIRE2 ~姚恩，这故事……真让人不安。请原谅我要尽快把它忘掉。~
 EXIT
 
 // Keldorn
@@ -663,9 +663,9 @@ See("Keldorn")
 Global("C0SireneKeldorn1","GLOBAL",0)
 Global("C0SirenePartyBG1","GLOBAL",1)
 !Global("DomainPaladinBattle","GLOBAL",2)~ THEN BC0SIRE2 C0SireneKeldorn1
-~终于见到您真是荣幸，凯尔登爵士。阿詹提斯对您推崇备至。~ [C0BLANK]
+~终于见到您真是荣幸，凯东爵士。阿詹提斯对您推崇备至。~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldorn1","GLOBAL",1)~
-== BKELDOR ~那你一定是塞琳了。荣幸的是我，小姑娘。阿詹提斯对你格外热心地称赞。我很少见他把别人捧得这么高，尤其是在书信里。~
+== BKELDOR ~那你一定是茜琳了。荣幸的是我，小姑娘。阿詹提斯对你格外热心地称赞。我很少见他把别人捧得这么高，尤其是在书信里。~
 = ~说实话，我很惊讶像你这样年轻的人竟已踏上圣武士之路，并如此忠诚地坚守。~
 == BC0SIRE2 ~并不像您说的那么了不起，先生。虽然我的血统让事情……更难些，我想。~
 == BKELDOR ~我得承认，当我收到阿詹提斯详述他剑湾之行成果的信时，看到他提到你的形貌，我很惊讶。~
@@ -681,17 +681,17 @@ See("C0Sirene")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneKeldorn2","GLOBAL",0)~ THEN BKELDOR C0SireneKeldorn2
-~我承认我对受苦圣战者所知甚少。能跟我讲讲你们这一派吗，塞琳？~ [C0BLANK]
+~我承认我对受苦圣战者所知甚少。能跟我讲讲你们这一派吗，茜琳？~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldorn2","GLOBAL",1)~
-== BC0SIRE2 ~除了我自己多年的服事，我能讲的不多，凯尔登爵士。我从没遇见过同派的另一个人。~
-== BKELDOR ~真的？我记得你提过，你年轻时生活在伊尔梅特的信徒当中。没有别的圣武士吗？~
-== BC0SIRE2 ~没有，先生。虽然圣武士也在伊尔梅特的信众之中，可我们很稀少，因为我们大体上是个和平的教派。我是个……例外。~
+== BC0SIRE2 ~除了我自己多年的服事，我能讲的不多，凯东爵士。我从没遇见过同派的另一个人。~
+== BKELDOR ~真的？我记得你提过，你年轻时生活在伊尔玛特的信徒当中。没有别的圣武士吗？~
+== BC0SIRE2 ~没有，先生。虽然圣武士也在伊尔玛特的信众之中，可我们很稀少，因为我们大体上是个和平的教派。我是个……例外。~
 == BKELDOR ~是什么让你成了例外？~
 == BC0SIRE2 ~我年轻时脾气火爆，先生。我的血让我与其他孩子疏远，他们因此敌视我。~
 == BKELDOR ~孩子有时很残忍。我的女儿们也受过同样的对待，说来令人难过。~
 == BC0SIRE2 ~最终我受不了了，于是打了一架。我并不为此自豪。~
 == BKELDOR ~可祭司们觉得习武的使命能约束你。明智的选择。~
-== BC0SIRE2 ~我并不总这样觉得，先生。我常觉得自己不配以这样的身份服事伊尔梅特。~
+== BC0SIRE2 ~我并不总这样觉得，先生。我常觉得自己不配以这样的身份服事伊尔玛特。~
 == BKELDOR ~别怀疑自己，孩子。让过去留在过去，让你的未来行止决定你是否配得。~
 EXIT
 
@@ -701,14 +701,14 @@ See("C0Sirene")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneKeldorn3","GLOBAL",0)~ THEN BKELDOR C0SireneKeldorn3
-~你在伊尔梅特的教会服事多久了？~ [C0BLANK]
+~你在伊尔玛特的教会服事多久了？~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldorn3","GLOBAL",1)~
 == BC0SIRE2 ~依我记忆，至今八年。与您数十年的服事相比，不过微末。~
-== BKELDOR ~是的，可决定骑士价值的是奉献，不是年岁，塞琳。~
-== BC0SIRE2 ~若说奉献，凯尔登爵士，那我可不敢与您争。~
+== BKELDOR ~是的，可决定骑士价值的是奉献，不是年岁，茜琳。~
+== BC0SIRE2 ~若说奉献，凯东爵士，那我可不敢与您争。~
 == BKELDOR ~哈！你给我的赞誉超过我应得的，孩子。你过往里必定有些事能让你自豪地讲述。~
 == BC0SIRE2 ~*叹气*确有一件事，先生，可我想到它时，感到的不是自豪。您知道铁暴君吗？~
-== BKELDOR ~知道，海岸大路那一带有名的奴隶领主。若我没记错，他叫阿萨多。他的恐怖统治在去年以他的死结束了，不是吗？~
+== BKELDOR ~知道，海岸大道那一带有名的奴隶领主。若我没记错，他叫阿萨多。他的恐怖统治在去年以他的死结束了，不是吗？~
 == BC0SIRE2 IF ~OR(2) PartyHasItem("c0sw2h") PartyHasItem("c0sw2h2")~ THEN ~是的。因为我杀了他。这把剑……曾是他的。~
 == BC0SIRE2 IF ~!PartyHasItem("c0sw2h") !PartyHasItem("c0sw2h2")~ THEN ~是的。因为我杀了他。~
 == BKELDOR ~真的？若果真如此，那你当然值得称赞。很少人能在这样年轻时成就这么多。~
@@ -724,13 +724,13 @@ See("Keldorn")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneKeldorn4","GLOBAL",0)
 Global("LadyMaria","GLOBAL",5)~ THEN BC0SIRE2 C0SireneKeldorn4b
-~您看上去比以往更快活了，凯尔登爵士。~ [C0BLANK]
+~您看上去比以往更快活了，凯东爵士。~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldorn4","GLOBAL",1)~
 == BKELDOR ~我为何不快活？我的心从没有过这样轻，仿佛卸下了一副重担。~
 == BC0SIRE2 ~是，我不怀疑。只是……我从没见过您这样……满足。~
 == BKELDOR ~是的，也许确实如此。我们这一行里值得满足的事少得可怜。可自从玛丽亚与我和解，我们的烦恼就显得远了。我很久没有过这样的感觉了。~
 == BC0SIRE2 ~我希望，若我有一天有了家……我也能感受到同样的东西。~
-== BKELDOR ~别担心，塞琳。你还年轻，前头有一整段人生。而懂得不重犯我的错……你会比这老糊涂更早体会到同样的喜乐。~
+== BKELDOR ~别担心，茜琳。你还年轻，前头有一整段人生。而懂得不重犯我的错……你会比这老糊涂更早体会到同样的喜乐。~
 EXIT
 
 CHAIN 
@@ -741,13 +741,13 @@ See("C0Sirene")
 Global("C0SireneKeldorn5","GLOBAL",0)
 Global("C0SirenePartyBG1","GLOBAL",1)
 Global("DomainPaladinBattle","GLOBAL",2)~ THEN BKELDOR C0SireneKeldorn5
-~你显得筋疲力尽，塞琳。没休息好吗？~ [C0BLANK]
+~你显得筋疲力尽，茜琳。没休息好吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldorn5","GLOBAL",1)~
-== BC0SIRE2 ~我睡不着，凯尔登爵士。我闭上眼，就看见我的朋友阿詹提斯躺在地上死去。那是桩大罪。~
+== BC0SIRE2 ~我睡不着，凯东爵士。我闭上眼，就看见我的朋友阿詹提斯躺在地上死去。那是桩大罪。~
 == BKELDOR ~是的，是桩罪，可不是我们的，孩子。过错在于那欺瞒了我们所有人的邪恶。~
 == BC0SIRE2 ~也许吧，可终究是我的剑促成了他的终结，先生。我怎能不想他？~
-== BKELDOR IF ~!Dead("Firkra02")~ THEN ~我们会让造成他不义之死的邪恶受到制裁，塞琳。你不必为阿詹提斯的死感到自责。~
-== BKELDOR IF ~Dead("Firkra02")~ THEN ~害死阿詹提斯的恶龙已经倒下了，塞琳，那些被不义杀害的人已经得到复仇。你不必为过去的事感到愧疚。~
+== BKELDOR IF ~!Dead("Firkra02")~ THEN ~我们会让造成他不义之死的邪恶受到制裁，茜琳。你不必为阿詹提斯的死感到自责。~
+== BKELDOR IF ~Dead("Firkra02")~ THEN ~害死阿詹提斯的恶龙已经倒下了，茜琳，那些被不义杀害的人已经得到复仇。你不必为过去的事感到愧疚。~
 == BC0SIRE2 ~这……还不够，先生。可我仍感激您的宽慰。~
 EXIT
 
@@ -758,7 +758,7 @@ See("Keldorn")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneKeldorn6","GLOBAL",0)
 !Alignment("C0Sirene",LAWFUL_GOOD)~ THEN BC0SIRE2 C0SireneKeldorn6
-~我一直没听到您的想法，凯尔登爵士……是我的行止让您如此不快吗？~ [C0BLANK]
+~我一直没听到您的想法，凯东爵士……是我的行止让您如此不快吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneKeldorn6","GLOBAL",1)~
 == BKELDOR ~倒也不是。我……不会因你的决定责怪你，尽管我不能赞同。服事你的神该被视为神圣的荣誉，不该轻易舍弃。~
 == BC0SIRE2 ~那并非容易的决定，先生，可是……尽管我有遗憾，我相信我现在走的这条路。~
@@ -778,17 +778,17 @@ See("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneKorgan1","GLOBAL",0)~ THEN BC0SIRE2 C0SireneKorgan1
-~科根，除了杀戮，你还从别的事里得到乐趣吗？~ [C0BLANK]
+~寇根，除了杀戮，你还从别的事里得到乐趣吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneKorgan1","GLOBAL",1)~
 == BKORGAN ~这算什么傻问题，嗯，女人？当然有！~
 == BC0SIRE2 ~我不是说那些表面的东西。我亲眼见过你的种种纵情，虽然并不情愿，可你在战场上时……不一样。仿佛你在战斗里失去了人性。~
 == BKORGAN ~嘿，嘿嘿，这话也许你说对了，女人，这可是头一回。好麦酒、娘们和金子都不错，可一把沾血的斧头才是我的真爱，头等要紧。~
-== BC0SIRE2 ~你能这么轻描淡写地谈这种事，科根？你的良心从不影响你吗？~
+== BC0SIRE2 ~你能这么轻描淡写地谈这种事，寇根？你的良心从不影响你吗？~
 == BKORGAN ~不。~
 == BC0SIRE2 ~当真？~
-== BKORGAN ~你自己也是个杀手，女人，别不认。科根对那些敢挡他斧头的蠢货毫无悔意。就算我脑子里有个小声音说别的，它也被我敌人的惨叫和斧头劈开他们骨头的声音盖过去了。~
+== BKORGAN ~你自己也是个杀手，女人，别不认。寇根对那些敢挡他斧头的蠢货毫无悔意。就算我脑子里有个小声音说别的，它也被我敌人的惨叫和斧头劈开他们骨头的声音盖过去了。~
 == BKORGAN ~啊，看战场上那片红雾……那才是我活着的意义。这就是生活之道，姑娘，你最好趁还能享受就享受，哈哈！~
-== BC0SIRE2 ~你真是个令人作呕的存在，科根。我们说得够多了。~
+== BC0SIRE2 ~你真是个令人作呕的存在，寇根。我们说得够多了。~
 EXIT
 
 // Mazzy
@@ -801,7 +801,7 @@ See("Mazzy")
 Global("C0SireneMazzy1","GLOBAL",0)~ THEN BC0SIRE2 C0SireneMazzy1
 ~你过得好吗，玛兹女士？~ [C0BLANK]
 DO ~SetGlobal("C0SireneMazzy1","GLOBAL",1)~
-== BMAZZY ~请别这样，塞琳，不必这么拘礼。我就是玛兹。~
+== BMAZZY ~请别这样，茜琳，不必这么拘礼。我就是玛兹。~
 == BC0SIRE2 ~可是……~
 == BMAZZY ~不，请别。我知道你是好意，可被人这样称呼让我不自在。我不是真正的骑士，不配这样的称号。~
 == BC0SIRE2 ~若……若你希望如此。很抱歉冒犯了你。~
@@ -814,17 +814,17 @@ See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneMazzy2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneMazzy2
-~（低声）「痛苦自牺牲而来。忍耐自痛苦而来。力量自忍耐而来。愿伊尔梅特赐我勇气，为所爱之人舍命，也赐我力量去忍耐。」~ [C0BLANK]
+~（低声）「痛苦自牺牲而来。忍耐自痛苦而来。力量自忍耐而来。愿伊尔玛特赐我勇气，为所爱之人舍命，也赐我力量去忍耐。」~ [C0BLANK]
 DO ~SetGlobal("C0SireneMazzy2","GLOBAL",1)~
-== BMAZZY ~又在祈祷，塞琳？我得说，我钦佩你的虔诚。~
+== BMAZZY ~又在祈祷，茜琳？我得说，我钦佩你的虔诚。~
 == BC0SIRE2 ~哦，你好，玛兹女士。希望我没打扰你。~
 == BMAZZY ~当然没有。而且如我先前所说，不必这样正式地称呼我。~
 == BC0SIRE2 ~原谅我。只是……跟你说话时，我觉得自己不配。~
-== BMAZZY ~不配？请别这样，塞琳，不必这样想。你作为骑士的受人敬重，并不比我少。~
+== BMAZZY ~不配？请别这样，茜琳，不必这样想。你作为骑士的受人敬重，并不比我少。~
 == BC0SIRE2 ~是的，可是……~
 == BMAZZY ~不，别再说下去。我承认我起初有过疑虑，可亲眼见你对你神的虔诚，已经抹去了我可能有的一切怀疑。我不怨你正当赢得你的圣武士身份，我更希望我们以平等的身份相待。~
 == BC0SIRE2 ~这对我意义重大，玛兹女——我是说，玛兹。我希望将来我们能互相倚靠。~
-== BMAZZY ~确实。我本想为阿佛瑞恩、为我失去的朋友们做我自己的祈祷。你愿意陪我坐一会儿吗？~
+== BMAZZY ~确实。我本想为阿尔孚琳、为我失去的朋友们做我自己的祈祷。你愿意陪我坐一会儿吗？~
 == BC0SIRE2 ~那是我的荣幸。~
 EXIT
 
@@ -840,7 +840,7 @@ DO ~SetGlobal("C0SireneMazzy3","GLOBAL",1)~
 == BMAZZY ~为何不能？除非我大错特错，你在这方面有天分。我练弓这么多年，我想我比多数人更清楚。~
 == BMAZZY ~这技法很难，可我觉得你天生就是这块料。你若愿意，我很想教你。~
 == BC0SIRE2 ~不，玛兹……也许我该解释一下。~
-== BC0SIRE2 ~我年轻时确实练过弓。我甚至一度熟练到能去打猎。可那是在我开始作为伊尔梅特信徒受训之前。~
+== BC0SIRE2 ~我年轻时确实练过弓。我甚至一度熟练到能去打猎。可那是在我开始作为伊尔玛特信徒受训之前。~
 == BC0SIRE2 ~自从我接受了这一派关于牺牲与殉道的教义……我便相信，要真正护住别人，我必须成为他们不屈的壁垒。于是我下定决心，再也不持弓。~
 == BMAZZY ~啊……我想我现在明白了。原谅我，我的朋友，这么坚持，却没完全弄懂你的动机。你选择兵器的理由令人敬佩。~
 == BC0SIRE2 ~别道歉，玛兹。我知道你一心为我好。而且说实话，我怀疑我无论如何也比不上你的弓术。~
@@ -858,7 +858,7 @@ Global("C0SireneMazzy4","GLOBAL",0)~ THEN BMAZZY C0SireneMazzy4
 ~这对你来说艰难吗，我的朋友？~ [C0BLANK]
 DO ~SetGlobal("C0SireneMazzy4","GLOBAL",1)~
 == BC0SIRE2 ~你指什么，玛兹？~
-== BMAZZY ~我指你作为伊尔梅特斗士的角色。我无法想象这对你是轻松的一生，若你容我这么说。~
+== BMAZZY ~我指你作为伊尔玛特斗士的角色。我无法想象这对你是轻松的一生，若你容我这么说。~
 == BC0SIRE2 ~不……不，并不轻松。我确实经历过许多不信任与偏见。~
 == BMAZZY ~你让我对自己的处境有了些新的看法……尽管我过去面对过针对我种族的种种居高临下之言，我仍……算是被接受，姑且这么说，而且在我以剑与弓证明自己之后，再没有蠢到继续为难我的人。可是……我无法想象你的处境。~
 == BC0SIRE2 ~是的，也许这世界永远不会接纳我……可善良的男人和女人接纳了我。有<CHARNAME>，还有你……我的朋友。~
@@ -876,7 +876,7 @@ See("Mazzy")
 Global("C0SireneMazzy6","GLOBAL",0)~ THEN BC0SIRE2 C0SireneMazzy5
 ~玛兹……你和瓦里格之间有什么不和吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneMazzy6","GLOBAL",1)~
-== BMAZZY ~什么？我不确定你在暗示什么，塞琳。~
+== BMAZZY ~什么？我不确定你在暗示什么，茜琳。~
 == BC0SIRE2 ~你近来把许多注意力放在他身上。不该我来多问，可我偶尔听见他在你听不到的地方嘟囔。~
 == BMAZZY ~他在嘟囔？嗯……也许我近来对他要求多了些。我还不习惯有个扈从，而他从不直接跟我抱怨。~
 == BC0SIRE2 ~瓦里格，做扈从？当真？~
@@ -896,16 +896,16 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneMinsc1","GLOBAL",0)
 Global("C0SirenePartyBG1","GLOBAL",1)~ THEN BMINSC C0SireneMinsc1
-~啊，与战友重逢总是令人欢喜的日子，塞琳！瞧布布多兴奋，想到又能在你身边作战！~ [C0BLANK]
+~啊，与战友重逢总是令人欢喜的日子，茜琳！瞧布布多兴奋，想到又能在你身边作战！~ [C0BLANK]
 DO ~SetGlobal("C0SireneMinsc1","GLOBAL",1)~
 == BC0SIRE2 ~是的，我也很高兴再见到你，明斯克。我非常想念你的陪伴。~
-== BMINSC ~这让明斯克眼眶湿了，布布也是，虽然我们看不见。布布说，他原怕塞琳离开我们后会孤独，现在不怕了！~
-== BC0SIRE2 ~真的，能又置身朋友之中我很高兴。我只希望……迪娜希尔也在。~
-== BMINSC ~是的……迪娜希尔的死是我最大的耻辱。我的失败让我蒙羞。~
+== BMINSC ~这让明斯克眼眶湿了，布布也是，虽然我们看不见。布布说，他原怕茜琳离开我们后会孤独，现在不怕了！~
+== BC0SIRE2 ~真的，能又置身朋友之中我很高兴。我只希望……戴娜黑也在。~
+== BMINSC ~是的……戴娜黑的死是我最大的耻辱。我的失败让我蒙羞。~
 == BC0SIRE2 ~我明白，明斯克，真的。我也没能护住别人。有时我甚至希望……希望倒下的是我。~
-== BMINSC ~明斯克很懂这种感觉。我本愿自豪地以我的命换迪娜希尔的命，可是……~
+== BMINSC ~明斯克很懂这种感觉。我本愿自豪地以我的命换戴娜黑的命，可是……~
 == BC0SIRE2 ~不，别再说下去，我的朋友。已成的事就已成定局。现在剩下的，只有护住还活着的人。~
-== BMINSC ~还有复仇！明斯克不见迪娜希尔得报此仇，绝不罢休！~
+== BMINSC ~还有复仇！明斯克不见戴娜黑得报此仇，绝不罢休！~
 EXIT
 
 CHAIN
@@ -918,9 +918,9 @@ HPPercentLT("Minsc",75)~ THEN BMINSC C0SireneMinsc2
 ~唉，明斯克流血了！可这些伤会变成疤，而它们带来骄傲！我们又胜利了，我的朋友！~ [C0BLANK]
 DO ~SetGlobal("C0SireneMinsc2","GLOBAL",1)~
 == BC0SIRE2 ~是的，明斯克。你打得很好，一如往常。有你在战场上伴我，我觉得自己也受了激励，要打得更狠。~
-== BMINSC ~布布说塞琳也有很多疤。你一定像明斯克一样，经历过许多战斗。~
+== BMINSC ~布布说茜琳也有很多疤。你一定像明斯克一样，经历过许多战斗。~
 == BC0SIRE2 ~我和你并没有那么大不同，明斯克。我以为他人的缘故流血为荣，好让他们免受那份痛。~
-== BMINSC ~好目标！可是……明斯克担心，这对小小的塞琳来说也许太重了。~
+== BMINSC ~好目标！可是……明斯克担心，这对小小的茜琳来说也许太重了。~
 == BC0SIRE2 ~也许确实太重。我毫不怀疑有一天我会以职责之名倒下。可……到那一天，我唯一的遗憾会是我没能多救一些人。我的生命也许自出生起就被诅咒，可我会坚持下去，看看它究竟有没有价值。~
 == BMINSC ~这样的话只有真正的英雄才说得出来！好好记住，布布。能在你身边作战，是明斯克最大的快乐，我的朋友！~
 EXIT
@@ -931,17 +931,17 @@ See("C0Sirene")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneMinsc3","GLOBAL",0)~ THEN BMINSC C0SireneMinsc3
-~明斯克有个问题要问我们的朋友塞琳。~ [C0BLANK]
+~明斯克有个问题要问我们的朋友茜琳。~ [C0BLANK]
 DO ~SetGlobal("C0SireneMinsc3","GLOBAL",1)~
 == BC0SIRE2 ~什么问题，明斯克？~
-== BMINSC ~布布说塞琳伤得很重。可明斯克在我们的朋友身上看不见任何伤。明斯克很不明白，为什么布布说你受伤了。~
+== BMINSC ~布布说茜琳伤得很重。可明斯克在我们的朋友身上看不见任何伤。明斯克很不明白，为什么布布说你受伤了。~
 == BC0SIRE2 ~……~
 == BC0SIRE2 ~布布还跟你说了什么，我的朋友？~
 == BMINSC ~没有了，可他告诉明斯克，该跟你好好长谈一次，谈谈你为什么受伤——是「心」，不是「硬」，谢谢你，布布——是谈心的长谈。~
 == BC0SIRE2 ~我明白了……原来是这件事。不，明斯克，我没有受伤，可谢谢你的关心。确实有痛，但那痛在里面。~
 == BMINSC ~伤在里面？这下明斯克完全糊涂了。~
 == BC0SIRE2 ~不，明斯克，那痛不是实体。它只是一种感受，跟你自己的失落相似……我感觉到的就是这个。~
-== BMINSC ~明斯克为失去迪娜希尔非常难过。你是说你一直都很难过吗？哦，不！那太可怕了！明斯克有时难过到想把心挖出来，好让那难过消失。他不能让朋友们也有同样的感受！~
+== BMINSC ~明斯克为失去戴娜黑非常难过。你是说你一直都很难过吗？哦，不！那太可怕了！明斯克有时难过到想把心挖出来，好让那难过消失。他不能让朋友们也有同样的感受！~
 == BC0SIRE2 ~别担心，明斯克。说出来会让它……好一些。也许这就是布布让你来跟我说话的原因。谢谢你。~
 == BMINSC ~这是布布的主意。所以明斯克觉得你该谢他。~
 == BC0SIRE2 ~（笑）好罢。谢谢你，布布。~
@@ -955,15 +955,15 @@ See("C0Sirene")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneNalia1","GLOBAL",0)~ THEN BNALIA C0SireneNalia1
-~塞琳，你是伊尔梅特的信徒。你帮过很多不幸的人吗？~ [C0BLANK]
+~茜琳，你是伊尔玛特的信徒。你帮过很多不幸的人吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneNalia1","GLOBAL",1)~
-== BC0SIRE2 ~凡我力所能及的，我都帮，娜莉亚。虽然……确实有许多人生活在贫困中。~
-== BNALIA ~我在城里跟伊尔梅特的祭司们谈过许多。我不属于这一信仰，可我敬重它的信徒。可是……我不知道伊尔梅特信徒也有圣武士。你们这一信仰要战士做什么？~
-== BC0SIRE2 ~说实话，几乎不需要。伊尔梅特的教士大体上厌恶暴力。然而……有时那是无法避免的。~
+== BC0SIRE2 ~凡我力所能及的，我都帮，娜里亚。虽然……确实有许多人生活在贫困中。~
+== BNALIA ~我在城里跟伊尔玛特的祭司们谈过许多。我不属于这一信仰，可我敬重它的信徒。可是……我不知道伊尔玛特信徒也有圣武士。你们这一信仰要战士做什么？~
+== BC0SIRE2 ~说实话，几乎不需要。伊尔玛特的教士大体上厌恶暴力。然而……有时那是无法避免的。~
 == BNALIA ~我能理解。可你们的信仰并不常诉诸于此，对吧？你们不是首先为他人寻求怜悯吗？~
 == BC0SIRE2 ~是的，我们相信人人都有救赎的可能，只要他们真心愿意。这很少容易，可那些真能为自己的行止悔恨的人，罪可以被赦免。~
 == BNALIA ~*叹气*你说得好像很容易。可我不会相信，看我认识的那些人……~
-== BC0SIRE2 ~娜莉亚？~
+== BC0SIRE2 ~娜里亚？~
 == BNALIA ~什么？哦，算了。也许我们改天再谈完这个。~
 EXIT
 
@@ -973,7 +973,7 @@ See("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneNalia2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneNalia2
-~自我们上次谈过，我想了很多，娜莉亚。你相信真有人天生不可能为善吗？~ [C0BLANK]
+~自我们上次谈过，我想了很多，娜里亚。你相信真有人天生不可能为善吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneNalia2","GLOBAL",1)~
 == BNALIA ~*叹气*说实话？我没想过。你先前的话让我停顿了一下，可是……我的经验说有。~
 == BC0SIRE2 ~真的？你愿意跟我说一个吗？~
@@ -982,7 +982,7 @@ DO ~SetGlobal("C0SireneNalia2","GLOBAL",1)~
 == BC0SIRE2 ~更坏？我——我几乎无法想象。~
 == BNALIA ~我起初也无法。父亲不喜欢谈这些，尤其在我面前，可我在关起的门后听过一些事。社会上的贵族不比罪犯好，用平民的劳作填满自己的口袋。真恶心。~
 == BNALIA ~他们也不觉得这有什么不对。要说的话，他们还*引以为傲*。他们在人前那副高高在上的样子，炫耀自己的财富与势力……我甚至无法想象他们会做哪怕一件好事。~
-== BC0SIRE2 ~这确实可怕，娜莉亚，我同意。可我们俩又能做什么？~
+== BC0SIRE2 ~这确实可怕，娜里亚，我同意。可我们俩又能做什么？~
 == BNALIA ~*叹气*我想什么也做不了。可也许有一天……~
 EXIT
 
@@ -1005,7 +1005,7 @@ DO ~SetGlobal("C0SireneValygar1","GLOBAL",1)~
 == BC0SIRE2 ~我很遗憾。她现在在哪里？~
 == BVALYGA ~她和我父亲都成了污秽的不死之物。留下我去结束他们的痛苦，让他们的身体安息。那记忆至今缠着我。~
 == BC0SIRE2 ~太可怕了……我无法想象你被迫做这种事有多痛苦。~
-== BVALYGA ~这是我家族的诅咒，塞琳。魔法给我的人生带来的只有悲伤。除了邪恶之力，还有什么会在这么多人身上造出这样的疯狂？~
+== BVALYGA ~这是我家族的诅咒，茜琳。魔法给我的人生带来的只有悲伤。除了邪恶之力，还有什么会在这么多人身上造出这样的疯狂？~
 == BC0SIRE2 ~我……不知道。我仍不能完全同意你的看法，可我理解你的意思。~
 EXIT
 
@@ -1020,7 +1020,7 @@ HPPercentLT("Valygar",50)~ THEN BC0SIRE2 C0SireneValygar2
 DO ~SetGlobal("C0SireneValygar2","GLOBAL",1)~
 == BVALYGA ~我注意到了。~
 == BC0SIRE2 ~这不是说笑的事。你为什么不立刻来找我？~
-== BVALYGA ~我能自己处理伤口，塞琳。我是游侠，不是无助的孩子。你的本事该用在别人身上。~
+== BVALYGA ~我能自己处理伤口，茜琳。我是游侠，不是无助的孩子。你的本事该用在别人身上。~
 == BC0SIRE2 ~我的职责是对一切受苦之人，而这也包括你，我的朋友。我坚持你待着别动，让我给你治伤。~
 == BVALYGA ~（叹气）随你。~
 == BC0SIRE2 ~这伤比我想的更重……原谅我，瓦里格，这可能有点刺痛。~
@@ -1059,7 +1059,7 @@ See("Valygar")
 Global("C0SireneValygar3","GLOBAL",1)~ THEN BC0SIRE2 C0SireneValygar4
 ~我已经下定决心了，瓦里格。~ [C0BLANK]
 DO ~SetGlobal("C0SireneValygar3","GLOBAL",2)~
-== BVALYGA ~你这回又想要什么，塞琳？~
+== BVALYGA ~你这回又想要什么，茜琳？~
 == BC0SIRE2 ~我仔细想过你对我说的话，尽管……不，正因为你的话，我再来求你——训练我。~
 == BVALYGA ~你真把自己的命看得这么轻？就算你不看重，我也仍要拒绝。我无意伤你。~
 == BC0SIRE2 ~不，恰恰相反。你先前的话让我重新思考我为何想向你学，而我不得到一个答复是不会回来的。~
@@ -1069,7 +1069,7 @@ DO ~SetGlobal("C0SireneValygar3","GLOBAL",2)~
 == BC0SIRE2 ~这风险我必须承担。我过去太……犹豫了。如今这样的我，救不了我想救的所有人。我希望你能在这方面帮我，我的朋友。~
 == BVALYGA ~嗯。~
 DO ~SetGlobalTimer("C0SireneValygarTimer","GLOBAL",ONE_WEEK)~
-== BVALYGA ~好。你赢了，塞琳。可别说我没警告过你。我不会留手。~
+== BVALYGA ~好。你赢了，茜琳。可别说我没警告过你。我不会留手。~
 EXIT
 
 CHAIN 
@@ -1079,7 +1079,7 @@ See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneValygar4","GLOBAL",0)
 Alignment("C0Sirene",LAWFUL_GOOD)~ THEN BVALYGA C0SireneValygar5
-~在我们所有人当中，你是我能敬重的一个，塞琳。~ [C0BLANK]
+~在我们所有人当中，你是我能敬重的一个，茜琳。~ [C0BLANK]
 DO ~SetGlobal("C0SireneValygar4","GLOBAL",1)~
 == BC0SIRE2 ~谢谢你，瓦里格，可你凭什么敬重我？我既没有你的战斗技艺，也没有你对自己事业的执着。~
 == BVALYGA ~你的血统里有黑暗的力量，可你像我一样，无论它多诱人都不肯动用。这一点上我们相似。~
@@ -1097,12 +1097,12 @@ See("Viconia")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SirenePartyBG1","GLOBAL",1)
 Global("C0SireneViconia","GLOBAL",0)~ THEN BC0SIRE2 C0SireneViconia1
-~险些被活活烧死……维康尼亚，尽管我们彼此为敌，我仍为发生的事感到难过。~ [C0BLANK]
+~险些被活活烧死……维康妮亚，尽管我们彼此为敌，我仍为发生的事感到难过。~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconia","GLOBAL",1)~
 == BVICONI ~这是你想来嘲弄我吗，jalil？我不要你的怜悯。帮我们俩一个忙，去对别人做你那副假惺惺的样子。~
-== BC0SIRE2 ~我给的并非怜悯，维康尼亚。~
-== BVICONI ~不是？我记得，塞琳，你厌恶我。你不会把你那所谓的慈悲给我，我也不想要。~
-== BC0SIRE2 ~维康尼亚——~
+== BC0SIRE2 ~我给的并非怜悯，维康妮亚。~
+== BVICONI ~不是？我记得，茜琳，你厌恶我。你不会把你那所谓的慈悲给我，我也不想要。~
+== BC0SIRE2 ~维康妮亚——~
 == BVICONI ~继续演这场戏没有意义。我对你的胡话毫无兴趣，魔血。别烦我。~
 EXIT
 
@@ -1112,13 +1112,13 @@ See("Viconia")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneViconia2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneViconia3
-~你信任我吗，维康尼亚？~ [C0BLANK]
+~你信任我吗，维康妮亚？~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconia2","GLOBAL",1)
 RealSetGlobalTimer("C0SireneViconiaRestTimer","GLOBAL",2700)~
 == BVICONI ~什么？你又在胡说些什么，jalil？~
 == BC0SIRE2 ~就是我说的：你信任我吗，不是作为朋友，而是作为同伴，在你需要时出手相助？~
 == BVICONI ~需要你？我不需要像你这样自命清高的人。我们是利益上的盟友，能维持多久就多久。~
-== BC0SIRE2 ~你一生中从没信任过任何人吗，维康尼亚？连<CHARNAME>也没有？~
+== BC0SIRE2 ~你一生中从没信任过任何人吗，维康妮亚？连<CHARNAME>也没有？~
 == BVICONI ~你该记住这一课，jalil：卓尔的语言里没有「信任」这个词。信任就是向别人示弱，而示弱很快就会招来死亡。~
 == BC0SIRE2 ~除非你所信任的人愿意护住你。~
 == BVICONI ~如我先前所说，信任是给蠢人和死人的。而你要明白：我两样都不会成为。~
@@ -1128,22 +1128,22 @@ EXIT
 
 CHAIN
 IF ~Global("C0SireneViconiaRest","GLOBAL",2)~ THEN BC0SIRE2 C0SireneViconia2
-~维康尼亚，你还没领你那份饭。在这儿。~ [C0BLANK]
+~维康妮亚，你还没领你那份饭。在这儿。~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconiaRest","GLOBAL",3)
 SetGlobal("C0SireneViconia2","GLOBAL",2)~
 == BVICONI ~这是什么糊糊，jalil？你真指望我吃这个？~
-== BC0SIRE2 ~这是昨天剩的炖菜，维康尼亚。你当时似乎还挺喜欢。~
+== BC0SIRE2 ~这是昨天剩的炖菜，维康妮亚。你当时似乎还挺喜欢。~
 == BVICONI ~显然它放坏了。光这气味就冒犯我。拿走。~
-== BC0SIRE2 ~你若真这么恨我，维康尼亚，那就直说。不必这样奚落我。~
+== BC0SIRE2 ~你若真这么恨我，维康妮亚，那就直说。不必这样奚落我。~
 == BVICONI ~哦？我真有这么好懂？显然我得学着更小心地掩饰情绪。~
-== BC0SIRE2 ~要吃就吃，不吃就罢，维康尼亚。我只是在照顾你。~
+== BC0SIRE2 ~要吃就吃，不吃就罢，维康妮亚。我只是在照顾你。~
 == BVICONI ~这就是你表现……你们地表人管它叫什么？怜悯？慈悲？呸。对卓尔来说，这些东西根本是一回事。软弱的德行。~
 == BVICONI ~你自称在「照顾」我？嘲弄我的人正是你，elg'caress。你的行止不过是怜悯。我唾弃你的怜悯，你若指望感激，那你就什么也得不到。~
 == BC0SIRE2 ~……~
 == BVICONI ~嗯……你眼里的怒火烧得像火焰，elg'caress。你是要从内部把自己烧尽吗？那可真有趣。~
 == BC0SIRE2 ~*砰！*~
 == BVICONI ~哦天。真是浪费。我没想到你会发这种孩子气的脾气。~
-== BC0SIRE2 ~我受够了。饿死吧，维康尼亚，如果你宁愿如此。我会记得不再帮你的忙。~
+== BC0SIRE2 ~我受够了。饿死吧，维康妮亚，如果你宁愿如此。我会记得不再帮你的忙。~
 EXIT
 
 CHAIN
@@ -1154,11 +1154,11 @@ See("C0Sirene")
 Global("C0SireneViconia2","GLOBAL",2)~ THEN BVICONI C0SireneViconia4
 ~你以为你在做什么？~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconia2","GLOBAL",3)~
-== BC0SIRE2 ~你在说什么，维康尼亚？~
+== BC0SIRE2 ~你在说什么，维康妮亚？~
 == BVICONI ~你心里清楚。上一战里你替我挨的那一下，本来是冲着我的。你本可以让我死。~
 == BC0SIRE2 ~我不会的。护住站在我身边的人是我的职责。~
 == BVICONI ~尽管我们上次说话时我那样辱骂你？我清楚记得你说过不再帮我「任何忙」。~
-== BC0SIRE2 ~你若以为我会为一场口角小气到让你去死，维康尼亚，我怕你误会我了。~
+== BC0SIRE2 ~你若以为我会为一场口角小气到让你去死，维康妮亚，我怕你误会我了。~
 == BVICONI ~显然我误会了。你真是个怪人。~
 EXIT
 
@@ -1168,14 +1168,14 @@ See("C0Sirene")
 !StateCheck("Viconia",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneViconia2","GLOBAL",3)~ THEN BVICONI C0SireneViconia5
-~jalil——我是说，塞琳。我要跟你说话。~ [C0BLANK]
+~jalil——我是说，茜琳。我要跟你说话。~ [C0BLANK]
 DO ~SetGlobal("C0SireneViconia2","GLOBAL",4)~
-== BC0SIRE2 ~你，主动来找我说话，维康尼亚？我在听。~
+== BC0SIRE2 ~你，主动来找我说话，维康妮亚？我在听。~
 == BVICONI ~我向你认输。我原以为你待我的方式不过是居高临下的怜悯。那……已经变了。~
 == BC0SIRE2 ~那么，你终于明白我并不怜悯你？~
 == BVICONI ~别把我的话当成道歉。我对你的看法没有变。你那所谓的德行总有一天会害死你。可是……我还没骄傲到不肯承认自己错在哪里。~
 == BVICONI ~你和我经历过相似的事。你也许是个鲁莽天真的蠢货，可你不是伪君子。我想我们没那么不同。~
-== BC0SIRE2 ~随你怎么看我，维康尼亚。我们是盟友，只要这关系还在，我就会这样待你。~
+== BC0SIRE2 ~随你怎么看我，维康妮亚。我们是盟友，只要这关系还在，我就会这样待你。~
 EXIT
 
 // Yoshimo
@@ -1188,11 +1188,11 @@ See("Yoshimo")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneYoshimo1","GLOBAL",0)~ THEN BC0SIRE2 C0SireneYoshimo1
-~你离家很远了，吉野。你为何要远行至此？~ [C0BLANK]
+~你离家很远了，善最。你为何要远行至此？~ [C0BLANK]
 DO ~SetGlobal("C0SireneYoshimo1","GLOBAL",1)~
 == BYOSHIM ~当然是冒险。名声、财富与荣耀。还需要什么？~
 == BC0SIRE2 ~真就这些？没有任何特别的目的，就来到这么陌生的地方，看来很奇怪。~
-== BYOSHIM ~我是个爱冒险的人，亲爱的塞琳。有些经历在书本与故事的安全里是说不透的。必须亲眼去看！~
+== BYOSHIM ~我是个爱冒险的人，亲爱的茜琳。有些经历在书本与故事的安全里是说不透的。必须亲眼去看！~
 == BC0SIRE2 ~是的……这一点我很明白。~
 EXIT
 
@@ -1212,8 +1212,8 @@ DO ~SetGlobal("C0SireneYoshimo2","GLOBAL",1)~
 == BC0SIRE2 ~全部吗？连樱花树也是？~
 == BYOSHIM ~尤其是樱花树。~
 == BC0SIRE2 ~我只见过图画……我真希望我能亲眼看看。~
-== BYOSHIM ~嘿。那你最好赶快，塞琳，那些树一年只开一次，而花期很快就要到了。啊，我唯一的遗憾是我自己看不到那美丽的粉色花海。~
-== BC0SIRE2 ~（笑）你这坏家伙，吉野。你让我满脑子都是狂野的幻想。我怕我很快就会在梦里想象你的故乡了。~
+== BYOSHIM ~嘿。那你最好赶快，茜琳，那些树一年只开一次，而花期很快就要到了。啊，我唯一的遗憾是我自己看不到那美丽的粉色花海。~
+== BC0SIRE2 ~（笑）你这坏家伙，善最。你让我满脑子都是狂野的幻想。我怕我很快就会在梦里想象你的故乡了。~
 == BYOSHIM ~可这样的梦不正是最好的梦吗？（眨眼）~
 EXIT
 
@@ -1225,7 +1225,7 @@ See("Yoshimo")
 CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneYoshimo3","GLOBAL",0)~ THEN BC0SIRE2 C0SireneYoshimo3
-~你觉得你有朝一日会回家吗，吉野？~ [C0BLANK]
+~你觉得你有朝一日会回家吗，善最？~ [C0BLANK]
 DO ~SetGlobal("C0SireneYoshimo3","GLOBAL",1)~
 == BYOSHIM ~当然！我连想都不会想到死，除非再看一眼卡拉-图。~
 == BC0SIRE2 ~你说得这么肯定。我羡慕……~
@@ -1234,7 +1234,7 @@ DO ~SetGlobal("C0SireneYoshimo3","GLOBAL",1)~
 == BYOSHIM ~啊，你不必再说。我猜你的记忆并不全是愉快的，对吧？~
 == BC0SIRE2 ~有些是。可不是那个缘故。就算我回去，也不太可能有人在等着。~
 == BYOSHIM ~也许吧，可人们说心安之处即是家。也许你只是还没找到你的心之所安，我的朋友。~
-== BC0SIRE2 ~你也许说得对。无论如何，谢谢你陪我说话，吉野。~
+== BC0SIRE2 ~你也许说得对。无论如何，谢谢你陪我说话，善最。~
 EXIT
 
 CHAIN
@@ -1248,12 +1248,12 @@ Global("C0SireneYoshimo1","GLOBAL",1)
 Global("C0SireneYoshimo2","GLOBAL",1)
 Global("C0SireneYoshimo3","GLOBAL",1)
 Global("C0SireneYoshimo4","GLOBAL",0)~ THEN BYOSHIM C0SireneYoshimo4
-~我跟你讲了许多我故乡的事，塞琳。也许你肯赏光，讲一个你自己的故事？~ [C0BLANK]
+~我跟你讲了许多我故乡的事，茜琳。也许你肯赏光，讲一个你自己的故事？~ [C0BLANK]
 DO ~SetGlobal("C0SireneYoshimo4","GLOBAL",1)~
-== BC0SIRE2 ~我的过去没什么值得讲的，吉野。~
+== BC0SIRE2 ~我的过去没什么值得讲的，善最。~
 == BYOSHIM ~一点也没有？那不可能。就算最寻常的人也该有有趣的故事可以分享。~
 == BC0SIRE2 ~真的，很少。我想……我可以跟你讲讲我的信仰，若你不嫌闷。~
-== BYOSHIM ~当然。伊尔梅特的教士我格外感兴趣。~
+== BYOSHIM ~当然。伊尔玛特的教士我格外感兴趣。~
 == BC0SIRE2 ~好罢。等有机会，我会把能讲的都讲给你。~
 EXIT
 
@@ -1266,17 +1266,17 @@ CombatCounter(0)
 !See([ENEMY])
 Global("C0SireneYoshimo4","GLOBAL",1)
 Global("C0SireneYoshimo5","GLOBAL",0)~ THEN BC0SIRE2 C0SireneYoshimo5
-~吉野……~ [C0BLANK]
+~善最……~ [C0BLANK]
 DO ~SetGlobal("C0SireneYoshimo5","GLOBAL",1)~
-== BYOSHIM ~啊，你找到了我的背包，我的朋友塞琳。多谢你。~
-== BC0SIRE2 ~是的，说到这个……原谅我，吉野，我捡起它时不小心，里面的东西撒出来了。对不起。~
+== BYOSHIM ~啊，你找到了我的背包，我的朋友茜琳。多谢你。~
+== BC0SIRE2 ~是的，说到这个……原谅我，善最，我捡起它时不小心，里面的东西撒出来了。对不起。~
 == BYOSHIM ~嗯，你担心的不是我东西的安全，而是你发现的某样东西，对吧？~
 == BC0SIRE2 ~是的……是那枚吊坠。~
 == BYOSHIM ~是的……我想，所有人里，你会认得它。~
-== BC0SIRE2 ~我不知道你向伊尔梅特祈祷，吉野。你为什么不告诉我？~
+== BC0SIRE2 ~我不知道你向伊尔玛特祈祷，善最。你为什么不告诉我？~
 == BYOSHIM ~啊，别误会，我的朋友。说实话，这吊坠不是我的，是我故乡一位友善的相识的。算是件护身符。当然，我偶尔也祈祷，可我不是哭泣之神的真正信徒。~
 == BC0SIRE2 ~真的？那你随身带着这样的纪念物倒很奇怪。这不像你。~
-== BYOSHIM ~哎呀，我真吃惊，塞琳！你不相信连我这样的浪子也可能背着几副担子吗？~
+== BYOSHIM ~哎呀，我真吃惊，茜琳！你不相信连我这样的浪子也可能背着几副担子吗？~
 == BC0SIRE2 ~不，我完全不是那个意思。只是……你不像是会受苦的那种人。~
 == BYOSHIM ~我有很多秘密，亲爱的，而我只把少数几个挂在袖子上。也许……也许有一天你会发现更多。~
 EXIT

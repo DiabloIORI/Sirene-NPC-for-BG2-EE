@@ -3,7 +3,7 @@ BEGIN C0SIRE25
 IF ~Global("C0SireneSummoned","GLOBAL",1) !Global("C0SireneRomanceActive","GLOBAL",2)~ b1
 SAY ~我……我在哪里？~ [C0BLANK]
 ++ ~没事。是我把你召来的。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
-++ ~欢迎来到我私人的口袋位面，塞琳。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
+++ ~欢迎来到我私人的袖珍位面，茜琳。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b1.1
 END
 
 IF ~~ b1.1
@@ -24,9 +24,9 @@ IF ~~ DO ~MoveToPointNoInterrupt([1717.1717]) Face(0)~ EXIT
 END
 
 IF ~Global("C0SireneSummoned","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ b2
-SAY ~<CHARNAME>！再见到你我太高兴了。你把我留在苏丹娜塞拉就走了，那很吓人。我试着找你，可是……~ [C0BLANK]
-= ~我们……我们在哪里？<CHARNAME>……这又是深渊吗？~
-++ ~不完全是。这是我自己的口袋位面。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b2.1
+SAY ~<CHARNAME>！再见到你我太高兴了。你把我留在索丹尼斯拉就走了，那很吓人。我试着找你，可是……~ [C0BLANK]
+= ~我们……我们在哪里？<CHARNAME>……这又是无底深渊吗？~
+++ ~不完全是。这是我自己的袖珍位面。~ DO ~SetGlobal("C0SireneSummoned","GLOBAL",2)~ + b2.1
 END
 
 IF ~~ b2.1

@@ -27,7 +27,7 @@ DO ~EscapeArea()~ EXIT
 CHAIN C0SGIRL girl2
 ~那当然啦！我跟母亲在乡下自己种的。都很好看吧？比城里人的花好多了。~
 END
-++ ~确实好看。你想要一枝花吗，塞琳？~ EXTERN C0SIRE2J girl3
+++ ~确实好看。你想要一枝花吗，茜琳？~ EXTERN C0SIRE2J girl3
 ++ ~我没兴趣买花。~ EXTERN C0SGIRL girl0
 
 CHAIN C0SIRE2J girl3
@@ -37,14 +37,14 @@ CHAIN C0SIRE2J girl3
 == C0SIRE2J ~我——我很领情，可真的不必。~
 END
 ++ ~哦，别多说。就当是我送你的礼物。~ EXTERN C0SGIRL girl4
-++ ~怎么了，塞琳？你不喜欢花吗？~ EXTERN C0SIRE2J girl5
+++ ~怎么了，茜琳？你不喜欢花吗？~ EXTERN C0SIRE2J girl5
 ++ ~你听见她说的了。我们不感兴趣，小孩。~ EXTERN C0SGIRL girl0
 
 CHAIN C0SGIRL girl4
 ~让我想想……不能太俗气，可也不能太素，不行。嗯，我想什么好呢……~
 END
 ++ ~你有玫瑰吗，小姑娘？~ EXTERN C0SGIRL girl6
-++ ~你觉得呢，塞琳？你最喜欢哪种花？~ EXTERN C0SIRE2J girl7
+++ ~你觉得呢，茜琳？你最喜欢哪种花？~ EXTERN C0SIRE2J girl7
 ++ ~再想想，我还是不买花了。~ EXTERN C0SGIRL girl0
 
 CHAIN C0SIRE2J girl5

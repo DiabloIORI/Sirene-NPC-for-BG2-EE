@@ -5,7 +5,7 @@ SAY ~是我们该分别的时候了吗，我的朋友？~ [C0BLANK]
 ++ ~不，算了。~ DO ~JoinParty()~ EXIT
 + ~AreaCheck("AR4500")~ + ~是的。在这里等。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1) MoveToPointNoInterrupt([1717.1717]) Face(0)~ EXIT
 + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~是的。在这里等。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1)~ EXIT
-+ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~返回口袋位面。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1)
++ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~返回袖珍位面。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1)
 CreateVisualEffectObject("spdimndr",Myself)
 Wait(2)
 MoveBetweenAreas("AR4500",[1717.1717],0)~ EXIT
@@ -16,7 +16,7 @@ SAY ~你确定要我离开吗，<CHARNAME>？我宁愿哪儿都不去，只留�
 ++ ~既然如此，那就留下。~ DO ~JoinParty()~ EXIT
 + ~AreaCheck("AR4500")~ + ~是的。在这里等。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1) MoveToPointNoInterrupt([1717.1717]) Face(0)~ EXIT
 + ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~是的。在这里等。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1)~ EXIT
-+ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~返回口袋位面。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1)
++ ~!AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ + ~返回袖珍位面。~ DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",1)
 CreateVisualEffectObject("spdimndr",Myself)
 Wait(2)
 MoveBetweenAreas("AR4500",[1717.1717],0)~ EXIT

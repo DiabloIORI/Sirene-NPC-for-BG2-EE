@@ -31,7 +31,7 @@ END
 IF WEIGHT #-1 ~Global("C0SireneREAnishai","GLOBAL",1)~ Anishai
 SAY ~那真是这条计策必不可少的一环吗，<CHARNAME>？你就不怕她趁你虚弱时动手？还是你——~ [C0BLANK]
 = ~*叹气* 这件差事我从一开始就心存疑虑，可如今比起继续演下去，我倒情愿把这些强盗一个个都杀了。~
-= ~我们继续吧，<CHARNAME>。我向伊尔梅特祈祷，希望能彻底忘掉这件令人不快的事。~
+= ~我们继续吧，<CHARNAME>。我向伊尔玛特祈祷，希望能彻底忘掉这件令人不快的事。~
 IF ~~ DO ~SetGlobal("C0SireneREAnishai","GLOBAL",2)~ EXIT
 END
 
@@ -53,7 +53,7 @@ END
 IF ~~ Aran2
 SAY ~不……嗯，也许你选择和一个强盗共度私密夜晚时，我确实有点担心你。但我得承认，到目前为止他对我们还算客气。~
 = ~而且……影主确实很有魅力，你想和他相处，我也不能怪你……我还一度以为自己得等你一整夜。~
-++ ~哎呀，你这话听着都快吃醋了，塞琳。~ + Aran3
+++ ~哎呀，你这话听着都快吃醋了，茜琳。~ + Aran3
 ++ ~你知道，你要是有意思，我随时可以撮合你们俩……~ + Aran3
 ++ ~随便吧。我们还有事要办。~ EXIT
 END
@@ -66,7 +66,7 @@ END
 // Bjornin
 
 IF WEIGHT #-1 ~Global("C0SireneREBjornin","GLOBAL",1)~ Bjornin
-SAY ~我看见 Bjornin 大人从旁边走过。你一定费了不少功夫安抚他，<CHARNAME>。他看上去再满意不过了。~ [C0BLANK]
+SAY ~我看见 布宁 大人从旁边走过。你一定费了不少功夫安抚他，<CHARNAME>。他看上去再满意不过了。~ [C0BLANK]
 + ~!Global("RE_BjorninSex","GLOBAL",1)~ + ~是啊……*脸红*~ DO ~SetGlobal("C0SireneREBjornin","GLOBAL",2)~ + Bjornin1
 + ~!Global("RE_BjorninSex","GLOBAL",1)~ + ~你知道的还不到一半。~ DO ~SetGlobal("C0SireneREBjornin","GLOBAL",2)~ + Bjornin1
 + ~Global("RE_BjorninSex","GLOBAL",1)~ + ~是啊……*脸红*~ DO ~SetGlobal("C0SireneREBjornin","GLOBAL",2)~ + Bjornin2
@@ -93,7 +93,7 @@ IF ~~ EXIT
 END
 
 IF ~~ Bjornin4
-SAY ~我……想我还是算了，<CHARNAME>。承蒙抬举，可……我不觉得我的伤痕会像 Bjornin 的那样讨你喜欢。~
+SAY ~我……想我还是算了，<CHARNAME>。承蒙抬举，可……我不觉得我的伤痕会像 布宁 的那样讨你喜欢。~
 IF ~~ EXIT
 END
 
@@ -137,7 +137,7 @@ END
 
 IF ~~ Chanelle3
 SAY ~我……我说不好，<CHARNAME>。这种事在贵族中很常见吗？若是，那……~
-++ ~这座要塞里男仆不多，所以我让 Chanelle 伺候我。有问题吗？~ + Chanelle2
+++ ~这座要塞里男仆不多，所以我让 香奈尔 伺候我。有问题吗？~ + Chanelle2
 ++ ~什么？~ + Chanelle6
 ++ ~听着，不过是一次清白的沐浴。就到此为止，好吗？~ + Chanelle0
 END
@@ -151,7 +151,7 @@ END
 IF ~~ Chanelle5
 SAY ~我在意的不是沐浴，而是那个，呃，独处。你和一位美貌少女一同消失，难免让我猜想……~
 ++ ~什么？~ + Chanelle6
-++ ~慢、慢着，塞琳。~ + Chanelle0
+++ ~慢、慢着，茜琳。~ + Chanelle0
 END
 
 IF ~~ Chanelle6
@@ -162,7 +162,7 @@ END
 IF ~~ Chanelle7
 SAY ~我、我……不，我是说……诸神在上，我不是有意的，<CHARNAME>，我发誓！~
 ++ ~嗯哼。~ EXIT
-++ ~你内心还真有不轨的一面，塞琳。我佩服。~ + Chanelle8
+++ ~你内心还真有不轨的一面，茜琳。我佩服。~ + Chanelle8
 ++ ~下次你何不直接进来和我一起？~ + Chanelle8
 END
 
@@ -179,8 +179,8 @@ SAY ~发生了什么，<CHARNAME>？告诉我你没让那个卑劣之徒碰你�
 + ~Global("RE_DesharikSex","GLOBAL",1)~ + ~（撒谎）不，我没有。~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik1
 + ~!Global("RE_DesharikSex","GLOBAL",1)~ + ~不，我没有。~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik2
 + ~Global("RE_DesharikSex","GLOBAL",1)~ + ~我让他碰了，而且我喜欢。~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik3
-+ ~Global("RE_DesharikSex","GLOBAL",1)~ + ~是恶心，可我总得想办法把我们弄进 Spellhold。~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik4
-++ ~这与你何干，塞琳？~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik5
++ ~Global("RE_DesharikSex","GLOBAL",1)~ + ~是恶心，可我总得想办法把我们弄进 禁魔监狱。~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik4
+++ ~这与你何干，茜琳？~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ + Desharik5
 ++ ~（不理会她）~ DO ~SetGlobal("C0SireneREDesharik","GLOBAL",2)~ EXIT
 END
 
@@ -213,8 +213,8 @@ END
 
 IF WEIGHT #-1 ~Global("C0SireneREEldoth","GLOBAL",1)~ Eldoth
 SAY ~我……昨晚经过你房门，<CHARNAME>，听见里面有人声。你不是一个人，对吗？~ [C0BLANK]
-+ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~是 Eldoth。我们就着酒聊了几句。~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ + Eldoth1
-+ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~是 Eldoth。我们就着酒聊了几句。~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ + Eldoth2
++ ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~是 亚多士。我们就着酒聊了几句。~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ + Eldoth1
++ ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~是 亚多士。我们就着酒聊了几句。~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ + Eldoth2
 + ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你在偷听？~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ + Eldoth1
 + ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你在偷听？~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ + Eldoth2
 ++ ~无可奉告。~ DO ~SetGlobal("C0SireneREEldoth","GLOBAL",2)~ EXIT
@@ -257,7 +257,7 @@ IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + Eldoth6
 END
 
 IF ~~ Eldoth6
-SAY ~你我都了解 Eldoth，<CHARNAME>。他对 Skie 的所作所为堪称卑劣；若非有你在一旁领着，我多半早把他砍了。~
+SAY ~你我都了解 亚多士，<CHARNAME>。他对 史姬 的所作所为堪称卑劣；若非有你在一旁领着，我多半早把他砍了。~
 = ~你该明白，他对你的心思毫不单纯。陪他玩那些花样不会有好结果。~
 = ~*叹气* 这事到此为止。你做什么是你的私事，我不该多问。~
 IF ~~ EXIT
@@ -277,7 +277,7 @@ END
 
 IF ~~ Garren1
 SAY ~我不知道你对他说了什么，可从分别前他望你的眼神看得出，你补上了他心中缺失的某样重要东西。~
-++ ~听着，塞琳，我——~ + Garren3
+++ ~听着，茜琳，我——~ + Garren3
 ++ ~呃，行。就当是这样吧。~ EXIT
 END
 
@@ -299,7 +299,7 @@ END
 // Hendak
 
 IF WEIGHT #-1 ~Global("C0SireneREHendak","GLOBAL",1)~ Hendak
-SAY ~Hendak 很钦佩你，<CHARNAME>。他是个正直的人，但愿你待他不差。~ [C0BLANK]
+SAY ~韩达克 很钦佩你，<CHARNAME>。他是个正直的人，但愿你待他不差。~ [C0BLANK]
 ++ ~他的青睐让我受宠若惊。离开他会让人难过。~ + Hendak1
 ++ ~你听着都像嫉妒了。你倒希望我也这样待你？~ + Hendak2
 ++ ~这事我不想谈。~ EXIT
@@ -411,7 +411,7 @@ END
 IF WEIGHT #-1 ~Global("C0SireneREMekrath","GLOBAL",1)~ Mekrath
 SAY ~我信不过那个法师。可他给了你所求之物，便让我们清净了……你从他那儿学到很多吗？~ [C0BLANK]
 ++ ~哦，是的。学到不少。~ DO ~SetGlobal("C0SireneREMekrath","GLOBAL",2)~ + Mekrath1
-++ ~谈不上。挺无聊的，就跟葛里安的课一样。~ DO ~SetGlobal("C0SireneREMekrath","GLOBAL",2)~ + Mekrath1
+++ ~谈不上。挺无聊的，就跟葛立安的课一样。~ DO ~SetGlobal("C0SireneREMekrath","GLOBAL",2)~ + Mekrath1
 ++ ~你不会懂的。你又不是法师。~ DO ~SetGlobal("C0SireneREMekrath","GLOBAL",2)~ EXIT
 END
 
@@ -450,7 +450,7 @@ END
 IF WEIGHT #-1 ~Global("C0SireneRERenal","GLOBAL",1)~ Renal
 SAY ~你在流血，<CHARNAME>！我怎么会没注意到……让我看看！~ [C0BLANK]
 ++ ~没事，不要紧。我……昨晚出了点意外。~ DO ~SetGlobal("C0SireneRERenal","GLOBAL",2)~ + Renal1
-++ ~是 Renal 弄的。他来看过我。~ DO ~SetGlobal("C0SireneRERenal","GLOBAL",2)~ + Renal2
+++ ~是 雷纳尔 弄的。他来看过我。~ DO ~SetGlobal("C0SireneRERenal","GLOBAL",2)~ + Renal2
 ++ ~（让她处理伤口，但不予回应）~ DO ~SetGlobal("C0SireneRERenal","GLOBAL",2)~ + Renal1
 ++ ~（抽开）我没事。~ DO ~SetGlobal("C0SireneRERenal","GLOBAL",2)~ EXIT
 END
@@ -469,11 +469,11 @@ END
 // Ribald Barterman
 
 IF WEIGHT #-1 ~Global("C0SireneRERibald","GLOBAL",1)~ Ribald
-SAY ~原谅我的好奇，<CHARNAME>，可我注意到我们去冒险者集市的次数比往常多了。你常跟着 Ribald 进后屋，却从不带什么出来。我承认我……好奇你在里面做什么。~ [C0BLANK]
+SAY ~原谅我的好奇，<CHARNAME>，可我注意到我们去冒险者集市的次数比往常多了。你常跟着 里巴尔德 进后屋，却从不带什么出来。我承认我……好奇你在里面做什么。~ [C0BLANK]
 ++ ~呃……你还是不知道为好。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ + Ribald1
-++ ~你想知道，下次何不跟我一起进去？我敢说 Ribald 一定会给你备上极好的东西。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ + Ribald2
-++ ~我跟 Ribald 去……缓解一下冒险的压力。到此为止吧。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ + Ribald3
-++ ~不关你的事，塞琳。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ EXIT
+++ ~你想知道，下次何不跟我一起进去？我敢说 里巴尔德 一定会给你备上极好的东西。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ + Ribald2
+++ ~我跟 里巴尔德 去……缓解一下冒险的压力。到此为止吧。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ + Ribald3
+++ ~不关你的事，茜琳。~ DO ~SetGlobal("C0SireneRERibald","GLOBAL",2)~ EXIT
 END
 
 IF ~~ Ribald1
@@ -497,7 +497,7 @@ IF WEIGHT #-1 ~Global("C0SireneRESaemon","GLOBAL",1)~ Saemon
 SAY ~我真惊讶你竟信得过那个强盗，愿意和他独处。你忘了他对我们做过的一切？~ [C0BLANK]
 ++ ~得了。*他*其实没造成那么大伤害。严格说来。~ DO ~SetGlobal("C0SireneRESaemon","GLOBAL",2)~ + Saemon1
 ++ ~我没忘。可他太有魅力，让人抗拒不了。就当我是个软弱的女人吧。~ DO ~SetGlobal("C0SireneRESaemon","GLOBAL",2)~ + Saemon2
-++ ~这话到此为止，塞琳。~ DO ~SetGlobal("C0SireneRESaemon","GLOBAL",2)~ EXIT
+++ ~这话到此为止，茜琳。~ DO ~SetGlobal("C0SireneRESaemon","GLOBAL",2)~ EXIT
 END
 
 IF ~~ Saemon1
@@ -519,7 +519,7 @@ END
 
 IF WEIGHT #-1 ~Global("C0SireneRESheri","GLOBAL",1)~ Sheri
 SAY ~你舞跳得不错，<CHARNAME>。你和那位女吟游诗人配合得十分默契。~ [C0BLANK]
-++ ~你嫉妒了，塞琳？~ DO ~SetGlobal("C0SireneRESheri","GLOBAL",2)~ + Sheri1
+++ ~你嫉妒了，茜琳？~ DO ~SetGlobal("C0SireneRESheri","GLOBAL",2)~ + Sheri1
 ++ ~下次我倒想让你陪我跳。~ DO ~SetGlobal("C0SireneRESheri","GLOBAL",2)~ + Sheri2
 ++ ~说实话，我只是随大流。我不会跳舞。~ DO ~SetGlobal("C0SireneRESheri","GLOBAL",2)~ + Sheri3
 ++ ~没空扯这个。~ DO ~SetGlobal("C0SireneRESheri","GLOBAL",2)~ EXIT
@@ -545,7 +545,7 @@ SAY ~总之，你俩站在一起赏心悦目。~
 END
 
 IF ~~ Sheri4
-SAY ~（塞琳沉吟片刻，随即摇了摇头，像是要把思绪甩开）~
+SAY ~（茜琳沉吟片刻，随即摇了摇头，像是要把思绪甩开）~
 = ~没空在这胡扯，<CHARNAME>。算了。~
 IF ~~ EXIT
 END
@@ -553,7 +553,7 @@ END
 // Talak
 
 IF WEIGHT #-1 ~Global("C0SireneRETalak","GLOBAL",1)~ talak
-SAY ~（你回来时，塞琳的脸因厌恶而扭曲，以她现在的模样，十分骇人。）~ [C0BLANK]
+SAY ~（你回来时，茜琳的脸因厌恶而扭曲，以她现在的模样，十分骇人。）~ [C0BLANK]
 = ~我不知道是什么附了你的身，<CHARNAME>。你竟接受了那卑劣邪魔的提议？沉溺于这种……荒淫之中？~
 = ~（她摇头）或许这副形态并不如我以为的那样是幻象。我只盼等一切尘埃落定，你再也不会做这种事。~
 IF ~~ EXIT
@@ -584,7 +584,7 @@ END
 
 IF WEIGHT #-1 ~Global("C0SireneREAnne","GLOBAL",1)~ Anne
 SAY ~卑劣……我原以为你不至于做出这种恶心事，<CHARNAME>。看来是我看错了你。~ [C0BLANK]
-++ ~塞琳，我——~ DO ~SetGlobal("C0SireneREAnne","GLOBAL",2)~ + Anne1
+++ ~茜琳，我——~ DO ~SetGlobal("C0SireneREAnne","GLOBAL",2)~ + Anne1
 ++ ~可是——~ DO ~SetGlobal("C0SireneREAnne","GLOBAL",2)~ + Anne1
 ++ ~我不——~ DO ~SetGlobal("C0SireneREAnne","GLOBAL",2)~ + Anne1
 END
@@ -597,7 +597,7 @@ END
 // Cernd
 
 IF WEIGHT #-1 ~Global("C0SireneRECernd","GLOBAL",1)~ Cernd
-SAY ~塞尔德今天像换了个人。他格外腼腆，尤其是看你的时候。~ [C0BLANK]
+SAY ~瑟恩今天像换了个人。他格外腼腆，尤其是看你的时候。~ [C0BLANK]
 + ~Global("RE_CerndSex","GLOBAL",1)~ + ~我们昨晚同床共枕了。感觉……不太一样。~ DO ~SetGlobal("C0SireneRECernd","GLOBAL",2)~ + Cernd1
 ++ ~也许他喜欢我。谁知道呢？~ DO ~SetGlobal("C0SireneRECernd","GLOBAL",2)~ + Cernd2
 ++ ~（耸肩，避开回答）~ DO ~SetGlobal("C0SireneRECernd","GLOBAL",2)~ EXIT

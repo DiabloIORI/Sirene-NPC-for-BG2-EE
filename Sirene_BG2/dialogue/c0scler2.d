@@ -6,7 +6,7 @@ IF ~~ EXIT
 END
 
 IF ~RandomNum(3,2)~ a2
-SAY ~我不过是伊尔梅特的卑微侍僧，朋友。要事请与达埃隆尊者谈。~
+SAY ~我不过是伊尔玛特的卑微侍僧，朋友。要事请与达埃隆尊者谈。~
 IF ~~ EXIT
 END
 
@@ -16,6 +16,6 @@ IF ~~ EXIT
 END
 
 IF ~Global("C0SireneEncounter","GLOBAL",3)~ b1
-SAY ~我们在我们的主伊尔梅特面前犯了罪……我必须为我的行止之重寻求赎罪。再会。~
+SAY ~我们在我们的主伊尔玛特面前犯了罪……我必须为我的行止之重寻求赎罪。再会。~
 IF ~~ EXIT
 END

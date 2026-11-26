@@ -7,7 +7,7 @@ CHAIN IF ~!AreaCheck("AR0020") !AreaCheck("C0SIR1") GlobalLT("C0SireneTsamon","G
 EXIT
 
 CHAIN IF ~!InParty("C0Sirene") AreaCheck("AR0020") GlobalLT("C0SireneTsamon","GLOBAL",2)~ THEN C0SNOTE note5
-~没有塞琳，你觉得没什么理由去信上画的地点。~
+~没有茜琳，你觉得没什么理由去信上画的地点。~
 EXIT
 
 CHAIN IF ~InParty("C0Sirene") AreaCheck("AR0020") GlobalLT("C0SireneTsamon","GLOBAL",2)~ THEN C0SNOTE note2

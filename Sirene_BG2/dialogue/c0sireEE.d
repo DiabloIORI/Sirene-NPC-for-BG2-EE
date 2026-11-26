@@ -8,7 +8,7 @@ DO ~SetGlobal("C0SireneDorn","GLOBAL",3)~
 == DORNJ ~你以为揭出我的力量就能吓住我？我不在乎。你若对我的存在不满，就用你的剑表示。我会乐于把你这懦夫挑在我的剑上。~
 END
 	++ ~你们两个就不能好好相处吗？~ EXTERN C0SIRE2J C0dorn2
-	++ ~对不起，塞琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0SIRE2J C0dorn3
+	++ ~对不起，茜琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0SIRE2J C0dorn3
 	++ ~反正我从来没喜欢过你，多恩。~ EXTERN DORNJ C0dorn4
 
 CHAIN C0SIRE2J C0dorn2
@@ -16,12 +16,12 @@ CHAIN C0SIRE2J C0dorn2
 == DORNJ ~下一个受苦的就是你，圣武士崽子。~
 == C0SIRE2J ~拔剑吧，没有灵魂的杂种。~
 END
-	++ ~对不起，塞琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0SIRE2J C0dorn3
+	++ ~对不起，茜琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0SIRE2J C0dorn3
 	++ ~反正我从来没喜欢过你，多恩。~ EXTERN DORNJ C0dorn4
 	++ ~哦，好罢。动手吧。~ EXTERN C0SIRE2J C0dorn5
 
 CHAIN C0SIRE2J C0dorn3
-~如你所愿。原谅我必须做的事。愿伊尔梅特怜悯你的灵魂，<CHARNAME>。~
+~如你所愿。原谅我必须做的事。愿伊尔玛特怜悯你的灵魂，<CHARNAME>。~
 DO ~SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy() Attack("Dorn")~ 
 EXIT
 
@@ -56,7 +56,7 @@ DO ~SetGlobal("C0SireneDornToB","GLOBAL",3)~
 == DORN25J ~你以为揭出我的力量就能吓住我？我不在乎。你若对我的存在不满，就用你的剑表示。我会乐于把你这懦夫挑在我的剑上。~
 END
 	++ ~你们两个就不能好好相处吗？~ EXTERN C0Sir25J C0dorntob2
-	++ ~对不起，塞琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0Sir25J C0dorntob3
+	++ ~对不起，茜琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0Sir25J C0dorntob3
 	++ ~反正我从来没喜欢过你，多恩。~ EXTERN DORN25J C0dorntob4
 
 CHAIN C0Sir25J C0dorntob2
@@ -64,12 +64,12 @@ CHAIN C0Sir25J C0dorntob2
 == DORN25J ~下一个受苦的就是你，圣武士崽子。~
 == C0Sir25J ~拔剑吧，没有灵魂的杂种。~
 END
-	++ ~对不起，塞琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0Sir25J C0dorntob3
+	++ ~对不起，茜琳，可我仍需要多恩。你要做什么就做吧。~ EXTERN C0Sir25J C0dorntob3
 	++ ~反正我从来没喜欢过你，多恩。~ EXTERN DORN25J C0dorntob4
 	++ ~哦，好罢。动手吧。~ EXTERN C0Sir25J C0dorntob5
 
 CHAIN C0Sir25J C0dorntob3
-~如你所愿。原谅我必须做的事。愿伊尔梅特怜悯你的灵魂，<CHARNAME>。~
+~如你所愿。原谅我必须做的事。愿伊尔玛特怜悯你的灵魂，<CHARNAME>。~
 DO ~SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy() Attack("Dorn")~ 
 EXIT
 
@@ -107,8 +107,8 @@ DO ~SetGlobal("C0SireneHexxat","GLOBAL",3)~
 == HEXXATJ ~我没兴趣跟你打，圣武士。~
 == C0SIRE2J ~那就只有一个办法。<CHARNAME>，要么它走，要么我走。~
 END
-	++ ~那样的话，我怕你得走了，塞琳。~ EXTERN C0SIRE2J C0hexxatconflict1
-	++ ~好。赫克萨特，你得走。~ EXTERN HEXXATJ C0hexxatconflict2
+	++ ~那样的话，我怕你得走了，茜琳。~ EXTERN C0SIRE2J C0hexxatconflict1
+	++ ~好。赫克塞特，你得走。~ EXTERN HEXXATJ C0hexxatconflict2
 
 CHAIN C0SIRE2J C0hexxatconflict1
 ~我原以为你更懂事，<CHARNAME>。好罢。我走。~
@@ -138,8 +138,8 @@ DO ~SetGlobal("C0SireneHexxatToB","GLOBAL",3)~
 == HEXXA25J ~我没兴趣跟你打，圣武士。~
 == C0SIR25J ~那就只有一个办法。<CHARNAME>，要么它走，要么我走。~
 END
-	++ ~那样的话，我怕你得走了，塞琳。~ EXTERN C0Sir25J C0hexxatconflicttob1
-	++ ~好。赫克萨特，你得走。~ EXTERN HEXXA25J C0hexxatconflicttob2
+	++ ~那样的话，我怕你得走了，茜琳。~ EXTERN C0Sir25J C0hexxatconflicttob1
+	++ ~好。赫克塞特，你得走。~ EXTERN HEXXA25J C0hexxatconflicttob2
 
 CHAIN C0Sir25J C0hexxatconflicttob1
 ~我原以为你更懂事，<CHARNAME>。好罢。我走。~
@@ -163,7 +163,7 @@ See("Neera")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneNeera1","GLOBAL",0)
 !Global("OHN_PLOT","GLOBAL",6)~ THEN BC0SIRE2 C0SireneNeera1
-~你做了件好事，妮拉，把这些被放逐的法师聚在一起。~ [C0BLANK]
+~你做了件好事，涅拉，把这些被放逐的法师聚在一起。~ [C0BLANK]
 DO ~SetGlobal("C0SireneNeera1","GLOBAL",1)~
 == BNEERA ~他们需要一个家。我没法就看着不管。~
 == BC0SIRE2 ~可你知道他们仍会被追捕。他们不能永远留在这里。~
@@ -171,8 +171,8 @@ DO ~SetGlobal("C0SireneNeera1","GLOBAL",1)~
 == BC0SIRE2 ~那你打算怎么办？~
 == BNEERA ~我不知道。他们如今相处得很好，我不能就叫他们收拾东西各走各的。那不对。尤其是我们费了那么大力气才把他们聚在一起……~
 == BC0SIRE2 ~他们可以一起走。无论如何，成群旅行更安全。~
-== BNEERA ~一群法师穿过安姆不会很可疑吗？这样，我们先看红袍法师下一步做什么，若他们又想动我的朋友，我们就一起阻止他们。对吧？~
-== BC0SIRE2 ~我当然会帮你，妮拉。护着他们既是你的职责，也是我的。~
+== BNEERA ~一群法师穿过安姆不会很可疑吗？这样，我们先看红袍巫师下一步做什么，若他们又想动我的朋友，我们就一起阻止他们。对吧？~
+== BC0SIRE2 ~我当然会帮你，涅拉。护着他们既是你的职责，也是我的。~
 EXIT
 
 CHAIN
@@ -184,7 +184,7 @@ Global("C0SireneNeera2","GLOBAL",0)
 Global("OHN_PLOT","GLOBAL",6)~ THEN BNEERA C0SireneNeera2
 ~办成了。呼，一天的事。我累坏了。~ [C0BLANK]
 DO ~SetGlobal("C0SireneNeera2","GLOBAL",1)~
-== BC0SIRE2 ~你该为自己自豪，妮拉。你为这些法师已尽了全力。~
+== BC0SIRE2 ~你该为自己自豪，涅拉。你为这些法师已尽了全力。~
 == BNEERA ~谢谢。我心里暖洋洋的。说到这个，我饿死了。~
 == BC0SIRE2 ~（微笑）看你成长至今，真是件乐事，我的朋友。~
 == BNEERA ~哦，别说了。我都脸红了。我真不习惯这些英雄派头。~
@@ -200,7 +200,7 @@ See("Neera")
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneNeera2","GLOBAL",1)~ THEN BNEERA C0SireneNeera3
-~嘿，塞琳。还有巧克力吗？我的甜牙又在闹了。~ [C0BLANK]
+~嘿，茜琳。还有巧克力吗？我的甜牙又在闹了。~ [C0BLANK]
 DO ~SetGlobal("C0SireneNeera2","GLOBAL",2)~
 == BC0SIRE2 ~还剩一点……给，都拿去吧。~
 == BNEERA ~唔——唔！~
@@ -220,7 +220,7 @@ See("Neera")
 !StateCheck("Neera",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneNeeraToB1","GLOBAL",0)~ THEN BC0SIR25 C0SireneNeeraToB1
-~你今天心情似乎很好，妮拉。~ [C0BLANK]
+~你今天心情似乎很好，涅拉。~ [C0BLANK]
 DO ~SetGlobal("C0SireneNeeraToB1","GLOBAL",1)~
 == BNEERA25 ~为什么不呢？天气好，食物充足，我还没遇过一次糟糕的涌流。我就不能享受些小乐趣吗？~
 == BC0SIR25 ~当然，可你意识到我们如今的处境比以往更危险吗？~
@@ -237,9 +237,9 @@ See("Rasaad")
 !StateCheck("Rasaad",CD_STATE_NOTVALID)
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneRasaad1","GLOBAL",0)~ THEN BC0SIRE2 C0SireneRasaad1
-~你把你的苦难承得很好，拉萨德……作为一个伊尔梅特信徒，我忍不住敬重你。~ [C0BLANK]
+~你把你的苦难承得很好，拉萨德……作为一个伊尔玛特信徒，我忍不住敬重你。~ [C0BLANK]
 DO ~SetGlobal("C0SireneRasaad1","GLOBAL",1)~
-== BRASAAD ~谢谢你，塞琳，可我的苦难并不带给我自豪。~
+== BRASAAD ~谢谢你，茜琳，可我的苦难并不带给我自豪。~
 == BC0SIRE2 ~我能做什么帮你吗？~
 == BRASAAD ~不，我的朋友。我不愿让任何人再为我的烦恼添负，他们已负担够多了。~
 == BC0SIRE2 ~我不愿看你在痛苦中消磨，拉萨德。真没有什么能让你心安吗？~
@@ -255,11 +255,11 @@ See("Rasaad")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SirenePartyBG1","GLOBAL",1)
 Global("C0SireneRasaad2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneRasaad2
-~你记得我们一起沿剑湾旅行吗，拉萨德？乌尔格斯之须和博德之门？~ [C0BLANK]
+~你记得我们一起沿剑湾旅行吗，拉萨德？乌葛斯胡渣和博德之门？~ [C0BLANK]
 DO ~SetGlobal("C0SireneRasaad2","GLOBAL",1)~
-== BRASAAD ~我记得，不过我尽量不去想云峰。~
+== BRASAAD ~我记得，不过我尽量不去想云雾峰。~
 == BC0SIRE2 ~……当然。你兄弟的修道院。对不起，拉萨德，我忘了。~
-== BRASAAD ~你为什么提这个，塞琳？~
+== BRASAAD ~你为什么提这个，茜琳？~
 == BC0SIRE2 ~原谅我，我本只想提些较快乐的时光。没想到那段最糟的时刻，是我短视了。~
 == BRASAAD ~我不怪你，我的朋友。我们的旅行也有好回忆。也许我们该说那些。~
 == BC0SIRE2 ~（微笑）那会是我的荣幸。~
@@ -275,14 +275,14 @@ Global("C0SireneRasaad2","GLOBAL",0)~ THEN BC0SIRE2 C0SireneRasaad2
 ~你承着很重的担子，拉萨德，虽然你努力藏着。你肯告诉我吗？~ [C0BLANK]
 DO ~SetGlobal("C0SireneRasaad2","GLOBAL",1)~
 == BRASAAD ~我不愿把我的担子强加给任何人，尤其不愿给你，我的朋友。你为我们已做得太多。~
-== BC0SIRE2 ~那我怕我们僵住了。只要我是伊尔梅特的仆人，我的职责就是替人承担重负。求你，这一点信我。~
+== BC0SIRE2 ~那我怕我们僵住了。只要我是伊尔玛特的仆人，我的职责就是替人承担重负。求你，这一点信我。~
 == BRASAAD ~……~
 == BRASAAD ~我兄弟死在我手里。~
 == BC0SIRE2 ~什么？~
 == BRASAAD ~他像我一样是塞露涅的信徒。直到他迷失了路……我们再见面时，已是敌人。我……用这双拳头杀了他。~
 == BC0SIRE2 ~我……~
 == BC0SIRE2 ~原谅我，拉萨德。我太愚蠢傲慢才会问……这是比我所知的任何担子都重的负担。~
-== BRASAAD ~这不是你的错，塞琳。可我不想再说它了。~
+== BRASAAD ~这不是你的错，茜琳。可我不想再说它了。~
 EXIT
 
 CHAIN
@@ -294,13 +294,13 @@ Global("C0SireneRasaad3","GLOBAL",0)
 GlobalGT("OHR_PLOT","GLOBAL",5)~ THEN BC0SIRE2 C0SireneRasaad3
 ~你感觉如何，我的朋友？~ [C0BLANK]
 DO ~SetGlobal("C0SireneRasaad3","GLOBAL",1)~
-== BRASAAD ~空。全都白费了。尽管我竭尽全力，阿洛戈斯还是逃了。~
+== BRASAAD ~空。全都白费了。尽管我竭尽全力，阿罗戈斯还是逃了。~
 == BC0SIRE2 ~是我们的努力，拉萨德。失败是我们所有人的。~
 == BRASAAD ~不。你什么都没做错，我的朋友。你肯帮我这一点，意义已超出我所能说。~
 == BC0SIRE2 ~不过这不是我偏好的帮法。你现在打算怎么办？~
 == BRASAAD ~继续向前。我别无选择。~
 == BC0SIRE2 ~总有选择的，拉萨德。与你的骑士团和解吧。他们需要你，正如你需要他们。~
-== BRASAAD ~我给骑士团带来的耻辱已无法赎清，塞琳。做了这一切之后我无法面对他们，尽管我很想。~
+== BRASAAD ~我给骑士团带来的耻辱已无法赎清，茜琳。做了这一切之后我无法面对他们，尽管我很想。~
 == BC0SIRE2 ~我不愿见你继续这条自我毁灭的复仇之路。~
 == BRASAAD ~只剩复仇了。~
 EXIT

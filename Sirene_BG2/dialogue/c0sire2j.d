@@ -16,7 +16,7 @@ CHAIN IF WEIGHT #-1
 Name("C0Sirene",LastTalkedToBy)~ THEN SALVANAS C0SireneSalvanas
 ~那顶白兜帽之下藏着怎样一副容颜，我倒想知道？~
 == C0SIRE2J ~您是在跟我说话吗，先生？~
-== SALVANAS ~不是别人，甜美的伊尔梅特信徒。啊，我受苦，真的受苦。~
+== SALVANAS ~不是别人，甜美的伊尔玛特信徒。啊，我受苦，真的受苦。~
 == C0SIRE2J ~您真的受苦？可我看不出这样的迹象。~
 == SALVANAS ~是的，最美貌的女士，不过被你的存在点燃的不是我的肉体，而是我的心与灵魂！只需一望你的身影，我心中的痛便可缓解。~
 == C0SIRE2J ~我……不确定您在说什么。~
@@ -49,7 +49,7 @@ END
 + ~PartyGoldGT(4) Global("C0SireneRomanceActive","GLOBAL",1)~ + ~你觉得我会不给你吗？金币在这儿。~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
 + ~PartyGoldGT(4) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~你觉得我会不给你吗，我的爱？金币在这儿。~ DO ~TakePartyGold(5) GiveItemCreate("c0sbook","C0Sirene",0,0,0)~ EXTERN C0SIRE2J C0SireneBook1
 ++ ~我们有更要紧的地方要花金币。~ EXTERN C0SIRE2J C0SireneBook2
-++ ~我不会给你买这种傻书的，塞琳。我们走吧。~ EXTERN C0SIRE2J C0SireneBook2
+++ ~我不会给你买这种傻书的，茜琳。我们走吧。~ EXTERN C0SIRE2J C0SireneBook2
 
 CHAIN C0SIRE2J C0SireneBook1
 ~你对我太好了，<CHARNAME>。谢谢你。~
@@ -58,7 +58,7 @@ EXIT
 
 CHAIN C0SIRE2J C0SireneBook2
 ~是的，你说得对。原谅我，先生。我怕只能推辞了。~
-== IMNBOOK1 ~真是可惜。金币倒不打紧，可再没有比一个爱读书的人错过这样的机会更让我难过的了。啊，德尼尔原谅我！拿去吧，夫人。~
+== IMNBOOK1 ~真是可惜。金币倒不打紧，可再没有比一个爱读书的人错过这样的机会更让我难过的了。啊，达尼尔原谅我！拿去吧，夫人。~
 DO ~GiveItemCreate("c0sbook","C0Sirene",0,0,0)~
 == C0SIRE2J ~可——可是，我不能收！我还没付……~
 == IMNBOOK1 ~请别放在心上。我看着这些好小说卖不出去，每一刻都把我逼近疯狂的边缘。你把它从我手里拿走，反倒是帮了我。~
@@ -91,7 +91,7 @@ END
 ++ ~（去睡觉）~ EXTERN PLAYER1 bathe.1a
 
 CHAIN PLAYER1 bathe.1a
-~（你决定懒得去冷溪里洗澡，宁愿等有了像样的澡堂再说。你回到舒适的铺盖上，渐渐睡去。）~
+~（你决定懒得去冰冷的溪水里洗澡，宁愿等能好好享受一间像样的澡堂再说。你回到舒适的铺盖上，渐渐睡去。）~
 DO ~RestParty()~ EXIT
 
 CHAIN PLAYER1 bathe.1b
@@ -101,7 +101,7 @@ DO ~RestParty()~ EXIT
 CHAIN PLAYER1 bathe.2
 ~（你觉得洗个澡会是件舒坦事，就独自往溪边去，想好好放松一下，只希望水别太凉。）~
 = ~（走近溪边，你先试了试水，觉得还过得去。你开始脱衣，可附近有什么存在让你停手，反射性地去摸武器。）~
-= ~（可你在把注意力转回溪流之前，看不见周围有任何动静。你发现水里已经有人，而那人还没注意到你。）~
+= ~（然而，你看不见周围有任何动静。你把注意力转回溪流，才发现水里已经有人，而那人还没注意到你。）~
 END
 ++ ~喂？~ EXTERN C0SIRE2J bathe.4
 ++ ~（尽量悄声靠近）~ EXTERN PLAYER1 bathe.3
@@ -109,7 +109,7 @@ END
 
 CHAIN PLAYER1 bathe.3
 ~（你慢慢向那神秘的人移动，小心不做突然的动作，也不发出会惊动对方的声响。走近些后，你看出那沐浴的身影在月光下轮廓分明是女性。）~
-= ~（等你够近时，你认出那是塞琳。没有盔甲，她的身形意外地轻盈娇小，肌肉精瘦。可她的背上布满痕迹与伤疤，许多丑陋而看着就痛。她忽然察觉到你的存在，惊得转过身。）~
+= ~（等你够近时，你认出那是茜琳。没有盔甲，她的身形意外地轻盈娇小，肌肉精瘦。可她的背上布满痕迹与伤疤，许多丑陋而看着就痛。她忽然察觉到你的存在，惊得转过身。）~
 EXTERN C0SIRE2J bathe.4
 
 APPEND C0SIRE2J
@@ -123,7 +123,7 @@ SAY ~（抽气）啊！<CHARNAME>！请——原谅我，我没注意到你也�
 + ~Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~怎么了？又不是我没见过的东西。~ + bathe.7a
 + ~!Global("C0SireneSlept","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~怎么了？反正我迟早会看见。~ + bathe.7a
 + ~Gender(Player1,FEMALE)~ + ~你担心什么？我们都是女人。不必难为情。~ + bathe.7b
-++ ~对不起，塞琳。我让你自己来吧。~ + bathe.5
+++ ~对不起，茜琳。我让你自己来吧。~ + bathe.5
 END
 
 IF ~~ bathe.5
@@ -132,11 +132,11 @@ IF ~~ DO ~RestParty()~ EXIT
 END
 
 IF ~~ bathe.6
-SAY ~（你听见轻轻的溅水声，塞琳离开水面，遮住了自己。）好了……你可以转回来了，<CHARNAME>。~
-= ~（你转过身，看见塞琳已用一件素色浴袍遮住自己，湿发在月光下闪光。她的眼睛平日介于金色与黄绿之间，此刻因她的夜视泛着淡淡的橙色微光。）~
+SAY ~（你听见轻轻的溅水声，茜琳离开水面，遮住了自己。）好了……你可以转回来了，<CHARNAME>。~
+= ~（你转过身，看见茜琳已用一件素色浴袍遮住自己，湿发在月光下闪光。她的眼睛平日介于金色与黄绿之间，此刻因她的夜视泛着淡淡的橙色微光。）~
 = ~请——原谅我，<CHARNAME>。我没料到今晚还有别人来洗澡，而且……我，嗯……我想我该问问你之前看到了多少，在……~
 ++ ~我没看到多少，只是你的背。我发誓。~ + bathe.8
-++ ~你的身材很好，塞琳。你为什么要这么害羞？~ + bathe.9
+++ ~你的身材很好，茜琳。你为什么要这么害羞？~ + bathe.9
 ++ ~比我愿意看到的更多。那些疤和瘀伤看着挺糟。~ + bathe.10
 ++ ~你知道，我现在真没心情聊天。明天见。~ + bathe.5
 END
@@ -182,11 +182,11 @@ END
 IF ~~ bathe.13
 SAY ~我……我不知道该怎么好好解释。我不愿让自己听起来像是在为这些疤羞耻……不，恰恰相反。我以赢得它们的那些战斗为傲。可是……~
 = ~自从你和我……谈过之后，我发觉自己在你面前更在意自己的外貌了。我想我是不愿这些旧伤……影响你对我的看法。~
-++ ~你真觉得我那么肤浅？别这样，塞琳。你该知道我不是那种人。~ + bathe.14
-++ ~别担心，塞琳。我知道你的疤对你意味着什么，见过它们之后我也不会看轻你。~ + bathe.14
+++ ~你真觉得我那么肤浅？别这样，茜琳。你该知道我不是那种人。~ + bathe.14
+++ ~别担心，茜琳。我知道你的疤对你意味着什么，见过它们之后我也不会看轻你。~ + bathe.14
 ++ ~哦，这就解释了清晨的梳洗。还有那些香油。~ + bathe.15
-++ ~听着，塞琳，你想着我让我很受宠若惊，可我只想我们继续做朋友，仅此而已。~ + bathe.16
-++ ~我不想谈这个。晚安，塞琳。~ + bathe.5
+++ ~听着，茜琳，你想着我让我很受宠若惊，可我只想我们继续做朋友，仅此而已。~ + bathe.16
+++ ~我不想谈这个。晚安，茜琳。~ + bathe.5
 END
 
 IF ~~ bathe.14
@@ -254,17 +254,17 @@ END
 // Yoshimo's betrayal
 
 I_C_T YOSHJ 113 C0SireneYOSHJ113
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~吉野……不，不可能。你*诅咒*了你自己。是什么逼你这么做？~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~善最……不，不可能。你*诅咒*了你自己。是什么逼你这么做？~
 END
 
 I_C_T YOSHIMOX 5 C0SireneYOSHIMOX5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我明白了……原来这就是束缚你灵魂的苦难。尽管发生了这一切，吉野，我仍真心遗憾事情非得走到这一步。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我明白了……原来这就是束缚你灵魂的苦难。尽管发生了这一切，善最，我仍真心遗憾事情非得走到这一步。~
 END
 
 // Yoshimo's heart
 
 INTERJECT SLILMAT 0 C0SireneSLILMAT0
-== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~兄弟……我必须求你一件事。我这里有一颗逝去朋友的心。他死前……向伊尔梅特大人求了审判。~
+== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~兄弟……我必须求你一件事。我这里有一颗逝去朋友的心。他死前……向伊尔玛特大人求了审判。~
 EXTERN SLILMAT 10
 
 I_C_T SLILMAT 10 C0SireneSLILMAT10
@@ -272,7 +272,7 @@ I_C_T SLILMAT 10 C0SireneSLILMAT10
 END
 
 INTERJECT WILMAT 0 C0SireneWILMAT0
-== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~姐妹……我必须求你一件事。我这里有一颗逝去朋友的心。他死前……向伊尔梅特大人求了审判。~
+== C0SIRE2J IF ~InParty("C0Sirene") Range("C0Sirene",15) !StateCheck("C0Sirene",CD_STATE_NOTVALID) PartyHasItem("miscbu")~ THEN ~姐妹……我必须求你一件事。我这里有一颗逝去朋友的心。他死前……向伊尔玛特大人求了审判。~
 EXTERN WILMAT 4
 
 I_C_T WILMAT 4 C0SireneWILMAT4
@@ -308,8 +308,8 @@ INTERJECT Player1 3 C0SireneSpellholdDizzy1
 ~<CHARNAME>？你——你不舒服吗？求你，跟我说话。~
 END
 ++ ~我没事……真的。~ EXTERN C0SIRE2J pl1.4
-++ ~我身上有什么不对，塞琳，可我不知道是什么。~ EXTERN C0SIRE2J pl1.5
-++ ~让我抱着你，塞琳。我需要你的支撑。~ EXTERN C0SIRE2J pl1.6
+++ ~我身上有什么不对，茜琳，可我不知道是什么。~ EXTERN C0SIRE2J pl1.5
+++ ~让我抱着你，茜琳。我需要你的支撑。~ EXTERN C0SIRE2J pl1.6
 
 CHAIN C0SIRE2J pl1.4
 ~<CHARNAME>……求你，别对我说谎。那不会让我好受。~
@@ -326,7 +326,7 @@ EXIT
 // Slayer reaction
 
 I_C_T PLAYER1 5 C0SireneFirstSlayerChange1 
-== C0SIRE2J IF ~InParty("C0Sirene") See("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，那……那*东西*是邪恶的化身，<CHARNAME>。那跟我见过的任何东西都不一样……是你的污秽显形了吗？~
+== C0SIRE2J IF ~InParty("C0Sirene") See("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔玛特之名，那……那*东西*是邪恶的化身，<CHARNAME>。那跟我见过的任何东西都不一样……是你的污秽显形了吗？~
 END
 
 // Non-romance, tree of life LG
@@ -336,11 +336,11 @@ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOT
 END
 
 CHAIN PLAYER1 pl2
-~塞琳，伊尔梅特的圣武士，曾在你身边历经诸多试炼。她一次又一次向你证明了她的忠诚与正直，可你不确定她是否真知道前头等着什么。~
+~茜琳，伊尔玛特的圣武士，曾在你身边历经诸多试炼。她一次又一次向你证明了她的忠诚与正直，可你不确定她是否真知道前头等着什么。~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~塞琳，这是我和艾瑞尼卡斯之间的事。你在这其中的部分已经结束了。~ EXTERN C0SIRE2J pl2.1
-++ ~还有许多别人需要你，塞琳。别为我抛掉你的命。~ EXTERN C0SIRE2J pl2.1
+++ ~茜琳，这是我和艾瑞尼卡斯之间的事。你在这其中的部分已经结束了。~ EXTERN C0SIRE2J pl2.1
+++ ~还有许多别人需要你，茜琳。别为我抛掉你的命。~ EXTERN C0SIRE2J pl2.1
 ++ ~该了结一切了。你准备好了吗？~ EXTERN C0SIRE2J pl2.1
 
 CHAIN C0SIRE2J pl2.1
@@ -355,11 +355,11 @@ IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOT
 END
 
 CHAIN PLAYER1 pl4
-~塞琳，伊尔梅特的前圣武士，曾在你身边历经诸多试炼。在你的引导下，她寻到了自己的路，全然掌握自己的命运。可她真准备好为你冒一切风险吗？~
+~茜琳，伊尔玛特的前圣武士，曾在你身边历经诸多试炼。在你的引导下，她寻到了自己的路，全然掌握自己的命运。可她真准备好为你冒一切风险吗？~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~塞琳，这是我和艾瑞尼卡斯之间的事。你在这其中的部分已经结束了。~ EXTERN C0SIRE2J pl2.1
-++ ~还有许多别人需要你，塞琳。别为我抛掉你的命。~ EXTERN C0SIRE2J pl2.1
+++ ~茜琳，这是我和艾瑞尼卡斯之间的事。你在这其中的部分已经结束了。~ EXTERN C0SIRE2J pl2.1
+++ ~还有许多别人需要你，茜琳。别为我抛掉你的命。~ EXTERN C0SIRE2J pl2.1
 ++ ~该了结一切了。你准备好了吗？~ EXTERN C0SIRE2J pl2.1
 
 // Romance, tree of life LG
@@ -370,10 +370,10 @@ EXTERN PLAYER1 pl3
 END
 
 CHAIN PLAYER1 pl3
-~塞琳，伊尔梅特的圣武士，你成了她最亲密的朋友，最终成为她的爱人。她望着你，眼里满是温暖。~
+~茜琳，伊尔玛特的圣武士，你成了她最亲密的朋友，最终成为她的爱人。她望着你，眼里满是温暖。~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~塞琳，我——~ EXTERN C0SIRE2J pl3.1
+++ ~茜琳，我——~ EXTERN C0SIRE2J pl3.1
 
 CHAIN C0SIRE2J pl3.1
 ~（微笑）不，<CHARNAME>。这一回，让我来说。~
@@ -391,10 +391,10 @@ EXTERN PLAYER1 pl5
 END
 
 CHAIN PLAYER1 pl5
-~塞琳，伊尔梅特的前圣武士，你成了她最亲密的朋友，最终成为她的爱人。她望着你，眼里满是温暖。~
+~茜琳，伊尔玛特的前圣武士，你成了她最亲密的朋友，最终成为她的爱人。她望着你，眼里满是温暖。~
 DO ~SetGlobal("C0SireneTreeOfLife","GLOBAL",1)~
 END
-++ ~塞琳，我——~ EXTERN C0SIRE2J pl3.1
+++ ~茜琳，我——~ EXTERN C0SIRE2J pl3.1
 
 // Tree of Life, Irenicus is dead.
 
@@ -405,7 +405,7 @@ END
 // Hell
 
 I_C_T PLAYER1 25 C0SireneEnteringHell1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~我……我以为有一刻看见了三位神殿。那像是我从不敢想象的梦……可我听见了你的喊声，于是我转过身来。永恒的安息似乎那么近，可是……我站在你身边，<CHARNAME>，即使身死亦然。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~我……我以为有一刻看见了三神众神殿。那像是我从不敢想象的梦……可我听见了你的喊声，于是我转过身来。永恒的安息似乎那么近，可是……我站在你身边，<CHARNAME>，即使身死亦然。~
 END
 
 I_C_T PLAYER1 25 C0SireneEnteringHell2
@@ -415,19 +415,19 @@ END
 // Irenicus in hell
 
 I_C_T HELLJON 7 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔玛特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 8 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔玛特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 9 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔玛特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 10 C0SireneThirdBattleWithIrenicus1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔梅特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Alignment("C0Sirene",LAWFUL_GOOD)~ THEN ~以伊尔玛特之名，你要为你的罪付出代价，艾瑞尼卡斯。对你再没有仁慈了，无论来自我们，还是来自众神！~
 END
 
 I_C_T HELLJON 7 C0SireneThirdBattleWithIrenicus2
@@ -452,7 +452,7 @@ INTERJECT Player1 7 C0SireneSecondSlayerChange0
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) OR(2) Global("C0SireneRomanceActive","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ THEN ~<CHARNAME>……你究竟睡过没有？你脸色苍白得可怕……~
 END
 ++ ~离我远点，我要转变了！~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
-++ ~它又来了，塞琳！能跑就跑！~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
+++ ~它又来了，茜琳！能跑就跑！~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
 ++ ~我觉得……不对劲……~ EXTERN C0SIRE2J C0SireneSecondSlayerChange1
 
 CHAIN C0SIRE2J C0SireneSecondSlayerChange1
@@ -480,8 +480,8 @@ END
 CHAIN BODHIAMB C0SireneKidnap
 ~你追随至此，是希望取回对你珍贵的东西。我说，你越是这样下去，失去的只会越多。~
 == BODHIAMB ~啊，腐化圣武士总是最令人满意。如此自以为是、如此傲慢……而这一个的背景最是有趣。她体内的魔性之血会欣赏我将要做的事，我想。~
-== C0SIRE2J ~我知道你打算做什么，怪物，可伊尔梅特会护住我的灵魂。你得不到我。~
-== BODHIAMB ~你那可怜的神护不了你，塞琳。你必定感觉到了黑暗在召唤、在欢迎你……~
+== C0SIRE2J ~我知道你打算做什么，怪物，可伊尔玛特会护住我的灵魂。你得不到我。~
+== BODHIAMB ~你那可怜的神护不了你，茜琳。你必定感觉到了黑暗在召唤、在欢迎你……~
 == C0SIRE2J ~不！我把性命交在我主手中！<CHARNAME>，杀了我！~
 END
 ++ ~（照她说的做）~ EXTERN C0SIRE2J C0SireneKidnap1
@@ -496,7 +496,7 @@ StartCutScene("c0bodhi")~ EXIT
 
 CHAIN BODHIAMB C0SireneKidnap2
 ~你真下得了手吗，<CHARNAME>，嗯？砍倒最亲近你的人？我怀疑。现在乖一点，跟我来……~
-== C0SIRE2J ~我不会伤害<CHARNAME>，即使我必须倒下。我以伊尔梅特之名选择死亡！~
+== C0SIRE2J ~我不会伤害<CHARNAME>，即使我必须倒下。我以伊尔玛特之名选择死亡！~
 DO ~ClearAllActions()
 StartCutSceneMode()
 StartCutScene("c0bodhi2")~ EXIT
@@ -523,10 +523,10 @@ IF ~Global("C0SireneVampire","GLOBAL",3)~ + 23
 END
 
 EXTEND_BOTTOM C6BODHI 23
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~你已经夺走太多了！把爱蒙的灵魂还回来，还有塞琳的遗体！~ EXTERN C6BODHI C0SireneAb
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~而你已经兑现了那个承诺。把塞琳的遗体还回来，也许我会仁慈些。~ EXTERN C6BODHI C0SireneAb
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~单为你偷走塞琳，我就会追你到天涯。我不会失去从你手中救她的最后希望。~ EXTERN C6BODHI C0SireneAb
-+ ~Global("C0SireneVampire","GLOBAL",3)~ + ~你太相信感情了。偷走塞琳的遗体救不了你。~ EXTERN C6BODHI C0SireneAbConf
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~你已经夺走太多了！把爱蒙的灵魂还回来，还有茜琳的遗体！~ EXTERN C6BODHI C0SireneAb
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~而你已经兑现了那个承诺。把茜琳的遗体还回来，也许我会仁慈些。~ EXTERN C6BODHI C0SireneAb
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~单为你偷走茜琳，我就会追你到天涯。我不会失去从你手中救她的最后希望。~ EXTERN C6BODHI C0SireneAb
++ ~Global("C0SireneVampire","GLOBAL",3)~ + ~你太相信感情了。偷走茜琳的遗体救不了你。~ EXTERN C6BODHI C0SireneAbConf
 END
 
 CHAIN C6BODHI C0SireneAbConf
@@ -536,7 +536,7 @@ IF ~~ EXTERN C6BODHI C0SireneAb
 
 CHAIN C6BODHI C0SireneAb
 ~你的小魔裔宠物死了，<CHARNAME>。真了不起，真的。也许她那可怜的神毕竟与她同在，因为我把她的遗体放进这些墓室之后，竟连碰都碰不得她，更别说把她变成我们的一员。~
-= ~可那无关紧要。我已从你手中夺走了你最珍视的东西，<CHARNAME>，正如我所愿。不过别怕。你会跟你心爱的塞琳一同入土。~
+= ~可那无关紧要。我已从你手中夺走了你最珍视的东西，<CHARNAME>，正如我所愿。不过别怕。你会跟你心爱的茜琳一同入土。~
 = ~不……那不是等着你的命运，对吧，嗯？哦，这多令人愉快……知道你的灵魂注定归于虚无、再也见不到你所爱之人，我会更享受看着你的生命消逝！~
 END
 IF ~~ EXTERN C6BODHI 22
@@ -546,7 +546,7 @@ IF ~~ EXTERN C6BODHI 22
 CHAIN IF WEIGHT #-1
 ~Global("C0SireneVampire","GLOBAL",3)
 Global("C0SireneBody","AR0809",2)~ THEN PLAYER1 body
-~（塞琳的遗体在你怀里冰冷无生气。尽管波迪百般嘲讽，她并没有骗你——塞琳死了。）~ [C0BLANK]
+~（茜琳的遗体在你怀里冰冷无生气。尽管芭荻百般嘲讽，她并没有骗你——茜琳死了。）~ [C0BLANK]
 DO ~SetGlobal("C0SireneBody","AR0809",3)
 SetGlobal("C0SireneVampire","GLOBAL",4)~
 END
@@ -568,25 +568,25 @@ IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN AERIEJ body.2
-~不！她——她不可能是……她不可能死了！*啜泣*我……我很抱歉，<CHARNAME>。她是这样……这样死去的，我的魔法帮不上忙。也——也许伊尔梅特的祭司能帮我们。~
+~不！她——她不可能是……她不可能死了！*啜泣*我……我很抱歉，<CHARNAME>。她是这样……这样死去的，我的魔法帮不上忙。也——也许伊尔玛特的祭司能帮我们。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN JAHEIRAJ body.3
-~这……对你一定很难，<CHARNAME>。虽然这违背我的教导，可我实在不忍看你这样痛苦。也许还有希望……也许我们能向伊尔梅特教会求助。~
+~这……对你一定很难，<CHARNAME>。虽然这违背我的教导，可我实在不忍看你这样痛苦。也许还有希望……也许我们能向伊尔玛特教会求助。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN MAZZYJ body.4
-~以阿沃林的慈悲……她不该落得这样不光彩的死。我知道那是什么滋味，<CHARNAME>，帕特里克倒下时我便如此。也许我们该把她带给伊尔梅特的祭司。~
+~以阿沃林的慈悲……她不该落得这样不光彩的死。我知道那是什么滋味，<CHARNAME>，帕特里克倒下时我便如此。也许我们该把她带给伊尔玛特的祭司。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN KELDORJ body.5
-~我这一生见过许多同伴倒下，可她太年轻，不该如此。你们俩本该一起过漫长充实的一生。无论如何，别绝望，我的朋友，这城里的伊尔梅特祭司也许还能救她。~
+~我这一生见过许多同伴倒下，可她太年轻，不该如此。你们俩本该一起过漫长充实的一生。无论如何，别绝望，我的朋友，这城里的伊尔玛特祭司也许还能救她。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
@@ -604,7 +604,7 @@ IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
 
 CHAIN CERNDJ body.8
-~死亡是自然循环必要的一环，可也许这一回能有例外。无论如何，我怕塞琳的仪式已经使她无法以寻常方式回来。也许当地的伊尔梅特祭司能帮我们。~
+~死亡是自然循环必要的一环，可也许这一回能有例外。无论如何，我怕茜琳的仪式已经使她无法以寻常方式回来。也许当地的伊尔玛特祭司能帮我们。~
 END
 IF ~~ DO ~~ UNSOLVED_JOURNAL @100002
 EXIT
@@ -616,15 +616,15 @@ EXTEND_BOTTOM SLILMAT 0 #2
 END
 
 CHAIN SLILMAT C0SireneSLILMAT1
-~怎么……这是伊尔梅特圣战者中的塞琳姐妹！她怎么了？~
+~怎么……这是伊尔玛特圣战者中的茜琳姐妹！她怎么了？~
 END
 ++ ~一个强大的吸血鬼想转变她，可她做了……什么来阻止。~ EXTERN SLILMAT C0SireneSLILMAT2
 
 CHAIN SLILMAT C0SireneSLILMAT2
 ~请让我看看她。~
-= ~以伊尔梅特之名，这是……~
+= ~以伊尔玛特之名，这是……~
 = ~我明白了……这比我预想的要糟得多。我很遗憾这么说，可是……我怕她已彻底去了。~
-= ~若只是把她的灵魂从亡者之境召回来，我会乐于竭尽所能。可是……若她以性命为牺牲，使自己免于不死者的命运……那我怕我的祈祷触不到她。~
+= ~若只是把她的灵魂从朦胧之域召回来，我会乐于竭尽所能。可是……若她以性命为牺牲，使自己免于不死者的命运……那我怕我的祈祷触不到她。~
 = ~我无能为力。我真心遗憾。~
 END
 ++ ~她到底做了什么来保护自己？~ EXTERN SLILMAT C0SireneSLILMAT3
@@ -640,8 +640,8 @@ END
 
 CHAIN SLILMAT C0SireneSLILMAT4
 ~也许……~
-= ~也许还有希望……可唯一能救她的是伊尔梅特本人。若她的信仰真诚，也许他会再赐她生命……~
-= ~我会准备向伊尔梅特大人祈愿的仪式。她的灵魂此刻多半已在通往审判的路上，所以我们不能浪费时间。这至少需要一整天，所以请当在自己家里，我的<PRO_LADYLORD>。~
+= ~也许还有希望……可唯一能救她的是伊尔玛特本人。若她的信仰真诚，也许他会再赐她生命……~
+= ~我会准备向伊尔玛特大人祈愿的仪式。她的灵魂此刻多半已在通往审判的路上，所以我们不能浪费时间。这至少需要一整天，所以请当在自己家里，我的<PRO_LADYLORD>。~
 DO ~TakePartyItemNum("C0SBODY",1)
 DestroyItem("C0SBODY")
 ClearAllActions()
@@ -653,15 +653,15 @@ EXTEND_BOTTOM WILMAT 0 #2
 END
 
 CHAIN WILMAT C0SireneWILMAT1
-~怎么……这是伊尔梅特圣战者中的塞琳姐妹！她怎么了？~
+~怎么……这是伊尔玛特圣战者中的茜琳姐妹！她怎么了？~
 END
 ++ ~一个强大的吸血鬼想转变她，可她做了……什么来阻止。~ EXTERN WILMAT C0SireneWILMAT2
 
 CHAIN WILMAT C0SireneWILMAT2
 ~请让我看看她。~
-= ~以伊尔梅特之名，这是……~
+= ~以伊尔玛特之名，这是……~
 = ~我明白了……这比我预想的要糟得多。我很遗憾这么说，可是……我怕她已彻底去了。~
-= ~若只是把她的灵魂从亡者之境召回来，我会乐于竭尽所能。可是……若她以性命为牺牲，使自己免于不死者的命运……那我怕我的祈祷触不到她。~
+= ~若只是把她的灵魂从朦胧之域召回来，我会乐于竭尽所能。可是……若她以性命为牺牲，使自己免于不死者的命运……那我怕我的祈祷触不到她。~
 = ~我无能为力。我真心遗憾。~
 END
 ++ ~她到底做了什么来保护自己？~ EXTERN WILMAT C0SireneWILMAT3
@@ -677,8 +677,8 @@ END
 
 CHAIN WILMAT C0SireneWILMAT4
 ~也许……~
-= ~也许还有希望……可唯一能救她的是伊尔梅特本人。若她的信仰真诚，也许他会再赐她生命……~
-= ~我会准备向伊尔梅特大人祈愿的仪式。她的灵魂此刻多半已在通往审判的路上，所以我们不能浪费时间。这至少需要一整天，所以请当在自己家里，我的<PRO_LADYLORD>。~
+= ~也许还有希望……可唯一能救她的是伊尔玛特本人。若她的信仰真诚，也许他会再赐她生命……~
+= ~我会准备向伊尔玛特大人祈愿的仪式。她的灵魂此刻多半已在通往审判的路上，所以我们不能浪费时间。这至少需要一整天，所以请当在自己家里，我的<PRO_LADYLORD>。~
 DO ~TakePartyItemNum("C0SBODY",1)
 DestroyItem("C0SBODY")
 ClearAllActions()
@@ -702,13 +702,13 @@ I_C_T AERIE 26 C0SireneAERIE26
 END
 
 I_C_T QUAYLE 1 C0SireneQUAYLE1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（微笑）这还是你我都记得的那个奎尔吗，<CHARNAME>？~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（微笑）这还是你我都记得的那个奎里吗，<CHARNAME>？~
 END
 
 // Faldorn
 
 I_C_T CEFALDOR 0 C0SireneCEFALDOR0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~法尔多恩？！你真是疯了吗，德鲁伊？就算我记得的你，也没堕到这般地步！你还认得我们吗？~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~法多？！你真是疯了吗，德鲁伊？就算我记得的你，也没堕到这般地步！你还认得我们吗？~
 == CEFALDOR ~你那非人的臭气我熟悉，虽不记得从哪儿闻过。闭嘴吧！~
 END
 
@@ -734,25 +734,25 @@ I_C_T BODHI2 6 C0SireneBODHI26
 END
 
 I_C_T C6BODHI 0 C0SireneC6BODHI0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你的邪恶到此为止，波迪，我以伊尔梅特之名起誓。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你的邪恶到此为止，芭荻，我以伊尔玛特之名起誓。~
 END
 
 // Docks District
 
 I_C_T2 DCLERIC 1 C0SireneDCLERIC1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，你的疯狂今日终结！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔玛特之名，你的疯狂今日终结！~
 END
 
 I_C_T2 DCLERIC 2 C0SireneDCLERIC2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，你的疯狂今日终结！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔玛特之名，你的疯狂今日终结！~
 END
 
 I_C_T2 DCLERIC 3 C0SireneDCLERIC3
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，你的疯狂今日终结！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔玛特之名，你的疯狂今日终结！~
 END
 
 I_C_T2 DCLERIC 4 C0SireneDCLERIC4
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~让他就这么走掉是个错误，<CHARNAME>。西瑞克的疯徒既残忍又疯狂，只要让他们活着，就只会播撒纷乱。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~让他就这么走掉是个错误，<CHARNAME>。希瑞克的疯徒既残忍又疯狂，只要让他们活着，就只会播撒纷乱。~
 END
 
 I_C_T2 MAEVAR 25 C0SireneMAEVAR25
@@ -764,7 +764,7 @@ I_C_T2 MAEVAR 31 C0SireneMAEVAR31
 END
 
 I_C_T EDWIN 1 C0SireneEDWIN1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~自我们分别后，我本希望再不见你，红袍法师，虽然你混迹于这等恶徒之间我也不该意外。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~自我们分别后，我本希望再不见你，红袍巫师，虽然你混迹于这等恶徒之间我也不该意外。~
 == EDWIN ~看来你还把你这小魔裔带在身边，<CHARNAME>。这正是我说的那种同伴。无所谓了。~
 END
 
@@ -821,7 +821,7 @@ I_C_T HENDAK 1 C0SireneHendak1
 END
 
 I_C_T HENDAK 40 C0SireneHendak40
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~也许这样最好，虽然我怕这只会引来奴隶贩子更多注意。你该小心，亨达克。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~也许这样最好，虽然我怕这只会引来奴隶贩子更多注意。你该小心，韩达克。~
 == HENDAK ~你说的是实话，我的朋友，虽然我很清楚风险，我并不怕它们。~
 END
 
@@ -838,7 +838,7 @@ I_C_T LISSA 4 C0SireneLISSA4
 END
 
 INTERJECT GIRL1 0 C0SireneGIRL1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~不，孩子，别怕。你自由了。去伊尔梅特神殿。你在那里会安全，我保证。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~不，孩子，别怕。你自由了。去伊尔玛特神殿。你在那里会安全，我保证。~
 EXTERN GIRL1 1
 
 INTERJECT HAEGAN 0 C0SireneHAEGAN0
@@ -891,12 +891,12 @@ I_C_T TANNER 8 C0SireneTanner8
 END
 
 I_C_T INSPECT 13 C0SireneINSPECT13
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，这样的行径绝非任何清醒心智所能做出……~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔玛特之名，这样的行径绝非任何清醒心智所能做出……~
 END
 
 I_C_T RAELIS 44 C0SireneRAELIS37
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~你……你来自别的位面，对吧？我血里的什么东西能感觉到。~
-== RAELIS ~而我感觉到巴托的触碰在你身上，孩子。真是古怪……不过我怕我们手头有更紧急的事。~
+== RAELIS ~而我感觉到巴托地狱的触碰在你身上，孩子。真是古怪……不过我怕我们手头有更紧急的事。~
 END
 
 I_C_T2 PTHRAL01 1 C0SirenePTHRAL01
@@ -912,7 +912,7 @@ I_C_T KAYPAL02 6 C0SireneKAYPAL026
 END
 
 I_C_T2 NEB 5 C0SireneNEB5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，这是博德之门那个杀孩子的人！你将面对伊尔梅特的正义，怪物！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，这是博德之门那个杀孩子的人！你将面对伊尔玛特的正义，怪物！~
 END
 
 I_C_T2 ANOMENJ 129 C0SireneANOMENJ129
@@ -938,32 +938,32 @@ INTERJECT DORN 16 C0SireneDORN16
 == DORN ~闭嘴，蠢货。我的话是对你的首领说的，不是你。~
 == C0SIRE2J ~今日我的话还不够。拔剑吧，邪恶的奴仆。为了那些倒在你手里的人，我要终结你。~
 END
-++ ~我同意塞琳。你的邪恶之路到头了，多恩。~ EXTERN DORN 8
-++ ~把武器收起来，塞琳。多恩可以成为可贵的盟友。~ EXTERN C0SIRE2J SireneDORN1
+++ ~我同意茜琳。你的邪恶之路到头了，多恩。~ EXTERN DORN 8
+++ ~把武器收起来，茜琳。多恩可以成为可贵的盟友。~ EXTERN C0SIRE2J SireneDORN1
 
 INTERJECT DORN 23 C0SireneDORN23
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~卑劣的恶魔……你竟能毫无一丝悔意地说出这种话……~
 == DORN ~闭嘴，蠢货。我的话是对你的首领说的，不是你。~
 == C0SIRE2J ~今日我的话还不够。拔剑吧，邪恶的奴仆。为了那些倒在你手里的人，我要终结你。~
 END
-++ ~我同意塞琳。你的邪恶之路到头了，多恩。~ EXTERN DORN 8
-++ ~把武器收起来，塞琳。多恩可以成为可贵的盟友。~ EXTERN C0SIRE2J SireneDORN1
+++ ~我同意茜琳。你的邪恶之路到头了，多恩。~ EXTERN DORN 8
+++ ~把武器收起来，茜琳。多恩可以成为可贵的盟友。~ EXTERN C0SIRE2J SireneDORN1
 
 CHAIN C0SIRE2J SireneDORN1
 ~<CHARNAME>，你若与这恶魔结盟，那我就别无选择，只能也与你对立，因为我无意退让。我们中必须有一个倒在这里。~
 END
 ++ ~好，就按你的方式来。多恩，准备受死。~ EXTERN DORN 8
-++ ~很抱歉事情走到这一步，塞琳。~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
+++ ~很抱歉事情走到这一步，茜琳。~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
 SetGlobalTimer("OHD_CRASH_WEDDING","GLOBAL",TWO_DAYS)
 ReputationInc(-1)
 ActionOverride("DORN",JoinParty()) SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy()~ EXIT
-++ ~这是你自找的，塞琳。最好先祷个告。~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
+++ ~这是你自找的，茜琳。最好先祷个告。~ DO ~SetGlobal("OHD_PLOT","GLOBAL",1)
 SetGlobalTimer("OHD_CRASH_WEDDING","GLOBAL",TWO_DAYS)
 ReputationInc(-1)
 ActionOverride("DORN",JoinParty()) SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() Enemy()~ EXIT
 
 I_C_T GARRICK 2 C0SireneGARRICK2
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~你不记得我们了吗，加里克？真可惜……不过他看起来变了很多。我纳闷他到底出了什么事？~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~你不记得我们了吗，加瑞克？真可惜……不过他看起来变了很多。我纳闷他到底出了什么事？~
 END
 
 CHAIN IF WEIGHT #-1
@@ -972,7 +972,7 @@ See("C0Sirene")
 !StateCheck("C0Sirene",STATE_SLEEPING)
 RandomNum(2,1)
 Global("C0Sirene","LOCALS",0)~ THEN TIRLANA C0SireneIrlana
-~喂，那儿！我认出你盔甲上伊尔梅特的烙印，同道的骑士。光辉之心的骑士们欢迎你。可你为何要把面容遮得这么仔细？~
+~喂，那儿！我认出你盔甲上伊尔玛特的烙印，同道的骑士。光辉之心的骑士们欢迎你。可你为何要把面容遮得这么仔细？~
 DO ~SetGlobal("C0Sirene","LOCALS",1)~
 == C0SIRE2J ~我……我怕我有一道相当难看的疤，露出来让我非常羞愧，尤其是在您这样光彩照人的人面前，我的女士。恕我失礼……~
 EXIT
@@ -1020,7 +1020,7 @@ I_C_T KAYL2 14 C0SireneKAYL214
 END
 
 I_C_T GAAL 6 C0SireneGAAL6
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这真是*可憎*，<CHARNAME>。这比洛薇雅塔和塔洛娜的教会还要残忍。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~这真是*可憎*，<CHARNAME>。这比劳薇塔和塔洛娜的教会还要残忍。~
 END
 
 I_C_T2 GAAL 23 C0SireneGAAL23
@@ -1037,7 +1037,7 @@ I_C_T RIFTM01 0 C0SireneRIFTM010
 END
 
 I_C_T RIFTM01 14 C0SireneRIFTM0114
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~比伊尔梅特本人还古老……我无法想象这些守护者受了多久的苦。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~比伊尔玛特本人还古老……我无法想象这些守护者受了多久的苦。~
 END
 
 I_C_T RIFTM01 21 C0SireneRIFTM0121
@@ -1056,7 +1056,7 @@ INTERJECT TOLGER 80 C0SireneTOLGER80
 EXTERN TOLGER 81
 
 I_C_T2 VICG1 4 C0SireneVICG12
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~维康尼亚，在这里？我对她没有好回忆，可只因偏见就把人活活烧死……我不会袖手旁观让这事发生，<CHARNAME>。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~维康妮亚，在这里？我对她没有好回忆，可只因偏见就把人活活烧死……我不会袖手旁观让这事发生，<CHARNAME>。~
 END
 
 I_C_T2 VICG1 4 C0SireneVICG12a
@@ -1076,13 +1076,13 @@ I_C_T ANOMENJ 150 C0SireneANOMENJ150
 END
 
 I_C_T MARIA 5 C0SireneMARIA5
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~神明啊，太可怕了……我觉得这样严重的事我们该让他们自己处理，可我为凯尔登爵士担心……~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~神明啊，太可怕了……我觉得这样严重的事我们该让他们自己处理，可我为凯东爵士担心……~
 END
 
 I_C_T KELDORJ 23 C0SireneKELDORJ23
 == C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~一定还有别的办法，爵士。你不能就这样把家人判成这样残酷的命运！我知道那不是你真正的愿望。~
 == KELDORJ ~你不明白这事有多严重，孩子！这不再是情感的问题——这是正义。我的荣誉要求我走正道，无论我感觉如何。~
-== C0SIRE2J ~凯尔登爵士，你不能是这意思……~
+== C0SIRE2J ~凯东爵士，你不能是这意思……~
 END
 
 // Umar Hills
@@ -1104,7 +1104,7 @@ I_C_T UHMAY01 18 C0SireneUHMAY18
 END
 
 I_C_T2 UHOGRE01 15 C0SireneUHOGRE0115
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~见到这样的事真令人意外，<CHARNAME>。我倾向于相信他们真的无意害伊姆斯谷，所以我想最好告诉村长。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~见到这样的事真令人意外，<CHARNAME>。我倾向于相信他们真的无意害伊涅维尔村，所以我想最好告诉村长。~
 END
 
 INTERJECT MAZZY 6 C0SireneMAZZY6
@@ -1131,11 +1131,11 @@ I_C_T2 TAZOK 3 C0SireneTAZOK3
 END
 
 I_C_T2 FIRKRA02 25 C0SireneFIRKRA0225
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~以伊尔梅特之名，以阿詹提斯和所有因你诡计而倒下的人之名，你会倒下，龙！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~以伊尔玛特之名，以阿詹提斯和所有因你诡计而倒下的人之名，你会倒下，龙！~
 END
 
 I_C_T2 FIRKRA02 25 C0SireneFIRKRA0225
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~愿伊尔梅特的祝福引我们走向胜利，<CHARNAME>。我们今日要终结你的邪恶与暴政，龙！~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) !Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~愿伊尔玛特的祝福引我们走向胜利，<CHARNAME>。我们今日要终结你的邪恶与暴政，龙！~
 END
 
 I_C_T FIRKRA02 29 C0SireneFIRKRA0229
@@ -1162,7 +1162,7 @@ END
 // Trademeet
 
 I_C_T NEEBER 7 C0SireneNEEBER7
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，我们不是在纳什克尔见过这个人吗？他烦人得足以是同一个。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~<CHARNAME>，我们不是在那西凯见过这个人吗？他烦人得足以是同一个。~
 END
 
 I_C_T TRSKIN02 10 C0SireneTRSKIN0210
@@ -1196,11 +1196,11 @@ END
 // Brynnlaw + Spellhold
 	
 EXTEND_BOTTOM PPIMOEN 0
-+ ~IsValidForPartyDialog("C0Sirene") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你该记得塞琳。你认得她吗，爱蒙？~ EXTERN C0SIRE2J C0SirenePPIMOEN0
++ ~IsValidForPartyDialog("C0Sirene") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你该记得茜琳。你认得她吗，爱蒙？~ EXTERN C0SIRE2J C0SirenePPIMOEN0
 END
 
 CHAIN C0SIRE2J C0SirenePPIMOEN0
-~她……哦，伊尔梅特的慈悲，发生了什么？我几乎认不出她……她的心智碎了，而我无能为力。原谅我，<CHARNAME>。~
+~她……哦，伊尔玛特的慈悲，发生了什么？我几乎认不出她……她的心智碎了，而我无能为力。原谅我，<CHARNAME>。~
 END
 IF ~~ EXTERN PPIMOEN 1
 
@@ -1223,7 +1223,7 @@ INTERJECT PIRPIR05 1 C0SirenePIRPIR051
 EXTERN PIRPIR05 5
 
 I_C_T PPDILI 0 C0SirenePPDILI0
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔梅特之名，他们连孩子都关？什么样的怪物会做这种事？~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~以伊尔玛特之名，他们连孩子都关？什么样的怪物会做这种事？~
 == PPDILI ~我喜欢你的脸，漂亮小姐。可你为什么有角？它们让你看起来怪怪的。它们是你身上的一部分吗？~
 END
 
@@ -1250,7 +1250,7 @@ END
 APPEND C0SIRE2J
 
 IF ~Global("C0SireneYoshimoHeart","GLOBAL",1)~ C0SireneYoshimoHeart
- SAY ~（叹气）一个受尽折磨的生命结束得太早，<CHARNAME>。尽管他背叛了，我无法恨他。我只能希望伊尔梅特能宽恕他的错误。~ [C0BLANK]
+ SAY ~（叹气）一个受尽折磨的生命结束得太早，<CHARNAME>。尽管他背叛了，我无法恨他。我只能希望伊尔玛特能宽恕他的错误。~ [C0BLANK]
  = ~留下他的心，<CHARNAME>。若众神仁慈，也许他还有希望。~
 IF ~~ DO ~SetGlobal("C0SireneYoshimoHeart","GLOBAL",2)~ EXIT
 END
@@ -1291,15 +1291,15 @@ INTERJECT UDPHAE01 61 C0SireneUDPHAE0161
 EXTERN UDPHAE01 62
 
 I_C_T2 UDPHAE01 88 C0SireneUDPHAE188
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不喜欢这样，<CHARNAME>。尽管他有敌意，索劳芬相比其余这些恶魔对我们已算非常公道。也许我们可以警告他，另找办法。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~我不喜欢这样，<CHARNAME>。尽管他有敌意，索劳纷相比其余这些恶魔对我们已算非常公道。也许我们可以警告他，另找办法。~
 END
 
 I_C_T2 UDSOLA01 132 C0SireneUDSOLA01132
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一位黑少女的信徒，在这里……他比我想的更勇敢。幸好我们不必杀他。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一位幽暗少女的信徒，在这里……他比我想的更勇敢。幸好我们不必杀他。~
 END
 
 I_C_T2 UDSOLA01 140 C0SireneUDSOLA01140
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一位黑少女的信徒，在这里……他比我想的更勇敢。幸好我们不必杀他。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~一位幽暗少女的信徒，在这里……他比我想的更勇敢。幸好我们不必杀他。~
 END
 
 I_C_T2 UDTRAP02 3 C0SireneUDTRAP023
@@ -1313,16 +1313,16 @@ END
 // Coran
 
 I_C_T C6CORAN 1 C0SireneC6CORAN1
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（笑）更可能是你太忙于女人的关注，才没心思来找我们，科兰。~
-== C6CORAN ~啊……亲爱的、美丽的塞琳！再见到你真是件乐事。呃……也许我确实有过那些念头，可我的打算是终究要追上你，我向你发誓。~
-== C0SIRE2J ~你一点都没变，科兰……真不幸。~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID) Global("C0SirenePartyBG1","GLOBAL",1)~ THEN ~（笑）更可能是你太忙于女人的关注，才没心思来找我们，科朗。~
+== C6CORAN ~啊……亲爱的、美丽的茜琳！再见到你真是件乐事。呃……也许我确实有过那些念头，可我的打算是终究要追上你，我向你发誓。~
+== C0SIRE2J ~你一点都没变，科朗……真不幸。~
 == C6CORAN ~（笑）我就是我，夫人。~
 END
 
 // Chapter 6-7
 
 I_C_T C6ELF1 2 C0SireneC6ELF12
-== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~（叹气）以伊尔梅特之名，这到底有没有完？~
+== C0SIRE2J IF ~InParty("C0Sirene") InMyArea("C0Sirene") !StateCheck("C0Sirene",CD_STATE_NOTVALID)~ THEN ~（叹气）以伊尔玛特之名，这到底有没有完？~
 END
 
 I_C_T SUELF4 0 C0SireneC6ELF40
@@ -1352,12 +1352,12 @@ CHAIN IF WEIGHT #-1 ~Global("C0SireneBG1Talk","GLOBAL",2)~ THEN C0SIRE2J t0
 DO ~RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",3600) SetGlobal("C0SireneBG1Talk","GLOBAL",3)~
 END
 ++ ~我也是。再遇到老朋友总是好的。~ + t0.1
-++ ~真可惜，我们一起击败萨瑞沃克之后你就走了。你错过了许多。~ + t0.2
+++ ~真可惜，我们一起击败沙洛佛克之后你就走了。你错过了许多。~ + t0.2
 ++ ~那不奇怪。毕竟龙矛事件之后，我差一点就被判死刑。~ + t0.3
-+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~我很意外，火焰之拳把我收押之后，你再见我还这么高兴。我记得你并不想再见到我。~ + t0.4
++ ~Global("C0SireneMatch","GLOBAL",1)~ + ~我很意外，焰拳把我收押之后，你再见我还这么高兴。我记得你并不想再见到我。~ + t0.4
 + ~Global("C0SireneMatch","GLOBAL",1)~ + ~分开之后我也一直在想同样的事。我想你。~ + t0.5
-+ ~Global("C0SireneMatch","GLOBAL",1)~ + ~别误会，可某种意义上我几乎庆幸你走了。我不愿你看着我因谋杀斯基而被绞死……即使最后并不是那样。~ + t0.6
-++ ~我们现在没时间谈，塞琳。~ + t.0
++ ~Global("C0SireneMatch","GLOBAL",1)~ + ~别误会，可某种意义上我几乎庆幸你走了。我不愿你看着我因谋杀史姬而被绞死……即使最后并不是那样。~ + t0.6
+++ ~我们现在没时间谈，茜琳。~ + t.0
 
 APPEND C0SIRE2J
 
@@ -1367,7 +1367,7 @@ IF ~~ DO ~RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",3600) SetGlobal(
 END
 
 IF ~~ t0.1
-SAY ~我只希望情形不是这样。卡立德和迪娜希尔……*叹气*命运真是残酷。~
+SAY ~我只希望情形不是这样。卡立德和戴娜黑……*叹气*命运真是残酷。~
 IF ~~ + t0.7
 END
 
@@ -1377,12 +1377,12 @@ IF ~~ + t0.7
 END
 
 IF ~~ t0.3
-SAY ~斯基的死一直重重压在我心头……可若这能让你好受些，<CHARNAME>，我不怪你，无论在我们被迫分别之前我相信过什么。~
+SAY ~史姬的死一直重重压在我心头……可若这能让你好受些，<CHARNAME>，我不怪你，无论在我们被迫分别之前我相信过什么。~
 IF ~~ + t0.7
 END
 
 IF ~~ t0.4
-SAY ~那……我……*叹气*我那时太冲动了。我让情绪蒙蔽了判断……伊尔梅特大人提醒了我这一点。我不该相信你真的会做出谋杀那样可怕的事。~
+SAY ~那……我……*叹气*我那时太冲动了。我让情绪蒙蔽了判断……伊尔玛特大人提醒了我这一点。我不该相信你真的会做出谋杀那样可怕的事。~
 = ~真的，我希望我没有在那座可怕的牢里对你说那些话……可我无法收回我的行为。我只能求你宽恕我对你的责难。~
 ++ ~我接受你的道歉。那时情况艰难，我一点也不怪你。~ + t0.4a
 ++ ~要我原谅你说过的话、做过的事很难，可你若真心，那会随时间改变。~ + t0.4a
@@ -1417,7 +1417,7 @@ END
 
 IF ~~ t0.7
 SAY ~*叹气*原谅我。自从离开，我一直被愧疚与悔恨纠缠。我觉得我辜负了你，<CHARNAME>，在你最需要的时候离开了你。~
-= ~你失去的一切……卡立德、迪娜希尔，甚至爱蒙……我忍不住觉得自己要负一部分责任。~
+= ~你失去的一切……卡立德、戴娜黑，甚至爱蒙……我忍不住觉得自己要负一部分责任。~
 ++ ~别这样。你什么都做不了，也无法预知会发生什么。~ + t0.8
 ++ ~你若留下，也只会成为名单上又一个牺牲者。~ + t0.8
 ++ ~嗯，你又回到我身边了，这才是现在要紧的。过去的事就过去了。~ + t0.8
@@ -1426,7 +1426,7 @@ END
 
 IF ~~ t0.8
 SAY ~那也许确实如此，可是……说实话，那并不让我好受。自从我把剑献给你的差遣那天起，你一直把我当朋友，也不顾我受诅咒的血脉而公平待我。~
-= ~<CHARNAME>，只要你的目标正当，我就把一生献给这目标，无论你要的是为逝者复仇，还是爱蒙的平安。我以伊尔梅特的圣武士……也以一个朋友的身份起誓。~
+= ~<CHARNAME>，只要你的目标正当，我就把一生献给这目标，无论你要的是为逝者复仇，还是爱蒙的平安。我以伊尔玛特的圣武士……也以一个朋友的身份起誓。~
 ++ ~谢谢你。能有这样忠诚的朋友是我的荣幸。~ + t0.9
 ++ ~这承诺可不小。我会盯着你兑现。~ + t0.10
 ++ ~知道就好。现在我们走吧。~ + t0.11
@@ -1454,7 +1454,7 @@ IF ~~ t0.12
 SAY ~还有……一件事。我们分别之前，我记得我们谈过我们之间的事，我表示过我想要的不只是单纯的友谊。你……从那以后也考虑过同样的事吗？~
 ++ ~我们在龙矛已经谈过一次了。我们还吻过，记得吗？~ + t0.13
 ++ ~谁知道呢？我想弄清楚。~ + t0.14
-++ ~不。我信任你，塞琳，作为朋友，可我们就别越过那条线了。~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ + t0.15
+++ ~不。我信任你，茜琳，作为朋友，可我们就别越过那条线了。~ DO ~SetGlobal("C0SireneRomanceActive","GLOBAL",3)~ + t0.15
 END
 
 IF ~~ t0.13
@@ -1497,7 +1497,7 @@ END
 
 IF ~~ t1.1
 SAY ~我不愿显得不知感激。你给了我队伍里的位置，我也知道你不是邪恶的<PRO_MANWOMAN>。我只是……想知道是什么驱使你走这条路。你追的是爱蒙，还是艾瑞尼卡斯？~
-++ ~爱蒙是我首要的。艾瑞尼卡斯尽可以在蒙面法师的监管里烂掉，我不在乎。~ + t1.2
+++ ~爱蒙是我首要的。艾瑞尼卡斯尽可以在蒙面法师会的监管里烂掉，我不在乎。~ + t1.2
 + ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~都是。我想救爱蒙，可我也想知道那法师为什么找我。~ + t1.3
 + ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~都是。我想救爱蒙，可我也想知道那法师为什么找我。~ + t1.3a
 ++ ~我追的是艾瑞尼卡斯。若路上能救爱蒙，那也很好。~ + t1.4
@@ -1515,7 +1515,7 @@ IF ~~ + t1.5
 END
 
 IF ~~ t1.3a
-SAY ~我明白。知道卡立德和迪娜希尔的遭遇，更别说爱蒙……还有你自己，最要紧的……我也会想复仇。~
+SAY ~我明白。知道卡立德和戴娜黑的遭遇，更别说爱蒙……还有你自己，最要紧的……我也会想复仇。~
 IF ~~ + t1.5
 END
 
@@ -1541,7 +1541,7 @@ END
 + ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~这些时候你仍一直是独自旅行吗？~ + t2.2
 + ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你一直是独自旅行吗？~ + t2.2
 ++ ~我看不出为什么。你看来很值得信任，战斗上也有本领。~ + t2.3
-++ ~我们没什么时间闲聊，塞琳。也许改天吧。~ + t2.0
+++ ~我们没什么时间闲聊，茜琳。也许改天吧。~ + t2.0
 
 APPEND C0SIRE2J
 
@@ -1695,9 +1695,9 @@ IF ~~ + t3.7
 END
 
 IF ~~ t3.7
-SAY ~我在阿斯卡特拉与伊尔梅特教会的兄弟姐妹们相处时，我们……谈过许多事，不只是我们的信仰，还有众神一般的行事之道。~
+SAY ~我在阿斯卡特拉与伊尔玛特教会的兄弟姐妹们相处时，我们……谈过许多事，不只是我们的信仰，还有众神一般的行事之道。~
 = ~某个时候，我们提到了无信者之墙……那是等着那些不向众神宣誓效忠者的命运。我自童年学习以来就没听人提过那堵墙，可从那以后，这念头一直留在我心里。~
-++ ~伊尔梅特信徒怎么看那堵墙？~ + t3.8
+++ ~伊尔玛特信徒怎么看那堵墙？~ + t3.8
 ++ ~它不公。许多好人不应得那样的命运。~ + t3.9
 ++ ~那堵墙是场荒谬。它存在只为了强迫别人敬拜，并惩罚不敬拜的人。~ + t3.9
 ++ ~我觉得那是无信者该得的命运。~ + t3.10
@@ -1710,7 +1710,7 @@ IF ~~ + t3.10
 END
 
 IF ~~ t3.9
-SAY ~我也这么认为……墙里有无数灵魂，无论善恶，都被判同样的命运。一个残忍的西瑞克信徒死后都可能比一个无信者得到更好的结局。~
+SAY ~我也这么认为……墙里有无数灵魂，无论善恶，都被判同样的命运。一个残忍的希瑞克信徒死后都可能比一个无信者得到更好的结局。~
 IF ~~ + t3.10
 END
 
@@ -1744,7 +1744,7 @@ SAY ~我怎么能安心，<CHARNAME>？知道无信者注定要落进他们不�
 END
 
 IF ~~ t3.14
-SAY ~我只能相信伊尔梅特本人也不支持这样的不公，即使他无力阻止。*叹气*这大概证明连众神也非全知全能。~
+SAY ~我只能相信伊尔玛特本人也不支持这样的不公，即使他无力阻止。*叹气*这大概证明连众神也非全知全能。~
 IF ~Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.16
 IF ~!Global("C0SirenePCFaithless","GLOBAL",1)~ + t3.15
 END
@@ -1874,8 +1874,8 @@ IF ~~ + t5.2
 END
 
 IF ~~ t5.2
-SAY ~这不是说我觉得自己不适合这种生活，<CHARNAME>。我有训练也有意志做伊尔梅特的斗士，我也感激我有力量保护亲近的人，比如你，可是……~
-= ~有时我很难不去看沾在我手上的血，无论它多黑。那……令人作呕。~
+SAY ~这不是说我觉得自己不适合这种生活，<CHARNAME>。我有训练也有意志做伊尔玛特的斗士，我也感激我有力量保护亲近的人，比如你，可是……~
+= ~有时我很难不去想自己双手沾满的血，无论那血有多黑。那……令人作呕。~
 ++ ~我不知道这竟这样影响你。你在战场上看起来几乎很自在。~ + t5.3
 ++ ~你说得对。想到我终结了多少性命就可怕。到如今我已数不清了。~ + t5.4
 ++ ~有时杀戮是必要的，以防更多邪恶发生。~ + t5.5
@@ -1910,7 +1910,7 @@ IF ~~ + t5.8
 END
 
 IF ~~ t5.8
-SAY ~我的许多同信者会选择不那么醒目的东西，也许是圣徽，或是一面盾，把伊尔梅特的记号放在上面。~
+SAY ~我的许多同信者会选择不那么醒目的东西，也许是圣徽，或是一面盾，把伊尔玛特的记号放在上面。~
 = ~我选了这件斗篷，好让沾在上面的血成为提醒，提醒我必须做什么，才能确保再不会有苦难发生。~
 = ~这是个我既爱又恨的象征。我带着自己最怕之物的提醒，还把它变成我信仰的象征，这不是很傻吗？~
 ++ ~我觉得一点也不傻。我觉得这是个大胆的选择。~ + t5.9
@@ -1938,7 +1938,7 @@ END
 // Friendship talk 6
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",12)~ THEN C0SIRE2J t6
-~我……希望你没觉得我上次谈话是在批评你，<CHARNAME>。我不是想暗示我对你的领导不满。~ [C0BLANK]
+~我……希望你没觉得我们上次谈话时我是在批评你，<CHARNAME>。我并不是对你的领队方式有什么不满。~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
 ++ ~不，当然没有。~ + t6.1
@@ -1978,9 +1978,9 @@ IF ~~ EXIT
 END
 
 IF ~~ t6.5
-SAY ~若我不以伊尔梅特之名倒下，那么……也许我会退隐到一座伊尔梅特教会，用余生治病救人、教导他人。~
+SAY ~若我不以伊尔玛特之名倒下，那么……也许我会退隐到一座伊尔玛特教会，用余生治病救人、教导他人。~
 = ~我可以试着去泰瑟找我受苦圣战骑士团的同道，可是……他们也许不会接纳我。不会接纳如今的我。~
-++ ~为什么不会？伊尔梅特的信徒不是该宽容吗？~ + t6.7
+++ ~为什么不会？伊尔玛特的信徒不是该宽容吗？~ + t6.7
 ++ ~成家怎么样？你不想要吗？~ + t6.8
 ++ ~这番谈话挺有意思，可我们真该走了。~ + t6.4
 END
@@ -2028,7 +2028,7 @@ IF ~~ t7.1
 SAY ~我知道我不该，可它仍然困扰我。这么久以来，我的血决定了我是谁、别人眼中的我是谁，而且……这从来不曾更容易应付。~
 = ~我有时想，同样处境的人是否也像我这样被人看轻。也许他们幸运些，出身的痕迹更少，或学会了遮掩自己。有些人甚至能走在人群里，尽管一切仍昂着头。~
 = ~若有这样的人，那我羡慕他们。这是副难扛的担子，因你是什么而被畏惧、被厌恶，而非因你是谁。~
-++ ~不是所有人都怕你。有些人确实敬重你这位伊尔梅特骑士。~ + t7.3
+++ ~不是所有人都怕你。有些人确实敬重你这位伊尔玛特骑士。~ + t7.3
 ++ ~若这能让你好受些，我完全支持你走上前，给那些瞪眼的人几个耳光，让他们端正态度。~ + t7.4
 ++ ~你觉得你若生来是普通人类，跟别人一样，会更快乐吗？~ + t7.5
 END
@@ -2057,7 +2057,7 @@ END
 IF ~~ t7.6
 SAY ~我还想再听你的想法，<CHARNAME>。你觉得我把自己的血视为诅咒，即使它塑成了如今的我，这算对吗？~
 ++ ~你该为你是谁而自豪。无论你生来是什么。~ + t7.7
-++ ~想本可能如何没意义，塞琳。你必须学会接受它。~ + t7.8
+++ ~想本可能如何没意义，茜琳。你必须学会接受它。~ + t7.8
 ++ ~这我没法替你回答。你必须自己决定。~ + t7.0
 END
 
@@ -2073,8 +2073,8 @@ END
 
 IF ~~ t7.9
 SAY ~无论如何，我想让你知道，你给了我许多启发，<CHARNAME>。你是巴尔之子，可你首先是你自己。这正是我向往效法的榜样。~
-++ ~谢谢你，塞琳。~ EXIT
-++ ~你不必效法我，塞琳。做你认为最好的事。~ + t7.10
+++ ~谢谢你，茜琳。~ EXIT
+++ ~你不必效法我，茜琳。做你认为最好的事。~ + t7.10
 ++ ~你本该如此。~ EXIT
 END
 
@@ -2087,11 +2087,11 @@ END
 // Friendship talk 8
 
 CHAIN IF ~Global("C0SireneFriendshipTalk","GLOBAL",16)~ THEN C0SIRE2J t8
-~「苦难自牺牲而来。忍耐自苦难而来。力量自忍耐而来。愿伊尔梅特赐<PRO_HESHE>成功之力，与忍耐之坚。」~ [C0BLANK]
+~「苦难自牺牲而来。忍耐自苦难而来。力量自忍耐而来。愿伊尔玛特赐<PRO_HESHE>成功之力，与忍耐之坚。」~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneFriendshipTalk","GLOBAL",1) RealSetGlobalTimer("C0SireneFriendshipTimer","GLOBAL",2700)~
 END
 ++ ~你祈祷时声音很美。比平常更美。~ + t8.1
-++ ~你在祈祷吗，塞琳？我没怎么听你这样过。~ + t8.2
+++ ~你在祈祷吗，茜琳？我没怎么听你这样过。~ + t8.2
 ++ ~很高兴看到你经历了我们谈的这一切之后，仍没有失去信仰。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + t8.3
 
 APPEND C0SIRE2J
@@ -2144,7 +2144,7 @@ END
 IF ~~ t8.8
 SAY ~说实话，我已有一段时间以你的名义祈祷……可直到近来我才有勇气让你听见。我想我在你身边变得……更自在了。~
 = ~你是位真正的朋友，一位值得钦佩的领袖，在我疑惑时是位明智的导师。我欠你许多，也许多到还不清。~
-++ ~我们是朋友，塞琳。朋友之间不相欠。~ + t8.9
+++ ~我们是朋友，茜琳。朋友之间不相欠。~ + t8.9
 ++ ~慢慢来。我们一时半会儿不会死。~ + t8.10
 ++ ~我感激。~ + t8.11
 END
@@ -2160,7 +2160,7 @@ IF ~~ + t8.11
 END
 
 IF ~~ t8.11
-SAY ~时候到了，我希望这些祈祷能助你，<CHARNAME>。伊尔梅特看顾我们两人。~
+SAY ~时候到了，我希望这些祈祷能助你，<CHARNAME>。伊尔玛特看顾我们两人。~
 IF ~~ EXIT
 END
 END
@@ -2187,7 +2187,7 @@ SAY ~你是坚强的<PRO_MANWOMAN>，<CHARNAME>。知道你这样受苦之后，
 = ~若回答不违背你的意愿，我的朋友……你感觉如何？你为你失去的东西感到痛吗？~
 ++ ~不完全是痛。更像是……一种空洞。~ + t9.2
 ++ ~不必担心。我感觉很好。~ + t9.3
-++ ~痛这个词不对，塞琳。我在愤怒。我要复仇。~ + t9.4
+++ ~痛这个词不对，茜琳。我在愤怒。我要复仇。~ + t9.4
 END
 
 IF ~~ t9.2
@@ -2218,7 +2218,7 @@ SAY ~若这能给你些许安慰，<CHARNAME>，我愿与你分享我的一些�
 END
 
 IF ~~ t9.6
-SAY ~你不必为我的友谊感激，<CHARNAME>。你给我的已超出我所能期望。这……是我至少能回报的。~
+SAY ~你不必为我的友谊而感激，<CHARNAME>。你给我的已经远超我的期望。这……只是我最起码的回报。~
 IF ~~ + t9.10
 END
 
@@ -2269,7 +2269,7 @@ IF ~~ + t10.3
 END
 
 IF ~~ t10.2
-SAY ~真奇怪……我已不是圣武士，可我并不觉得失去。我觉得……伊尔梅特释放了我。~
+SAY ~真奇怪……我已不是圣武士，可我并不觉得失去。我觉得……伊尔玛特释放了我。~
 IF ~~ + t10.3
 END
 
@@ -2304,7 +2304,7 @@ APPEND C0SIRE2J
 
 IF ~~ t11.1
 SAY ~我只是想再一次谢谢你的一切。为你领导与友谊的愉快。能在你身边战斗是我的荣幸……在你身边死去亦然。~
-++ ~谢谢你，塞琳。~ + t11.2
+++ ~谢谢你，茜琳。~ + t11.2
 ++ ~噢……谢谢。这几乎让我忘了我们身处的地方有多阴沉。~ + t11.2
 ++ ~我们还没死。不算是。~ + t11.3
 ++ ~这些暖心的话，等我们出了这地狱再说吧。~ + t11.3
@@ -2339,7 +2339,7 @@ IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + t11.8
 END
 
 IF ~~ t11.7
-SAY ~若不是你的引导，我大概早就失去信仰了……不知道自己为何而战。只有伊尔梅特知道我本会迷得多远。~
+SAY ~若不是你的引导，我大概早就失去信仰了……不知道自己为何而战。只有伊尔玛特知道我本会迷得多远。~
 IF ~~ + t11.9
 END
 
@@ -2356,7 +2356,7 @@ SAY ~即使不是这样，我也珍视我们友谊的深度，<CHARNAME>。我�
 END
 
 IF ~~ t11.10
-SAY ~是吗？（塞琳的唇慢慢弯成微笑）……那我真心满足了。谢谢你的一切，我的朋友。~
+SAY ~是吗？（茜琳的唇慢慢弯成微笑）……那我真心满足了。谢谢你的一切，我的朋友。~
 IF ~~ EXIT
 END
 
@@ -2390,12 +2390,12 @@ IF ~~ + lt1.2
 END
 
 IF ~~ lt1.2
-SAY ~（你们并肩而行，虽然也许是你多心，可你走动时塞琳似乎在渐渐靠近你。）~
+SAY ~（你们并肩而行，虽然也许是你多心，可你走动时茜琳似乎在渐渐靠近你。）~
 = ~我该趁这时候说说我多珍视你的陪伴，<CHARNAME>。有你在，我几乎能忘掉我生活里所有别的难处。~
 = ~像你这样宽容的人并不多。你的善意深深触动了我。~
 ++ ~多谢你的称赞。~ + lt1.4
 ++ ~我能说什么？也许我喜欢上你了。~ + lt1.5
-++ ~我留你在身边是因为你有用，塞琳。就这样吧。~ + lt1.3
+++ ~我留你在身边是因为你有用，茜琳。就这样吧。~ + lt1.3
 END
 
 IF ~~ lt1.3
@@ -2456,7 +2456,7 @@ IF ~~ + lt2.2
 END
 
 IF ~~ lt2.2
-SAY ~我常想，若我血管里流的不是魔性的血，我会在什么地方。也许我永远不会成为伊尔梅特祭司的受监护者。~
+SAY ~我常想，若我血管里流的不是魔性的血，我会在什么地方。也许我永远不会成为伊尔玛特祭司的受监护者。~
 = ~我甚至有可能认识我的家人。想这些很怪吗？~
 ++ ~一点也不。~ + lt2.3
 ++ ~那你会是完全另一个人。~ + lt2.4
@@ -2509,11 +2509,11 @@ END
 // Lovetalk 3
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",6)~ THEN C0SIRE2J lt3
-~（你注意到塞琳似乎心不在焉，低头看着一面小小的手镜。）~ [C0BLANK]
+~（你注意到茜琳似乎心不在焉，低头看着一面小小的手镜。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~塞琳？你还好吗？~ + lt3.1
+++ ~茜琳？你还好吗？~ + lt3.1
 ++ ~我没想到你是爱虚荣的人。~ + lt3.2
 ++ ~你不注意周围，把这把所有人都置于危险中。~ + lt3.3
 ++ ~（别理她）~ + lt3.0
@@ -2548,14 +2548,14 @@ END
 IF ~~ lt3.4
 SAY ~<CHARNAME>……在你看来我像怪物吗？~
 ++ ~什么？你为什么说这种话？~ + lt3.5
-++ ~我不确定我明白你在问什么，塞琳。~ + lt3.5
+++ ~我不确定我明白你在问什么，茜琳。~ + lt3.5
 ++ ~我若说是，你会看轻我吗？~ + lt3.6
 END
 
 IF ~~ lt3.5
 SAY ~也许这太突然了。我只是一直在看……我的血赐给我的那些「礼物」。~ [C0BLANK]
 = ~请原谅我这么说，可是……我觉得你幸运。你的血脉是黑暗的，正如我的，可是……你各方面看起来都正常。很难不羡慕你。~
-++ ~那不对，塞琳。巴尔的污秽也许看不见，可它一样影响我。~ + lt3.7
+++ ~那不对，茜琳。巴尔的污秽也许看不见，可它一样影响我。~ + lt3.7
 ++ ~你宁愿我们的角色互换吗？~ + lt3.8
 ++ ~我不太舒服跟你谈这个。也许我们就到此为止。~ + lt3.x
 END
@@ -2579,7 +2579,7 @@ END
 
 IF ~~ lt3.9
 SAY ~若我说你背负的担子比我的轻，冒犯了你，那我真心道歉。我无法指望知道这对你真正意味着多少。~
-++ ~我没被冒犯，塞琳。你不是有意说什么。~ + lt3.10
+++ ~我没被冒犯，茜琳。你不是有意说什么。~ + lt3.10
 ++ ~别担心。我其实觉得你的人生比我艰难得多。~ + lt3.10
 ++ ~这确实让我不舒服。也许我们该放下这个。~ + lt3.x
 END
@@ -2635,13 +2635,13 @@ SAY ~我该道歉。我宣誓为你效力、护你周全。你受伤是我的疏
 END
 
 IF ~~ lt4.6
-SAY ~我是自愿在这里的，<CHARNAME>，而我对伊尔梅特的誓约要求我尽力护人。这一回，我觉得我失败了。~
+SAY ~我是自愿在这里的，<CHARNAME>，而我对伊尔玛特的誓约要求我尽力护人。这一回，我觉得我失败了。~
 = ~若我不能护你免于伤害，那至少……我能把你的痛带走……~
 IF ~~ + lt4.7
 END
 
 IF ~~ lt4.7
-SAY ~「伊尔梅特，忍耐者……将此人的苦难从<PRO_HISHER>身上移去……把<PRO_HISHER>的痛加在您卑微的仆人身上……」~
+SAY ~「伊尔玛特，忍耐者……将此人的苦难从<PRO_HISHER>身上移去……把<PRO_HISHER>的痛加在您卑微的仆人身上……」~
 ++ ~我的伤……现在到你身上了！~ + lt4.8
 ++ ~你在做什么？停下！~ + lt4.8
 ++ ~谢谢你。~ + lt4.9
@@ -2654,7 +2654,7 @@ END
 
 IF ~~ lt4.9
 SAY ~这也是我职责的一部分。你感觉如何，<CHARNAME>？~
-++ ~好多了。可是，塞琳……~ + lt4.10
+++ ~好多了。可是，茜琳……~ + lt4.10
 ++ ~下次我建议还是用绷带。~ + lt4.11
 ++ ~答应我，别再为我那样做。~ + lt4.12
 END
@@ -2678,12 +2678,12 @@ END
 // Lovetalk 5 - after rest
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",10)~ THEN C0SIRE2J lt5
-~（你醒来时，听见塞琳在睡梦中呻吟、轻声哭泣。）~ [C0BLANK]
+~（你醒来时，听见茜琳在睡梦中呻吟、轻声哭泣。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 = ~嗯呃……不——不，等等……别离开我……求你！~
 END
-++ ~塞琳！醒醒！~ + lt5.1
+++ ~茜琳！醒醒！~ + lt5.1
 ++ ~（摇她）~ + lt5.1
 ++ ~（靠近她但不叫醒她）~ + lt5.2
 ++ ~（不理她，开始收拾行装）~ + lt5.3
@@ -2693,7 +2693,7 @@ APPEND C0SIRE2J
 IF ~~ lt5.1
 SAY ~（她忽然抓住你的手，紧紧抱在怀里，仿佛怕放开。）~
 = ~（她双眼猛然睁开，震惊地看着你。）你——你……<CHARNAME>？~
-++ ~你吓了我一跳，塞琳。怎么了？做噩梦了？~ + lt5.4
+++ ~你吓了我一跳，茜琳。怎么了？做噩梦了？~ + lt5.4
 ++ ~你还好吗？你满脸都是湿的。~ + lt5.4
 ++ ~你终于醒了。来吧，我们该走了。~ + lt5.5
 END
@@ -2759,7 +2759,7 @@ CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",12)~ THEN C0SIRE2J lt6
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~我已经信任你了，塞琳。~ + lt6.1
+++ ~我已经信任你了，茜琳。~ + lt6.1
 ++ ~这跟你之前的梦有关吗？~ + lt6.2
 ++ ~说吧。我愿意听。~ + lt6.3
 ++ ~现在不行。~ + lt6.4
@@ -2779,7 +2779,7 @@ IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + lt6.5
 END
 
 IF ~~ lt6.3
-SAY ~你已经知道我的一些事……比如伊尔梅特的祭司为何选我做圣武士，好让我在重伤了神殿里一个同伴之后学会自律。可那故事还有更多。~
+SAY ~你已经知道我的一些事……比如伊尔玛特的祭司为何选我做圣武士，好让我在重伤了神殿里一个同伴之后学会自律。可那故事还有更多。~
 IF ~~ + lt6.6
 END
 
@@ -2789,7 +2789,7 @@ IF ~~ DO ~SetGlobal("C0SireneLovetalk","GLOBAL",11)~ EXIT
 END
 
 IF ~~ lt6.5
-SAY ~我婴儿时被遗弃，由伊尔梅特的祭司养大……这你已经知道。我是个脾气烈的女孩，被神殿里的同伴畏惧、欺侮，直到有一天我出于愤怒犯下了可怕的罪。~
+SAY ~我婴儿时被遗弃，由伊尔玛特的祭司养大……这你已经知道。我是个脾气烈的女孩，被神殿里的同伴畏惧、欺侮，直到有一天我出于愤怒犯下了可怕的罪。~
 = ~那些不够怕我、没躲开的孩子们会朝我扔石头，叫我受诅咒的孩子。有一天我勃然大怒，攻击了他们几个，重伤了一个男孩。~
 = ~即使在那时我也极为悔恨。我让自己血里的邪恶控制了我，即使只是一瞬……而我为此受了罚。~
 = ~可是……祭司们在我身上仍看到希望，相信圣武士身份会给我自律，让我控制更黑暗的冲动。又或者他们希望把我的怒气变成正义的怒火……无论哪种，我都感激他们给了我这个机会。~
@@ -2799,7 +2799,7 @@ SAY ~我婴儿时被遗弃，由伊尔梅特的祭司养大……这你已经知
 END
 
 IF ~~ lt6.6
-SAY ~我那小小的村子并非出产精良战士的地方。可神殿的一位兄弟熟悉受苦圣战武士，便召来一位骑士团的圣武士亲自训练我。马克·莫里斯爵士，伊尔梅特的殉道者。~
+SAY ~我那小小的村子并非出产精良战士的地方。可神殿的一位兄弟熟悉受苦圣战武士，便召来一位骑士团的圣武士亲自训练我。马克·莫里斯爵士，伊尔玛特的殉道者。~
 = ~我起初并不知道这些。我第一次与这位后来成为我导师的人面对面时，我还被锁在神殿自己的房间里，祈祷忏悔。~
 ++ ~你当时怎么想？~ + lt6.9
 ++ ~说下去。~ + lt6.9
@@ -2826,7 +2826,7 @@ END
 IF ~~ lt6.10
 SAY ~他问我怕不怕他。我说：「不。」他问我最想要什么，我告诉他：「被宽恕。」~
 = ~莫里斯爵士又朝我点头，说我有成为信仰斗士的资质。我不知道是什么让我这样想……可我信了他。~
-= ~他教我怎样握训练剑；怎样战斗不是为了伤人，而是护人。我意识到，即使我魔性的血，也能以伊尔梅特之名洒出。~
+= ~他教我怎样握训练剑；怎样战斗不是为了伤人，而是护人。我意识到，即使我魔性的血，也能以伊尔玛特之名洒出。~
 = ~这就是我最初开始圣武士训练的故事，我的朋友。也许将来我会告诉你更多……若你愿意。~
 ++ ~我现在就想知道。~ + lt6.11
 ++ ~当然，改天吧。~ + lt6.12
@@ -2853,7 +2853,7 @@ END
 // Lovetalk 7
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",14)~ THEN C0SIRE2J lt7
-~我跟你讲过我如何加入伊尔梅特的圣武士骑士团，<CHARNAME>，可我没讲完。你还感兴趣吗？~ [C0BLANK]
+~我跟你讲过我如何加入伊尔玛特的圣武士骑士团，<CHARNAME>，可我没讲完。你还感兴趣吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
@@ -2893,7 +2893,7 @@ END
 IF ~~ lt7.5
 SAY ~我失去了知觉，可等我醒过来……我很困惑。我的头完好无损，而且我觉得像是从一场安眠中醒来。~
 = ~我转头看四周时……看见的景象让我惊骇。莫里斯爵士从上方看着我，他的头正流着血，伤口跟我给自己造成的一样。~
-= ~他告诉我，他把我的苦痛接到自己身上，说*这*就是伊尔梅特骑士团的职责——活着护人，为人受苦，必要时……为人而死。~
+= ~他告诉我，他把我的苦痛接到自己身上，说*这*就是伊尔玛特骑士团的职责——活着护人，为人受苦，必要时……为人而死。~
 = ~我那时明白了，我犯的每一个错，都让他为我受苦。我问他是否愿意用他的命换我的命，把我从我自己的愚蠢中救出，而他……沉默了。可我知道答案，我记得……我流下了悔恨的泪。~
 ++ ~他做的这事真勇敢。~ + lt7.6
 ++ ~说下去。~ + lt7.6
@@ -2907,7 +2907,7 @@ END
 
 IF ~~ lt7.7
 SAY ~他朝我笑了，同时还流着不少血……那是我第一次见导师笑。~
-= ~之后我亲手替他包扎处理伤口，把每一秒都用在学伊尔梅特殉道者的本领上。从那以后我便专心训练，治疗与剑术都是。~
+= ~之后我亲手替他包扎处理伤口，把每一秒都用在学伊尔玛特殉道者的本领上。从那以后我便专心训练，治疗与剑术都是。~
 = ~我只能向往成为像我的莫里斯爵士那样伟大的骑士……可我仍有许多要学。~
 = ~谢谢你听我讲这冗长的故事，<CHARNAME>。我希望没让你厌烦。~
 ++ ~一点也没有。这是个好故事。~ + lt7.9
@@ -2934,7 +2934,7 @@ END
 // Lovetalk 8
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",16)~ THEN C0SIRE2J lt8
-~（塞琳不经意地揉着左眼上的疤，仿佛它让她不舒服。）~ [C0BLANK]
+~（茜琳不经意地揉着左眼上的疤，仿佛它让她不舒服。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
@@ -2945,7 +2945,7 @@ END
 APPEND C0SIRE2J
 
 IF ~~ lt8.0
-SAY ~（塞琳眨了几下眼，然后停下，回到队伍里。）~
+SAY ~（茜琳眨了几下眼，然后停下，回到队伍里。）~
 IF ~~ EXIT
 END
 
@@ -2988,7 +2988,7 @@ END
 
 IF ~~ lt8.7
 SAY ~我们在林中一片空地遇上对手，那里我们人数处于劣势，处境不利。我们反击，却被打败，几乎被杀……或更糟。我逃进林子，勉强保住性命。~
-= ~那天夜里……我向伊尔梅特祈祷，求指引。我梦见了当日的战斗，并被驱使回到那地方。~
+= ~那天夜里……我向伊尔玛特祈祷，求指引。我梦见了当日的战斗，并被驱使回到那地方。~
 ++ ~你回去了？那不是很危险吗？~ + lt8.10
 ++ ~说下去。~ + lt8.9
 ++ ~我听够了。~ + lt8.8
@@ -3036,7 +3036,7 @@ SAY ~在他的私室里，我看见一个男人——精瘦、矮小，额头突
 END
 
 IF ~~ lt8.15
-SAY ~我知道逃不掉，撒谎也无用。我带着虚假的勇气对他说：「我是塞琳，伊尔梅特的斗士。我来为你的罪行惩罚你。」~
+SAY ~我知道逃不掉，撒谎也无用。我带着虚假的勇气对他说：「我是茜琳，伊尔玛特的斗士。我来为你的罪行惩罚你。」~
 = ~他当面大笑，还嘲弄地称赞我的胆量。我觉得恐惧化成了愤怒，便向他挑战决斗。~
 = ~阿萨多尔答应了。他傲慢，相信自己会赢……而说实话，也许他本会赢。~
 ++ ~所以你击败并杀了他？~ + lt8.16
@@ -3053,7 +3053,7 @@ SAY ~我们拔剑相斗，可他的技艺远胜于我。我完全料到会当场
 END
 
 IF ~~ lt8.17
-SAY ~那一击伤了他，可我虚弱——不足以杀他。他暴怒，抬手念咒。那一刻我明白他不只是战士，还是法师。~
+SAY ~那一击伤了他，可我太虚弱，不足以杀了他。他暴怒，抬手念咒。那一刻我才明白，他不只是战士，还是法师。~
 = ~我被一团火焰吞没，若不是我魔性的血，我大概就死了。可我被击败了……在他面前毫无还手之力。~
 = ~我以为他会了结我，可他没有。当他把我按在地上时，我明白他打算对我做的事比速死更糟，我惊恐万分。~
 ++ ~太可怕了！~ + lt8.18
@@ -3080,7 +3080,7 @@ IF ~~ + lt8.21
 END
 
 IF ~~ lt8.21
-SAY ~在我动手的前一刻，我失去了所有关于荣誉、我的主伊尔梅特的念头，一切……我所能想到的只有活下去。而且……当我把刀刺进阿萨多尔的喉咙时……我没有一丝犹豫。~
+SAY ~在我动手的前一刻，我失去了所有关于荣誉、我的主伊尔玛特的念头，一切……我所能想到的只有活下去。而且……当我把刀刺进阿萨多尔的喉咙时……我没有一丝犹豫。~
 = ~看着躺在我身上的尸体，看着我手指上的血，我明白了我可能变成的最坏样子。我把尸体推开，强忍住尖叫的冲动。~
 + ~OR(2) PartyHasItem("c0sw2h") PartyHasItem("c0sw2h2")~ + ~你怎么逃出来的？~ + lt8.22
 + ~!PartyHasItem("c0sw2h") !PartyHasItem("c0sw2h2")~ + ~你怎么逃出来的？~ + lt8.23
@@ -3188,7 +3188,7 @@ END
 ++ ~不太喜欢。烛堡更好。~ + lt10.1
 ++ ~这比较不公平。不是所有城市都一样。~ + lt10.2
 ++ ~其实我更喜欢城市。~ + lt10.3
-++ ~我们没时间想这些，塞琳。~ + lt10.0
+++ ~我们没时间想这些，茜琳。~ + lt10.0
 
 APPEND C0SIRE2J
 
@@ -3240,7 +3240,7 @@ END
 IF ~~ lt10.8
 SAY ~不，我不是想说那个……~
 = ~*叹气*你，你是个出色的领袖，是我非常钦佩的<PRO_MANWOMAN>。可你若问我更深的感受……我——我怕我只会让自己出丑。~
-= ~正如我说的……我想再去看看乡野，重温一些童年的回忆，还有……多和你在一起，<CHARNAME>。~
+= ~接着刚才的话说……我想再去看看乡野，重温一些童年的回忆，还有……多和你在一起，<CHARNAME>。~
 IF ~~ EXIT
 END
 END
@@ -3349,7 +3349,7 @@ END
 ++ ~什么样的糖？~ + lt12.1
 ++ ~哦，我爱甜食！给我点！~ + lt12.1
 ++ ~不了，我讨厌甜食。~ + lt12.2
-++ ~现在不是吃零食的时候，塞琳。~ + lt12.0
+++ ~现在不是吃零食的时候，茜琳。~ + lt12.0
 
 APPEND C0SIRE2J
 
@@ -3373,7 +3373,7 @@ SAY ~我一直爱甜食……它们让我想起童年较好的时刻，那时卡
 = ~当然，我在莫里斯爵士手下开始习武之后，事情变了。可我在外头练武时，她仍会给我送巧克力蛋糕。~
 = ~我……我在想她是否安好。我们上次见面已是许多年前了。~
 ++ ~你从不写信回家吗？~ + lt12.4
-++ ~我有时也想家。想温斯罗普、泰斯托瑞尔，那些老修士……~ + lt12.5
+++ ~我有时也想家。想温斯罗普、泰斯拖立尔，那些老修士……~ + lt12.5
 ++ ~你听起来很想家。你觉得你会有回去的一天吗？~ + lt12.6
 END
 
@@ -3434,11 +3434,11 @@ END
 // Lovetalk 13
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",26)~ THEN C0SIRE2J lt13
-~（塞琳偷偷朝你这边瞟，却没能成功地不让你发觉。）~ [C0BLANK]
+~（茜琳偷偷朝你这边瞟，却没能成功地不让你发觉。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~你看我是有什么原因吗，塞琳？~ + lt13.1
+++ ~你看我是有什么原因吗，茜琳？~ + lt13.1
 ++ ~什么？我脸上有东西吗？~ + lt13.1
 ++ ~（别理她）~ + lt13.2
 
@@ -3457,7 +3457,7 @@ END
 
 IF ~~ lt13.3
 SAY ~我只是……在欣赏你的容貌，<CHARNAME>。我想我没见过像你这样……这样有吸引力的人。~
-++ ~嗯，谢谢你，塞琳。~ + lt13.5
+++ ~嗯，谢谢你，茜琳。~ + lt13.5
 ++ ~我受宠若惊……我想。~ + lt13.5
 ++ ~我也觉得你很美。~ + lt13.6
 ++ ~你又脸红了。~ + lt13.8
@@ -3465,7 +3465,7 @@ END
 
 IF ~~ lt13.4
 SAY ~我只是……在欣赏你的美，<CHARNAME>。我想我没见过像你这样美的人。~
-++ ~嗯，谢谢你，塞琳。~ + lt13.5
+++ ~嗯，谢谢你，茜琳。~ + lt13.5
 ++ ~我受宠若惊……我想。~ + lt13.5
 ++ ~我也觉得你很美。~ + lt13.7
 ++ ~我注意到你夸女人时更自在。我这样想错了吗？~ + lt13.9
@@ -3499,7 +3499,7 @@ END
 IF ~~ lt13.10
 SAY ~我想最初吸引我的是……你的善意与接纳，可在那之后……我觉得你内外都迷人。~
 ++ ~那你是在说你被我吸引了？~ + lt13.11
-++ ~你在绕着真正想说的话打转，塞琳。~ + lt13.12
+++ ~你在绕着真正想说的话打转，茜琳。~ + lt13.12
 END
 
 IF ~~ lt13.11
@@ -3521,7 +3521,7 @@ END
 // Lovetalk 14 - rest at inn
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",28)~ THEN C0SIRE2J lt14
-~（你已就寝，准备睡一晚应得的休息。你正脱衣时，听见门上轻轻一敲。）~ [C0BLANK]
+~（你已回房准备安歇，要好好享受一夜应得的休息。正当你脱衣时，听见有人轻轻敲门。）~ [C0BLANK]
 END
 ++ ~谁？~ + lt14.1
 ++ ~进来吧，不管是谁。~ + lt14.2
@@ -3537,12 +3537,12 @@ END
 
 IF ~~ lt14.1
 SAY ~（隔了很久才有回应）是我，<CHARNAME>……你若还没上床，我想……陪你待一会儿。~
-++ ~塞琳？进来。~ + lt14.2
+++ ~茜琳？进来。~ + lt14.2
 ++ ~不，我现在太累了。~ + lt14.0
 END
 
 IF ~~ lt14.2
-SAY ~（塞琳溜进房间，尽可能轻地关上门。）~
+SAY ~（茜琳溜进房间，尽可能轻地关上门。）~
 = ~很抱歉打扰，<CHARNAME>。我知道你一定累了。~
 ++ ~怎么了？睡不着？~ + lt14.3a
 ++ ~你有话要跟我说？~ + lt14.3
@@ -3564,7 +3564,7 @@ SAY ~（她坐到床上你身边，握住你的手）~
 = ~原谅我这不成体统的样子，<CHARNAME>。我独自一人，然后……我开始觉得不安。~
 ++ ~我看得出。你喝了多少酒？~ + lt14.4
 ++ ~这不像你。怎么了？~ + lt14.5
-++ ~对不起，可我现在真的很累，塞琳。我们明天再谈。~ + lt14.2a
+++ ~对不起，可我现在真的很累，茜琳。我们明天再谈。~ + lt14.2a
 END
 
 IF ~~ lt14.4
@@ -3578,13 +3578,13 @@ IF ~~ + lt14.6
 END
 
 IF ~~ lt14.6
-SAY ~我近来常想到你，而且……很难制止自己。我怕你改变了我，<CHARNAME>，随着我们……对彼此的感情的增长。~
+SAY ~我近来常常想起你，而且……难以自制。随着我们……对彼此的感情日渐加深，我怕你已经改变了我，<CHARNAME>。~
 = ~我一生大半都认命要独自一人，我也接受了。可是，自从认识你，我开始怕再一次承受那种孤独。~
 = ~你对我已变得太重要，<CHARNAME>，而我……我如今知道我陷进去了，因为我想要的不只是你的陪伴。~
 = ~我在你身边时，我的话、我的感受……什么都不再那么容易。这……对你的情绪与渴望的风暴让我害怕，可我……我想更……靠近……~
 ++ ~你是在说你想……跟我上床？~ + lt14.7
 ++ ~我明白。过来，让我告诉你我对你的感觉。~ + lt14.8
-++ ~不，塞琳。这太早了。别做我们俩都可能后悔的事。~ + lt14.9
+++ ~不，茜琳。这太早了。别做我们俩都可能后悔的事。~ + lt14.9
 END
 
 IF ~~ lt14.7
@@ -3625,7 +3625,7 @@ END
 // Lovetalk 15
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",30)~ THEN C0SIRE2J lt15
-~日安，<CHARNAME>。你……你休息得好吗？~ [C0BLANK]
+~<DAYNIGHTALL>好，<CHARNAME>。你……你休息得好吗？~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
@@ -3645,7 +3645,7 @@ END
 
 IF ~~ lt15.2
 SAY ~我……我想昨晚我们在……在做可能后悔的事之前分开是对的。我们之间没有必要强迫什么，而我……我道歉。你若宁愿现在就结束，那么……我明白。~
-++ ~我不要那样，塞琳。发生的事已过去了，可我仍在乎你。~ + lt15.5
+++ ~我不要那样，茜琳。发生的事已过去了，可我仍在乎你。~ + lt15.5
 ++ ~也许那样最好。我们承担不起让任何分心的事妨碍任务。~ + lt15.6
 END
 
@@ -3678,8 +3678,8 @@ DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
 ++ ~什么事？~ + lt16.1
-++ ~我知道你要说什么，塞琳。你不必替我说明。~ + lt16.2
-++ ~听着，塞琳……我觉得我们之前犯了错。我们该结束我们之间这件事。~ + lt16.x
+++ ~我知道你要说什么，茜琳。你不必替我说明。~ + lt16.2
+++ ~听着，茜琳……我觉得我们之前犯了错。我们该结束我们之间这件事。~ + lt16.x
 
 APPEND C0SIRE2J
 
@@ -3716,8 +3716,8 @@ END
 IF ~~ lt16.3
 SAY ~哦……管他呢。我真正要说的是……我爱上你了，<CHARNAME>。~
 ++ ~你……你爱上了？~ + lt16.3a
-++ ~我很高兴你终于说了。我也爱你，塞琳。~ + lt16.5
-++ ~这话很难说，可是……我无法回应你的感情，塞琳。我们该继续做朋友。~ + lt16.x
+++ ~我很高兴你终于说了。我也爱你，茜琳。~ + lt16.5
+++ ~这话很难说，可是……我无法回应你的感情，茜琳。我们该继续做朋友。~ + lt16.x
 END
 
 IF ~~ lt16.3a
@@ -3725,7 +3725,7 @@ SAY ~是的，<CHARNAME>。虽然我起初以为那只是一时的好感，可�
 = ~我想我很久以前就喜欢上你了，可是……我无法用言语说出来。可这份对你的感情已长到……我再也藏不住。~
 = ~所以我问你，<CHARNAME>……你对我也有同样的感觉吗？~
 ++ ~我当然有。~ + lt16.5
-++ ~对不起，塞琳。我没有。~ + lt16.x
+++ ~对不起，茜琳。我没有。~ + lt16.x
 END
 
 IF ~~ lt16.4
@@ -3740,7 +3740,7 @@ SAY ~你……你真的？~
 END
 
 IF ~~ lt16.6
-SAY ~以伊尔梅特之名，我……我从没想过……~
+SAY ~以伊尔玛特之名，我……我从没想过……~
 IF ~Global("C0SireneFlowers","GLOBAL",1)~ + lt16.8
 IF ~!Global("C0SireneFlowers","GLOBAL",1)~ + lt16.9
 END
@@ -3781,11 +3781,11 @@ END
 // Lovetalk 17
 
 CHAIN IF ~Global("C0SireneLovetalk","GLOBAL",34)~ THEN C0SIRE2J lt17
-~（你注意到塞琳自己在笑，这对她来说很少见。）~ [C0BLANK]
+~（你注意到茜琳自己在笑，这对她来说很少见。）~ [C0BLANK]
 DO ~IncrementGlobal("C0SireneLovetalk","GLOBAL",1)
 RealSetGlobalTimer("C0SireneLovetalkTimer","GLOBAL",2700)~
 END
-++ ~难得见你笑，真好，塞琳。~ + lt17.1
+++ ~难得见你笑，真好，茜琳。~ + lt17.1
 ++ ~嘿，有什么好笑的？~ + lt17.2
 ++ ~（别理她）~ + lt17.0
 
@@ -3876,7 +3876,7 @@ SAY ~*叹气*原谅我，<CHARNAME>。我本想说话，可我被你的新模样
 = ~真奇怪。你的脸，甚至你的声音都完全不同……即使面对面，我也认不出你了……~
 = ~只有你的眼睛，没有周围这些恶魔的残忍与野心，才能让我确信真的是你。我觉得自己又像是身处一群敌意的陌生人之中，我不愿承认，可我……我怕。~
 ++ ~我明白。我也怕。~ + lt18.5
-++ ~别担心。我仍是<CHARNAME>，你仍是塞琳，这永远不会变。~ + lt18.5
+++ ~别担心。我仍是<CHARNAME>，你仍是茜琳，这永远不会变。~ + lt18.5
 ++ ~你在我看来也完全陌生。我承认，这让我不舒服。~ + lt18.5
 ++ ~到这一步我们对此无能为力。~ + lt18.5
 ++ ~既然我们已经在这里了，抱怨也没意义。~ + lt18.5
@@ -3908,7 +3908,7 @@ IF ~~ + lt18.9
 END
 
 IF ~~ lt18.9
-SAY ~（塞琳前倾要吻你，却在将触未触时停下。）~
+SAY ~（茜琳前倾要吻你，却在将触未触时停下。）~
 = ~*叹气*我已经忘了自己……这既不是地方也不是时候。求你，我们尽快离开这里吧。~
 IF ~~ EXIT
 END
@@ -3919,7 +3919,7 @@ END
 EXTEND_TOP UDPHAE01 106
 + ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
-Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我的同伴，塞琳。~ EXTERN UDPHAE01 110
+Global("C0SireneRomanceActive","GLOBAL",2)~ + ~我的同伴，茜琳。~ EXTERN UDPHAE01 110
 END
 
 APPEND C0SIRE2J
@@ -3946,7 +3946,7 @@ END
 // Lovetalk after Bodhi
 
 CHAIN IF ~Global("C0SireneSleepLovetalk","GLOBAL",1)~ THEN C0SIRE2J lt19
-~我不知道你愿不愿听这个，我的爱，可是……我一直在想我在亡者之境的那段时候。~ [C0BLANK]
+~我不知道你愿不愿听这个，我的爱，可是……我一直在想我在朦胧之域的那段时候。~ [C0BLANK]
 DO ~SetGlobal("C0SireneSleepLovetalk","GLOBAL",2)~
 END
 ++ ~那是可怕的磨难。你还好吗？~ + lt19.1
@@ -3971,10 +3971,10 @@ IF ~~ + lt19.4
 END
 
 IF ~~ lt19.4
-SAY ~死亡的前景……真正的、最终的死亡，虽然以前也让我害怕，可我一直愿意把它当作我对伊尔梅特职责的一部分来接受。~
+SAY ~死亡的前景……真正的、最终的死亡，虽然以前也让我害怕，可我一直愿意把它当作我对伊尔玛特职责的一部分来接受。~
 = ~当我得知我可能需要做出最终的牺牲，献出性命以免被转变、变成用来对付你的武器时，我……我毫不犹豫地接受了这是我的命运。~
 ++ ~你不该那样。我会拼命保住我们两个。~ + lt19.5
-++ ~看着你死去让我心碎，塞琳。我不愿再见到那样的事发生。~ + lt19.6
+++ ~看着你死去让我心碎，茜琳。我不愿再见到那样的事发生。~ + lt19.6
 ++ ~你为我牺牲自己，真勇敢。~ + lt19.6
 END
 
@@ -4016,14 +4016,14 @@ SAY ~我……我后悔那晚把一切都告诉你之后就那样结束了……
 ++ ~这……这真是最好的时候吗？~ + lt19.11
 ++ ~当然。我们到一边去待一会儿？~ + lt19.12
 ++ ~不。等我完整了再说。~ + lt19.13
-++ ~我爱你，塞琳，可不行。我不愿让这事成为我们之间的全部。~ + lt19.13
+++ ~我爱你，茜琳，可不行。我不愿让这事成为我们之间的全部。~ + lt19.13
 END
 
 IF ~~ lt19.11
 SAY ~你若不愿意，我不会强迫你。我只是……不愿在我们共享这段时光之前又倒下。~
 ++ ~那我们就找个私密的地方待一会儿。~ + lt19.12
-++ ~现在不行，塞琳。至少等我把自己完整了再说。~ + lt19.13
-++ ~我爱你，塞琳，可不行。我不愿让这事成为我们之间的全部。~ + lt19.13
+++ ~现在不行，茜琳。至少等我把自己完整了再说。~ + lt19.13
+++ ~我爱你，茜琳，可不行。我不愿让这事成为我们之间的全部。~ + lt19.13
 END
 
 IF ~~ lt19.12
@@ -4042,7 +4042,7 @@ END
 // Lovetalk after sex
 
 CHAIN IF ~Global("C0SireneAfterSleep","GLOBAL",1)~ THEN C0SIRE2J lt20
-~（塞琳躺到你旁边的软草地上，衣衫凌乱，气息未定。她挪到你身侧，握住你的手，把你搂紧。）~ [C0BLANK]
+~（茜琳躺到你旁边的软草地上，衣衫凌乱，气息未定。她挪到你身侧，握住你的手，把你搂紧。）~ [C0BLANK]
 DO ~SetGlobal("C0SireneAfterSleep","GLOBAL",2)~
 = ~谢谢你，<CHARNAME>……求你，留下……~
 END
@@ -4128,7 +4128,7 @@ APPEND C0SIRE2J
 
 IF ~Global("C0SireneAbyss","GLOBAL",1)~ C0SireneAbyss
 SAY ~神明啊，这比我能想象的更糟……我从没想过我偏偏会来这里。~ [C0BLANK]
-+ ~CheckStatGT(Player1,13,INT)~ + ~什么，深渊？~ + C0SireneAbyss1
++ ~CheckStatGT(Player1,13,INT)~ + ~什么，无底深渊？~ + C0SireneAbyss1
 ++ ~你什么意思？~ + C0SireneAbyss2
 ++ ~呃，是啊。我们到底在哪里？~ + C0SireneAbyss2
 ++ ~我们拿到要拿的就回球里去，然后走吧。~ + C0SireneAbyss0
@@ -4145,7 +4145,7 @@ IF ~~ + C0SireneAbyss3
 END
 
 IF ~~ C0SireneAbyss2
-SAY ~这是深渊，<CHARNAME>。至少是它的一层。我起初不确定，可凭着我血里的这种感觉……不，我不再怀疑。~
+SAY ~这是无底深渊，<CHARNAME>。至少是它的一层。我起初不确定，可凭着我血里的这种感觉……不，我不再怀疑。~
 IF ~~ + C0SireneAbyss3
 END
 
@@ -4164,7 +4164,7 @@ IF ~~ DO ~SetGlobal("C0SireneAbyss","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneAbyss5
-SAY ~不。让你独自面对深渊的住民，我会更不舒服。带路吧。~
+SAY ~不。让你独自面对无底深渊的住民，我会更不舒服。带路吧。~
 IF ~~ DO ~SetGlobal("C0SireneAbyss","GLOBAL",2)~ EXIT
 END
 
@@ -4176,7 +4176,7 @@ END
 // Temple of Lathander
 
 IF ~Global("C0SireneLathander","GLOBAL",1)~ C0SireneLathander
-SAY ~真壮丽……兰森德尔的信徒确实懂得鉴赏美。~ [C0BLANK]
+SAY ~真壮丽……洛山达的信徒确实懂得鉴赏美。~ [C0BLANK]
 + ~Kit(Player1,GODLATHANDER)~ + ~毕竟我们的宗教确实鼓励创造力。~ + C0SireneLathander1
 ++ ~我承认，这确实不凡。~ + C0SireneLathander2
 ++ ~是吗？……我看不出来。~ + C0SireneLathander3
@@ -4190,13 +4190,13 @@ IF ~~ DO ~SetGlobal("C0SireneLathander","GLOBAL",2)~ EXIT
 END
 
 IF ~~ C0SireneLathander1
-SAY ~（微笑）真的，我想我从没提过我多钦佩你的信仰。若我在你的教士中间长大，我想我会像接受伊尔梅特的教导一样接受它。~
+SAY ~（微笑）真的，我想我从没提过我多钦佩你的信仰。若我在你的教士中间长大，我想我会像接受伊尔玛特的教导一样接受它。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4a
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4b
 END
 
 IF ~~ C0SireneLathander2
-SAY ~很高兴知道你也有同感。不过吸引我的不只是美。我一直钦佩敬拜晨光之主者的信念。我想若我的境遇不同，我会像接受伊尔梅特的教导一样接受它。~
+SAY ~很高兴知道你也有同感。不过吸引我的不只是美。我一直钦佩敬拜晨光之主者的信念。我想若我的境遇不同，我会像接受伊尔玛特的教导一样接受它。~
 IF ~Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4a
 IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4b
 END
@@ -4208,18 +4208,18 @@ IF ~!Global("C0SirenePartyBG1","GLOBAL",1)~ + C0SireneLathander4b
 END
 
 IF ~~ C0SireneLathander4a
-SAY ~这也让人怀旧。毕竟我们是在兰森德尔神殿外相遇的，不是吗？我想某种意义上，我的路与晨光之主交错是种福气。~
+SAY ~这也让人怀旧。毕竟我们是在洛山达神殿外相遇的，不是吗？我想某种意义上，我的路与晨光之主交错是种福气。~
 IF ~~ + C0SireneLathander5
 END
 
 IF ~~ C0SireneLathander4b
-SAY ~我在剑湾旅行时，曾经过贝雷戈斯特的兰森德尔神殿。那里也有美，可那是朴素之美。这里完全不同。这神殿仿佛不是凡人双手所能造出。~
+SAY ~我在剑湾旅行时，曾经过贝尔苟斯特的洛山达神殿。那里也有美，可那是朴素之美。这里完全不同。这神殿仿佛不是凡人双手所能造出。~
 IF ~~ + C0SireneLathander5
 END
 
 IF ~~ C0SireneLathander5
 SAY ~可是……让我满心喜悦的不只是这神殿的美。~
-= ~虽然兰森德尔与伊尔梅特的信仰在许多方面不同，他们的神职却紧密相连。伊尔梅特执掌忍耐与坚持，兰森德尔则带来随之而来的生机与更新。因此，我希望你能明白我为何几乎把晨光之主的信徒看作我自己信仰的人。~
+= ~虽然洛山达与伊尔玛特的信仰在许多方面不同，他们的神职却紧密相连。伊尔玛特执掌忍耐与坚持，洛山达则带来随之而来的生机与更新。因此，我希望你能明白我为何几乎把晨光之主的信徒看作我自己信仰的人。~
 = ~哦……我已经说得太久了。原谅我，我不是想给你说教。我们该继续了。~
 IF ~~ DO ~SetGlobal("C0SireneLathander","GLOBAL",2)~ EXIT
 END
@@ -4227,7 +4227,7 @@ END
 // Tanner's basement
 
 IF ~Global("C0SireneTanner","GLOBAL",1) Global("EnteredTanner","GLOBAL",1)~ C0SireneTannerBasement
-SAY ~伊尔梅特的慈悲，这里发生过何等暴行……这些遗体被亵渎得无法复原。我只能祈祷他们死前没有受苦。~ [C0BLANK]
+SAY ~伊尔玛特的慈悲，这里发生过何等暴行……这些遗体被亵渎得无法复原。我只能祈祷他们死前没有受苦。~ [C0BLANK]
 = ~小心脚下，<CHARNAME>。我只能想象那凶手给我们设了什么机关。~
 IF ~~ DO ~SetGlobal("C0SireneTanner","GLOBAL",2)~ EXIT
 END
@@ -4250,7 +4250,7 @@ END
 
 IF ~~ C0SireneDemogorgon2
 SAY ~我……我几乎不敢相信，可这是恶魔王子的神龛，<CHARNAME>。我无法想象这里为何会有这样的地方，可是……~
-= ~不可能有别的解释。我在伊尔梅特神殿藏书的一卷书里见过那雕像的形貌。而且……光是待在这里，我的血就在恐惧与憎恨中反应。~
+= ~不可能有别的解释。我在伊尔玛特神殿藏书的一卷书里见过那雕像的形貌。而且……光是待在这里，我的血就在恐惧与憎恨中反应。~
 = ~我们不能留下，<CHARNAME>。我有种不自然的冲动想砸碎这房间的一切，而那样只会招来那恶魔或他仆从的怒火。~
 ++ ~那我们立刻离开。~ + C0SireneDemogorgon3
 ++ ~就一会儿。我想先四处看看。~ + C0SireneDemogorgon4
@@ -4339,7 +4339,7 @@ END
 
 IF ~~ C0SireneCarsomyr7
 SAY ~是的……你说得当然对。若这剑认为我配得上……那我理当带着自豪携带它。~
-= ~说实话，自从我读到它名字的那天，我就一直梦想以伊尔梅特之名使用这样的剑。可我从未想象梦想会成真……谢谢你相信我，<CHARNAME>。~
+= ~说实话，自从我读到它名字的那天，我就一直梦想以伊尔玛特之名使用这样的剑。可我从未想象梦想会成真……谢谢你相信我，<CHARNAME>。~
 IF ~~ EXIT
 END
 
@@ -4352,10 +4352,10 @@ END
 
 IF ~Global("C0SireneDaeron","GLOBAL",2)~ daeron
 SAY ~怎……怎会走到这一步？~ [C0BLANK]
-+ ~Global("C0SireneDaeronExecute","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron1
-+ ~Global("C0SireneDaeronKill","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron2
-+ ~Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron3
-+ ~Global("C0SireneDaeronRedeem","GLOBAL",1)~ + ~你做了你必须做的，塞琳。~ + daeron4
++ ~Global("C0SireneDaeronExecute","GLOBAL",1)~ + ~你做了你必须做的，茜琳。~ + daeron1
++ ~Global("C0SireneDaeronKill","GLOBAL",1)~ + ~你做了你必须做的，茜琳。~ + daeron2
++ ~Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~你做了你必须做的，茜琳。~ + daeron3
++ ~Global("C0SireneDaeronRedeem","GLOBAL",1)~ + ~你做了你必须做的，茜琳。~ + daeron4
 ++ ~以后再想。现在我们必须往前走。~ + daeron0
 END
 
@@ -4385,18 +4385,18 @@ IF ~~ + daeron5
 END
 
 IF ~~ daeron5
-SAY ~伊尔梅特*支持*了他，<CHARNAME>。他清楚戴伦所做的一切，却继续赐他力量，继续让他相信自己所做的是正义的。为什么……为什么我的主不阻止他？他怎么能让这种事发生？~
-= ~我一生从未怀疑过伊尔梅特，只怀疑我服侍他的能力。可在见了我所见的事之后，我在想……他是否真如我所信的那样。~
-++ ~也许伊尔梅特怜悯他。毕竟连戴伦自己也相信他所做的是对的。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron6
-++ ~你不能怀疑你的神，塞琳。伊尔梅特信任他的信徒去行他的旨意，而你必须继续，无论别人如何滥用这份信任。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",2)~ + daeron7
-+ ~!Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~神明行事的方式很古怪，塞琳。也许你本就是注定要阻止他的那个人。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron8
+SAY ~伊尔玛特*支持*了他，<CHARNAME>。他清楚戴伦所做的一切，却继续赐他力量，继续让他相信自己所做的是正义的。为什么……为什么我的主不阻止他？他怎么能让这种事发生？~
+= ~我一生从未怀疑过伊尔玛特，只怀疑我服侍他的能力。可在见了我所见的事之后，我在想……他是否真如我所信的那样。~
+++ ~也许伊尔玛特怜悯他。毕竟连戴伦自己也相信他所做的是对的。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron6
+++ ~你不能怀疑你的神，茜琳。伊尔玛特信任他的信徒去行他的旨意，而你必须继续，无论别人如何滥用这份信任。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",2)~ + daeron7
++ ~!Global("C0SireneDaeronLeave","GLOBAL",1)~ + ~神明行事的方式很古怪，茜琳。也许你本就是注定要阻止他的那个人。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",1)~ + daeron8
 ++ ~我能说什么？也许你说得对。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-1)~ + daeron9
-++ ~你不需要伊尔梅特告诉你什么是对、什么是错，塞琳。你可以相信自己来判断。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-2)~ + daeron10
+++ ~你不需要伊尔玛特告诉你什么是对、什么是错，茜琳。你可以相信自己来判断。~ DO ~IncrementGlobal("C0SireneFaith","GLOBAL",-2)~ + daeron10
 ++ ~想想吧。这方面我怕帮不上你多少。~ + daeron0
 END
 
 IF ~~ daeron6
-SAY ~你也许说得对。也许伊尔梅特本希望戴伦在看到真相后、在事情走到这一步之前悔改……可若是那样，那他就错了，不是吗？~
+SAY ~你也许说得对。也许伊尔玛特本希望戴伦在看到真相后、在事情走到这一步之前悔改……可若是那样，那他就错了，不是吗？~
 IF ~~ + daeron11
 END
 
@@ -4428,24 +4428,24 @@ END
 // Messenger
 
 IF ~Global("C0SireneMessenger","GLOBAL",2)~ C0SireneLetter
-SAY ~（塞琳专心读着那封信；她的表情忽然阴沉下来。）~ [C0BLANK]
+SAY ~（茜琳专心读着那封信；她的表情忽然阴沉下来。）~ [C0BLANK]
 = ~「……你若想知道你一切罪的真相，就在下面这地点见我」……「T.D.T」。这可能是什么意思？~
 + ~Global("C0SirenePartyBG1","GLOBAL",1)~ + ~这是我们在去龙矛堡垒途中遇见的那个召唤师写的吗？~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
 ++ ~你知道这封信是谁写的吗？~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
-++ ~我们没时间分心，塞琳。~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
+++ ~我们没时间分心，茜琳。~ DO ~SetGlobal("C0SireneMessenger","GLOBAL",3)~ + C0SireneLetter1
 END
 
 IF ~~ C0SireneLetter1
-SAY ~我不能确定……可这封信提到了死人隘口的遭遇。只能是……~
+SAY ~我不能确定……可这封信提到了亡者峡谷的遭遇。只能是……~
 = ~写这封信的人……我不知道他是谁，可从我上次遭遇中了解的那一点点看，他知道我的过去。在他想杀我之前，他叫我「弑亲者」。~
 = ~这多半会很危险，可是……我想跟这个「T.D.T」谈谈。虽然他信里满是敌意，我不怀疑会有暴力。~
 ++ ~我不确定这是个好主意。这满是陷阱的味道。~ + C0SireneLetter2
 ++ ~嗯，我们还在等什么？去找他吧。~ + C0SireneLetter2
-++ ~我们有更优先的事，塞琳。我不能浪费时间追陌生人。~ + C0SireneLetter2
+++ ~我们有更优先的事，茜琳。我不能浪费时间追陌生人。~ + C0SireneLetter2
 END
 
 IF ~~ C0SireneLetter2
-SAY ~我……这事我不能求你相助，<CHARNAME>。这人很强，我不能让你为我冒性命。你灵魂的事仍是我最优先的。~
+SAY ~我……这事我不能求你相助，<CHARNAME>。这人很强，我不能让你为我冒生命危险。你的灵魂仍是我最挂念的事。~
 = ~不过……我需要知道这人想对我做什么，他知道我过去的什么。若……若你允许，我们可以从城门区到信上画的地点。可我不会强迫你。~
 = ~决定终究在你，<CHARNAME>。我不怀疑这会危险，可是……我不愿这样的机会就这么错过。~
 IF ~~ EXIT
@@ -4454,7 +4454,7 @@ END
 // T'samon's Camp
 
 IF ~Global("C0SIR1SireneArea","C0SIR1",1)~ C0SireneArea
-SAY ~我想就是这里了。很不祥……看这地面，<CHARNAME>。它像是被毒过。还有一种古怪的存在感，仿佛每个转角都藏着敌人。~ [C0BLANK]
+SAY ~我想就是这里了。这里很不祥……看这地面，<CHARNAME>，它像是中了毒。还有一种古怪的气息，仿佛每个转角都藏着敌人。~ [C0BLANK]
 = ~我建议我们以防万一先做好战斗准备。至少可以说，这地方让我不安。~
 IF ~~ DO ~SetGlobal("C0SIR1SireneArea","C0SIR1",2)~ EXIT
 END
@@ -4503,7 +4503,7 @@ IF ~~ + C0SirenePostEncounter9
 END
 
 IF ~~ C0SirenePostEncounter7
-SAY ~是的，我做了。可这是对是错，我只能自己判断。这一举动让我失去了伊尔梅特的眷顾，也失去了他的指引。~
+SAY ~是的，我做了。可这是对是错，我只能自己判断。这一举动让我失去了伊尔玛特的眷顾，也失去了他的指引。~
 IF ~~ + C0SirenePostEncounter9
 END
 
@@ -4526,14 +4526,14 @@ IF ~!Alignment("C0Sirene",LAWFUL_GOOD)~ + C0SireneNewPowers2
 END
 
 IF ~~ C0SireneNewPowers1
-SAY ~我向伊尔梅特祈祷指引……我相信他以赐我一份特殊的恩惠，表明他赞许我选择仁慈。~
+SAY ~我向伊尔玛特祈祷指引……我相信他以赐我一份特殊的恩惠，表明他赞许我选择仁慈。~
 = ~我的治疗之触变强了，如今我能驱除他人身与心的疾病，并在之后一小段时间里保护他们免于此等病痛。~
 = ~要习惯这新力量也许需要些时间……我怀疑我一天用不了超过一次。可我想这会是我们目标的可贵助力。~
 IF ~~ DO ~AddSpecialAbility("C0ILMN4") SetGlobal("C0SireneNewPowers","GLOBAL",3)~ EXIT
 END
 
 IF ~~ C0SireneNewPowers2
-SAY ~自从我放弃伊尔梅特赐我的恩惠以来，我……努力重新学习我血脉里的力量，好不成为你的负担。~
+SAY ~自从我放弃伊尔玛特赐我的恩惠以来，我……努力重新学习我血脉里的力量，好不成为你的负担。~
 = ~我已有许多年没试着用我的提夫林力量了，它们比我记得的弱，可我仍有足够的控制，能在有限范围内随意使用。~
 = ~我魔性的血让我能从手中放火，用扭曲的幻象藏身，甚至一眼击瞎别人……全是凶恶的力量，我曾发誓绝不使用。可是……我再不受那誓约束缚，而没有从前的力量，我怕我会需要它们。~
 IF ~~ DO ~AddSpecialAbility("C0SBLIND")
@@ -4551,7 +4551,7 @@ END
 
 IF ~~ C0SireneC6Bodhi1
 SAY ~我们很快要面对两个主要敌人中的第一个，可是……在我们继续之前，有些事你必须知道。~
-= ~我……在我们再次看见光之后不久，得了一个幻象。我想……那是警告。来自伊尔梅特的警告。~
+= ~我……在我们再次看见光之后不久，得了一个幻象。我想……那是警告。来自伊尔玛特的警告。~
 ++ ~是什么？~ + C0SireneC6Bodhi3
 ++ ~你还好吗？~ + C0SireneC6Bodhi4
 ++ ~我们没时间听你的梦，<CHARNAME>。~ + C0SireneC6Bodhi5
@@ -4579,7 +4579,7 @@ IF ~~ + C0SireneC6Bodhi3
 END
 
 IF ~~ C0SireneC6Bodhi6
-SAY ~我……我躺在冰冷的石头上，视线模糊。你不在那里……可我不是独自一人。那个吸血鬼……波迪和我在一起，她的唇贴在我的喉上。~
+SAY ~我……我躺在冰冷的石头上，视线模糊。你不在那里……可我不是独自一人。那个吸血鬼……芭荻和我在一起，她的唇贴在我的喉上。~
 = ~我感觉到痛……难以忍受的痛，当我感觉到她的尖牙。然后……什么都没有。没有痛，也没有温暖……我感觉到体内的邪恶，化成一种非人的饥渴……若我不满足它，它威胁要把我从内部撕开。~
 = ~然后……我看见了你，<CHARNAME>，而我所感觉到的只有那饥渴。我止不住自己向你扑去，然后……~
 = ~（她发出一声痛苦的呻吟，抓住自己的额头。）~
@@ -4590,7 +4590,7 @@ SAY ~我……我躺在冰冷的石头上，视线模糊。你不在那里……
 END
 
 IF ~~ C0SireneC6Bodhi7
-SAY ~那……那必定是伊尔梅特的警告。我看不出别的可能……~
+SAY ~那……那必定是伊尔玛特的警告。我看不出别的可能……~
 IF ~~ + C0SireneC6Bodhi10
 END
 
@@ -4611,19 +4611,19 @@ SAY ~我……我不会变成吸血鬼，<CHARNAME>。我不会允许那……�
 END
 
 IF ~~ C0SireneC6Bodhi11
-SAY ~若我的存在意味着我会被转变来对付你、伤害你，那么……我不该跟你去。可我也无法忍受让你独自面对波迪……~
-= ~不。只有一个选择。若波迪想夺取我，那么……你必须杀了我，<CHARNAME>。我宁愿死在你的手里，也不愿被腐化成邪恶的工具。~
+SAY ~若我的存在意味着我会被转变来对付你、伤害你，那么……我不该跟你去。可我也无法忍受让你独自面对芭荻……~
+= ~不。只有一个选择。若芭荻想夺取我，那么……你必须杀了我，<CHARNAME>。我宁愿死在你的手里，也不愿被腐化成邪恶的工具。~
 ++ ~不！你不能这样要求我！~ + C0SireneC6Bodhi12
-++ ~你知道自己在说什么吗，塞琳？我永远杀不了你。~ + C0SireneC6Bodhi12
+++ ~你知道自己在说什么吗，茜琳？我永远杀不了你。~ + C0SireneC6Bodhi12
 ++ ~若必须如此，那就如此吧。我答应我会照你说的做。~ + C0SireneC6Bodhi13
 END
 
 IF ~~ C0SireneC6Bodhi12
 SAY ~我……我知道这很难。我也希望不会走到那样的极端……可若真会发生，那么……我宁愿选择死亡。~
-= ~你必须明白，<CHARNAME>。不死对圣武士是诅咒。若我堕入其中，我怕我永远无法在伊尔梅特眼中赎清自己。而且……若我因此杀了你，那么……我也活不下去。~
+= ~你必须明白，<CHARNAME>。不死对圣武士是诅咒。若我堕入其中，我怕我永远无法在伊尔玛特眼中赎清自己。而且……若我因此杀了你，那么……我也活不下去。~
 = ~我只能信你会把我从这样的命运中救出，<CHARNAME>。所以我……我要你承诺，在那样的事发生之前杀了我。~
 ++ ~我……我答应。~ + C0SireneC6Bodhi13
-++ ~若我别无选择。可不会走到那一步的，塞琳。~ + C0SireneC6Bodhi13
+++ ~若我别无选择。可不会走到那一步的，茜琳。~ + C0SireneC6Bodhi13
 ++ ~不，我不能答应这种事。我们会撑过去的，我知道。别逼我对你做这个。~ + C0SireneC6Bodhi14
 END
 
@@ -4672,12 +4672,12 @@ SAY ~我……我知道我们常谈，我也确实觉得我们走得近了。可
 + ~Global("AerieRomanceActive","GLOBAL",1)~ + ~既然如此，我就说实话。我也许真的对艾黎有感情。~ + C0SireneConflict2
 + ~Global("JaheiraRomanceActive","GLOBAL",1)~ + ~我对贾希拉的念头……很复杂。我也许把她看得不只是守护者。~ + C0SireneConflict3
 + ~Global("AnomenRomanceActive","GLOBAL",1)~ + ~阿诺门脾气粗，可我想也许能成。~ + C0SireneConflict4
-+ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + ~维康尼亚也许真的俘获了我的心。~ + C0SireneConflict5
++ ~Global("ViconiaRomanceActive","GLOBAL",1)~ + ~维康妮亚也许真的俘获了我的心。~ + C0SireneConflict5
 + ~Global("RasaadRomanceActive","GLOBAL",1)~ + ~拉萨德是个好人。我确实想跟他更亲近。~ + C0SireneConflict6
-+ ~Global("NeeraRomanceActive","GLOBAL",1)~ + ~我不完全确定会有多顺利，可我确实喜欢妮拉，即使有危险。~ + C0SireneConflict7
++ ~Global("NeeraRomanceActive","GLOBAL",1)~ + ~我不完全确定会有多顺利，可我确实喜欢涅拉，即使有危险。~ + C0SireneConflict7
 ++ ~对别人？不……说实话，我更愿意跟你说话。~ + C0SireneConflict8
 ++ ~没有特别的人。我很珍视我们所有的盟友，可我无意开始一段感情。~ + C0SireneConflict9
-++ ~你是在暗示什么，塞琳？我对你、对任何特定的人都没有特别的感情。~ + C0SireneConflict9
+++ ~你是在暗示什么，茜琳？我对你、对任何特定的人都没有特别的感情。~ + C0SireneConflict9
 END
 
 IF ~~ C0SireneConflict2
@@ -4742,7 +4742,7 @@ DO ~SetGlobal("C0SireneLowRep","GLOBAL",2)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneRepBreak","GLOBAL",1)~ THEN C0SIRE2J C0SireneRep02
-~那么，你无意改变方向。既如此，我就告辞。愿伊尔梅特怜悯你的灵魂，因为若我们再相见，我不会。~ [C0BLANK]
+~那么，你无意改变方向。既如此，我就告辞。愿伊尔玛特怜悯你的灵魂，因为若我们再相见，我不会。~ [C0BLANK]
 DO ~SetGlobal("C0SireneRepBreak","GLOBAL",2) SetGlobal("C0SireneJoined","GLOBAL",0) LeaveParty() EscapeArea()~ 
 EXIT
 
@@ -4750,7 +4750,7 @@ EXIT
 APPEND C0SIRE2J
 
 IF ~Global("C0SireneFlirt","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",1)~ flirt1
-SAY ~（塞琳近来一直在密切留意你。）~ [C0BLANK]
+SAY ~（茜琳近来一直在密切留意你。）~ [C0BLANK]
 IF ~RandomNum(15,1) Global("C0SirenePartyBG1","GLOBAL",1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a1
 IF ~RandomNum(15,1) !Global("C0SirenePartyBG1","GLOBAL",1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a2
 IF ~RandomNum(15,2)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + a2
@@ -4777,7 +4777,7 @@ IF ~HPPercentLT(Player1,50) Alignment("C0Sirene",LAWFUL_GOOD)~ DO ~RealSetGlobal
 END
 
 IF ~~ a1
-SAY ~你记得贝雷戈斯特吗，<CHARNAME>？我们初次相遇那天？~
+SAY ~你记得贝尔苟斯特吗，<CHARNAME>？我们初次相遇那天？~
 ++ ~我当然记得。~ + a1.1a
 ++ ~不太记得。~ + a1.1b
 END
@@ -4793,7 +4793,7 @@ IF ~~ + a1.1a
 END
 
 IF ~~ a2
-SAY ~（她擦过你身边，把什么小巧精致的东西塞进你手里。你低头看见一朵小小的白花。你再回头看塞琳时，她已转过身去，似乎在刻意保持距离。）~
+SAY ~（她擦过你身边，把什么小巧精致的东西塞进你手里。你低头看见一朵小小的白花。你再回头看茜琳时，她已转过身去，似乎在刻意保持距离。）~
 IF ~~ EXIT
 END
 
@@ -4868,7 +4868,7 @@ END
 IF ~~ a12
 SAY ~（她在挠胸甲上一处贴身的缝隙，发觉你在看便停下。）~
 ++ ~我可以帮你。~ + a12.1
-++ ~你在做什么，塞琳？~ + a12.2
+++ ~你在做什么，茜琳？~ + a12.2
 ++ ~（移开视线。）~ + a12.3
 END
 
@@ -4909,7 +4909,7 @@ IF ~~ DO ~ForceSpell(Player1,PALADIN_LAY_ON_HANDS)~ EXIT
 END
 
 IF ~~ a17
-SAY ~（天气又热又干，塞琳正尽情喝水袋里的水。她把水袋举过头顶，让水淋过脸，流进盔甲里。）~
+SAY ~（天气又热又干，茜琳正尽情喝水袋里的水。她把水袋举过头顶，让水淋过脸，流进盔甲里。）~
 = ~（她发觉你在看，赶紧停下，脸红起来。）~
 IF ~~ EXIT
 END
@@ -4942,7 +4942,7 @@ END
 // Flirts for Branwen, C0SireneRomanceActive=2
 
 IF ~Global("C0SireneFlirt","GLOBAL",1) Global("C0SireneRomanceActive","GLOBAL",2)~ flirt2
-SAY ~（塞琳带着新生的自信看你，眼里满是温暖。）~ [C0BLANK]
+SAY ~（茜琳带着新生的自信看你，眼里满是温暖。）~ [C0BLANK]
 IF ~RandomNum(17,1)~ DO ~RealSetGlobalTimer("C0SireneFlirtTimer","GLOBAL",2500) SetGlobal("C0SireneFlirt","GLOBAL",0)~ + b1
 IF ~RandomNum(17,2) !Race(Player1,GNOME)
 !Race(Player1,DWARF)
@@ -5041,7 +5041,7 @@ IF ~~ EXIT
 END
 
 IF ~~ b8
-SAY ~（见过没有盔甲束缚的塞琳之后，你才注意到她在路上看起来多么不同。）~
+SAY ~（见过没有盔甲束缚的茜琳之后，你才注意到她在路上看起来多么不同。）~
 IF ~~ EXIT
 END
 
@@ -5124,7 +5124,7 @@ IF ~~ EXIT
 END
 
 IF ~~ b21
-SAY ~（在这旅店里相对安全舒适，塞琳坐在你身边，靠在你肩上，眼睑低垂。你不确定她是否打起了盹。）~
+SAY ~（在这旅店里相对安全舒适，茜琳坐在你身边，靠在你肩上，眼睑低垂。你不确定她是否打起了盹。）~
 = ~（她闭眼笑着，在你身边歇息，看起来极天真动人。）~
 IF ~~ EXIT
 END
@@ -5146,14 +5146,14 @@ Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（调情）~ + flirt
 + ~Global("Chapter","GLOBAL",%bg2_chapter_6%)~ + ~你觉得我们的任务怎么样？~ + chapter6
 + ~Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + ~你觉得我们的任务怎么样？~ + chapter7
 ++ ~我能问你一个问题吗？~ + questions
-+ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~塞琳，我希望你暂时别跟我说话。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
++ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~茜琳，我希望你暂时别跟我说话。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
 + ~Global("C0SireneShutUp","GLOBAL",1)~ + ~我挺想念跟你说话的。你想聊随时都可以来找我。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",0)~ + again
 ++ ~我觉得你的声音有点不对劲。~ + stringfix
 ++ ~不，算了。~ EXIT
 END
 
 IF ~IsGabber(Player1) Global("C0SireneRomanceActive","Global",2)~ C0SireneRomancePID    			
-SAY ~（你走近时，塞琳微笑。）我在你身边。~ [C0SIR016]
+SAY ~（你走近时，茜琳微笑。）我在你身边。~ [C0SIR016]
 + ~Global("C0SireneBook","GLOBAL",0) PartyHasItem("c0sbook")~ + ~书怎么样？~ + book
 + ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
@@ -5169,7 +5169,7 @@ Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（调情）~ + flirt
 + ~Global("Chapter","GLOBAL",%bg2_chapter_6%)~ + ~你觉得我们的任务怎么样？~ + chapter6
 + ~Global("Chapter","GLOBAL",%bg2_chapter_7%)~ + ~你觉得我们的任务怎么样？~ + chapter7
 ++ ~我能问你一个问题吗？~ + questions
-+ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~塞琳，我希望你暂时别跟我说话。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
++ ~Global("C0SireneShutUp","GLOBAL",0)~ + ~茜琳，我希望你暂时别跟我说话。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",1)~ + again
 + ~Global("C0SireneShutUp","GLOBAL",1)~ + ~我挺想念跟你说话的。你想聊随时都可以来找我。~ DO ~SetGlobal("C0SireneShutUp","GLOBAL",0)~ + again
 ++ ~我觉得你的声音有点不对劲。~ + stringfix
 ++ ~算了。~ EXIT
@@ -5192,7 +5192,7 @@ AreaCheck("AR0021")
 AreaCheck("AR0313")
 AreaCheck("AR1105")
 AreaCheck("AR2010")
-AreaCheck("AR1602")~ + ~塞琳，我准备好了。今晚留在我身边。~ DO ~SetGlobal("C0SireneSlept","GLOBAL",1)~ + sleepwithme
+AreaCheck("AR1602")~ + ~茜琳，我准备好了。今晚留在我身边。~ DO ~SetGlobal("C0SireneSlept","GLOBAL",1)~ + sleepwithme
 + ~RandomNum(4,1) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.1
 + ~RandomNum(4,2) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.2
 + ~RandomNum(4,3) Global("C0SireneRomanceActive","GLOBAL",2)~ + ~（吻她）~ + r1.3
@@ -5231,10 +5231,10 @@ AreaCheck("AR1602")~ + ~塞琳，我准备好了。今晚留在我身边。~ DO 
 + ~RandomNum(4,2)~ + ~我爱你的眼睛。~ + f6.2
 + ~RandomNum(4,3)~ + ~我爱你的眼睛。~ + f6.3
 + ~RandomNum(4,4)~ + ~我爱你的眼睛。~ + f6.4
-+ ~RandomNum(4,1)~ + ~塞琳……~ + f7.1
-+ ~RandomNum(4,2)~ + ~塞琳……~ + f7.2
-+ ~RandomNum(4,3)~ + ~塞琳……~ + f7.3
-+ ~RandomNum(4,4)~ + ~塞琳……~ + f7.4
++ ~RandomNum(4,1)~ + ~茜琳……~ + f7.1
++ ~RandomNum(4,2)~ + ~茜琳……~ + f7.2
++ ~RandomNum(4,3)~ + ~茜琳……~ + f7.3
++ ~RandomNum(4,4)~ + ~茜琳……~ + f7.4
 + ~RandomNum(4,1)~ + ~（挠她痒）~ + f8.1
 + ~RandomNum(4,2)~ + ~（挠她痒）~ + f8.2
 + ~RandomNum(4,3)~ + ~（挠她痒）~ + f8.3
@@ -5310,9 +5310,9 @@ AreaCheck("AR1602")~ + ~你肯跟我一起洗澡吗？~ + r6.4
 + ~RandomNum(4,2) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.2
 + ~RandomNum(4,3) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.3
 + ~RandomNum(4,4) Global("C0SireneSlept","GLOBAL",1)~ + ~（抚她的大腿）~ + r8.4
-+ ~Global("C0SireneStopFlirting","GLOBAL",0)~ + ~塞琳，我真的很喜欢你，可我需要专心。请别跟我调情了。~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",1)~ + noflirt
-+ ~Global("C0SireneStopFlirting","GLOBAL",1)~ + ~我怀念你的关注，塞琳。你想调情就来吧。~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",0)~ + yesflirt
-++ ~塞琳，我知道我们近来走得很近，可我现在得告诉你……我希望我们只做朋友，仅此而已。~ + breakup
++ ~Global("C0SireneStopFlirting","GLOBAL",0)~ + ~茜琳，我真的很喜欢你，可我需要专心。请别跟我调情了。~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",1)~ + noflirt
++ ~Global("C0SireneStopFlirting","GLOBAL",1)~ + ~我怀念你的关注，茜琳。你想调情就来吧。~ DO ~SetGlobal("C0SireneStopFlirting","GLOBAL",0)~ + yesflirt
+++ ~茜琳，我知道我们近来走得很近，可我现在得告诉你……我希望我们只做朋友，仅此而已。~ + breakup
 ++ ~不，没什么。~ EXIT
 END
 
@@ -5405,8 +5405,8 @@ IF ~~ EXIT
 END
 
 IF ~~ brotherdead
-SAY ~*叹气*如今我知道你在下城区杀萨瑞沃克时必是什么感受了……真可怕。~
-= ~我不后悔，不后悔他的死，也不后悔离开伊尔梅特的路。可是……我希望我认识他不只是作为我杀掉的那个人。~
+SAY ~*叹气*如今我知道你在下城区杀沙洛佛克时必是什么感受了……真可怕。~
+= ~我不后悔，不后悔他的死，也不后悔离开伊尔玛特的路。可是……我希望我认识他不只是作为我杀掉的那个人。~
 IF ~~ EXIT
 END
 
@@ -5441,17 +5441,17 @@ IF ~~ EXIT
 END
 
 IF ~~ f1.1
-SAY ~（你的手指穿过塞琳柔软火红的发卷，一路拂到她的颈后。）~
+SAY ~（你的手指穿过茜琳柔软火红的发卷，一路拂到她的颈后。）~
 IF ~~ EXIT
 END
 
 IF ~~ f1.2
-SAY ~（塞琳抓住你的手，笑着把它轻轻按在自己脸颊上，然后放开。）~
+SAY ~（茜琳抓住你的手，笑着把它轻轻按在自己脸颊上，然后放开。）~
 IF ~~ EXIT
 END
 
 IF ~~ f1.3
-SAY ~（塞琳满足地轻叹，任你触碰她赤褐色的发卷）~
+SAY ~（茜琳满足地轻叹，任你触碰她赤褐色的发卷）~
 IF ~~ EXIT
 END
 
@@ -5461,13 +5461,13 @@ IF ~~ EXIT
 END
 
 IF ~~ f2.1
-SAY ~（你的唇贴在她脸颊上时，塞琳微微泛红。）~
+SAY ~（你的唇贴在她脸颊上时，茜琳微微泛红。）~
 = ~<CHARNAME>……~
 IF ~~ EXIT
 END
 
 IF ~~ f2.2
-SAY ~（塞琳的皮肤光滑，微微带着汗的咸味。你退开时，她紧张地笑着。）~
+SAY ~（茜琳的皮肤光滑，微微带着汗的咸味。你退开时，她紧张地笑着。）~
 IF ~~ EXIT
 END
 
@@ -5507,13 +5507,13 @@ IF ~~ EXIT
 END
 
 IF ~~ f4.1
-SAY ~（你抱住她时，塞琳颤了一下。）~
+SAY ~（你抱住她时，茜琳颤了一下。）~
 = ~哦！嗯，嗯嗯……~
 IF ~~ EXIT
 END
 
 IF ~~ f4.2
-SAY ~（你抱住她时，塞琳靠进你怀里，双手按在你背上。）~
+SAY ~（你抱住她时，茜琳靠进你怀里，双手按在你背上。）~
 IF ~~ EXIT
 END
 
@@ -5523,12 +5523,12 @@ IF ~~ EXIT
 END
 
 IF ~~ f4.4a
-SAY ~（塞琳满足地叹气，把头靠在你的肩上。）~
+SAY ~（茜琳满足地叹气，把头靠在你的肩上。）~
 IF ~~ EXIT
 END
 
 IF ~~ f4.4b
-SAY ~（塞琳满足地叹气，把头贴在你的胸口。）~
+SAY ~（茜琳满足地叹气，把头贴在你的胸口。）~
 IF ~~ EXIT
 END
 
@@ -5543,7 +5543,7 @@ IF ~~ EXIT
 END
 
 IF ~~ f5.3
-SAY ~（塞琳松开盔甲的系带，在你手指在她肩上揉按时放松下来。）~
+SAY ~（茜琳松开盔甲的系带，在你手指在她肩上揉按时放松下来。）~
 IF ~~ EXIT
 END
 
@@ -5558,7 +5558,7 @@ IF ~~ EXIT
 END
 
 IF ~~ f6.3
-SAY ~（塞琳回应着向你倾身，让你看清她那双黄绿色的眼睛。）~
+SAY ~（茜琳回应着向你倾身，让你看清她那双黄绿色的眼睛。）~
 IF ~~ EXIT
 END
 
@@ -5588,7 +5588,7 @@ IF ~~ EXIT
 END
 
 IF ~~ f8.1
-SAY ~（你挠她盔甲缝隙时，塞琳笑得弯下腰，笑得不自在。）~
+SAY ~（你挠她盔甲缝隙时，茜琳笑得弯下腰，笑得不自在。）~
 IF ~~ EXIT
 END
 
@@ -5598,22 +5598,22 @@ IF ~~ EXIT
 END
 
 IF ~~ f8.3
-SAY ~（塞琳打闹着把你的手拍开。）~
+SAY ~（茜琳打闹着把你的手拍开。）~
 IF ~~ EXIT
 END
 
 IF ~~ f8.4
-SAY ~（你挠她颈侧露出的皮肤时，塞琳笑着扭动。）~
+SAY ~（你挠她颈侧露出的皮肤时，茜琳笑着扭动。）~
 IF ~~ EXIT
 END
 
 IF ~~ f9.1
-SAY ~（塞琳吃完你给的巧克力后，挑逗地舔着嘴唇、吮着手指，然后带着羞怯的笑，用沾了巧克力的手指划过你的唇。）~
+SAY ~（茜琳吃完你给的巧克力后，挑逗地舔着嘴唇、吮着手指，然后带着羞怯的笑，用沾了巧克力的手指划过你的唇。）~
 IF ~~ EXIT
 END
 
 IF ~~ f9.2
-SAY ~（塞琳掰下一块，塞进你嘴里。）~
+SAY ~（茜琳掰下一块，塞进你嘴里。）~
 IF ~~ EXIT
 END
 
@@ -5623,17 +5623,17 @@ IF ~~ EXIT
 END
 
 IF ~~ f9.4
-SAY ~（塞琳一手接过巧克力，另一手把你的手拉到唇边，舔你的手指。）~
+SAY ~（茜琳一手接过巧克力，另一手把你的手拉到唇边，舔你的手指。）~
 IF ~~ EXIT
 END
 
 IF ~~ r1.1
-SAY ~（塞琳热烈地回应你，把身体压向你。）~
+SAY ~（茜琳热烈地回应你，把身体压向你。）~
 IF ~~ EXIT
 END
 
 IF ~~ r1.2
-SAY ~（你们终于分开时，塞琳拦住你，甜甜地舔你的嘴唇。）~
+SAY ~（你们终于分开时，茜琳拦住你，甜甜地舔你的嘴唇。）~
 IF ~~ EXIT
 END
 
@@ -5648,37 +5648,37 @@ IF ~~ EXIT
 END
 
 IF ~~ r2.1
-SAY ~（塞琳的脸光滑温暖，你的手指拂过她的颧骨和眉骨时，她闭上了眼。）~
+SAY ~（茜琳的脸光滑温暖，你的手指拂过她的颧骨和眉骨时，她闭上了眼。）~
 IF ~~ EXIT
 END
 
 IF ~~ r2.2
-SAY ~（塞琳把你贴在她脸颊上的手握住，吻了它。）~
+SAY ~（茜琳把你贴在她脸颊上的手握住，吻了它。）~
 IF ~~ EXIT
 END
 
 IF ~~ r2.3
-SAY ~（塞琳也回应着触碰你的脸，以轻柔的触感探索你的五官。）~
+SAY ~（茜琳也回应着触碰你的脸，以轻柔的触感探索你的五官。）~
 IF ~~ EXIT
 END
 
 IF ~~ r2.4
-SAY ~（你的触碰让塞琳脸上泛红，你挑逗地抚过她的脸颊与下颌时，她的脸变得温热。）~
+SAY ~（你的触碰让茜琳脸上泛红，你挑逗地抚过她的脸颊与下颌时，她的脸变得温热。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.1
-SAY ~（塞琳的指甲比一般人类女性略长且弯，可它们微微掐进你掌心时，感觉却很好。）~
+SAY ~（茜琳的指甲比一般人类女性略长且弯，可它们微微掐进你掌心时，感觉却很好。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.2
-SAY ~（塞琳的手形是女性的，却像战士的手一样有力、布满老茧。）~
+SAY ~（茜琳的手形是女性的，却像战士的手一样有力、布满老茧。）~
 IF ~~ EXIT
 END
 
 IF ~~ r3.3
-SAY ~（塞琳回应着，把手指与你的交缠在一起。）~
+SAY ~（茜琳回应着，把手指与你的交缠在一起。）~
 IF ~~ EXIT
 END
 
@@ -5756,12 +5756,12 @@ StartCutScene("c0bathe")~ EXIT
 END
 
 IF ~~ r7.1
-SAY ~（塞琳的手放在你腰侧，你能感觉到她温热的呼吸落在你颈上。）~
+SAY ~（茜琳的手放在你腰侧，你能感觉到她温热的呼吸落在你颈上。）~
 IF ~~ EXIT
 END
 
 IF ~~ r7.2
-SAY ~（即使塞琳穿着盔甲，她的身形仍玲珑娇小，你感觉到她从胸到纤细腰身的曲线。）~
+SAY ~（即使茜琳穿着盔甲，她的身形仍玲珑娇小，你感觉到她从胸到纤细腰身的曲线。）~
 IF ~~ EXIT
 END
 
@@ -5786,23 +5786,23 @@ IF ~~ EXIT
 END
 
 IF ~~ r8.1
-SAY ~（你碰到她大腿内侧时，塞琳尖利地抽了口气，猛地抓住你的手。）~
+SAY ~（你碰到她大腿内侧时，茜琳尖利地抽了口气，猛地抓住你的手。）~
 = ~<CHARNAME>，求你……~
 IF ~~ EXIT
 END
 
 IF ~~ r8.2
-SAY ~啊啊……（你温柔地抚她时，塞琳舒服地闭上眼。）~
+SAY ~啊啊……（你温柔地抚她时，茜琳舒服地闭上眼。）~
 IF ~~ EXIT
 END
 
 IF ~~ r8.3
-SAY ~（塞琳羞怯地想挪开，却还是让步，任你触碰她腿上没有护甲的部分。）~
+SAY ~（茜琳羞怯地想挪开，却还是让步，任你触碰她腿上没有护甲的部分。）~
 IF ~~ EXIT
 END
 
 IF ~~ r8.4
-SAY ~（塞琳握住你的手，没有推开，而是把它引到她双腿之间，轻声呻吟。）~
+SAY ~（茜琳握住你的手，没有推开，而是把它引到她双腿之间，轻声呻吟。）~
 IF ~~ EXIT
 END
 
@@ -5841,8 +5841,8 @@ SAY ~当然。你想问什么就问。~
 Global("BardPlotOn","GLOBAL",5)
 Global("BardPlotOn","GLOBAL",6)
 GlobalGT("playquality","GLOBAL",0)
-Global("C0SirenePIDPlay","GLOBAL",0)~ + ~我注意到那出图米什戏剧结尾时你几乎要落泪了。你真那么喜欢？~ DO ~SetGlobal("C0SirenePIDPlay","GLOBAL",1)~ + bardplay
-+ ~Global("C0SirenePIDIlmater","GLOBAL",0) Alignment("C0Sirene",LAWFUL_GOOD)~ + ~你对追随伊尔梅特满意吗？~ DO ~SetGlobal("C0SirenePIDIlmater","GLOBAL",1)~ + ilmater
+Global("C0SirenePIDPlay","GLOBAL",0)~ + ~我注意到那出突米须戏剧结尾时你几乎要落泪了。你真那么喜欢？~ DO ~SetGlobal("C0SirenePIDPlay","GLOBAL",1)~ + bardplay
++ ~Global("C0SirenePIDIlmater","GLOBAL",0) Alignment("C0Sirene",LAWFUL_GOOD)~ + ~你对追随伊尔玛特满意吗？~ DO ~SetGlobal("C0SirenePIDIlmater","GLOBAL",1)~ + ilmater
 + ~Global("C0SirenePIDHome","GLOBAL",0)~ + ~你可曾想念过家乡？~ DO ~SetGlobal("C0SirenePIDHome","GLOBAL",1)~ + home
 + ~Global("C0SirenePIDPaladin","GLOBAL",0)~ + ~你做圣武士多久了？~ DO ~SetGlobal("C0SirenePIDPaladin","GLOBAL",1)~ + paladin
 + ~Global("C0SirenePIDRadiantHeart","GLOBAL",0)~ + ~你觉得光辉之心骑士团怎么样？~ DO ~SetGlobal("C0SirenePIDRadiantHeart","GLOBAL",1)~ + radiantheart
@@ -5878,14 +5878,14 @@ IF ~~ EXIT
 END
 
 IF ~~ ilmater
-SAY ~我……从没停下来想过这个。虽然我在伊尔梅特的祭司中间长大，可从来没人要求我信奉这信仰。敬拜哭泣之神是我自己的决定。~
-= ~也许我若做了别的选择，我的人生会更容易。我对我如今的样子满意吗？我不知道，可我确实在帮人分担重负与苦难中得到满足。这就是为什么我继续服侍伊尔梅特，尽管有这一切职责。~
+SAY ~我……从没停下来想过这个。虽然我在伊尔玛特的祭司中间长大，可从来没人要求我信奉这信仰。敬拜哭泣之神是我自己的决定。~
+= ~也许我若做了别的选择，我的人生会更容易。我对我如今的样子满意吗？我不知道，可我确实在帮人分担重负与苦难中得到满足。这就是为什么我继续服侍伊尔玛特，尽管有这一切职责。~
 IF ~~ EXIT
 END
 
 IF ~~ home
 SAY ~有时会……不过我并不真想念那些人，除了神殿的兄弟姐妹。他们一直对我戒备，即使在我发誓成为圣武士之后。~
-= ~可有一个例外……村里的面包师是伊尔梅特的虔诚信徒，常来教堂。跟大多数村民不同，他一直待我很好，有时还给所有孩子带甜点。~
+= ~可有一个例外……村里的面包师是伊尔玛特的虔诚信徒，常来教堂。跟大多数村民不同，他一直待我很好，有时还给所有孩子带甜点。~
 = ~当我被受苦圣战武士接纳时，除了祭司们，他是唯一恭喜我的人。可是……在我出发朝圣前不久，他去世了。~
 = ~你呢，<CHARNAME>？你想念家乡吗？你上次回去已是好久之前了。~
 ++ ~我常想起烛堡。若我有得选，我现在就回去。~ + home1
@@ -5915,13 +5915,13 @@ IF ~~ EXIT
 END
 
 IF ~~ food
-SAY ~我不是在富贵中长大的，<CHARNAME>。作为伊尔梅特教会的受监护者，我学会了珍惜祭司们花时间心力供的饭菜。~
+SAY ~我不是在富贵中长大的，<CHARNAME>。作为伊尔玛特教会的受监护者，我学会了珍惜祭司们花时间心力供的饭菜。~
 = ~有时我会在野地里打猎，想给同伴弄些肉，可我从不太喜欢那个味道。我更喜欢鱼的味道，虽然我没钓鱼的耐性。~
 IF ~~ EXIT
 END
 
 IF ~~ settle
-SAY ~我会喜欢退出战斗、成家立业的前景，可我对我的骑士团有职责……对伊尔梅特有职责。只要还有人需要，我看不出自己能离开这种生活。~
+SAY ~我会喜欢退出战斗、成家立业的前景，可我对我的骑士团有职责……对伊尔玛特有职责。只要还有人需要，我看不出自己能离开这种生活。~
 IF ~OR(2)
 Global("C0SireneRomanceActive","GLOBAL",1)
 Global("C0SireneRomanceActive","GLOBAL",2)~ + settle2
@@ -5935,7 +5935,7 @@ IF ~~ EXIT
 END
 
 IF ~~ settle3
-SAY ~何况，我怀疑别人会愿意在我身边过一辈子。不，我想我会一直做伊尔梅特的仆人，直到老死。~
+SAY ~何况，我怀疑别人会愿意在我身边过一辈子。不，我想我会一直做伊尔玛特的仆人，直到老死。~
 IF ~~ EXIT
 END
 
@@ -5972,7 +5972,7 @@ IF ~~ + firstlove5
 END
 
 IF ~~ firstlove5
-SAY ~我正中他的头，他向后踉跄，我这才清醒过来。我离开水去帮他，怕我把他伤得重了。~
+SAY ~我重重击中他的头部，他向后踉跄，我这才清醒过来。我离开水去帮他，怕自己把他伤得很重。~
 = ~他醒过来后，只是笑着揭过。他说他震惊于我竟没杀他，说我反应得跟任何别的女人一样。他不信我的血让我有什么不同。~
 = ~从那以后，我完全信任凯尔，随着时间我们变得亲近。~
 ++ ~他后来怎么了？~ + firstlove6
@@ -5999,7 +5999,7 @@ END
 
 IF ~~ secondlove
 SAY ~我提过那个吗？一定是说漏了嘴。无论如何，讲出来我看没什么害处。~
-= ~这故事比上一个结局好些……她叫阿谢拉，是苏妮的女祭司。~
+= ~这故事比上一个结局好些……她叫阿谢拉，是淑娜的女祭司。~
 = ~我说不上这是有趣的故事。我们相遇在我为凯尔复仇很久之后，而她……在我一次愚蠢举动几乎送命之后救了我。~
 = ~像凯尔一样，她从不因我的血评判我，还鼓励我拥抱美。渐渐地，我开始在意她。~
 ++ ~她美吗？~ + secondlove2
@@ -6007,14 +6007,14 @@ SAY ~我提过那个吗？一定是说漏了嘴。无论如何，讲出来我看
 END
 
 IF ~~ secondlove2
-SAY ~阿谢拉是个大美人，她的同僚祭司说她蒙苏妮亲赐美貌。可她告诉我，给她美的是她的用心，而非神力干预，说只要我肯尝试，我也能如此。~
+SAY ~阿谢拉是个大美人，她的同僚祭司说她蒙淑娜亲赐美貌。可她告诉我，给她美的是她的用心，而非神力干预，说只要我肯尝试，我也能如此。~
 = ~她有给人带来欢愉的才能，我想那就是我……被她吸引的原因，胜过她的美貌。~
 IF ~~ + secondlove3
 END
 
 IF ~~ secondlove3
 SAY ~我们终究分了道，不过是和气分手。我仍有我的朝圣，虽然我不愿分离，可我知道那必定发生。不过……~
-= ~我离开前一天受了伤，被送回苏妮神殿。阿谢拉替我处理伤口，然后……我们一起过了那一夜。~
+= ~我离开前一天受了伤，被送回淑娜神殿。阿谢拉替我处理伤口，然后……我们一起过了那一夜。~
 ++ ~你想再见她吗？~ + secondlove4
 ++ ~我们谈够了。走吧。~ EXIT
 END
@@ -6034,21 +6034,21 @@ END
 
 IF ~~ appearance1
 SAY ~不——不！那只是……治伤的药膏。那一定就是你闻到的味道。~
-++ ~你撒谎撒得真糟，塞琳。为什么不干脆说实话？我保证不笑。~ + appearance4
+++ ~你撒谎撒得真糟，茜琳。为什么不干脆说实话？我保证不笑。~ + appearance4
 ++ ~当——然。~ + appearance4
 ++ ~随便吧……~ EXIT
 END
 
 IF ~~ appearance2
 SAY ~我……只是上次有个敌人差点在战斗中抓住它，所以需要剪短修整。它长得有点太长了。~
-++ ~你撒谎撒得真糟，塞琳。为什么不干脆说实话？我保证不笑。~ + appearance4
+++ ~你撒谎撒得真糟，茜琳。为什么不干脆说实话？我保证不笑。~ + appearance4
 ++ ~当——然。~ + appearance4
 ++ ~随便吧……~ EXIT
 END
 
 IF ~~ appearance3
 SAY ~那……那是因为那天比平常暖。所以我才……~
-++ ~你撒谎撒得真糟，塞琳。为什么不干脆说实话？我保证不笑。~ + appearance4
+++ ~你撒谎撒得真糟，茜琳。为什么不干脆说实话？我保证不笑。~ + appearance4
 ++ ~当——然。~ + appearance4
 ++ ~随便吧……~ EXIT
 END
@@ -6070,7 +6070,7 @@ IF ~~ EXIT
 END
 
 IF ~~ faith
-SAY ~这问题真古怪，<CHARNAME>……不过我近来确实常想我在伊尔梅特的信仰这件事。~
+SAY ~这问题真古怪，<CHARNAME>……不过我近来确实常想我在伊尔玛特的信仰这件事。~
 IF ~GlobalGT("C0SireneFaith","GLOBAL",5)~ + maxfaith
 IF ~GlobalLT("C0SireneFaith","GLOBAL",6) GlobalGT("C0SireneFaith","GLOBAL",0)~ + goodfaith
 IF ~Global("C0SireneFaith","GLOBAL",0)~ + midfaith
@@ -6084,7 +6084,7 @@ IF ~~ EXIT
 END
 
 IF ~~ goodfaith
-SAY ~我承认还有些疑虑，可是……我正慢慢开始明白服侍伊尔梅特真正意味着什么。也许随着时间，我会抛下剩下的不确定。~
+SAY ~我承认还有些疑虑，可是……我正慢慢开始明白服侍伊尔玛特真正意味着什么。也许随着时间，我会抛下剩下的不确定。~
 IF ~~ EXIT
 END
 
@@ -6094,12 +6094,12 @@ IF ~~ EXIT
 END
 
 IF ~~ badfaith
-SAY ~我的疑虑开始质疑我是否配做伊尔梅特的仆人。事情也许会有变化，可是……我在想我还能走这条路多久。~
+SAY ~我的疑虑开始质疑我是否配做伊尔玛特的仆人。事情也许会有变化，可是……我在想我还能走这条路多久。~
 IF ~~ EXIT
 END
 
 IF ~~ minfaith
-SAY ~这话也许听着亵渎，可是……我开始怀疑服侍伊尔梅特是否真是我该扮演的角色。有时我想……我是否该考虑走自己的路，不受神的规则控制。~
+SAY ~这话也许听着亵渎，可是……我开始怀疑服侍伊尔玛特是否真是我该扮演的角色。有时我想……我是否该考虑走自己的路，不受神的规则控制。~
 IF ~~ EXIT
 END
 
@@ -6114,25 +6114,25 @@ SAY ~当然……为你，我会尽力如实回答。~
 !Global("AnomenIsNotKnight","GLOBAL",1)~ + ~你觉得阿诺门怎么样？~ + anomenneutral
 + ~InParty("Cernd")~ + ~你觉得瑟恩德怎么样？~ + cernd
 + ~InParty("Edwin")~ + ~你觉得艾德温怎么样？~ + edwin
-+ ~InParty("E3Fade")~ + ~你觉得费德怎么样？~ + fade
-+ ~InParty("L#Fou")~ + ~你觉得弃儿怎么样？~ + foundling
++ ~InParty("E3Fade")~ + ~你觉得菲德怎么样？~ + fade
++ ~InParty("L#Fou")~ + ~你觉得拾得儿怎么样？~ + foundling
 + ~InParty("C0Gley")~ + ~你觉得格蕾雅怎么样？~ + gleya
 + ~InParty("HaerDalis")~ + ~你觉得海尔达利怎么样？~ + haerdalis
 + ~InParty("Imoen") Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得爱蒙怎么样？~ + imoen1
 + ~InParty("Imoen") !Global("C0SirenePartyBG1","GLOBAL",1)~ + ~你觉得爱蒙怎么样？~ + imoen2
 + ~InParty("Jaheira")~ + ~你觉得贾希拉怎么样？~ + jaheira
-+ ~InParty("Jan")~ + ~你觉得扬怎么样？~ + jan
-+ ~InParty("Keldorn")~ + ~你觉得凯尔登怎么样？~ + keldorn
-+ ~InParty("Korgan")~ + ~你觉得科根怎么样？~ + korgan
++ ~InParty("Jan")~ + ~你觉得姚恩怎么样？~ + jan
++ ~InParty("Keldorn")~ + ~你觉得凯东怎么样？~ + keldorn
++ ~InParty("Korgan")~ + ~你觉得寇根怎么样？~ + korgan
 + ~InParty("Mazzy")~ + ~你觉得玛兹怎么样？~ + mazzy
 + ~InParty("Minsc")~ + ~你觉得明斯克怎么样？~ + minsc
-+ ~InParty("Nalia")~ + ~你觉得娜莉亚怎么样？~ + nalia
-+ ~InParty("Neera")~ + ~你觉得妮拉怎么样？~ + neera
++ ~InParty("Nalia")~ + ~你觉得娜里亚怎么样？~ + nalia
++ ~InParty("Neera")~ + ~你觉得涅拉怎么样？~ + neera
 + ~InParty("C0PaiNa")~ + ~你觉得派娜怎么样？~ + paina
 + ~InParty("Rasaad")~ + ~你觉得拉萨德怎么样？~ + rasaad
-+ ~InParty("Viconia")~ + ~你觉得维康尼亚怎么样？~ + viconia
++ ~InParty("Viconia")~ + ~你觉得维康妮亚怎么样？~ + viconia
 + ~InParty("Valygar")~ + ~你觉得瓦里格怎么样？~ + valygar
-+ ~InParty("Yoshimo")~ + ~你觉得吉野怎么样？~ + yoshimo
++ ~InParty("Yoshimo")~ + ~你觉得善最怎么样？~ + yoshimo
 + ~InParty("YxYve")~ + ~你觉得伊薇特怎么样？~ + yvette
 ++ ~算了。我不想知道。~ EXIT
 END
@@ -6188,7 +6188,7 @@ IF ~~ EXIT
 END
 
 IF ~~ imoen1
-SAY ~她……以伊尔梅特之名，<CHARNAME>，她跟我记得的那个女孩太不一样了。我无法想象是怎样可怕的经历把她逼成这样。~
+SAY ~她……以伊尔玛特之名，<CHARNAME>，她跟我记得的那个女孩太不一样了。我无法想象是怎样可怕的经历把她逼成这样。~
 IF ~~ EXIT
 END
 

@@ -9,16 +9,16 @@ IF ~InParty("C0Sirene")
 See("C0Sirene")
 !StateCheck("C0Sirene",CD_STATE_NOTVALID)
 Global("C0SireneMeetsAunt","GLOBAL",0)~ THEN C0SCLEO a1
-~蕾娜……？不，这不可能。你的灵魂是来接我了吗？我——我还没准备好。~
+~莉娜……？不，这不可能。你的灵魂是来接我了吗？我——我还没准备好。~
 DO ~SetGlobal("C0SireneMeetsAunt","GLOBAL",1)~
 == C0SIR25J ~我……我怕你把我认成别人了，好心的女人。我不知道你在说什么……~
-== C0SCLEO ~不是蕾娜？不，我现在看出来了。你更年轻，可你跟她长得多么像……啊！~
+== C0SCLEO ~不是莉娜？不，我现在看出来了。你更年轻，可你跟她长得多么像……啊！~
 == C0SIR25J ~什——什么事？~
-== C0SCLEO ~你……你是蕾娜的女儿。神明啊，你跟她太像了！~
-== C0SIR25J ~蕾娜……？你是谁？~
+== C0SCLEO ~你……你是莉娜的女儿。神明啊，你跟她太像了！~
+== C0SIR25J ~莉娜……？你是谁？~
 == C0SCLEO ~我是克蕾奥，亲爱的……你的姑母。~
 == C0SIR25J ~你是我……我母亲的姐妹？~
-== C0SCLEO ~是你父亲的，亲爱的，可蕾娜对我来说就像姐妹一样。我不敢相信你还活着！~
+== C0SCLEO ~是你父亲的，亲爱的，可莉娜对我来说就像姐妹一样。我不敢相信你还活着！~
 == C0SCLEO ~过来。让我看看你。~
 == C0SIR25J ~我不敢相信。你真是……我的家人？~
 == C0SCLEO ~是啊，亲爱的。天哪，我还记得抱着你的样子，那时你还是个婴孩。那是我离开你们村子的前一天。~
@@ -29,7 +29,7 @@ DO ~SetGlobal("C0SireneMeetsAunt","GLOBAL",1)~
 END
 ++ ~当然。你需要多久就多久。~ EXTERN C0SIR25J a1.1
 ++ ~我们一天后来接你。~ EXTERN C0SIR25J a1.1
-++ ~我仍需要你的帮助，塞琳。~ EXTERN C0SIR25J a1.2
+++ ~我仍需要你的帮助，茜琳。~ EXTERN C0SIR25J a1.2
 
 CHAIN C0SIR25J a1.1
 ~谢谢你。一天，我只求一天。~
@@ -42,7 +42,7 @@ DO ~LeaveParty() ChangeAIScript("",DEFAULT) SetLeavePartyDialogFile() SetGlobalT
 MoveToPoint([446.279]) Wait(1) FaceObject("C0SCLEO")~ EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneAuntStory","GLOBAL",0) Global("C0SireneMeetsAunt","GLOBAL",1) !GlobalTimerExpired("C0SireneAuntTimer","GLOBAL")~ THEN C0SCLEO b0
-~祭司们给你起名塞琳，可你不知道你父母给你起的名字，对吧，亲爱的？~
+~祭司们给你起名茜琳，可你不知道你父母给你起的名字，对吧，亲爱的？~
 DO ~IncrementGlobal("C0SireneAuntStory","GLOBAL",1)~
 == C0SIR25P ~不，我……我不知道。~
 == C0SCLEO ~他们给你起名蕾妮，孩子，随艾德瑞克和我自己的母亲。可我知道我这样叫你一定让你不自在。~
@@ -72,7 +72,7 @@ DO ~IncrementGlobal("C0SireneAuntStory","GLOBAL",1)~
 == C0SIR25P ~那你呢，姑母？你也那样想吗？~
 == C0SCLEO ~我？不，神明在上，不会。你若见过他们某些夜里吵架的样子，就不会那么想了。~
 == C0SIR25P ~他们……吵架？他们在一起不快乐吗？~
-== C0SCLEO ~我想私奔并不是蕾娜期待的那种童话。可他们彼此深爱，这一点我向你保证。*叹气*只恨他们没能活到你长大……~
+== C0SCLEO ~我想私奔并不是莉娜期待的那种童话。可他们彼此深爱，这一点我向你保证。*叹气*只恨他们没能活到你长大……~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneAuntStory","GLOBAL",4) Global("C0SireneMeetsAunt","GLOBAL",1) !GlobalTimerExpired("C0SireneAuntTimer","GLOBAL")~ THEN C0SCLEO b4
@@ -88,7 +88,7 @@ CHAIN IF WEIGHT #-1 ~Global("C0SireneAuntStory","GLOBAL",5) Global("C0SireneMeet
 ~你的同母异父哥哥不常来。你出生前他就离开村子，去某位法师的塔里求学。~
 DO ~IncrementGlobal("C0SireneAuntStory","GLOBAL",1)~
 == C0SIR25P ~他父亲是……一位贵族，不是吗？~
-== C0SCLEO ~没错。蕾娜在跟你父亲私奔之前，曾嫁给一位贵族，你看。她跟他不如跟艾德瑞克亲近，可她说她仍在意他。我在想，若那个人还活着，她会不会答应私奔……~
+== C0SCLEO ~没错。莉娜在跟你父亲私奔之前，曾嫁给一位贵族，你看。她跟他不如跟艾德瑞克亲近，可她说她仍在意他。我在想，若那个人还活着，她会不会答应私奔……~
 == C0SIR25P ~那么……我的哥哥，特萨蒙？他不喜欢我父亲吗？~
 == C0SCLEO ~哦，他每次来，他们肯定要吵上许多。不过我相信他仍敬重你父亲。若他受得了乡下的生活，我确信他会留下来的。~
 == C0SCLEO ~那孩子后来怎么了，我倒想知道？~
@@ -98,7 +98,7 @@ DO ~IncrementGlobal("C0SireneAuntStory","GLOBAL",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1 ~Global("C0SireneAuntStory","GLOBAL",6) Global("C0SireneMeetsAunt","GLOBAL",1) !GlobalTimerExpired("C0SireneAuntTimer","GLOBAL")~ THEN C0SCLEO b7
-~你父母的遭遇……太让人心碎了。我到今天还梦见那件事。蕾娜和我哥哥……~
+~你父母的遭遇……太让人心碎了。我到今天还梦见那件事。莉娜和我哥哥……~
 DO ~IncrementGlobal("C0SireneAuntStory","GLOBAL",1)~
 == C0SIR25P ~特萨蒙说……他说他们是别的村民杀的。说火是他们放的。~
 == C0SCLEO ~那是意外，亲爱的。一场悲惨的意外，可终究是意外。那天发生的事，谁都不该受责。~
@@ -120,7 +120,7 @@ DO ~SetGlobal("C0SireneMeetsAunt","GLOBAL",2)~
 == C0SIR25P ~克蕾奥姑母，我……~
 == C0SCLEO ~好了，亲爱的……求你，别哭。~
 == C0SCLEO ~若情形不同，我最愿意的就是有机会跟你坐下来，谈上一整周，看看你长成了什么样，可你眼前有一桩沉重的任务，不是吗？我明白。~
-== C0SCLEO ~拿着，孩子。这枚戒指是你母亲的。蕾娜死后我一直留着它，可它该属于你。就当是一份礼物，补上失去你之后这些年。~
+== C0SCLEO ~拿着，孩子。这枚戒指是你母亲的。莉娜死后我一直留着它，可它该属于你。就当是一份礼物，补上失去你之后这些年。~
 DO ~GiveItemCreate("c0sring","C0Sirene",1,1,0)~
 == C0SIR25P ~谢——谢谢你，姑母……再会了。我会非常想念你。~
 DO ~SetGlobal("C0SireneToBKickedOut","GLOBAL",0) JoinParty()~

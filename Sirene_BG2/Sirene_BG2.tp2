@@ -22,64 +22,64 @@ LANGUAGE ~Schinese~
          ~schinese~
          ~%MOD_FOLDER%/tra/schinese/sirene.tra~
 
-BEGIN ~塞琳 NPC（BG2:EE）~
+BEGIN ~Sirene NPC for BG2:EE~
 INCLUDE ~%MOD_FOLDER%/lib/Sirene_BG2.tpa~
 
-BEGIN ~BG1 默认立绘（sporeboy）~
-SUBCOMPONENT ~为塞琳选择替换立绘？~
+BEGIN ~BG1 Default (sporeboy)~
+SUBCOMPONENT ~为茜琳选择替换立绘？~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~必须先安装主组件。~
 		COPY ~%MOD_FOLDER%/alts/Sirene2L.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene2M.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene2S.bmp~ ~override/SireneS.bmp~
 		
-BEGIN ~替换立绘 1（Sirick，轻甲）~
-SUBCOMPONENT ~为塞琳选择替换立绘？~
+BEGIN ~Alternate 1 (Sirick, Light Armor)~
+SUBCOMPONENT ~为茜琳选择替换立绘？~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~必须先安装主组件。~
 		COPY ~%MOD_FOLDER%/alts/Sirene3L.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene3M.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene3S.bmp~ ~override/SireneS.bmp~
 		
-BEGIN ~替换立绘 1（Sirick/熔岩，重甲）~
-SUBCOMPONENT ~为塞琳选择替换立绘？~
+BEGIN ~Alternate 1 (Sirick/Lava, Heavy Armor)~
+SUBCOMPONENT ~为茜琳选择替换立绘？~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~必须先安装主组件。~
 		COPY ~%MOD_FOLDER%/alts/Sirene4L.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene4M.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene4S.bmp~ ~override/SireneS.bmp~
 		
-BEGIN ~替换立绘 2（Lodaligae）~
-SUBCOMPONENT ~为塞琳选择替换立绘？~
+BEGIN ~Alternate 2 (Lodaligae)~
+SUBCOMPONENT ~为茜琳选择替换立绘？~
   REQUIRE_COMPONENT ~Setup-Sirene_BG2.tp2~ ~0~ ~必须先安装主组件。~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneL.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneM.bmp~
 		COPY ~%MOD_FOLDER%/alts/Sirene5.bmp~ ~override/SireneS.bmp~
 		
-BEGIN ~纯正圣武士~
-SUBCOMPONENT ~为塞琳选择替换职业？~
-REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装塞琳模组~
+BEGIN ~True Paladin~
+SUBCOMPONENT ~为茜琳选择替换职业？~
+REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装茜琳模组~
 COPY_EXISTING ~c0sire2.cre~ ~override~
 WRITE_SHORT 0x246 0x4000
 COPY_EXISTING ~c0sire25.cre~ ~override~
 WRITE_SHORT 0x246 0x4000
 
-BEGIN ~骑士~
-SUBCOMPONENT ~为塞琳选择替换职业？~
-REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装塞琳模组~
+BEGIN ~Cavalier~
+SUBCOMPONENT ~为茜琳选择替换职业？~
+REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装茜琳模组~
 COPY_EXISTING ~c0sire2.cre~ ~override~
 WRITE_SHORT 0x246 0x4004
 COPY_EXISTING ~c0sire25.cre~ ~override~
 WRITE_SHORT 0x246 0x4004
 
-BEGIN ~审判者~
-SUBCOMPONENT ~为塞琳选择替换职业？~
-REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装塞琳模组~
+BEGIN ~Inquisitor~
+SUBCOMPONENT ~为茜琳选择替换职业？~
+REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装茜琳模组~
 COPY_EXISTING ~c0sire2.cre~ ~override~
 WRITE_SHORT 0x246 0x4005
 COPY_EXISTING ~c0sire25.cre~ ~override~
 WRITE_SHORT 0x246 0x4005
 
-BEGIN ~亡灵猎手~
-SUBCOMPONENT ~为塞琳选择替换职业？~
-REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装塞琳模组~
+BEGIN ~Undead Hunter~
+SUBCOMPONENT ~为茜琳选择替换职业？~
+REQUIRE_COMPONENT ~Sirene_BG2.tp2~ ~0~ ~此组件需先安装茜琳模组~
 COPY_EXISTING ~c0sire2.cre~ ~override~
 WRITE_SHORT 0x246 0x4006
 COPY_EXISTING ~c0sire25.cre~ ~override~
